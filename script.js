@@ -25,3 +25,5 @@ for (let index =0; index < 5; index += 1) {
     accessElement('.tr', 'div', index).classList.add('td','pixel');
     }
 }
+
+document.querySelector('div').classList.add('selected','color');
