@@ -6,9 +6,9 @@ body {
 h1{
   margin-left: 10px
 }
-.color-palette {
+#color-palette {
   display: inline-block;
-  border: 1px solid black;
+  width: max-content;
 }
 
 .color {
@@ -27,6 +27,8 @@ h1{
 }
 
 #pixel-board{
+  display: block;
   margin-left: 3px;
+  width: max-content;
 }
 
