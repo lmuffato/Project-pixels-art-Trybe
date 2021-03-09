@@ -10,9 +10,20 @@ window.onload = function () {
 createPalette(); // cria os 4 quadrados(cores) e os adiciona como filho da div de id = 'color-palette'
 createBoardPixel(); //cria os nxn quadrados.
 captureColor(); // seta a cor ao clicar no quadrado escolhido.
+paintPixel(); // pinta os pixeis clicados
+clearPixels(); // limpa pixels ao acionar o botão correspondente.
 
 
-paintPixel();
+function clearPixels() {
+  let listPixels = document.querySelectorAll('.pixel');
+  let getButton = document.getElementById('clear-board');
+  getButton.addEventListener('click', function() {
+    for(let i = 0; i < listPixels.length; i +=1){
+      listPixels[i].style.backgroundColor = 'white';
+    }
+  })
+};
+
 function paintPixel() {
   let listPixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < listPixels.length; i += 1) {

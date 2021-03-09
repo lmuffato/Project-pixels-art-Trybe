@@ -34,3 +34,13 @@ h1{
   width: max-content;
 }
 
+#clear-board{
+  position: absolute;
+  padding: 6px 10px;
+  margin-left: 3px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
