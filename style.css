@@ -1,0 +1,26 @@
+#color-palette{
+    display: table;
+}
+
+.color {
+  border: 1px solid black;
+  display: table-cell;
+  width: 100px;
+  padding: 45px;
+}
+
+#colorA {
+    background-color: blue;
+}
+
+#colorB {
+    background-color: yellow
+}
+
+#colorC {
+    background-color: red;
+}
+
+#colorD {
+    background-color: green;
+}
