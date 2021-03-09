@@ -89,3 +89,11 @@ function createPixelTableLineElements() {
   }
 }
 createPixelTableLineElements();
+
+// Requirement 6;
+
+function firstElementClassSelected() {
+  const selectorFirstColor = document.querySelectorAll('div')[1];
+  selectorFirstColor.className += ' selected';
+}
+firstElementClassSelected();
