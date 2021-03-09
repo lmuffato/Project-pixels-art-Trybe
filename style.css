@@ -13,13 +13,11 @@
   border: solid black;
   border-width: 1px;
   float:left;
+  background-color: white;
 }
 
 .line-container {
   margin: 0;
   padding: 0;
-  border-collapse: collapse;
-  
-  
 }
 
