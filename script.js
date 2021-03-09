@@ -3,8 +3,6 @@ const colorSecond = document.querySelector('.second');
 const colorThird = document.querySelector('.third');
 const colorFourth = document.querySelector('.fourth');
 
-
-
 /* Randomizador de cores estudado e reproduzido daqui: https://stackoverflow.com/questions/1484506/random-color-generator  */
 
 function randomizeColor() {
