@@ -1,5 +1,15 @@
 #title {
-    color: blue;
-    position: fixed;
+  color: red;
 };
 
+#color-palette {
+    width: 400px;
+    height: 400px;
+}
+
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+};
