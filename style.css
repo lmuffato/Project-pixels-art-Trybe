@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     font-size: 1.2vw;
 }
 
@@ -10,12 +11,16 @@
 }
 
 /* -------------- main ----------------- */
+#highPalette {
+    text-align: center;
+    display: inline-block;
+    margin-left: 17vw;
+    padding: 3px;
+}
+
 #color-palette {
     display: inline-block;
     text-align: center;
-    margin-left: 18vw;
-    margin-right: 10vw;
-    padding: 10px;
 }
 
 .color {
@@ -28,11 +33,6 @@
 
 .black {
     background-color: black;
-    display: inline-block;
-    width: 12vw;
-    height: 12vw;
-    font-family: Cinzel Decorative, cursive;
-    border: solid 1px black;
 }
 
 .hot-pink {
