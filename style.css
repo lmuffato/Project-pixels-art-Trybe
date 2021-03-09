@@ -6,18 +6,6 @@
   background-color: black;
 }
 
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
-}
-
-#yellow {
-  background-color: yellow;
-}
-
 .color {
   border: solid black 1px;
   display: inline-block;

@@ -40,3 +40,12 @@ function clearBoard() {
 }
 
 document.getElementById('clear-board').addEventListener('click', clearBoard);
+
+function buttonsColor() {
+  const newColorBlue = `#${Math.ceil(Math.random() * 999999)}`;
+  document.getElementById('blue').style.backgroundColor = newColorBlue;
+  const newColorGreen = `#${Math.ceil(Math.random() * 999999)}`;
+  document.getElementById('green').style.backgroundColor = newColorGreen;
+  const newColorYellow = `#${Math.ceil(Math.random() * 999999)}`;
+  document.getElementById('yellow').style.backgroundColor = newColorYellow;
+}
