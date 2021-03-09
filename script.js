@@ -46,3 +46,20 @@ function columnBoardGeneration() {
 }
 
 columnBoardGeneration();
+
+function selectColor() {
+  const getColor = document.getElementsByClassName('color');
+
+  for (let index = 0; index < getColor.length; index += 1) {
+    function changeClassSelected(event) {
+      for (index = 0; index < getColor.length; index += 1) {
+        getColor[index].className = 'color';
+      }
+      event.target.className = 'color selected';
+    }
+
+    getColor[index].addEventListener('click', changeClassSelected);
+  }
+}
+
+selectColor();
