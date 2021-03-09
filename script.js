@@ -1,3 +1,5 @@
+
+
 let colorFirst = document.querySelectorAll('div')[1]
 colorFirst.style.backgroundColor = 'red';
 
@@ -21,6 +23,7 @@ for (i = 1; i <= 25; i +=1 ) {
    framePixel.appendChild(pixel)
 }
 
+colorFirst.className = 'color selected';
 
 
 
