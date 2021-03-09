@@ -1,0 +1,39 @@
+/*<header>
+    <h1 id="title">"Paleta de Cores"</h1>
+    <table id="color-palette">
+        <tr>
+        <td class="color preto"></td>
+        <td class="color vermelho"></td>
+        <td class="color azul"></td>
+        <td class="color verde"></td>
+    </tr>
+</table> */
+#color-palette {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.color {
+    border: 1px solid rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    
+    
+}
+
+.preto {
+    background-color: rgb(0, 0, 0);
+    margin-right: 100px;
+}
+
+.vermelho {
+    background-color: rgb(255, 0, 0);
+}
+
+.azul {
+    background-color: rgb(0, 0, 255);
+}
+
+.verde {
+    background-color: rgb(0, 255, 0);
+}
