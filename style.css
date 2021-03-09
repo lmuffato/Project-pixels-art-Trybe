@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 200px;
-  padding: 10px;
+  width: 210px;
+  margin-bottom: 20px;
 }
 
 .color {

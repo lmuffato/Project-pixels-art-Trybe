@@ -1,6 +1,5 @@
-window.onload = function () {
+function createPixelBoard () {
   const pixelBoard = document.getElementById('pixel-board');
-
   // Criando os pixels
   for (let boardRow = 1; boardRow <= 5; boardRow += 1) {
     const newRow = document.createElement('div');
@@ -17,6 +16,27 @@ window.onload = function () {
       newRow.appendChild(newPixel);
     }
   }
+}
 
+function selectBlackOnload () {
   document.getElementById('black').classList.add('selected');
-};
+}
+
+function addEventListenerToColorPalette () {
+  const colorsInPalette = document.getElementsByClassName('color');
+  for (color of colorsInPalette) {
+    color.addEventListener('click', function (event) {
+      // remove the selected class from previous color
+      const currentColor = document.getElementsByClassName('selected')[0]
+      currentColor.classList.remove('selected');
+      const newColor = event.target;
+      newColor.classList.add('selected');
+    });
+  }
+}
+
+window.onload = function () {
+  createPixelBoard();
+  selectBlackOnload();
+  addEventListenerToColorPalette();
+}
