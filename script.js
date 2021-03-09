@@ -1,4 +1,4 @@
-const firstColorPalette = document.getElementById('black');
+/* const firstColorPalette = document.getElementById('black');
 const secondColorPalette = document.getElementById('green');
 const thirdColorPalette = document.getElementById('magenta');
 const fourthColorPalette = document.getElementById('blue');
