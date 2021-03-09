@@ -12,29 +12,29 @@ const addEvListenerNElements = (elementsNodes, event, fn) => {
     console.log('O parâmetro fn deve ser uma função.');
     return;
   }
-  let nodes = document.querySelectorAll(elementsNodes);
+  const nodes = document.querySelectorAll(elementsNodes);
   for (let index = 0; index < nodes.length; index += 1) {
     nodes[index].addEventListener(event, fn);
   }
 };
 
 const changeColorPixel = (ev) => {
-  let el = document.querySelector('.selected');
-  let newColor = el.style.backgroundColor;
-  let pixel = ev.target;
+  const el = document.querySelector('.selected');
+  const newColor = el.style.backgroundColor;
+  const pixel = ev.target;
   pixel.style.backgroundColor = newColor;
 };
 
 const toggleClassInit = (elementNode, className) => {
-  let element = document.querySelector(elementNode);
+  const element = document.querySelector(elementNode);
   element.classList.toggle(className);
 };
 
 const toggleClassEvent = (elementNode, className) => {
-  let eventNode = elementNode.target;
-  let colorListEl = document.getElementsByClassName('color');
-  for (const key of colorListEl) {
-    let el = key;
+  const eventNode = elementNode.target;
+  const colorListEl = document.getElementsByClassName('color');
+  for (let index = 0; index < colorListEl.length; index += 1) {
+    const el = colorListEl[index];
     if (el.classList.value.includes(className)) {
       el.classList.toggle(className);
     }
@@ -68,5 +68,5 @@ window.onload = () => {
   changeBackgroundColorPixels();
   addEvListener('#clear-board', 'click', changeBackgroundColorPixels);
   addEvListener('#color-palette', 'click', function (e) { toggleClassEvent(e, 'selected') });
-  addEvListenerNElements('.pixel', 'click', changeColorPixel)
+  addEvListenerNElements('.pixel', 'click', changeColorPixel);
 };
