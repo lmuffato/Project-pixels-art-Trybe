@@ -3,6 +3,8 @@ h1 {
 }
 
 .color {
+  width: 85px;
+  height: 85px;
   border: black 1px solid;
   display: inline-block;
 }
@@ -26,4 +28,18 @@ h1 {
 
 #green {
   background-color: green;
+}
+#pixel-board {
+  margin-top: 25px;
+  text-align: center;
+  display: block;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-spacing: 0;
+  display: inline-block;
+  border: solid 1px black;
 }
