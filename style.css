@@ -2,10 +2,10 @@
   display: inline-block;
 }
 
-.pixel, .color {
+.pixel , .color {
   border: 1px solid black;
-  width: 4em;
-  height: 4em;
+  width: 39px;
+  height: 39px;
 }
 
 .pixel {
