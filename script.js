@@ -13,4 +13,6 @@ window.onload = function pixelsArt() {
       pixelLine.children[indexColumn].appendChild(pixel).className = 'pixel';
     }
   }
+
+  document.getElementById('black').classList.add('selected');
 };

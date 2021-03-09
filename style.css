@@ -18,7 +18,7 @@
   background-color: blue;
 }
 
-div, td {
+div , td {
   width: 40px;
   height: 40px;
   border: 1px solid black;
@@ -29,5 +29,5 @@ div, td {
 }
 
 td {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
