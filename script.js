@@ -30,7 +30,7 @@ function listenPaletteSection() {
 }
 
 function selectColor() {
-  const pixel = document.querySelector('#pixel-board')
+  const pixel = document.querySelector('#pixel-board');
 
   pixel.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.color.selected').style.backgroundColor;
@@ -38,8 +38,22 @@ function selectColor() {
   });
 }
 
+function limpar() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+
+function clearBtnFunction() {
+  const clearBtn = document.getElementById('clear-board');
+
+  clearBtn.addEventListener('click', limpar);
+}
+
 window.onload = function () {
   squareColors();
   listenPaletteSection();
   selectColor();
+  clearBtnFunction();
 };

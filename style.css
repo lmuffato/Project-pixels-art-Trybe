@@ -45,7 +45,6 @@ header {
 #pixel-board {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
   background-color: white ! important;
 }
 
