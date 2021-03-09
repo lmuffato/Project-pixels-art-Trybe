@@ -13,50 +13,55 @@ function selectColor() {
   // });
 }
 // Retorna a cor selecionada Black
-function selectColorBalck() {
+function selectColorBlack() {
   const paletteBlack = document.querySelector('.palette-black');
-  paletteBlack.addEventListener('click', function() {
-    console.log(paletteBlack);
+  paletteBlack.addEventListener('click', function(evento) {
+    if (evento.target) {
+      colorPixel('black')
+    }
   });
   return 'black';
 }
-selectColorBalck();
+selectColorBlack();
 
 // Retorna a cor selecionada red
 function selectColorRed() {
   const paletteRed = document.querySelector('.palette-red');
-  paletteRed.addEventListener('click', function() {
-    console.log(paletteRed)
+  paletteRed.addEventListener('click', function(evento) {
+    if (evento.target) {
+      colorPixel('red')
+    }
   });
-  return 'red';
 }
 selectColorRed();
 
 // Retorna a cor selecionada blue
 function selectColorBlue() {
   const paletteBlue = document.querySelector('.palette-blue');
-  paletteBlue.addEventListener('click', function() {
-    console.log(paletteBlue)
+  paletteBlue.addEventListener('click', function(evento) { 
+    if (evento.target) {
+      colorPixel('blue')
+    }
   });
-  return 'blue';
 }
 selectColorBlue();
 
 // Retorna a cor selecionada green
 function selectColorGreen() {
   const paletteGreen = document.querySelector('.palette-green');
-  paletteGreen.addEventListener('click', function() {
-    console.log(paletteGreen)
+  paletteGreen.addEventListener('click', function(evento) {
+    if (evento.target) {
+      colorPixel('green')
+    }
   });
-  return 'green';
 }
 selectColorGreen();
 
 
-function colorPixel() {
+function colorPixel(color) {
   for (let index = 0; index < pixelBox.length; index += 1) {
     pixelBox[index].addEventListener('click', function () {
-      pixelBox[index].style.backgroundColor = 'blue';
+      pixelBox[index].style.backgroundColor = color;
     });
   }
 }
@@ -67,7 +72,7 @@ function clearPixel() {
   const btnClearPixel = document.getElementById('clear-board');
   btnClearPixel.addEventListener('click', function() {
     for (let index = 0; index < pixelBox.length; index += 1) {
-      pixelBox[index].style.backgroundColor = 'white'
+      pixelBox[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   }); 
 }

@@ -8,9 +8,15 @@
   margin: 0 auto;
 }
 
+#title {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .palette-black {
@@ -58,4 +64,5 @@
 
 #clear-board {
   cursor: pointer;
+  margin-bottom: 20px;
 }
