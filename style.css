@@ -1,7 +1,7 @@
 .color {
   border: solid black 1px;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 
 #black {
@@ -24,6 +24,7 @@
 }
 
 .pixel {
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
+  border: solid black 1px;
 }
