@@ -1,0 +1,37 @@
+.container {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#color-palette {
+  display: table-row;
+  text-align: center;
+}
+.color {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.color-one {
+  background-color: black;
+}
+
+.color-two {
+  background-color: red;
+}
+
+.color-three {
+  background-color: purple;
+}
+
+.color-four {
+  background-color: green;
+}
