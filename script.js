@@ -24,19 +24,30 @@ function createColorPaletteListener() {
   colorPalette.addEventListener('click', changePaletteColor, false);
 }
 function changePixelColor(e) {
-  const selectedPaletteColor = document.querySelector('#color-palette > .selected');
-  let newColor = getComputedStyle(selectedPaletteColor).backgroundColor;  
+  const selectedPaletteColor = document.querySelector(
+    '#color-palette > .selected',
+  );
+  const newColor = getComputedStyle(selectedPaletteColor).backgroundColor;
   e.target.style.backgroundColor = newColor;
-  
 }
 function createPixelsListener() {
   const pixelBoard = document.getElementById('pixels-board');
   pixelBoard.addEventListener('click', changePixelColor, false);
 }
-
+function clearPixelBoard(e) {
+  const pixels = document.getElementById('pixels-board').children;
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+function createButtonListener() {
+  const btnClearPixelBoard = document.getElementById('clear-board');
+  btnClearPixelBoard.addEventListener('click', clearPixelBoard, false);
+}
 window.onload = function init() {
-  createCanvas(5, 5);
+  createCanvas(5, 5); // hardcoded canvas size
   setInitialColor();
   createColorPaletteListener();
   createPixelsListener();
+  createButtonListener();
 };
