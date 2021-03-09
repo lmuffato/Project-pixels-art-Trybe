@@ -33,6 +33,17 @@ for (let index = 0; index < paletteColors.length; index += 1) {
 
 const pixels = document.querySelectorAll('#pixel-board .pixel');
 
+const clearBoardButton = document.getElementById('clear-board');
+
+function clearBoard() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    const pixel = pixels[index];
+    pixel.style.backgroundColor = 'white';
+  }
+}
+
+clearBoardButton.addEventListener('click', clearBoard);
+
 function getCurrentColor() {
   for (let index = 0; index < paletteColors.length; index += 1) {
     const color = paletteColors[index];
