@@ -64,7 +64,12 @@ function colorPixel() {
 colorPixel();
 
 function clearPixel() {
-
+  const btnClearPixel = document.getElementById('clear-board');
+  btnClearPixel.addEventListener('click', function() {
+    for (let index = 0; index < pixelBox.length; index += 1) {
+      pixelBox[index].style.backgroundColor = 'white'
+    }
+  }); 
 }
 
 clearPixel();
