@@ -16,3 +16,7 @@ function colorsPaddles() {
 }
 colorsPaddles();
 // Requisito 3;
+function colorBlack() {
+  document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
+}
+colorBlack();
