@@ -41,9 +41,19 @@ function createPixels(num) {
     const square = document.createElement('div');
     square.className = 'pixel';
     square.style.backgroundColor = 'white';
-    const board = document.querySelector('#pixel-board');
-    board.appendChild(square);
+    const numBoard = document.querySelector('#pixel-board');
+    numBoard.appendChild(square);
   }
 }
 
 createPixels(25);
+
+function clearPixel() {
+  const selectPixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < selectPixel.length; index += 1) {
+    selectPixel[index].style.backgroundColor = 'white';
+  }
+}
+
+const clearBoard = document.querySelector('#clear-board');
+clearBoard.addEventListener('click', clearPixel);
