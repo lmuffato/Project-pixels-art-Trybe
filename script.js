@@ -4,8 +4,3 @@ function changeColor1() {
 }
 changeColor1();
 
- window.onload = function inicialColot() {
-  const inicialColor = document.getElementById('color1');
-  inicialColor.className = 'selected';     
-}
-inicialColor();
