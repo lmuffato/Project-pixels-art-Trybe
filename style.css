@@ -1,0 +1,94 @@
+@font-face {
+  font-family: noto-sans;
+  src: url('fonts/NotoSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: noto-sans;
+  src: url('fonts/NotoSans-Italic.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: noto-sans;
+  src: url('fonts/NotoSans-BoldItalic.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: noto-sans;
+  src: url('fonts/NotoSans-Bold.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: dot-gothic;
+  src: url('fonts/DotGothic16-Regular.ttf');
+  font-weight: 400;
+}
+
+:root {
+
+  --imperial-red-color: hsl(355, 78%, 56%);
+
+  --Honeydew-color: hsl(105, 55%, 96%);
+
+  --powder-blue: hsl(182, 43%, 76%);
+
+  --celadon-blue: hsl(203, 39%, 44%);
+
+  --prussian-blue: hsl(215, 50%, 23%);
+
+  --font-family-title: noto-sans, monospace;
+
+  --font-family-text: noto-sans, sans-serif;
+
+  --font-weight-title: 800;
+
+  --font-weight-regular: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-title);
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+p , span , header , main , footer , section , aside , div {
+  font-family: var(--font-family-text);
+  font-weight: var(--font-weight-regular);
+  font-size: 1rem;
+}
