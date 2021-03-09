@@ -24,9 +24,12 @@ div {
   border: black solid 1px;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 .pixel {
-  display: inline-block;
+  width: 25px;
+  height: 25px;
   border: black solid 1px;
-  background-color: blue;
-  margin: -2px;
 }
