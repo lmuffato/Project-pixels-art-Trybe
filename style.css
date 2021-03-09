@@ -61,6 +61,10 @@ header {
   background-color: white ! important;
 }
 
+.line {
+  display: table-row;
+}
+
 .pixel {
   border: 1px solid black;
   height: 40px;
