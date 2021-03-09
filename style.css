@@ -109,28 +109,25 @@ header h1 {
 }
 
 main {
-  margin: 2rem 4rem;
-}
-
-main section {
-  display: flex;
+  width: 980px;
+  margin: 1.5rem auto;
 }
 
 main #color-palette {
-  height: calc(100vh - 92px - 4rem);
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 main #color-palette .color {
   border: 1px solid black;
   border-radius: 50%;
-  min-width: 3rem;
-  width: 7rem;
-  min-height: 3rem;
-  height: 7rem;
+  width: 5rem;
+  height: 5rem;
   cursor: pointer;
+}
+
+main #color-palette .color:not( :first-child ) {
+  margin-left: 0.5rem;
 }
 
 main #color-palette .color:first-child {
@@ -151,6 +148,7 @@ main #color-palette .color:last-child {
 
 main #teste {
   width: 100%;
-  margin-left: 2rem;
+  height: calc(100vh - 92px - 9rem);
+  margin-top: 1rem;
   background-color: var(--celadon-blue-color);
 }
