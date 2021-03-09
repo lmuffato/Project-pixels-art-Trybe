@@ -2,7 +2,7 @@ header {
   text-align: center;
 }
 
-ul {
+ul , .pixel {
   padding: 0;
 }
 
@@ -26,5 +26,5 @@ table , .color , .pixel {
 .pixel {
   height: 40px;
   width: 40px;
-  background-color: white;
+  background-color: blue;
 }
