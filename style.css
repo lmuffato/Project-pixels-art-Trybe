@@ -1,11 +1,21 @@
-* { 
-    text-align: center;
+* {
+  text-align: center;
 }
+
 .color {
-    
-  display: inline-block;
   height: 100px;
   width: 100px;
   border: 1px black solid;
-  margin-left: 4px;
+  margin: 0px 0px 25px 4px;
+}
+
+.lines, .color {
+    display: inline-block;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px black solid;
+  height: 40px;
+  width: 40px;
 }
