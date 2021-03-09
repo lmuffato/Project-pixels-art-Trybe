@@ -174,3 +174,26 @@ function colorPixel() {
   }
 }
 colorPixel();
+
+// Requirement 9;
+
+function creatButton() {
+  const selectDivPaletteColors = document.querySelector('#color-palette');
+  const createButton = document.createElement('button');
+  createButton.id = 'clear-board';
+  createButton.innerHTML = 'Limpar Quadro';
+  selectDivPaletteColors.appendChild(createButton);
+}
+creatButton();
+
+function clearPixels() {
+  const selectButton = document.querySelector('#clear-board');
+  function clearPixelArray() {
+    const pixelArray = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixelArray.length; index += 1) {
+      pixelArray[index].style.backgroundColor = 'white';
+    }
+  }
+  selectButton.addEventListener('click', clearPixelArray);
+}
+clearPixels();
