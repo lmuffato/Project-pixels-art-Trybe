@@ -36,6 +36,7 @@ function addEventListenerToColorPalette() {
   }
 }
 
+
 function addEventListenerToPixels() {
   const allPixels = document.querySelectorAll('.pixel');
   for (const pixel of allPixels) {
@@ -48,9 +49,20 @@ function addEventListenerToPixels() {
   }
 }
 
+function addEventListenerToClearBtn() {
+  const clearBtn = document.getElementById('clear-board');
+  clearBtn.addEventListener('click', function clearPixels() {
+    const allPixels = document.querySelectorAll('.pixel');
+    for (const pixel of allPixels) {
+      pixel.style.backgroundColor = 'white';
+    }
+  });
+}
+
 window.onload = function onload() {
   createPixelBoard();
   selectBlackOnload();
   addEventListenerToColorPalette();
   addEventListenerToPixels();
+  addEventListenerToClearBtn();
 };

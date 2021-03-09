@@ -28,6 +28,11 @@
   background-color: red;
 }
 
+#clear-board {
+    width: 210px;
+    margin-bottom: 10px;
+}
+
 .pixel-row {
   width: 210px;
   height: 42px;
