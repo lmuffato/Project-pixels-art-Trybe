@@ -10,7 +10,6 @@ function selectColorBlack() {
       colorPixel('black');
     }
   });
-  return 'black';
 }
 selectColorBlack();
 
