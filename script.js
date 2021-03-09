@@ -1,5 +1,6 @@
 let selectColorPalette = document.getElementById('color-palette');
 let selectPixelBoard = document.getElementById('pixel-board');
+
 let colors = ['black', 'red', 'blue', 'green'];
 window.onload = function () {
   let setSelected = selectColorPalette.firstElementChild;
@@ -9,14 +10,18 @@ window.onload = function () {
 createPalette(); // cria os 4 quadrados(cores) e os adiciona como filho da div de id = 'color-palette'
 createBoardPixel(); //cria os nxn quadrados.
 captureColor(); // seta a cor ao clicar no quadrado escolhido.
-function paintPixel() {
-  
-  selectPixelBoard.addEventListener('click', function(event) {
-    let setColorSelected = document.getElementsByClassName('selected');
-    event.target.style.backgroundColor = setColorSelected[0].style.backgroundColor;
-  })
-}
+
+
 paintPixel();
+function paintPixel() {
+  let listPixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < listPixels.length; i += 1) {
+    listPixels[i].addEventListener('click', function (event) {
+      let setColorSelected = document.getElementsByClassName('selected');
+      event.target.style.backgroundColor = setColorSelected[0].style.backgroundColor;
+    });
+  }
+};
 
 function captureColor() {
   let getElementsPalette = selectColorPalette.getElementsByClassName('color');
