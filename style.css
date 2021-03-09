@@ -44,15 +44,15 @@ body {
 #pixel-board {
   text-align: center;
   display: block;
-  margin-top: 100px;
-  margin-left: 650px;
-  margin-right: 650px;
+  width: 250px;
+  margin: auto;
+  padding-top: 60px;
 }
 
 .pixel {
-  width: 100px;
+  width: 40px;
   border: 1px solid black;
-  height: 100px;
+  height: 40px;
   display: inline-block;
   background-color: white;
 }
