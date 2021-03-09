@@ -1,7 +1,25 @@
 
 .color {
-display: inline-block;
-border: solid 1px black;
-width: 80px;
-height: 80px
+  display: inline-block;
+  border: solid 1px black;
+  width: 80px;
+  height: 80px
+}
+
+#pixel-board {
+  height: 520px;
+  width: 520px;
+
+}
+
+.pixel {
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  display: -webkit-inline-flex;
+  margin-bottom: 0px;
+  margin-bottom: -4px;
+  margin-left: -2px;
+  
 }

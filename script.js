@@ -12,6 +12,16 @@ colorFourth.style.backgroundColor = 'yellow';
 
 colorFirst.style.backgroundColor = 'black';
 
+let framePixel = document.getElementById('pixel-board');
+
+for (i = 1; i <= 25; i +=1 ) {
+   let pixel = document.createElement('div')
+   pixel.className = 'pixel'
+
+   framePixel.appendChild(pixel)
+}
+
+
 
 
 
