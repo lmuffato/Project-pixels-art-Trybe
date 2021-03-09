@@ -30,3 +30,25 @@ for (let index = 0; index < paletteColors.length; index += 1) {
   setColorPalette(colorElement);
   colorElement.onclick = selectColor;
 }
+
+const pixels = document.querySelectorAll('#pixel-board .pixel');
+
+function getCurrentColor() {
+  for (let index = 0; index < paletteColors.length; index += 1) {
+    const color = paletteColors[index];
+    if (color.classList.contains('selected')) {
+      return color.id;
+    }
+  }
+}
+
+function fillPixel(element) {
+  const pixel = element.target;
+  const currentColor = getCurrentColor();
+  pixel.style.backgroundColor = colors[currentColor];
+}
+
+for (let index = 0; index < pixels.length; index += 1) {
+  const pixel = pixels[index];
+  pixel.addEventListener('click', fillPixel);
+}
