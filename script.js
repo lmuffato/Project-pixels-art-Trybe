@@ -21,18 +21,18 @@ function colorBlack() {
 }
 colorBlack();
 // Requisito 4;
-function pixelPainting() {
+function pixelPainting(size) {
   const div = document.createElement('div');
   document.body.appendChild(div);
   div.id = 'pixel-board';
-  for (let index = 1; index <= 5; index += 1) {
+  for (let index = 1; index <= size; index += 1) {
     const created = document.createElement('ul');
     document.querySelector('div').appendChild(created);
-    for (let index1 = 1; index1 <= 5; index1 += 1) {
+    for (let index1 = 1; index1 <= size; index1 += 1) {
       const createdList = document.createElement('li');
       created.appendChild(createdList);
       createdList.classList = 'pixel';
     }
   }
 }
-pixelPainting();
+pixelPainting(5);
