@@ -19,3 +19,20 @@ h1 {
   width: 80px;
   margin-left: 10px;
 }
+
+#pixel-board {
+  height: 440px;
+  width: 440px;
+  margin-top: 10px;
+  margin-left: 15px;  
+}
+
+.pixel {
+  margin: 0;
+  border: 2px solid black;
+  margin-bottom: -5px;
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  background-color: white;
+}
