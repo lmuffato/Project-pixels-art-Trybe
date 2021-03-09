@@ -98,7 +98,7 @@ function firstElementClassSelected() {
 }
 firstElementClassSelected();
 
-// Requirement 6;
+// Requirement 7;
 
 function selectElement() {
   let selectDivColorPaletteBlack = document.querySelectorAll('.color')[0];
@@ -147,3 +147,30 @@ function selectElement() {
   });
 }
 selectElement();
+
+// Requirement 8;
+
+function colorPixel() {
+  let selectDivColorPaletteBlack = document.querySelectorAll('.color')[0];
+  let selectDivColorPaletteRed = document.querySelectorAll('.color')[1];
+  let selectDivColorPaletteGreen = document.querySelectorAll('.color')[2];
+  let selectDivColorPaletteBlue = document.querySelectorAll('.color')[3];
+  let pixelArray = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixelArray.length; index += 1) {
+    let pixelArray = document.getElementsByClassName('pixel');
+
+    function paintPixel() {
+      if (selectDivColorPaletteBlack.className === 'color selected') {
+        pixelArray[index].style.backgroundColor = 'black';
+      } if (selectDivColorPaletteRed.className === 'color selected') {
+        pixelArray[index].style.backgroundColor = 'red';
+      } if (selectDivColorPaletteGreen.className === 'color selected') {
+        pixelArray[index].style.backgroundColor = 'green';
+      } if (selectDivColorPaletteBlue.className === 'color selected') {
+        pixelArray[index].style.backgroundColor = 'blue';
+      }
+    }
+    pixelArray[index].addEventListener('click', paintPixel);
+  }
+}
+colorPixel();
