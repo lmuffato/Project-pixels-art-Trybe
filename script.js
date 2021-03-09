@@ -49,9 +49,13 @@ function selectColor() {
 
 // Desafio 8
 const colorOne = 'black';
-const colorTwo = 'red';
-const colorThree = 'blue';
-const colorFour = 'green';
+const colorTwo = getRandomColor();
+const colorThree = getRandomColor();
+const colorFour = getRandomColor();
+/**
+ * Usei a implementação do Paolo Forgia para gerar números aleatórios,
+ * link do StackOverFlow: https://stackoverflow.com/questions/1484506/random-color-generator
+ */
 
 function palletClicked() {
   if (elementOne.classList.contains('selected')) {
@@ -91,6 +95,17 @@ function clearBoard() {
       pixelBoard[index].style.backgroundColor = 'white';
     });
   }
+}
+
+// Desafio 12
+function getRandomColor() {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+
+  for (let index = 0; index < 6; index += 1) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 window.onload = () => {
