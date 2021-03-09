@@ -6,8 +6,8 @@ h1 {
 
 .color {
   margin-top: 0;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   padding: 5px;
   border: black 1px solid;
   display: inline-block;
@@ -31,13 +31,12 @@ h1 {
 
 #pixel-board {
   border-collapse: collapse;
-  width: 40px;
-  height: 40px;
+
 }
 
 .pixel {
-  width: 8px;
-  height: 8px;
+  width: 40px;
+  height: 40px;
   border: black 1px solid;
   padding: 0;
   margin: 0;
