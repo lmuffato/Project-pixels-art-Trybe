@@ -51,9 +51,63 @@ function clearBtnFunction() {
   clearBtn.addEventListener('click', limpar);
 }
 
+function removeDivs() {
+  const lineDivs = document.querySelectorAll('.line');
+  const pixelBoard = document.querySelector('#pixel-board');
+
+  for (let index = 0; index < lineDivs.length; index += 1) {
+    const currentDiv = lineDivs[index];
+    pixelBoard.removeChild(currentDiv);
+  }
+}
+
+function addDivsLine(boardSize) {
+  const pixelBoard = document.querySelector('#pixel-board');
+
+  for (let index = 0; index < boardSize; index += 1) {
+    const divLine = document.createElement('div');
+    divLine.classList.add('line');
+
+    pixelBoard.appendChild(divLine);
+  }
+}
+
+function addPixels(boardSize) {
+  const divLine = document.querySelectorAll('.line');
+  for (let index = 0; index < divLine.length; index += 1) {
+    const currentLine = divLine[index];
+    for (let index2 = 0; index2 < boardSize; index2 += 1) {
+      const createPixel = document.createElement('div');
+      createPixel.classList.add('pixel');
+      currentLine.appendChild(createPixel);
+    }
+  }
+}
+
+function generateBoardSize() {
+  let inputValue = document.querySelector('#board-size').value;
+
+  if (!inputValue) {
+    alert('Board inválido!');
+  } if (inputValue > 50) {
+    inputValue = 50;
+  } if (inputValue < 5) {
+    inputValue = 5;
+  }
+  removeDivs();
+  addDivsLine(inputValue);
+  addPixels(inputValue);
+}
+
+function listenerBtn() {
+  const sizeBtn = document.querySelector('#generate-board');
+  sizeBtn.addEventListener('click', generateBoardSize);
+}
+
 window.onload = function () {
   squareColors();
   listenPaletteSection();
   selectColor();
   clearBtnFunction();
+  listenerBtn();
 };
