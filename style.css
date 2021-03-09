@@ -50,22 +50,6 @@ h1 {
   transform: scale(1.2);
 }
 
-#color-1 {
-  background: black;
-}
-
-#color-2 {
-  background: rgb(51, 51, 51);
-}
-
-#color-3 {
-  background: rgb(225, 244, 243);
-}
-
-#color-4 {
-  background: rgb(112, 108, 97);
-}
-
 #pixel-board {
   max-width: 900px;
   margin: 5% auto;
@@ -96,7 +80,7 @@ h1 {
   text-align: center;
 }
 
-#btn-clear {
+#clear-board {
   display: inline-block;
   padding: 0.5em 1.4em;
   border: 0.1em solid rgba(34, 34, 34, 0.212);
@@ -108,10 +92,10 @@ h1 {
   cursor: pointer;
 }
 
-#btn-clear:hover {
+#clear-board:hover {
   background-color: white;
 }
 
-#btn-clear:active {
+#clear-board:active {
   background-color: lightgray;
 }
