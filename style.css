@@ -11,6 +11,8 @@
 
 #color-palette {
   display: flex;
+  margin-bottom: 20px;
+  margin-left: 480px;
 }
 
 .color { 
@@ -21,7 +23,6 @@
 
 #black-palette {
   background-color: black;
-  margin-left: 500px;
 }
 
 #blue-palette {
@@ -34,4 +35,16 @@
 
 #pink-palette {
   background-color: pink;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px black solid;
+    height: 40px;
+    width: 40px;
+}
+
+.pixel-line {
+    display: flex;
+    margin-left: 560px;
 }
