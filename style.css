@@ -36,3 +36,7 @@ h1 {
   display: inline-block;
   background-color: white;
 }
+
+#clear-board {
+  margin-left: 15px;
+}

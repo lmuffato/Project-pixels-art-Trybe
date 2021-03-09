@@ -1,6 +1,6 @@
 const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
-
+const clearBtn = document.getElementById('clear-board');
 const paletteColors = ['black', 'blue', 'red', 'green'];
 let selectedColor = 0;
 const pixelColumns = 5;
@@ -45,8 +45,16 @@ function colorPixel(e) {
   }
 }
 
+function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+
 colorPalette.addEventListener('click', changeSelection);
 pixelBoard.addEventListener('click', colorPixel);
+clearBtn.addEventListener('click', clearBoard);
 
 setPaletteColors();
 setPixels();
