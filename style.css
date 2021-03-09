@@ -10,3 +10,20 @@
   margin: 5px;
   border: 1px solid;
 }
+
+#pixel-board {
+	display: table;
+	margin-left: 45px;
+	margin-top: 64px;
+}
+
+/* #pixel-board > tr {
+	display: table-row;
+} */
+
+.pixel {
+	border: 2px solid;
+	display: table-cell;
+	width: 50px;
+	height: 50px;
+}
