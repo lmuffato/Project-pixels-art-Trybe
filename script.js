@@ -78,9 +78,9 @@ generatePixelBoard();
 
 function readjustSize(value) {
   if (value < 5) {
-    return 5;
+    return '5';
   }
-  return 50;
+  return '50';
 }
 
 function setBoardSize() {
