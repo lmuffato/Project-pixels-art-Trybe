@@ -67,7 +67,7 @@ function createPixelTable() {
   createDiv.id = 'pixel-board';
   createDiv.style.border = 'solid 1px black';
   createDiv.style.display = 'block';
-  createDiv.style.maxWidth = '200px';
+  createDiv.style.maxWidth = '210px';
   createDiv.style.display = 'inline-block';
   selectorBody.appendChild(createDiv);
 }
@@ -80,8 +80,8 @@ function createPixelTableLineElements() {
       const createDiv = document.createElement('div');
       createDiv.className = 'pixel';
       createDiv.style.backgroundColor = 'white';
-      createDiv.style.height = '37.79px';
-      createDiv.style.width = '37.79px';
+      createDiv.style.height = '40px';
+      createDiv.style.width = '40px';
       createDiv.style.border = 'solid 1px black';
       createDiv.style.display = 'inline-block';
       selectorDivPixelBoard.appendChild(createDiv);
