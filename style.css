@@ -1,0 +1,27 @@
+#color-palette {
+  display: table;
+  border-spacing: 10px;
+}
+
+#color-palette .color {
+  display: table-cell;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+#color-palette #black {
+  background-color: black;
+}
+
+#color-palette #red {
+  background-color: #F72C25;
+}
+
+#color-palette #green {
+  background-color: #2D936C;
+}
+
+#color-palette #blue {
+  background-color: #4F7CAC;
+}
