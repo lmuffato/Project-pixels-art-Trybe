@@ -1,5 +1,10 @@
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 .color {
@@ -29,8 +34,10 @@
 }
 
 .pixel {
+  box-sizing: content-box;
   display: inline-block;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
 }
 
