@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap') ;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
 }
+
 body {
-  background-image: url(/wall2.jpg);
+  background-image: url('/cool-background1.png');
 }
+
 h1 {
   text-align: center;
-  color: white;
 }
 
 #color-palette {
