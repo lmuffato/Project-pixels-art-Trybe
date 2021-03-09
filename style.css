@@ -1,7 +1,38 @@
 /*reset*/
-body{
+body {
   box-sizing: border-box;
-  margin: 0;
   font-family: sans-serif;
   text-decoration: none;
+}
+
+.color:nth-child(1) {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  background-color: black; 
+}
+
+.color:nth-child(2) {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  background-color: red; 
+}
+
+.color:nth-child(3) {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  background-color: blue; 
+}
+
+.color:nth-child(4) {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  background-color: green; 
 }
