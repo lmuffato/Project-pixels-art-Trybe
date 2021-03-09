@@ -97,3 +97,53 @@ function firstElementClassSelected() {
   selectorFirstColor.className += ' selected';
 }
 firstElementClassSelected();
+
+// Requirement 6;
+
+function selectElement() {
+  let selectDivColorPaletteBlack = document.querySelectorAll('.color')[0];
+  let selectDivColorPaletteRed = document.querySelectorAll('.color')[1];
+  let selectDivColorPaletteGreen = document.querySelectorAll('.color')[2];
+  let selectDivColorPaletteBlue = document.querySelectorAll('.color')[3];
+  selectDivColorPaletteBlack.addEventListener('click', function () {
+    if (selectDivColorPaletteBlack.className === 'color') {
+      selectDivColorPaletteBlack.className += ' selected';
+      selectDivColorPaletteRed.className = 'color';
+      selectDivColorPaletteGreen.className = 'color';
+      selectDivColorPaletteBlue.className = 'color';
+    } else {
+      selectDivColorPaletteBlack.className = 'color';
+    }
+  });
+  selectDivColorPaletteRed.addEventListener('click', function () {
+    if (selectDivColorPaletteRed.className === 'color') {
+      selectDivColorPaletteRed.className += ' selected';
+      selectDivColorPaletteBlack.className = 'color';
+      selectDivColorPaletteGreen.className = 'color';
+      selectDivColorPaletteBlue.className = 'color';
+    } else {
+      selectDivColorPaletteRed.className = 'color';
+    }
+  });
+  selectDivColorPaletteGreen.addEventListener('click', function () {
+    if (selectDivColorPaletteGreen.className === 'color') {
+      selectDivColorPaletteGreen.className += ' selected';
+      selectDivColorPaletteRed.className = 'color';
+      selectDivColorPaletteBlack.className = 'color';
+      selectDivColorPaletteBlue.className = 'color';
+    } else {
+      selectDivColorPaletteGreen.className = 'color';
+    }
+  });
+  selectDivColorPaletteBlue.addEventListener('click', function () {
+    if (selectDivColorPaletteBlue.className === 'color') {
+      selectDivColorPaletteBlue.className += ' selected';
+      selectDivColorPaletteRed.className = 'color';
+      selectDivColorPaletteBlack.className = 'color';
+      selectDivColorPaletteGreen.className = 'color';
+    } else {
+      selectDivColorPaletteBlue.className = 'color';
+    }
+  });
+}
+selectElement();
