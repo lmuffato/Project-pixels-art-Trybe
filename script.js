@@ -1,4 +1,4 @@
-let color = 'fff';
+let color = '#000';
 
 function setColor(colorName) {
   if (colorName) {
@@ -72,6 +72,13 @@ function fillPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
   for (let rows = 1; rows <= 5; rows += 1) {
     pixelBoard.appendChild(createPixelRow());
+  }
+}
+
+function clearDrawing() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (pixel of pixels) {
+    pixel.style.backgroundColor = 'white';
   }
 }
 
