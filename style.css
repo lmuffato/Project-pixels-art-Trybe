@@ -14,3 +14,15 @@
 #black{
     background-color: black;
 }
+#pixel-board{
+    display: table; 
+}
+.tr{
+    display: table-row; 
+}
+.pixel{
+    display: table-cell;
+    border: solid black 1px; 
+    width: 25px;
+    height: 25px;
+}
