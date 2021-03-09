@@ -33,15 +33,15 @@ body {
 
 #pixel-board {
   display: grid;
-  grid-template-columns: repeat(5, 25px);
-  grid-template-rows: repeat(5, 25px);
-  width: 125px;
-  height: 125px;
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
+  width: fit-content;
+  height: fit-content;
 }
 
 .pixel {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   background: white;
   border: 1px solid black;
 }
