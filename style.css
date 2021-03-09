@@ -1,13 +1,15 @@
 #color-palette {
 	display: table;
-	padding: 5px;
+	padding: 10px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .color {
   border: solid black 1px;
-	display: table-cell;
-	width: 100px;
-	padding: 50px;
+  display: table-cell;
+  width: 30px;
+	padding: 35px;
 }
 
 #color1 {
@@ -24,4 +26,15 @@
 
 #color4 {
 	background-color: green;
+}
+
+.squares {
+	display: flex;
+}
+
+.pixel {
+	width: 30px;
+	padding: 30px;
+	background-color: white;
+	border: solid black 1px;
 }
