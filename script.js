@@ -2,6 +2,7 @@ const numberOfLines = 5;
 const numberOfColumns = 5;
 const paletteColor = document.querySelectorAll('.color');
 const blackPalette = document.getElementById('color-1');
+const btnClear = document.getElementById('btn-clear');
 blackPalette.style.backgroundColor = 'black';
 
 function generateRandomRGB() {
@@ -61,6 +62,13 @@ document.querySelectorAll('.pixel').forEach((element) => {
     const colorPalette = document.getElementsByClassName('selected')[0].style.backgroundColor;
     pixelElement.style.backgroundColor = colorPalette;
   });
+});
+
+btnClear.addEventListener('click', () => {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
 });
 
 generateColorPalette(4);

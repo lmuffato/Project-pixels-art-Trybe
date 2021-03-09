@@ -28,7 +28,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
+  margin: 2% auto;
   padding: 3px;
   border-radius: 25px;
   border: 1px rgb(231, 231, 231) solid;
@@ -68,7 +68,7 @@ h1 {
 
 #pixel-board {
   max-width: 900px;
-  margin: 6% auto;
+  margin: 5% auto;
   cursor: pointer;
 }
 
@@ -88,4 +88,30 @@ h1 {
 
 .pixel:hover {
   transform: scale(1.2);
+}
+
+#section-btn-clear {
+  max-width: 900px;
+  margin: 4% auto;
+  text-align: center;
+}
+
+#btn-clear {
+  display: inline-block;
+  padding: 0.50em 1.4em;
+  border: 0.1em solid rgba(34, 34, 34, 0.212);
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+#btn-clear:hover {
+  background-color: white;
+}
+
+#btn-clear:active {
+  background-color: rgb(211, 211, 211);
 }
