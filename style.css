@@ -1,11 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .color {
   display: inline-block;
 }
 
 .pixel , .color {
   border: 1px solid black;
-  width: 41px;
-  height: 41px;
+  width: 36px;
+  height: 36px;
 }
 
 .pixel {
