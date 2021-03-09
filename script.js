@@ -11,6 +11,18 @@ window.onload = function palleteColor(){
         document.querySelectorAll('.color')[index].style.backgroundColor = palleteColorBasic[index];
 }
 
-// addEventListener('click',)
 
+let pixel = document.getElementsByClassName('pixel');
+
+pixel.addEventListener('click', changeColor) 
+
+
+function changeColor() {
+    document.getElementsByClassName('pixel').style.backgroundColor = 'black'
+    
+// document.getElementsByTagName('td')
+
+// document.getElementsByTagName('td')[17].style.backgroundColor = palleteColorBasic[3]
+
+}
 
