@@ -14,4 +14,6 @@ function createCanvas(x, y) {
 
 window.onload = function init() {
   createCanvas(5, 5);
+  const firstColor = document.getElementsByClassName('color')[0];
+  firstColor.classList.toggle('selected');
 };
