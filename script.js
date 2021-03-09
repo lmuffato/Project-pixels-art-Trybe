@@ -1,13 +1,13 @@
 const colorsArray = ['red', 'blue', 'green', 'magenta'];
 
-const colorPaletteContainers = document.querySelectorAll('.color');
+const colorsInPalette = document.querySelectorAll('.color');
 
 function addColorsInPalette() {
-  for (let index = 0; index < colorPaletteContainers.length; index += 1) {
-    colorPaletteContainers[index].style.background = colorsArray[index];
+  for (let index = 0; index < colorsInPalette.length; index += 1) {
+    colorsInPalette[index].style.background = colorsArray[index];
   }
 
-  colorPaletteContainers[0].style.background = 'black';
+  colorsInPalette[0].style.background = 'black';
 }
 
 function createPixelInBoard() {
@@ -16,15 +16,22 @@ function createPixelInBoard() {
   return pixel;
 }
 
-function selectNewElement(newEl) {
-  colorPaletteContainers.forEach((el) => el.classList.remove('selected'));
-  newEl.classList.toggle('selected');
-}
-
-colorPaletteContainers.forEach(addColorsInPalette);
-
 for (let index = 0; index < 25; index += 1) {
   document.querySelector('#pixel-board').appendChild(createPixelInBoard());
 }
 
-colorPaletteContainers.forEach((el) => el.addEventListener('click', (e) => selectNewElement(e.target)));
+const boardPixels = document.querySelectorAll('.pixel');
+
+function selectNewElement(newEl) {
+  colorsInPalette.forEach((el) => el.classList.remove('selected'));
+  newEl.classList.toggle('selected');
+}
+
+function paintNewPixel(pixel) {
+  pixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
+
+colorsInPalette.forEach(addColorsInPalette);
+
+colorsInPalette.forEach((el) => el.addEventListener('click', (e) => selectNewElement(e.target)));
+boardPixels.forEach((px) => px.addEventListener('click', (e) => paintNewPixel(e.target)))
