@@ -39,7 +39,14 @@ function changeSelection(e) {
   colorDivs[selectedColor].className += ' selected';
 }
 
+function colorPixel(e) {
+  if (e.target.className === 'pixel') {
+    e.target.style.backgroundColor = paletteColors[selectedColor];
+  }
+}
+
 colorPalette.addEventListener('click', changeSelection);
+pixelBoard.addEventListener('click', colorPixel);
 
 setPaletteColors();
 setPixels();
