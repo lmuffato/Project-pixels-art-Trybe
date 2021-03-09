@@ -25,3 +25,5 @@ function criaQuadro(numberOfFrames) {
   }
 }
 criaQuadro(5);
+
+document.getElementsByClassName('color')[0]
