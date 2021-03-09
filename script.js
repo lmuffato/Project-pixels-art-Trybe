@@ -28,6 +28,18 @@ function setPixels() {
   }
 }
 
+function changeSelection(e) {
+  const colorDivs = document.querySelectorAll('.color');
+  const clickedColor = e.target.style.backgroundColor;
+  selectedColor = paletteColors.findIndex((num) => num === clickedColor);
+  for (let index = 0; index < colorDivs.length; index += 1) {
+    colorDivs[index].className = 'color';
+  }
+
+  colorDivs[selectedColor].className += ' selected';
+}
+
+colorPalette.addEventListener('click', changeSelection);
+
 setPaletteColors();
 setPixels();
-
