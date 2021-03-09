@@ -1,10 +1,12 @@
 #color-palette {
+    height: 25px;
+    width: 210px;
     list-style: none;
     }
 .color {
     border: 1px solid black;
     display: inline-block; 
-    height: 50px;
+    height: 25px;
     width: 50px;   
 }
 .red {
@@ -29,6 +31,7 @@
      http://bluegalaxy.info/codewalk/2018/03/01/html-css-create-square-grid-using-css-grid/ */
 
 .pixel {
+    background-color: rgb(255, 255, 255);
     height: 40px;
     width: 40px;
     border: 1px solid black;
