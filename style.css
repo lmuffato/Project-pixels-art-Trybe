@@ -2,3 +2,40 @@ body {
   width: 1366px;
   height: 768px;
 }
+
+#color-palette {
+  display: inline-block;
+  margin-left: 46px;
+}
+
+#list-colors {
+  border-bottom: 3px solid #ededed;
+}
+
+#list-colors li {
+  list-style: none;
+  padding: 2px 10px;
+  display: inline-block;
+}
+
+.color {
+  border: solid black 1px;
+  padding: 2px 10px;
+}
+
+.black {
+  background-color: black;
+  color: aliceblue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+}
