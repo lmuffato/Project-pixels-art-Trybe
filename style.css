@@ -1,0 +1,26 @@
+#color-palette div {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.color {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+}
+
+#black {
+  background-color: black;
+}
+
+#second-color {
+  background-color: red;
+}
+
+#third-color {
+  background-color: green;
+}
+
+#fourth-color {
+  background-color: blue;
+}
