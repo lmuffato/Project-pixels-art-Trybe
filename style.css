@@ -1,26 +1,49 @@
 body {
-    text-align: center;
+  text-align: center;
 }
 
 .color {
-    border: solid 1px black;
-    display: inline-block;
-    height: 40px;
-    width: 40px;
+  border: solid 1px black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 #one {
-    background-color: black;
+  background-color: black;
 }
 
 #two {
-    background-color: red;
+  background-color: red;
 }
 
 #three {
-    background-color: blue;
+  background-color: blue;
 }
 
 #four {
-    background-color: green;
+  background-color: green;
 }
+
+#pixel-table {
+    display: table;
+    border: black 1px;
+}
+
+.pixel-board {
+  border-collapse: collapse;
+  display: block;
+  height: 200px;
+  text-align: center;
+  width: 200px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px black solid;
+  border-spacing: 0;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+  
