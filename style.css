@@ -3,8 +3,13 @@ body {
 	padding: 0px;
 }
 
+h1{
+	align-content: center;
+}
+
 #header{
   display:flex;
+	justify-content: center;
   margin-left: 10px;
 }
 
@@ -38,4 +43,21 @@ body {
 
 #green{
   background-color:green;
+}
+
+.tabela{
+	margin-left: 8px;
+}
+
+.pixel{
+	box-sizing: content-box;
+  background-color:white;
+  height:40px;
+  width:40px; 
+  border:solid 1px;
+}
+
+.flex-center{
+	display:flex;
+	justify-content: center;
 }
