@@ -1,10 +1,8 @@
 function createColorsPallete(amount) {
   let divColors = document.querySelector('#color-palette');
-  console.log(divColors);
   for (let index = 1; index <= amount; index += 1) {
     let colors = document.createElement('div');
     colors.className = 'color';
-    console.log(colors);
     divColors.appendChild(colors);
   }
 }
@@ -18,3 +16,17 @@ function assignColors() {
   colors[3].style.backgroundColor = 'purple';
 }
 assignColors();
+
+function createPixelBox(amount) {
+  let divPixels = document.querySelector('#pixel-board');
+  for (let index = 1; index <= amount; index += 1) {
+    let boxes = document.createElement('div');
+    divPixels.appendChild(boxes);
+    for (let indexI = 1; indexI <= amount; indexI += 1) {
+      let boxes1 = document.createElement('div');
+      boxes1.className = 'pixel';
+      boxes.appendChild(boxes1);
+    }
+  }
+}
+createPixelBox(5);
