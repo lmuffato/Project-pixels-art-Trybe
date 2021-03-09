@@ -8,29 +8,29 @@ body {
 }
 .color:nth-child( 1 ) {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border: solid black 1px;
   background-color: black; 
 }
 .color:nth-child( 2 ) {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border: solid black 1px;
   background-color: red; 
 }
 .color:nth-child( 3 ) {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border: solid black 1px;
   background-color: blue; 
 }
 .color:nth-child( 4 ) {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border: solid black 1px;
   background-color: green; 
 }
@@ -39,8 +39,8 @@ body {
   margin-top: 2em;
 }
 .pixel {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   border: solid black 1px;
   cursor: pointer;
