@@ -1,13 +1,13 @@
 * {
     font-size: 1.2vw;
 }
-/*--------------- header --------------*/ 
+/* --------------- header -------------- */ 
 #title {
-    font-family: 'Cinzel', serif;
+    font-family: Cinzel, serif;
     text-align: center;
     font-size: 2vw;
 }
-/*-------------- main -----------------*/
+/* -------------- main ----------------- */
 #color-palette {
     display: inline-block;
     text-align: center;
@@ -20,22 +20,24 @@
     display: inline-block;
     width: 12vw;
     height: 12vw;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: Cinzel Decorative, cursive;
     border: solid 1px black;
 }
 
 .hot-pink {
-    background-color: #FFAEBC;
+    background-color: #ffaebc;
 }
 
 .tiffany-blue {
-    background-color: #A0E7E5;
+    background-color: #a0e7e5;
 }
 
 .mint {
-    background-color: #B4F8C8;
+    background-color: #b4f8c8;
 }
 
 .yellow {
-    background-color: #FBE7C6;
+    background-color: #fbe7c6;
 }
+
+/* ------------------- footer ------------ */
