@@ -1,9 +1,9 @@
 function createPixels(n) {
-  const container = document.getElementById('pixels-board');
+  const pixelBoard = document.getElementById('pixel-board');
   for (let index = 0; index < n; index += 1) {
     const row = document.createElement('div');
     row.className = 'pixel';
-    container.appendChild(row);
+    pixelBoard.appendChild(row);
   }
 }
 function createCanvas(x, y) {
@@ -31,11 +31,11 @@ function changePixelColor(e) {
   e.target.style.backgroundColor = newColor;
 }
 function createPixelsListener() {
-  const pixelBoard = document.getElementById('pixels-board');
+  const pixelBoard = document.getElementById('pixel-board');
   pixelBoard.addEventListener('click', changePixelColor, false);
 }
-function clearPixelBoard(e) {
-  const pixels = document.getElementById('pixels-board').children;
+function clearPixelBoard() {
+  const pixels = document.getElementById('pixel-board').children;
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
   }
