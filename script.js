@@ -1,6 +1,23 @@
 const numberOfLines = 5;
 const numberOfColumns = 5;
 const paletteColor = document.querySelectorAll('.color');
+const blackPalette = document.getElementById('color-1');
+blackPalette.style.backgroundColor = 'black';
+
+function generateRandomRGB() {
+  const r = Math.floor(Math.random() * (255));
+  const g = Math.floor(Math.random() * (255));
+  const b = Math.floor(Math.random() * (255));
+  const rgb = `rgb(${r}, ${g}, ${b})`;
+  return rgb;
+}
+
+function generateColorPalette(palletColorNumber) {
+  for (let index = 1; index < palletColorNumber; index += 1) {
+    const palletElement = document.getElementsByClassName('color');
+    palletElement[index].style.backgroundColor = generateRandomRGB();
+  }
+}
 
 function createPixel(numberOfColumnsCP, divElementLine) {
   for (let index = 0; index < numberOfColumnsCP; index += 1) {
@@ -37,3 +54,13 @@ paletteColor.forEach((element) => {
     pixelElement.target.className += ' selected';
   });
 });
+
+document.querySelectorAll('.pixel').forEach((element) => {
+  element.addEventListener('click', (elementTarget) => {
+    const pixelElement = elementTarget.target;
+    const colorPalette = document.getElementsByClassName('selected')[0].style.backgroundColor;
+    pixelElement.style.backgroundColor = colorPalette;
+  });
+});
+
+generateColorPalette(4);
