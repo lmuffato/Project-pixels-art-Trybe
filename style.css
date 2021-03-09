@@ -3,8 +3,8 @@
   border-collapse: collapse;
   border-width: 1px;
   border-color: black;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 .pixel {
@@ -12,8 +12,8 @@
   border-collapse: collapse;
   border-width: 1px;
   border-color: black;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   background-color: white;
 }
 
