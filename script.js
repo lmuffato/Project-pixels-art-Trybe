@@ -44,15 +44,66 @@ const toggleClassEvent = (elementNode, className) => {
   }
 };
 
+const randomColor = () => {
+  return Math.round(Math.random() * 255);
+};
+
+const generateRandomColor = () => {
+  return `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+};
+
 const setColorsPalette = () => {
   const black = document.querySelector('.black');
-  const red = document.querySelector('.red');
-  const green = document.querySelector('.green');
-  const blue = document.querySelector('.blue');
+  const color1 = document.querySelector('.color1');
+  const color2 = document.querySelector('.color2');
+  const color3 = document.querySelector('.color3');
   black.style.backgroundColor = 'black';
-  red.style.backgroundColor = 'red';
-  green.style.backgroundColor = 'green';
-  blue.style.backgroundColor = 'blue';
+  color1.style.backgroundColor = generateRandomColor();
+  color2.style.backgroundColor = generateRandomColor();
+  color3.style.backgroundColor = generateRandomColor();
+};
+
+const checkBoardSizeLimite = (boardSize, min, max) => {
+  if (boardSize < min) {
+    boardSize = min;
+  } else if (boardSize > max) {
+    boardSize = max;
+  }
+  return boardSize;
+};
+
+const createPixelBoard = () => {
+  let boardSize = document.querySelector('#board-size');
+  boardSize = boardSize.value;
+  boardSize = checkBoardSizeLimite(boardSize, 5, 50);
+  const pixelBoard = document.querySelector('#pixel-board');
+
+  if (boardSize === '') {
+    alert('Board inválido!');
+    return;
+  }
+  resetBoard();
+  for (let index = 0; index < boardSize; index += 1) {
+    const line = document.createElement('div');
+    line.classList.add('line');
+    for (let index = 0; index < boardSize; index += 1) {
+      const colum = document.createElement('div');
+      colum.classList.add('pixel');
+      line.appendChild(colum);
+    }
+    pixelBoard.appendChild(line);
+  }
+  changeBackgroundColorPixels();
+  configureEventsListeners();
+};
+
+const resetBoard = () => {
+  const reset = document.querySelector('#pixel-board');
+  reset.innerHTML = '';
+};
+
+const configureEventsListeners = () => {
+  addEvListenerNElements('.pixel', 'click', changeColorPixel);
 };
 
 const changeBackgroundColorPixels = () => {
@@ -66,7 +117,9 @@ window.onload = () => {
   setColorsPalette();
   toggleClassInit('.color', 'selected');
   changeBackgroundColorPixels();
+  
   addEvListener('#clear-board', 'click', changeBackgroundColorPixels);
   addEvListener('#color-palette', 'click', function (e) { toggleClassEvent(e, 'selected') });
   addEvListenerNElements('.pixel', 'click', changeColorPixel);
+  addEvListener('#generate-board', 'click', createPixelBoard)
 };

@@ -17,9 +17,12 @@ body {
   width: 50px;
 }
 
+#pixel-board {
+  display: flex;
+}
+
 .pixel {
   box-sizing: content-box;
-  display: inline-block;
   height: 40px;
   width: 40px;
   border: 1px solid black;
@@ -39,4 +42,8 @@ body {
 
 .blue {
   background-color: blue;
+}
+
+.selected {
+  border-radius: 15px;
 }
