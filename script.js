@@ -12,10 +12,10 @@ createh1();
 // Requirement 2;
 
 function createCollorPalette() {
+  const selectorBody = document.querySelector('body');
   const createDiv = document.createElement('div');
-  const selectorH1 = document.querySelector('h1');
   createDiv.id = 'color-palette';
-  selectorH1.appendChild(createDiv);
+  selectorBody.appendChild(createDiv);
 }
 createCollorPalette();
 
@@ -29,24 +29,32 @@ function createCollorsIntoPallete() {
       createDiv.style.backgroundColor = 'blue';
       createDiv.style.height = '50px';
       createDiv.style.width = '50px';
-      createDiv.style.border = 'solid', 'black', '1px';
+      createDiv.style.border = 'solid 1px black';
     } if (index === 2) {
       createDiv.style.backgroundColor = 'red';
       createDiv.style.height = '50px';
       createDiv.style.width = '50px';
-      createDiv.style.border = 'solid', 'black', '1px';
+      createDiv.style.border = 'solid 1px black';
     } if (index === 3) {
       createDiv.style.backgroundColor = 'green';
       createDiv.style.height = '50px';
       createDiv.style.width = '50px';
-      createDiv.style.border = 'solid', 'black', '1px';
+      createDiv.style.border = 'solid 1px black';
     } if (index === 4) {
-      createDiv.style.backgroundColor = 'yellow';
+      createDiv.style.backgroundColor = 'blue';
       createDiv.style.height = '50px';
       createDiv.style.width = '50px';
-      createDiv.style.border = 'solid', 'black', '1px';
+      createDiv.style.border = 'solid 1px black';
     }
     selectorH1.appendChild(createDiv);
   }
 }
 createCollorsIntoPallete();
+
+// Requirement 3;
+
+function changeFirstCollorPalette() {
+  let firstElementDivPalette = document.querySelectorAll('.color')[0];
+  firstElementDivPalette.style.backgroundColor = 'black';
+}
+changeFirstCollorPalette();
