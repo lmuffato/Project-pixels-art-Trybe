@@ -13,7 +13,7 @@
   border: solid black;
   border-width: 1px;
   float: left;
-  background-color: rgb(255,255,255);
+  background-color: 'rgb(255,255,255)';
 }
 
 .line-container {
