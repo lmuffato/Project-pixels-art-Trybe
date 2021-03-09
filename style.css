@@ -32,10 +32,12 @@ body {
 
 .pixels-board {
   background-color: aqua;
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
 }
 
 .pixel {
   background-color: white;
+  width: 25px;
+  height: 25px;
 }
