@@ -1,6 +1,6 @@
 window.onload = function script() {
   function setColor(colorsArray) {
-    const boxColors = document.querySelectorAll('.colors');
+    const boxColors = document.querySelectorAll('.color');
     const colors = colorsArray;
 
     for (let index = 0; index < boxColors.length; index += 1) {
@@ -8,5 +8,5 @@ window.onload = function script() {
     }
   }
 
-  setColor(['red', 'blue', 'green', 'yellow']);
+  setColor(['black', 'blue', 'green', 'yellow']);
 };
