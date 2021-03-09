@@ -16,22 +16,23 @@
   margin-bottom: 30px;
 }
 
+/*
 #cor1 {
   background-color: black;
 }
 
 #cor2 {
-  background-color:blueviolet;
+  background-color: red;
 }
 
 #cor3 {
-  background-color:coral;
+  background-color:green;
 }
 
 #cor4 {
-  background-color:palevioletred;
+  background-color:blue;
 }
-
+*/
 
 .linha {
   display: flex;
