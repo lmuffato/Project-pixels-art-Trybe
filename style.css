@@ -1,23 +1,33 @@
 #green {
-    background-color: green;
-    display: inline-block;
+background-color: black;
 }
 
 #yellow {
-    background-color: yellow;
-    display: inline-block;
+  background-color: green;
 }
 
 #blue {
-    background-color: blue;
-    display: inline-block;
+  background-color: yellow;
 }
 
 #beige {
-    background-color: beige;
-    display: inline-block;
+  background-color: blue;
 }
 
 .color {
-    border-style:solid 1px black;
+  width: 70px;
+  height: 70px;
+  display:inline-block
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.color, .pixel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
