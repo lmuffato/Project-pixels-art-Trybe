@@ -27,6 +27,15 @@
 
 #color-palette{
     display: table;
-    width: 300px;
-    height: 300px;
-}s
+}
+#pixel-board{
+    display: table;
+}
+.pixel{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    display:table-cell;
+}
