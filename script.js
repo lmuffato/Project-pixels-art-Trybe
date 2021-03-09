@@ -36,3 +36,8 @@ function pixelPainting(size) {
   }
 }
 pixelPainting(5);
+
+// Requisito 5;
+
+// Requisito 6;
+document.getElementsByClassName('color')[0].classList.add('select');
