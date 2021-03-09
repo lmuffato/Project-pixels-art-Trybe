@@ -2,12 +2,34 @@ body {
     margin: 10px;
 }
 
-.color {
-    display: inline-block;
-    font-size: 20px;
-}
-
 #color-options {
     display: block;
     font-size: 20px;
+}
+
+#color-palette {
+    border-spacing: 10px;
+}
+
+#color-palette .color {
+    display: table-cell; /*referência para o display: table-cell: usuário github: nascjoao (https://github.com/tryber/sd-010-a-project-pixels-art/pull/89/files)*/
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+}
+
+#black {
+    background-color: black;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#blue {
+    background-color: blue;
 }
