@@ -1,7 +1,2 @@
-window.onload = function (){
+let squareMaster = document.getElementById('pixel-board');
 
-
-
-  
-
-}

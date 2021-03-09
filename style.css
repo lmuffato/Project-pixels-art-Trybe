@@ -1,3 +1,6 @@
+#color-palette {
+  border-spacing: 0.6rem;
+}
 .color {
   width: 90px;
   height: 90px;
@@ -16,8 +19,6 @@
   background-color: pink;
 }
 
-#color-orange{
+#color-orange {
   background-color: orange;
 }
-
-
