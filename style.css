@@ -11,12 +11,14 @@
 }
 
 .boxes {
+    background-color: white;
     width: 40px;
     height: 40px;
     display: inline-block;
 }
 
 .pixel {
+    background-color: white;
     margin-top: -4px;
     border: 1px solid black;
     width: 40px;
