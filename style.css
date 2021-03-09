@@ -34,7 +34,7 @@ header {
 }
 
 .color {
-  border: solid 1px black;
+  border: 1px solid black;
   height: 100px;
   width: 100px;
   margin-right: 5px;
@@ -49,7 +49,7 @@ header {
 }
 
 .pixel {
-  border: solid 1px black;
+  border: 1px solid black;
   height: 40px;
   width: 40px;
   background-color: white;
