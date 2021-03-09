@@ -12,9 +12,5 @@
   border-style: solid;
   width: 40px;
   height: 40px;
-
-}
-
-td.pixel {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
