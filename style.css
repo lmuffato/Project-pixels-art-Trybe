@@ -24,6 +24,10 @@
     border: solid 1px black;
 }
 
+.black {
+    background-color: black;
+}
+
 .hot-pink {
     background-color: #ffaebc;
 }
