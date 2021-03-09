@@ -1,0 +1,23 @@
+#green {
+    background-color: green;
+    display: inline-block;
+}
+
+#yellow {
+    background-color: yellow;
+    display: inline-block;
+}
+
+#blue {
+    background-color: blue;
+    display: inline-block;
+}
+
+#beige {
+    background-color: beige;
+    display: inline-block;
+}
+
+.color {
+    border-style:solid 1px black;
+}
