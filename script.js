@@ -1,6 +1,6 @@
 window.onload = () => {
   function colorPalette() {
-    const colors = ['red', 'green', 'blue', 'black'];
+    const colors = ['black', 'red', 'green', 'blue'];
     const colorsFather = document.querySelector('#color-palette');
 
     for (let index = 0; index < colors.length; index += 1) {
