@@ -7,55 +7,65 @@ const addEvListener = (elementNode, event, fn) => {
   node.addEventListener(event, fn);
 }
 
-const changeColor = (newColor, oldColor) => {
-  let elements = document.querySelectorAll('.holiday');
-  for (let index = 0; index < elements.length; index += 1) {
-    let el = elements[index];
-
-    if (el.style.backgroundColor === newColor) {
-      el.style.backgroundColor = oldColor;
-    } else {
-      el.style.borderRadius = '15px';
-      el.style.backgroundColor = newColor;
-    }
+const addEvListenerNElements = (elementsNodes, event, fn) => {
+  if (typeof fn !== 'function') {
+    console.log('O parâmetro fn deve ser uma função.');
+    return;
+  }
+  let nodes = document.querySelectorAll(elementsNodes);
+  for (let index = 0; index < nodes.length; index++) {
+    nodes[index].addEventListener(event, fn);
   }
 }
 
-const toggleClass = (elementNode, className) => {
+const changeColorPixel = (ev) => {
+  let el = document.querySelector('.selected');
+  let newColor = el.style.backgroundColor;
+  let pixel = ev.target;
+  pixel.style.backgroundColor = newColor;
+}
+
+const toggleClassInit = (elementNode, className) => {
   let element = document.querySelector(elementNode);
   element.classList.toggle(className);
 }
+
 const toggleClassEvent = (elementNode, className) => {
   let eventNode = elementNode.target;
   let colorListEl = document.getElementsByClassName('color');
-  for (const key of colorListEl) {
+  for (const key of colorListEl) { //A prova de falhas;
     let el = key;
     if (el.classList.value.includes(className)) {
       el.classList.toggle(className);;
     }
   }
-  eventNode.classList.toggle(className);
+  if (!eventNode.classList.value.includes(className))
+    eventNode.classList.toggle(className);
 }
-//addEvListener('.task', 'click', function (e) { toggleClass('.task', 'selected') });
 
-const getBackgroundColorPixel = (e) => {
-  let event = e.target;
-  return event.style.backgroundColor;
+const setColorsPalette = () => {
+  let black = document.querySelector('.black');
+  let red = document.querySelector('.red');
+  let green = document.querySelector('.green');
+  let blue = document.querySelector('.blue');
+  black.style.backgroundColor = 'black';
+  red.style.backgroundColor = 'red';
+  green.style.backgroundColor = 'green';
+  blue.style.backgroundColor = 'blue';
 }
-//addEvListener('.btn-holiday', 'click', function (e) { changeColor('black', 'rgb(238, 238, 238)') });
+
 const changeBackgroundColorPixels = () => {
-  let pixels = document.getElementsByClassName('pixel');
-  for (let index = 0; index < pixels.length; index++) {
-    pixels[index].style.backgroundColor = 'white';
-  }
- /*  pixels.forEach((el) => {
+  let pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((el) => {
     el.style.backgroundColor = 'white';
-  }); */
+  });
 }
-window.onload = () => {
-  
-  changeBackgroundColorPixels();
-  toggleClass('.color', 'selected');
 
+window.onload = () => {
+  setColorsPalette();
+  toggleClassInit('.color', 'selected');
+  changeBackgroundColorPixels();
+  addEvListener('#clear-board', 'click', changeBackgroundColorPixels);
   addEvListener('#color-palette', 'click', function (e) { toggleClassEvent(e, 'selected') });
+  addEvListenerNElements('.pixel', 'click', changeColorPixel)
 };
