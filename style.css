@@ -14,6 +14,10 @@
   margin-left: auto;
   margin-right: auto;
   width: 500px;
+  font-size:40px;
+  margin-bottom: 80px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
 }
 
 .color {
