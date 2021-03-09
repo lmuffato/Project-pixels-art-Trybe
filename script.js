@@ -6,7 +6,6 @@ window.onload = function() {
   document.getElementById('color2').style.backgroundColor = '#14213d';
   document.getElementById('color3').style.backgroundColor = '#fca311';
   document.getElementById('color4').style.backgroundColor = '#e5e5e5';
-
 }
 
 function changeSelectedColor() {
@@ -35,3 +34,21 @@ function changeColor() {
   })
 }
 changeColor();
+
+let button = document.createElement('button');
+button.id = 'clear-board';
+button.innerText = "Limpar";
+document.querySelector('header').appendChild(button);
+document.querySelector('header').style.textAlign = 'center';
+button.style.fontSize = '20px'
+
+function resetBoard() {
+  let button = document.querySelector('button');
+  button.addEventListener('click', function() {
+    let pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+        pixel[index].style.backgroundColor = 'white';
+    }
+  })
+}
+resetBoard();
