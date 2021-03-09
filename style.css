@@ -26,6 +26,7 @@ div {
 
 .pixel {
   display: inline-block;
-  border: black solid 2px;
+  border: black solid 1px;
   background-color: blue;
+  margin: -2px;
 }
