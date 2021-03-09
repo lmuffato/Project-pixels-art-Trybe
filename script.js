@@ -1,4 +1,4 @@
-function createPixelBoard () {
+function createPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
   // Criando os pixels
   for (let boardRow = 1; boardRow <= 5; boardRow += 1) {
@@ -18,25 +18,39 @@ function createPixelBoard () {
   }
 }
 
-function selectBlackOnload () {
+function selectBlackOnload() {
   document.getElementById('black').classList.add('selected');
 }
 
-function addEventListenerToColorPalette () {
+function addEventListenerToColorPalette() {
   const colorsInPalette = document.getElementsByClassName('color');
-  for (color of colorsInPalette) {
-    color.addEventListener('click', function (event) {
+  for (const color of colorsInPalette) {
+    color.addEventListener('click', function colorSelect(event) {
       // remove the selected class from previous color
-      const currentColor = document.getElementsByClassName('selected')[0]
+      const currentColor = document.getElementsByClassName('selected')[0];
       currentColor.classList.remove('selected');
+      // add the selected class to new color
       const newColor = event.target;
       newColor.classList.add('selected');
     });
   }
 }
 
-window.onload = function () {
+function addEventListenerToPixels() {
+  const allPixels = document.querySelectorAll('.pixel');
+  for (const pixel of allPixels) {
+    pixel.addEventListener('click', function addColorToPixel(event) {
+      let selectedColor = document.querySelector('.selected');
+      selectedColor = window.getComputedStyle(selectedColor).backgroundColor;
+      const selectedPixel = event.target;
+      selectedPixel.style.backgroundColor = selectedColor;
+    });
+  }
+}
+
+window.onload = function onload() {
   createPixelBoard();
   selectBlackOnload();
   addEventListenerToColorPalette();
-}
+  addEventListenerToPixels();
+};
