@@ -7,4 +7,6 @@ window.onload = function () {
       lines[index].appendChild(div);
     }
   }
+  const blackPalette = document.getElementById('black-palette');
+  blackPalette.className += ' selected';
 };
