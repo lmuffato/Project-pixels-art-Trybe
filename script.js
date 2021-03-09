@@ -28,8 +28,8 @@ document.querySelector('#pixel-board').addEventListener('click', function(event)
 
 let button = document.createElement('button');
 button.id = 'clear-board';
-document.body.appendChild(button);
-button.innerText = 'Reset';
+document.querySelector('#divbutton').appendChild(button);
+button.innerText = 'Limpar';
 button.addEventListener('click', function() {
     let pixels = document.querySelectorAll('.pixel');
     for (item of pixels) {
