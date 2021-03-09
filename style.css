@@ -1,0 +1,24 @@
+.color {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border: black 1px solid;
+  display: inline-block;
+}
+
+.black {
+  background-color: black;
+}
+
+.purple {
+  background-color: #b7a2cc;
+}
+
+.grey {
+  background-color: #92aea6;
+}
+
+.silver {
+  background-color: #c9c6b5;
+}
+
