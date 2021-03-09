@@ -11,9 +11,10 @@
 }
 
 .color {
+  margin-bottom: 5px;
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
 }
 
@@ -31,4 +32,19 @@
 
 .green-palette {
   background-color: var(--color-green);
+}
+
+.lines, .pixel {
+  margin-top: -5px;
+  display: inline-block;
+  border: 1px solid;
+  width: 40px;
+  height: 40px;
+}
+
+.line {
+  display: block;
+}
+#pixel-board {
+  display: block;
 }
