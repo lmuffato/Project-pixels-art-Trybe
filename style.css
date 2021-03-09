@@ -45,9 +45,7 @@ main {
 }
 
 .selected {
-  box-shadow: 0px 2px 2px 2px #4febff;
-  -moz-box-shadow: 0px 2px 2px 2px #4febff;
-  -webkit-box-shadow: 0px 2px 2px 2px #4febff;
+  box-shadow: 2px 2px 2px #4febff;
 }
 
 #pixel-board {

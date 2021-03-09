@@ -3,17 +3,39 @@ const colorsObj = {
   red: 'red',
   blue: 'blue',
   green: 'green',
+  selected: 'black',
 };
+
+function resetSelected() {
+  const classSelecteds = document.getElementsByClassName('color');
+  for (let index = 0; index < classSelecteds.length; index += 1) {
+    classSelecteds[index].classList.remove('selected');
+  }
+}
+
+function changeSelected(e) {
+  return e.setAttribute('class', 'color selected');
+}
+
+// Req. 07
+function changeColor(e) {
+  colorsObj.selected = e.target.style.backgroundColor;
+  resetSelected();
+  changeSelected(e.target);
+}
 
 // Req. 01
 function addColorsPalette(colors) {
   const colorPalette = document.getElementById('color-palette');
 
   Object.keys(colors).forEach((key) => {
-    const newColor = document.createElement('div');
-    newColor.className = 'color';
-    newColor.style.backgroundColor = key;
-    colorPalette.appendChild(newColor);
+    if (key !== 'selected') {
+      const newColor = document.createElement('div');
+      newColor.className = 'color';
+      newColor.style.backgroundColor = key;
+      newColor.addEventListener('click', changeColor);
+      colorPalette.appendChild(newColor);
+    }
   });
 }
 
@@ -45,6 +67,7 @@ function selectInitialColorPaint(color) {
   colors.forEach((el) => {
     if (el.style.backgroundColor === color) {
       el.setAttribute('class', 'color selected');
+      colorsObj.selected = color;
     }
   });
 }
