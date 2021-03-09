@@ -36,10 +36,21 @@ function makePixelBoard(grid) {
       containerPixelBoard.appendChild(newPixel);
     }
   }
-  console.log(pixels);
+}
+
+// Req. 06
+function selectInitialColorPaint(color) {
+  const colors = document.querySelectorAll('.color');
+
+  colors.forEach((el) => {
+    if (el.style.backgroundColor === color) {
+      el.setAttribute('class', 'color selected');
+    }
+  });
 }
 
 window.onload = () => {
   addColorsPalette(colorsObj);
   makePixelBoard(5);
+  selectInitialColorPaint(colorsObj.black);
 };
