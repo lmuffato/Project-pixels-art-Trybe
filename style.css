@@ -47,5 +47,5 @@ header {
   height: 40px;
   display: inline-block;
   border: 1px solid black;
-  margin: 0px;
+  background-color: white;
 }
