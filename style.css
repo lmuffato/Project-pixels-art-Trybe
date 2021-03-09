@@ -1,0 +1,30 @@
+.color {
+  border-style: solid;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+}
+
+#color-palette {
+  width: auto;
+  height: auto;
+  text-align: center; 
+}
+
+#black {
+  background-color: black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#green {
+  background-color: green;
+}
+
+#red {
+  background-color: red;
+}
