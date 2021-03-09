@@ -7,7 +7,7 @@ body , h1 , h2 , h3 , p , ul , table , td , tr {
 
 * {
   box-sizing: border-box;
-  border-spacing: 0;
+  border-spacing: 0; 
 }
 
 body {
