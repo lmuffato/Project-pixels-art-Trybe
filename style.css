@@ -10,22 +10,6 @@
   border: 1px solid black;
 }
 
-#color-palette #black {
-  background-color: black;
-}
-
-#color-palette #red {
-  background-color: #f72c25;
-}
-
-#color-palette #green {
-  background-color: #2d936c;
-}
-
-#color-palette #blue {
-  background-color: #4f7cac;
-}
-
 #pixel-board {
   display: table;
   background-color: black;
