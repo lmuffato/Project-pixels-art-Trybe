@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+
+.color {
+    border: solid 1px black;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+#one {
+    background-color: black;
+}
+
+#two {
+    background-color: red;
+}
+
+#three {
+    background-color: blue;
+}
+
+#four {
+    background-color: green;
+}
