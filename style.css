@@ -23,6 +23,7 @@ body {
   border: 1px solid black;
   height: 100px;
   display: inline-block;
+  transition: transform 1s;
 }
 
 #black {
@@ -56,3 +57,13 @@ body {
   display: inline-block;
   background-color: white;
 }
+
+.selected {
+  border: 5px dashed orange;
+  box-sizing: border-box;
+}
+
+.color:hover {
+  transform: rotateZ(180deg) scale(1.5);
+}
+
