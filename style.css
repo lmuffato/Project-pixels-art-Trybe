@@ -23,3 +23,9 @@ div {
   background-color: rgb(155, 0, 155);
   border: black solid 1px;
 }
+
+.pixel {
+  display: inline-block;
+  border: black solid 2px;
+  background-color: blue;
+}
