@@ -31,3 +31,8 @@
 #clear-board {
   background-color: white;
 }
+
+#setBoard {
+  margin-top: 10px;
+  text-align: center;
+}
