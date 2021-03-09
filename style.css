@@ -43,8 +43,8 @@ body {
 
 .pixel {
     background-color: white; /* REQUISITO 4 */
-    width: 50px;
-    height: 50px;
+    width: 40px; /* REQUISITO 5 */
+    height: 40px; /* REQUISITO 5 */
     border: 1px solid black; /* REQUISITO 5 */
     display: table-cell; /* Comporta-se como o <td> (célula) HTML elemento */
 }
