@@ -12,6 +12,15 @@ function selectColor() {
 
   // });
 }
+// Retorna a cor selecionada Black
+function selectColorBalck() {
+  const paletteBlack = document.querySelector('.palette-black');
+  paletteBlack.addEventListener('click', function() {
+    console.log(paletteBlack);
+  });
+  return 'black';
+}
+selectColorBalck();
 
 // Retorna a cor selecionada red
 function selectColorRed() {
