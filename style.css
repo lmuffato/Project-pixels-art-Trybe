@@ -28,7 +28,7 @@ aside{
     height: 70px;
     width: 70px;
     padding: 10px;
-
+    background-color: white ;
 }
 
 #Quadro {
@@ -43,6 +43,6 @@ aside{
 table td {
     border: 1px solid red;
     box-sizing: border-box;
-    width: 100px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 }
