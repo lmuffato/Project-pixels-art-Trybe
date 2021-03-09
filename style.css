@@ -13,12 +13,13 @@
 }
 
 .pixel{
+    color: white;
     width: 40px;
     height: 40px;  
     border-style: solid;
     border-width: 1px;
     display: inline-block;
-}
+    }
 
 #pixel-board{
     width: 240px;
