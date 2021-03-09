@@ -7,15 +7,15 @@
 }
 
 #pixel-board {
-  height: 520px;
-  width: 520px;
-
+  height: 200px;
+  width: 200px;
+  
 }
 
 .pixel {
   border: solid 1px black;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   display: -webkit-inline-flex;
   margin-bottom: 0px;
