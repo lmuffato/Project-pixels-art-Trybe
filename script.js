@@ -1,23 +1,13 @@
-// window.onload = ?
+// window.onload = ;
 
-const btnPaletteBlack = document.querySelector('.selected');
 const pixelBox = document.getElementsByClassName('pixel');
-console.log(pixelBox);
 
-function selectColor() {
-
-  document.getElementsByClassName('selected');
-
-  // btnPaletteBlack.addEventListener('click', function () {
-
-  // });
-}
 // Retorna a cor selecionada Black
 function selectColorBlack() {
   const paletteBlack = document.querySelector('.palette-black');
   paletteBlack.addEventListener('click', function(evento) {
     if (evento.target) {
-      colorPixel('black')
+      colorPixel('black');
     }
   });
   return 'black';
@@ -29,7 +19,7 @@ function selectColorRed() {
   const paletteRed = document.querySelector('.palette-red');
   paletteRed.addEventListener('click', function(evento) {
     if (evento.target) {
-      colorPixel('red')
+      colorPixel('red');
     }
   });
 }
@@ -40,7 +30,7 @@ function selectColorBlue() {
   const paletteBlue = document.querySelector('.palette-blue');
   paletteBlue.addEventListener('click', function(evento) { 
     if (evento.target) {
-      colorPixel('blue')
+      colorPixel('blue');
     }
   });
 }
@@ -51,13 +41,13 @@ function selectColorGreen() {
   const paletteGreen = document.querySelector('.palette-green');
   paletteGreen.addEventListener('click', function(evento) {
     if (evento.target) {
-      colorPixel('green')
+      colorPixel('green');
     }
   });
 }
 selectColorGreen();
 
-
+// Colore os pixel com o determinado evento target
 function colorPixel(color) {
   for (let index = 0; index < pixelBox.length; index += 1) {
     pixelBox[index].addEventListener('click', function () {
@@ -65,9 +55,9 @@ function colorPixel(color) {
     });
   }
 }
-
 colorPixel();
 
+// Limpa os pixels e deixa todos branco
 function clearPixel() {
   const btnClearPixel = document.getElementById('clear-board');
   btnClearPixel.addEventListener('click', function() {
