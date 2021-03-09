@@ -87,7 +87,7 @@ function clearBoard() {
   const pixelBoard = document.querySelectorAll('.pixel');
 
   for (let index = 0; index < pixelBoard.length; index += 1) {
-    clearButton.addEventListener('click', function() {
+    clearButton.addEventListener('click', () => {
       pixelBoard[index].style.backgroundColor = 'white';
     });
   }
