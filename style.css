@@ -5,13 +5,12 @@
 .color {
   height: 100px;
   width: 100px;
-  
-  margin: 0px 0px 25px 4px;
+  margin: 0 0 25px 4px;
 }
 
 .pixel, .color {
-    display: inline-block;
-    border: 1px black solid;
+  display: inline-block;
+  border: 1px black solid;
 }
 
 .pixel {
@@ -21,6 +20,5 @@
   width: 40px;
 }
 
-.lines{
-    line-height: 0px;
-}
+.lines {
+    line-height: 0px; }
