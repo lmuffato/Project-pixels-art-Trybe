@@ -36,11 +36,14 @@ function paintPixel() {
 
 function captureColor() {
   let getElementsPalette = selectColorPalette.getElementsByClassName('color');
-  selectColorPalette.addEventListener('click', function (event) {
-    for (let i = 0; i < 4; i += 1) {
-      setColor(getElementsPalette, i, event); //acrescenta class selected ao elemento q provocou a função
-    }
-  });
+  for(let j = 0; j < 4; j += 1){
+    getElementsPalette[j].addEventListener('click', function (event) {
+      for (let i = 0; i < 4; i += 1) {
+        setColor(getElementsPalette, i, event); //acrescenta class selected ao elemento q provocou a função
+      }
+    });
+  }
+  
 };
 
 function setColor(getElementsPalette, i, event) {
