@@ -39,16 +39,16 @@ element4.addEventListener('click', () => {
 })
 console.log(element4);
 
-function chooseColor() {
-  let selection = document.getElementsByClassName("selected")[0];
-  let CSSprop = window.getComputedStyle(selection, null).getPropertyValue("background-color");
-  return CSSprop;
-}
-console.log(chooseColor());
+// function chooseColor() {
+//   let selection = document.getElementsByClassName("selected")[0];
+//   let CSSprop = window.getComputedStyle(selection, null).getPropertyValue("background-color");
+//   return CSSprop;
+// }
+// console.log(chooseColor());
 
-let pixelChoose = document.querySelectorAll('.pixel')
+// let pixelChoose = document.querySelectorAll('.pixel')
 
-document.addEventListener('click', () => {
-  pixelChoose.target(chooseColor());
-  //handle click
-})
+// document.addEventListener('click', () => {
+//   pixelChoose.target(chooseColor());
+//   //handle click
+// })
