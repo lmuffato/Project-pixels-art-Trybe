@@ -1,37 +1,37 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #title {
-    margin: 20px;
-    text-align: center;
-    font-size: 50px;
+  margin: 20px;
+  text-align: center;
+  font-size: 50px;
 }
 
 #color-palette {
-    display: flex;
+  display: flex;
 }
 
-.color {
-    border: 1px black solid;
-    padding: 40px;
-    margin: 5px;
+.color { 
+  border: 1px black solid;
+  padding: 40px;
+  margin: 5px;
 }
 
 #black-palette {
-    background-color: black;
-    margin-left: 500px;
+  background-color: black;
+  margin-left: 500px;
 }
 
 #blue-palette {
-    background-color:blue;
+    background-color: blue;
 }
 
 #aqua-palette {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 #pink-palette {
-    background-color: pink;
+  background-color: pink;
 }
