@@ -23,8 +23,22 @@ function innitialSelection() {
   local.className = 'color selected';
 }
 
+function setColor() {
+  const selectedColor = document.getElementsByClassName('color selected');
+  const color = document.getElementsByClassName('color');
+  for (let index = 0; index < color.length; index += 1) {
+    color[index].addEventListener('click', function() {
+    if (color[index].className === 'color') {
+      selectedColor[0].className = 'color';
+     color[index].className = 'color selected';
+    }
+    });
+  }
+}
+
 window.onload = function run() {
   createBoardLines();
   createBoard();
   innitialSelection();
+  setColor();
 };
