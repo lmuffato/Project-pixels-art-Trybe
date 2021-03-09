@@ -10,6 +10,9 @@ function setPaletteColors() {
   for (let index = 0; index < paletteColors.length; index += 1) {
     const colorDiv = document.createElement('div');
     colorDiv.className = 'color';
+    if (index === selectedColor) {
+      colorDiv.className += ' selected';
+    }
     colorPalette.appendChild(colorDiv);
 
     const currentColor = paletteColors[index];
@@ -25,11 +28,6 @@ function setPixels() {
   }
 }
 
-function selectColor() {
-  const colorDivs = document.querySelectorAll('.color');
-  colorDivs[selectedColor].className += ' selected';
-}
-
 setPaletteColors();
 setPixels();
-selectColor();
+
