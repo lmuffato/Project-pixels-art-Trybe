@@ -58,11 +58,25 @@ function createPixel() {
   return pixel;
 }
 
-function fillPixelBoard() {
+function fillPixelBoard(size) {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let rows = 1; rows <= 25; rows += 1) {
+  const boardArea = size ** 2;
+  for (let rows = 1; rows <= boardArea; rows += 1) {
     pixelBoard.appendChild(createPixel());
   }
+}
+
+function generateBoard() {
+  const board = document.createElement('div');
+  let boardSize = document.getElementById('board-size').value;
+
+  board.id = 'pixel-board';
+  if (boardSize === '') {
+    boardSize = 5;
+  }
+
+  document.body.appendChild(board);
+  fillPixelBoard(boardSize);
 }
 
 function clearBoard() {
@@ -74,5 +88,5 @@ function clearBoard() {
 
 window.onload = () => {
   fillColorPalette();
-  fillPixelBoard();
+  generateBoard();
 };
