@@ -27,3 +27,16 @@ function criaQuadro(numberOfFrames) {
 criaQuadro(5);
 
 // Funções para Criar os Eventos de Mouse
+
+function limpaTudo() {
+  document.getElementsByClassName('pixel').style.backgroundColor = 'white';
+}
+
+function botaoLimpar() {
+  let bt = document.createElement("button");
+  bt.id = 'clear-board';
+  bt.innerHTML = 'Limpar';
+  document.getElementById('espacoDoBotao').appendChild(bt);
+  bt.addEventListener('click', limpaTudo);
+}
+botaoLimpar();
