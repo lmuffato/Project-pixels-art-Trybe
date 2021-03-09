@@ -18,3 +18,15 @@
 .color:nth-child(4) {
   background-color: blue;
 }
+
+#pixel-board {
+  width: 500px;
+  height: 500px;
+}
+
+.pixel {
+  display: inline-block;
+  background-color: white;
+  height: 100px;
+  width: 100px;
+}
