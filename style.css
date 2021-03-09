@@ -1,20 +1,19 @@
-table{ 
-    display: table;
-    width: 200;
-    
-}
-tr{
-    display: table-row;
-}
-td{
-    height: 100px;
-    width: 100px;
+.color{
     border: solid;
     border-width: 1px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: table-cell;
     
+
 }
 #vermelho{
     background-color: red;
+    
+}
+#verde{
+    background-color: green;
 }
 #azul{
     background-color: blue;
@@ -22,9 +21,12 @@ td{
 #amarelo{
     background-color: yellow;
 }
-#verde{
-    background-color: green;
+#roxo{
+    background-color: purple;
 }
-#preto{
-    background-color: black;
+
+#color-palette{
+    display: table;
+    width: 300px;
+    height: 300px;
 }
