@@ -43,19 +43,28 @@ function clear() {
 
 function colorTest(array, color) {
   for (let index = 0; index < array.length; index += 1) {
-    if (color === array[index]) {
+    if (color === array[index] || color === '') {
       return false;
     }
   }
   return true;
 }
+// https://stackoverflow.com/posts/23095771/revisions
+function generateRandomColor() {
+  const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+  const r = randomBetween(1, 254);
+  const g = randomBetween(1, 254);
+  const b = randomBetween(1, 254);
+  const rgb = `rgb(${r},${g},${b})`;
+
+  return rgb;
+}
 
 function randomColors() {
-  const colorOptions = ['red', 'blue', 'orange', 'brown', 'green', 'yellow', 'pink', 'cyan'];
   const colors = ['black'];
 
   while (colors.length < 4) {
-    const color = colorOptions[Math.floor(Math.random() * 8)];
+    const color = generateRandomColor();
     if (colorTest(colors, color) === true) {
       colors.push(color);
     }
