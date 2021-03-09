@@ -43,9 +43,17 @@ function setColor() {
   });
 }
 
+function clearPixelBoard() {
+  const pixelBoard = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelBoard.length; index += 1) {
+    pixelBoard[index].style.backgroundColor = 'white';
+  }
+}
+
 window.onload = () => {
   setColorPallet();
   generatePixelFrame();
   getColors();
   setColor();
+  clearPixelBoard();
 };
