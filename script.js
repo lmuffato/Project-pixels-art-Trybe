@@ -1,1 +1,1 @@
-window.onload = document.querySelector('#color1')
+window.onload = (document.querySelector('#color1'))
