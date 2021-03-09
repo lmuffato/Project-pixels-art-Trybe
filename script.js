@@ -36,7 +36,6 @@ function addEventListenerToColorPalette() {
   }
 }
 
-
 function addEventListenerToPixels() {
   const allPixels = document.querySelectorAll('.pixel');
   for (const pixel of allPixels) {
