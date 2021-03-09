@@ -9,22 +9,20 @@
 }
 
 #magenta {
-  background-color: #F15BB5;
+  background-color: #f15bb5;
 }
 
 #yellow {
-  background-color: #FEE440;
+  background-color: #fee440;
 }
 
 #blue {
-  background-color: #00BBF9;
-}
-
-#pixel-board {
+  background-color: #00bbf9;
 }
 
 .pixel {
   height: 40px;
   width: 40px;
   border: solid black 1px;
+  background-color: white;
 }
