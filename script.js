@@ -80,7 +80,9 @@ function readjustSize(value) {
   if (value < 5) {
     return '5';
   }
-  return '50';
+  if (value > 50) {
+    return '50';
+  }
 }
 
 function setBoardSize() {
