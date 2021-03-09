@@ -1,11 +1,11 @@
 const paletteColor = document.querySelector('#color-palette');
 
 function addColorQuadOne() {
-  return  paletteColor.children[0].style.backgroundColor = 'blue'
+  return  paletteColor.children[0].style.backgroundColor = 'black'
 }
 
 function addColorQuadTwo() {
-	return  paletteColor.children[1].style.backgroundColor = 'black'
+	return  paletteColor.children[1].style.backgroundColor = 'blue'
 }
 
 function addColorQuadTree() {
