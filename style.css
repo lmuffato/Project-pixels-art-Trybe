@@ -19,9 +19,9 @@ body {
 
 .color {
   width: 100px;
-  border: 1px solid black; 
+  border: 1px solid black;
   height: 100px;
-  display: inline-block
+  display: inline-block;
 }
 
 #black {
@@ -39,3 +39,4 @@ body {
 #yellow {
   background-color: yellow;
 }
+
