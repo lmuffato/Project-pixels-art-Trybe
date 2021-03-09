@@ -1,4 +1,4 @@
-let colorsList = ['', '', '', ''];
+const colorsList = ['', '', '', ''];
 
 for (let index = 0; index < colorsList.length; index += 1) {
   colorsList[index] = document.createElement('div');
