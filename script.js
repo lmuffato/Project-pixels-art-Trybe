@@ -1,5 +1,6 @@
 const numberOfLines = 5;
 const numberOfColumns = 5;
+const paletteColor = document.querySelectorAll('.color');
 
 function createPixel(numberOfColumnsCP, divElementLine) {
   for (let index = 0; index < numberOfColumnsCP; index += 1) {
@@ -22,3 +23,17 @@ function createBoard(numberOfLinesCB, numberOfColumnsCB) {
 }
 
 createBoard(numberOfLines, numberOfColumns);
+
+paletteColor.forEach((element) => {
+  element.addEventListener('click', (elementTarget) => {
+    const pixelElement = elementTarget;
+    const pixel = document.getElementsByClassName('color');
+
+    for (let index = 0; index < pixel.length; index += 1) {
+      if (pixel[index].className === 'color selected') {
+        pixel[index].className = 'color';
+      }
+    }
+    pixelElement.target.className += ' selected';
+  });
+});
