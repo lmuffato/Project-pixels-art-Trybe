@@ -16,9 +16,9 @@ function setPaletteColors() {
 }
 
 function setPixels() {
-  for (let index = 1; index <= pixelColumns * pixelRows; index +=1) {
-    const pixel = document.createElement('div');    
-    pixel.className = "pixel";
+  for (let index = 1; index <= pixelColumns * pixelRows; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
     pixelBoard.appendChild(pixel);
   }
 }
