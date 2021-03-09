@@ -20,13 +20,17 @@
 }
 
 #pixel-board {
-  width: 500px;
-  height: 500px;
+  width: 210px;
+  height: 210px;
+  background-color: yellow;
+  border: 1px solid black;
 }
 
 .pixel {
   display: inline-block;
   background-color: white;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  margin-bottom: -4px;
 }
