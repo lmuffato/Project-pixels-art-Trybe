@@ -1,10 +1,11 @@
-*{
+* { 
     text-align: center;
 }
 .color {
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    border: 1px black solid;
-    margin-left: 4px;
+    
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 1px black solid;
+  margin-left: 4px;
 }
