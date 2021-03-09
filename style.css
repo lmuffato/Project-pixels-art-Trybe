@@ -18,3 +18,15 @@ body {
   font-size: 48px;
   background: linear-gradient(to right, magenta, purple, blue, green, yellow);
 }
+
+#color-palette {
+  display: flex;
+  width: fit-content;
+  margin-top: 75px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
