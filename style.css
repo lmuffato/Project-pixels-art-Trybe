@@ -4,16 +4,23 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+}
+
 #color-palette {
   height: 100px;
-  max-width: 500px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .color {
   display: inline-block;
   height: 100px;
-  width: 100px;
+  width: 125px;
   border: 1px black solid;
+  margin: 10px 3px;
 }
 
 .black {
@@ -30,4 +37,17 @@
 
 .green {
   background-color: green;
+}
+
+#pixel-board {
+  max-width: 1000px;
+  max-height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  border: 1px black solid;
 }
