@@ -1,5 +1,6 @@
+const PIXEL_BOARD = 'pixel-board';
 function createPixels(n) {
-  const pixelBoard = document.getElementById('pixel-board');
+  const pixelBoard = document.getElementById(PIXEL_BOARD);
   for (let index = 0; index < n; index += 1) {
     const row = document.createElement('div');
     row.className = 'pixel';
@@ -31,11 +32,11 @@ function changePixelColor(e) {
   e.target.style.backgroundColor = newColor;
 }
 function createPixelsListener() {
-  const pixelBoard = document.getElementById('pixel-board');
+  const pixelBoard = document.getElementById(PIXEL_BOARD);
   pixelBoard.addEventListener('click', changePixelColor, false);
 }
 function clearPixelBoard() {
-  const pixels = document.getElementById('pixel-board').children;
+  const pixels = document.getElementById(PIXEL_BOARD).children;
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
   }
