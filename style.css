@@ -1,0 +1,30 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+.color {
+    border: 1px solid black; /*REQUISITO 2*/
+    padding: 25px; /*espaço interno doobjeto*/
+    display: inline-block;
+}
+
+#color-pallet div {
+    border: 1px solid black; /*REQUISITO 2*/
+}
+
+#first-color {
+    background-color: black;
+}
+
+#second-color {
+    background-color: darkmagenta;
+}
+
+#third-color {
+    background-color: blue;
+}
+
+#fourth-color {
+    background-color: crimson;
+}
