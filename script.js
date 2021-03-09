@@ -3,7 +3,7 @@ const colorsList = ['', '', '', ''];
 for (let index = 0; index < colorsList.length; index += 1) {
   colorsList[index] = document.createElement('div');
   colorsList[index].classList.add('color');
-  document.querySelector('#color-pallete').appendChild(colorsList[index]);
+  document.querySelector('#color-palette').appendChild(colorsList[index]);
 }
 document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
 document.getElementsByClassName('color')[1].style.backgroundColor = 'green';
