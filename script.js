@@ -5,7 +5,10 @@ window.onload = function () {
  function selecionaCor (){
     let paleta = document.querySelectorAll('.color');
 
-    paleta.addEventListener('click', function() {
-    let cor = document.querySelector('.cor1');       
-  })
+
+    for (let index = 0; index < paleta.length, index += 1){
+        paleta[index].addEventListener('click', function() {
+            let cor = document.querySelector('.cor1');       
+          })
+    }
  } 
