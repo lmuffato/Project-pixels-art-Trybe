@@ -31,12 +31,15 @@ h1 {
 
 #pixel-board {
   border-collapse: collapse;
+  width: 40px;
+  height: 40px;
 }
 
 .pixel {
-  width: 20px;
-  height: 20px;
-  border: black 0.5px solid;
+  width: 8px;
+  height: 8px;
+  border: black 1px solid;
   padding: 0;
   margin: 0;
+  background-color: white;
 }
