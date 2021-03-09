@@ -16,10 +16,14 @@ for (let index = 0; index < 5; index += 1) {
 }
 
 function addPixel() {
-  const boardSize = document.querySelector('#board-size').value - 5;
-  if (boardSize === '') { alert('Board inválido!'); }
+  let boardSize = 0;
+  if (document.querySelector('#board-size').value > 50) {
+    boardSize = 50;
+  } else {
+    boardSize = document.querySelector('#board-size').value;
+  }
   for (let index = 0; index < 5; index += 1) {
-    for (let i = 0; i < boardSize; i += 1) {
+    for (let i = 0; i < boardSize - 5; i += 1) {
       const tagPixel = document.createElement('div');
       tagPixel.className = 'pixel';
       tagPixel.style.backgroundColor = 'white';
@@ -35,11 +39,12 @@ function addPixel() {
 document.querySelector('#generate-board').addEventListener('click', addPixel);
 
 function addLine() {
-  const boardSize = document.querySelector('#board-size').value;
-  for (let index = 0; index < boardSize - 5; index += 1) {
-    const tagLinha = document.createElement('div');
-    tagLinha.className = 'line';
-    tagLinha.style.height = '42px';
+  let boardSize = 0;
+  if (document.querySelector('#board-size').value > 50) { boardSize = 50; } else {
+    boardSize = document.querySelector('#board-size').value; }
+  if (boardSize === '') { alert('Board inválido!'); }
+  for (let index = 0; index < boardSize - 5; index += 1) { const tagLinha = document.createElement('div');
+    tagLinha.className = 'line'; tagLinha.style.height = '42px';
     document.querySelector('#pixel-board').appendChild(tagLinha);
     for (let i = 0; i < boardSize; i += 1) {
       const tagPixel = document.createElement('div');
