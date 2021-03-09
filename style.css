@@ -1,0 +1,59 @@
+#title { color: green;
+  text-align: center;
+  padding-top: 20px;
+  font-family: Courier New, Courier, monospace;
+  text-shadow: 4px;
+}
+
+body { background-color: blanchedalmond;
+}
+
+.line { background-color: white;
+}
+
+.color { border: black solid 1px;
+
+}
+
+#color-palette {
+  display: table;
+  align-items: center;
+  padding-left: 42%;
+  padding-top: 2%;
+}
+
+span { border: 1px black;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+
+#green { background-color: green;
+  flex: 1;
+}
+
+#magenta { background-color: magenta;
+}
+
+#blue { background-color: blue;
+}
+
+#black { background-color: black;
+}
+
+.pixel { width: 40px;
+  height: 40px;
+  border: black solid 1px;
+  background-color: white;
+}
+
+#pixel-board { display: table;
+  padding-left: 43%;
+  padding-top: 2%;
+}
+
+.tr { display: table-row;
+}
+
+.td { display: table-cell;
+}
