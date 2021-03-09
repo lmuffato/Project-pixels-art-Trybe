@@ -12,11 +12,9 @@ function addSelected(event) {
   event.currentTarget.classList.add('selected');
 }
 
-const selectPixels = document.querySelectorAll('.pixel');
+// Seleciona as paletas de cores individualmente e todos os quadrados brancos, depois cria um event listener de click com uma função que é chamada ao clicar em cima de cada pixel individualmente, e que quando chamada, remove todas cores do pixel e adiciona a cor referente a que tem a class "selected"
 
-for (let i = 0; i < selectPixels.length; i += 1) {
-  selectPixels[i].addEventListener('click', addColor);
-}
+const selectPixels = document.querySelectorAll('.pixel');
 
 const selectBlack = document.querySelector('.black');
 const selectPurple = document.querySelector('.purple');
@@ -47,5 +45,21 @@ function addColor(event) {
     if (selectPink.classList.contains('selected')) {
       event.currentTarget.classList.add('pink');
     }
+  }
+}
+
+for (let i = 0; i < selectPixels.length; i += 1) {
+  selectPixels[i].addEventListener('click', addColor);
+}
+
+// Seleciona todos os pixels, e altera suas classes de cores, deixando todos com a class "white"
+const button = document.querySelector('#clear-board');
+
+button.addEventListener('click', removeColors);
+
+function removeColors() {
+  for (let i = 0; i < selectPixels.length; i += 1) {
+    selectPixels[i].classList.remove('black', 'purple', 'lightgreen', 'pink');
+    selectPixels[i].classList.add('white');
   }
 }
