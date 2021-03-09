@@ -41,3 +41,12 @@ body {
   border-radius: 10px;
   background: rgb(0, 247, 255);
 }
+
+footer {
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0);
+    bottom: -30px;
+    
+}
