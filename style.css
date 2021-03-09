@@ -7,10 +7,20 @@
   height: 100px;
 }
 
+.pixel {
+  border-style: solid;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
 #color-palette {
   width: auto;
   height: auto;
-  text-align: center; 
+  text-align: center;
 }
 
 #black {
