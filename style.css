@@ -2,18 +2,6 @@
   border: solid black 1px;  
   display: inline-block;
 }
-#blue{
-    background-color: blue;
-}
-#green{
-    background-color: green;
-}
-#red{
-    background-color: red;
-}
-#black{
-    background-color: black;
-}
 #pixel-board{
     display: table; 
 }
