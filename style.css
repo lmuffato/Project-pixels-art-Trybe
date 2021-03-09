@@ -35,6 +35,11 @@
   background-color: green;
 }
 
+#clear-board {
+  margin-top: 70px;
+  padding: 8px;
+}
+
 #pixel-board {
   margin-top: 70px;
   padding: 0;
