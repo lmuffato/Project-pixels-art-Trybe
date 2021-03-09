@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#conteudo {
+  width: 300px;
+  margin: 0 auto;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -10,24 +15,28 @@
 
 .palette-black {
   background-color: black;
+  cursor: pointer;
   width: 40px;
   height: 40px;
 }
 
 .palette-red {
   background-color: red;
+  cursor: pointer;
   width: 40px;
   height: 40px;
 }
 
 .palette-green {
   background-color: green;
+  cursor: pointer;
   width: 40px;
   height: 40px;
 }
 
-.palette-orange {
-  background-color: orange;
+.palette-blue {
+  background-color: blue;
+  cursor: pointer;
   width: 40px;
   height: 40px;
 }
@@ -45,4 +54,8 @@
   height: 40px;
   background-color: white;
   border: 1px solid black;
+}
+
+#clear-board {
+  cursor: pointer;
 }
