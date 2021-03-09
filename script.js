@@ -3,9 +3,6 @@ function createPixels(n) {
   for (let index = 0; index < n; index += 1) {
     const row = document.createElement('div');
     row.className = 'pixel';
-    if (index % 2 === 0) {
-      row.style.backgroundColor = 'black';
-    }
     container.appendChild(row);
   }
 }

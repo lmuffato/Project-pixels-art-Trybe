@@ -1,6 +1,7 @@
 body {
   font-family: monospace;
   font-size: large;
+  background-color: bisque;
 }
 
 .color {
@@ -35,14 +36,13 @@ body {
   flex-flow: row wrap;
   justify-content: space-evenly;
   background-color: aqua;
-  width: 125px;
-  height: 125px;
+  width: 200px;
+  height: 200px;
 }
 
 .pixel {
   background-color: white;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border: 1px;
-  border-color: black;
 }
