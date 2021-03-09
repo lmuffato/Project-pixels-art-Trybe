@@ -58,20 +58,10 @@ function createPixel() {
   return pixel;
 }
 
-function createPixelRow() {
-  const pixelRow = document.createElement('div');
-  pixelRow.className = 'pixel-row';
-  for (let cells = 1; cells <= 5; cells += 1) {
-    pixelRow.appendChild(createPixel());
-  }
-
-  return pixelRow;
-}
-
 function fillPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let rows = 1; rows <= 5; rows += 1) {
-    pixelBoard.appendChild(createPixelRow());
+  for (let rows = 1; rows <= 25; rows += 1) {
+    pixelBoard.appendChild(createPixel());
   }
 }
 
