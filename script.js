@@ -1,16 +1,16 @@
 function squareColors() {
-  const square1 = document.getElementById('black');
+  const square1 = document.getElementById('color-black');
   square1.style.backgroundColor = 'black';
 
-  const square2 = document.getElementById('red');
+  const square2 = document.getElementById('color-red');
   square2.style.backgroundColor = `rgb(${Math.random() * 255}, 
   ${Math.random() * 255}, ${Math.random() * 255})`;
 
-  const square3 = document.getElementById('green');
+  const square3 = document.getElementById('color-green');
   square3.style.backgroundColor = `rgb(${Math.random() * 255}, 
   ${Math.random() * 255}, ${Math.random() * 255})`;
 
-  const square4 = document.getElementById('blue');
+  const square4 = document.getElementById('color-blue');
   square4.style.backgroundColor = `rgb(${Math.random() * 255}, 
   ${Math.random() * 255}, ${Math.random() * 255})`;
 }
