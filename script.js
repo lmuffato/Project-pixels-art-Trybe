@@ -50,16 +50,24 @@ columnBoardGeneration();
 function selectColor() {
   const getColor = document.getElementsByClassName('color');
 
+  
+
   for (let index = 0; index < getColor.length; index += 1) {
     function changeClassSelected(event) {
-      for (index = 0; index < getColor.length; index += 1) {
+      for (letindex = 0; index < getColor.length; index += 1) {
         getColor[index].className = 'color';
       }
       event.target.className = 'color selected';
     }
-
     getColor[index].addEventListener('click', changeClassSelected);
   }
 }
 
 selectColor();
+
+function fillBlock() {
+  let pickSelected = document.querySelector('.selected');
+  console.log(pickSelected);
+}
+
+fillBlock();
