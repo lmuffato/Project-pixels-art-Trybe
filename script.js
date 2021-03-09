@@ -1,24 +1,18 @@
-function populateRows(x) {
-  const rows = document.getElementById('pixels-board').children;
-  Array.from(rows).forEach((row) => {
-    for (let index = 0; index < x; index += 1) {
-      const pixel = document.createElement('div');
-      pixel.className = 'pixel';
-      row.appendChild(pixel);
-    }
-  });
-}
-function createRows(y) {
+function createPixels(n) {
   const container = document.getElementById('pixels-board');
-  for (let index = 0; index < y; index += 1) {
+  for (let index = 0; index < n; index += 1) {
     const row = document.createElement('div');
+    row.className = 'pixel';
+    if (index % 2 === 0) {
+      row.style.backgroundColor = 'black';
+    }
     container.appendChild(row);
   }
 }
 function createCanvas(x, y) {
   console.log('Hi');
-  createRows(y);
-  populateRows(x);
+
+  createPixels(x * y);
 }
 
 window.onload = function init() {

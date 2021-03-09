@@ -31,6 +31,9 @@ body {
 }
 
 .pixels-board {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   background-color: aqua;
   width: 125px;
   height: 125px;
@@ -40,4 +43,6 @@ body {
   background-color: white;
   width: 25px;
   height: 25px;
+  border: 1px;
+  border-color: black;
 }
