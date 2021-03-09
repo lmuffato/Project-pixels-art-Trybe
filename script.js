@@ -2,18 +2,15 @@
 
 window.onload = function bemVindo() {
     console.log("oi")
-
-
+}
 
 let palleteColorBasic = ['black', 'red', 'blue', 'green'];
 
-// function palleteColorBasic(){
-//     document.getElementsByID(color)
-
-
-// }
-
-
-
-console.log(palleteColorBasic);
+window.onload = function palleteColor(){
+    for (let index = 0; index < palleteColorBasic.length; index += 1)
+        document.querySelectorAll('.color')[index].style.backgroundColor = palleteColorBasic[index];
 }
+
+// addEventListener('click',)
+
+
