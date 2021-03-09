@@ -1,23 +1,34 @@
-const paletteColor = document.querySelector('#color-palette');
+let paletteColor = document.querySelector('#color-palette');
+let elementTable = document.querySelector('#pixel-board');
 
+// adicionando cores a paleta de cores
 function addColorQuadOne() {
-  return  paletteColor.children[0].style.backgroundColor = 'black'
+  return (paletteColor.children[0].style.backgroundColor = 'black');
 }
 
 function addColorQuadTwo() {
-	return  paletteColor.children[1].style.backgroundColor = 'blue'
+  return (paletteColor.children[1].style.backgroundColor = 'blue');
 }
 
-function addColorQuadTree() {
-	return  paletteColor.children[2].style.backgroundColor = 'brown'
+function addColorQuadThree() {
+  return (paletteColor.children[2].style.backgroundColor = 'brown');
 }
 
-function addColorQuadFor() {
-	return paletteColor.children[3].style.backgroundColor = 'aqua'
+function addColorQuadFour() {
+  return (paletteColor.children[3].style.backgroundColor = 'aqua');
+}
+
+addColorQuadOne();
+addColorQuadTwo();
+addColorQuadThree();
+addColorQuadFour();
+
+// criando tabela
+for (let index = 0; index < 25;index +=1) {
+	let elementDiv = document.createElement('div');
+	elementDiv.className = 'pixel';
+	elementTable.appendChild(elementDiv)
 }
 
 
-addColorQuadOne()
-addColorQuadTwo()
-addColorQuadTree()
-addColorQuadFor()
+// sites refencia: 
