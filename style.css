@@ -1,6 +1,25 @@
 .color {
     border: 1px solid black;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+#pixel-board {
+    display: block;
+    padding-top: 20px;
+}
+
+.boxes {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.pixel {
+    margin-top: -4px;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
     display: inline-block;
 }
