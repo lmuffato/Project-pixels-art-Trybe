@@ -1,14 +1,14 @@
 const box = document.querySelectorAll('.color');
-
+const dad = document.getElementById('color-palette');
+const elementSelected = document.getElementsByClassName('selected');
+const frame = document.getElementById('pixel-board');
 window.onload = function(){
   toPaintbox(box);
   colorSelect(box[0]);
-  box[0].addEventListener('click', reselect);
-  box[1].addEventListener('click', reselect);
-  box[2].addEventListener('click', reselect);
-  box[3].addEventListener('click', reselect);
+  dad.addEventListener('click', reselect);
+  frame.addEventListener('click', paintFrame);
 }
-//Aplica cores na paleta;
+
 function toPaintbox(box) {
   box[0].style.backgroundColor = 'black';
   box[1].style.backgroundColor = 'blue';
@@ -21,9 +21,12 @@ function colorSelect(x) {
 }
 
 function reselect(e) {
-  console.log(e)
   for (let index = 0; index < box.length; index += 1) {
       box[index].classList.remove('selected');
     }
   e.target.classList.add('selected');
+}
+
+function paintFrame(e){
+  e.target.style.backgroundColor = elementSelected[0].style.backgroundColor;
 }
