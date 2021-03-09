@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+}
+
+.color {
+  border: black 1px solid;
+  display: inline-block;
+}
+
+#color-palette {
+  text-align: center;
+}
+
+#black {
+  color: white;
+  background-color: black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
