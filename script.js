@@ -23,10 +23,22 @@ for (let index = 0; index < colors.length; index += 1) {
 const pixel = document.getElementsByClassName('pixel');
 
 function toPaint(e) {
-  let selectedColor = document.querySelector('.selected');
+  const selectedColor = document.querySelector('.selected');
   e.target.style.backgroundColor = selectedColor.style.backgroundColor;
 }
 
 for (let index = 0; index < pixel.length; index += 1) {
   pixel[index].addEventListener('click', toPaint);
 }
+
+const clearBtn = document.querySelector('button');
+clearBtn.setAttribute('id', 'clear-board');
+clearBtn.innerText = 'Limpar';
+
+function clear() {
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
+
+clearBtn.addEventListener('click', clear);
