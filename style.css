@@ -3,13 +3,10 @@
 }
 
 #color-palette {
-  background-color: chocolate;
+  background-color: whitesmoke;
   position: absolute;
-  border-style: solid;
-  border-width: 5px;
-  border-color: black;
-  padding: solid black 2px;
-  width: 360px;
+  border-style: groove;
+  width: 400px;
   height: 80px;
 }
 
@@ -18,31 +15,31 @@
   border-color: black;
   border-width: 1px;
   height: 78px;
-  width: 92px;
+  width: 95px;
 }
 
 #black {
   background-color: black;
   position: absolute;
-  left: 0%;
+  left: 0.5%;
 }
 
 #green {
   background-color: rgb(5, 146, 64);
   position: absolute;
-  left: 24%;
+  left: 25.5%;
   z-index: 2;
 }
 
 #blue {
   background-color: rgb(5, 29, 161);
   position: absolute;
-  right: 24%;
+  right: 25.5%;
   z-index: 2;
 }
 
 #purple {
   background-color: rgb(121, 9, 136);
   position: absolute;
-  right: 0%;
+  right: 0.5%;
 }
