@@ -14,3 +14,14 @@ for (let index = 0; index < 5; index += 1) {
     document.querySelectorAll('.line')[index].appendChild(tagPixel);
   }
 }
+
+function selectColor() {
+  for (let index = 0; index < 4; index += 1) {
+    document.querySelectorAll('.color')[index].className = 'color';
+  }
+  if (event.target.className === 'color') {
+    event.target.className = 'color selected';
+  }
+}
+
+document.querySelector('#color-palette').addEventListener('click', selectColor);
