@@ -1,0 +1,23 @@
+.color {
+  width: 90px;
+  height: 90px;
+  border: solid 1px black;
+}
+
+#color-black {
+  background-color: black;
+}
+
+#color-red {
+  background-color: red;
+}
+
+#color-pink {
+  background-color: pink;
+}
+
+#color-orange{
+  background-color: orange;
+}
+
+
