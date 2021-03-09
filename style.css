@@ -2,10 +2,28 @@ header {
   text-align: center;
 }
 
+ul {
+  padding: 0;
+}
+
+table {
+margin: auto;
+border-collapse: collapse;
+}
+
+table, .color, .pixel {
+border: 1px solid black;
+}
+
 .color {
   display: inline-block;
-  border: 1px solid black;
   height: 50px;
   width: 50px;
   margin: 0 10px;
+}
+
+.pixel {
+  height: 50px;
+  width: 50px;
+  background-color: white;
 }
