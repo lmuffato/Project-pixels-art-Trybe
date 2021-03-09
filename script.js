@@ -17,3 +17,33 @@ function generateRandomColors() {
 }
 
 generateRandomColors();
+
+function paintPixel(event) {
+  const colorSelected = document.querySelector('.selected');
+  const eventColor = event.target;
+  eventColor.style.backgroundColor = colorSelected.style.backgroundColor;
+}
+
+function board(pixels) {
+  const boardPixel = document.createElement('div');
+  const body = document.querySelector('main');
+  boardPixel.id = 'pixel-board';
+  boardPixel.style.width = `${pixels}px`;
+  boardPixel.style.height = `${pixels}px`;
+  body.appendChild(boardPixel);
+  boardPixel.addEventListener('click', paintPixel);
+}
+
+board('50px');
+
+function createPixels(num) {
+  for (let index = 0; index < num; index += 1) {
+    const square = document.createElement('div');
+    square.className = 'pixel';
+    square.style.backgroundColor = 'white';
+    const board = document.querySelector('#pixel-board');
+    board.appendChild(square);
+  }
+}
+
+createPixels(25);

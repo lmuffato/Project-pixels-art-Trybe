@@ -102,3 +102,15 @@ main {
   background-color: rgba(232, 237, 223, 1);
   color: rgba(51, 53, 51, 1);
 }
+
+#pixel-board {
+  max-width: 960px;
+  margin: 30px auto;
+}
+
+.pixel {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: black solid 1px;
+}
