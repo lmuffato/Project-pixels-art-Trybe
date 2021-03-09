@@ -17,6 +17,26 @@ function addColorsPalette(colors) {
   });
 }
 
+// Req. 04
+function makePixelBoard(grid) {
+  const pixels = {};
+  const containerPixelBoard = document.getElementById('pixel-board');
+  containerPixelBoard.style.display = 'grid';
+  containerPixelBoard.style.gridTemplateColumns = `repeat(${grid}, 1fr)`;
+
+  for (let line = 1; line <= grid; line += 1) {
+    pixels[line] = {};
+    for (let column = 1; column <= grid; column += 1) {
+      const newPixel = document.createElement('div');
+      newPixel.className = 'pixel';
+      pixels[line][column] = 'white';
+      containerPixelBoard.appendChild(newPixel);
+    }
+  }
+  console.log(pixels);
+}
+
 window.onload = () => {
   addColorsPalette(colorsObj);
+  makePixelBoard(5);
 };
