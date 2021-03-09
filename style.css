@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 200px;
+  padding: 10px;
 }
 
 .color {
@@ -25,4 +26,9 @@
 
 .color#red {
   background-color: red;
+}
+
+.pixel-row {
+    width: 210px;
+    height: 42px;
 }
