@@ -30,3 +30,5 @@ function createPixelBox(amount) {
   }
 }
 createPixelBox(5);
+
+document.querySelectorAll('.color')[0].className += ' selected';
