@@ -6,8 +6,8 @@
 
 .pixel {
   border: solid black 1px;
-  height: 37px;
-  width: 37px;
+  height: 40px;
+  width: 40px;
 }
 
 #pixel-board {
