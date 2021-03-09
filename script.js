@@ -1,14 +1,18 @@
-for (let index = 0; index < 4; index += 1) {
-  const coresPaletas = document.createElement('li');
-  document.getElementById('color-palette').appendChild(coresPaletas).style.listStyle = 'none';
-  coresPaletas.className = 'color';
+// Requisito 2;
+function creatPaddles() {
+  for (let index = 0; index < 4; index += 1) {
+    const creatPaddless = document.createElement('li');
+    document.getElementById('color-palette').appendChild(creatPaddless).style.listStyle = 'none';
+    creatPaddless.className = 'color';
+  }
 }
-const adicionandoCores = document.getElementsByClassName('color');
-adicionandoCores[0].style.backgroundColor = 'red';
-adicionandoCores[0].innerHTML = 'red';
-adicionandoCores[1].style.backgroundColor = 'blue';
-adicionandoCores[1].innerHTML = 'blue';
-adicionandoCores[2].style.backgroundColor = 'purple';
-adicionandoCores[2].innerHTML = 'purple';
-adicionandoCores[3].style.backgroundColor = 'gray';
-adicionandoCores[3].innerHTML = 'gray';
+creatPaddles();
+function colorsPaddles() {
+  const adicionandoCores = document.getElementsByClassName('color');
+  adicionandoCores[0].style.backgroundColor = 'red';
+  adicionandoCores[1].style.backgroundColor = 'blue';
+  adicionandoCores[2].style.backgroundColor = 'purple';
+  adicionandoCores[3].style.backgroundColor = 'gray';
+}
+colorsPaddles();
+// Requisito 3;
