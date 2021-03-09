@@ -1,6 +1,21 @@
 .color{
   border: solid black 1px;  
   display: inline-block;
+  width: 40px;
+    height: 40px;
+
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+#red{
+    background-color: red;
+}
+#black{
+    background-color: black;
 }
 #pixel-board{
     display: table; 
