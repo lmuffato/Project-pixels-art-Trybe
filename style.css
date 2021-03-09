@@ -1,0 +1,41 @@
+* {
+    font-size: 1.2vw;
+}
+/*--------------- header --------------*/ 
+#title {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 2vw;
+}
+/*-------------- main -----------------*/
+#color-palette {
+    display: inline-block;
+    text-align: center;
+    margin-left: 25vw;
+    margin-right: 10vw;
+    padding: 10px;
+}
+
+.color {
+    display: inline-block;
+    width: 12vw;
+    height: 12vw;
+    font-family: 'Cinzel Decorative', cursive;
+    border: solid 1px black;
+}
+
+.hot-pink {
+    background-color: #FFAEBC;
+}
+
+.tiffany-blue {
+    background-color: #A0E7E5;
+}
+
+.mint {
+    background-color: #B4F8C8;
+}
+
+.yellow {
+    background-color: #FBE7C6;
+}
