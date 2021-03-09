@@ -15,6 +15,21 @@ function squareColors() {
   ${Math.random() * 255}, ${Math.random() * 255})`;
 }
 
+function listenPaletteSection() {
+  const colorPalette = document.querySelector('#color-palette');
+
+  colorPalette.addEventListener('click', (event) => {
+    const colorDivsList = document.querySelectorAll('.color');
+
+    for (let i = 0; i < colorDivsList.length; i += 1) {
+      colorDivsList[i].classList.remove('selected');
+    }
+
+    event.target.classList.add('selected');
+  });
+}
+
 window.onload = function () {
   squareColors();
+  listenPaletteSection();
 };
