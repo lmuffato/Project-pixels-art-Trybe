@@ -12,7 +12,7 @@ h1 {
 #color-palette {
   position: absolute;
   top: 70px;
-  color:white;
+  color: white;
   width: 800px;
 }
 
@@ -48,6 +48,3 @@ h1 {
 .verde {
   background-color: green;
 }
-
-
-
