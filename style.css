@@ -3,7 +3,7 @@ h1 {
   color: rebeccapurple;
   font-size: 50px;
   margin: auto;
-  padding: 20px 20px px;
+  padding: 20px;
 }
 
 #color-palette {
@@ -33,23 +33,12 @@ h1 {
   background-color: green;
 }
 
-tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
-
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-}
-
 .pixel {
-  width: 36px;
-  height: 38px;
+  width: 41px;
+  height: 41px;
   border: 1px solid black;
   background-color: white;
+  padding: 0;
 }
 
 #pixel-board {
