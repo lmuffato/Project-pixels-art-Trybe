@@ -12,7 +12,7 @@ body { background-color: blanchedalmond;
 }
 
 .color { border: black solid 1px;
-
+  margin-right: 10px;
 }
 
 #color-palette {
@@ -57,3 +57,4 @@ span { border: 1px black;
 
 .td { display: table-cell;
 }
+
