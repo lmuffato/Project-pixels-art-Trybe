@@ -32,3 +32,18 @@
   background-color: blue;
 }
 
+table, td, tr {
+  border: solid black 1px;
+  border-collapse: collapse;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+#pixel-board {
+  margin-left: 525px;
+  margin-top: 40px;
+}
