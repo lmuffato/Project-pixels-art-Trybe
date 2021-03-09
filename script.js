@@ -1,5 +1,5 @@
-function colorName1() {
+function changeColor1() {
   let color1 = document.getElementById('color1');
-  color1.innerText = color1.style.backgroundColor.value; 
+  color1.style.backgroundColor = 'black';  
 }
-colorName1();
+changeColor1();

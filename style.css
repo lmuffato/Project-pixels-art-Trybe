@@ -8,9 +8,7 @@
 }
 
 #color-list {
-  text-align: center;
-  display:flex;
-  font-family: 'Courier New', Courier, monospace;
+  display: flex;
 }
 
 .color-list-name {
@@ -30,13 +28,13 @@
 }
 
 #color2 {
-    background-color: chartreuse;
+  background-color: chartreuse;
 }
 
 #color3 {
-    background-color: crimson;
+  background-color: crimson;
 }
 
 #color4 {
-    background-color: darkcyan;
+  background-color: darkcyan;
 }
