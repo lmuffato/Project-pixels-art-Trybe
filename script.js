@@ -21,6 +21,7 @@ function addColorsPalette(colors) {
 function makePixelBoard(grid) {
   const pixels = {};
   const containerPixelBoard = document.getElementById('pixel-board');
+  containerPixelBoard.style.width = 'fit-content';
   containerPixelBoard.style.display = 'grid';
   containerPixelBoard.style.gridTemplateColumns = `repeat(${grid}, 1fr)`;
 
@@ -29,6 +30,8 @@ function makePixelBoard(grid) {
     for (let column = 1; column <= grid; column += 1) {
       const newPixel = document.createElement('div');
       newPixel.className = 'pixel';
+      newPixel.style.width = '40px';
+      newPixel.style.height = '40px';
       pixels[line][column] = 'white';
       containerPixelBoard.appendChild(newPixel);
     }

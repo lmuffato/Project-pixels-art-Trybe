@@ -45,7 +45,6 @@ main {
 }
 
 #pixel-board {
-  width: 50%;
   height: auto;
   padding: 20px 10px;
   margin: 0 auto;
@@ -54,7 +53,6 @@ main {
 .pixel {
   background-color: var(--color-new-pixel);
   border: 1px solid var(--border-color);
-  width: 100%;
   height: 0;
-  padding-bottom: 100%;
+  padding-bottom: 38px;
 }
