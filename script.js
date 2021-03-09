@@ -2,7 +2,7 @@ const numberOfLines = 5;
 const numberOfColumns = 5;
 const paletteColor = document.querySelectorAll('.color');
 const blackPalette = document.getElementById('color-1');
-const btnClear = document.getElementById('btn-clear');
+const btnClear = document.getElementById('clear-board');
 blackPalette.style.backgroundColor = 'black';
 
 function generateRandomRGB() {
