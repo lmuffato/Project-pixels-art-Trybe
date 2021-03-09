@@ -47,5 +47,42 @@ function selectColor() {
   elementFour.addEventListener('click', clickElementFour);
 }
 
-firstColorSelected();
-selectColor();
+// Desafio 8
+const colorOne = 'black';
+const colorTwo = 'red';
+const colorThree = 'blue';
+const colorFour = 'green';
+
+function palletClicked() {
+  if (elementOne.classList.contains('selected')) {
+    return colorOne;
+  }
+
+  if (elementTwo.classList.contains('selected')) {
+    return colorTwo;
+  }
+
+  if (elementThree.classList.contains('selected')) {
+    return colorThree;
+  }
+
+  if (elementFour.classList.contains('selected')) {
+    return colorFour;
+  }
+}
+
+function paintPixel() {
+  const pixel = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].addEventListener('click', () => {
+      pixel[index].style.backgroundColor = palletClicked();
+    });
+  }
+}
+
+window.onload = () => {
+  paintPixel();
+  firstColorSelected();
+  selectColor();
+};
