@@ -21,3 +21,17 @@ function changeSelectedColor() {
   })
 }
 changeSelectedColor();
+
+function changeColor() {
+  let board = document.querySelector('#pixel-board');
+  board.addEventListener('click', function(event) {
+    let currentColor = document.querySelector('.selected').style.backgroundColor;
+    let pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      if (pixel[index] === event.target) {
+        pixel[index].style.backgroundColor = currentColor;
+      }
+    }
+  })
+}
+changeColor();
