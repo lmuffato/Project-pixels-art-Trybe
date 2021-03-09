@@ -1,32 +1,32 @@
 #title {
-    text-align: center;
+  text-align: center;
 }
 
-#color-pallete{
-    display: flex;
-    padding-left: 330px;
+#color-palette {
+  display: flex;
+  padding-left: 330px;
 }
 
 #color-list {
-    text-align: center;
-    display:flex;
-    font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  display:flex;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .color-list-name {
-    margin-left: 100px;
-    text-align: center;
+  margin-left: 100px;
+  text-align: center;
 }
 
 .color {
-    border: 1px solid;
-    width: 50px;
-    height: 50px;
-    margin-top: 50px;
+  border: 1px solid;
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
 }
 
 #color1 {
-    background-color: blue;
+  background-color: blue;
 }
 
 #color2 {
