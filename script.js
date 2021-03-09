@@ -1,8 +1,8 @@
 const colorPalette = document.getElementById('color-palette');
-// const colorDivs = document.querySelectorAll('.color');
 const pixelBoard = document.getElementById('pixel-board');
 
 const paletteColors = ['black', 'blue', 'red', 'green'];
+let selectedColor = 0;
 const pixelColumns = 5;
 const pixelRows = 5;
 
@@ -25,5 +25,11 @@ function setPixels() {
   }
 }
 
+function selectColor() {
+  const colorDivs = document.querySelectorAll('.color');
+  colorDivs[selectedColor].className += ' selected';
+}
+
 setPaletteColors();
 setPixels();
+selectColor();
