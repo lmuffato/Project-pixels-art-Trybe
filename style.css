@@ -18,24 +18,9 @@
   list-style: none;
 }
 
-.black {
+.color_1 {
   background-color: black;
   color: black;
-}
-
-.red {
-  background-color: red;
-  color: red;
-}
-
-.blue {
-  background-color: blue;
-  color: blue;
-}
-
-.yellow {
-  background-color: yellow;
-  color: yellow;
 }
 
 #pixel-board {
