@@ -21,3 +21,10 @@ function createPixelInBoard() {
   pixel.className = 'pixel';
   return pixel;
 }
+
+colorPaletteContainers.forEach(el => el.addEventListener('click', e => selectNewElement(e.target)));
+
+function selectNewElement(newEl) {
+  colorPaletteContainers.forEach(el => el.classList.remove('selected'));
+  newEl.classList.toggle('selected');
+}
