@@ -111,8 +111,6 @@ function selectElement() {
       selectDivColorPaletteRed.className = 'color';
       selectDivColorPaletteGreen.className = 'color';
       selectDivColorPaletteBlue.className = 'color';
-    } else {
-      selectDivColorPaletteBlack.className = 'color';
     }
   });
   selectDivColorPaletteRed.addEventListener('click', function () {
@@ -121,8 +119,6 @@ function selectElement() {
       selectDivColorPaletteBlack.className = 'color';
       selectDivColorPaletteGreen.className = 'color';
       selectDivColorPaletteBlue.className = 'color';
-    } else {
-      selectDivColorPaletteRed.className = 'color';
     }
   });
   selectDivColorPaletteGreen.addEventListener('click', function () {
@@ -131,8 +127,6 @@ function selectElement() {
       selectDivColorPaletteRed.className = 'color';
       selectDivColorPaletteBlack.className = 'color';
       selectDivColorPaletteBlue.className = 'color';
-    } else {
-      selectDivColorPaletteGreen.className = 'color';
     }
   });
   selectDivColorPaletteBlue.addEventListener('click', function () {
@@ -141,8 +135,6 @@ function selectElement() {
       selectDivColorPaletteRed.className = 'color';
       selectDivColorPaletteBlack.className = 'color';
       selectDivColorPaletteGreen.className = 'color';
-    } else {
-      selectDivColorPaletteBlue.className = 'color';
     }
   });
 }
@@ -181,7 +173,7 @@ function creatButton() {
   const selectDivPaletteColors = document.querySelector('#color-palette');
   const createButton = document.createElement('button');
   createButton.id = 'clear-board';
-  createButton.innerHTML = 'Limpar Quadro';
+  createButton.innerHTML = 'Limpar';
   selectDivPaletteColors.appendChild(createButton);
 }
 creatButton();
@@ -197,3 +189,5 @@ function clearPixels() {
   selectButton.addEventListener('click', clearPixelArray);
 }
 clearPixels();
+
+// Requirement 10 Bonus***;
