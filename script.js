@@ -5,6 +5,7 @@ function colorForChoose() {
     switch (index) {
     case 0:
       colorBlock[index].style.backgroundColor = 'black';
+      colorBlock[index].className = 'color selected';
       break;
     case 1:
       colorBlock[index].style.backgroundColor = 'red';
