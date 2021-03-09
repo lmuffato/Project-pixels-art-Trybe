@@ -6,6 +6,7 @@ let selectedColor = 0;
 const pixelColumns = 5;
 const pixelRows = 5;
 
+// Functions
 function setPaletteColors() {
   for (let index = 0; index < paletteColors.length; index += 1) {
     const colorDiv = document.createElement('div');
@@ -52,6 +53,7 @@ function clearBoard() {
   }
 }
 
+// Event Listeners
 colorPalette.addEventListener('click', changeSelection);
 pixelBoard.addEventListener('click', colorPixel);
 clearBtn.addEventListener('click', clearBoard);
