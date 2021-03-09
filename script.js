@@ -7,11 +7,10 @@ color[3].style.backgroundColor = 'purple';
 let pixel = document.querySelector('#pixel-board');
 let size = 5;
 for (let index = 1; index <= size; index += 1) {
-    let box = document.createElement('span');
+    let box = document.createElement('div');
     pixel.appendChild(box);
-    box.className = 'boxes';
     for (let index2 = 1; index2 <= size; index2 += 1) {
-        let line = document.createElement('span');
+        let line = document.createElement('div');
         box.appendChild(line);
         line.className = 'pixel';
     }
