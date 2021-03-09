@@ -54,7 +54,47 @@ createCollorsIntoPallete();
 // Requirement 3;
 
 function changeFirstCollorPalette() {
-  let firstElementDivPalette = document.querySelectorAll('.color')[0];
+  const firstElementDivPalette = document.querySelectorAll('.color')[0];
   firstElementDivPalette.style.backgroundColor = 'black';
 }
 changeFirstCollorPalette();
+
+// Requirement 4;
+
+function createPixelTable() {
+  const selectorBody = document.querySelector('body');
+  const createDiv = document.createElement('div');
+  createDiv.id = 'pixel-board';
+  createDiv.style.border = 'solid 1px black';
+  createDiv.style.display = 'block';
+  createDiv.style.display = 'inline-block';
+  selectorBody.appendChild(createDiv);
+}
+createPixelTable();
+
+function createPixelTableLineElements() {
+  for (let index = 1; index <= 5; index += 1) {
+    const selectorDivPixelBoard = document.querySelector('#pixel-board');// div pai
+    const createDiv = document.createElement('div');
+    createDiv.className = 'pixel';
+    createDiv.style.backgroundColor = 'white';
+    createDiv.style.height = '50px';
+    createDiv.style.width = '50px';
+    createDiv.style.border = 'solid 1px black';
+    createDiv.style.display = 'inline-block';
+    createDiv.style.margin = 0;
+    selectorDivPixelBoard.appendChild(createDiv);
+  }
+}
+
+function createPixelTableColumnsElements() {
+  for (let index = 1; index <= 5; index += 1) {
+    const selectorDivPixelBoard = document.querySelector('#pixel-board');
+    const createDiv = document.createElement('div');
+    createDiv.className = 'pixel';
+    createDiv.style.margin = 0;
+    selectorDivPixelBoard.appendChild(createDiv);
+    createPixelTableLineElements();
+  }
+}
+createPixelTableColumnsElements();
