@@ -83,9 +83,27 @@ function paintPixel() {
   }
 }
 
+// Req. 09
+function resetPixelBoard() {
+  const pixelsForPaint = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelsForPaint.length; index += 1) {
+    pixelsForPaint[index].style.backgroundColor = 'white';
+  }
+}
+
+function makeButtonReset() {
+  const secBtn = document.getElementById('secBtn');
+  const newButton = document.createElement('button');
+  newButton.innerText = 'Limpar';
+  newButton.addEventListener('click', resetPixelBoard);
+
+  secBtn.appendChild(newButton);
+}
+
 window.onload = () => {
   addColorsPalette(colorsObj);
   makePixelBoard(5);
   selectInitialColorPaint(colorsObj.black);
   paintPixel();
+  makeButtonReset();
 };
