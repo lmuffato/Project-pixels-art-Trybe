@@ -9,7 +9,7 @@
   border: solid black 1px;
   display: table-cell;
   width: 30px;
-	padding: 35px;
+	padding: 40px;
 }
 
 #color1 {
@@ -33,7 +33,8 @@
 }
 
 .pixel {
-	width: 30px;
+	width: 40px;
+	height: 40px;
 	padding: 30px;
 	background-color: white;
 	border: solid black 1px;
