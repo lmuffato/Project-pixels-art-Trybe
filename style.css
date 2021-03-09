@@ -7,6 +7,7 @@ body {
   background: snow;
   color: #222;
   font-family: Oswald, sans-serif;
+  text-align: center;
 }
 
 #header-title {
@@ -18,6 +19,24 @@ body {
 h1 {
   font-size: 28px;
   font-weight: 500;
+}
+
+.btn {
+  border: 0.1em solid rgba(34, 34, 34, 0.212);
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.btn:active {
+  background-color: lightgray;
 }
 
 #section-palette {
@@ -81,21 +100,18 @@ h1 {
 }
 
 #clear-board {
-  display: inline-block;
   padding: 0.5em 1.4em;
-  border: 0.1em solid rgba(34, 34, 34, 0.212);
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  transition: all 0.3s;
-  outline: none;
-  cursor: pointer;
 }
 
-#clear-board:hover {
-  background-color: white;
+#section-board-changes {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-#clear-board:active {
-  background-color: lightgray;
+#board-size {
+  padding: 0.3em 1.2em;
+}
+
+#generate-board {
+  padding: 0.3em 1.2em;
 }

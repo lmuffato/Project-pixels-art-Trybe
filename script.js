@@ -3,6 +3,7 @@ const numberOfColumns = 5;
 const paletteColor = document.querySelectorAll('.color');
 const blackPalette = document.getElementById('color-1');
 const btnClear = document.getElementById('clear-board');
+const btnSize = document.getElementById('generate-board');
 blackPalette.style.backgroundColor = 'black';
 
 function generateRandomRGB() {
@@ -11,6 +12,16 @@ function generateRandomRGB() {
   const b = Math.floor(Math.random() * (255));
   const rgb = `rgb(${r}, ${g}, ${b})`;
   return rgb;
+}
+
+function eventClickPixel() {
+  document.querySelectorAll('.pixel').forEach((element) => {
+    element.addEventListener('click', (elementTarget) => {
+      const pixelElement = elementTarget.target;
+      const colorPalette = document.getElementsByClassName('selected')[0].style.backgroundColor;
+      pixelElement.style.backgroundColor = colorPalette;
+    });
+  });
 }
 
 function generateColorPalette(palletColorNumber) {
@@ -56,14 +67,6 @@ paletteColor.forEach((element) => {
   });
 });
 
-document.querySelectorAll('.pixel').forEach((element) => {
-  element.addEventListener('click', (elementTarget) => {
-    const pixelElement = elementTarget.target;
-    const colorPalette = document.getElementsByClassName('selected')[0].style.backgroundColor;
-    pixelElement.style.backgroundColor = colorPalette;
-  });
-});
-
 btnClear.addEventListener('click', () => {
   const pixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixels.length; index += 1) {
@@ -71,4 +74,27 @@ btnClear.addEventListener('click', () => {
   }
 });
 
+btnSize.addEventListener('click', () => {
+  const pixelBoard = document.getElementById('pixel-board');
+  const inputNumber = document.getElementById('board-size');
+  const inputNumberValue = inputNumber.value;
+  pixelBoard.innerHTML = '';
+  createBoard(inputNumberValue, inputNumberValue);
+
+  eventClickPixel();
+});
+
+eventClickPixel();
+
 generateColorPalette(4);
+
+/*
+REFERÊNCIAS UTILIZADAS:
+https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript?page=1&tab=votes#tab-top
+https://stackoverflow.com/questions/19886843/how-to-remove-outline-border-from-input-button
+https://stackoverflow.com/questions/23095637/how-do-you-get-random-rgb-in-javascript
+https://stackoverflow.com/questions/60333963/elements-style-backgroundcolor-returns-undefined
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input
+*/
