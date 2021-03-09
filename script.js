@@ -59,7 +59,7 @@ function changeFirstCollorPalette() {
 }
 changeFirstCollorPalette();
 
-// Requirement 4;
+// Requirement 4 and 5;
 
 function createPixelTable() {
   const selectorBody = document.querySelector('body');
@@ -67,6 +67,7 @@ function createPixelTable() {
   createDiv.id = 'pixel-board';
   createDiv.style.border = 'solid 1px black';
   createDiv.style.display = 'block';
+  createDiv.style.maxWidth = '200px';
   createDiv.style.display = 'inline-block';
   selectorBody.appendChild(createDiv);
 }
@@ -74,27 +75,17 @@ createPixelTable();
 
 function createPixelTableLineElements() {
   for (let index = 1; index <= 5; index += 1) {
-    const selectorDivPixelBoard = document.querySelector('#pixel-board');// div pai
-    const createDiv = document.createElement('div');
-    createDiv.className = 'pixel';
-    createDiv.style.backgroundColor = 'white';
-    createDiv.style.height = '50px';
-    createDiv.style.width = '50px';
-    createDiv.style.border = 'solid 1px black';
-    createDiv.style.display = 'inline-block';
-    createDiv.style.margin = 0;
-    selectorDivPixelBoard.appendChild(createDiv);
+    for (let index2 = 1; index2 <= 5; index2 += 1) {
+      const selectorDivPixelBoard = document.querySelector('#pixel-board');// div pai
+      const createDiv = document.createElement('div');
+      createDiv.className = 'pixel';
+      createDiv.style.backgroundColor = 'white';
+      createDiv.style.height = '37.79px';
+      createDiv.style.width = '37.79px';
+      createDiv.style.border = 'solid 1px black';
+      createDiv.style.display = 'inline-block';
+      selectorDivPixelBoard.appendChild(createDiv);
+    }
   }
 }
-
-function createPixelTableColumnsElements() {
-  for (let index = 1; index <= 5; index += 1) {
-    const selectorDivPixelBoard = document.querySelector('#pixel-board');
-    const createDiv = document.createElement('div');
-    createDiv.className = 'pixel';
-    createDiv.style.margin = 0;
-    selectorDivPixelBoard.appendChild(createDiv);
-    createPixelTableLineElements();
-  }
-}
-createPixelTableColumnsElements();
+createPixelTableLineElements();
