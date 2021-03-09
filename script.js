@@ -81,7 +81,6 @@ function paintPixel() {
   }
 }
 
-
 // Desafio 9
 function clearBoard() {
   const clearButton = document.querySelector('#clear-board');
