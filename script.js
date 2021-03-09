@@ -29,7 +29,17 @@ function listenPaletteSection() {
   });
 }
 
+function selectColor() {
+  const pixel = document.querySelector('#pixel-board')
+
+  pixel.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.color.selected').style.backgroundColor;
+    event.target.style.backgroundColor = selectedColor;
+  });
+}
+
 window.onload = function () {
   squareColors();
   listenPaletteSection();
+  selectColor();
 };
