@@ -12,10 +12,10 @@
 
   <table id="color-palette">
     <tr>
-      <th class="color" id="black"> </th>
-      <th class="color" id="blue"> </th>
-      <th class="color" id="green"> </th>
-      <th class="color" id="red"> </th>
+      <th class="color" id="black" class="selected"> </th>
+      <th class="color" id="blue"></th>
+      <th class="color" id="green"></th>
+      <th class="color" id="red"></th>
     </tr>
   </table>
   <table id="pixel-board">
@@ -54,8 +54,15 @@
       <th class="pixel"></th> 
       <th class="pixel"></th>
     </tr>
-
+    <script src="script.js"></script>
   </table>
+  <script>
+    function changeSetColor() {
+  document.querySelectorAll('.colors').forEach(item => {
+    item.addEventListener('click', setBackgroundColor(item));
+  });
+}
+  </script>
 </body>
 </html>
 
