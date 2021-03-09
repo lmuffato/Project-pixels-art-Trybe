@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+#title {
+    text-align: center;
+}
+
 .color {
     border: 1px solid black; /* REQUISITO 2*/
     padding: 25px; /* espaço interno doobjeto*/
