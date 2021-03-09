@@ -1,3 +1,14 @@
 #title {
-  color: blue;
+  color: rgb(100, 100, 200);
+}
+
+.color {
+  box-sizing: border-box;
+  padding: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-color: black;
+  margin-right: 5px;
 }
