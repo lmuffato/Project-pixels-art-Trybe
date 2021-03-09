@@ -6,7 +6,7 @@ function initialColor(){
 
 function palette() {
     let paleta = document.querySelectorAll(".color")
-    let cores = ["black", "blue", "yellow", "purple", "brown", "green", "red"];
+    let cores = ["black", "blue", "yellow", "purple"];
     for (let index = 0; index < paleta.length; index += 1){
         paleta[index].style.backgroundColor = cores[index];
     }

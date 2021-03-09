@@ -15,7 +15,6 @@
 
 }
 
-#pixel-board {
-    padding: 50px;
+td.pixel {
+    background-color: rgb(255, 255, 255);
 }
-
