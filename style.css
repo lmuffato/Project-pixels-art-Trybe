@@ -1,0 +1,27 @@
+#title {
+    color: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    background-color: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+}
+
+.color{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: inline-block
+}
+
+#color_1{
+    background-color: blueviolet;
+}
+
+#color_2{
+    background-color: chartreuse;
+}
+
+#color_3{
+    background-color: crimson;
+}
+
+#color_4{
+    background-color: darkkhaki;
+}
