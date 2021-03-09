@@ -21,8 +21,8 @@
 }
 
 .pixel {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
   background-color: white;
 }
