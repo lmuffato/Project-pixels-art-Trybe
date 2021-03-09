@@ -32,3 +32,11 @@ function pixelColor(event) {
 }
 
 document.querySelector('#pixel-board').addEventListener('click', pixelColor);
+
+function clearBoard() {
+  for (let index = 0; index < 25; index += 1) {
+    document.querySelectorAll('.pixel')[index].style.backgroundColor = 'white';
+  }
+}
+
+document.getElementById('clear-board').addEventListener('click', clearBoard);
