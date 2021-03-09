@@ -15,6 +15,7 @@ body {
 
 #color-palette {
   text-align: center;
+  display: block;
 }
 
 .color {
@@ -40,3 +41,18 @@ body {
   background-color: yellow;
 }
 
+#pixel-board {
+  text-align: center;
+  display: block;
+  margin-top: 100px;
+  margin-left: 650px;
+  margin-right: 650px;
+}
+
+.pixel {
+  width: 100px;
+  border: 1px solid black;
+  height: 100px;
+  display: inline-block;
+  background-color: white;
+}
