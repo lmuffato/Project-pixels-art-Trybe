@@ -50,8 +50,6 @@ columnBoardGeneration();
 function selectColor() {
   const getColor = document.getElementsByClassName('color');
 
-  
-
   for (let index = 0; index < getColor.length; index += 1) {
     function changeClassSelected(event) {
       for (letindex = 0; index < getColor.length; index += 1) {
