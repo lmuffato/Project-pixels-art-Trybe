@@ -1,0 +1,53 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(57, 111, 80);
+    border-bottom: 10px solid rgb(105, 195, 141);
+}
+
+h1 {
+    padding: 20px 0px;
+}
+
+#color-palette {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.color {
+    text-align: center;
+    font-size: small;
+}
+
+#black {
+    border: black solid 1px;
+    background-color: black;
+    height: 50px;
+    width: 50px;    
+}
+
+#blue {
+    border: black solid 1px;
+    background-color: blue;
+    height: 50px;
+    width: 50px;    
+}
+
+#red {
+    border: black solid 1px;
+    background-color: red;
+    height: 50px;
+    width: 50px;    
+}
+
+#yellow {
+    border: black solid 1px;
+    background-color: yellow;
+    height: 50px;
+    width: 50px;    
+}
