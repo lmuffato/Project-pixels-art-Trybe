@@ -75,7 +75,7 @@ function fillPixelBoard() {
   }
 }
 
-function clearDrawing() {
+function clearBoard() {
   const pixels = document.getElementsByClassName('pixel');
   for (pixel of pixels) {
     pixel.style.backgroundColor = 'white';
