@@ -10,8 +10,10 @@ createPalette(); // cria os 4 quadrados(cores) e os adiciona como filho da div d
 createBoardPixel(); //cria os nxn quadrados.
 captureColor(); // seta a cor ao clicar no quadrado escolhido.
 function paintPixel() {
+  
   selectPixelBoard.addEventListener('click', function(event) {
-    console.log('testando');
+    let setColorSelected = document.getElementsByClassName('selected');
+    event.target.style.backgroundColor = setColorSelected[0].style.backgroundColor;
   })
 }
 paintPixel();
