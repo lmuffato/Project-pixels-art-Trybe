@@ -6,7 +6,8 @@ const element4 = document.getElementsByClassName('color')[3];
 element1.addEventListener('click', () => {
   element1.classList.add('selected');
   element2.classList.remove('selected');
-  element3.classList.remove('selected');;
+  element3.classList.remove('selected');
+  element4.classList.remove('selected');
   console.log('Cliquei no PRETO');
 
 })
@@ -38,14 +39,16 @@ element4.addEventListener('click', () => {
 })
 console.log(element4);
 
-// function chooseColor() {
-//   let selection = document.getElementsByClassName("selected")[0];
-//   let CSSprop = window.getComputedStyle(selection, null).getPropertyValue("background-color");
-//   return CSSprop;
-// }
-// console.log(chooseColor());
+function chooseColor() {
+  let selection = document.querySelector('.selected');
+  let bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
+  return bgColor;
+}
 
-// let pixelChoose = document.querySelectorAll('.pixel')
+function fillPixel() {
+   EventTarget.style.backgroundColor = chooseColor()
+}
+
 
 // document.addEventListener('click', () => {
 //   pixelChoose.target(chooseColor());
