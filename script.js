@@ -1,5 +1,4 @@
     let palette = document.getElementsByClassName('color');
-    
 
     function GenerateColor(){
     let red = parseInt(Math.random * 255);
