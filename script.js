@@ -2,8 +2,9 @@ const colorPalette = document.getElementById('color-palette');
 const pixelLines = document.getElementById('pixel-board');
 const pixelSpaces = document.getElementsByClassName('lines');
 const colorBlock = document.getElementsByClassName('color');
-const choosenColor = document.getElementsByClassName("selected")
-const pixelChoosen = document.getElementsByClassName("pixel")
+const choosenColor = document.getElementsByClassName('selected')
+const pixelChoosen = document.getElementsByClassName('pixel')
+const clearBoard = document.getElementById('clear-board')
 
 function createPaletteBlocks() {
   for (let index = 0; index <= 3; index += 1) {
@@ -65,3 +66,11 @@ function paintPixels(pixelChoose){
 for (let indexPix = 0; indexPix < pixelChoosen.length; indexPix += 1){
 pixelChoosen[indexPix].addEventListener("click", paintPixels)
 }
+
+function clear() {
+    for (let indexPix = 0; indexPix < pixelChoosen.length; indexPix += 1){
+      pixelChoosen[indexPix].style.backgroundColor = 'white';
+    }
+}
+
+clearBoard.addEventListener("click", clear)
