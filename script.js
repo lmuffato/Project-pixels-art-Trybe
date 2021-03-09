@@ -3,7 +3,7 @@ document.querySelector('#blue').style.backgroundColor = 'blue';
 document.querySelector('#green').style.backgroundColor = 'green';
 document.querySelector('#red').style.backgroundColor = 'red';
 
-sessionStorage.setItem('backgroundColor', 'black');
+/* sessionStorage.setItem('backgroundColor', 'black');
 
 function setBackgroundColor(element) {
   return sessionStorage.setItem('backgroundColor', element.style.backgroundColor);
@@ -19,7 +19,7 @@ function changePixelColor() {
   document.querySelectorAll('.pixel').forEach(item => {
     item.addEventListener('click', item.style.backgroundColor === sessionStorage.getItem('backgroundColor'));
   });
-}
+} */
 
 /* function chosingPixelColor() {
   let backgroundColor = "black";
