@@ -1,0 +1,30 @@
+table{ 
+    display: table;
+    width: 200;
+    
+}
+tr{
+    display: table-row;
+}
+td{
+    height: 100px;
+    width: 100px;
+    border: solid;
+    border-width: 1px;
+    
+}
+#vermelho{
+    background-color: red;
+}
+#azul{
+    background-color: blue;
+}
+#amarelo{
+    background-color: yellow;
+}
+#verde{
+    background-color: green;
+}
+#preto{
+    background-color: black;
+}
