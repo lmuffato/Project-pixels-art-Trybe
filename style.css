@@ -1,67 +1,67 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: rgb(255, 250, 250);
-    color: #222;
-    font-family: 'Oswald', sans-serif;
+  background: rgb(255, 250, 250);
+  color: #222;
+  font-family: 'Oswald', sans-serif;
 }
 
 #header-title {
-    text-align: center;
-    padding: 14px;
-    border-bottom: 1px rgb(231, 231, 231) solid;
+  text-align: center;
+  padding: 14px;
+  border-bottom: 1px rgb(231, 231, 231) solid;
 }
 
 h1 {
-    font-size: 28px;
-    font-weight: 500;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 #section-palette {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #color-palette {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 3px;
-    border-radius: 25px;
-    border: 1px rgb(231, 231, 231) solid;
-    background: rgba(0, 0, 0, 0.034);
-    max-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 3px;
+  border-radius: 25px;
+  border: 1px rgb(231, 231, 231) solid;
+  background: rgba(0, 0, 0, 0.034);
+  max-width: 250px;
 }
 
 .color {
-    padding: 24px;
-    background: red;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: black solid 1px;
-    border-radius: 100%;
-    margin: 5px;
+  padding: 24px;
+  background: red;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: black solid 1px;
+  border-radius: 100%;
+  margin: 5px;
 }
 
 .color:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #color-1 {
-    background: black;
+  background: black;
 }
 
 #color-2 {
-    background: rgb(51, 51, 51);
+  background: rgb(51, 51, 51);
 }
 
 #color-3 {
-    background: rgb(225, 244, 243);
+  background: rgb(225, 244, 243);
 }
 
 #color-4 {
-    background: rgb(112, 108, 97);
+  background: rgb(112, 108, 97);
 }
