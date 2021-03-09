@@ -19,3 +19,29 @@ function colorSelected() {
 }
 
 colorSelected();
+
+function lineBoardGeneration() {
+  const tableContainer = document.getElementById('pixel-board');
+
+  for (let index = 0; index < 4; index += 1) {
+    const lineConteiner = document.createElement('tr');
+    lineConteiner.className = 'line-container';
+    tableContainer.appendChild(lineConteiner);
+  }
+}
+
+lineBoardGeneration();
+
+function columnBoardGeneration() {
+  const lineContainer = document.getElementsByClassName('line-container');
+
+  for (let line = 0; line < lineContainer.length; line += 1) {
+    for (let index = 0; index < 4; index += 1) {
+      const squarePixel = document.createElement('td');
+      squarePixel.className = 'pixel';
+      lineContainer[line].appendChild(squarePixel);
+    }
+  }
+}
+
+columnBoardGeneration();
