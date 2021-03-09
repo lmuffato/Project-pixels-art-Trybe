@@ -15,3 +15,5 @@ for (let index = 1; index <= size; index += 1) {
         line.className = 'pixel';
     }
 }
+
+color[0].className += ' selected';
