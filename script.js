@@ -104,13 +104,7 @@ function listenerBtn() {
   sizeBtn.addEventListener('click', generateBoardSize);
 }
 
-function initializeBoard(a) {
-  addDivsLine(a);
-  addPixels(a);
-}
-
 window.onload = function () {
-  initializeBoard(5);
   squareColors();
   listenPaletteSection();
   selectColor();

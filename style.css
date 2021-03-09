@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -67,6 +67,7 @@ header {
   width: 40px;
   background-color: white;
   margin: auto;
+  box-sizing: content-box;
 }
 
 #clear-board , #generate-board {
