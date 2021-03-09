@@ -31,7 +31,8 @@ window.onload = function colorSelector() { //  Seleciona a cor preta como padrã
 function changeSelected(select) { //  Seleciona o pixel que vai ser pintado
   const selected = document.querySelector('.selected');
   selected.classList.remove('selected');
-  select.className += ' selected';
+  const selectionClassName = select.className += ' selected';
+  return selectionClassName
 }
 
 colorPalette.addEventListener('click', function changeSelectedColor(e) { //  Troca a cor selecionada para pintar
