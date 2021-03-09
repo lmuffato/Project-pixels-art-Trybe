@@ -1,0 +1,21 @@
+.color {
+  border: solid black 1px;
+  width: 50px;
+  height: 50px;
+}
+
+#black {
+  background-color: black;
+}
+
+#magenta {
+  background-color: #F15BB5;
+}
+
+#yellow {
+  background-color: #FEE440;
+}
+
+#blue {
+  background-color: #00BBF9;
+}
