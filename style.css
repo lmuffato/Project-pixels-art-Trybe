@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .color {
@@ -35,4 +36,17 @@
 .yellow {
   background-color: yellow;
   color: yellow;
+}
+
+#pixel-board {
+  display: flex;
+  margin-top: 20px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: white;
+  border: 1px solid black;
 }
