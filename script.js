@@ -4,4 +4,3 @@ color[1].style.backgroundColor = 'green'
 color[2].style.backgroundColor = 'chartreuse'
 color[3].style.backgroundColor = 'orange'
 
-
