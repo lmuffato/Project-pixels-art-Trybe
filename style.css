@@ -1,0 +1,28 @@
+#color-palette {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.color#yellow {
+    background-color: yellow;
+}
+
+.color#green {
+    background-color: green;
+}
+
+.color#blue {
+    background-color: blue;
+}
+
+.color#red {
+    background-color: red;
+}
