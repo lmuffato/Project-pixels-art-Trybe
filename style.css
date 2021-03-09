@@ -1,4 +1,4 @@
-.color, .pixel {
+.color , .pixel {
   width: 50px;
   height: 50px;
   border: 1px solid;
@@ -19,4 +19,8 @@
 
 #color4 {
   background-color: aqua;
+}
+
+.pixel {
+  background-color: white;
 }
