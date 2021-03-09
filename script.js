@@ -35,25 +35,3 @@ function board(pixels) {
 }
 
 board('50px');
-
-function createPixels(num) {
-  for (let index = 0; index < num; index += 1) {
-    const square = document.createElement('div');
-    square.className = 'pixel';
-    square.style.backgroundColor = 'white';
-    const numBoard = document.querySelector('#pixel-board');
-    numBoard.appendChild(square);
-  }
-}
-
-createPixels(25);
-
-function clearPixel() {
-  const selectPixel = document.querySelectorAll('.pixel');
-  for (let index = 0; index < selectPixel.length; index += 1) {
-    selectPixel[index].style.backgroundColor = 'white';
-  }
-}
-
-const clearBoard = document.querySelector('#clear-board');
-clearBoard.addEventListener('click', clearPixel);

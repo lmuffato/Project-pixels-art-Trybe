@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap') ;
 
-body , h1 , h2 , h3 , p , ul {
+body , h1 , h2 , h3 , p , ul , table , td , tr {
   padding: 0;
   margin: 0;
 }
 
 * {
   box-sizing: border-box;
+  border-spacing: 0;
 }
 
 body {
@@ -114,5 +115,6 @@ main {
   height: 40px;
   width: 40px;
   border: black solid 1px;
+  background-color: white;
 }
 
