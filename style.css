@@ -1,0 +1,48 @@
+ main {
+    display: block;
+    margin: 20px;
+}
+
+aside{
+    display: block;
+    margin: 20px;
+
+}
+
+#title {
+    color: aqua;
+}
+
+#color-palette {
+    border: 3px solid darkgreen;
+    box-sizing: border-box;
+    padding: 50px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.color {
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+
+}
+
+#Quadro {
+    border: 3px solid darkgreen;
+    box-sizing: border-box;
+    padding: 50px;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid red;
+    box-sizing: border-box;
+    width: 100px;
+    height: 80px;
+}
