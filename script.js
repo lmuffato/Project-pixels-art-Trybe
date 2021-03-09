@@ -24,7 +24,7 @@ addColorQuadThree();
 addColorQuadFour();
 
 // criando tabela
-for (let index = 0; index < 25;index += 1) {
+for (let index = 0; index < 25; index += 1) {
 	let elementDiv = document.createElement('div');
 	elementDiv.className = 'pixel';
 	elementTable.appendChild(elementDiv)
