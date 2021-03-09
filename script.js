@@ -31,9 +31,7 @@ window.onload = function colorSelector() { //  Seleciona a cor preta como padrã
 function changeSelected(select) { //  Seleciona o pixel que vai ser pintado
   const selected = document.querySelector('.selected');
   selected.classList.remove('selected');
-  changeSelected2(select){
-    className += ' selected';
-  };
+  select.className += ' selected';
 }
 
 colorPalette.addEventListener('click', function changeSelectedColor(e) { //  Troca a cor selecionada para pintar
@@ -51,7 +49,3 @@ buttonElement.addEventListener('click', function pixelsCleaner() { // Limpador d
     pixelSelected[screenCleaner].style.background = 'white';
   }
 });
-function changeSelected2(select) {
-    select.className += ' selected';
-}
-
