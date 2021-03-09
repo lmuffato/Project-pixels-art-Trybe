@@ -8,8 +8,8 @@ function makeTable() {
     makeRow = document.createElement('tr');
     getSquare.appendChild(makeRow);
     for (let indexSquare = 0; indexSquare < 5; indexSquare += 1) {
-      getSquare.appendChild(makeSquare);
       makeSquare = document.createElement('td');
+      getSquare.appendChild(makeSquare);
       makeSquare.className = tdClass;
     }
   }
