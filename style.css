@@ -1,6 +1,7 @@
 #color-palette {
   border-spacing: 0.6rem;
 }
+
 .color {
   width: 50px;
   height: 50px;
@@ -23,9 +24,11 @@
   background-color: orange;
 }
 
-#pixel-board{
+#pixel-board {
   border-collapse: collapse;
+  margin-left: 20px;
 }
+
 .pixel {
   background-color: white;
   width: 40px;
