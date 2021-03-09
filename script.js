@@ -18,7 +18,13 @@ function createBoard() {
   }
 }
 
+function innitialSelection() {
+  const local = document.getElementById('color1');
+  local.className = 'color selected';
+}
+
 window.onload = function run() {
   createBoardLines();
   createBoard();
+  innitialSelection();
 };
