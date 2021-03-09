@@ -41,8 +41,30 @@ function clear() {
   button.addEventListener('click', clearPainel);
 }
 
+function colorTest(array, color) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (color === array[index]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function randomColors() {
+  const colorOptions = ['red', 'blue', 'orange', 'brown', 'green', 'yellow', 'pink', 'cyan'];
+  const colors = ['black'];
+
+  while (colors.length < 4) {
+    const color = colorOptions[Math.floor(Math.random() * 8)];
+    if (colorTest(colors, color) === true) {
+      colors.push(color);
+    }
+  }
+  return colors;
+}
+
 window.onload = function script() {
-  setColor(['black', 'blue', 'green', 'yellow']);
+  setColor(randomColors());
   pixelPaint();
   clear();
 };
