@@ -4,6 +4,3 @@ for (let counter = 1; counter <= 25; counter += 1) {
   pixel.className = 'pixel';
   board.appendChild(pixel);
 }
-window.addEventListener('load', function() {
-    document.querySelector('.black').classList.add('selected')
-});
