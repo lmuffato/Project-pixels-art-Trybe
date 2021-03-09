@@ -44,13 +44,10 @@ const toggleClassEvent = (elementNode, className) => {
   }
 };
 
-const randomColor = () => {
-  return Math.round(Math.random() * 255);
-};
+const randomColor = () => Math.round(Math.random() * 255);
 
-const generateRandomColor = () => {
-  return `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
-};
+
+const generateRandomColor = () => `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
 
 const setColorsPalette = () => {
   const black = document.querySelector('.black');
@@ -64,12 +61,29 @@ const setColorsPalette = () => {
 };
 
 const checkBoardSizeLimite = (boardSize, min, max) => {
-  if (boardSize < min) {
-    boardSize = min;
-  } else if (boardSize > max) {
-    boardSize = max;
+  let boardSizeResult = boardSize;
+  if (boardSizeResult < min) {
+    boardSizeResult = min;
+  } else if (boardSizeResult > max) {
+    boardSizeResult = max;
   }
-  return boardSize;
+  return boardSizeResult;
+};
+
+const resetBoard = () => {
+  const reset = document.querySelector('#pixel-board');
+  reset.innerHTML = '';
+};
+
+const changeBackgroundColorPixels = () => {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((el) => {
+    el.style.backgroundColor = 'white';
+  });
+};
+
+const configureEventsListeners = () => {
+  addEvListenerNElements('.pixel', 'click', changeColorPixel);
 };
 
 const createPixelBoard = () => {
@@ -86,7 +100,7 @@ const createPixelBoard = () => {
   for (let index = 0; index < boardSize; index += 1) {
     const line = document.createElement('div');
     line.classList.add('line');
-    for (let index = 0; index < boardSize; index += 1) {
+    for (let index2 = 0; index2 < boardSize; index2 += 1) {
       const colum = document.createElement('div');
       colum.classList.add('pixel');
       line.appendChild(colum);
@@ -97,22 +111,6 @@ const createPixelBoard = () => {
   configureEventsListeners();
 };
 
-const resetBoard = () => {
-  const reset = document.querySelector('#pixel-board');
-  reset.innerHTML = '';
-};
-
-const configureEventsListeners = () => {
-  addEvListenerNElements('.pixel', 'click', changeColorPixel);
-};
-
-const changeBackgroundColorPixels = () => {
-  const pixels = document.querySelectorAll('.pixel');
-  pixels.forEach((el) => {
-    el.style.backgroundColor = 'white';
-  });
-};
-
 window.onload = () => {
   setColorsPalette();
   toggleClassInit('.color', 'selected');
@@ -121,5 +119,5 @@ window.onload = () => {
   addEvListener('#clear-board', 'click', changeBackgroundColorPixels);
   addEvListener('#color-palette', 'click', function (e) { toggleClassEvent(e, 'selected') });
   addEvListenerNElements('.pixel', 'click', changeColorPixel);
-  addEvListener('#generate-board', 'click', createPixelBoard)
+  addEvListener('#generate-board', 'click', createPixelBoard);
 };
