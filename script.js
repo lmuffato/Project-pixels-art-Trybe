@@ -27,3 +27,17 @@ element4.addEventListener('click', () => {
   //handle click
 })
 console.log(element1)
+
+function chooseColor() {
+  let selection = document.getElementsByClassName("selected");
+  let CSSprop = window.getComputedStyle(selection, null).getPropertyValue("background-color");
+  return CSSprop;
+}
+console.log(chooseColor());
+
+let pixelChoose = document.querySelectorAll('.pixel')
+
+document.addEventListener('click', () => {
+  pixelChoose.target(chooseColor());
+  //handle click
+})
