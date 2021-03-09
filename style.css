@@ -152,3 +152,11 @@ main #teste {
   margin-top: 1rem;
   background-color: var(--celadon-blue-color);
 }
+
+main #pixel-board .line {
+  display: flex;
+}
+
+main #pixel-board .line .pixel {
+  background-color: white;
+}
