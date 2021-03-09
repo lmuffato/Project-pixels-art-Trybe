@@ -15,7 +15,7 @@ for (let index = 0; index < 5; index += 1) {
   }
 }
 
-function selectColor() {
+function selectColor(event) {
   for (let index = 0; index < 4; index += 1) {
     document.querySelectorAll('.color')[index].className = 'color';
   }
@@ -25,3 +25,10 @@ function selectColor() {
 }
 
 document.querySelector('#color-palette').addEventListener('click', selectColor);
+
+function pixelColor(event) {
+  const c = window.getComputedStyle(document.querySelector('.selected')).getPropertyValue('background-color');
+  event.target.style.backgroundColor = c;
+}
+
+document.querySelector('#pixel-board').addEventListener('click', pixelColor);
