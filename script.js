@@ -4,5 +4,5 @@ const colorGreen = document.querySelector('#green');
 const colorOrange = document.querySelector('#orange');
 
 colorBlack.addEventListener('click', function (){
-    colorBlack.classList = "selected";
+    colorBlack.classList.add('selected');
 })
