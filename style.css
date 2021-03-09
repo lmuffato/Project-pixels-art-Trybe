@@ -56,13 +56,12 @@ header {
 }
 
 #pixel-board {
-  display: flex;
   justify-content: center;
   background-color: white ! important;
 }
 
 .line {
-  display: table-row;
+  display: flex;
 }
 
 .pixel {
