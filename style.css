@@ -1,5 +1,5 @@
 #black {
-background-color: black;
+  background-color: black;
 }
 
 #green {
@@ -17,7 +17,7 @@ background-color: black;
 .color {
   width: 70px;
   height: 70px;
-  display:inline-block
+  display: inline-block;
 }
 
 .pixel {
