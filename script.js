@@ -6,6 +6,8 @@ const colorsObj = {
   selected: 'black',
 };
 
+const pixels = {};
+
 function resetSelected() {
   const classSelecteds = document.getElementsByClassName('color');
   for (let index = 0; index < classSelecteds.length; index += 1) {
@@ -41,7 +43,6 @@ function addColorsPalette(colors) {
 
 // Req. 04
 function makePixelBoard(grid) {
-  const pixels = {};
   const containerPixelBoard = document.getElementById('pixel-board');
   containerPixelBoard.style.width = 'fit-content';
   containerPixelBoard.style.display = 'grid';
@@ -72,8 +73,19 @@ function selectInitialColorPaint(color) {
   });
 }
 
+// Req. 08
+function paintPixel() {
+  const pixelsForPaint = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelsForPaint.length; index += 1) {
+    pixelsForPaint[index].addEventListener('click', () => {
+      pixelsForPaint[index].style.backgroundColor = colorsObj.selected;
+    });
+  }
+}
+
 window.onload = () => {
   addColorsPalette(colorsObj);
   makePixelBoard(5);
   selectInitialColorPaint(colorsObj.black);
+  paintPixel();
 };
