@@ -3,6 +3,9 @@ const element2 = document.getElementsByClassName('color')[1];
 const element3 = document.getElementsByClassName('color')[2];
 const element4 = document.getElementsByClassName('color')[3];
 
+// window.onload () => {
+  // element1.classList.add('selected');
+
 element1.addEventListener('click', () => {
   element1.classList.add('selected');
   element2.classList.remove('selected');
@@ -39,15 +42,15 @@ element4.addEventListener('click', () => {
 })
 console.log(element4);
 
-function chooseColor() {
-  let selection = document.querySelector('.selected');
-  let bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
-  return bgColor;
-}
+// function chooseColor() {
+//   let selection = document.querySelector('.selected');
+//   let bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
+//   return bgColor;
+// }
 
-function fillPixel() {
-   EventTarget.style.backgroundColor = chooseColor()
-}
+// function fillPixel() {
+//    EventTarget.style.backgroundColor = chooseColor()
+// }
 
 
 // document.addEventListener('click', () => {
