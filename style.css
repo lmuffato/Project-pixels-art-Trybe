@@ -1,6 +1,5 @@
-.container {
-  box-sizing: border-box;
-  text-align: center;
+header {
+  margin-left: 10px;
 }
 
 .center {
@@ -12,6 +11,7 @@
   display: table-row;
   text-align: center;
 }
+
 .color {
   width: 50px;
   height: 50px;
@@ -34,4 +34,18 @@
 
 .color-four {
   background-color: green;
+}
+
+#pixel-board {
+  width: 250px;
+  display: table-cell;
+  margin: 5px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0px;
 }
