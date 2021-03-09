@@ -1,11 +1,11 @@
-function createPixelBoard() {
+function createPixelBoard(n) {
   const pixelBoard = document.getElementById('pixel-board');
   // Criando os pixels
-  for (let boardRow = 1; boardRow <= 5; boardRow += 1) {
+  for (let boardRow = 1; boardRow <= n; boardRow += 1) {
     const newRow = document.createElement('div');
     newRow.className = 'pixel-row';
     pixelBoard.appendChild(newRow);
-    for (let boardColumn = 1; boardColumn <= 5; boardColumn += 1) {
+    for (let boardColumn = 1; boardColumn <= n; boardColumn += 1) {
       const newPixel = document.createElement('div');
       newPixel.className = 'pixel';
       newPixel.style.backgroundColor = 'white';
@@ -39,6 +39,7 @@ function addEventListenerToColorPalette() {
 function addEventListenerToPixels() {
   const allPixels = document.querySelectorAll('.pixel');
   for (const pixel of allPixels) {
+    console.log(pixel);
     pixel.addEventListener('click', function addColorToPixel(event) {
       let selectedColor = document.querySelector('.selected');
       selectedColor = window.getComputedStyle(selectedColor).backgroundColor;
@@ -59,9 +60,9 @@ function addEventListenerToClearBtn() {
 }
 
 window.onload = function onload() {
-  createPixelBoard();
   selectBlackOnload();
   addEventListenerToColorPalette();
+  createPixelBoard(5);
   addEventListenerToPixels();
   addEventListenerToClearBtn();
 };
