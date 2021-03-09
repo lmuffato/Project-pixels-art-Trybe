@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap') ;
 
-body, h1, h2, h3, p, ul {
+body , h1 , h2 , h3 , p , ul {
   padding: 0;
   margin: 0;
 }
@@ -23,7 +23,7 @@ header {
 }
 
 #title {
-  font-family: 'DotGothic16', sans-serif;
+  font-family: DotGothic16, sans-serif;
   text-align: center;
   font-size: 3em;
   color: rgba(51, 53, 51, 1);
@@ -49,10 +49,10 @@ main {
   padding-bottom: 30px;
 }
 
-#color-palette:before, #color-palette:after {
+#color-palette:before , #color-palette:after {
   content: '';
-	display: table;
-	clear: both;
+  display: table;
+  clear: both;
 }
 
 .color {
@@ -60,15 +60,45 @@ main {
   margin: 0 10px;
   border: solid 1px black;
   width: 40px;
-  height: 40px; 
+  height: 40px;
 }
 
 #generate-board-container {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
 }
 
 #clear-board-container {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
+}
+
+#board-size {
+  width: 70px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 0;
+  border-color: rgba(196, 196, 196, 1);
+  border-style: solid;
+}
+
+#generate-board {
+  padding: 2px 10px;
+  margin-left: 5px;
+  border-radius: 0;
+  border-style: solid;
+  border-color: rgba(196, 196, 196, 1);
+  background-color: rgba(232, 237, 223, 1);
+  color: rgba(51, 53, 51, 1);
+}
+
+#clear-board {
+  margin-top: 10px;
+  border-radius: 0;
+  border-style: solid;
+  border-color: rgba(196, 196, 196, 1);
+  background-color: rgba(232, 237, 223, 1);
+  color: rgba(51, 53, 51, 1);
 }
