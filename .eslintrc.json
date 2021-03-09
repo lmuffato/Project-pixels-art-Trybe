@@ -1,7 +1,4 @@
 {
   "root": true,
-  "extends": ["trybe-fundamentals"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+  "extends": ["trybe-fundamentals"]
 }

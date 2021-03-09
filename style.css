@@ -1,0 +1,43 @@
+:root {
+
+  --background-palette: rgb(233, 233, 233);
+
+  --border-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  max-width: 1366px;
+  height: auto;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+#color-palette {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: var(--background-palette);
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border: 1px solid var(--border-color);
+  max-width: 150px;
+  max-height: 150px;
+}
