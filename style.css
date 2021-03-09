@@ -39,3 +39,19 @@ h1{
     text-align:justify;
     margin-left: 90px;
 }
+#pixel-board{ 
+    display: table; 
+    margin: 50px;
+    background-color: white;
+}
+.tr{ 
+    display: table-row; 
+}
+.pixel{ 
+    display: table-cell; 
+    width: 70px;
+    height: 70px;
+    border: solid black 0.01px;
+    background-color:white;
+
+}
