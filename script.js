@@ -2,8 +2,9 @@ const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const clearBtn = document.getElementById('clear-board');
 const paletteColors = ['black', 'blue', 'red', 'green'];
+const generateBoardBtn = document.getElementById('generate-board');
 let selectedColor = 0;
-const boardSize = 5;
+let boardSize = 5;
 
 // Functions
 function setPaletteColors() {
@@ -28,7 +29,6 @@ function setPixelsRow() {
 
     if (indexColumn % boardSize === 0) {
       const brElement = document.createElement('br');
-      console.log(brElement);
       pixelBoard.appendChild(brElement);
     }
   }
@@ -63,6 +63,17 @@ function clearBoard() {
   }
 }
 
+function resizeBoard(e) {
+  e.preventDefault();
+  const inputBoardSize = document.getElementById('board-size');
+  boardSize = inputBoardSize.value;
+  const pixelBoardChildren = pixelBoard.children;
+  for (let index = pixelBoardChildren.length - 1; index >= 0; index -= 1) {
+    pixelBoardChildren[index].remove();
+  }
+  setPixels();
+}
+
 setPaletteColors();
 setPixels();
 
@@ -70,3 +81,4 @@ setPixels();
 colorPalette.addEventListener('click', changeSelection);
 pixelBoard.addEventListener('click', colorPixel);
 clearBtn.addEventListener('click', clearBoard);
+generateBoardBtn.addEventListener('click', resizeBoard);
