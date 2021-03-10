@@ -25,3 +25,10 @@
 .pixel {
   background-color: white;
 }
+
+#clear-board {
+  width: 60px;
+  height: 20px;
+  border: 1px solid;
+  box-sizing: border-box;
+}

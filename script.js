@@ -50,10 +50,22 @@ function paintPixel() {
   }
 }
 
+function clearBtn() {
+  const btn = document.getElementById('clear-board');
+  btn.addEventListener('click', () => {
+    const pixel = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      const element = pixel[index];
+      element.style.backgroundColor = 'white';
+    }
+  });
+}
+
 window.onload = function run() {
   createBoardLines();
   createBoard();
   innitialSelection();
   setColor();
   paintPixel();
+  clearBtn();
 };
