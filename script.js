@@ -1,4 +1,4 @@
-window.onload = () => {
+function setPixels() {
   const lines = document.getElementsByClassName('pixel-line');
   for (let index = 0; index < lines.length; index += 1) {
     for (let column = 1; column <= 5; column += 1) {
@@ -7,37 +7,40 @@ window.onload = () => {
       lines[index].appendChild(div);
     }
   }
+}
+
+function setBlackSelected() {
   const blackPalette = document.getElementById('black-palette');
   blackPalette.className += ' selected';
+}
 
-};
-
-  function setSelectedTask(element) {
-  const selectedTask = document.getElementsByClassName('selected')[0];
-  selectedTask.className = 'color';
-  element.className = 'color selected';
-  }
-
+function setSelectedTask() {
   const paletteColors = document.getElementsByClassName('color');
   for (let index = 0; index < paletteColors.length; index += 1) {
-  paletteColors[index].addEventListener('click', (event) => {
-    if (event.target.className === 'color') {
-    setSelectedTask(paletteColors[index]);
-    }
-  });
+    paletteColors[index].addEventListener('click', (event) => {
+      if (event.target.className === 'color') {
+        const selectedTask = document.querySelector('.selected');
+        selectedTask.className = 'color';
+        paletteColors[index].className = 'color selected';
+      }
+    });
   }
+}
 
-  function setPixelColor(element) {
-    const selectedTask = document.querySelector('.selected');
-    const color = window.getComputedStyle(selectedTask).backgroundColor;
-    element.style.backgroundColor = color;
-  }
-
+function setPixelColor() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', () => {
-      setPixelColor(pixels[index]);
+      const selectedTask = document.querySelector('.selected');
+      const color = window.getComputedStyle(selectedTask).backgroundColor;
+      pixels[index].style.backgroundColor = color;
     });
   }
+}
 
-
+window.onload = () => {
+  setPixels();
+  setBlackSelected();
+  setSelectedTask();
+  setPixelColor();
+};
