@@ -17,6 +17,15 @@ body {
   font-weight: 900;
 }
 
+#generate-board {
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: rgb(177, 200, 76);
+  font-weight: 900;
+  margin-left: 50px;
+}
+
 
 .color:nth-child( 1 ) {
   display: inline-block;
@@ -53,6 +62,7 @@ body {
 #pixel-board {
   border: double 2px;
   margin-top: 2em;
+  margin-left: 200px;
 }
 
 .pixel {
