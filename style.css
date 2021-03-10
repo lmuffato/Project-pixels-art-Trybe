@@ -35,13 +35,18 @@ div {
 
 #pixel-board {
   border: 1px solid black;
+  display: table;
+  margin-top: 25px;
 }
 
 .linha {
-    border: 1px solid black;
+  display: table-row;
+  border: 1px solid black;
+  
 }
 
 .pixel {
+  display: table-cell;
   background-color: white;
   border: 1px solid black;
   width: 40px;
