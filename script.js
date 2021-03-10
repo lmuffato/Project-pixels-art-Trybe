@@ -29,7 +29,7 @@ function createPixelBox(amount = 5) {
     }
   }
 }
-createPixelBox(7);
+createPixelBox();
 
 document.querySelectorAll('.color')[0].className += ' selected';
 
@@ -71,8 +71,25 @@ function clearBoxes() {
 }
 clearBoxes();
 
-const inputText = document.getElementsByTagName('input')[0];
-inputText.id = 'board-size';
-const buttonNumberPixel = document.querySelectorAll('button')[1];
-buttonNumberPixel.id = 'generate-board';
-buttonNumberPixel.innerText = 'VQV';
+// Ajuda mútua, em especial ao Lucas Godoi - turma 10 - tribo A na criação do if
+function insertValueBoard() {
+  const inputText = document.getElementsByTagName('input')[0];
+  inputText.id = 'board-size';
+  const buttonNumberPixel = document.querySelectorAll('button')[1];
+  buttonNumberPixel.id = 'generate-board';
+  buttonNumberPixel.innerText = 'VQV';
+  buttonNumberPixel.addEventListener('click', () => {
+    const areaBox = document.querySelector('#pixel-board');
+    if (inputText.value === '') {
+      alert('Board inválido!');
+      inputText.value = 5;
+    } else if (inputText.value > 50) {
+      inputText.value = 50;
+    } else if (inputText.value < 5) {
+      inputText.value = 5;
+    }
+    areaBox.innerHTML = '';
+    createPixelBox(inputText.value);
+  });
+}
+insertValueBoard();
