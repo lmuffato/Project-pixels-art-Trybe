@@ -49,8 +49,8 @@ body {
 }
 
 #pixel-board {
-  width: 210px;
-  height: 210px;
+  width: 212px;
+  height: 212px;
   background-color: grey;
   position: absolute;
   border-style: solid;
