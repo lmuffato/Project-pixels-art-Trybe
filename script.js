@@ -45,7 +45,19 @@ function btnButton() {
 }
 
 
+let btn = document.querySelector('.btnClear');
+
+btn.addEventListener('click', function()
+ {
+    let btnColor = 'rgb(255, 255, 255)';
+    let receivedColor = document.getElementsByClassName('pixel');
+    
+    for (let index = 0; index < receivedColor.length; index += 1) {
+    let pixelBg = receivedColor[index];
+        pixelBg.style.backgroundColor = btnColor;
+    }
+  });
+
 returnClickClass();
 changeBgColor();
-btnButton();
 }
