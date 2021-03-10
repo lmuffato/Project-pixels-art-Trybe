@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0 5px;
+}
