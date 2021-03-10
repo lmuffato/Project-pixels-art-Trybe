@@ -8,8 +8,10 @@ function getSelectedColor(event) {
 
 function selectColor(event) {
   const selectedColor = event.target;
-  document.querySelector('.selected').className = 'boxes color';
-  selectedColor.className += ' selected';
+  if (selectedColor.className.includes('color')) {
+    document.querySelector('.selected').className = 'boxes color';
+    selectedColor.className += ' selected';
+  }
 }
 
 function pixelPaint() {
@@ -72,8 +74,47 @@ function randomColors() {
   return colors;
 }
 
+function setColumns(line, size) {
+  
+  for (let index = 0; index < size; index += 1) {
+    let box = document.createElement('th');
+    box.className = 'boxes pixel';
+    line.appendChild(box);
+  }
+  return line;
+}
+
+function setLines(size) {
+  const pixelBoard = document.querySelector('#pixel-board');
+
+  for (let index = 0; index < size; index += 1) {
+    let line = document.createElement('tr');
+    line = setColumns(line, size);
+    pixelBoard.appendChild(line);
+  }
+}
+
+function setBoard(size) {
+  setLines(size);
+}
+
+// function getSize(){
+//   let boardSize = document.getElementById('board-size');
+//   return parseInt(boardSize.value);
+// }
+
+// function reSize() {
+//   setBoard(getSize);
+// }
+
+// function setSize(){
+//   const button = document.getElementById('vqv-button');
+//   button.addEventListener('click', reSize);
+// }
+
 window.onload = function script() {
   setColor(randomColors());
   pixelPaint();
   clear();
+  setBoard(5);
 };
