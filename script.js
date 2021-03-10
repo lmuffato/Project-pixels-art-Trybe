@@ -17,7 +17,7 @@ function assignColors() {
 }
 assignColors();
 
-function createPixelBox(amount) {
+function createPixelBox(amount = 5) {
   const divPixels = document.querySelector('#pixel-board');
   for (let index = 1; index <= amount; index += 1) {
     const boxes = document.createElement('div');
@@ -29,7 +29,7 @@ function createPixelBox(amount) {
     }
   }
 }
-createPixelBox(5);
+createPixelBox(7);
 
 document.querySelectorAll('.color')[0].className += ' selected';
 
@@ -45,6 +45,7 @@ function changeSelected() {
 }
 changeSelected();
 
+// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A
 function changeColorBox() {
   const selectedBox = document.querySelector('#pixel-board');
   selectedBox.addEventListener('click', (event) => {
@@ -69,3 +70,9 @@ function clearBoxes() {
   });
 }
 clearBoxes();
+
+const inputText = document.getElementsByTagName('input')[0];
+inputText.id = 'board-size';
+const buttonNumberPixel = document.querySelectorAll('button')[1];
+buttonNumberPixel.id = 'generate-board';
+buttonNumberPixel.innerText = 'VQV';
