@@ -20,6 +20,7 @@ function montPalette(tableColors) {
 }
 
 function selectColor(event) {
+  console.log('entrou na função de selecionar cor');
   if (event.target !== colorSelected) {
     colorSelected.className = 'color';
     colorSelected = event.target;
@@ -28,8 +29,12 @@ function selectColor(event) {
 }
 
 function colorPixel(event) {
+  console.log('entrou na função de colorir');
+  console.log(event.target.style.backgroundColor);
+  console.log(colorSelected.style.backgroundColor);
   if (event.target.style.backgroundColor !== colorSelected.style.backgroundColor) {
     event.target.style.backgroundColor = colorSelected.style.backgroundColor;
+    console.log(event.target);
   }
 }
 
@@ -69,13 +74,14 @@ function resizePixelBoard() {
 }
 
 // Bloco de ações de inicialização do código
+
 // for (let color = colorsOfPalette.length; color < simpleColors.length; color += 1) {
 //   const newColor = document.createElement('th');
 //   newColor.className = 'color';
 //   newColor.id = `color${color}`;
 //   palette.appendChild(newColor);
 // }
-// montPalette(simpleColors);
+montPalette(simpleColors);
 
 // bloco de carregamento do escutadores de eventos
 
@@ -85,9 +91,9 @@ for (let color = 0; color < colorsOfPalette.length; color += 1) {
 
 for (let pixel = 0; pixel < pixels.length; pixel += 1) {
   pixels[pixel].addEventListener('click', colorPixel);
+  console.log('carregou escutador');
 }
 
 buttonClear.addEventListener('click', clearBoard);
 
 buttonResize.addEventListener('click', resizePixelBoard);
-
