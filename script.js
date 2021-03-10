@@ -45,7 +45,7 @@ function btnButton() {
 }
 
 
-let btn = document.querySelector('.btnClear');
+let btn = document.querySelector('#clear-board');
 
 btn.addEventListener('click', function()
  {
