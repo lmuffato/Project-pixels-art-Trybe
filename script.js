@@ -7,14 +7,14 @@ for (let index = 1; index <= 25; index += 1) {
 
 document.getElementById('color-palette').firstElementChild.classList.add('selected');
 
-// let selectedPixel = document.querySelectorAll('.pixel');
+let selectedPixel = document.querySelectorAll('.pixel');
 
 /* let elemento = document.querySelectorAll('.color');
 if (elemento[2].className[1] === 'color') {
   selectedPixel[2].style.backgroundColor = 'green';
 } */
 
-// requisito 7
+// requisito 7 e 8
 const element = document.querySelectorAll('.color');
 let currentColor;
 
@@ -26,7 +26,12 @@ for (let index = 0; index < 4; index += 1) {
   })
 }
 
-// requisito 8
+for (let indexPixel = 0; indexPixel < 25; indexPixel += 1) {
+  selectedPixel[indexPixel].addEventListener('click', function () {
+    selectedPixel[indexPixel].style.backgroundColor = currentColor;
+  })
+}
+
 
   /* if (element[index].className === 'selected') {
       pixel[2].style.backgroundColor = element[index].style.backgroundColor;
