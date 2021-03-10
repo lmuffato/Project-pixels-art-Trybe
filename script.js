@@ -39,7 +39,21 @@ function getColorPalette(e) {
   e.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
-for (let index = 0; index < pixels.length; index += 1) {
-  let eachPixel = pixels[index];
-  eachPixel.addEventListener('click', getColorPalette);
+function coloringPixels() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    const eachPixel = pixels[index];
+    eachPixel.addEventListener('click', getColorPalette);
+  }
 }
+coloringPixels();
+
+const button = document.querySelector('#clear-board');
+button.addEventListener('click', clearColors);
+
+function clearColors() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    const eachPixel = pixels[index];
+    eachPixel.style.backgroundColor = 'white';
+  }
+}
+
