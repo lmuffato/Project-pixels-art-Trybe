@@ -63,3 +63,19 @@ table {
 #clear-board:hover {
   opacity: 1;
 }
+
+#input-section {
+  width: 30%;
+  margin: 25px auto;
+}
+
+#board-size {
+  text-align: center;
+  background-color: rgba(220, 220, 220);
+  height: 10px;
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+}
