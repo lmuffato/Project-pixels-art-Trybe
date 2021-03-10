@@ -3,6 +3,7 @@
 const colorPalette = document.getElementById('color-palette');
 const colorElements = document.querySelectorAll('.color');
 const pixelBoard = document.getElementById('pixel-board');
+const clearBoardBtn = document.getElementById('clear-board');
 
 function selecElementPallete(event) {
   const elementTarget = event.target;
@@ -14,7 +15,7 @@ function selecElementPallete(event) {
   }
 }
 
-function changeColor(event) {
+function changeColorPixels(event) {
   const elementTarget = event.target;
   if (elementTarget.id !== 'pixel-board') {
     const colorElementSelected = document.querySelector('.selected').dataset;
@@ -23,5 +24,10 @@ function changeColor(event) {
   }
 }
 
+function clearBoardPixels() {
+  window.location.reload();
+}
+
 colorPalette.addEventListener('click', selecElementPallete);
-pixelBoard.addEventListener('click', changeColor);
+pixelBoard.addEventListener('click', changeColorPixels);
+clearBoardBtn.addEventListener('click', clearBoardPixels);
