@@ -1,5 +1,4 @@
 const colorPallet = document.querySelector('#pixel-board');
-
 function adicionaPixel(number) {
   for (let i = 0; i < number; i += 1) {
     const pixel = document.createElement('div');
@@ -12,7 +11,6 @@ function adicionaPixel(number) {
     colorPallet.appendChild(pixel);
   }
 }
-
 // Requisitos 6 e 7
 function modifyColorToColorSelected(colorSelected) {
   const color = document.querySelectorAll('.color');
@@ -21,21 +19,17 @@ function modifyColorToColorSelected(colorSelected) {
   } else {
     const selecionada = document.querySelector(`.${colorSelected}`);
     selecionada.className = `${selecionada.className} selected`;
-    console.log(selecionada.className);
   }
 }
 
 function removeColorSelectedBerfore() {
   const color = document.querySelectorAll('.color');
   for (let i = 0; i < color.length; i += 1) {
-    console.log(color[i].className);
-    color[i].className = color[i].className.replace(/selected/, '');
-    console.log('agora é ', color[i].className);
-    console.log('');
+    color[i].className = color[i].className.replace(/ selected/, '');
   }
 }
 
-function getColorString(evento) {
+function sendColorString(evento) {
   removeColorSelectedBerfore();
   modifyColorToColorSelected(evento.target.className.split(' ')[1]);
 }
@@ -43,10 +37,30 @@ function getColorString(evento) {
 function selectColor() {
   const color = document.querySelectorAll('.color');
   color.forEach(function (item) {
-    item.addEventListener('click', getColorString);
+    item.addEventListener('click', sendColorString);
   });
+}
+
+function getColor() {
+      const colors = document.querySelector('.selected');
+      return colors.className.split(' ')[1];  // preto , vermelho azul verde
+  }
+
+function preenche(){
+  const pixels = document.querySelectorAll('.pixel');
+  for ( let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', function(event) {
+      let color = getColor();
+      event.target.style.backgroundColor = getColor();
+      console.log(color);
+    });
+  }
 }
 
 adicionaPixel(25);
 modifyColorToColorSelected();
 selectColor();
+preenche();
+
+
+
