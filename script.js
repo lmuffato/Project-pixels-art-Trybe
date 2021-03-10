@@ -59,5 +59,3 @@ function paintOfWhite() {
 }
 const restarButton = document.getElementById('clear-board');
 restarButton.addEventListener('click', paintOfWhite);
-
-
