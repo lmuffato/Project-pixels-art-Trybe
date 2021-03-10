@@ -15,12 +15,16 @@ function selecElementPallete(event) {
   }
 }
 
+function getColorElementPalette() {
+  const elementSelected = document.querySelector('.selected');
+  const color = window.getComputedStyle(elementSelected).getPropertyValue('background-color');
+  return color;
+}
+
 function changeColorPixels(event) {
   const elementTarget = event.target;
   if (elementTarget.id !== 'pixel-board') {
-    const colorElementSelected = document.querySelector('.selected').dataset;
-    const { color } = colorElementSelected;
-    elementTarget.style.backgroundColor = color;
+    elementTarget.style.backgroundColor = getColorElementPalette();
   }
 }
 
@@ -29,5 +33,6 @@ function clearBoardPixels() {
 }
 
 colorPalette.addEventListener('click', selecElementPallete);
+colorPalette.addEventListener('click', getColorElementPalette);
 pixelBoard.addEventListener('click', changeColorPixels);
 clearBoardBtn.addEventListener('click', clearBoardPixels);
