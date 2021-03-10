@@ -14,8 +14,8 @@ function updatePixelSize() {
   console.log(pixels);
   Array.from(pixels).forEach((element) => {
     const pixel = element;
-    pixel.style.width = '40px';
-    pixel.style.height = '40px';
+    pixel.style.width = '37px';
+    pixel.style.height = '37px';
   });
 }
 
