@@ -28,28 +28,33 @@ span { border: 1px black;
   display: inline-block;
 }
 
-#green { background-color: green;
-  flex: 1;
-}
-
 #magenta { background-color: magenta;
 }
 
 #blue { background-color: blue;
 }
 
-#black { background-color: black;
+#black {
+  background-color: black;
 }
 
-.pixel { width: 40px;
+#green {
+  background-color: green;
+}
+
+div .pixel { width: 40px;
   height: 40px;
   border: black solid 1px;
   background-color: white;
 }
 
 #pixel-board { display: table;
-  padding-left: 43%;
+  padding-left: 44%;
   padding-top: 2%;
+}
+
+#clear-btn { align-items: center;
+  margin-left: 42%;
 }
 
 .tr { display: table-row;
@@ -58,3 +63,45 @@ span { border: 1px black;
 .td { display: table-cell;
 }
 
+.clear-btn {
+  margin-left: 42%;
+  margin-top: 2%;
+  height: 30px;
+  width: auto;
+  border: 1px dotted white;
+  color: var(--btnFontColor);
+  background-color: white;
+  box-shadow: teal 1px;
+}
+
+.btn:focus { outline-style: none;
+}
+
+#board-settings {
+  display: inline-block;
+  margin-left: 42%;
+  padding-top: 2%;
+}
+
+/* clearPixelBoard.addEventListener('click', () => {
+  // bgColor.style.backgroundColor.toggle('white');
+  // });
+  //  Como adicionar event listeners (segundo ):
+  // https://pt.khanacademy.org/computing/computer-programming/
+  html-css-js/html-js-dom-events/pt/using-the-event-properties
+  // 1. Find and store the element we want to listen to events on.
+  // 2. Define the function that will respond to the event.
+  // 3. Add the event listener for the element and function.
+  // Função para colocar selected no array
+  //function onClickColorPalette() {
+   // const colorsPalette = window.document.getElementsByClassName('color');
+  //  let key;
+  //  colorsPalette[key].classList.add('selected');
+  // }
+  // uma função para remover o selected das outras posições
+  // function removeSelected() {
+   // const classSelected = window.document.getElementsByClassName('color');
+   // for (let index = 0; index < classSelected.length; index += 1) {
+  //    classSelected[index].classList.remove('selected');
+   // }
+  // } */
