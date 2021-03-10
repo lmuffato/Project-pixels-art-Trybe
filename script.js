@@ -26,7 +26,7 @@ function SelectingColor(){
 
 function PaintingSquares() {
   let paint = Document.querySelectorAll('.pixel');
-  for (index = 0; index<palette.length; index += 1){
+  for (index = 0; index<paint.length; index += 1){
     paint[index].addEventListener('click', function(){
 
     })
@@ -45,15 +45,15 @@ function GenerateBoard(number) {
   }
 }
 
-const reset = document.getElementById('clear-board');
-
+// reorganização feita observando o código da Beatriz, já citado acima
 function ResetColors(){
+  let reset = document.getElementById('clear-board');
   let resetButton = document.querySelectorAll('.pixel');
+  reset.addEventListener('click', function(){
   for (let index = 0; index < 25; index+= 1){
   resetButton[index].style.backgroundColor = 'white';
   }
+});
 }
-
-reset.addEventListener('click', ResetColors);
 
 GenerateBoard(25);
