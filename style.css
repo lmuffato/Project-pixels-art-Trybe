@@ -55,3 +55,21 @@ main{
     width:210px;
     height:40px;
 }
+
+#input{
+    background-color: aqua;
+    min-width: auto;
+    position:fixed;
+    padding: 0px 10px 0px 10px;
+}
+form{
+    font-size:medium;
+    text-align: center;
+    line-height: 30px;
+
+}
+input{
+    text-align: center;
+    width: 20px;
+    height: 15px;
+}

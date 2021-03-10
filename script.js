@@ -1,13 +1,23 @@
+
 let colorpalleteButtons = document.getElementsByClassName("color");
 let pixelBoard = document.getElementById("pixel-board");
 let black = colorpalleteButtons[0];
 let blue = colorpalleteButtons[1];
 let red = colorpalleteButtons[2];
 let green = colorpalleteButtons[3];
-black.classList.add("selected");
-window.onload=createPixelBlocks(100,10);
-
-function createPixelBlocks(size,lineSize){
+let input= document.getElementsByTagName('input')
+window.onload=createPixelBlocks()
+input[0].addEventListener('click',createPixelBlocks);
+function createPixelBlocks(){
+    let size = 0
+    let lineSize = 0
+    if(input[0].checked==true){
+        size = 100
+        lineSize = 10
+    }else{
+        size = 25
+        lineSize = 5
+    }
     for (let index = 1; index < size+1; index++) {
         pixelSquare=document.createElement('div');
         pixelSquare.style.width="40px";
@@ -30,7 +40,7 @@ function fillPixel(e){
     let event= e;
     event.target.style.backgroundColor=document.getElementsByClassName("selected")[0].id;        
 }
-
+black.classList.add("selected");
 black.addEventListener('click',chooseColor)
 red.addEventListener('click',chooseColor)
 green.addEventListener('click',chooseColor)
