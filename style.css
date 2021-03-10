@@ -7,7 +7,7 @@
   width: 100px;
 }
 
-.pixel, .color {
+.pixel , .color {
   display: inline-block;
   border: 1px black solid;
 }
@@ -20,12 +20,11 @@
 }
 
 .lines {
-    line-height: 0px; }
+  line-height: 0px; }
 
-button, .color {
-    margin: 0 0 30px 0;
+button , .color {
+  margin: 0 0 30px;
 }
 
 form {
-    display: inline;
-}
+  display: inline; }
