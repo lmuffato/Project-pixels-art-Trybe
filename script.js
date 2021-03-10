@@ -1,5 +1,11 @@
 const colorsList = [];
 
+function teste() {
+  colorsList[0].classList.add('selected');
+}
+
+window.onload = teste;
+
 for (let index = 0; index < 4; index += 1) {
   colorsList.push('');
   colorsList[index] = document.createElement('div');
