@@ -1,0 +1,29 @@
+#color-palette {
+    display: inline-block;
+}
+
+.color {
+  padding: 22px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+#black {
+  background-color: black;
+}
+
+#midnightblue {
+  background-color: midnightblue;
+}
+
+#gold {
+  background-color: gold;
+}
+
+#darkred {
+  background-color: darkred;
+}
+
+#darkslategray {
+background-color: darkslategrey;
+}
