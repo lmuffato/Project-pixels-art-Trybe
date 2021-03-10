@@ -35,7 +35,7 @@ body {
 }
 
 .color.selected {
-  border: 8px double white;
+  border: 1px double orange;
 }
 
 .color#black {
