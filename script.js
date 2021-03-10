@@ -43,9 +43,25 @@ function changePlaceClassSelected() {
   const divSquares = document.getElementsByClassName('color');
   Array.from(divSquares).forEach((div) => {
     div.addEventListener('click', (event) => {
-      console.log(event);
       removeAllSelected(divSquares);
       event.target.classList.add('selected');
+    });
+  });
+}
+
+function getDivColor() {
+  const divSelected = document.querySelector('.selected');
+  const divBackground = window.getComputedStyle(divSelected).getPropertyValue('background-color');
+  return divBackground;
+}
+
+function colorPixels() {
+  const pixels = document.getElementsByClassName('pixel');
+
+  Array.from(pixels).forEach((pixel) => {
+    pixel.addEventListener('click', (event) => {
+      const element = event.target;
+      element.style.backgroundColor = getDivColor();
     });
   });
 }
@@ -56,4 +72,5 @@ window.onload = function startSession() {
   updatePixelBorder();
   createClassSelected();
   changePlaceClassSelected();
+  colorPixels();
 };
