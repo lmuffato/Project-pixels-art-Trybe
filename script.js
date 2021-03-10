@@ -1,3 +1,4 @@
+const colorActive = document.getElementById('color-active');
 const colors = document.getElementsByClassName('color');
 const pixels = document.getElementsByClassName('pixel');
 let color = 'black';
@@ -13,6 +14,7 @@ function selectedColor(event) {
   color = window.getComputedStyle(paletteElement).getPropertyValue('background-color');
   removeSelected();
   paletteElement.className += ' selected';
+  colorActive.style.backgroundColor = color;
 }
 
 function addListenerPaletteColors() {

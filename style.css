@@ -115,6 +115,28 @@ main {
   justify-content: center;
 }
 
+main .color-active-box {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-flow: column;
+}
+
+main .color-active-box p {
+  font-weight: 600;
+}
+
+main .color-active-box #color-active {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+  align-self: center;
+  background-color: black;
+}
+
 main #color-palette {
   display: flex;
   justify-content: center;
@@ -148,10 +170,6 @@ main #color-palette .color:nth-child( 4 ) {
   background-color: var(--prussian-blue-color);
 }
 
-main #color-palette .color.selected {
-  border: 6px solid black;
-}
-
 main #pixel-board {
   margin-top: 2rem;
 }
@@ -166,4 +184,6 @@ main #pixel-board .line .pixel {
   height: 40px;
   background-color: white;
   border: 1px solid black;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
