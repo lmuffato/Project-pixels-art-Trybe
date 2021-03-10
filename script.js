@@ -6,6 +6,18 @@ window.onload = function () {
   document.getElementById('color2').style.backgroundColor = '#14213d';
   document.getElementById('color3').style.backgroundColor = '#fca311';
   document.getElementById('color4').style.backgroundColor = '#e5e5e5';
+
+  const squareBase = 5;
+  for (let index = 1; index <= squareBase; index += 1) {
+    let lines = document.createElement('div');
+    lines.className = 'line';
+    document.querySelector('#pixel-board').appendChild(lines);
+    for (let jndex = 1; jndex <= squareBase; jndex += 1) {
+      let squares = document.createElement('div');
+      lines.appendChild(squares);
+      squares.className = 'pixel';
+    }
+  }
 };
 
 function changeSelectedColor() {
