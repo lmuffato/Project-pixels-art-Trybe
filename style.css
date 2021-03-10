@@ -42,9 +42,6 @@ header {
     background-color: green;
 }
 
-#blueviolet {
-    background-color: blueviolet;
-}
 main{
     display:flex;
     justify-content: center;
