@@ -10,8 +10,6 @@ function getColor() {
   getMagenta.style.backgroundColor = '#f15bb5';
 }
 
-getColor();
-
 const selectedClass = 'color selected';
 
 function setColorBlack() {
@@ -51,9 +49,8 @@ function setColorBlue() {
 getBlue.addEventListener('click', setColorBlue);
 
 function colorPixel() {
-  const pixel = document.querySelector('#pixel-board');
-
-  pixel.addEventListener('click', (event) => {
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
     const localPixel = event.target;
     console.log(localPixel);
@@ -61,4 +58,21 @@ function colorPixel() {
   });
 }
 
-colorPixel();
+function clear() {
+  const pixel = document.getElementsByClassName('pixel');
+  const bttn = document.getElementById('clear-board');
+
+  bttn.addEventListener('click', () => {
+    for (let index = 1; index < pixel.length; index += 1) {
+      pixel[index].style.backgroundColor = 'white';
+    }
+  });
+}
+
+function load() {
+  getColor();
+  colorPixel();
+  clear();
+}
+
+window.onload = load;
