@@ -4,6 +4,7 @@ body {
   text-decoration: none;
 
 }
+
 .color {
   cursor: pointer;
 }
@@ -12,8 +13,8 @@ body {
   margin-top: 20px;
   cursor: pointer;
   border-radius: 20px;
-  background-color: rgb(0, 238, 255);
-  font-weight: bold;
+  background-color: rgb(177, 200, 76);
+  font-weight: 900;
 }
 
 
