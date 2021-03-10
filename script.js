@@ -1,3 +1,4 @@
+window.onload = function(){
 // pratica 3
 function setColor (){
     let color = document.getElementsByClassName('color')
@@ -5,10 +6,17 @@ function setColor (){
 }
 setColor();
 
-// pratica 4
-
-function addRow (tableClass){
-    let row = document.getElementsByClassName('tr');
-    let newRow = table.insertRow(1) * 3;
-    let cell = (row.insertCell(1)) * 4;
+// pratica 7
+function changeClass (){
+let click = document.querySelector('#color-palette');
+click.addEventListener('click', function (event) {
+    let color = event.target;
+    document.querySelector('.selected').className = 'color';
+    color.className = '.selected';
+    
+    });
 }
+
+}
+
+
