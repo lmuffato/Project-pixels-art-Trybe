@@ -1,10 +1,9 @@
 const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const clearBtn = document.getElementById('clear-board');
-const paletteColors = ['black', 'blue', 'red', 'green'];
+const paletteColors = ['black', 'blue', 'red', 'green', 'white'];
 let selectedColor = 0;
-const pixelColumns = 5;
-const pixelRows = 5;
+const boardSize = 5;
 
 // Functions
 function setPaletteColors() {
@@ -22,10 +21,19 @@ function setPaletteColors() {
 }
 
 function setPixels() {
-  for (let index = 1; index <= pixelColumns * pixelRows; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    pixelBoard.appendChild(pixel);
+  for (let index = 1; index <= boardSize; index += 1) {
+    for (let indexColumn = 1; indexColumn <= boardSize; indexColumn += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixelBoard.appendChild(pixel);
+
+      if (indexColumn % boardSize === 0) {
+        const brElement = document.createElement('br');
+        console.log(brElement);
+        pixelBoard.appendChild(brElement);
+      }
+    }
+     
   }
 }
 
@@ -53,10 +61,10 @@ function clearBoard() {
   }
 }
 
+setPaletteColors();
+setPixels();
+
 // Event Listeners
 colorPalette.addEventListener('click', changeSelection);
 pixelBoard.addEventListener('click', colorPixel);
 clearBtn.addEventListener('click', clearBoard);
-
-setPaletteColors();
-setPixels();
