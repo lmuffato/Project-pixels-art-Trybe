@@ -75,7 +75,6 @@ function randomColors() {
 }
 
 function setColumns(line, size) {
-  
   for (let index = 0; index < size; index += 1) {
     const box = document.createElement('th');
     box.className = 'boxes pixel';
@@ -95,7 +94,7 @@ function setLines(size) {
 }
 
 function resetBoard() {
-  let board = document.querySelectorAll('#pixel-board tr');
+  const board = document.querySelectorAll('#pixel-board tr');
 
   for (let index = board.length - 1; index >= 0; index -= 1) {
     board[index].parentNode.removeChild(board[index]);
@@ -103,23 +102,28 @@ function resetBoard() {
 }
 
 function setBoard(size) {
-  let board = document.querySelectorAll('#pixel-board tr')
-  if(board.length > 0) {
+  const board = document.querySelectorAll('#pixel-board tr');
+  if (board.length > 0) {
     resetBoard();
   }
   setLines(size);
 }
 
-function getSize(){
+function getSize() {
   let boardSize = document.getElementById('board-size');
-  return parseInt(boardSize.value);
+  if (boardSize.value === '') {
+    alert('Board inválido!');
+    return;
+  }
+  boardSize = Number(boardSize.value);
+  return boardSize;
 }
 
 function reSize() {
-  setBoard(getSize);
+  setBoard(getSize());
 }
 
-function setSize(){
+function setSize() {
   const button = document.getElementById('generate-board');
   button.addEventListener('click', reSize);
 }
