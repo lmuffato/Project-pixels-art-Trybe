@@ -47,7 +47,7 @@ for (let color = 0; color < colorsInPalette.length; color += 1) {
 function clearPixels() {
   // Pinta todos os pixels de branco
   const allPixels = document.querySelectorAll('.pixel');
-  for (let pixel = 1; pixel <= allPixels.length; pixel += 1) {
+  for (let pixel = 0; pixel < allPixels.length; pixel += 1) {
     allPixels[pixel].style.backgroundColor = 'white';
   }
 }
