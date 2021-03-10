@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 
-.pixel-board {
+#pixel-board {
     height: 232px;
     width: 232px;
     color: white;
