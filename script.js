@@ -81,7 +81,7 @@ function generateBoardPixel() {
 
   generateBoard.addEventListener('click', () => {
     const board = Number(boardSize.value);
-    if (board <= 0 || board > 50 || board < 5) {
+    if (board <= 0 || board === '') {
       window.alert('Board inválido!');
     } else {
       erasePixelBoard();
