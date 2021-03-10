@@ -46,7 +46,6 @@ const toggleClassEvent = (elementNode, className) => {
 
 const randomColor = () => Math.round(Math.random() * 255);
 
-
 const generateRandomColor = () => `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
 
 const setColorsPalette = () => {
@@ -86,16 +85,18 @@ const configureEventsListeners = () => {
   addEvListenerNElements('.pixel', 'click', changeColorPixel);
 };
 
-const createPixelBoard = () => {
+function createPixelBoard() {
   let boardSize = document.querySelector('#board-size');
   boardSize = boardSize.value;
-  boardSize = checkBoardSizeLimite(boardSize, 5, 50);
-  const pixelBoard = document.querySelector('#pixel-board');
 
   if (boardSize === '') {
     alert('Board inválido!');
     return;
   }
+  
+  boardSize = checkBoardSizeLimite(boardSize, 5, 50);
+  const pixelBoard = document.querySelector('#pixel-board');
+
   resetBoard();
   for (let index = 0; index < boardSize; index += 1) {
     const line = document.createElement('div');

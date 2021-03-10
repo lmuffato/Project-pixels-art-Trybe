@@ -47,3 +47,15 @@ body {
 .selected {
   border-radius: 15px;
 }
+
+#board-size {
+  width: 120px;
+}
+
+#board-size:invalid {
+  border: 1px solid red;
+}
+
+#board-size:valid {
+  border: 1px solid green;
+}
