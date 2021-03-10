@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#title {
+  margin-left: 50px;
+}
+
+#color-palette {
+  list-style: none;
+  display: flex;
+  margin-left: 10px;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.background-blue {
+  background-color: blue;
+}
+
+.background-red {
+  background-color: red;
+}
+
+.background-black {
+  background-color: black;
+}
+
+.background-yellow {
+  background-color: yellow;
+}
