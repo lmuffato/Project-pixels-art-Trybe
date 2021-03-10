@@ -6,6 +6,8 @@ const choosenColor = document.getElementsByClassName('selected')
 const pixelChoosen = document.getElementsByClassName('pixel')
 const clearBoard = document.getElementById('clear-board')
 const createBoard = document.getElementById('generate-board')
+const size = document.getElementById('board-size')
+
 
 
 
@@ -31,33 +33,46 @@ function blockColor() {
 
 blockColor();
 
-
-function pixelBoard() {
-    let size = document.getElementById('board-size')
-    let totalSize = size.value
-    if (totalSize < 5){
-      totalSize = 5;
-    } else if (totalSize > 50){
-      totalSize = 50;
-    }
-    
-  for (let indexLine = 0; indexLine <= totalSize - 1; indexLine += 1) {
-    const pixelLine = document.createElement('div');
+function pixelBoard(){
+for (let indexLine = 0; indexLine <= 4;  indexLine += 1) {
+    let pixelLine = document.createElement('div');
     pixelLine.className = 'lines';
     pixelLines.appendChild(pixelLine);
-
-    for (let index = 0; index <= totalSize - 1; index += 1) {
-      const pixel = document.createElement('div');
+    for (let index = 0; index <= 4; index += 1) {
+      let pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixelSpaces[indexLine].appendChild(pixel);
     }
   }
 }
 
-createBoard.addEventListener('click',pixelBoard)
+pixelBoard()
+
+function newpixelBoard() {
+  let totalSize = size.value
+  if (totalSize == ''){
+    alert('Board inválido!')
+  } else if (totalSize < 5){
+      totalSize = 5;
+  } else if (totalSize > 50){
+      totalSize = 50;
+    }
+  for (let indexLine = 0; indexLine <= totalSize - 1; indexLine += 1) {
+    let pixelLine = document.createElement('div');
+    pixelLine.className = 'lines';
+    pixelLines.appendChild(pixelLine);
+    for (let index = 0; index <= totalSize - 1; index += 1) {
+      let pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixelSpaces[indexLine].appendChild(pixel);
+    }
+  }
+}
+
+createBoard.addEventListener('click',newpixelBoard)
 
 function selectPixel(colorChoose) {
-  const colorClass = colorChoose.target.className;
+  let colorClass = colorChoose.target.className;
   if ( colorClass.indexOf('selected') > 0 && colorClass.indexOf('color') > 0 ) {
     colorChoose.className = "color selected";
   } else {
