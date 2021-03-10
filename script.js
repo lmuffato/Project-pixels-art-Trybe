@@ -51,3 +51,17 @@ for (let i = 0; i < colorList.length; i += 1) {
     colorList[i].className = 'color selected';
   });
 }
+
+let colorSelected = document.getElementsByClassName('color selected');
+
+const pixels = document.querySelectorAll('.pixel');
+
+function setColorPixel() {
+  pixels.forEach((pixel, index) => {
+    pixel.addEventListener('click', () => {
+      pixels[index].style.backgroundColor = colorSelected[0].style.backgroundColor;
+    });
+  });
+}
+
+setColorPixel();
