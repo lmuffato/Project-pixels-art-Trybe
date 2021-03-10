@@ -13,17 +13,24 @@ function SelectingColor(){
   for (index = 0; index<palette.length; index += 1){
     palette[index].addEventListener('click', function(){
     palette[index].classList.add = 'selected';
-    selectedColor.className = 'color';
     });
+    if(palette[index] == document.querySelector('.selected')){
+      selectedColor.classList.remove = 'selected';
+      selectedColor.className = 'color';
+    }
   }
-  let selected = document.getElementsByClassName('selected');
+  let selected = document.querySelector('selected');
   return selected;
 }
 
 
 function PaintingSquares() {
-  let paint = Element.querySelector('.pixel');
-  paint.style.backgroundColor = 'rgb(0, 0, 0)';
+  let paint = Document.querySelectorAll('.pixel');
+  for (index = 0; index<palette.length; index += 1){
+    paint[index].addEventListener('click', function(){
+
+    })
+}
 }
 
 const square = document.getElementById('pixel-board');
