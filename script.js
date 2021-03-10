@@ -51,7 +51,7 @@ box4.addEventListener('click', function () {
 });
 
 const button = document.getElementById('clear-board');
-const pixels = document.querySelectorAll('.pixel');
+const pixels = document.getElementsByClassName('pixel');
 button.addEventListener('click', () => {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
