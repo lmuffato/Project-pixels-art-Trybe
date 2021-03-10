@@ -36,5 +36,7 @@ function selectClass(color) {
   const selectedElement = document.getElementById(color);
   return selectedElement.classList.add('selected');
 }
+
+// colocando o black como cor selecionada no window load
 window.onload = selectClass('black');
-console.log(document.getElementById('black').classList)
+console.log(document.getElementById('black').classList);
