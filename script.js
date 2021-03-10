@@ -46,6 +46,22 @@ function changeSelectedClass() {
   });
 }
 
+function paintSquares() {
+  let getColorToPaint =  document.getElementsByClassName('selected')[0];
+  let squareToPaint = document.querySelectorAll('.pixel');
+  for (let index = 0; index < squareToPaint.length; index += 1) {
+    squareToPaint[index].addEventListener('click', clickEvent);
+  }
+
+}
+
+
+function clickEvent(e) {
+  var value = e.target;
+  value.style.backgroundColor = 'black'
+}
+
+
 function clearPixels() {
   const getBtn = document.querySelector('#clear-board');
   const getAllSquares = document.querySelectorAll('.pixel');
@@ -59,4 +75,5 @@ function clearPixels() {
 
 makeTable(5);
 changeSelectedClass();
+paintSquares()
 clearPixels();
