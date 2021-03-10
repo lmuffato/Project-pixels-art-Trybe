@@ -20,7 +20,7 @@
     return selecionado;
  }*/
 
- function selecionaCor (){
+function selecionaCor (){
 
     let SelecionadoAntes = document.querySelector('.selected');
     let paletaCor = document.querySelectorAll('.color');
@@ -29,15 +29,15 @@
         paletaCor[index].addEventListener('click', function(event){
             //paletaCor[index] = event.target;?
             let paletaCorSelecionada = event.target; // como o André Jaques me explicou, aqui estou dizendo que o alvo é o alvo do evento em questão.
-            SelecionadoAntes.classList.remove = 'selected';
-            paletaCorSelecionada.classList.add = 'selected';
+            SelecionadoAntes.classList.remove('selected');
+            paletaCorSelecionada.classList.add('selected');
         });
     }
  }
 
- selecionaCor ()
+selecionaCor ()
 
- function colocaCor (){
+function colocaCor (){
 
     let pixelArray = document.querySelectorAll('.pixel');
 
@@ -66,4 +66,4 @@ function resetaCor (){
     });
 }
 
- resetaCor ()
+resetaCor ()
