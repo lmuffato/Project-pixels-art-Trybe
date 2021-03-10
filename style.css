@@ -1,5 +1,27 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #2a3e75;
+}
+
+body , button {
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+button {
+  background-color: #2d64fa;
+  color: white;
+  border: 3px solid #2c55c9;
+  padding: 5px 15px;
+}
+
+h1 {
+  color: white;
+}
+
 #color-palette {
   display: table;
+  margin: 0 auto;
   border-spacing: 10px;
 }
 
@@ -10,7 +32,13 @@
   border: 1px solid black;
 }
 
+#board-size-area {
+  display: inline-block;
+  margin: 15px 0;
+}
+
 #pixel-board {
+  margin: 0 auto;
   display: table;
   background-color: black;
   border: 1px solid black;
