@@ -23,7 +23,8 @@ document.querySelector('#color-palette').addEventListener('click', (selected) =>
 
 document.querySelector('#pixel-board').addEventListener('click', (paint) => {
   const color = document.querySelector('.selected').style.backgroundColor;
-  paint.target.style.backgroundColor = color;
+  const targeted = paint.target;
+  targeted.style.backgroundColor = color;
 });
 
 document.querySelector('#clear-board').addEventListener('click', () => {
