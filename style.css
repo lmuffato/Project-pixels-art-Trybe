@@ -114,6 +114,30 @@ p , span , header , main , footer , section , aside , div {
   font-size: 1rem;
 }
 
+.btn {
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-title);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--prussian-blue-color);
+  color: var(--honeydew-color);
+}
+
+.btn-primary:hover {
+  background-color: hsl(215, 40%, 33%);
+  transition-duration: 1s;
+}
+
+.btn-primary:active {
+  background-color: hsl(215, 30%, 43%);
+  transition-duration: 1s;
+}
+
 header {
   width: 100%;
   background-color: var(--prussian-blue-color);
@@ -190,6 +214,12 @@ main #color-palette .color:nth-child( 3 ) {
 
 main #color-palette .color:nth-child( 4 ) {
   background-color: var(--prussian-blue-color);
+}
+
+main .properties {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 main #pixel-board {

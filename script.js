@@ -1,6 +1,7 @@
 const colorActive = document.getElementById('color-active');
 const colors = document.getElementsByClassName('color');
 const pixels = document.getElementsByClassName('pixel');
+const buttonClearBoard = document.getElementById('clear-board');
 let color = 'black';
 
 function removeSelected() {
@@ -13,6 +14,14 @@ function removeAnimationPixel() {
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.animation = '';
   }
+}
+
+function addAnimationPixel() {
+  removeAnimationPixel();
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.animation = 'palette-color 1s';
+  }
+  setTimeout(removeAnimationPixel, 1000);
 }
 
 function selectedColor(event) {
@@ -34,6 +43,7 @@ function fillPixel(event) {
   const pixelElement = event.currentTarget;
   pixelElement.style.backgroundColor = color;
   pixelElement.style.animation = 'palette-color 1s';
+  setTimeout(removeAnimationPixel, 1000);
 }
 
 function addListenerPixel() {
@@ -42,7 +52,15 @@ function addListenerPixel() {
   }
 }
 
+function clearBoard() {
+  addAnimationPixel();
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
 window.onload = function init() {
   addListenerPaletteColors();
   addListenerPixel();
+  buttonClearBoard.addEventListener('click', clearBoard);
 };
