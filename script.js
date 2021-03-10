@@ -12,3 +12,8 @@ function addClickColor() {
     }
     this.classList.add('selected');
 }
+
+window.onload = function () {
+    addClickColor();
+}
+    
