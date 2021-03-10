@@ -57,7 +57,7 @@ function preenche() {
 }
 
 function clear() {
-  const button = document.querySelector('#clear');
+  const button = document.querySelector('#clear-board');
   const pixels = document.querySelectorAll('.pixel');
   button.addEventListener('click', function () {
     for (let i = 0; i < pixels.length; i += 1) {
