@@ -6,6 +6,7 @@ function renameSelected() {
 }
 function greenColor() {
   const greenColorElement = document.getElementById('verde');
+  greenColorElement.style.backgroundColor = 'green';
   greenColorElement.addEventListener('click', () => {
     renameSelected();
     greenColorElement.className += ' selected';
@@ -13,6 +14,7 @@ function greenColor() {
 }
 function blueColor() {
   const blueColorElement = document.getElementById('azul');
+  blueColorElement.style.backgroundColor = 'blue';
   blueColorElement.addEventListener('click', () => {
     renameSelected();
     blueColorElement.className += ' selected';
@@ -20,6 +22,7 @@ function blueColor() {
 }
 function yellowColor() {
   const yellowColorElement = document.getElementById('amarelo');
+  yellowColorElement.style.backgroundColor = 'yellow';
   yellowColorElement.addEventListener('click', () => {
     renameSelected();
     yellowColorElement.className += ' selected';
@@ -27,18 +30,29 @@ function yellowColor() {
 }
 function blackColor() {
   const blackColorElement = document.getElementById('preto');
+  blackColorElement.style.backgroundColor = 'black';
   blackColorElement.addEventListener('click', () => {
     renameSelected();
     blackColorElement.className += ' selected';
   });
 }
-function paintBoard() {
-  const selectedElement = document.querySelector('.selected');
-  const board = document.querySelector('#pixel-board');
-  board.addEventListener('click', (event) => {
-    const paint = event.target.style.backGroundColor;
-    paint.style.backGroundColor = selectedElement.style.backGroundColor;
+function purpleColor() {
+  const purpleColorElement = document.getElementById('roxo');
+  purpleColorElement.style.backgroundColor = 'purple';
+  purpleColorElement.addEventListener('click', () => {
+    renameSelected();
+    purpleColorElement.className += ' selected';
   });
+}
+function paintBoard() {
+  
+  const board = document.querySelectorAll('.pixel');
+  for (let index = 0; index < board.length; index += 1) {
+    board[index].addEventListener('click', () => {
+      const selectedElement = document.querySelector('.selected');
+      board[index].style.backgroundColor = selectedElement.style.backgroundColor;
+    });
+  }
 }
 window.onload = function onload() {
   if (document.getElementsByClassName('selected').length === 0) {
@@ -49,4 +63,5 @@ window.onload = function onload() {
   yellowColor();
   blackColor();
   paintBoard();
+  purpleColor();
 };

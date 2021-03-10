@@ -3,28 +3,10 @@
     border-width: 1px;
     width: 40px;
     height: 40px;
-    background-color: black;
     display: table-cell;
     
 
 }
-#vermelho{
-    background-color: black;
-    
-}
-#verde{
-    background-color: green;
-}
-#azul{
-    background-color: blue;
-}
-#amarelo{
-    background-color: yellow;
-}
-#roxo{
-    background-color: purple;
-}
-
 #color-palette{
     display: table;
 }
