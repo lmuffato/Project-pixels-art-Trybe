@@ -34,7 +34,7 @@ function changeSelected(e) {
 
 // Req. 07
 function changeColor(e) {
-  colorsObj.selected = e.target.style.backgroundColor;
+  colorsObj.selected = e.target.getAttribute('color');
   resetSelected();
   changeSelected(e.target);
 }
@@ -44,11 +44,13 @@ function addColorsPalette(colors) {
   const colorPalette = document.getElementById('color-palette');
 
   Object.keys(colors).forEach((key) => {
-    console.log(key);
     if (key !== 'selected') {
       const newColor = document.createElement('div');
       newColor.className = 'color';
-      newColor.style.backgroundColor = colors[key];
+      newColor.setAttribute('color', colors[key]);
+      newColor.style.background = `
+      radial-gradient(circle at 20px 15px, ${colors[key]}, #000)
+      `;
       newColor.addEventListener('click', changeColor);
       colorPalette.appendChild(newColor);
     }
