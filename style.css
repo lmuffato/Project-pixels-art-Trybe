@@ -1,0 +1,16 @@
+#color-palette {
+  display: table;
+  height: 150px;
+  border-spacing: 5px;
+  padding: 10px;
+}
+
+#color-palette section {
+  display: table-row;
+}
+
+#color-palette .color {
+  display: table-cell;
+  border: 1px solid black;
+  width: 150px;
+}
