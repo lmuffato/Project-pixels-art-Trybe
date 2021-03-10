@@ -12,7 +12,7 @@ function setPaletteColors() {
     const colorDiv = document.createElement('div');
     colorDiv.className = 'color';
     if (index === selectedColor) {
-      colorDiv.className += ' selected';
+      colorDiv.classList.add('selected');
     }
     colorPalette.appendChild(colorDiv);
 
@@ -37,7 +37,7 @@ function changeSelection(e) {
     colorDivs[index].className = 'color';
   }
 
-  colorDivs[selectedColor].className += ' selected';
+  colorDivs[selectedColor].classList.add('selected');
 }
 
 function colorPixel(e) {
