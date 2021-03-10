@@ -17,13 +17,11 @@ function selecElementPallete(event) {
 function changeColor(event) {
   const elementTarget = event.target;
   if (elementTarget.id !== 'pixel-board') {
-    const color = document.querySelector('.selected').dataset.color;
+    const colorElementSelected = document.querySelector('.selected').dataset;
+    const { color } = colorElementSelected;
     elementTarget.style.backgroundColor = color;
-    console.log(elementTarget);
   }
 }
 
 colorPalette.addEventListener('click', selecElementPallete);
 pixelBoard.addEventListener('click', changeColor);
-
-
