@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 h1 {
   margin: 2px;
   margin-bottom: 5px;
@@ -31,7 +35,7 @@ h1 {
 
 #pixel-board {
   border-collapse: collapse;
-
+  margin-left: 27.5%;
 }
 
 .pixel {
@@ -44,4 +48,11 @@ h1 {
 
 td {
   border: black 1px solid;
+}
+
+#clear-board {
+  margin: 10px;
+  border-radius: 50px;
+  border-color: brown;
+  background-color: white;
 }

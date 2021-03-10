@@ -14,39 +14,49 @@ function makeTable(numeroMatriz) {
   }
 }
 
-function changeSelectedClass(){
-  let getColor = document.getElementsByClassName('selected')[0]
-  let blackClick = document.getElementsByClassName('color')[0]
-  let purpleClick = document.getElementsByClassName('color')[1]
-  let greyClick = document.getElementsByClassName('color')[2]
-  let silverClick = document.getElementsByClassName('color')[3]
+function changeSelectedClass() {
+  let getColor = document.getElementsByClassName('selected')[0];
+  const blackClick = document.getElementsByClassName('color')[0];
+  const purpleClick = document.getElementsByClassName('color')[1];
+  const greyClick = document.getElementsByClassName('color')[2];
+  const silverClick = document.getElementsByClassName('color')[3];
 
-  blackClick.addEventListener('click', function () {
-    getColor = document.getElementsByClassName('selected')[0]
-    getColor.classList.remove('selected')
-    blackClick.classList.add('selected')
-  })
+  blackClick.addEventListener('click', () => {
+    getColor = document.getElementsByClassName('selected')[0];
+    getColor.classList.remove('selected');
+    blackClick.classList.add('selected');
+  });
 
-  purpleClick.addEventListener('click', function () {
-    getColor = document.getElementsByClassName('selected')[0]
-    getColor.classList.remove('selected')
-    purpleClick.classList.add('selected')
-  })
+  purpleClick.addEventListener('click', () => {
+    getColor = document.getElementsByClassName('selected')[0];
+    getColor.classList.remove('selected');
+    purpleClick.classList.add('selected');
+  });
 
-  greyClick.addEventListener('click', function () {
-    getColor = document.getElementsByClassName('selected')[0]
-    getColor.classList.remove('selected')
-    greyClick.classList.add('selected')
-  })
+  greyClick.addEventListener('click', () => {
+    getColor = document.getElementsByClassName('selected')[0];
+    getColor.classList.remove('selected');
+    greyClick.classList.add('selected');
+  });
 
-  silverClick.addEventListener('click', function () {
-    getColor = document.getElementsByClassName('selected')[0]
-    getColor.classList.remove('selected')
-    silverClick.classList.add('selected')
-  })
+  silverClick.addEventListener('click', () => {
+    getColor = document.getElementsByClassName('selected')[0];
+    getColor.classList.remove('selected');
+    silverClick.classList.add('selected');
+  });
 }
 
+function clearPixels() {
+  const getBtn = document.querySelector('#clear-board');
+  const getAllSquares = document.querySelectorAll('.pixel');
 
+  getBtn.addEventListener('click', () => {
+    for (let index = 0; index < getAllSquares.length; index += 1) {
+      getAllSquares[index].style.backgroundColor = 'white';
+    }
+  });
+}
 
 makeTable(5);
-changeSelectedClass()
+changeSelectedClass();
+clearPixels();
