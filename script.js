@@ -1,20 +1,35 @@
 let selectColorPalette = document.getElementById('color-palette');
 let selectPixelBoard = document.getElementById('pixel-board');
 let colors = ['black', 'red', 'blue', 'green'];
+let randomColor = [];
 let tamPixel = 5;
-let backUpTam = null;
 window.onload = function () {
   let setSelected = selectColorPalette.firstElementChild;
   setSelected.className = 'color selected';
 }
-
+randomColors();
 createPalette(); // cria os 4 quadrados(cores) e os adiciona como filho da div de id = 'color-palette'
-
 createBoardPixel(tamPixel); //cria os nxn quadrados.
 captureColor(); // seta a cor ao clicar no quadrado escolhido.
 paintPixel(); // pinta os pixeis clicados
 clearPixels(); // limpa pixels ao acionar o botão correspondente.
-colectAndAltTam();
+colectAndAltTam(); //captura novo tamanho e refaz os pixels.
+
+function randomColors() {
+  for (let i = 1; i < 4; i += 1) {
+    let color = getRandomColor();
+    randomColor.push(color);
+  }
+}
+
+function getRandomColor() { //esta função foi retirada de: https://stackoverflow.com/questions/1484506/random-color-generator
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (let j = 0; j < 6; j += 1) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 function colectAndAltTam() {
   let captureButtonVQV = document.getElementById('generate-board');
@@ -100,7 +115,11 @@ function createPalette() { // cria os 4 quadrados e os adiciona como filho da di
   for (let i = 0; i < 4; i += 1) {
     let newColor = document.createElement('div');
     newColor.className = 'color';
-    newColor.style.backgroundColor = colors[i];
+    if (i === 0) {
+      newColor.style.backgroundColor = colors[i];
+    } else {
+      newColor.style.backgroundColor = randomColor[i - 1];
+    }
     selectColorPalette.appendChild(newColor);
   }
 };
