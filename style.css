@@ -69,6 +69,7 @@
 
 form {
   margin-top: 15px;
+  margin-left: 50px;
 }
 
 input {
@@ -88,8 +89,11 @@ input {
   height: 40px;
   display: inline-block;
   box-sizing: content-box;
+  margin-left: 3px;
+  
 }
 
 #pixel-board {
-  width: 210px;
+  width: 225px;
+  margin-left: 50px;
 }
