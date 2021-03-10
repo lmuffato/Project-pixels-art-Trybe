@@ -33,10 +33,10 @@ table {
 }
 
 .pixel {
-  border: black solid 1px;
   background-color: white;
-  width: 37px;
-  height: 37px;
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
 }
 
 footer {
