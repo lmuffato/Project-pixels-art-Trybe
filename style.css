@@ -23,7 +23,8 @@
   margin-top: 50px;
 }
 
-#color1 {
+/*cores adicionadas diretamente no html para rodar o código para pintar os pixels 
+/*#color1 {
   background-color: black;
 }
 
@@ -37,7 +38,7 @@
 
 #color4 {
   background-color: darkcyan;
-}
+}*/
 
 #pixel-board {
   display: table;

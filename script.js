@@ -14,11 +14,11 @@ colorSelect();
 
 function changePixelsColor() {
   let pixels = document.querySelectorAll('.pixel');
-  for (index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', function(event) {
-    let selectedPixel = event.target;
-    let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
-    selectedPixel.style.backgroundColor = selectedColor;
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', function (event) {
+      let selectedPixel = event.target;
+      let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+      selectedPixel.style.backgroundColor = selectedColor;
     });  
   }
 }
