@@ -1,5 +1,5 @@
 window.onload = function() {
     let chosenColorElement = document.getElementById('preto');
     let chosenColor = chosenColorElement.style.backgroundColor;
-    chosenColorElement.classlist.add = 'selected';
+    chosenColorElement.className += 'selected';
 }
