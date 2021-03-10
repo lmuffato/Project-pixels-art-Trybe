@@ -13,7 +13,7 @@
     </header>
     
     <section id='color-palette'>
-        <div class='color'></div>
+        <div class='color selected'></div>
         <div class='separate'></div>
         <div class='color' id='yellowColor'></div>
         <div class='separate'></div>
@@ -22,10 +22,14 @@
         <div class='color' id='blueColor'></div>
     </section>
     <div>
-        <button id='clear-board' type='button' > Limpar </button>
+        <button id='clear-board' type='button'> Limpar </button>
     </div>
+    <form>
+        <label>Informe o número de quadrados por linha</label>
+        <input type='text' id="board-size">
+        <button id='generate-board' type='button'>VQV</button>
+    </form>
     <section id='pixel-board'>
-        
     </section>
     <script src='script.js'></script>
 </body>
