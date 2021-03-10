@@ -9,10 +9,13 @@ function setColors() {
   const getDivs = document.getElementsByClassName('color');
   for (let index = 0; index < getDivs.length; index += 1) {
     getDivs[index].style.backgroundColor = createColor();
+    if (getDivs[index] === getDivs[0]) {
+      getDivs[index].style.backgroundColor = 'black';
+    }
   }
 }
 
-/* function getDivs() {
+/* function getDivs() {s
   const getColor = document.getElementsByClassName('color');
   for (let index = 0; index < getColor.length; index += 1) {
     getColor[0].style.backgroudColor = 'black';
