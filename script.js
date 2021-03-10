@@ -77,8 +77,8 @@ criaQuadro(5);
 // Funções para Botao Limpar
 
 function limpaTudo() {
-  let doc = document.getElementsByClassName('pixel');
-  for (let index = 0; index < doc; index += 1) {
+  const doc = document.getElementsByClassName('pixel');
+  for (let index = 0; index < doc.length; index += 1) {
     doc[index].style.backgroundColor = 'white';
   }
 }
