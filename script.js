@@ -1,17 +1,14 @@
-window.onload = function firstColor(){ // REQUISITO 6 - PARA QUE A PAGINA SEJA CARREGADA NA COR PRETA//
-    let colorPage = document.getElementById('firstColor');
-    colorPage.className = 'selected';
-}
-colorPage();    
+// REQUISITO 7 //
 
-function colorSelected () { // REQUISITO 7 //
-    for (let index = 0; index < colorSelected.lengh; index += 1) {
-        selected[index].className = 'color';
-    }    
-    let selected = document.getElementsByClassName('color selected');
-    let color = document.getElementsByClassName('color');
-    for (let index = 0; index < color.length; index += 1) {
-        color[index].addEventListener('click');    
+function addClickColor() {
+    let colorClass = document.querySelectorAll('.color'); // colorClass -> objeto //
+    for (let index = 0; index < colorClass.length; index += 1) {
+        colorClass[index].addEventListener('click', addClickColor); // adicionando o evento click //
     }
+}    
+function addClickColor() {
+    for (let index2 = 0; index2 < colorClass.length; index += 1) {
+        colorClass[index2].classList.remove('selected');
     }
+    this.classList.add('selected');
 }
