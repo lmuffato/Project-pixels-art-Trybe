@@ -59,21 +59,20 @@ function createPixel() {
 }
 
 function fillBoard(size) {
-  const board = document.getElementById('pixel-board');
+  const board = document.querySelector('#pixel-board');
   const boardArea = size ** 2;
 
   for (let rows = 1; rows <= boardArea; rows += 1) {
     board.appendChild(createPixel());
   }
-
   board.style.gridTemplateColumns = `repeat(${size}, auto)`;
 }
 
 function generateBoard(size) {
   const board = document.createElement('div');
   board.id = 'pixel-board';
-  fillBoard(size);
   document.body.appendChild(board);
+  fillBoard(size);
 }
 
 function removeBoard() {
@@ -83,7 +82,8 @@ function removeBoard() {
   }
 }
 
-function newBoard() {
+function newBoard(Event) {
+  Event.preventDefault();
   const size = document.getElementById('board-size').value;
   if (size >= 5 && size <= 50) {
     removeBoard();
@@ -91,9 +91,10 @@ function newBoard() {
   } else {
     alert('Board inválido!');
   }
+  console.log('criado');
 }
 
-document.getElementById('generate-board').addEventListener('click', newBoard);
+document.getElementById('board-form').addEventListener('submit', newBoard);
 
 function clearBoard() {
   const pixels = document.getElementsByClassName('pixel');
