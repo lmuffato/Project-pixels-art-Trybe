@@ -1,6 +1,6 @@
 header {
   background-color: rgb(43, 128, 153);
-  height: 100px;
+  height: 95px;
   position: absolute;
   top: 0;
   left: 0;
@@ -34,16 +34,19 @@ header {
   padding-top: 10px;
 }
 
-#faixa {
-  height: 15px;
-  background-color: rgb(165, 165, 165);
-  margin-top: -5px;
-}
-
 #color-palette {
   border: 2px solid black;
   background-color: rgb(168, 224, 202);
-  margin-top: 125px;
+  margin-top: 105px;
+  margin-left: 5px;
+  padding-top: 10px;
+  width: 135px;
+}
+
+#color-palette-2 {
+  border: 2px solid black;
+  background-color: rgb(168, 224, 202);
+  margin-top: 8px;
   margin-left: 5px;
   padding-top: 10px;
   width: 135px;
@@ -57,7 +60,7 @@ header {
 #cor-preto {
   width: 50px;
   height: 50px;
-  background-color:black;
+  background-color: black;
   border: 4px solid black;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -66,8 +69,26 @@ header {
 #cor-cinza {
   width: 50px;
   height: 50px;
-  background-color:gray;
+  background-color: gray;
   border: 4px solid gray;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-gelo {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(238, 238, 240);
+  border: 4px solid rgb(238, 238, 240);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-cinza-escuro {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(93, 93, 93);
+  border: 4px solid rgb(93, 93, 93);
   box-sizing: border-box;
   margin-bottom: 10px;
 }
@@ -75,7 +96,7 @@ header {
 #cor-vermelho {
   width: 50px;
   height: 50px;
-  background-color:red;
+  background-color: red;
   border: 4px solid red;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -84,7 +105,7 @@ header {
 #cor-laranja {
   width: 50px;
   height: 50px;
-  background-color:orange;
+  background-color: orange;
   border: 4px solid orange;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -99,11 +120,11 @@ header {
   margin-bottom: 10px;
 }
 
-#cor-violeta {
+#cor-marrom {
   width: 50px;
   height: 50px;
-  background-color: rgb(178, 132, 188);
-  border: 4px solid  rgb(178, 132, 188);
+  background-color: rgb(102, 66, 40);
+  border: 4px solid rgb(102, 66, 40);
   box-sizing: border-box;
   margin-bottom: 10px;
 }
@@ -138,7 +159,7 @@ header {
 #cor-azul-escuro {
   width: 50px;
   height: 50px;
-  background-color:blue;
+  background-color: blue;
   border: 4px solid blue;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -147,7 +168,7 @@ header {
 #cor-verde-claro {
   width: 50px;
   height: 50px;
-  background-color:lightseagreen;
+  background-color: lightseagreen;
   border: 4px solid lightseagreen;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -156,26 +177,8 @@ header {
 #cor-verde-escuro {
   width: 50px;
   height: 50px;
-  background-color:green;
+  background-color: green;
   border: 4px solid green;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-#cor-marrom {
-  width: 50px;
-  height: 50px;
-  background-color:rgb(102, 66, 40);
-  border: 4px solid rgb(102, 66, 40);
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-#cor-gelo {
-  width: 50px;
-  height: 50px;
-  background-color:rgb(238, 238, 240);
-  border: 4px solid rgb(238, 238, 240);
   box-sizing: border-box;
   margin-bottom: 10px;
 }
