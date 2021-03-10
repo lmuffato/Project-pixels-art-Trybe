@@ -59,7 +59,7 @@ function generateNewBoard() {
   if (boardSizeValue > 50) boardSizeValue = 50;
 
   if (boardSizeValue === 0) {
-    alert('Board inválido!');
+    window.alert('Board inválido!');
   } else {
     boardPixels.forEach((px) => px.remove());
     createNewBoard(boardSizeValue);
