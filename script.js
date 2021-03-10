@@ -46,10 +46,10 @@ function eventChangingColorsPalette() {
 eventChangingColorsPalette();
 
 // Window.getComputedStyle = retorna um objeto contendo os valores de todas as propriedades Css de um elemento
-function PaintingPixel(event){
-  getClassSelected = document.getElementsByClassName('selected')[0];
+function PaintingPixel(event) {
+  let getClassSelected = document.getElementsByClassName('selected') [0];
   const eventTarget = event.target;
-  setColorPixel = window.getComputedStyle(getClassSelected).getPropertyValue('background-color');
+  let setColorPixel = window.getComputedStyle(getClassSelected).getPropertyValue('background-color');
   eventTarget.style.backgroundColor = setColorPixel;
 }
 
@@ -57,6 +57,6 @@ function eventpaintingPixel() {
   let getPixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < getPixel.length; index += 1) {
     getPixel[index].addEventListener('click', PaintingPixel);
-    }
+  }
 }
 eventpaintingPixel();
