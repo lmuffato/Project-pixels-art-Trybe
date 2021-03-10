@@ -3,7 +3,7 @@ const tablePixels = document.querySelector('#pixel-board');
 const eSelected = document.getElementsByClassName('color');
 
 window.onload = () => {
-  eSelected[0].className = 'color selected';
+  eSelected[0].className += ' selected';
 };
 
 function generateColors() {
@@ -52,8 +52,7 @@ for (let i = 0; i < colorList.length; i += 1) {
   });
 }
 
-let colorSelected = document.getElementsByClassName('color selected');
-
+const colorSelected = document.getElementsByClassName('color selected');
 const pixels = document.querySelectorAll('.pixel');
 
 function setColorPixel() {
@@ -65,3 +64,14 @@ function setColorPixel() {
 }
 
 setColorPixel();
+
+function clearBoard() {
+  const buttonClear = document.querySelector('#clear-board');
+  buttonClear.addEventListener('click', () => {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  });
+}
+
+clearBoard();
