@@ -79,7 +79,13 @@ function deletePixelBoard() {
 
 function regeneratePixelBoard() {
   // Cria o pixel board novamente com input do usuário
-  const userInput = document.getElementById('board-size').value;
+  let userInput = document.getElementById('board-size').value;
+  if (userInput > 50) {
+    userInput = 50;
+  } else if (userInput < 5) {
+    userInput = 5;
+  }
+
   if (userInput === '') {
     alert('Board Inválido!');
   } else {
