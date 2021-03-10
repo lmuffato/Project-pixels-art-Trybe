@@ -6,6 +6,10 @@ function colorPalette() {
     const elementColor = document.createElement('li');
 
     elementColor.classList.add('color');
+    if (index === 0) {
+      elementColor.classList.add('selected');
+    }
+
     elementColor.style.backgroundColor = `${colors[index]}`;
     colorsFather.appendChild(elementColor);
   }
