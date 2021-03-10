@@ -18,15 +18,9 @@
   list-style: none;
 }
 
-.color_1 {
-  background-color: black;
-  color: black;
-}
-
 #pixel-board {
   max-width: fit-content;
   display: grid;
-  /* grid-template-columns: repeat(5,auto); */
   margin-top: 20px;
 }
 

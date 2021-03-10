@@ -85,21 +85,27 @@ function removeBoard() {
 function newBoard(Event) {
   Event.preventDefault();
   const size = document.getElementById('board-size').value;
-  if (size >= 5 && size <= 50) {
+
+  if (size === '') {
+    alert('Board inválido!');
+  } else if (size < 5) {
+    removeBoard();
+    generateBoard(5);
+  } else if (size > 50) {
+    removeBoard();
+    generateBoard(50);
+  } else {
     removeBoard();
     generateBoard(size);
-  } else {
-    alert('Board inválido!');
   }
-  console.log('criado');
 }
 
 document.getElementById('board-form').addEventListener('submit', newBoard);
 
 function clearBoard() {
   const pixels = document.getElementsByClassName('pixel');
-  for (pixel of pixels) {
-    pixel.style.backgroundColor = 'white';
+  for (let pixel = 0; pixel < pixels.length; pixel += 1) {
+    pixels[pixel].style.backgroundColor = 'white';
   }
 }
 
