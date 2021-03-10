@@ -19,11 +19,6 @@ body {
   margin-bottom: 10px;
 }
 
-.header_btn {
-  font-family: monospace;
-  cursor: pointer;
-}
-
 /* Paleta de cores */
 #color-palette {
   border-collapse: separate;
@@ -58,6 +53,20 @@ body {
 
 .color-green {
   background-color: green;
+}
+
+/* clear-board button */
+.container-btn {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.btnClearBoard {
+  font-family: monospace;
+  cursor: pointer;
 }
 
 /* quadro de pixels */
