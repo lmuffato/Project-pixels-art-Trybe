@@ -1,3 +1,7 @@
+window.onload = function () {
+  createPixelBoard(5)
+}
+
 const colorPalette = document.querySelector('#color-palette');
 function createPalette() {
   for (let index = 0; index < 4; index += 1) {
@@ -16,6 +20,7 @@ function createPalette() {
 } createPalette();
 
 const pixelBoard = document.querySelector('#pixel-board');
+let pixelSize = 0
 function createPixelBoard(size) {
   for (let index = 0; index < size; index += 1) {
     const tableRow = document.createElement('tr');
@@ -30,6 +35,7 @@ function createPixelBoard(size) {
 
 function createBoardDynamic() {
   let boardSize = 0;
+
   boardSize = document.querySelector('#board-size').value;
   if (boardSize === '') {
     alert('Board inválido!');
