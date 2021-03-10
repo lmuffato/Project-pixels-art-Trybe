@@ -133,10 +133,12 @@ function addButton(e) {
 }
 
 function addBtnOrError(e) {
-  if (e.target.value < 5 || e.target.value > 50) {
+  if (e === '') {
+    alert('Board inválido!');
+  } else if (e < 5 || e > 50) {
     addError();
   } else {
-    addButton(e.target.value);
+    addButton(e);
   }
 }
 
@@ -144,8 +146,17 @@ function makeInputGrid() {
   const secBtn = document.getElementById('grid-size');
   const newInput = document.createElement('input');
   newInput.placeholder = 'Tamanho da grid';
-  newInput.addEventListener('change', addBtnOrError);
+  newInput.id = 'board-size';
+  newInput.type = 'number';
+  newInput.min = '0';
+  const newButton = document.createElement('button');
+  newButton.id = 'generate-board';
+  newButton.innerText = 'VQV';
+  newButton.addEventListener('click', () => {
+    addBtnOrError(newInput.value);
+  });
   secBtn.appendChild(newInput);
+  secBtn.appendChild(newButton);
 }
 
 window.onload = () => {

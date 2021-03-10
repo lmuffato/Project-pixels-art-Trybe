@@ -86,7 +86,6 @@ main {
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px 20px 20px;
@@ -95,4 +94,15 @@ main {
 #msg-error {
   color: var(--color-danger);
   margin: 10px;
+}
+
+#board-size {
+  height: 50px;
+  padding: 5px;
+}
+
+#generate-board {
+  max-width: 50px;
+  width: 100%;
+  height: 50px;
 }
