@@ -11,12 +11,12 @@ function setColorPallet() {
   arrayColor[3].style.backgroundColor = `rgb(${randomColor()}, ${randomColor()},${randomColor()})`;
 }
 
-function generatePixelFrame(rows = 5, columns = 5) {
-  const pixelBoard = document.getElementById('pixel-board');
+const pixelBoard = document.getElementById('pixel-board');
 
-  for (let index = 0; index < rows; index += 1) {
+function generatePixelFrame(boardSize = 5) {
+  for (let index = 0; index < boardSize; index += 1) {
     const tableRow = document.createElement('tr');
-    for (let data = 0; data < columns; data += 1) {
+    for (let data = 0; data < boardSize; data += 1) {
       const cell = document.createElement('td');
       cell.className = 'pixel';
       cell.style.backgroundColor = 'white';
@@ -25,6 +25,24 @@ function generatePixelFrame(rows = 5, columns = 5) {
     pixelBoard.appendChild(tableRow);
   }
   pixelBoard.style.border = 'solid black 1px';
+}
+// https://css-tricks.com/snippets/javascript/remove-element/
+// eslint-disable-next-line no-unused-vars
+function generateCustomPixelFrame() {
+  let customSize = document.getElementById('board-size').value;
+  if (customSize < 5) {
+    customSize = 5;
+  }
+  if (customSize > 50) {
+    customSize = 50;
+  }
+  if (!customSize) {
+    return alert('Board inválido!');
+  }
+  while (pixelBoard.firstChild) {
+    pixelBoard.removeChild(pixelBoard.firstChild);
+  }
+  return generatePixelFrame(customSize);
 }
 
 function getColors() {
@@ -36,17 +54,17 @@ function getColors() {
 }
 
 function setColor() {
-  const table = document.getElementById('pixel-board');
-  table.addEventListener('click', (event) => {
+  pixelBoard.addEventListener('click', (event) => {
     const color = document.querySelector('.selected').style.backgroundColor;
+    // eslint-disable-next-line no-param-reassign
     event.target.style.backgroundColor = color;
   });
 }
 
 function clearPixelBoard() {
-  const pixelBoard = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixelBoard.length; index += 1) {
-    pixelBoard[index].style.backgroundColor = 'white';
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
   }
 }
 
