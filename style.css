@@ -11,15 +11,20 @@ th {
 #pixel-board {
   margin-top: 45px;
   border-collapse: collapse;
+  background-color: white;
 }
 
-.pixel {
+td {
   background-color: white;
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
+  border: 1px solid;
+  width: 41px;
+  height: 41px;
 }
 
 #clear-board {
   margin-top: 15px;
+}
+
+.pixel {
+  background-color: white;
 }
