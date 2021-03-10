@@ -1,3 +1,4 @@
+// cria os elementos na forma de div
 const quadroPixels = document.getElementById('pixel-board');
 for (let index = 1; index <= 25; index += 1) {
   const pixel = document.createElement('div');
@@ -5,16 +6,11 @@ for (let index = 1; index <= 25; index += 1) {
   pixel.className = 'pixel';
 }
 
+// adiciona classe selected à cor preta
 document.getElementById('color-palette').firstElementChild.classList.add('selected');
 
+// recupera os pixels e a paleta de cores
 let selectedPixel = document.querySelectorAll('.pixel');
-
-/* let elemento = document.querySelectorAll('.color');
-if (elemento[2].className[1] === 'color') {
-  selectedPixel[2].style.backgroundColor = 'green';
-} */
-
-// requisito 7 e 8
 const element = document.querySelectorAll('.color');
 let currentColor;
 
