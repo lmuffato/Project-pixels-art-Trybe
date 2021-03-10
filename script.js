@@ -1,6 +1,6 @@
 
 // Bloco de declaração de variáveis
-const palette = document.getElementById('color-palette');
+// const palette = document.getElementById('color-palette');
 const colorsOfPalette = document.getElementsByClassName('color');
 const simpleColors = ['#000000', '#800000', '#ff0000', '#999966', '#ffff00 ', '#009900', '#00ff00', '#008080', '#00ffff', '#000080', '#0000ff', '#800080', '#ff00ff'];
 const pixelBord = document.getElementById('pixel-board');
@@ -67,11 +67,11 @@ function sizeIsValid(test) {
     result = false;
   }
   if (test < 5) {
-    alert('O tamanho mínimo do desenho é 5x5 pixels');
+    // alert('O tamanho mínimo do desenho é 5x5 pixels');
     size = 5;
   }
   if (test > 50) {
-    alert('O tamanho máximo do desenho é 50x50 pixels');
+    // alert('O tamanho máximo do desenho é 50x50 pixels');
     size = 50;
   }
   return result;
