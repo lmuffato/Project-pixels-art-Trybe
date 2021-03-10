@@ -6,19 +6,20 @@ body {
 #pixel-board {
   padding-left: 10px;
   margin-top: 20px;
-  margin-left: 88px;
+  margin-left: 38px;
 }
 
 .pixel {
   background-color: white;
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
   border: 1px solid;
   display: inline-block;
 }
 
 #list-palette-color {
   width: 375px;
+  margin-left: 15px;
   padding-bottom: 10px;
 }
 
@@ -38,7 +39,7 @@ body {
 }
 
 #sect-pixel {
-  width: 259px;
+  width: 354px;
   height: 176px;
 }
 
