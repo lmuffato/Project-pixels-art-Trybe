@@ -18,4 +18,14 @@ function generateRandomColors() {
 
 generateRandomColors();
 
+function clearSelect(e) {
+  const evtId = e.target.id;
+  if (evtId !== 'color-palette') {
+    const pastSelected = document.querySelector('.selected');
+    pastSelected.className = 'color';
+    e.target.className = 'color selected';
+  }
+}
 
+const selectColor = document.querySelector('#color-palette');
+selectColor.addEventListener('click', clearSelect);
