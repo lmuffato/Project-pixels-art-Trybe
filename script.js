@@ -17,9 +17,8 @@ function selectBlack() {
   document.getElementsByClassName('color')[1].className = 'color';
   document.getElementsByClassName('color')[2].className = 'color';
   document.getElementsByClassName('color')[3].className = 'color';
-
   qualCor = 'black';
-  console.log('preto selecionado');
+  return 'preto selecionado';
 }
 function selectOrange() {
   document.getElementsByClassName('color')[1].classList.add('selected');
@@ -58,13 +57,6 @@ function colorePaletaSuperior() {
 }
 colorePaletaSuperior();
 
-function estouClicado() {
-  const clicado = document.getElementsByClassName('pixel');
-  for (let index = 0; index < clicado.length; index += 1) {
-    clicado[index].classList.add('selected');
-  }
-}
-
 function colore() {
   const doc = document.getElementsByClassName('pixel');
   doc[0].style.backgroundColor = qualCor;
@@ -76,7 +68,6 @@ function criaQuadro(numberOfFrames) {
     criaDiv.className = 'pixel';
     const pegaDiv = document.getElementById('pixel-board');
     pegaDiv.append(criaDiv);
-    criaDiv.addEventListener('click', estouClicado);
     criaDiv.addEventListener('click', colore);
   }
 }
