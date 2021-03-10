@@ -30,30 +30,17 @@ for (let indexPixel = 0; indexPixel < 25; indexPixel += 1) {
   })
 }
 
+// função que armazena a cor da paleta a ser usada
 function armazenaCor () {
   let corArmazenar = window.getComputedStyle(document.querySelector('.selected'),null).getPropertyValue("background-color");
   return corArmazenar;
 }
 
-  /* if (element[index].className === 'selected') {
-      pixel[2].style.backgroundColor = element[index].style.backgroundColor;
-    }
- // }
-
-
-pixel[x].addEventListener('click', function () {
-
-}
-console.log(element);
-element[2].classList.add('selected');
-element[2].addEventListener('click', selectColor);
-
-
+function clearBoard() {
+  for (let x = 0; x <= 25; x += 1) {
+    selectedPixel[x].style.backgroundColor = 'white';
   }
-
-let corTeste = 'black';
-if (corTeste === element[0].style.backgroundColor) {
-  document.querySelectorAll('.pixel')[1].style.backgroundColor = 'black';
-} else {
-  console.log(false);
-} */
+}
+// botão para limpar quadro de pixels
+let botao = document.getElementById('clear-board');
+botao.addEventListener('click', clearBoard);
