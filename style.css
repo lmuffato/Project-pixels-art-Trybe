@@ -1,28 +1,18 @@
 :root {
 
-  --background-palette: white;
+  --background-palette: rgb(233, 233, 233);
 
   --border-color: black;
 
   --color-new-pixel: white;
 
-  --font-title: white;
-
   --color-danger: red;
-
-  --bg-title: rgb(45, 3, 32);
-
-  --bg-body: rgb(228, 228, 228);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: var(--bg-body);
 }
 
 #content {
@@ -33,12 +23,6 @@ body {
 
 #title {
   text-align: center;
-  padding: 20px;
-  background-color: var(--bg-title);
-  color: var(--font-title);
-  border-radius: 0px 0px 30px 40px;
-  box-shadow: 10px 10px 20px gray;
-  font-family: 'Redressed', cursive;
 }
 
 main {
@@ -48,37 +32,22 @@ main {
 }
 
 #color-palette {
-  width: fit-content;
+  width: 100%;
   height: auto;
-  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 30px auto 0;
   background-color: var(--background-palette);
-  border-radius: 15px;
 }
 
 .color {
   width: 30px;
   height: 30px;
-  margin: 5px;
+  margin: 10px;
   border: 1px solid var(--border-color);
   max-width: 150px;
   max-height: 150px;
-  border-radius: 50%;
-  box-shadow: 3px 8px 5px grey;
-}
-
-.color:hover {
-  animation: zoom 0.8s;
-  transform: scale(1.5);
-}
-
-@keyframes zoom {
-  0%    {transform: scale(1.0)};
-  100%  {transform: scale(1.1)};
 }
 
 .selected {
@@ -87,7 +56,7 @@ main {
 
 #pixel-board {
   height: auto;
-  padding: 40px 10px;
+  padding: 20px 10px;
   margin: 0 auto;
 }
 
@@ -130,18 +99,10 @@ main {
 #board-size {
   height: 50px;
   padding: 5px;
-  border-radius: 10px 0 0 10px;
-  outline: none;
 }
 
 #generate-board {
   max-width: 50px;
   width: 100%;
   height: 50px;
-  border-radius: 0 10px 10px 0;
-  outline: none;
-}
-
-#clear-board {
-  border-radius: 5px;
 }
