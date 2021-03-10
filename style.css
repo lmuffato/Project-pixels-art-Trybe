@@ -65,7 +65,7 @@ body {
 }
 
 .color:hover {
-  transform: rotateZ(180deg) scale(1.5);
+  transform: rotateZ(180deg);
   display:inline-block;
 }
 
