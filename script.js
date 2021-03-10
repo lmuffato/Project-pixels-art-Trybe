@@ -1,3 +1,13 @@
+function colorDeselect() {
+  const selectedElement = document.querySelector('.selected');
+  selectedElement.classList.remove('selected');
+}
+
+function colorSelect(event) {
+  colorDeselect();
+  event.target.classList.add('selected');
+}
+
 function colorPalette() {
   const colors = ['black', 'red', 'green', 'blue'];
   const colorsFather = document.querySelector('#color-palette');
@@ -9,7 +19,8 @@ function colorPalette() {
     if (index === 0) {
       elementColor.classList.add('selected');
     }
-
+    // Usei uma das dicas como base para minha lógica
+    elementColor.addEventListener('click', colorSelect);
     elementColor.style.backgroundColor = `${colors[index]}`;
     colorsFather.appendChild(elementColor);
   }
