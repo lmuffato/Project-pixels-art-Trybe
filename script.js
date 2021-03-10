@@ -1,11 +1,7 @@
 
-/* window.onload = function () {
+ window.onload = function () {
     selecionaCor ();
-    colocaCor ();
-    resetaCor ();
-  }; */
-
-
+  }; 
 
 
  function selecionaCor (){
@@ -16,8 +12,8 @@
 
     for (let index = 0; index < paletaCor.length; index += 1) {
         paletaCor[index].addEventListener('click', function(){
-        paletaCor[index].className = '.selected'; 
-        CorPreta.className = '.color'
+        paletaCor[index].classList.add = 'selected'; 
+        CorPreta.className = 'color';
         });
     }
 
@@ -26,13 +22,19 @@
  }
 
 
- function colocaCor (){
+ /*function colocaCor (){
 
-    let pixel =
+    let pixelArray = document.querySelectorAll('.pixel');
 
- }
+    for (let index = 0; index < pixelArray.length; index += 1) {
+        pixelArray[index].addEventListener('click', function(event){
+            pixelArray[index] = event.target;
+        });
+    }
+}
+ 
 
 
 function resetaCor (){
 
- } 
+ } */
