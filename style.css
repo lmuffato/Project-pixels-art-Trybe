@@ -4,7 +4,7 @@
 }
 
 body {
-  background: snow;
+  background: rgb(240, 242, 245);
   color: rgb(34, 34, 34);
   font-family: Oswald, sans-serif;
   text-align: center;
@@ -14,7 +14,7 @@ body {
   text-align: center;
   padding: 14px;
   border-bottom: 1px rgb(231, 231, 231) solid;
-  background-color: rgba(221, 221, 221, 0.479)
+  background-color: rgba(221, 221, 221, 0.479);
 }
 
 h1 {
@@ -53,7 +53,8 @@ h1 {
   border-radius: 25px;
   border: 1px rgb(231, 231, 231) solid;
   background: rgba(0, 0, 0, 0.034);
-  max-width: 250px;
+  max-width: 260px;
+  box-shadow: 2px 6px 5px -5px rgb(0 0 0 / 45%);
 }
 
 .color {
@@ -69,9 +70,13 @@ h1 {
   transform: scale(1.2);
 }
 
+.color:active {
+  transform: scale(0.9);
+}
+
 #pixel-board {
   max-width: 1100px;
-  margin: 5% auto;
+  margin: 0 auto;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -91,6 +96,10 @@ h1 {
 
 .pixel:hover {
   transform: scale(1.2);
+}
+
+.pixel:active {
+  transform: scale(1);
 }
 
 #section-btn-clear {

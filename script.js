@@ -2,9 +2,9 @@ const numberOfLines = 5;
 const numberOfColumns = 5;
 const paletteColor = document.querySelectorAll('.color');
 const blackPalette = document.getElementById('color-1');
+blackPalette.style.backgroundColor = 'black';
 const btnClear = document.getElementById('clear-board');
 const btnSize = document.getElementById('generate-board');
-blackPalette.style.backgroundColor = 'black';
 
 function generateRandomRGB() {
   const r = Math.floor(Math.random() * (255));
@@ -19,7 +19,11 @@ function eventClickPixel() {
     element.addEventListener('click', (elementTarget) => {
       const pixelElement = elementTarget.target;
       const colorPalette = document.getElementsByClassName('selected')[0].style.backgroundColor;
-      pixelElement.style.backgroundColor = colorPalette;
+      if (pixelElement.style.backgroundColor === colorPalette) {
+        pixelElement.style.backgroundColor = 'white';
+      } else {
+        pixelElement.style.backgroundColor = colorPalette;
+      }
     });
   });
 }
