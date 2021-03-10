@@ -1,5 +1,5 @@
 .color {
-  border: solid black 1px;
+  border: solid #000000 1px;
   width: 40px;
   height: 40px;
 }
@@ -7,20 +7,29 @@
 .pixel {
   width: 40px;
   height: 40px;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 #pixel-board {
-  border: solid black 1px;
-  margin: 50px;
+  border: solid #000000 1px;
+  margin: 30px;
+}
+
+#board-size {
+  max-width: 50px;
+}
+
+#title-change-size {
+  display: inline-block;
+  margin-top: 20px;
 }
 
 body {
-  background-color: white;
+  background-color: #ffffff;
 }
 
-/* #color0 {
-  background-color: black;
+#color0 {
+  background-color: #000000;
 }
 
 #color1 {
@@ -33,4 +42,4 @@ body {
 
 #color3 {
   background-color: #999966;
-} */
+}

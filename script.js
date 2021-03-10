@@ -1,13 +1,19 @@
 console.log('começou a rodar o javaScript');
 
+// Bloco de declaração de variáveis
+
 const palette = document.getElementsByClassName('color');
 const simpleColors = ['#000000', '#800000', '#ff0000', '#999966', '#ffff00 ', '#009900', '#00ff00', '#008080', '#00ffff', '#000080', '#0000ff', '#800080', '#ff00ff'];
 const pixels = document.getElementsByClassName('pixel');
 const buttonClear = document.getElementById('clear-board');
+const sizeValue = document.getElementById('board-size');
+const buttonResize = document.getElementById('generate-board');
 let colorSelected = document.querySelector('.selected');
 
+// Bloco de declaração de funções
+
 function montPalette(tableColors) {
-  for (let color = 0; color < tableColors.length; color += 1) {
+  for (let color = 0; color < palette.length; color += 1) {
     palette[color].style.backgroundColor = tableColors[color];
   }
 }
@@ -32,6 +38,13 @@ function clearBoard() {
   }
 }
 
+function resizePixelBoard() {
+  const size = sizeValue.value;
+  console.log(size);
+}
+
+// bloco de carregamento do escutadores de eventos
+
 for (let color = 0; color < palette.length; color += 1) {
   palette[color].addEventListener('click', selectColor);
 }
@@ -42,6 +55,8 @@ for (let pixel = 0; pixel < pixels.length; pixel += 1) {
 
 buttonClear.addEventListener('click', clearBoard);
 
-palette[1].addEventListener('click', selectColor);
-console.log('depois');
+buttonResize.addEventListener('click', resizePixelBoard);
+
+// Bloco de ações de inicialização do código
+
 montPalette(simpleColors);
