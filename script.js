@@ -31,9 +31,14 @@ function setInitialColor() {
   firstColor.classList.toggle('selected');
 }
 function changePaletteColor(e) {
-  const lastSelected = document.querySelector(`#${COLOR_PALETTE} > .selected`);
-  lastSelected.classList.toggle('selected');
-  e.target.classList.toggle('selected');
+  // Only changes something if the event was fired from the correct place
+  if (e.target.classList.contains('color')) {
+    const lastSelected = document.querySelector(
+      `#${COLOR_PALETTE} > .selected`,
+    );
+    lastSelected.classList.toggle('selected');
+    e.target.classList.toggle('selected');
+  }
 }
 function createColorPaletteListener() {
   const colorPalette = document.getElementById(COLOR_PALETTE);
@@ -54,11 +59,13 @@ function initializeColorPalette() {
   setInitialColor();
 }
 function changePixelColor(e) {
-  const selectedPaletteColor = document.querySelector(
-    `#${COLOR_PALETTE} > .selected`,
-  );
-  const newColor = getComputedStyle(selectedPaletteColor).backgroundColor;
-  e.target.style.backgroundColor = newColor;
+  if (e.target.classList.contains('pixel')) {
+    const selectedPaletteColor = document.querySelector(
+      `#${COLOR_PALETTE} > .selected`,
+    );
+    const newColor = getComputedStyle(selectedPaletteColor).backgroundColor;
+    e.target.style.backgroundColor = newColor;
+  }
 }
 function createPixelsListener() {
   const pixelBoard = document.getElementById(PIXEL_BOARD);

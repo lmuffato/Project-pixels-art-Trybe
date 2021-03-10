@@ -34,11 +34,10 @@ body {
 }
 
 .pixel-board {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  width: 210px;
-  height: 210px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+
 }
 
 .pixel {
