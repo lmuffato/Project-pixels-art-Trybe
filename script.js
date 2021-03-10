@@ -44,21 +44,27 @@ function resetPixelBoard() {
   boardPixels.forEach((px) => px.setAttribute('style', 'background-color: white;'));
 }
 
+function createNewBoard(boardWidth) {
+  pixelBoard.style.gridTemplateColumns = `repeat(${boardWidth}, 40px)`;
+  pixelBoard.style.gridTemplateRows = `repeat(${boardWidth}, 40px)`;
+
+  for (let index = 0; index < boardWidth ** 2; index += 1) {
+    document.querySelector('#pixel-board').appendChild(createPixelInBoard());
+  }
+  boardPixels = document.querySelectorAll('.pixel');
+  boardPixels.forEach((px) => px.addEventListener('click', (e) => paintNewPixel(e.target)));
+}
+
 function generateNewBoard() {
-  const boardSizeValue = boardSizeInput.valueAsNumber;
+  let boardSizeValue = boardSizeInput.valueAsNumber;
+  if (boardSizeValue < 5) boardSizeValue = 5;
+  if (boardSizeValue > 50) boardSizeValue = 50;
 
   if (boardSizeValue === 0) {
     alert('Board inválido!');
   } else {
-    boardPixels = document.querySelectorAll('.pixel');
     boardPixels.forEach((px) => px.remove());
-
-    pixelBoard.style.gridTemplateColumns = `repeat(${boardSizeValue}, 40px)`;
-    pixelBoard.style.gridTemplateRows = `repeat(${boardSizeValue}, 40px)`;
-
-    for (let index = 0; index < boardSizeValue ** 2; index += 1) {
-      document.querySelector('#pixel-board').appendChild(createPixelInBoard());
-    }
+    createNewBoard(boardSizeValue);
   }
 }
 
