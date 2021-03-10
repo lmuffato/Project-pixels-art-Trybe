@@ -5,6 +5,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  text-align: center;
 }
 
 .display-inline {
@@ -16,7 +17,6 @@ header {
   font-size: 35px;
   font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
   margin-top: 30px;
-  margin-left: 130px;
 }
 
 #desenvolvedor {
@@ -38,7 +38,6 @@ header {
   border: 2px solid black;
   background-color: rgb(168, 224, 202);
   margin-top: 105px;
-  margin-left: 5px;
   padding-top: 10px;
   width: 262px;
   margin-left: 552px;
