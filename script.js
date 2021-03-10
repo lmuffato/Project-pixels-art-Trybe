@@ -28,17 +28,6 @@ window.onload = function(){
         firstChild.className += ' selected'
 }
 
-function squareClean (){
-    let getClearButton = document.querySelector('#clear-board');
-    getClearButton.addEventListener('click', function() {
-        let getSquare = document.querySelectorAll('#pixel-board>div');
-        for (let index = 0; index < getSquare; index += 1) {
-            getSquare[index].style.backgroundColor='white'
-        }
-    })
-}
-squareClean ();
-
 // assistência de Bruno Bastos, referência: https://forum.freecodecamp.org/t/addeventlistener-and-changing-background-color/193023
 function changeSelectColors (){
     let palletset = document.querySelector('#color-palette')
@@ -66,3 +55,28 @@ function ColorForaChange(){
     })
 }
 ColorForaChange();
+
+
+let getClearButton = document.getElementById('clear-board');
+
+function squareClean (){
+    let getPixels = document.querySelectorAll('.pixel')
+    for (inde in getPixels){
+        let cleanPixels = getPixels[inde]
+        cleanPixels.style.backgroundColor = 'white'
+    }
+}
+getClearButton.addEventListener('click', squareClean)
+
+//perguntar o problema desta função
+/*function squareClean (){
+    let getClearButton = document.querySelector('#clear-board');
+    getClearButton.addEventListener('click', function() {
+        let getSquare = document.querySelectorAll('#pixel-board>div');
+        for (let index = 0; index < getSquare; index += 1) {
+            getSquare[index].style.backgroundColor='white'
+        }
+    })
+}
+squareClean ();
+*/
