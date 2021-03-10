@@ -32,10 +32,21 @@ function squareClean (){
     let getClearButton = document.querySelector('#clear-board');
     getClearButton.addEventListener('click', function() {
         let getSquare = document.querySelectorAll('#pixel-board>div');
-        for (index of getSquare) {
+        for (let index = 0; index < getSquare; index += 1) {
             getSquare[index].style.backgroundColor='white'
         }
     })
 }
 squareClean ();
+
+function changeColors (){
+    let palletset = document.querySelector('#color-palette')
+    palletset.addEventListener('click', function(change){
+        if (change.target.className == 'color'){
+        document.querySelector('.selected').className = 'color';
+        change.target.className += ' selected';
+    }
+  })
+}
+changeColors ();
 
