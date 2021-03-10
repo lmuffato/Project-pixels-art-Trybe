@@ -53,16 +53,6 @@ const colorTwo = 'red';
 const colorThree = 'blue';
 const colorFour = 'green';
 
-function getRandomColor() {
-  let letters = '0123456789ABCDEF';
-  let color = '#';
-
-  for (let index = 0; index < 6; index += 1) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
 function palletClicked() {
   if (elementOne.classList.contains('selected')) {
     return colorOne;
