@@ -1,5 +1,18 @@
+const colorPalette = document.getElementById('color-palette');
+const pixelBoard = document.getElementById('pixel-board');
+let colors = ['black', 'green', 'blue', 'red'];
+
+function createColorPalette() {
+  for (color of colors) {
+    let newColorInPalette = document.createElement('div');
+    newColorInPalette.className = 'color';
+    newColorInPalette.id = color;
+    newColorInPalette.style.backgroundColor = color;
+    colorPalette.appendChild(newColorInPalette);
+  }
+}
+
 function createPixelBoard(n) {
-  const pixelBoard = document.getElementById('pixel-board');
   // Criando os pixels
   for (let boardRow = 1; boardRow <= n; boardRow += 1) {
     const newRow = document.createElement('div');
@@ -36,33 +49,32 @@ function addEventListenerToColorPalette() {
   }
 }
 
-function addEventListenerToPixels() {
+function addColorToPixel(event) {
+  let selectedColor = document.getElementsByClassName('selected')[0];
+  selectedColor = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
+  const selectedPixel = event.target;
+  selectedPixel.style.backgroundColor = selectedColor;
+}
+
+function clearPixels() {
   const allPixels = document.querySelectorAll('.pixel');
   for (const pixel of allPixels) {
-    console.log(pixel);
-    pixel.addEventListener('click', function addColorToPixel(event) {
-      let selectedColor = document.querySelector('.selected');
-      selectedColor = window.getComputedStyle(selectedColor).backgroundColor;
-      const selectedPixel = event.target;
-      selectedPixel.style.backgroundColor = selectedColor;
-    });
+    pixel.style.backgroundColor = 'white';
   }
 }
 
-function addEventListenerToClearBtn() {
-  const clearBtn = document.getElementById('clear-board');
-  clearBtn.addEventListener('click', function clearPixels() {
-    const allPixels = document.querySelectorAll('.pixel');
-    for (const pixel of allPixels) {
-      pixel.style.backgroundColor = 'white';
-    }
-  });
+window.onload = function onload() {
+  createColorPalette();
+  addEventListenerToColorPalette();
+  selectBlackOnload();
+};
+
+createPixelBoard(11);
+
+const allPixels = document.querySelectorAll('.pixel');
+for (const pixel of allPixels) {
+  pixel.addEventListener('click', addColorToPixel());
 }
 
-window.onload = function onload() {
-  selectBlackOnload();
-  addEventListenerToColorPalette();
-  createPixelBoard(5);
-  addEventListenerToPixels();
-  addEventListenerToClearBtn();
-};
+const clearBtn = document.getElementById('clear-board');
+clearBtn.addEventListener('click', clearPixels());
