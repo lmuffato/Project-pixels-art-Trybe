@@ -1,6 +1,7 @@
 function colorsPalette() {
   const squareBlack = document.getElementById('black');
   squareBlack.style.backgroundColor = 'black';
+  squareBlack.classList.add = 'selected';
 
   const squareBlue = document.getElementById('blue');
   squareBlue.style.backgroundColor = 'blue';
