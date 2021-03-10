@@ -51,3 +51,7 @@ div {
   width: 40px;
   height: 40px;
 }
+
+#clear-board {
+  margin-top: 25px;
+}

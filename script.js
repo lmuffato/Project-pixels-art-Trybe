@@ -69,3 +69,16 @@ function eventpaintingPixel() {
   }
 }
 eventpaintingPixel();
+// Exercício feito com a ajuda do código de Rodrigo Queiroz
+// Link: https://github.com/tryber/sd-010-a-project-pixels-art/blob/837d089ec94cbc9a9cbb9132f92a142476b27442/script.js
+function clearColors() {
+  const getBtn = document.querySelector('#clear-board');
+  const getPixel = document.querySelectorAll('.pixel');
+
+  getBtn.addEventListener('click', () => {
+    for (let index = 0; index < getPixel.length; index += 1) {
+      getPixel[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearColors();
