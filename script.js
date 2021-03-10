@@ -26,16 +26,21 @@ function generatePixelFrame(boardSize = 5) {
   }
   pixelBoard.style.border = 'solid black 1px';
 }
-// https://css-tricks.com/snippets/javascript/remove-element/
-// eslint-disable-next-line no-unused-vars
-function generateCustomPixelFrame() {
+
+function setBoardSize() {
   let customSize = document.getElementById('board-size').value;
-  if (customSize < 5) {
+  if (customSize > 0 && customSize < 5) {
     customSize = 5;
   }
   if (customSize > 50) {
     customSize = 50;
   }
+  return customSize;
+}
+// https://css-tricks.com/snippets/javascript/remove-element/
+// eslint-disable-next-line no-unused-vars
+function generateCustomPixelFrame() {
+  const customSize = setBoardSize();
   if (!customSize) {
     return alert('Board inválido!');
   }
