@@ -27,4 +27,15 @@ window.onload = function () {
         pixels[pixel].addEventListener('click', clickToSetColor);
     };
 
+    /* -------------- Clean Button ----------------- */
+    const clearButton = document.querySelector('#clear-board')
+
+    function clickToClean() {
+        for (let pixel = 0; pixel < pixels.length; pixel += 1) {
+            pixels[pixel].style.backgroundColor = 'white';
+        };
+    }
+
+    clearButton.addEventListener('click', clickToClean);
+
 };
