@@ -1,7 +1,7 @@
 function createColorsPallete(amount) {
-  let divColors = document.querySelector('#color-palette');
+  const divColors = document.querySelector('#color-palette');
   for (let index = 1; index <= amount; index += 1) {
-    let colors = document.createElement('div');
+    const colors = document.createElement('div');
     colors.className = 'color';
     divColors.appendChild(colors);
   }
@@ -9,7 +9,7 @@ function createColorsPallete(amount) {
 createColorsPallete(4);
 
 function assignColors() {
-  let colors = document.querySelectorAll('.color');
+  const colors = document.querySelectorAll('.color');
   colors[0].style.backgroundColor = 'black';
   colors[1].style.backgroundColor = 'green';
   colors[2].style.backgroundColor = 'yellow';
@@ -18,12 +18,12 @@ function assignColors() {
 assignColors();
 
 function createPixelBox(amount) {
-  let divPixels = document.querySelector('#pixel-board');
+  const divPixels = document.querySelector('#pixel-board');
   for (let index = 1; index <= amount; index += 1) {
-    let boxes = document.createElement('div');
+    const boxes = document.createElement('div');
     divPixels.appendChild(boxes);
     for (let indexI = 1; indexI <= amount; indexI += 1) {
-      let boxes1 = document.createElement('div');
+      const boxes1 = document.createElement('div');
       boxes1.className = 'pixel';
       boxes.appendChild(boxes1);
     }
@@ -35,10 +35,10 @@ document.querySelectorAll('.color')[0].className += ' selected';
 
 // Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A
 function changeSelected() {
-  let classSelected = document.querySelector('#color-palette');
-  classSelected.addEventListener('click', function(event) {
-    let classColor = event.target;
-    let elementSelected = document.getElementsByClassName('selected');
+  const classSelected = document.querySelector('#color-palette');
+  classSelected.addEventListener('click', (event) => {
+    const classColor = event.target;
+    const elementSelected = document.getElementsByClassName('selected');
     elementSelected[0].classList.remove('selected');
     classColor.classList.add('selected');
   });
@@ -46,14 +46,27 @@ function changeSelected() {
 changeSelected();
 
 function changeColorBox() {
-  let selectedBox = document.querySelector('#pixel-board');
-  selectedBox.addEventListener('click', function (event) {
-    let boxPixel = event.target;
-    console.log(boxPixel)
+  const selectedBox = document.querySelector('#pixel-board');
+  selectedBox.addEventListener('click', (event) => {
+    const boxPixel = event.target;
     if (boxPixel.className === 'pixel') {
-      let selectedColor = document.querySelector('.selected').style.backgroundColor;
+      const selectedColor = document.querySelector('.selected').style.backgroundColor;
       boxPixel.style.backgroundColor = selectedColor;
     }
-  })
+  });
 }
 changeColorBox();
+
+function clearBoxes() {
+  const spaceButton = document.getElementById('workspace');
+  const buttonClear = document.createElement('button');
+  buttonClear.innerText = 'Limpar';
+  spaceButton.appendChild(buttonClear);
+  buttonClear.addEventListener('click', () => {
+    const clearColors = document.getElementsByClassName('pixel');
+    for (let index = 0; index < clearColors.length; index += 1) {
+      clearColors[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearBoxes();
