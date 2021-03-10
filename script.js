@@ -3,6 +3,7 @@ const COLOR_PALETTE = 'color-palette';
 const COLOR_COUNT = 4;
 const CANVAS_SIZE = { x: 5, y: 5 };
 const CLEAR_BOARD = 'clear-board';
+const BTN_CONTAINER = 'btn-container';
 
 function clearPixelBoard() {
   const pixels = document.getElementById(PIXEL_BOARD).children;
@@ -13,6 +14,17 @@ function clearPixelBoard() {
 function createButtonListener() {
   const btnClearPixelBoard = document.getElementById(CLEAR_BOARD);
   btnClearPixelBoard.addEventListener('click', clearPixelBoard, false);
+}
+function createClearButton() {
+  const btnContainer = document.getElementById(BTN_CONTAINER);
+  const btnClearPixelBoard = document.createElement('button');
+  btnClearPixelBoard.id = 'clear-board';
+  btnClearPixelBoard.innerText = 'Limpar';
+  btnContainer.appendChild(btnClearPixelBoard);
+}
+function initializeClearButton() {
+  createClearButton();
+  createButtonListener();
 }
 function setInitialColor() {
   const firstColor = document.getElementsByClassName('color')[0];
@@ -31,7 +43,6 @@ function createColors(n) {
   const colorPalette = document.getElementById(COLOR_PALETTE);
   for (let index = 0; index < n; index += 1) {
     const color = document.createElement('div');
-    // change from span to div you need a display flex container in css ofc
     color.className = 'color';
     color.innerText = getComputedStyle(color).backgroundColor;
     colorPalette.appendChild(color);
@@ -41,14 +52,6 @@ function initializeColorPalette() {
   createColors(COLOR_COUNT);
   createColorPaletteListener();
   setInitialColor();
-}
-function createPixels(n) {
-  const pixelBoard = document.getElementById(PIXEL_BOARD);
-  for (let index = 0; index < n; index += 1) {
-    const row = document.createElement('div');
-    row.className = 'pixel';
-    pixelBoard.appendChild(row);
-  }
 }
 function changePixelColor(e) {
   const selectedPaletteColor = document.querySelector(
@@ -61,6 +64,14 @@ function createPixelsListener() {
   const pixelBoard = document.getElementById(PIXEL_BOARD);
   pixelBoard.addEventListener('click', changePixelColor, false);
 }
+function createPixels(n) {
+  const pixelBoard = document.getElementById(PIXEL_BOARD);
+  for (let index = 0; index < n; index += 1) {
+    const row = document.createElement('div');
+    row.className = 'pixel';
+    pixelBoard.appendChild(row);
+  }
+}
 function initializePixelBoard(x, y) {
   createPixels(x * y);
   createPixelsListener();
@@ -69,5 +80,5 @@ function initializePixelBoard(x, y) {
 window.onload = function init() {
   initializePixelBoard(CANVAS_SIZE.x, CANVAS_SIZE.y);
   initializeColorPalette();
-  createButtonListener();
+  initializeClearButton();
 };
