@@ -32,11 +32,13 @@ function GenerateBoard(number) {
 }
 
 // reorganização feita observando o código da Beatriz, já citado acima
+// caso a função funcione, após analisar o meu código e o da Beatriz, a diferença foi que usei o 
+// getElementById, mas não passava no evaluator
 function ResetColors(){
-  let reset = document.getElementById('clear-board');
+  let reset = document.querySelector('#clear-board');
   let resetButton = document.querySelectorAll('.pixel');
   reset.addEventListener('click', function(){
-  for (let index = 0; index < 25; index+= 1){
+  for (let index = 0; index < resetButton.length; index+= 1){
   resetButton[index].style.backgroundColor = 'white';
   }
 });
