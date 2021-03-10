@@ -41,3 +41,31 @@ color1.addEventListener('click', selectColor1);
 color2.addEventListener('click', selectColor2);
 color3.addEventListener('click', selectColor3);
 color4.addEventListener('click', selectColor4);
+
+
+function changePixelColor () {
+  let pixelsToChange = document.getElementsByClassName('pixel');
+  let selectedColor = document.querySelector('.selected');
+  for (let index = 0; index < pixelsToChange.length; index +=1) {
+  pixelsToChange[index].style.backgroundColor = selectedColor.backgroundColor;  
+  }
+}
+changePixelColor();
+
+function setPixelEvent () {
+ let pixelsToChange = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixelsToChange.length; index += 1) {
+    pixelsToChange[index].addEventListener('click', changePixelColor);
+  }
+  return pixelsToChange;
+}
+setPixelEvent()
+
+function clearButton () {
+  let pixels = document.getElementsByClassName('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels.style.brackgroundColor = 'white';
+  }
+}
+let clearBtn = document.getElementsByTagName('button')[0];
+clearBtn.addEventListener('click', clearButton)
