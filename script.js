@@ -8,11 +8,10 @@ window.onload = function () {
         let selectedItem = document.querySelector('.selected');
         
         selectedItem.classList.remove('selected');
-        e.target.classList.add('selected');
-        console.log(document.querySelector('.selected'));
+        e.target.classList.add('selected');''
     }
 
-    for (let color of colors) {
-        color.addEventListener('click', clickToSelectColor);
+    for (let color = 0; color < colors.length; color += 1) {
+        colors[color].addEventListener('click', clickToSelectColor);
     }
 };
