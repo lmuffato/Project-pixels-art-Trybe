@@ -1,15 +1,26 @@
-window.onload = function () {
-  const color = ['black', 'red', 'blue', 'yellow'];
+const color = ['black', 'red', 'blue', 'yellow'];
+let old = 0;
+window.onload = function init() {
   function colorButton() {
     const colorBlock = document.querySelectorAll('.color');
     for (let index = 0; index < colorBlock.length; index += 1) {
       colorBlock[index].style.background = color[index];
+      colorBlock[index].addEventListener("click", selectColor);
     }
   }
-  function selectColor(next, old) {
-    document.querySelectorAll('.color')[next].classList.add("selected");
-    document.querySelectorAll('.color')[old].classList.remove("selected");
-  }
   colorButton();
-  selectColor(2, 0);
+}
+function selectIndex(colorIndex){
+  for (let index = 0; index < color.length; index += 1) {
+    if (colorIndex === color[index]) {
+      return index;
+    }
+  }
+}
+function selectColor(e) {
+  let select = e.target.style.background;
+  let index = selectIndex(select);
+  document.querySelectorAll('.color')[index].classList.add("selected");
+  document.querySelectorAll('.color')[old].classList.remove("selected");
+  old = index;
 }
