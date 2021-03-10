@@ -1,28 +1,10 @@
-div {
-  display: inline-block;
+#color-palette {
+  display: flex;
+  width: fit-content;
 }
 
-#black {
-  background-color: black;
-  color: black;
-  border:1px solid black;
+.color {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
 }
-
-#deepGreen {
-	background-color: rgb(0, 99, 18);
-  color: rgb(0, 99, 18);
-  border:1px solid black;
-}
-
-#Ao {
-	background-color: rgb(0, 128, 1);
-  color: rgb(0, 128, 1);
-  border:1px solid black;
-}
-
-#kellyGreen {
-  background-color: rgb(73, 182, 24);
-  color: rgb(73, 182, 24);
-  border:1px solid black;
-}
-
