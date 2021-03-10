@@ -2,16 +2,17 @@ window.onload = function (){
 
 // pega os elementos da classe color
 let runBgColors = document.getElementsByClassName('color');
+let selected = document.querySelector('.selected'); 
  
 // dar cor de fundo aos elementos base
-runBgColors[0].style.backgroundColor = "black";
-runBgColors[1].style.backgroundColor = "red";
-runBgColors[2].style.backgroundColor = "gray";
-runBgColors[3].style.backgroundColor = "yellow";
+selected.style.backgroundColor = 'rgb(0,0,0)'
+runBgColors[0].style.backgroundColor = "red";
+runBgColors[1].style.backgroundColor = "gray";
+runBgColors[2].style.backgroundColor = "yellow";
 
 // Função para capturar a cor da class color
 
-let pegabg = "black";
+let pegabg = 'black';
 function changeBgColor() {
 let bgColor = document.getElementsByClassName('color');
     for (index = 0; index < bgColor.length; index += 1) {
@@ -35,16 +36,7 @@ function returnClickClass () {
 }
  
 
-function btnButton() {
-    let bntElement = document.querySelector('.btnClear');
-    let recorreColors = document.getElementsByTagName('pixel');
-        bntElement.addEventListener('click', function() 
-        {
-            recorreColors.style.backgroundColor = "#ffffff";
-        })
-}
-
-
+// Botão que redefine a própriedade class pixel para white
 let btn = document.querySelector('#clear-board');
 
 btn.addEventListener('click', function()
