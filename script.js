@@ -50,7 +50,6 @@ lineBoardGeneration();
 
 function columnBoardGeneration() {
   amountTag = document.getElementsByTagName('tr');
-  console.log(amountTag.length);
 
   for (let line = 0; line < amountTag.length; line += 1) {
     for (let index = 0; index < amountTag.length; index += 1) {
@@ -67,13 +66,18 @@ function getInputText() {
   buttonVqv.addEventListener('click', setAmountPixels);
   function setAmountPixels() {
     let myInput = parseInt(document.getElementById('board-size').value); 
-    if ((myInput > 4) && (myInput < 51)) {
+    console.log(myInput);
+    if (myInput >= 5 && myInput <= 50) {
+      lineBoardGeneration(myInput);
+    } else if ((myInput > 0 && myInput < 5) || myInput > 50 ) {
+      myInput = 5;
       lineBoardGeneration(myInput);
     } else {
-      alert('Board inválido!');
+      window.alert('Board inválido!');
+    }
     }
   }
-}
+
 
 
 
