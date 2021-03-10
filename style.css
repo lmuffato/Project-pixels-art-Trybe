@@ -23,14 +23,20 @@
     border-color: black;
     border-width: 1px;
     cursor: pointer;
-    display: inline-block;
+    display:inline-block
+}
+
+.tr{
+    display: table-row;
 }
 
 #pixel-board {
-    height: 232px;
-    width: 232px;
-    color: white;
+    height: 100px;
+    width: 210px;
+    background-color: white;
+    display: table;
 }
+  
 
 #clear-board{
     cursor: pointer;
