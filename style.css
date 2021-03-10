@@ -1,10 +1,9 @@
 #title {
   color: red;
-};
+}
 
 #color-palette {
-    width: 400px;
-    height: 400px;
+   
 }
 
 .color {
@@ -12,4 +11,18 @@
   border: 1px solid black;
   width: 50px;
   height: 50px;
-};
+}
+
+.pixel {
+  display:inline-block;
+  border: 1px solid black;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+
+#pixel-board {
+  width: 400px;
+  height: 400px;
+}
