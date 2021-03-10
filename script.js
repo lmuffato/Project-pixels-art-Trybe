@@ -1,6 +1,6 @@
 const color = ['black', 'red', 'blue', 'yellow'];
 let old = 0;
-
+let select = 'black';
 window.onload = function init() {
   function colorButton() {
     const colorBlock = document.querySelectorAll('.color');
@@ -10,11 +10,21 @@ window.onload = function init() {
     }
   }
 
+  function colorPixels() {
+    const colorPixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < colorPixel.length; index += 1) {
+      colorPixel[index].addEventListener("click", pixels);
+    }
+  }
   colorButton();
-
+  colorPixels();
 }
 
-function selectIndex(colorIndex){
+function pixels(e) {
+  e.target.style.setProperty('background', select);
+}
+
+function selectIndex(colorIndex) {
   for (let index = 0; index < color.length; index += 1) {
     if (colorIndex === color[index]) {
       return index;
@@ -23,10 +33,9 @@ function selectIndex(colorIndex){
 }
 
 function selectColor(e) {
-  let select = e.target.style.background;
+  select = e.target.style.background;
   let index = selectIndex(select);
-  document.querySelectorAll('.color')[index].classList.add("selected");
   document.querySelectorAll('.color')[old].classList.remove("selected");
+  document.querySelectorAll('.color')[index].classList.add("selected");
   old = index;
-  document.querySelectorAll('.selected')[0].style.background = select;
 }

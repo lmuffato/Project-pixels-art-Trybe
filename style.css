@@ -4,17 +4,13 @@
   height: 60px;
 }
 
-.selected {
-  background-color: black;
-}
-
 #pixel-board {
   border-collapse: collapse;
 }
 
 .pixel {
   border: 1px solid black;
-  width: 41px;
   height: 41px;
+  width: 41px;
   padding: 0.5rem;
-  background-color: white; }
+  background-color: white;}
