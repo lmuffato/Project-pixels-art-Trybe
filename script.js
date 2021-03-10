@@ -27,4 +27,15 @@ for (let index = 0; index < 5; index += 1) {
 }
 
 let initialColor = document.querySelector('div').classList.add('selected', 'color');
+let colorsSelect = document.getElementsByClassName('color');
+
+function selectColor (eventoDeOrigem) {
+    let elementSelected = document.getElementsByClassName('selected');
+        elementSelected[0].classList.remove('selected');
+    eventoDeOrigem.target.classList.add('selected');
+}
+
+for (let indexColors =0; indexColors < colorsSelect.length; indexColors += 1) {
+    colorsSelect[indexColors].addEventListener('click', selectColor);
+}
 
