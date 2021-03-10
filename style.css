@@ -13,3 +13,10 @@
   background-color: white;
 }
 
+#pixel-board ul {
+    margin-top: -20px;
+}
+
+#pixel-board {
+    padding-top: 20px;
+}

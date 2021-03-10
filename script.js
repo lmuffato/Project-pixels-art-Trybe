@@ -41,3 +41,18 @@ pixelPainting(5);
 
 // Requisito 6;
 document.getElementsByClassName('color')[0].classList.add('selected');
+
+// Requisito 7;
+// Ajuda do Murilo Gonçalves na explicação sobre o e
+function changeClass(){
+    // Cria variavel;
+    let elementColors = document.getElementById('color-palette');
+    // Cria um evento;
+    elementColors.addEventListener('click', function(e){
+     let colorElement = e.target;
+     let selectElement = document.querySelector('.selected');
+     selectElement.classList.remove('selected');
+     colorElement.classList.add('selected');
+    })
+}
+changeClass();
