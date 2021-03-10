@@ -13,5 +13,4 @@ function createPixBox(size) {
     }
   }
 }
-
 createPixBox(5);
