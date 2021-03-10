@@ -1,0 +1,23 @@
+#color-palette {
+  display: flex;
+}
+
+#color-black {
+  border: solid 1px black;
+  background-color: black;
+}
+
+#color-pink {
+    border: solid 1px black;
+    background-color: pink;
+}
+
+#color-grey {
+    border: solid 1px black;
+    background-color: grey;
+}
+
+#color-yellow {
+    border: solid 1px black;
+    background-color: yellow;
+  }
