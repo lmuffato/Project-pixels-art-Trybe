@@ -21,43 +21,45 @@ function colorForChoose() {
 
 colorForChoose();
 
-getInputText();
+getInputText();  
 
 function lineBoardGeneration(size) {
 
-   if (size) {
-     numberOfLines = size;
-     console.log('verdadeiro');
-     console.log(numberOfLines);
-   } else {
-     numberOfLines = 5;
-   }
+  let squareBase = 5
+
+  if (size) {
+    squareBase = size;
+    numTr = document.getElementById('pixel-board');
+    while (numTr.hasChildNodes()){
+      numTr.removeChild(numTr.firstChild);
+    }
+  }
 
   let tableContainer = document.getElementById('pixel-board');
-
   
-  for (let index = 0; index < numberOfLines; index += 1) {
+  for (let index = 0; index < squareBase; index += 1) {
     let lineConteiner = document.createElement('tr');
     lineConteiner.className = 'line-container';
     tableContainer.appendChild(lineConteiner);
   }
+
+  columnBoardGeneration();
 }
 
 lineBoardGeneration();
 
 function columnBoardGeneration() {
-  const lineContainer = document.getElementsByClassName('line-container');
+  amountTag = document.getElementsByTagName('tr');
+  console.log(amountTag.length);
 
-  for (let line = 0; line < lineContainer.length; line += 1) {
-    for (let index = 0; index < lineContainer.length; index += 1) {
+  for (let line = 0; line < amountTag.length; line += 1) {
+    for (let index = 0; index < amountTag.length; index += 1) {
       const squarePixel = document.createElement('td');
       squarePixel.className = 'pixel';
-      lineContainer[line].appendChild(squarePixel);
+      amountTag[line].appendChild(squarePixel);
     }
   }
 }
-
-columnBoardGeneration();
 
 function getInputText() {
   let buttonVqv = document.getElementById('generate-board');
@@ -65,7 +67,6 @@ function getInputText() {
   buttonVqv.addEventListener('click', setAmountPixels);
   function setAmountPixels() {
     let myInput = parseInt(document.getElementById('board-size').value); 
-
     if ((myInput > 4) && (myInput < 51)) {
       lineBoardGeneration(myInput);
     } else {
@@ -73,6 +74,7 @@ function getInputText() {
     }
   }
 }
+
 
 
 function selectColor() {
