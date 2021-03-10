@@ -50,6 +50,9 @@ function changePlaceClassSelected() {
 }
 
 function getDivColor() {
+  // Para essa função contei com ajuda dos colegas: Felipe Muller e Andre Jacques via thread.
+  // Também com a leitura do seguinte link:
+  // https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
   const divSelected = document.querySelector('.selected');
   const divBackground = window.getComputedStyle(divSelected).getPropertyValue('background-color');
   return divBackground;
@@ -66,6 +69,11 @@ function colorPixels() {
   });
 }
 
+function clickButton() {
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', initiateColor);
+}
+
 window.onload = function startSession() {
   initiateColor();
   updatePixelSize();
@@ -73,4 +81,5 @@ window.onload = function startSession() {
   createClassSelected();
   changePlaceClassSelected();
   colorPixels();
+  clickButton();
 };

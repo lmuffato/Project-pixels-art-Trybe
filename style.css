@@ -35,3 +35,7 @@ table {
   width: 25px;
   height: 25px;
 }
+
+#clear-board {
+  margin: 10px;
+}
