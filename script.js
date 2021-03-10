@@ -10,3 +10,15 @@ function selecionaCorPixel() {
   });
 }
 selecionaCorPixel();
+
+function pintarPixel() {
+  const pegarBoard = document.querySelector('#pixel-board');
+  pegarBoard.addEventListener('click', function pintando(event) {
+    if (event.target.className === 'pixel') {
+      const pegaSelected = document.querySelector('.selected');
+      const color = getComputedStyle(pegaSelected).getPropertyValue('background-color');
+      event.target.style.backgroundColor = color;
+    }
+  });
+}
+pintarPixel();
