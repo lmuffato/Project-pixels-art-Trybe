@@ -69,7 +69,10 @@ function getInputText() {
     console.log(myInput);
     if (myInput >= 5 && myInput <= 50) {
       lineBoardGeneration(myInput);
-    } else if ((myInput > 0 && myInput < 5) || myInput > 50 ) {
+    } else if (myInput > 50 ) {
+      myInput = 50;
+      lineBoardGeneration(myInput);
+    } else if (myInput < 5) {
       myInput = 5;
       lineBoardGeneration(myInput);
     } else {
