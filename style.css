@@ -13,11 +13,11 @@ th {
   border-collapse: collapse;
 }
 
-td {
+.pixel {
   background-color: white;
-  border: 1px solid;
-  width: 41px;
-  height: 41px;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
 }
 
 #clear-board {

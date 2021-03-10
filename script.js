@@ -16,15 +16,16 @@ function setColor() {
         paletteColor[index2].classList.remove('selected');
       }
       paletteColor[index].classList.add('selected');
-    })
+    });
   }
 }
 setColor();
 
+// Requisito 9
 const button = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
 button.addEventListener('click', () => {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
   }
-})
+});
