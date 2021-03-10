@@ -1,15 +1,18 @@
+const getBlack = document.querySelector('#black');
+const getYellow = document.querySelector('#yellow');
+const getBlue = document.querySelector('#blue');
+const getMagenta = document.querySelector('#magenta');
 
-const getBlack = document.getElementById('black');
-const getYellow = document.getElementById('yellow');
-const getBlue = document.getElementById('blue');
-const getMagenta = document.getElementById('magenta');
-
-function defaultColor() {
-  const defaultBlackClass = getBlack.className = 'color selected';
-  return defaultBlackClass;
+function getColor() {
+  getBlack.style.backgroundColor = 'black';
+  getYellow.style.backgroundColor = '#fee440';
+  getBlue.style.backgroundColor = '#00bbf9';
+  getMagenta.style.backgroundColor = '#f15bb5';
 }
 
-defaultColor();
+getColor();
+
+getBlack.addEventListener('click', setColorBlack);
 
 function setColorBlack() {
   getBlack.className = 'color selected';
@@ -17,8 +20,6 @@ function setColorBlack() {
   getYellow.className = 'color';
   getBlue.className = 'color';
 }
-
-getBlack.addEventListener('click', setColorBlack);
 
 function setColorMagenta() {
   getBlack.className = 'color';
@@ -46,3 +47,16 @@ function setColorBlue() {
 }
 
 getBlue.addEventListener('click', setColorBlue);
+
+function colorPixel() {
+  const pixel = document.querySelector('#pixel-board');
+
+  pixel.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
+    const localPixel = event.target;
+    console.log(localPixel);
+    localPixel.style.backgroundColor = selectedColor;
+  });
+}
+
+colorPixel();

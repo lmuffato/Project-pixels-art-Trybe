@@ -2,27 +2,13 @@
   border: solid black 1px;
   width: 40px;
   height: 40px;
-}
-
-#black {
-  background-color: black;
-}
-
-#magenta {
-  background-color: #f15bb5;
-}
-
-#yellow {
-  background-color: #fee440;
-}
-
-#blue {
-  background-color: #00bbf9;
+  display: table-cell;
 }
 
 .pixel {
   height: 40px;
   width: 40px;
+  display: table-cell;
   border: solid black 1px;
   background-color: white;
 }
