@@ -8,6 +8,7 @@
   width: 40px;
   height: 40px;
   background-color: #fff;
+  border: solid #000 1px;
 }
 
 #pixel-board {
