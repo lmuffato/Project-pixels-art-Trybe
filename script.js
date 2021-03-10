@@ -69,13 +69,13 @@ function resizePixelBoard() {
 }
 
 // Bloco de ações de inicialização do código
-for (let color = colorsOfPalette.length; color < simpleColors.length; color += 1) {
-  const newColor = document.createElement('th');
-  newColor.className = 'color';
-  newColor.id = `color${color}`;
-  palette.appendChild(newColor);
-}
-montPalette(simpleColors);
+// for (let color = colorsOfPalette.length; color < simpleColors.length; color += 1) {
+//   const newColor = document.createElement('th');
+//   newColor.className = 'color';
+//   newColor.id = `color${color}`;
+//   palette.appendChild(newColor);
+// }
+// montPalette(simpleColors);
 
 // bloco de carregamento do escutadores de eventos
 
