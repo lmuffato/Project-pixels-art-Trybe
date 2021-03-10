@@ -1,8 +1,21 @@
+function generateRGB() {
+  let rgb = '';
+  rgb += ('rgb(');
+  rgb += (Math.ceil(Math.random() * 255));
+  rgb += (', ');
+  rgb += (Math.ceil(Math.random() * 255));
+  rgb += (', ');
+  rgb += (Math.ceil(Math.random() * 255));
+  rgb += (')');
+
+  return rgb;
+}
+
 const colorsObj = {
   black: 'black',
-  red: 'red',
-  blue: 'blue',
-  green: 'green',
+  color2: generateRGB(),
+  color3: generateRGB(),
+  color4: generateRGB(),
   selected: 'black',
 };
 
@@ -31,10 +44,11 @@ function addColorsPalette(colors) {
   const colorPalette = document.getElementById('color-palette');
 
   Object.keys(colors).forEach((key) => {
+    console.log(key);
     if (key !== 'selected') {
       const newColor = document.createElement('div');
       newColor.className = 'color';
-      newColor.style.backgroundColor = key;
+      newColor.style.backgroundColor = colors[key];
       newColor.addEventListener('click', changeColor);
       colorPalette.appendChild(newColor);
     }
