@@ -38,9 +38,29 @@ function setPixelColor() {
   }
 }
 
+function createClearBtn() {
+  const header = document.querySelector('#header');
+  const btnClear = document.createElement('button');
+  btnClear.id = 'clear-board';
+  btnClear.innerText = 'Limpar';
+  header.appendChild(btnClear);
+}
+
+function clearBoard() {
+  const btn = document.getElementById('clear-board');
+  btn.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = 'white'
+    }
+  })
+}
+
 window.onload = () => {
   setPixels();
   setBlackSelected();
   setSelectedTask();
   setPixelColor();
+  createClearBtn();
+  clearBoard()
 };
