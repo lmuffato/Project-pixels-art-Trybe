@@ -64,7 +64,7 @@
 }
 
 .selected {
-
+padding: 0;
 }
 
 form {
@@ -90,7 +90,6 @@ input {
   display: inline-block;
   box-sizing: content-box;
   margin-left: 3px;
-  
 }
 
 #pixel-board {

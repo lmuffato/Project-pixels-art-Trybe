@@ -1,9 +1,3 @@
-let palette = document.getElementsByClassName('color');
-const blackPalette = palette[0];
-let palette2 = palette[1];
-let palette3 = palette[2];
-let palette4 = palette[3];
-
 function GenerateColor() {
   let red = parseInt(Math.random * 255);
   let green = parseInt(Math.random * 255);
@@ -12,13 +6,27 @@ function GenerateColor() {
   console.log(color);
 }
 
-const square = document.getElementById('pixel-board');
+// resolvido a partir da lógica do código da Beatriz Barbosa https://app.slack.com/client/TMDDFEPFU/C01L16B9XC7/thread/C01L16B9XC7-1615333261.329000
+function SelectingColor(){
+  let selectedColor = document.querySelector('selected');
+  let palette = document.querySelectorAll('color');
+  for (index = 0; index<palette.length; index += 1){
+    palette[index].addEventListener('click', function(){
+    palette[index].classList.add = 'selected';
+    selectedColor.className = 'color';
+    });
+  }
+  let selected = document.getElementsByClassName('selected');
+  return selected;
+}
+
 
 function PaintingSquares() {
   let paint = Element.querySelector('.pixel');
   paint.style.backgroundColor = 'rgb(0, 0, 0)';
 }
 
+const square = document.getElementById('pixel-board');
 square.addEventListener('click', PaintingSquares);
 
 function GenerateBoard(number) {
