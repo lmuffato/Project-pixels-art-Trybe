@@ -57,5 +57,5 @@ function paintOfWhite() {
     pixels[index9].style.background = 'white';
   }
 }
-const restarButton = document.getElementById('restart');
+const restarButton = document.getElementById('clear-board');
 restarButton.addEventListener('click', paintOfWhite);
