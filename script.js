@@ -1,11 +1,11 @@
 const PIXEL_BOARD = 'pixel-board';
 const COLOR_PALETTE = 'color-palette';
+const CLEAR_BOARD = 'clear-board';
+const BTN_CONTAINER = 'btn-container';
 const COLOR_COUNT = 4;
 const CANVAS_SIZE = { width: 5, height: 5 };
 const PIXEL_SIZE = { width: '40px', height: '40px' };
 const PIXEL_COLOR = 'white';
-const CLEAR_BOARD = 'clear-board';
-const BTN_CONTAINER = 'btn-container';
 
 function clearPixelBoard() {
   const pixels = document.getElementById(PIXEL_BOARD).children;
@@ -33,7 +33,6 @@ function setInitialColor() {
   firstColor.classList.toggle('selected');
 }
 function changePaletteColor(e) {
-  // Only changes something if the event was fired from the correct place
   if (e.target.classList.contains('color')) {
     const lastSelected = document.querySelector(
       `#${COLOR_PALETTE} > .selected`,
@@ -85,6 +84,8 @@ function createPixels(n) {
   }
 }
 function initializePixelBoard(x, y) {
+  const pixelBoard = document.getElementById(PIXEL_BOARD);
+  pixelBoard.style.gridTemplateColumns = `repeat(${CANVAS_SIZE.width}, auto)`;
   createPixels(x * y);
   createPixelsListener();
   // Everything else is done 'automagically' by display flex config

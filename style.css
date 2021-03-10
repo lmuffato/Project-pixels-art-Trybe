@@ -35,9 +35,8 @@ body {
 
 .pixel-board {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
   justify-content: center;
-  }
+}
 
 .pixel {
   border: 1px;
