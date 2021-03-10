@@ -22,7 +22,7 @@ function selectOrange() {
   qualCor = 'orange';
 }
 function selectOlive() {
-  document.getElementsByClassName('color')[3].className = 'color';
+  document.getElementsByClassName('color')[2].classList.add('selected');
   qualCor = 'olive';
 }
 function selectBlue() {
