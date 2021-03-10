@@ -6,13 +6,13 @@ function setColor (){
 }
 setColor();
 
-// pratica 7
+// pratica 7 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_target
 function changeClass (){
-let click = document.querySelector('#color-palette');
+let click = document.getElementById('color-palette');
 click.addEventListener('click', function (event) {
     let color = event.target;
     document.querySelector('.selected').className = 'color';
-    color.className += '.selected';
+    color.className += ' selected';
     });
 }
 changeClass();
