@@ -34,5 +34,20 @@ height: 40px;
 }
 
 .selected {
-    
+}
+
+.pixel-black {
+  background-color: black;    
+}
+
+.pixel-green {
+  background-color: green;    
+}
+
+.pixel-yellow {
+  background-color: yellow;
+}
+
+.pixel-blue {
+  background-color: blue;  
 }

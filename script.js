@@ -1,4 +1,4 @@
-
+// funções dedicadas á seleção de cores na paleta.
 let element1 = document.getElementById("palette-black");
 let element2 = document.getElementById("palette-green");
 let element3 = document.getElementById("palette-yellow");
@@ -35,3 +35,36 @@ element3.classList.remove('selected');
 element4.classList.remove('selected');
 }
 element1.addEventListener('click',addSelectedBlack);
+
+// funções dedicadas a pintura dos blocos em branco.
+
+let elementsPixels = document.querySelectorAll('.pixel');
+for (let i = 0; i < elementsPixels.length; i += 1){
+function pixelWithSelected(e){
+ 
+  elementsPixels[i].classList.add('selected');
+  let colorPallet = document.getElementById('color-palette');
+ 
+for (let index = 0; index < colorPallet.children.length; index += 1){   
+     
+if(colorPallet.children[index].className == 'color selected'){
+  if(colorPallet.children[index].id === 'palette-black'){
+    e.target.style.backgroundColor = 'black';
+  }  
+  if(colorPallet.children[index].id === 'palette-green'){
+    e.target.style.backgroundColor = 'green';
+  }
+  if(colorPallet.children[index].id === 'palette-yellow'){
+    e.target.style.backgroundColor = 'yellow';
+  } 
+  if(colorPallet.children[index].id === 'palette-blue'){
+    e.target.style.backgroundColor = 'blue';
+  }  
+// console.log(colorPallet.children[index].style)
+}
+}    
+}
+elementsPixels[i].addEventListener('click',pixelWithSelected); 
+}
+
+
