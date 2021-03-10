@@ -1,13 +1,13 @@
-let colorFirst = document.querySelectorAll('div')[1];
+const colorFirst = document.querySelectorAll('div')[1];
 colorFirst.style.backgroundColor = 'red';
 
-let colorSecond = document.querySelectorAll('div')[2];
+const colorSecond = document.querySelectorAll('div')[2];
 colorSecond.style.backgroundColor = 'green';
 
-let colorThird = document.querySelectorAll('div')[3];
+const colorThird = document.querySelectorAll('div')[3];
 colorThird.style.backgroundColor = 'blue';
 
-let colorFourth = document.querySelectorAll('div')[4];
+const colorFourth = document.querySelectorAll('div')[4];
 colorFourth.style.backgroundColor = 'yellow';
 
 colorFirst.style.backgroundColor = 'black';
@@ -30,9 +30,19 @@ function clean() {
 }
 
 for (let i = 0; i < classColor.length; i += 1) {
-    classColor[i].addEventListener('click',(clique)=>{ 
+    classColor[i].addEventListener('click',(clique)=>{   
     clean()
     clique.target.classList.add('selected')
 
     })
 }
+
+let toColor = document.querySelectorAll('.pixel')
+
+for (let i = 0; i < toColor.length; i +=1) {
+toColor[i].addEventListener('click',(colorTo)=>{
+   toColor[i].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+   })
+    
+} 
+
