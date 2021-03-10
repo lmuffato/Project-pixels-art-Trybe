@@ -1,9 +1,4 @@
 
- window.onload = function () {
-    selecionaCor ();
-  }; 
-
-
  function selecionaCor (){
 
     let SelecionadoAntes = document.querySelector('.selected');
@@ -23,6 +18,7 @@
     let selecionado = document.querySelector('.selected');
     return selecionado;
  }
+
 
 /*
  function colocaCor (){
