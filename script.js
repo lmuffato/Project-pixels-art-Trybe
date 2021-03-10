@@ -7,7 +7,7 @@ function createSquares() {
   }
 }
 
-function generateColor(){
+function generateColor() {
   const r = Math.ceil(Math.random() * 255);
   const g = Math.ceil(Math.random() * 255);
   const b = Math.ceil(Math.random() * 255);
