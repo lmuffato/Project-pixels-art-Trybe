@@ -27,8 +27,15 @@ function updatePixelBorder() {
   });
 }
 
+function createClassSelected() {
+  const divSquares = document.querySelector('#color-palette');
+  const blackSquare = divSquares.firstElementChild;
+  blackSquare.classList.add('selected');
+}
+
 window.onload = function startSession() {
   initiateColor();
   updatePixelSize();
   updatePixelBorder();
+  createClassSelected();
 };
