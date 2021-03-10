@@ -58,10 +58,9 @@ function changeColorBox() {
 changeColorBox();
 
 function clearBoxes() {
-  const spaceButton = document.getElementById('workspace');
-  const buttonClear = document.createElement('button');
+  const buttonClear = document.getElementsByTagName('button')[0];
+  buttonClear.id = 'clear-board';
   buttonClear.innerText = 'Limpar';
-  spaceButton.appendChild(buttonClear);
   buttonClear.addEventListener('click', () => {
     const clearColors = document.getElementsByClassName('pixel');
     for (let index = 0; index < clearColors.length; index += 1) {
