@@ -149,7 +149,7 @@ main #color-palette .color:last-child {
 }
 
 main #color-palette .color.selected {
-  background-color: black;
+  border: 6px solid black;
 }
 
 main #pixel-board {
