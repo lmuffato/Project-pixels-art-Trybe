@@ -6,11 +6,13 @@
     border-color: black;
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 #color-palette {
-    width:600px; 
-    height:100px; 
+    width:200px; 
+    height:50px; 
+    
 }
 
 .pixel {
@@ -29,3 +31,6 @@
     color: white;
 }
 
+#clear-board{
+    cursor: pointer;
+}
