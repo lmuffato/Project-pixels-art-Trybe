@@ -1,16 +1,17 @@
-addCliclListener();
 
 function addCliclListener() {
-  let colorElement = document.getElementsByClassName('color');
+  const colorElement = document.getElementsByClassName('color');
 
-  for(key in colorElement) {
+  for (let key in colorElement) {
     colorElement[key].addEventListener('click', changeSelected);
   }
 }
 
 function changeSelected(eventOrigin) {
-  let selectedNow = document.querySelector('.selected');
+  const selectedNow = document.querySelector('.selected');
   selectedNow.classList.remove('selected');
-  let clickedNow = eventOrigin.target;
+  const clickedNow = eventOrigin.target;
   clickedNow.classList.add('selected');
 }
+
+addCliclListener();
