@@ -17,7 +17,8 @@ const pixels = document.querySelectorAll('.pixel');
 
 function clickToSetColor(e) {
     const selectedItem = document.querySelector('.selected');
-    const selectedColor = window.getComputedStyle(selectedItem).getPropertyValue('background-color');
+    const selectedColor = window.getComputedStyle(selectedItem)
+    .getPropertyValue('background-color');
     e.target.style.backgroundColor = selectedColor;
 }
 
