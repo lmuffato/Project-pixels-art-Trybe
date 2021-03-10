@@ -1,15 +1,13 @@
-// window.onload = function () {
+window.onload = function () {
+  const paletteBlack = document.querySelector('.selected');
+  const stylesPalette = window.getComputedStyle(paletteBlack).getPropertyValue("background-color");
 
-
-
-// }
+  colorPixel(stylesPalette);
+}
+// window.getComputedStyle(element).getPropertyValue("background-color");
 
 const pixelBox = document.getElementsByClassName('pixel');
 const paletasDeCor = document.querySelectorAll('#color-palette div')
-const paletteBlack = document.querySelector('.palette-black');
-const paletteRed = document.querySelector('.palette-red');
-const paletteBlue = document.querySelector('.palette-blue');
-const paletteGreen = document.querySelector('.palette-green');
 
 function classColor() {
   for (let index = 0; index < paletasDeCor.length; index += 1) {
@@ -30,54 +28,6 @@ function classColor() {
   }
 }
 classColor();
-
-// // Retorna a cor selecionada Black
-// function selectColorBlack() {
-//   const paletteBlack = document.querySelector('.palette-black');
-//   paletteBlack.addEventListener('click', function(evento) {
-//     if (evento.target) {
-//       colorPixel('black');
-//       console.log('click no Preto');
-//     }
-//   });
-// }
-// selectColorBlack();
-
-// // Retorna a cor selecionada red
-// function selectColorRed() {
-//   const paletteRed = document.querySelector('.palette-red');
-//   paletteRed.addEventListener('click', function(evento) {
-//     if (evento.target) {
-//       colorPixel('red');
-//       console.log('click no Vermelho');
-//     }
-//   });
-// }
-// selectColorRed();
-
-// // Retorna a cor selecionada blue
-// function selectColorBlue() {
-//   const paletteBlue = document.querySelector('.palette-blue');
-//   paletteBlue.addEventListener('click', function(evento) { 
-//     if (evento.target) {
-//       colorPixel('blue');
-//       console.log('click no Azul');
-//     }
-//   });
-// }
-// selectColorBlue();
-
-// // Retorna a cor selecionada green
-// function selectColorGreen() {
-//   const paletteGreen = document.querySelector('.palette-green');
-//   paletteGreen.addEventListener('click', function(evento) {
-//     if (evento.target) {
-//       colorPixel('green');
-//       console.log('click no Verde');
-//     }
-//   });
-// }
-// selectColorGreen();
 
 // Função que vai selecionar todas paletas num For
 function selectColorsPalette() {
@@ -133,5 +83,4 @@ function clearPixel() {
     }
   }); 
 }
-
 clearPixel();
