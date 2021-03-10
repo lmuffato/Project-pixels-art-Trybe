@@ -109,36 +109,22 @@ function makeButtonReset() {
   secBtn.appendChild(newButton);
 }
 
-function msgError() {
-  const newMsg = document.createElement('label');
-  newMsg.id = 'msg-error';
-  newMsg.innerText = 'Você deve inserir um valor entre 5 e 50';
-  return newMsg;
-}
-
-function addError() {
-  const secBtn = document.getElementById('grid-size');
-  const item = document.getElementById('msg-error');
-  if (item === null) {
-    secBtn.appendChild(msgError());
+function round(number) {
+  if (number < 5) {
+    return 5;
   }
-}
-
-function addButton(e) {
-  const item = document.getElementById('msg-error');
-  if (item !== null) {
-    item.remove();
+  if (number > 50) {
+    return 50;
   }
-  makePixelBoard(e);
 }
 
 function addBtnOrError(e) {
   if (e === '') {
     alert('Board inválido!');
   } else if (e < 5 || e > 50) {
-    addError();
+    makePixelBoard(round(e));
   } else {
-    addButton(e);
+    makePixelBoard(e);
   }
 }
 
