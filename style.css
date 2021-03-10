@@ -36,9 +36,9 @@ body {
   padding: 20px;
   background-color: var(--bg-title);
   color: var(--font-title);
-  border-radius: 0 0 30px 40px;
+  border-radius: 0px 0px 30px 40px;
   box-shadow: 10px 10px 20px gray;
-  font-family: Redressed, cursive;
+  font-family: 'Redressed', cursive;
 }
 
 main {
@@ -77,10 +77,8 @@ main {
 }
 
 @keyframes zoom {
-
-  0% { transform: scale(1); }
-
-  100% { transform: scale(1.1); }
+  0%    {transform: scale(1.0)};
+  100%  {transform: scale(1.1)};
 }
 
 .selected {
