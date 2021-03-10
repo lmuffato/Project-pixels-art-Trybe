@@ -8,8 +8,8 @@ function GenerateColor() {
 
 // resolvido a partir da lógica do código da Beatriz Barbosa https://app.slack.com/client/TMDDFEPFU/C01L16B9XC7/thread/C01L16B9XC7-1615333261.329000
 function SelectingColor(){
-  let selectedColor = document.querySelector('selected');
-  let palette = document.querySelectorAll('color');
+  let selectedColor = document.querySelector('.selected');
+  let palette = document.querySelectorAll('.color');
   for (index = 0; index<palette.length; index += 1){
     palette[index].addEventListener('click', function(){
     palette[index].classList.add = 'selected';
