@@ -16,13 +16,13 @@
         SelecionadoAntes.classList.remove = 'selected';
         SelecionadoAntes.className = 'color'; // substituo a classe
         });
-    }
+    }""
 
     let selecionado = document.getElementsByClassName('selected');
     return selecionado;
  }
 
-
+/*
  function colocaCor (){
 
     let pixelArray = document.querySelectorAll('.pixel');
@@ -39,3 +39,4 @@
 function resetaCor (){
 
  } 
+*/
