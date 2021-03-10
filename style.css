@@ -9,7 +9,7 @@ body {
 }
 
 #color-palette {
-  display: inline;
+  display: block;
 }
 
 .color {
@@ -35,8 +35,15 @@ body {
   background-color: yellow;
 }
 
-#clear-board {
-  display: block;
+.buttom {
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  padding: 3px;
+}
+
+#board-size {
+  display: inline-block;
+  width: 60px;
   margin: 5px 5px 5px 0;
   padding: 3px;
 }
