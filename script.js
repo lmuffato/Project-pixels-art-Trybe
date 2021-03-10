@@ -63,7 +63,7 @@ function clear() {
   const bttn = document.getElementById('clear-board');
 
   bttn.addEventListener('click', () => {
-    for (let index = 1; index < pixel.length; index += 1) {
+    for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.backgroundColor = 'white';
     }
   });
