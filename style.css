@@ -11,7 +11,7 @@ table {
   border-collapse: collapse;
 }
 
-table , .color , .pixel {
+.pixel , .color {
   border: 1px solid black;
 }
 
@@ -26,5 +26,6 @@ table , .color , .pixel {
 .pixel {
   height: 40px;
   width: 40px;
+  box-sizing:border-box;
   background-color: white;
 }
