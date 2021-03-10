@@ -68,10 +68,10 @@ function clickColor() {
   });
 }
 clickColor();
-
+// Requisito 9
 function buttonClear(name) {
   const button = document.createElement('button');
-  document.body.appendChild(button);
+  document.getElementsByTagName('section')[0].appendChild(button);
   button.id = 'clear-board';
   button.innerText = name;
   button.addEventListener('click', () => {
