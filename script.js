@@ -1,5 +1,6 @@
 const paleteColors = document.querySelector('#color-palette');
 const tablePixels = document.querySelector('#pixel-board');
+let eSelected = document.getElementsByClassName('color');
 
 function generateColors() {
   const rgb1 = Math.floor(Math.random() * 255);
@@ -18,6 +19,10 @@ function createBox() {
   }
   paleteColors.firstElementChild.style.backgroundColor = 'black';
 }
+
+window.onload = () => {
+  eSelected[0].className = 'selected';
+};
 
 function createTablePixels() {
   for (let i = 0; i < 5; i += 1) {

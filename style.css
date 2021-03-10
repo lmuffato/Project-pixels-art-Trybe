@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.color {
+.color , .selected {
   width: 15px;
   height: 15px;
   border: 1px solid black;
