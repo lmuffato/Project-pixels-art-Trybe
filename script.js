@@ -97,7 +97,19 @@ function changeSizeBoard() {
   addListenerPixel();
 }
 
+function generateColors() {
+  const colorPalette = document.getElementById('color-palette');
+  for (let i = 1; i < colorPalette.childElementCount; i += 1) {
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    colors[i].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    console.log(colors[i].style.backgroundColor);
+  }
+}
+
 window.onload = function init() {
+  generateColors();
   addListenerPaletteColors();
   addListenerPixel();
   buttonClearBoard.addEventListener('click', clearBoard);
