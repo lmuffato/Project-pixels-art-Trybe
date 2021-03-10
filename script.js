@@ -1,3 +1,4 @@
+let dimension = 25;
 function addPaletteListener() {
   const colorElement = document.getElementsByClassName('color');
 
@@ -11,6 +12,23 @@ function changeSelected(eventOrigin) {
   selectedNow.classList.remove('selected');
   const clickedNow = eventOrigin.target;
   clickedNow.classList.add('selected');
+}
+
+function makeBoard(dim) {
+  const board = document.getElementById('pixel-board');
+
+  for (let indexLine = 0; indexLine < dim; indexLine +=1) {
+    const creatingLine = document.createElement('div');
+    creatingLine.className = 'lines';
+    board.appendChild(creatingLine);
+    let createdLine = document.getElementsByClassName('lines');
+
+    for (let indexColum = 0; indexColum < dim; indexColum +=1) {
+      const creatingPixel = document.createElement('div');
+      creatingPixel.className = 'pixel';
+      createdLine[indexLine].appendChild(creatingPixel);
+    }
+  }
 }
 
 function addPixelListener() {
@@ -40,5 +58,8 @@ function cleanBoard() {
 }
 
 addPaletteListener();
+makeBoard(dimension);
 addPixelListener();
 addButtomListener();
+
+document.querySelector('.ingredient-list').appendChild(document.createElement('li').innerText = '5 ovos')

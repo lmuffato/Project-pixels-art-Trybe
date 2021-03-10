@@ -8,12 +8,15 @@
 
 #pixel-board {
   /* height: fit-content;
-  width: fit-content;
-  box-sizing: border-box;
-  border: 20px solid black;
+  width: fit-content; */
+  border: 20px solid teal;
   padding: 20px;
-  text-align: center; */
+  text-align: center;
   margin-top: 10px;
+}
+
+#outOfBoard {
+  text-align: center;
 }
 
 .pixel {
