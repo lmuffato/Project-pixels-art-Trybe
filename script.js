@@ -26,22 +26,22 @@ function eventChangingColorsPalette() {
   let colorBlue = document.getElementsByClassName('color')[2];
   let colorGreen = document.getElementsByClassName('color')[3];
 
-  colorBlack.addEventListener('click', function() {
+  colorBlack.addEventListener('click', function () {
     getClassSelected = document.getElementsByClassName('selected')[0];
     getClassSelected.classList.remove('selected');
     colorBlack.classList.add('selected');
   });
-  colorRed.addEventListener('click', function() {
+  colorRed.addEventListener('click', function () {
     getClassSelected = document.getElementsByClassName('selected')[0];
     getClassSelected.classList.remove('selected');
     colorRed.classList.add('selected');
   });
-  colorBlue.addEventListener('click', function() {
+  colorBlue.addEventListener('click', function () {
     getClassSelected = document.getElementsByClassName('selected')[0];
     getClassSelected.classList.remove('selected');
     colorBlue.classList.add('selected');
   });
-  colorGreen.addEventListener('click', function() {
+  colorGreen.addEventListener('click', function () {
     getClassSelected = document.getElementsByClassName('selected')[0];
     getClassSelected.classList.remove('selected');
     colorGreen.classList.add('selected');
