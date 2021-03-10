@@ -167,11 +167,9 @@ function colorPixel() {
 }
 colorPixel();
 
-// Requirement 9;
-
 function creatButton() {
+  const selectDivPixel = document.querySelector('#pixel-board');
   const selectorBody = document.querySelector('body');
-  const selectDivPixel = document.querySelector('#pixel-board')
   const createButton = document.createElement('button');
   createButton.id = 'clear-board';
   createButton.innerHTML = 'Limpar';
@@ -192,3 +190,29 @@ function clearPixels() {
 clearPixels();
 
 // Requirement 10 Bonus***;
+
+function createButtonVQV() {
+  const selectDivPixel = document.querySelector('#pixel-board');
+  const selectorBody = document.querySelector('body');
+  const createButton = document.createElement('button');
+  createButton.id = 'generate-board';
+  createButton.innerHTML = 'VQV';
+  selectorBody.insertBefore(createButton, selectDivPixel);
+}
+createButtonVQV();
+
+function createInputNumber() {
+  const selectDivPixel = document.querySelector('#pixel-board');
+  const selectorBody = document.querySelector('body');
+  const createInput = document.createElement('input');
+  createInput.id = 'board-size';
+  createInput.type = 'number';
+  createInput.min = '5';
+  createInput.max = '50';
+  selectorBody.insertBefore(createInput, selectDivPixel);
+}
+createInputNumber();
+
+function createDivsBonus() {
+
+}
