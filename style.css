@@ -34,3 +34,12 @@
 table {
   border-spacing: 0;
 }
+
+#clear-board {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
