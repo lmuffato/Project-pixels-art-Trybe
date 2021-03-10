@@ -1,12 +1,23 @@
 const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const clearBtn = document.getElementById('clear-board');
-const paletteColors = ['black', 'blue', 'red', 'green'];
 const generateBoardBtn = document.getElementById('generate-board');
 let selectedColor = 0;
 let boardSize = 5;
 
 // Functions
+function randomNumber1To255() {
+  const randomNumber = Math.ceil(Math.random() * 255);
+  return randomNumber;
+}
+
+function generateRandomColor() {
+  return `rgb(${randomNumber1To255()}, ${randomNumber1To255()}, ${randomNumber1To255()})`;
+}
+
+const paletteColors = ['black', generateRandomColor(),
+  generateRandomColor(), generateRandomColor()];
+
 function setPaletteColors() {
   for (let index = 0; index < paletteColors.length; index += 1) {
     const colorDiv = document.createElement('div');
@@ -42,7 +53,7 @@ function setPixels() {
 function changeSelection(e) {
   const colorDivs = document.querySelectorAll('.color');
   const clickedColor = e.target.style.backgroundColor;
-  selectedColor = paletteColors.findIndex((num) => num === clickedColor);
+  selectedColor = paletteColors.findIndex((color) => color === clickedColor);
   for (let index = 0; index < colorDivs.length; index += 1) {
     colorDivs[index].className = 'color';
   }
