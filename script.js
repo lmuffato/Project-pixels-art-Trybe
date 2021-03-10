@@ -38,3 +38,13 @@ function paintBoard(evt) {
 
 const pixelSelect = document.querySelector('#pixel-board');
 pixelSelect.addEventListener('click', paintBoard);
+
+function clearButton() {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
+
+const clear = document.querySelector('#clear-board');
+clear.addEventListener('click', clearButton);
