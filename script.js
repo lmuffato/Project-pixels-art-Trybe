@@ -24,12 +24,12 @@ function colorSquares() {
   squares[0].className = 'color selected';
 }
 
-function createBoard() {
+function createBoard(number) {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 0; index < 5; index += 1) {
+  for (let index = 0; index < number; index += 1) {
     const row = document.createElement('tr');
     pixelBoard.appendChild(row);
-    for (let index2 = 0; index2 < 5; index2 += 1) {
+    for (let index2 = 0; index2 < number; index2 += 1) {
       const column = document.createElement('td');
       column.className = 'pixel';
       const lastRow = pixelBoard.lastChild;
@@ -39,7 +39,7 @@ function createBoard() {
 }
 
 function selectColor(click) {
-  let event = click.target;
+  const event = click.target;
   if (event.className === 'color') {
     const currentSelected = document.getElementsByClassName('selected');
     currentSelected[0].className = 'color';
@@ -50,7 +50,7 @@ function selectColor(click) {
 const colorSelect = document.getElementById('color-palette');
 colorSelect.addEventListener('click', selectColor);
 
-function getColorSelected () {
+function getColorSelected() {
   const classSelected = document.getElementsByClassName('selected');
   const colorSelected = window.getComputedStyle(classSelected[0], null).getPropertyValue('background-color');
   return colorSelected;
@@ -67,17 +67,49 @@ function paintBox(click) {
 const pixelSelect = document.getElementById('pixel-board');
 pixelSelect.addEventListener('click', paintBox);
 
-function clearBoard(){
+function clearBoard() {
   const board = document.getElementsByClassName('pixel');
-  for (let index = 0; index < board.length; index += 1){
+  for (let index = 0; index < board.length; index += 1) {
     board[index].style.backgroundColor = 'white';
+  }
+}
+function removeAllSquares() {
+  const removeAllSquares = document.getElementById("pixel-board");
+  while (removeAllSquares.firstChild) {
+    removeAllSquares.removeChild(removeAllSquares.lastChild);
+  }
+}
+
+function validBoard(){
+  let numberOfInput = document.querySelector('#board-size').value;
+  if (numberOfInput === '') {
+    alert('Board inválido!');
+    return false;
+  }
+  return true;
+}
+function makeBoard() {
+  let numberOfInput = document.querySelector('#board-size').value;
+  if (validBoard()) {
+    if (numberOfInput < 5) {
+      numberOfInput = 5
+      alert('Tamanho mínimo do Board: 5px');
+      createBoard(numberOfInput);
+    } else if (numberOfInput > 50) {
+      alert('Tamanho máximo do Board: 50px');
+      numberOfInput = 50
+      createBoard(numberOfInput);
+    }
+    removeAllSquares();
+    createBoard(numberOfInput);
   }
 }
 
 function loadPage() {
   createSquares();
   colorSquares();
-  createBoard();
+  createBoard(5);
+  clearBoard();
 }
 
 window.onload = loadPage;
