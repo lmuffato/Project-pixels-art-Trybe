@@ -14,13 +14,13 @@
         paletaCor[index].addEventListener('click', function(){
         paletaCor[index].classList.add = 'selected';  //Adicio uma classe em um elemento que já tem outra classe
         });
-        if(paletaCor[index].classList.add = 'selected'){
+        if(paletaCor[index] == document.querySelector('.selected')){
             SelecionadoAntes.classList.remove = 'selected';
             SelecionadoAntes.className = 'color';    
         }
     }
 
-    let selecionado = document.getElementsByClassName('selected');
+    let selecionado = document.querySelector('.selected');
     return selecionado;
  }
 
