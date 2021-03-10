@@ -1,7 +1,16 @@
+body {
+  background-color: rgb(250, 223, 255);
+}
+
+#board {
+  border: 1px solid black;
+  width: 150px;
+  background-color: lightgoldenrodyellow;
+}
+
 /* Color palette */
 
 #color-palette {
-  background-color: lightgoldenrodyellow;
   padding: 2px 12px;
 }
 
@@ -25,7 +34,5 @@
 }
 
 #table-color {
-  padding: 0px 0px 5px 5px;
-  background-color: lightgoldenrodyellow;
-  width: 145px;
+  padding: 0 0 5px 5px;
 }

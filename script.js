@@ -17,10 +17,10 @@ function colorSquares() {
 
 function createBoard() {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 0; index < 5; index += 1){
-    const row = document.createElement('tr')
+  for (let index = 0; index < 5; index += 1) {
+    const row = document.createElement('tr');
     pixelBoard.appendChild(row);
-    for (let index = 0; index < 5; index += 1){
+    for (let index2 = 0; index2 < 5; index2 += 1) {
       const collumn = document.createElement('td');
       collumn.className = 'pixel';
       const lastRow = pixelBoard.lastChild;
