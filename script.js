@@ -53,8 +53,8 @@ function createInputText() {
   const header = document.querySelector('#header');
   const input = document.createElement('input');
   input.id = 'board-size';
-  input.type = 'text';
-  input.min = 5;
+  input.type = 'number';
+  input.min = 1;
   input.max = 50;
   input.placeholder = 'Digite o número de pixels';
   input.style.marginLeft = '550px';
@@ -78,9 +78,13 @@ function createBoardSize() {
   const btn = document.getElementById('generate-board');
   const input = document.getElementById('board-size');
   btn.addEventListener('click', () => {
-    const number = input.value;
-    deleteBoard();
-    setPixels(number);
+    if (input.value.length === 0) {
+        alert('Board inválido!');
+    } else {
+      const number = input.value;
+      deleteBoard();
+      setPixels(number);
+    }  
   });
 }
 
