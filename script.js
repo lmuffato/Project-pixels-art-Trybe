@@ -1,5 +1,7 @@
+//Declarando variáveis para os elementos que estão no HTML
 const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
+const clearBtn = document.getElementById('clear-board');
 let colors = ['black', 'green', 'blue', 'red'];
 
 function createColorPalette() {
@@ -11,6 +13,35 @@ function createColorPalette() {
     colorPalette.appendChild(newColorInPalette);
   }
 }
+
+createColorPalette();
+document.getElementById('black').classList.add('selected');
+
+function colorSelect(event) {
+  // Remove a classe 'selected' da cor selecionada no momento
+  const currentColor = document.getElementsByClassName('selected')[0];
+  currentColor.classList.remove('selected');
+  // Adiciona a classe selected na nova cor
+  const newColor = event.target;
+  newColor.classList.add('selected');
+}
+
+// Adicionando event handler nas cores da paleta
+const colorsInPalette = document.getElementsByClassName('color');
+for (const color of colorsInPalette) {
+  color.addEventListener('click', colorSelect);
+}
+
+function clearPixels() {
+  // Pinta todos os pixels de branco
+  const allPixels = document.querySelectorAll('.pixel');
+  for (const pixel of allPixels) {
+    pixel.style.backgroundColor = 'white';
+  }
+}
+
+// Adicionando event handler no botao Limpar
+clearBtn.addEventListener('click', clearPixels);
 
 function createPixelBoard(n) {
   // Criando os pixels
@@ -31,50 +62,18 @@ function createPixelBoard(n) {
   }
 }
 
-function selectBlackOnload() {
-  document.getElementById('black').classList.add('selected');
-}
-
-function addEventListenerToColorPalette() {
-  const colorsInPalette = document.getElementsByClassName('color');
-  for (const color of colorsInPalette) {
-    color.addEventListener('click', function colorSelect(event) {
-      // remove the selected class from previous color
-      const currentColor = document.getElementsByClassName('selected')[0];
-      currentColor.classList.remove('selected');
-      // add the selected class to new color
-      const newColor = event.target;
-      newColor.classList.add('selected');
-    });
-  }
-}
+createPixelBoard(5);
 
 function addColorToPixel(event) {
-  let selectedColor = document.getElementsByClassName('selected')[0];
-  selectedColor = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
+  // Pinta o pixel clicado com a cor atualmente selcionada
+  let selectedColor = document.querySelector('.selected').style.backgroundColor;
+  // selectedColor = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
   const selectedPixel = event.target;
   selectedPixel.style.backgroundColor = selectedColor;
 }
 
-function clearPixels() {
-  const allPixels = document.querySelectorAll('.pixel');
-  for (const pixel of allPixels) {
-    pixel.style.backgroundColor = 'white';
-  }
-}
-
-window.onload = function onload() {
-  createColorPalette();
-  addEventListenerToColorPalette();
-  selectBlackOnload();
-};
-
-createPixelBoard(11);
-
+// Adicionando event handler nos pixels
 const allPixels = document.querySelectorAll('.pixel');
 for (const pixel of allPixels) {
-  pixel.addEventListener('click', addColorToPixel());
+  pixel.addEventListener('click', addColorToPixel);
 }
-
-const clearBtn = document.getElementById('clear-board');
-clearBtn.addEventListener('click', clearPixels());
