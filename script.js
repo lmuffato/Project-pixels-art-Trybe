@@ -9,10 +9,17 @@ function removeSelected() {
   }
 }
 
+function removeAnimationPixel() {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.animation = '';
+  }
+}
+
 function selectedColor(event) {
   const paletteElement = event.currentTarget;
   color = window.getComputedStyle(paletteElement).getPropertyValue('background-color');
   removeSelected();
+  removeAnimationPixel();
   paletteElement.className += ' selected';
   colorActive.style.backgroundColor = color;
 }
@@ -26,6 +33,7 @@ function addListenerPaletteColors() {
 function fillPixel(event) {
   const pixelElement = event.currentTarget;
   pixelElement.style.backgroundColor = color;
+  pixelElement.style.animation = 'palette-color 1s';
 }
 
 function addListenerPixel() {
