@@ -37,9 +37,10 @@
 .pixel {
   margin-top: -5px;
   display: inline-block;
-  border: 1px solid;
-  width: 39px;
-  height: 39px;
+  border: 1px solid black;
+  width: 36px;
+  height: 36px;
+  background-color: white;
 }
 
 .line {

@@ -1,5 +1,3 @@
-const selectPixelBoard = document.querySelector('#pixel-board');
-
 function createPixel(className) {
   const pixel = document.createElement('div');
   pixel.className = className;
@@ -11,6 +9,8 @@ function createBreakLine() {
 }
 
 function createBoardPixel() {
+  const selectPixelBoard = document.querySelector('#pixel-board');
+
   for (let line = 0; line < 5; line += 1) {
     for (let index = 0; index < 5; index += 1) {
       const newPixel = createPixel('pixel');
@@ -22,3 +22,17 @@ function createBoardPixel() {
 }
 
 createBoardPixel();
+
+function selectedColor() {
+  const colorPalette = document.querySelectorAll('.color');
+
+  for (let index = 0; index < colorPalette.length; index += 1) {
+    colorPalette[index].addEventListener('click', () => {
+      colorPalette[index].classList.toggle('selected');
+    });
+  }
+  const selected = document.querySelector('selected');
+  return selected;
+}
+
+selectedColor();
