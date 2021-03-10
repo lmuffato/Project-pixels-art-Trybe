@@ -31,5 +31,17 @@ function drawColor() {
   }
 }
 
+function clearButton() {
+  const buttonElement = document.getElementById('clear-board');
+  const pixelBoardItems = document.getElementsByClassName('pixel');
+
+  buttonElement.addEventListener('click', () => {
+    for (let index = 1; index < pixelBoardItems.length; index += 1) {
+      pixelBoardItems[index].style.backgroundColor = 'white';
+    }
+  });
+}
+
 selectColor();
 drawColor();
+clearButton();
