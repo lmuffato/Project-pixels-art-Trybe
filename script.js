@@ -68,3 +68,17 @@ function clickColor() {
   });
 }
 clickColor();
+
+function buttonClear(name) {
+  const button = document.createElement('button');
+  document.body.appendChild(button);
+  button.id = 'clear-board';
+  button.innerText = name;
+  button.addEventListener('click', () => {
+    const clear = document.getElementsByClassName('pixel');
+    for (let index = 0; index < clear.length; index += 1) {
+      clear[index].style.backgroundColor = 'white';
+    }
+  });
+}
+buttonClear('Limpar');

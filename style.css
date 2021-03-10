@@ -24,6 +24,12 @@
 
 h1 {
  text-align: center;
+ background-color: cyan;
+ padding: 10px;
+ margin-top: -10px;
+ margin-left: -10px;
+ margin-right: -10px;
+ font-family: monospace;
 }
 
 section {
@@ -31,5 +37,12 @@ section {
 }
 
 body {
-  background-color: rgb(189, 187, 182);
+  background-color: rgb(130, 194, 231);
+}
+
+#clear-board {
+  margin: auto;
+  display: block;
+  position: relative;
+  left: 20px;
 }
