@@ -1,4 +1,3 @@
-console.log('começou a rodar o javaScript');
 
 // Bloco de declaração de variáveis
 const palette = document.getElementById('color-palette');
@@ -9,13 +8,35 @@ const pixels = document.getElementsByClassName('pixel');
 const buttonClear = document.getElementById('clear-board');
 const sizeValue = document.getElementById('board-size');
 const buttonResize = document.getElementById('generate-board');
+let size = sizeValue.value;
 let colorSelected = document.querySelector('.selected');
 
 // Bloco de declaração de funções
 
+function generateRandomArray() {
+  const randomArray = [0];
+  for (let index = 0; index < colorsOfPalette.length - 1; index += 1) {
+    randomArray.push(Math.ceil(Math.random() * (simpleColors.length - 1)));
+  }
+  randomArray.sort();
+  return randomArray;
+}
+
+function generateRandomOrder() {
+  let orderArray = generateRandomArray();
+  for (let index = 0; index < orderArray.length; index += 1) {
+    if (orderArray[index] === orderArray[index + 1]) {
+      orderArray = generateRandomArray();
+      index = -1;
+    }
+  }
+  return orderArray;
+}
+
 function montPalette(tableColors) {
+  const orderColor = generateRandomOrder();
   for (let color = 0; color < colorsOfPalette.length; color += 1) {
-    colorsOfPalette[color].style.backgroundColor = tableColors[color];
+    colorsOfPalette[color].style.backgroundColor = tableColors[orderColor[color]];
   }
 }
 
@@ -47,17 +68,21 @@ function clearBoard() {
 function sizeIsValid(test) {
   let result = true;
   if (test === '') {
-    alert('Boar inválido!');
+    alert('Board inválido!');
     result = false;
   }
-  if (test < 5 || test > 50) {
-    alert('O tamanho do desenho deve ser entre 5 e 50 pixels');
-    result = false;
+  if (test < 5) {
+    alert('O tamanho mínimo do desenho é 5x5 pixels');
+    size = 5;
+  }
+  if (test > 50) {
+    alert('O tamanho máximo do desenho é 50x50 pixels');
+    size = 50;
   }
   return result;
 }
 function resizePixelBoard() {
-  const size = sizeValue.value;
+  size = sizeValue.value;
   if (sizeIsValid(size)) {
     pixelBord.innerHTML = '';
     for (let index1 = 0; index1 < size; index1 += 1) {
@@ -92,7 +117,6 @@ for (let color = 0; color < colorsOfPalette.length; color += 1) {
 
 for (let pixel = 0; pixel < pixels.length; pixel += 1) {
   pixels[pixel].addEventListener('click', colorPixel);
-  console.log('carregou escutador');
 }
 
 buttonClear.addEventListener('click', clearBoard);
