@@ -28,3 +28,13 @@ function boardGenerator(lineLength) {
 const board = boardGenerator(5);
 console.log(board);
 // eu acho que deu certo
+
+// selecionando...
+// consultei documentação https://www.w3schools.com/jsref/prop_element_classlist.asp
+
+function selectClass(color) {
+  const selectedElement = document.getElementById(color);
+  return selectedElement.classList.add('selected');
+}
+window.onload = selectClass('black');
+console.log(document.getElementById('black').classList)
