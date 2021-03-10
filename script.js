@@ -102,10 +102,10 @@ function createBoardSize() {
   });
   input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && input.value.length > 0) {
-     const number = input.value;   
-     deleteBoard();
-     setPixels(number); 
-     input.value = '';
+      const number = input.value;
+      deleteBoard();
+      setPixels(number);
+      input.value = '';
     }
   });
 }
@@ -130,13 +130,13 @@ function clearBoard() {
 
 function generateRandomColors() {
   const section = document.getElementById('color-palette');
-  for (let index = 1; index <= 3 ; index += 1) {
+  for (let index = 1; index <= 3; index += 1) {
     const color1 = Math.floor(Math.random() * 256);
     const color2 = Math.floor(Math.random() * 256);
-    const color3 = Math.floor(Math.random() * 256);  
+    const color3 = Math.floor(Math.random() * 256);
     const span = document.createElement('span');
     span.className = 'color';
-    span.style.backgroundColor = 'rgb(' + color1 + ', ' + color2 + ', ' + color3 + ')';
+    span.style.backgroundColor = `rgb(${color1}, ${color2}, ${color3})`;
     section.appendChild(span);
   }
 }
