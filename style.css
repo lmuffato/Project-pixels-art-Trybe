@@ -1,0 +1,41 @@
+header {
+  background-color: rgb(43, 128, 153);
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;  
+}
+
+.display-inline {
+  display: inline-block;
+}
+
+#title {
+  color: white;
+  font-size: 35px;
+  font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  margin-top: 30px;
+  margin-left: 130px;
+}
+
+#desenvolvedor {
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  margin-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#logo-trybe {
+  display: inline-block;
+  height: 45px;
+  padding-top: 10px;
+}
+
+#faixa {
+  height: 15px;
+  background-color: rgb(165,165,165);
+  margin-top: -5px;
+}
