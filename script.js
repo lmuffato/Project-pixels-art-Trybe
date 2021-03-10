@@ -16,10 +16,10 @@ window.onload = function () {
 
   function setInicialColor() {
     const initialColor = document.querySelector('#black');
-    initialColor.classList.add('selected')
-
-    setInicialColor();
+    initialColor.classList.add('selected');
   }
+
+  setInicialColor();
 
   function setPixelColor() {
     let board = document.getElementById('pixel-board');
@@ -51,6 +51,6 @@ window.onload = function () {
     })
   }
 
-clearBoard()
+  clearBoard()
 
 }
