@@ -31,14 +31,12 @@
 @keyframes palette-color {
 
   from {
-    background-color: rgba(255, 255, 255, 0.5);
     animation-direction: alternate;
     animation-fill-mode: forwards;
     transform: rotate(0deg);
   }
 
   to {
-    background-color: rgba(255, 255, 255, 0.75);
     animation-direction: alternate;
     animation-fill-mode: forwards;
     transform: rotate(360deg);
