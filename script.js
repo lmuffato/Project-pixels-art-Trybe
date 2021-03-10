@@ -1,10 +1,23 @@
+function verifyBoardSize(number) {
+  if (number < 5) {
+    const newNumber = 5;
+    return newNumber;
+  }
+  if (number > 50) {
+    const newNumber = 50;
+    return newNumber;
+  }
+  return number;
+}
+
 function setPixels(number) {
-  for (let index = 1; index <= number; index += 1) {
+  const newNumber = verifyBoardSize(number);
+  for (let index = 1; index <= newNumber; index += 1) {
     const divLine = document.createElement('div');
     const line = document.getElementById('pixel-board');
     divLine.className = 'pixel-line';
     line.appendChild(divLine);
-    for (let column = 1; column <= number; column += 1) {
+    for (let column = 1; column <= newNumber; column += 1) {
       const divColumn = document.createElement('div');
       divColumn.className = 'pixel';
       divLine.appendChild(divColumn);
@@ -55,8 +68,8 @@ function createInputText() {
   input.id = 'board-size';
   input.type = 'number';
   input.min = 1;
-  input.max = 50;
-  input.placeholder = 'Digite o número de pixels';
+  input.style.padding = '5px'
+  input.placeholder = 'Escolha o número de pixels';
   input.style.marginLeft = '550px';
   input.style.marginBottom = '15px';
   header.appendChild(input);
@@ -79,12 +92,12 @@ function createBoardSize() {
   const input = document.getElementById('board-size');
   btn.addEventListener('click', () => {
     if (input.value.length === 0) {
-        alert('Board inválido!');
+      alert('Board inválido!');
     } else {
       const number = input.value;
       deleteBoard();
       setPixels(number);
-    }  
+    }
   });
 }
 
