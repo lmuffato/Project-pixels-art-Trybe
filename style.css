@@ -18,10 +18,11 @@ body {
 }
 
 #pixel-board {
-  display: flex;
+  display: inline-block;
 }
 
 .pixel {
+  display: inline-block;
   box-sizing: content-box;
   height: 40px;
   width: 40px;
