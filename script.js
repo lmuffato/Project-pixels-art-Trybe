@@ -77,4 +77,20 @@ function fillBlock() {
 
 fillBlock();
 
+function cleanPixels(){
+  let button = document.getElementById('clear-board');
+  let boxes = document.querySelectorAll('.pixel');
+
+  button.addEventListener('click', clear);
+  function clear() {
+    for (let index = 0; index < boxes.length; index += 1) {
+      boxes[index].style.backgroundColor = 'white';
+    }
+  }
+
+
+} 
+
+cleanPixels();
+
 

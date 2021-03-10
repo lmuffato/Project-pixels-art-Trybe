@@ -16,7 +16,7 @@
   background-color: white;
 }
 
-#clear-board {
-  font-size: larger;
+.button_container {
+  margin: 10px;
 }
 
