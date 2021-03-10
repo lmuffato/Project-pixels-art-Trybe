@@ -14,19 +14,32 @@ let qualCor = '';
 
 function selectBlack() {
   document.getElementsByClassName('color')[0].classList.add('selected');
+  document.getElementsByClassName('color')[1].className = 'color';
+  document.getElementsByClassName('color')[2].className = 'color';
+  document.getElementsByClassName('color')[3].className = 'color';
+
   qualCor = 'black';
   console.log('preto selecionado');
 }
 function selectOrange() {
   document.getElementsByClassName('color')[1].classList.add('selected');
+  document.getElementsByClassName('color')[0].className = 'color';
+  document.getElementsByClassName('color')[2].className = 'color';
+  document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'orange';
 }
 function selectOlive() {
   document.getElementsByClassName('color')[2].classList.add('selected');
+  document.getElementsByClassName('color')[1].className = 'color';
+  document.getElementsByClassName('color')[0].className = 'color';
+  document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'olive';
 }
 function selectBlue() {
   document.getElementsByClassName('color')[3].classList.add('selected');
+  document.getElementsByClassName('color')[1].className = 'color';
+  document.getElementsByClassName('color')[2].className = 'color';
+  document.getElementsByClassName('color')[0].className = 'color';
   qualCor = 'blue';
 }
 
