@@ -25,18 +25,6 @@
   background-color: black;
 }
 
-#blue-palette {
-  background-color: blue;
-}
-
-#aqua-palette {
-  background-color: aqua;
-}
-
-#pink-palette {
-  background-color: pink;
-}
-
 .pixel {
   background-color: white;
   border: 1px black solid;

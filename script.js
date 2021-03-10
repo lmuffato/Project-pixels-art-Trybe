@@ -56,7 +56,7 @@ function setPixelColor() {
 
 function deleteBoard() {
   const board = document.getElementById('pixel-board');
-  board.remove();
+  document.body.removeChild(board);
   const section = document.createElement('section');
   section.id = 'pixel-board';
   document.body.appendChild(section);
@@ -68,7 +68,7 @@ function createInputText() {
   input.id = 'board-size';
   input.type = 'number';
   input.min = 1;
-  input.style.padding = '5px'
+  input.style.padding = '5px';
   input.placeholder = 'Escolha o número de pixels';
   input.style.marginLeft = '550px';
   input.style.marginBottom = '15px';
@@ -97,6 +97,15 @@ function createBoardSize() {
       const number = input.value;
       deleteBoard();
       setPixels(number);
+      input.value = '';
+    }
+  });
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && input.value.length > 0) {
+     const number = input.value;   
+     deleteBoard();
+     setPixels(number); 
+     input.value = '';
     }
   });
 }
@@ -119,7 +128,21 @@ function clearBoard() {
   });
 }
 
+function generateRandomColors() {
+  const section = document.getElementById('color-palette');
+  for (let index = 1; index <= 3 ; index += 1) {
+    const color1 = Math.floor(Math.random() * 256);
+    const color2 = Math.floor(Math.random() * 256);
+    const color3 = Math.floor(Math.random() * 256);  
+    const span = document.createElement('span');
+    span.className = 'color';
+    span.style.backgroundColor = 'rgb(' + color1 + ', ' + color2 + ', ' + color3 + ')';
+    section.appendChild(span);
+  }
+}
+
 window.onload = () => {
+  generateRandomColors();
   setPixels(5);
   setBlackSelected();
   setSelectedTask();
