@@ -26,9 +26,10 @@ const reset = document.getElementById('clear-board');
 function ResetColors(){
   let resetButton = document.querySelectorAll('.pixel');
   for (let index = 0; index < resetButton.length; index+= 1){
-  resetButton[index].style.backgroundColor = 'white';
+  resetButton[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
+
 reset.addEventListener('click', ResetColors);
 
 GenerateBoard(25);
