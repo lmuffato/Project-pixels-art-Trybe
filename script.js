@@ -40,8 +40,6 @@ const redColor = document.querySelector('.red');
 const blueColor = document.querySelector('.blue');
 const greenColor = document.querySelector('.green');
 function paletteSelected() {
-
-
   colorPalette.addEventListener('click', function (event) {
     if (event.target.classList.contains('red')) {
       event.target.classList.add('selected');
@@ -64,13 +62,12 @@ function paletteSelected() {
       redColor.classList.remove('selected');
       blueColor.classList.remove('selected');
     }
-  })
+  });
 } paletteSelected();
 
 function paintPixel() {
   const tableBoard = document.querySelector('#pixel-board');
   tableBoard.addEventListener('click', function (event) {
-    
     if (blackColor.classList.contains('selected')) {
       event.target.style.backgroundColor = 'black';
     } if (redColor.classList.contains('selected')) {
@@ -80,5 +77,15 @@ function paintPixel() {
     } if (greenColor.classList.contains('selected')) {
       event.target.style.backgroundColor = 'green';
     }
-  })
+  });
 } paintPixel();
+
+function clearBoard() {
+  const buttonClear = document.querySelector('#clear-board');
+  const pixelTd = document.querySelectorAll('.pixel');
+  buttonClear.addEventListener('click', function () {
+    for (let index = 0; index < pixelTd.length; index += 1) {
+      pixelTd[index].style.backgroundColor = 'white';
+    }
+  });
+} clearBoard();
