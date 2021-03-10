@@ -6,6 +6,7 @@ th {
   border: 1px solid black;
   width: 60px;
   height: 45px;
+  cursor: pointer;
 }
 
 #pixel-board {
@@ -27,4 +28,5 @@ td {
 
 .pixel {
   background-color: white;
+  cursor: pointer;
 }
