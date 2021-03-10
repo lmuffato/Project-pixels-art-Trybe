@@ -74,14 +74,14 @@ function clearBoard() {
   }
 }
 function removeAllSquares() {
-  const removeAllSquares = document.getElementById("pixel-board");
-  while (removeAllSquares.firstChild) {
-    removeAllSquares.removeChild(removeAllSquares.lastChild);
+  const removeSquares = document.getElementById('pixel-board');
+  while (removeSquares.firstChild) {
+    removeSquares.removeChild(removeSquares.lastChild);
   }
 }
 
-function validBoard(){
-  let numberOfInput = document.querySelector('#board-size').value;
+function validBoard() {
+  const numberOfInput = document.querySelector('#board-size').value;
   if (numberOfInput === '') {
     alert('Board inválido!');
     return false;
@@ -92,12 +92,12 @@ function makeBoard() {
   let numberOfInput = document.querySelector('#board-size').value;
   if (validBoard()) {
     if (numberOfInput < 5) {
-      numberOfInput = 5
+      numberOfInput = 5;
       alert('Tamanho mínimo do Board: 5px');
       createBoard(numberOfInput);
     } else if (numberOfInput > 50) {
       alert('Tamanho máximo do Board: 50px');
-      numberOfInput = 50
+      numberOfInput = 50;
       createBoard(numberOfInput);
     }
     removeAllSquares();
