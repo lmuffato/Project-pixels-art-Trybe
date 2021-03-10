@@ -60,8 +60,8 @@ body {
 .pixel {
   box-sizing: border-box;
   background-color: white;
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  width: 40px;
   border: 1px solid black;
   display: inline-block;
 }
