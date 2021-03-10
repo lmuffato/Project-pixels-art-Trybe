@@ -97,7 +97,7 @@ function size() {
   button.addEventListener('click', () => {
     const line = document.getElementById('pixel-board');
     if (input.value === '') {
-      alert('Board inválido');
+      alert('Board inválido!');
       input.value = 5;
     } else if (input.value > 50) {
       input.value = 50;
