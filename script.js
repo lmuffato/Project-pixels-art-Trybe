@@ -11,7 +11,7 @@ window.onload = function () {
       if (colorElement.localName === 'div') {
         colorElement.classList.add('selected');
       }
-    })
+    });
   }
 
   setColor();
@@ -24,28 +24,28 @@ window.onload = function () {
   setInicialColor();
 
   function setPixelColor() {
-    let board = document.getElementById('pixel-board');
+    const board = document.getElementById('pixel-board');
     board.addEventListener('click', function (e) {
-      const pixel = e.target
-      let selectedColor = document.querySelector(".selected")
-      
+      const pixel = e.target;
+      const selectedColor = document.querySelector('.selected');
       if (pixel.localName === 'div') {
-        pixel.style.backgroundColor = selectedColor.id
+        pixel.style.backgroundColor = selectedColor.id;
       }
-    })
+    });
   }
   setPixelColor();
 
   function clearBoard() {
-    let pixel = document.querySelectorAll('.pixel')
-    let button = document.querySelector('#clear-board')
+    const pixel = document.querySelectorAll('.pixel');
+    const button = document.querySelector('#clear-board');
     button.addEventListener('click', function () {
       for (let index = 0; index < pixel.length; index += 1) {
-        if (pixel[index].style.backgroundColor != "white")
-          pixel[index].style.backgroundColor = "white"
+        if (pixel[index].style.backgroundColor !== 'white') {
+          pixel[index].style.backgroundColor = 'white';
+        }
       }
-    })
+    });
   }
 
-  clearBoard()
-}
+  clearBoard();
+};
