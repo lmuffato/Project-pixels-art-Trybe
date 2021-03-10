@@ -3,8 +3,6 @@ window.onload = function (){
 // pega os elementos da classe color
 let runBgColors = document.getElementsByClassName('color');
  
-
-
 // dar cor de fundo aos elementos base
 runBgColors[0].style.backgroundColor = "black";
 runBgColors[1].style.backgroundColor = "red";
@@ -12,13 +10,15 @@ runBgColors[2].style.backgroundColor = "gray";
 runBgColors[3].style.backgroundColor = "yellow";
 
 // Função para capturar a cor da class color
+
+let pegabg = "black";
 function changeBgColor() {
 let bgColor = document.getElementsByClassName('color');
     for (index = 0; index < bgColor.length; index += 1) {
     let bgPoint = bgColor[index];
     bgPoint.addEventListener('click', colorClick); 
     function colorClick() {
-    console.log(bgPoint.style.backgroundColor);
+    pegabg = bgPoint.style.backgroundColor;
     }
 }
 }
@@ -29,11 +29,24 @@ function returnClickClass () {
         let control = clicar[index];
         control.addEventListener('click', onlineClick); 
         function onlineClick() {
-         control.style.backgroundColor = "black";
+         control.style.backgroundColor = pegabg;
             }
         }
 }
-    
+ 
+
+function btnButton() {
+    let bntElement = document.querySelector('.btnClear');
+    let recorreColors = document.getElementsByTagName('pixel');
+    for (let index = 0; index < recorreColors.length; index += 1) {
+        let bntRecore = recorreColors[index];
+        bntElement.addEventListener('click', function() 
+        {
+            bntRecore.style.backgroundColor = "#ffffff";
+        })
+    }
+}
+
 
 returnClickClass();
 changeBgColor();

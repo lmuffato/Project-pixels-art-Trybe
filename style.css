@@ -4,10 +4,10 @@ body { width: 1366px; height: 768px;
 #pixel-board { border: solid 1px #000000;
 }
 
-.pixel { border: solid 1px #000000; width: 40px; height: 40px;
+.pixel { border: solid 1px #000000; width: 40px; height: 40px; background-color: #ffffff;
 }
 
-.color { width: 40px; height: 40px; display: inline-block ; border: solid 1px #000000; background-color: #ffffff; 
+.color { width: 40px; height: 40px; display: inline-block ; border: solid 1px #000000;  
 }
 
 
