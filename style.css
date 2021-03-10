@@ -15,7 +15,7 @@ h1 {
 
 #black {
   color: white;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 #blue {
@@ -29,6 +29,7 @@ h1 {
 #green {
   background-color: green;
 }
+
 #pixel-board {
   margin-top: 25px;
   text-align: center;

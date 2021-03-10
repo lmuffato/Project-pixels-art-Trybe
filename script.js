@@ -10,3 +10,6 @@ for (let index = 0; index < 5; index += 1) {
     pixels.appendChild(pixelLines);
   }
 }
+
+let colorSave = document.getElementById('black');
+colorSave = localStorage;
