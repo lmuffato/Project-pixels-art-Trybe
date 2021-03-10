@@ -3,14 +3,25 @@ const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const VQVBtn = document.getElementById('generate-board');
 const clearBtn = document.getElementById('clear-board');
-let colors = ['black', 'green', 'blue', 'red'];
+const colors = ['black'];
+
+function generateRandomColor() {
+  const randomR = Math.floor(Math.random() * 255);
+  const randomG = Math.floor(Math.random() * 255);
+  const randomB = Math.floor(Math.random() * 255);
+  return `rgb(${randomR}, ${randomG}, ${randomB})`;
+}
+
+colors.push(generateRandomColor());
+colors.push(generateRandomColor());
+colors.push(generateRandomColor());
 
 function createColorPalette() {
-  for (let color of colors) {
+  for (let color = 0; color < colors.length; color += 1) {
     const newColorInPalette = document.createElement('div');
     newColorInPalette.className = 'color';
-    newColorInPalette.id = color;
-    newColorInPalette.style.backgroundColor = color;
+    newColorInPalette.id = colors[color];
+    newColorInPalette.style.backgroundColor = colors[color];
     colorPalette.appendChild(newColorInPalette);
   }
 }
@@ -29,15 +40,15 @@ function colorSelect(event) {
 
 // Adicionando event handler nas cores da paleta
 const colorsInPalette = document.getElementsByClassName('color');
-for (const color of colorsInPalette) {
-  color.addEventListener('click', colorSelect);
+for (let color = 0; color < colorsInPalette.length; color += 1) {
+  colorsInPalette[color].addEventListener('click', colorSelect);
 }
 
 function clearPixels() {
   // Pinta todos os pixels de branco
   const allPixels = document.querySelectorAll('.pixel');
-  for (const pixel of allPixels) {
-    pixel.style.backgroundColor = 'white';
+  for (let pixel = 1; pixel <= allPixels.length; pixel += 1) {
+    allPixels[pixel].style.backgroundColor = 'white';
   }
 }
 
@@ -91,7 +102,6 @@ function regeneratePixelBoard() {
 
   deletePixelBoard();
   createPixelBoard(userInput);
-  
 }
 
 VQVBtn.addEventListener('click', regeneratePixelBoard);
