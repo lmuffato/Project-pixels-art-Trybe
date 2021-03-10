@@ -21,21 +21,23 @@ function colorForChoose() {
 
 colorForChoose();
 
+getInputText();
+
 function lineBoardGeneration(size) {
-  let N = size;
 
-  if (size) {
-    N = size;
-  } else {
-    N = 5;
-  }
+   if (size) {
+     numberOfLines = size;
+     console.log('verdadeiro');
+     console.log(numberOfLines);
+   } else {
+     numberOfLines = 5;
+   }
 
-  console.log(N);
+  let tableContainer = document.getElementById('pixel-board');
 
-  const tableContainer = document.getElementById('pixel-board');
-
-  for (let index = 0; index < 5; index += 1) {
-    const lineConteiner = document.createElement('tr');
+  
+  for (let index = 0; index < numberOfLines; index += 1) {
+    let lineConteiner = document.createElement('tr');
     lineConteiner.className = 'line-container';
     tableContainer.appendChild(lineConteiner);
   }
@@ -47,7 +49,7 @@ function columnBoardGeneration() {
   const lineContainer = document.getElementsByClassName('line-container');
 
   for (let line = 0; line < lineContainer.length; line += 1) {
-    for (let index = 0; index < 5; index += 1) {
+    for (let index = 0; index < lineContainer.length; index += 1) {
       const squarePixel = document.createElement('td');
       squarePixel.className = 'pixel';
       lineContainer[line].appendChild(squarePixel);
@@ -56,6 +58,22 @@ function columnBoardGeneration() {
 }
 
 columnBoardGeneration();
+
+function getInputText() {
+  let buttonVqv = document.getElementById('generate-board');
+
+  buttonVqv.addEventListener('click', setAmountPixels);
+  function setAmountPixels() {
+    let myInput = parseInt(document.getElementById('board-size').value); 
+
+    if ((myInput > 4) && (myInput < 51)) {
+      lineBoardGeneration(myInput);
+    } else {
+      alert('Board inválido!');
+    }
+  }
+}
+
 
 function selectColor() {
   let getColor = document.getElementsByClassName('color');
@@ -70,6 +88,7 @@ function selectColor() {
     }
   }
 }
+
 selectColor();
 
 function fillBlock() {
@@ -101,26 +120,7 @@ function cleanPixels(){
 
 cleanPixels();
 
-function getInputText () {
-  let buttonVqv = document.getElementById('generate-board');
 
-  buttonVqv.addEventListener('click', setAmountPixels);
-
-  function setAmountPixels() {
-    let myInput = parseInt(document.getElementById('board-size').value); 
-
-    if ((myInput > 4) && (myInput < 51)) {
-      let N = myInput;
-      lineBoardGeneration(N);
-    } else {
-      N = 5;
-      alert('Board inválido!');
-      lineBoardGeneration(N);
-    }
-  }
-}
-
-getInputText();
 
 
 
