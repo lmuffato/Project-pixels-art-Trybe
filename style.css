@@ -26,3 +26,20 @@ table {
   width: 60px;
   height: 60px;
 }
+
+#pixel-board {
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.pixel {
+  border: black solid 1px;
+  width: 60px;
+  height: 60px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: smaller;
+  text-align: center;
+}

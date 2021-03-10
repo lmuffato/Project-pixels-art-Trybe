@@ -12,6 +12,12 @@ function colorsPalette() {
   squareYellow.style.backgroundColor = 'yellow';
 }
 
+function pixelBoard() {
+  const board = document.getElementsByClassName('pixel');
+  board.style.backgroundColor = 'white';
+}
+
 window.onload = function load() {
   colorsPalette();
+  pixelBoard();
 };
