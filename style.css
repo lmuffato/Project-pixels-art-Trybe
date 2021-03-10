@@ -26,7 +26,10 @@ table {
 .pixel {
   height: 40px;
   width: 40px;
-  /* https://trybecourse.slack.com/archives/C01L16B9XC7/p1615336998345200?thread_ts=1615324356.299600&cid=C01L16B9XC7 */
-  box-sizing: border-box;
   background-color: white;
+
+  /*
+  https://trybecourse.slack.com/archives/C01L16B9XC7/p1615336998345200?thread_ts=1615324356.299600&cid=C01L16B9XC7
+  */
+  box-sizing: border-box;
 }
