@@ -22,6 +22,7 @@ function colorSquares() {
   for (let index = 0; index < squares.length; index += 1) {
     squares[index].style.backgroundColor = colors[index];
   }
+  squares[0].className = 'color selected';
 }
 
 function createBoard() {
@@ -37,6 +38,13 @@ function createBoard() {
     }
   }
 }
+
+let colorSelect = document.getElementById('color-palette');
+colorSelect.addEventListener('click', function(click) {
+  let currentSelected = document.getElementsByClassName('selected');
+  currentSelected[0].className = 'color';
+    click.target.className = 'color selected';
+});
 
 function loadPage() {
   createSquares();

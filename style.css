@@ -59,3 +59,7 @@ body {
 #table-color {
   padding: 0 5px 5px;
 }
+
+.selected {
+  border: 2px solid green;
+}
