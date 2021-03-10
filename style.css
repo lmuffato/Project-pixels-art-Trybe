@@ -23,6 +23,7 @@ body {
   border: 1px solid black;
   height: 100px;
   display: inline-block;
+  transition: transform 1s;
 }
 
 #black {
@@ -60,7 +61,7 @@ body {
 .selected {
   box-sizing: border-box;
   border: 1px solid black;
-  display: inline-block
+  display: inline-block;
 }
 
 .color:hover {
