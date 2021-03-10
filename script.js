@@ -3,12 +3,10 @@ function selectColor() {
   let colorSelectList = document.querySelector('.selected');
   for (let index = 0; index < colorList.length; index += 1) {
     colorList[index].addEventListener('click', function () {
-      if (colorSelectList[index] === 'color') {
-				colorSelectList.classList.remove = 'selected';
-			} else {
-				colorSelectList.classList.add = 'selected';
-			}});
-  }
+			document.querySelector('.selected').classList.remove('selected');
+			colorList[index].classList.add('selected');
+	});
+ }
 }
 selectColor ()
 
