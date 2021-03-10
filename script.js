@@ -1,9 +1,9 @@
 const colorPalette = document.getElementById('color-palette');
 const pixelLines = document.getElementById('pixel-board');
-const pixelSpaces = document.getElementsByClassName('lines');
+let pixelSpaces = document.getElementsByClassName('lines');
 const colorBlock = document.getElementsByClassName('color');
 const choosenColor = document.getElementsByClassName('selected')
-const pixelChoosen = document.getElementsByClassName('pixel')
+let pixelChoosen = document.getElementsByClassName('pixel')
 const clearBoard = document.getElementById('clear-board')
 const createBoard = document.getElementById('generate-board')
 const size = document.getElementById('board-size')
@@ -48,6 +48,12 @@ for (let indexLine = 0; indexLine <= 4;  indexLine += 1) {
 
 pixelBoard()
 
+function erasePxBoard(){
+    for (let indexLine = -pixelSpaces.length; indexLine < pixelSpaces.length;  indexLine += 1) {
+        pixelLines.firstChild.remove(pixelSpaces[indexLine])
+}
+}
+
 function newpixelBoard() {
   let totalSize = size.value
   if (totalSize == ''){
@@ -69,6 +75,7 @@ function newpixelBoard() {
   }
 }
 
+createBoard.addEventListener('click',erasePxBoard)
 createBoard.addEventListener('click',newpixelBoard)
 
 function selectPixel(colorChoose) {
@@ -85,15 +92,21 @@ function selectPixel(colorChoose) {
 
 colorPalette.addEventListener("click",selectPixel)
 
-function paintPixels(pixelChoose){
+function paintPixels(pixelChoise){
 
   let colorToPixel = choosenColor[0].style.backgroundColor
-  pixelChoose.target.style.backgroundColor = colorToPixel
+  pixelChoise.target.style.backgroundColor = colorToPixel
 }
 
+
+function paint() {
 for (let indexPix = 0; indexPix < pixelChoosen.length; indexPix += 1){
 pixelChoosen[indexPix].addEventListener("click", paintPixels)
 }
+}
+
+paint()
+
 
 function clear() {
   for (let indexPix = 0; indexPix < pixelChoosen.length; indexPix += 1) {
