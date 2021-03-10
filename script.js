@@ -1,7 +1,8 @@
 let selectedPalette = 'black';
+const bgColor = 'background-color';
 
 function clickedPixelElement(event) {
-  event.target.style.setProperty('background-color', selectedPalette);
+  event.target.style.setProperty(bgColor, selectedPalette);
 }
 
 const pixels = document.getElementsByClassName('pixel');
@@ -12,9 +13,29 @@ function createPixelsListeners() {
   }
 }
 
-window.onload = createPixelsListeners;
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min)) + min;
+  return num;
+}
+
+function generateAleatoryColor() {
+  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
+}
 
 const colorPalettes = document.getElementsByClassName('color');
+
+function generateRandomPalette() {
+  for (let index = 1; index < colorPalettes.length; index += 1) {
+    colorPalettes[index].style.setProperty(bgColor, generateAleatoryColor());
+  }
+}
+
+function init() {
+  createPixelsListeners();
+  generateRandomPalette();
+}
+
+window.onload = init;
 
 function removeSelected(value) {
   for (let index = 0; index < colorPalettes.length; index += 1) {
@@ -28,7 +49,7 @@ function clickedPaletteElement() {
   this.classList.add('selected');
   selectedPalette = window
     .getComputedStyle(this)
-    .getPropertyValue('background-color');
+    .getPropertyValue(bgColor);
   removeSelected(this);
 }
 
@@ -80,19 +101,3 @@ function clearBoard() {
 
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', clearBoard);
-
-// - Crie um input e um botão que permitam definir um quadro de pixels com tamanho entre 5 e 50. Ao clicar no botão, deve ser gerado um quadro de **N** pixels de largura e **N** pixels de altura, onde **N** é o número inserido no input;
-
-// - O input deve ter o `id` denominado `board-size` e o botão deve ter o `id` denominado `generate-board`;
-
-// - O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`;
-
-// - O botão deve conter o texto "VQV";
-
-// - O input deve estar posicionado entre a paleta de cores e o quadro de pixels;
-
-// - O botão deve estar posicionado ao lado do input;
-
-// - Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!";
-
-// - O novo quadro deve ter todos os pixels preenchidos com a cor branca.

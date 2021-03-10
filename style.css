@@ -17,28 +17,14 @@ body {
   display: inline-block;
   width: 2em;
   height: 2em;
-}
-
-#color1 {
   background-color: black;
-}
-
-#color2 {
-  background-color: red;
-}
-
-#color3 {
-  background-color: blue;
-}
-
-#color4 {
-  background-color: yellow;
 }
 
 .buttom {
   display: inline-block;
   margin: 5px 5px 5px 0;
   padding: 3px;
+  cursor: pointer;
 }
 
 #board-size {
