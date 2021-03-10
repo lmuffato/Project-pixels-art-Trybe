@@ -44,7 +44,7 @@ function setSelectedTask() {
 }
 
 function setPixelColor() {
-  const pixels = document.querySelectorAll('.pixel');
+  const pixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', () => {
       const selectedTask = document.querySelector('.selected');
@@ -55,11 +55,11 @@ function setPixelColor() {
 }
 
 function deleteBoard() {
-  const board = document.getElementById('pixel-board');
-  document.body.removeChild(board);
-  const section = document.createElement('section');
-  section.id = 'pixel-board';
-  document.body.appendChild(section);
+  const lines = document.querySelectorAll('.pixel-line');
+  const section = document.querySelector('#pixel-board');
+  for (let index = 0; index < lines.length; index += 1) {
+    section.removeChild(lines[index]);  
+  }
 }
 
 function createInputText() {
@@ -98,6 +98,7 @@ function createBoardSize() {
       deleteBoard();
       setPixels(number);
       input.value = '';
+      setPixelColor();
     }
   });
   input.addEventListener('keydown', (event) => {
@@ -106,6 +107,7 @@ function createBoardSize() {
       deleteBoard();
       setPixels(number);
       input.value = '';
+      setPixelColor();
     }
   });
 }
