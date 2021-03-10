@@ -33,7 +33,7 @@ function blackColor() {
   });
 }
 function paintBoard() {
-  const selectedElement = document.getElementByClassName('selected');
+  const selectedElement = document.querySelector('.selected');
   const board = document.querySelector('#pixel-board');
   board.addEventListener('click', (event) => {
     const paint = event.target.style.backGroundColor;
