@@ -27,5 +27,18 @@ function applyColor(eventOrigin){
   clickedPixel.style.backgroundColor = selectedColor;
 }
 
+function addButtomListener(){
+  const buttom = document.getElementById('clear-board');
+  buttom.addEventListener('click', cleanBoard);
+}
+
+function cleanBoard() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+
 addPaletteListener();
 addPixelListener();
+addButtomListener();
