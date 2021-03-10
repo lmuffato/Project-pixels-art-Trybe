@@ -12,7 +12,6 @@ function generateColor() {
   const g = Math.ceil(Math.random() * 255);
   const b = Math.ceil(Math.random() * 255);
   const color = `rgb(${r}, ${g}, ${b})`;
-  console.log(color);
   return color;
 }
 
@@ -31,20 +30,45 @@ function createBoard() {
     const row = document.createElement('tr');
     pixelBoard.appendChild(row);
     for (let index2 = 0; index2 < 5; index2 += 1) {
-      const collumn = document.createElement('td');
-      collumn.className = 'pixel';
+      const column = document.createElement('td');
+      column.className = 'pixel';
       const lastRow = pixelBoard.lastChild;
-      lastRow.appendChild(collumn);
+      lastRow.appendChild(column);
     }
   }
 }
 
-let colorSelect = document.getElementById('color-palette');
-colorSelect.addEventListener('click', function(click) {
-  let currentSelected = document.getElementsByClassName('selected');
-  currentSelected[0].className = 'color';
-    click.target.className = 'color selected';
+const colorSelect = document.getElementById('color-palette');
+colorSelect.addEventListener('click', function selectColor(click) {
+  let event = click.target;
+  if (event.className == 'color') {
+    const currentSelected = document.getElementsByClassName('selected');
+    currentSelected[0].className = 'color';
+    event.className = 'color selected';
+  }
 });
+
+function getColorSelected () {
+  const classSelected = document.getElementsByClassName('selected');
+  const colorSelected = window.getComputedStyle(classSelected[0], null).getPropertyValue('background-color');
+  return colorSelected;
+}
+
+const pixelSelect = document.getElementById('pixel-board');
+pixelSelect.addEventListener('click', function paintBox(click) {
+  let event = click.target;
+  const colorSelected = getColorSelected();
+  console.log(event);
+  console.log(colorSelected);
+  event.style.backgroundColor = colorSelected;
+})
+
+function clearBoard(){
+  const board = document.getElementsByClassName('pixel');
+  for (let index = 0; index < board.length; index += 1){
+    board[index].style.backgroundColor = 'white';
+  }
+}
 
 function loadPage() {
   createSquares();
