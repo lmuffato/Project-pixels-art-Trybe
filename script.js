@@ -23,7 +23,7 @@ setColor();
 
 // Requisito 9
 const button = document.getElementById('clear-board');
-const pixels = document.getElementsByClassName('pixel');
+const pixels = document.querySelectorAll('.pixel');
 button.addEventListener('click', () => {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
