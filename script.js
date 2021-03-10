@@ -8,20 +8,27 @@ function colorForChoose() {
       colorBlock[index].className = 'color selected';
       break;
     case 1:
-      colorBlock[index].style.backgroundColor = 'red';
+      colorBlock[index].style.backgroundColor = generateRandomColor();
       break;
     case 2:
-      colorBlock[index].style.backgroundColor = 'yellow';
+      colorBlock[index].style.backgroundColor = generateRandomColor();
       break;
     default:
-      colorBlock[index].style.backgroundColor = 'orange';
+      colorBlock[index].style.backgroundColor = generateRandomColor();
     }
   }
 }
 
 colorForChoose();
 
-getInputText();  
+function generateRandomColor() {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+  
 
 function lineBoardGeneration(size) {
 
@@ -81,7 +88,7 @@ function getInputText() {
   }
 }
 
-
+getInputText();
 
 function selectColor() {
   let getColor = document.getElementsByClassName('color');
