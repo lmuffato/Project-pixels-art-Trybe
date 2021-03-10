@@ -48,12 +48,9 @@ function coloringPixels() {
 coloringPixels();
 
 const button = document.querySelector('#clear-board');
-button.addEventListener('click', clearColors);
-
-function clearColors() {
+button.addEventListener('click', () => {
   for (let index = 0; index < pixels.length; index += 1) {
     const eachPixel = pixels[index];
     eachPixel.style.backgroundColor = 'white';
   }
-}
-
+});
