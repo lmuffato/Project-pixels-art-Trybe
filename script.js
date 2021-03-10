@@ -24,6 +24,6 @@ function setColors() {
 }
 getDivs(); */
 
-window.onload = function() {
+window.onload = function start() {
   setColors();
-}
+};
