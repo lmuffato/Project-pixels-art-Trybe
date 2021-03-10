@@ -4,10 +4,10 @@ function changeColor1() {
 }
 changeColor1();
 
-let color1 = document.getElementById('color1');
-let color2 = document.getElementById('color2');
-let color3 = document.getElementById('color3');
-let color4 = document.getElementById('color4');
+const color1 = document.getElementById('color1');
+const color2 = document.getElementById('color2');
+const color3 = document.getElementById('color3');
+const color4 = document.getElementById('color4');
 
 function selectColor1 () {
   color2.className = 'color';
@@ -46,7 +46,7 @@ color4.addEventListener('click', selectColor4);
 function changePixelColor () {
   let pixelsToChange = document.getElementsByClassName('pixel');
   let selectedColor = document.querySelector('.selected');
-  for (let index = 0; index < pixelsToChange.length; index +=1) {
+  for (let index = 0; index < pixelsToChange.length; index += 1) {
   pixelsToChange[index].style.backgroundColor = selectedColor.backgroundColor;  
   }
 }
