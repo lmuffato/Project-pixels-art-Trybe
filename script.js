@@ -1,7 +1,9 @@
 const PIXEL_BOARD = 'pixel-board';
 const COLOR_PALETTE = 'color-palette';
 const COLOR_COUNT = 4;
-const CANVAS_SIZE = { x: 5, y: 5 };
+const CANVAS_SIZE = { width: 5, height: 5 };
+const PIXEL_SIZE = { width: '40px', height: '40px' };
+const PIXEL_COLOR = 'white';
 const CLEAR_BOARD = 'clear-board';
 const BTN_CONTAINER = 'btn-container';
 
@@ -74,9 +76,12 @@ function createPixelsListener() {
 function createPixels(n) {
   const pixelBoard = document.getElementById(PIXEL_BOARD);
   for (let index = 0; index < n; index += 1) {
-    const row = document.createElement('div');
-    row.className = 'pixel';
-    pixelBoard.appendChild(row);
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.style.width = PIXEL_SIZE.width;
+    pixel.style.height = PIXEL_SIZE.height;
+    pixel.style.backgroundColor = PIXEL_COLOR;
+    pixelBoard.appendChild(pixel);
   }
 }
 function initializePixelBoard(x, y) {
@@ -85,7 +90,7 @@ function initializePixelBoard(x, y) {
   // Everything else is done 'automagically' by display flex config
 }
 window.onload = function init() {
-  initializePixelBoard(CANVAS_SIZE.x, CANVAS_SIZE.y);
+  initializePixelBoard(CANVAS_SIZE.width, CANVAS_SIZE.height);
   initializeColorPalette();
   initializeClearButton();
 };
