@@ -27,7 +27,7 @@ function initializeClearButton() {
   createButtonListener();
 }
 function setInitialColor() {
-  const firstColor = document.getElementsByClassName('color')[0];
+  const firstColor = document.getElementById(COLOR_PALETTE).firstElementChild;
   firstColor.classList.toggle('selected');
 }
 function changePaletteColor(e) {
