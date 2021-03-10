@@ -19,9 +19,8 @@ function createPixel(className) {
   return pixel;
 }
 // Cria uma quebra de linha
-function createBreakLine(className) {
+function createBreakLine() {
   const breakLine = document.createElement('br');
-  breakLine.className = className;
   return breakLine;
 }
 
@@ -34,7 +33,7 @@ function createBoardPixel() {
       const newPixel = createPixel('pixel');
       selectPixelBoard.appendChild(newPixel);
     }
-    const breakLine = createBreakLine('pixel');
+    const breakLine = createBreakLine();
     selectPixelBoard.appendChild(breakLine);
   }
 }
