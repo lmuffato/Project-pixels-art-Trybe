@@ -66,9 +66,15 @@ function clearBoard() {
 function resizeBoard(e) {
   e.preventDefault();
   const inputBoardSize = document.getElementById('board-size');
-  boardSize = inputBoardSize.value;  
-  pixelBoard.innerHTML = '';
-  setPixels();
+  if (!inputBoardSize.value) {
+    alert('Board inválido!');
+  } else if (inputBoardSize.value >= 5 && inputBoardSize.value <= 50) {
+    boardSize = inputBoardSize.value;
+    pixelBoard.innerHTML = '';
+    setPixels();
+  } else {
+    alert('Insira um número entre 5 e 50!');
+  }
 }
 
 setPaletteColors();
