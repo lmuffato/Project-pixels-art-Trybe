@@ -35,11 +35,12 @@
 }
 
 .pixel {
+  box-sizing: border-box;
   margin-top: -5px;
   display: inline-block;
   border: 1px solid black;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background-color: white;
 }
 
