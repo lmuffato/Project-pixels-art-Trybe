@@ -84,7 +84,7 @@ input {
 
 .pixel {
   border: 1px solid black;
-  background-color: red;
+  background-color: white;
   width: 40px;
   height: 40px;
   display: inline-block;

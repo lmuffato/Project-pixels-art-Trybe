@@ -12,6 +12,15 @@ function GenerateColor() {
   console.log(color);
 }
 
+const square = document.getElementById('pixel-board');
+
+function PaintingSquares() {
+  let paint = Element.querySelector('.pixel');
+  paint.style.backgroundColor = 'rgb(0, 0, 0)';
+}
+
+square.addEventListener('click', PaintingSquares);
+
 function GenerateBoard(number) {
   for (let index = 0; index < number; index += 1){
   let bigsquare = document.querySelector('#pixel-board');
