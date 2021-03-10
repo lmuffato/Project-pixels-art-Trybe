@@ -1,6 +1,10 @@
 const paleteColors = document.querySelector('#color-palette');
 const tablePixels = document.querySelector('#pixel-board');
-let eSelected = document.getElementsByClassName('color');
+const eSelected = document.getElementsByClassName('color');
+
+window.onload = () => {
+  eSelected[0].className = 'color selected';
+};
 
 function generateColors() {
   const rgb1 = Math.floor(Math.random() * 255);
@@ -20,10 +24,6 @@ function createBox() {
   paleteColors.firstElementChild.style.backgroundColor = 'black';
 }
 
-window.onload = () => {
-  eSelected[0].className = 'selected';
-};
-
 function createTablePixels() {
   for (let i = 0; i < 5; i += 1) {
     const tr = document.createElement('tr');
@@ -40,3 +40,14 @@ function createTablePixels() {
 
 createBox();
 createTablePixels();
+
+const colorList = document.querySelectorAll('.color');
+
+for (let i = 0; i < colorList.length; i += 1) {
+  colorList[i].addEventListener('click', () => {
+    for (let j = 0; j < colorList.length; j += 1) {
+      colorList[j].classList.remove('selected');
+    }
+    colorList[i].className = 'color selected';
+  });
+}
