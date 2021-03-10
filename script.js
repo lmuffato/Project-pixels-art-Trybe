@@ -38,15 +38,17 @@ function createBoard() {
   }
 }
 
-const colorSelect = document.getElementById('color-palette');
-colorSelect.addEventListener('click', function selectColor(click) {
+function selectColor(click) {
   let event = click.target;
-  if (event.className == 'color') {
+  if (event.className === 'color') {
     const currentSelected = document.getElementsByClassName('selected');
     currentSelected[0].className = 'color';
     event.className = 'color selected';
   }
-});
+}
+
+const colorSelect = document.getElementById('color-palette');
+colorSelect.addEventListener('click', selectColor);
 
 function getColorSelected () {
   const classSelected = document.getElementsByClassName('selected');
@@ -54,14 +56,16 @@ function getColorSelected () {
   return colorSelected;
 }
 
-const pixelSelect = document.getElementById('pixel-board');
-pixelSelect.addEventListener('click', function paintBox(click) {
-  let event = click.target;
+function paintBox(click) {
+  const event = click.target;
   const colorSelected = getColorSelected();
   console.log(event);
   console.log(colorSelected);
   event.style.backgroundColor = colorSelected;
-})
+}
+
+const pixelSelect = document.getElementById('pixel-board');
+pixelSelect.addEventListener('click', paintBox);
 
 function clearBoard(){
   const board = document.getElementsByClassName('pixel');
