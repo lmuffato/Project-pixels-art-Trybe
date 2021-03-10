@@ -13,16 +13,20 @@ document.getElementById('color-palette').firstElementChild.classList.add('select
 if (elemento[2].className[1] === 'color') {
   selectedPixel[2].style.backgroundColor = 'green';
 } */
-// requisito 7
 
+// requisito 7
 const element = document.querySelectorAll('.color');
+let currentColor;
 
 for (let index = 0; index < 4; index += 1) {
   element[index].addEventListener('click', function () {
     document.querySelector('.selected').classList.remove('selected');
     element[index].classList.add('selected');
+    currentColor = window.getComputedStyle(document.querySelector('.selected'),null).getPropertyValue("background-color");
   })
 }
+
+// requisito 8
 
   /* if (element[index].className === 'selected') {
       pixel[2].style.backgroundColor = element[index].style.backgroundColor;
