@@ -80,18 +80,18 @@ function deletePixelBoard() {
 function regeneratePixelBoard() {
   // Cria o pixel board novamente com input do usuário
   let userInput = document.getElementById('board-size').value;
-  if (userInput > 50) {
+
+  if (userInput === '') {
+    alert('Board Inválido!');
+  } else if (userInput > 50) {
     userInput = 50;
   } else if (userInput < 5) {
     userInput = 5;
   }
 
-  if (userInput === '') {
-    alert('Board Inválido!');
-  } else {
-    deletePixelBoard();
-    createPixelBoard(userInput);
-  }
+  deletePixelBoard();
+  createPixelBoard(userInput);
+  
 }
 
 VQVBtn.addEventListener('click', regeneratePixelBoard);
