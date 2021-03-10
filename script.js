@@ -42,7 +42,7 @@ function clearBoard() {
 function sizeIsValid(test) {
   let result = true;
   if (test === '') {
-    alert('Boar inválido');
+    alert('Boar inválido!');
     result = false;
   }
   if (test < 5 || test > 50) {

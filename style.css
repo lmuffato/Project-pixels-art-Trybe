@@ -1,5 +1,5 @@
 .color {
-  border: solid #000000 1px;
+  border: solid #000 1px;
   width: 40px;
   height: 40px;
 }
@@ -7,11 +7,11 @@
 .pixel {
   width: 40px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 #pixel-board {
-  border: solid #000000 1px;
+  border: solid #000 1px;
   margin: 30px;
 }
 
@@ -25,21 +25,21 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 #color0 {
-  background-color: #000000;
+  background-color: #000;
 }
 
 #color1 {
-  background-color: #800000;
+  background-color: #800;
 }
 
 #color2 {
-  background-color: #ff0000;
+  background-color: #f00;
 }
 
 #color3 {
-  background-color: #999966;
+  background-color: #996;
 }
