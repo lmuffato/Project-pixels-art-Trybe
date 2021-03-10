@@ -15,19 +15,20 @@ function pixelBoard(number) {
   }
 }
 
-document.getElementById('color-palette').addEventListener('click', function(selected) {
+document.getElementById('color-palette').addEventListener('click', (selected) => {
   const selectedColor = document.querySelector('.selected');
   const newSelected = selected.target;
   selectedColor.classList.remove('selected');
   newSelected.classList.add('selected');
 });
 
-document.getElementById('pixel-board').addEventListener('click', function(selectedPixel) {
+document.getElementById('pixel-board').addEventListener('click', (paint) => {
   const color = document.querySelector('.selected').style.backgroundColor;
-  selectedPixel.target.style.backgroundColor = color; 
+  const targeted = paint.target;
+  targeted.style.backgroundColor = color;
 });
 
-document.getElementById('clear-board').addEventListener('click', function() {
+document.getElementById('clear-board').addEventListener('click', () => {
   const pixel = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].style.backgroundColor = 'white';
