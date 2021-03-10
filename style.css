@@ -5,19 +5,19 @@
     border: black 1px solid;
 }
 
-#blackColor {
+.blackColor {
     background-color: black;
 }
 
-#redColor {
+.redColor {
     background-color: red;
 }
 
-#blueColor {
+.blueColor {
     background-color: blue;
 }
 
-#greenColor {
+.greenColor {
     background-color: green;
 }
 
