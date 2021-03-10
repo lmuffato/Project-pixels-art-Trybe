@@ -8,9 +8,9 @@ function addClickColor() {
 }    
 function addClickColor() {
     for (let index2 = 0; index2 < colorClass.length; index += 1) {
-        colorClass[index2].classList.remove('selected');
+        colorClass[index2].classList.remove('color selected');
     }
-    this.classList.add('selected');
+    this.classList.add('color selected');
 }
 
 window.onload = function () {
