@@ -6,9 +6,10 @@ window.onload = function () {
       colorBlock[index].style.background = color[index];
     }
   }
-  function selectColor() {
-    document.querySelectorAll('.color')[0].classList.add("selected");
+  function selectColor(next, old) {
+    document.querySelectorAll('.color')[next].classList.add("selected");
+    document.querySelectorAll('.color')[old].classList.remove("selected");
   }
   colorButton();
-  selectColor();
+  selectColor(2, 0);
 }
