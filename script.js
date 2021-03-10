@@ -5,7 +5,7 @@ function createPixBox(size) {
     const pixelLinha = document.createElement('tr');
     pixelLinha.className = 'linha';
 
-    for (index = 0; index < size; index += 1) {
+    for (let index2 = 0; index2 < size; index2 += 1) {
       const pixelColuna = document.createElement('th');
       pixelColuna.className = 'pixel';
       pixelLinha.appendChild(pixelColuna);
