@@ -11,3 +11,8 @@ let whitePixel = document.querySelectorAll('.pixel')
 for (let index = 0; index <= whitePixel.length; index += 1) {
     whitePixel[index].style.backgroundColor = 'rgb(255, 255, 255)'
 }
+
+// Seleciona a cor preta ao carregar
+window.onload = function () {
+    document.getElementById('blackColor').className = 'selected'
+}
