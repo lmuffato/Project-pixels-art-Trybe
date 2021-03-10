@@ -23,7 +23,7 @@ function SelectingColor(){
   return selected;
 }
 
-
+/*
 function PaintingSquares() {
   let paint = Document.querySelectorAll('.pixel');
   for (index = 0; index<paint.length; index += 1){
@@ -32,7 +32,7 @@ function PaintingSquares() {
     })
 }
 }
-
+*/
 const square = document.getElementById('pixel-board');
 square.addEventListener('click', PaintingSquares);
 
@@ -45,6 +45,8 @@ function GenerateBoard(number) {
   }
 }
 
+GenerateBoard(25);
+
 // reorganização feita observando o código da Beatriz, já citado acima
 function ResetColors(){
   let reset = document.getElementById('clear-board');
@@ -56,4 +58,4 @@ function ResetColors(){
 });
 }
 
-GenerateBoard(25);
+ResetColors();
