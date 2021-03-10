@@ -33,6 +33,5 @@ function clearBoardPixels() {
 }
 
 colorPalette.addEventListener('click', selecElementPallete);
-colorPalette.addEventListener('click', getColorElementPalette);
 pixelBoard.addEventListener('click', changeColorPixels);
 clearBoardBtn.addEventListener('click', clearBoardPixels);
