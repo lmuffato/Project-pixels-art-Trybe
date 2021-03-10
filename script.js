@@ -40,12 +40,22 @@ function createBoardPixel() {
 
 createBoardPixel();
 
+// Remove a classe selected de todos os elementos
+function removeSelectedClass() {
+  const colorPalette = document.querySelectorAll('.color');
+
+  for (let index = 0; index < colorPalette.length; index += 1) {
+    colorPalette[index].classList.remove('selected');
+  }
+}
+
 // add a classe selected ao clicar nas em alguma color palette
 function setClassSelected() {
   const colorPalette = document.querySelectorAll('.color');
 
   for (let index = 0; index < colorPalette.length; index += 1) {
     colorPalette[index].addEventListener('click', (event) => {
+      removeSelectedClass();
       event.target.classList.toggle('selected');
     });
   }
@@ -74,7 +84,7 @@ function clearBoard() {
 
   for (let index = 0; index < pixelsBoard.length; index += 1) {
     erase.addEventListener('click', () => {
-      pixelsBoard[index].style.backgroundColor = 'rgb(255, 105, 97)';
+      pixelsBoard[index].style.backgroundColor = 'white';
     });
   }
 }
