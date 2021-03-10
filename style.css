@@ -4,6 +4,10 @@
   height: 60px;
 }
 
+.selected {
+  background-color: black;
+}
+
 #pixel-board {
   border-collapse: collapse;
 }
