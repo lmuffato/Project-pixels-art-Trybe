@@ -116,6 +116,12 @@ function getSize() {
     return;
   }
   boardSize = Number(boardSize.value);
+  if (boardSize < 5) {
+    boardSize = 5;
+  }
+  if (boardSize > 50) {
+    boardSize = 50;
+  }
   return boardSize;
 }
 
