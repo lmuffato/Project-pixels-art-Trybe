@@ -66,6 +66,7 @@ function resizePixelBoard() {
         const newPixel = document.createElement('td');
         newPixel.className = 'pixel';
         newPixel.addEventListener('click', colorPixel);
+        newPixel.style.backgroundColor = '#ffffff';
         newPixelLine.appendChild(newPixel);
       }
       pixelBord.appendChild(newPixelLine);
