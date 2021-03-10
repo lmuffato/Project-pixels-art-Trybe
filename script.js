@@ -41,8 +41,26 @@ function addColorsPalette(colors) {
   });
 }
 
+function clearElementsPixelBoard() {
+  const pixelBoard = document.getElementsByClassName('pixel');
+  for (let index = pixelBoard.length - 1; index >= 0; index -= 1) {
+    pixelBoard[index].remove();
+  }
+}
+
+// Req. 08
+function paintPixel() {
+  const pixelsForPaint = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelsForPaint.length; index += 1) {
+    pixelsForPaint[index].addEventListener('click', () => {
+      pixelsForPaint[index].style.backgroundColor = colorsObj.selected;
+    });
+  }
+}
+
 // Req. 04
 function makePixelBoard(grid) {
+  clearElementsPixelBoard();
   const containerPixelBoard = document.getElementById('pixel-board');
   containerPixelBoard.style.width = 'fit-content';
   containerPixelBoard.style.display = 'grid';
@@ -59,6 +77,7 @@ function makePixelBoard(grid) {
       containerPixelBoard.appendChild(newPixel);
     }
   }
+  paintPixel();
 }
 
 // Req. 06
@@ -71,16 +90,6 @@ function selectInitialColorPaint(color) {
       colorsObj.selected = color;
     }
   });
-}
-
-// Req. 08
-function paintPixel() {
-  const pixelsForPaint = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixelsForPaint.length; index += 1) {
-    pixelsForPaint[index].addEventListener('click', () => {
-      pixelsForPaint[index].style.backgroundColor = colorsObj.selected;
-    });
-  }
 }
 
 // Req. 09
@@ -100,10 +109,38 @@ function makeButtonReset() {
   secBtn.appendChild(newButton);
 }
 
+function msgError() {
+  const newMsg = document.createElement('label');
+  newMsg.id = 'msg-error';
+  newMsg.innerText = 'Você deve inserir um valor entre 5 e 50';
+  return newMsg;
+}
+
+function makeInputGrid() {
+  const secBtn = document.getElementById('grid-size');
+  const newInput = document.createElement('input');
+  newInput.placeholder = 'Tamanho da grid';
+  newInput.addEventListener('change', () => {
+    if (newInput.value < 5 || newInput.value > 50) {
+      const item = document.getElementById('msg-error');
+      if (item === null) {
+        secBtn.appendChild(msgError());
+      }
+    } else {
+      const item = document.getElementById('msg-error');
+      if (item !== null) {
+        item.remove();
+      }
+      makePixelBoard(newInput.value);
+    }
+  });
+  secBtn.appendChild(newInput);
+}
+
 window.onload = () => {
   addColorsPalette(colorsObj);
   makePixelBoard(5);
   selectInitialColorPaint(colorsObj.black);
-  paintPixel();
   makeButtonReset();
+  makeInputGrid();
 };
