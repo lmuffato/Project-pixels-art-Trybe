@@ -7,8 +7,16 @@ function createSquares() {
   }
 }
 
+function generateColor(){
+  const r = Math.ceil(Math.random() * 255);
+  const g = Math.ceil(Math.random() * 255);
+  const b = Math.ceil(Math.random() * 255);
+  const color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  return color;
+}
+
 function colorSquares() {
-  const colors = ['black', 'darkred', 'darkgreen', 'darkblue'];
+  const colors = ['black', generateColor(), generateColor(), generateColor()];
   const squares = document.getElementsByClassName('color');
   for (let index = 0; index < squares.length; index += 1) {
     squares[index].style.backgroundColor = colors[index];
