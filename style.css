@@ -31,8 +31,9 @@
 
 .wrapper {
   display: grid;
-  border-radius: 1px;
-  grid-template-columns: 50px 50px 50px 50px 50px;
+  border-radius: 1px;  
+  grid-template-columns: 40px 40px 40px 40px 40px;
+  grid-template-rows: 40px 40px 40px 40px 40px;
   /* grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 1em; */
