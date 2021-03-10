@@ -62,7 +62,15 @@ h1 {
   border: 1px black solid;
   margin: 0;
 }
-
-#clear-board {
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
   margin-top: 50px;
+  
+}
+#clear-board {
+  margin-left: 20px;
+ 
 }
