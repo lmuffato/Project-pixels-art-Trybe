@@ -5,11 +5,12 @@ window.onload=createPixelBlocks(25,5);
 function createPixelBlocks(size,lineSize){
     for (let index = 1; index < size+1; index++) {
         pixelSquare=document.createElement('div');
-        pixelSquare.style.width="40px"
-        pixelSquare.style.height="40px"
-        pixelSquare.style.border="1px solid grey"
-        pixelSquare.style.display="inline-block"
-        pixelSquare.classList.add('pixelSquare');
+        pixelSquare.style.width="40px";
+        pixelSquare.style.height="40px";
+        pixelSquare.style.border="1px solid grey";
+        pixelSquare.style.display="inline-block";
+        pixelSquare.style.backgroundColor="white";
+        pixelSquare.classList.add('pixel');
         pixelBoard.appendChild(pixelSquare);
         if(index%lineSize==0&&index!=0){
         let breakLine =document.createElement("br")
