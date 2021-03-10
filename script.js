@@ -129,13 +129,18 @@ function addBtnOrError(e) {
   }
 }
 
+function checkIsPositive(e) {
+  return e.charCode >= 48;
+}
+
 function makeInputGrid() {
   const secBtn = document.getElementById('grid-size');
   const newInput = document.createElement('input');
   newInput.placeholder = 'Tamanho da grid';
   newInput.id = 'board-size';
   newInput.type = 'number';
-  newInput.min = '0';
+  newInput.onkeypress = checkIsPositive;
+  newInput.min = '1';
   const newButton = document.createElement('button');
   newButton.id = 'generate-board';
   newButton.innerText = 'VQV';
