@@ -1,9 +1,8 @@
-
 function addCliclListener() {
   const colorElement = document.getElementsByClassName('color');
 
-  for (let key in colorElement) {
-    colorElement[key].addEventListener('click', changeSelected);
+  for (let index = 0; index < colorElement.length; index += 1) {
+    colorElement[index].addEventListener('click', changeSelected);
   }
 }
 
