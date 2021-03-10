@@ -35,7 +35,9 @@ function blackColor() {
   });
 }
 window.onload = function onload() {
-  document.getElementById('preto').className += ' selected';
+  if (document.getElementsByClassName('selected').length === 0) {
+    document.getElementById('preto').className += ' selected';
+  }
   greenColor();
   blueColor();
   yellowColor();
