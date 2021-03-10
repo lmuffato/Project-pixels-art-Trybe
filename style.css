@@ -48,25 +48,20 @@ body {
   right: 0.5%;
 }
 
-/* obrigado ao joão por me atentar a dica do display 
+/* obrigado ao joão por me atentar a dica do display
 para alinhar as celulas*/
 
 #pixel-board {
-  width: 200px;
-  height: 200px;
-  background-color: grey;
   display: table;
   position: absolute;
   border-style: solid;
   border-width: 1px;
   top: 40%;
+  left: 7.5%;
 }
 
 .pixel-line {
-  width: 40px;
-  height: 200;
   display: table-row;
-  background-color: royalblue;
 }
 
 .pixel {
