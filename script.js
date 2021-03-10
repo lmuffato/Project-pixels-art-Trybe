@@ -4,7 +4,7 @@ function selectColor() {
   for (let index = 0; index < colorList.length; index += 1) {
     colorList[index].addEventListener('click', () => {
       if (colorSelectList[index] === 'black') {
-				colorSelectList.classList.remove = 'selected';
+				colorSelectList[index].classList.remove = 'selected';
 			} else {
 				colorSelectList[index].classList.add = 'selected';
 			}});
