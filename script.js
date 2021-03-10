@@ -68,7 +68,7 @@ function createPixelTable() {
   createDiv.style.border = 'solid 1px black';
   createDiv.style.display = 'block';
   createDiv.style.maxWidth = '210px';
-  createDiv.style.display = 'inline-block';
+  createDiv.style.display = 'block';
   selectorBody.appendChild(createDiv);
 }
 createPixelTable();
@@ -208,6 +208,7 @@ function createInputNumber() {
   createInput.id = 'board-size';
   createInput.type = 'number';
   createInput.min = '5';
+  createInput.minLength = '1';
   createInput.max = '50';
   selectorBody.insertBefore(createInput, selectDivPixel);
 }
