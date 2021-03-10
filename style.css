@@ -19,4 +19,17 @@
 
 #pixel-board {
     padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+ text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+body {
+  background-color: rgb(189, 187, 182);
 }
