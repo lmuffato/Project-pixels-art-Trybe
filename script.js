@@ -63,7 +63,7 @@ function clearBoard() {
 function sizeIsValid(test) {
   let result = true;
   if (test === '') {
-    alert('Board inválido!');
+    alert('Board invalido!');
     result = false;
   }
   if (test < 5) {
