@@ -66,3 +66,17 @@ function paintPixels() {
 }
 
 paintPixels();
+
+// Apaga o pixel-board
+function clearBoard() {
+  const pixelsBoard = document.querySelectorAll('.pixel');
+  const erase = document.querySelector('#clear-board');
+
+  for (let index = 0; index < pixelsBoard.length; index += 1) {
+    erase.addEventListener('click', () => {
+      pixelsBoard[index].style.backgroundColor = 'white';
+    });
+  }
+}
+
+clearBoard();
