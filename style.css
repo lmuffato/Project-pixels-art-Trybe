@@ -31,12 +31,10 @@
 
 .wrapper {
   display: grid;
-  border-radius: 1px;  
   grid-template-columns: 40px 40px 40px 40px 40px;
   grid-template-rows: 40px 40px 40px 40px 40px;
-  /* grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 1em; */
+  grid-column-gap: black solid 1px;
+  grid-row-gap: black solid 1px; 
 }
 
 .pixel {
