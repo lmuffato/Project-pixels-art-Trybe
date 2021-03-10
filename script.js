@@ -13,7 +13,6 @@ function addColorsInPalette() {
     const randomColor = `rgb(${Math.random() * 254},${Math.random() * 254},${Math.random() * 254})`;
     colorsInPalette[index].style.background = randomColor;
   }
-
   colorsInPalette[0].style.background = 'black';
 }
 
