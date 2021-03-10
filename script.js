@@ -6,9 +6,9 @@
 
  function selecionaCor (){
 
-    let SelecionadoAntes = document.getElementsByClassName('selected');
+    let SelecionadoAntes = document.querySelector('.selected');
     
-    let paletaCor = document.querySelectorAll('.color');
+    let paletaCor = document.querySelectorAll('.color'); //array com 
 
     for (let index = 0; index < paletaCor.length; index += 1) {
         paletaCor[index].addEventListener('click', function(){
@@ -16,7 +16,7 @@
         SelecionadoAntes.classList.remove = 'selected';
         SelecionadoAntes.className = 'color'; // substituo a classe
         });
-    }""
+    }
 
     let selecionado = document.getElementsByClassName('selected');
     return selecionado;
