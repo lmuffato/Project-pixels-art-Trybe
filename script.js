@@ -72,15 +72,16 @@ function getInputText() {
     } else if (myInput > 50 ) {
       myInput = 50;
       lineBoardGeneration(myInput);
+    } else if (myInput <= 0) {
+      window.alert('Digite um numero válido!');
     } else if (myInput < 5) {
       myInput = 5;
       lineBoardGeneration(myInput);
     } else {
       window.alert('Board inválido!');
     }
-    }
   }
-
+}
 
 
 
@@ -128,10 +129,3 @@ function cleanPixels(){
 } 
 
 cleanPixels();
-
-
-
-
-
-
-
