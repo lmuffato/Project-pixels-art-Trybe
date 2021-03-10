@@ -39,27 +39,46 @@ const blackColor = document.querySelector('.black');
 const redColor = document.querySelector('.red');
 const blueColor = document.querySelector('.blue');
 const greenColor = document.querySelector('.green');
+function paletteSelected() {
 
-colorPalette.addEventListener('click', function (event) {
-  if (event.target.classList.contains('red')) {
-    event.target.classList.add('selected');
-    blackColor.classList.remove('selected');
-    blueColor.classList.remove('selected');
-    greenColor.classList.remove('selected');
-  } else if (event.target.classList.contains('blue')) {
-    event.target.classList.add('selected');
-    blackColor.classList.remove('selected');
-    redColor.classList.remove('selected');
-    greenColor.classList.remove('selected');
-  } else if (event.target.classList.contains('green')) {
-    event.target.classList.add('selected');
-    blackColor.classList.remove('selected');
-    redColor.classList.remove('selected');
-    blueColor.classList.remove('selected');
-  } else if (event.target.classList.contains('black')) {
-    event.target.classList.add('selected');
-    greenColor.classList.remove('selected');
-    redColor.classList.remove('selected');
-    blueColor.classList.remove('selected');
-  }
-});
+
+  colorPalette.addEventListener('click', function (event) {
+    if (event.target.classList.contains('red')) {
+      event.target.classList.add('selected');
+      blackColor.classList.remove('selected');
+      blueColor.classList.remove('selected');
+      greenColor.classList.remove('selected');
+    } else if (event.target.classList.contains('blue')) {
+      event.target.classList.add('selected');
+      blackColor.classList.remove('selected');
+      redColor.classList.remove('selected');
+      greenColor.classList.remove('selected');
+    } else if (event.target.classList.contains('green')) {
+      event.target.classList.add('selected');
+      blackColor.classList.remove('selected');
+      redColor.classList.remove('selected');
+      blueColor.classList.remove('selected');
+    } else if (event.target.classList.contains('black')) {
+      event.target.classList.add('selected');
+      greenColor.classList.remove('selected');
+      redColor.classList.remove('selected');
+      blueColor.classList.remove('selected');
+    }
+  })
+} paletteSelected();
+
+function paintPixel() {
+  const tableBoard = document.querySelector('#pixel-board');
+  tableBoard.addEventListener('click', function (event) {
+    
+    if (blackColor.classList.contains('selected')) {
+      event.target.style.backgroundColor = 'black';
+    } if (redColor.classList.contains('selected')) {
+      event.target.style.backgroundColor = 'red';
+    } if (blueColor.classList.contains('selected')) {
+      event.target.style.backgroundColor = 'blue';
+    } if (greenColor.classList.contains('selected')) {
+      event.target.style.backgroundColor = 'green';
+    }
+  })
+} paintPixel();
