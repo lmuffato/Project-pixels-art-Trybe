@@ -78,11 +78,9 @@ generatePixelBoard();
 
 function readjustSize(value) {
   if (value < 5) {
-    return '5';
+    return 5;
   }
-  if (value > 50) {
-    return '50';
-  }
+  return 50;
 }
 
 function setBoardSize() {
@@ -92,8 +90,8 @@ function setBoardSize() {
     pixelBoardSize = readjustSize(inputBoardSize.value);
   } else {
     pixelBoardSize = inputBoardSize.value;
-    generatePixelBoard();
   }
+  generatePixelBoard();
 }
 
 buttonBoardSize.addEventListener('click', setBoardSize);
