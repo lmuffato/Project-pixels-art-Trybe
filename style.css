@@ -33,3 +33,15 @@ body {
 #blue {
     background-color: blue;
 }
+
+.pixel {
+    height: 40px;
+    width: 40px;
+    border: black solid 1px;
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+#pixel-board {
+    margin: 35px;
+}
