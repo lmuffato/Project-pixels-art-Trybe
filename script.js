@@ -7,31 +7,55 @@ function createColorPalette(colors) {
 }
 createColorPalette(['black', 'blue', 'red', 'yellow']);
 
+// function setColor(box) {
+//   const selectedColor = document.getElementsByClassName('selected');
+//   selectedColor.className = 'color';
+//   box.className = 'color selected';
+// }
+// const paletteColors = document.getElementsByClassName('color');
+// for (let index = 0; index < paletteColors.length; index += 1) {
+//   paletteColors[index].addEventListener('click', (event) => {
+//     if (event.target.className === 'color') {
+//       setColor(paletteColors[index]);
+//     }
+//   })
+// };
 
-function setColor(box) {
-  const selectedColor = document.getElementsByClassName('selected');
-  selectedColor.className = 'color';
-  box.className = 'color selected';
-}
-const paletteColors = document.getElementsByClassName('color');
-for (let index = 0; index < paletteColors.length; index += 1) {
-  paletteColors[index].addEventListener('click', (event) => {
-    if (event.target.className === 'color') {
-      setColor(paletteColors[index]);
-    }
-  })
-}
+const box1 = document.getElementById('box1');
+const box2 = document.getElementById('box2');
+const box3 = document.getElementById('box3');
+const box4 = document.getElementById('box4');
 
+box1.addEventListener('click', function() {
+  box1.classList.add('selected');
+  box2.classList.remove('selected');
+  box3.classList.remove('selected');
+  box4.classList.remove('selected');
+});
+box2.addEventListener('click', function() {
+  box1.classList.remove('selected');
+  box2.classList.add('selected');
+  box3.classList.remove('selected');
+  box4.classList.remove('selected');
+})
+box3.addEventListener('click', function() {
+  box1.classList.remove('selected');
+  box2.classList.remove('selected');
+  box3.classList.add('selected');
+  box4.classList.remove('selected');
+})
+box4.addEventListener('click', function() {
+  box1.classList.remove('selected');
+  box2.classList.remove('selected');
+  box3.classList.remove('selected');
+  box4.classList.add('selected');
+})
 
-function setButton() {
-  let button = document.getElementById('clear-board');
-  let pixels = document.getElementsByClassName('pixel');
-
-  button.addEventListener('click', function() {
-    pixels.style.backgroundColor = 'white';
-  })
-}
-
+const button = document.getElementById('clear-board');
+const pixels = document.getElementById('pixel-board');
+button.addEventListener('click', function() {
+  pixels.style.backgroundColor = 'white';
+})
 
 // function setColor() {
 //   const paletteColor = document.querySelectorAll('.color');
