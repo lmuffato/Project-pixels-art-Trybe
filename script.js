@@ -26,7 +26,7 @@ function createPixelBoard(size) {
       tableCell.classList.add('pixel');
     }
   }
-} createPixelBoard();
+}
 
 function createBoardDynamic() {
   let boardSize = 0;
@@ -89,16 +89,12 @@ function paintPixel() {
   tableBoard.addEventListener('click', function (event) {
     if (blackColor.classList.contains('selected')) {
       event.target.style.backgroundColor = 'black';
-      tableBoard.style.backgroundColor = 'black';
     } if (redColor.classList.contains('selected')) {
       event.target.style.backgroundColor = 'red';
-      tableBoard.style.backgroundColor = 'black';
     } if (blueColor.classList.contains('selected')) {
       event.target.style.backgroundColor = 'blue';
-      tableBoard.style.backgroundColor = 'black';
     } if (greenColor.classList.contains('selected')) {
       event.target.style.backgroundColor = 'green';
-      tableBoard.style.backgroundColor = 'black';
     }
   });
 } paintPixel();
