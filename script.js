@@ -33,9 +33,27 @@ function createClassSelected() {
   blackSquare.classList.add('selected');
 }
 
+function removeAllSelected(list) {
+  Array.from(list).forEach((div) => {
+    div.classList.remove('selected');
+  });
+}
+
+function changePlaceClassSelected() {
+  const divSquares = document.getElementsByClassName('color');
+  Array.from(divSquares).forEach((div) => {
+    div.addEventListener('click', (event) => {
+      console.log(event);
+      removeAllSelected(divSquares);
+      event.target.classList.add('selected');
+    });
+  });
+}
+
 window.onload = function startSession() {
   initiateColor();
   updatePixelSize();
   updatePixelBorder();
   createClassSelected();
+  changePlaceClassSelected();
 };
