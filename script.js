@@ -82,3 +82,29 @@ function buttonClear(name) {
   });
 }
 buttonClear('Limpar');
+
+// Requisito 10;
+
+function size() {
+  const input = document.createElement('input');
+  document.querySelector('section').appendChild(input).type = 'number';
+  const button = document.createElement('button');
+  input.id = 'board-size';
+  input.min = 1;
+  input.max = 50;
+  document.querySelector('section').appendChild(button).innerText = 'VQV';
+  button.id = 'generate-board';
+  button.addEventListener('click', () => {
+    const line = document.getElementById('pixel-board');
+    if (input.value === '') {
+      alert('Board inválido');
+      input.value = 5;
+    } else if (input.value > 50) {
+      input.value = 50;
+    } else if (input.value < 5) {
+      input.value = 5;
+    } line.innerHTML = '';
+    pixelPainting(input.value);
+  });
+}
+size();
