@@ -21,7 +21,17 @@ function colorForChoose() {
 
 colorForChoose();
 
-function lineBoardGeneration() {
+function lineBoardGeneration(size) {
+  let N = size;
+
+  if (size) {
+    N = size;
+  } else {
+    N = 5;
+  }
+
+  console.log(N);
+
   const tableContainer = document.getElementById('pixel-board');
 
   for (let index = 0; index < 5; index += 1) {
@@ -87,10 +97,32 @@ function cleanPixels(){
       boxes[index].style.backgroundColor = 'white';
     }
   }
-
-
 } 
 
 cleanPixels();
+
+function getInputText () {
+  let buttonVqv = document.getElementById('generate-board');
+
+  buttonVqv.addEventListener('click', setAmountPixels);
+
+  function setAmountPixels() {
+    let myInput = parseInt(document.getElementById('board-size').value); 
+
+    if ((myInput > 4) && (myInput < 51)) {
+      let N = myInput;
+      lineBoardGeneration(N);
+    } else {
+      N = 5;
+      alert('Board inválido!');
+      lineBoardGeneration(N);
+    }
+  }
+}
+
+getInputText();
+
+
+
 
 
