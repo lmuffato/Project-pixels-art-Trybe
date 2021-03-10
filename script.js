@@ -8,45 +8,33 @@ function criaPaleta(numberOfFrames) {
 }
 criaPaleta(4);
 
-// Setando a Classe 'selected' nas cores da paleta de cima
+// Seleciona a cor na paleta de cima
 
-let qualCor = 'black';
+let qualCor = '';
 
 function selectBlack() {
   document.getElementsByClassName('color')[0].classList.add('selected');
-  document.getElementsByClassName('color')[1].className = 'color';
-  document.getElementsByClassName('color')[2].className = 'color';
-  document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'black';
 }
 function selectOrange() {
   document.getElementsByClassName('color')[1].classList.add('selected');
-  document.getElementsByClassName('color')[0].className = 'color';
-  document.getElementsByClassName('color')[2].className = 'color';
-  document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'orange';
 }
 function selectOlive() {
-  document.getElementsByClassName('color')[2].classList.add('selected');
-  document.getElementsByClassName('color')[1].className = 'color';
-  document.getElementsByClassName('color')[0].className = 'color';
   document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'olive';
 }
 function selectBlue() {
   document.getElementsByClassName('color')[3].classList.add('selected');
-  document.getElementsByClassName('color')[1].className = 'color';
-  document.getElementsByClassName('color')[2].className = 'color';
-  document.getElementsByClassName('color')[0].className = 'color';
   qualCor = 'blue';
 }
+
+window.onload = selectBlack();
 
 document.getElementsByClassName('color')[0].addEventListener('click', selectBlack);
 document.getElementsByClassName('color')[1].addEventListener('click', selectOrange);
 document.getElementsByClassName('color')[2].addEventListener('click', selectOlive);
 document.getElementsByClassName('color')[3].addEventListener('click', selectBlue);
-
-// Setando a cor da paleta superior
 
 function colorePaletaSuperior() {
   document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
@@ -56,11 +44,16 @@ function colorePaletaSuperior() {
 }
 colorePaletaSuperior();
 
+function estouClicado() {
+  const clicado = document.getElementsByClassName('pixel');
+  for (let index = 0; index < clicado.length; index += 1) {
+    clicado[index].classList.add('selected');
+  }
+}
+
 function colore() {
   const doc = document.getElementsByClassName('pixel');
-  for (let index = 0; index < doc.length; index += 1) {
-    doc[index].style.backgroundColor = qualCor;
-  }
+  doc[0].style.backgroundColor = qualCor;
 }
 
 function criaQuadro(numberOfFrames) {
@@ -69,7 +62,8 @@ function criaQuadro(numberOfFrames) {
     criaDiv.className = 'pixel';
     const pegaDiv = document.getElementById('pixel-board');
     pegaDiv.append(criaDiv);
-    criaDiv.addEventListener('click', colore);
+    criaDiv.addEventListener('click', estouClicado);
+    criaDiv.addEventListener('click', colore);          //escutador em todos
   }
 }
 criaQuadro(5);
