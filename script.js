@@ -23,21 +23,18 @@ function createPixelBlocks(size,lineSize){
         }
     }
 }
+
 pixelBoard.addEventListener('click',fillPixel);
 
 function fillPixel(e){
     let event= e;
-    event.target.style.backgroundColor="black";        
+    event.target.style.backgroundColor=document.getElementsByClassName("selected")[0].id;        
 }
-
-
 
 black.addEventListener('click',chooseColor)
 red.addEventListener('click',chooseColor)
 green.addEventListener('click',chooseColor)
 blue.addEventListener('click',chooseColor)
-
-
 
 function chooseColor(e){
     if(e.target.id == "black"){
@@ -61,8 +58,14 @@ function chooseColor(e){
         black.classList.remove("selected")
         blue.classList.remove("selected")
         red.classList.remove("selected")
-    }
-
-    
+    }    
 }
 
+document.getElementById("clear").addEventListener('click',clear);
+
+function clear(){
+    pixel = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixel.length; index++) {
+        pixel[index].style.backgroundColor="white"        
+    }
+}

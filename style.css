@@ -47,3 +47,12 @@ main{
     justify-content: center;
     line-height: 0px;
 }
+#clearBox{
+    min-width: 100%;
+    text-align: center;
+}
+#clear{
+
+    width:40px;
+    height:40px;
+}
