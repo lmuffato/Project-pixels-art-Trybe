@@ -114,8 +114,22 @@ p , span , header , main , footer , section , aside , div {
   font-size: 1rem;
 }
 
+.input-text , .btn {
+  outline: none;
+}
+
+.input-text {
+  border: 1px solid var(--prussian-blue-color);
+  padding: 0.75rem 1rem;
+  max-width: 50px;
+}
+
+.input-text:focus {
+  border: 2px solid var(--prussian-blue-color);
+}
+
 .btn {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border: 0;
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-title);
@@ -138,6 +152,24 @@ p , span , header , main , footer , section , aside , div {
   transition-duration: 1s;
 }
 
+.btn-outline {
+  background-color: var(--honeydew-color);
+  color: var(--prussian-blue-color);
+  border: 1px solid var(--prussian-blue-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--prussian-blue-color);
+  color: var(--honeydew-color);
+  border: 1px solid var(--honeydew-color);
+  transition-duration: 1s;
+}
+
+.btn-outline:active {
+  border: 1px solid hsl(215, 30%, 43%);
+  color: var(--honeydew-color);
+}
+
 header {
   width: 100%;
   background-color: var(--prussian-blue-color);
@@ -156,9 +188,15 @@ main {
   justify-content: center;
 }
 
+main section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 main .color-active-box {
   position: absolute;
-  bottom: 2rem;
+  top: 6rem;
   right: 2rem;
   display: flex;
   flex-flow: column;
@@ -177,6 +215,10 @@ main .color-active-box #color-active {
   align-self: center;
   background-color: black;
   animation: palette-color 1s;
+}
+
+main #color-palette , main .properties {
+  max-width: 352px;
 }
 
 main #color-palette {
@@ -219,7 +261,11 @@ main #color-palette .color:nth-child( 4 ) {
 main .properties {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+main .properties #generate-board {
+  margin-right: 0.5rem;
 }
 
 main #pixel-board {
