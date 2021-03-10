@@ -74,7 +74,7 @@ function clearBoard() {
 
   for (let index = 0; index < pixelsBoard.length; index += 1) {
     erase.addEventListener('click', () => {
-      pixelsBoard[index].style.backgroundColor = 'white';
+      pixelsBoard[index].style.backgroundColor = 'rgb(255, 105, 97)';
     });
   }
 }
