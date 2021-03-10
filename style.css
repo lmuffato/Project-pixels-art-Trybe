@@ -15,7 +15,7 @@
 #pixel-board {
   width: 210px;
   height: 210px;
-  display: flex;
+  display: table;
 }
 
 .pixel {
@@ -25,9 +25,9 @@
   border: 1px solid black;
 }
 .tr {
-  display: table;
+  display: table-row;
 }
 
 .td {
-  display: table;
+  display: table-cell;
 }
