@@ -82,8 +82,8 @@ btnSize.addEventListener('click', () => {
 
   if (inputNumberValue === '') window.alert('Board inválido!');
 
-  if (inputNumberValue < '5') inputNumberValue = '5';
-  else if (inputNumberValue > '50') inputNumberValue = '50';
+  if (inputNumberValue < 5) inputNumberValue = 5;
+  else if (inputNumberValue > 50) inputNumberValue = 50;
 
   createBoard(inputNumberValue, inputNumberValue);
   eventClickPixel();
