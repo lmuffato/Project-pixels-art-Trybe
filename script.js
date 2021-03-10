@@ -1,6 +1,6 @@
 // André Jaques - Turma 10 - Tribo A me ajudou muito a entender o event.target
 
- function selecionaCor (){
+ /*function selecionaCor (){
 
     let SelecionadoAntes = document.querySelector('.selected');
     
@@ -18,9 +18,21 @@
 
     let selecionado = document.querySelector('.selected');
     return selecionado;
- }
+ }*/
 
- selecionaCor ();
+ function selecionaCor (){
+
+    let SelecionadoAntes = document.querySelector('.selected');
+    let paletaCor = document.querySelectorAll('.color');
+
+    for (let index = 0; index < paletaCor.length; index += 1) {
+        paletaCor[index].addEventListener('click', function(event){
+            let paletaCorSelecionada = event.target;
+            SelecionadoAntes.classList.remove = 'selected';
+            paletaCorSelecionada.classList.add = 'selected';
+        });
+    }
+ }
 
 
  function colocaCor (){
