@@ -32,3 +32,15 @@ function createPixelBox(amount) {
 createPixelBox(5);
 
 document.querySelectorAll('.color')[0].className += ' selected';
+
+function changeSelected() {
+  let classSelected = document.querySelector('#color-palette');
+  classSelected.addEventListener('click', function(event) {
+    let classColor = event.target;
+    let elementSelected = document.getElementsByClassName('selected');
+    elementSelected[0].classList.remove('selected');
+    classColor.classList.add('selected');
+  });
+}
+changeSelected();
+/* console.log(event.target.style.backgroundColor) */
