@@ -44,7 +44,7 @@ function paintPixel() {
     const element = pixel[index];
     element.addEventListener('click', () => {
       const colorId = document.getElementsByClassName(colorSelected)[0];
-      const color = window.getComputedStyle(colorId).getPropertyValue('background-color')
+      const color = window.getComputedStyle(colorId).getPropertyValue('background-color');
       element.style.backgroundColor = color;
     });
   }
