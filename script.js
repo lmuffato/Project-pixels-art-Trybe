@@ -55,7 +55,7 @@ colocaCor ()
 
 function resetaCor (){
 
-    let reseta = document.querySelector('#resetar');
+    let reseta = document.querySelector('#clear-board');
     let pixel = document.querySelectorAll('.pixel');
 
 
