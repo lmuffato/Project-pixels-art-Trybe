@@ -15,20 +15,21 @@ colorSelect();
 function changePixelsColor() {
   let pixels = document.querySelectorAll('.pixel');
   for (index = 0; index < pixels.length; index += 1) {
-  pixels[index].addEventListener('click', onClicktoChange);
-  }
-  function onClicktoChange(event) {
+    pixels[index].addEventListener('click', function(event) {
     let selectedPixel = event.target;
-    let selectedColor = document.querySelector('.selected').style.backgroundColor;
+    let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
     selectedPixel.style.backgroundColor = selectedColor;
+    });  
   }
 }
 changePixelsColor();
 
-/*function clearButton() {
+function clearButton() {
+  let pixels = document.querySelectorAll('.pixels');
+  let clearBtn = document.getElementById('clear-board');
   for (let index = 0; index < pixels.length; index += 1) {
-  pixels[index].style.backgroundColor = 'white';
+    pixels[index].style.backgroundColor = 'white';
+    clearBtn.addEventListener('click', clearButton); 
   }
 }
-let clearBtn = document.getElementsByTagName('button');
-clearBtn.addEventListener('click', clearButton);*/ 
+clearButton();
