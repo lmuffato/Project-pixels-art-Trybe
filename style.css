@@ -55,3 +55,10 @@ body {
   cursor: pointer;
 }
 
+#board-size {
+  width: 50px;
+}
+
+#board span {
+  margin-left: 50px;
+}

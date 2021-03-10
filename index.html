@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
+    <section id="header">
       <h1 id="title">Paleta de Cores</h1>
 
       <ul id="color-palette">
@@ -17,8 +17,15 @@
         <li class="color background-red"></li>
         <li class="color background-yellow"></li>
       </ul>
+
+      <button id="clear-board">Limpar</button>
+      <span>Lines: </span>
+      <input type="number" name="board-size" id="board-size" min="1">
+      <button id="generate-board">
+        VQV
+      </button>
     </section>
-    <section>
+    <section id="board">
       <ul id="pixel-board">
         <div class="line">
           <li class="pixel"></li>
@@ -56,9 +63,6 @@
           <li class="pixel"></li>
         </div>
       </ul>
-      <button id="clear-board">
-        Limpar
-      </button>
     </section>
     <script src="script.js"></script>
   </body>
