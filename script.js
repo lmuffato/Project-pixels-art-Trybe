@@ -25,8 +25,7 @@ function boardGenerator(lineLength) {
   fillLines(lineLength);
   return square;
 }
-const board = boardGenerator(5);
-console.log(board);
+boardGenerator(5);
 // eu acho que deu certo
 
 // selecionando...
@@ -39,4 +38,17 @@ function selectClass(color) {
 
 // colocando o black como cor selecionada no window load
 window.onload = selectClass('black');
-console.log(document.getElementById('black').classList);
+
+// target select copiei o lucas na aula de addEventListener
+const targetSelected = document.getElementsByClassName('color');
+function targetSelect(targeted) {
+  const targetedItem = targeted.target;
+  const selectedItem = document.getElementsByClassName('selected')[0];
+  console.log(selectedItem);
+  selectedItem.classList.remove('selected');
+  targetedItem.classList.add('selected');
+  console.log(targetedItem);
+}
+for (let i = 0; i < targetSelected.length; i += 1) {
+  targetSelected[i].addEventListener('click', targetSelect);
+}
