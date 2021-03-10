@@ -17,7 +17,9 @@ function removeSelected(value) {
 
 function clickedPaletteElement() {
   this.classList.add('selected');
-  selectedPalette = window.getComputedStyle(this).getPropertyValue('background-color');
+  selectedPalette = window
+    .getComputedStyle(this)
+    .getPropertyValue('background-color');
   removeSelected(this);
 }
 
@@ -32,3 +34,12 @@ function clickedPixelElement(event) {
 for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', clickedPixelElement);
 }
+
+function clearBoard() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearBoard);
