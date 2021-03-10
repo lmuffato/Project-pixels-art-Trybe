@@ -1,37 +1,9 @@
-:root {
-
-  --color-black: black;
-
-  --color-red: #ff6961;
-
-  --color-blue: #3065ac;
-
-  --color-green: #7d7;
-
-}
-
 .color {
   margin-bottom: 5px;
   display: inline-block;
   width: 40px;
   height: 40px;
   border: 1px solid black;
-}
-
-.black-palette {
-  background-color: var(--color-black);
-}
-
-.red-palette {
-  background-color: var(--color-red);
-}
-
-.blue-palette {
-  background-color: var(--color-blue);
-}
-
-.green-palette {
-  background-color: var(--color-green);
 }
 
 .pixel {
