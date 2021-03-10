@@ -19,8 +19,8 @@ function generateRandomColors() {
 generateRandomColors();
 
 function clearSelect(e) {
-  const evtId = e.target.id;
-  if (evtId !== 'color-palette') {
+  const evt = e.target.id;
+  if (evt !== 'color-palette') {
     const pastSelected = document.querySelector('.selected');
     pastSelected.className = 'color';
     e.target.className = 'color selected';
@@ -29,3 +29,12 @@ function clearSelect(e) {
 
 const selectColor = document.querySelector('#color-palette');
 selectColor.addEventListener('click', clearSelect);
+
+function paintBoard(evt) {
+  const pastSelected = document.querySelector('.selected');
+  const evtColor = evt.target;
+  evtColor.style.backgroundColor = pastSelected.style.backgroundColor;
+}
+
+const pixelSelect = document.querySelector('#pixel-board');
+pixelSelect.addEventListener('click', paintBoard);
