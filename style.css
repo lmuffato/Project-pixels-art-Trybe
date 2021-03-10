@@ -15,12 +15,15 @@ table {
   border: 1px solid black;
 }
 
-.color , #clear-board {
+.color {
   display: inline-block;
   height: 50px;
   width: 50px;
   border-radius: 100%;
   margin: 0 10px;
+}
+
+.color , #clear-board {
   cursor: pointer;
 }
 
@@ -39,14 +42,15 @@ table {
 #clear-board {
   text-align: center;
   height: 52px;
-  width: 52px;
+  width: 200px;
+  border-radius: 50px;
   font-size: 12px;
   font-weight: 800;
   border: none;
+  margin-bottom: 30px;
   background-color: rgba(220, 220, 220);
   color: rgba(85, 85, 85);
   opacity: 0.5;
-  position: absolute;
   transition: 0.4s;
   visibility: hidden;
 

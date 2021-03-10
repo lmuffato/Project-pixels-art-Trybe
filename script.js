@@ -68,7 +68,7 @@ function clearBoard(event) {
 
 function clearButton() {
   const element = document.createElement('button');
-  const elementFather = document.querySelector('#color-palette');
+  const elementFather = document.querySelector('header');
 
   element.id = 'clear-board';
   element.innerText = 'Limpar';
