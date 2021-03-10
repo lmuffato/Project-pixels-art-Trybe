@@ -5,10 +5,16 @@ let runBgColors = document.getElementsByClassName('color');
 let selected = document.querySelector('.selected'); 
  
 // dar cor de fundo aos elementos base
-selected.style.backgroundColor = 'rgb(0,0,0)'
-runBgColors[0].style.backgroundColor = "red";
-runBgColors[1].style.backgroundColor = "gray";
-runBgColors[2].style.backgroundColor = "yellow";
+
+function colore () {
+    
+}
+
+runBgColors[0].classList.add = ('runBgColors', 'selected');
+runBgColors[0].style.backgroundColor = 'black';
+runBgColors[1].style.backgroundColor = "red";
+runBgColors[2].style.backgroundColor = "gray";
+runBgColors[3].style.backgroundColor = "yellow";
 
 // Função para capturar a cor da class color
 

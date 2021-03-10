@@ -9,8 +9,3 @@ body { width: 1366px; height: 768px;
 
 .color { width: 40px; height: 40px; display: inline-block ; border: solid 1px #000000;  
 }
-
-.selected {width: 40px; height: 40px; display: inline-block ; border: solid 1px #000000; }
-
-
-
