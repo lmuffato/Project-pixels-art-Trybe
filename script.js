@@ -17,11 +17,11 @@ function accessElement(tagId, elementType, position) {
 }
 
 for (let index = 1; index < 6; index += 1) {
-  accessElement('#pixel-board', 'div', 0).classList.add('tr');
+  accessElement('#pixel-board', 'tr', 0).classList.add('tr');
 }
 for (let index = 0; index < 5; index += 1) {
   for (let index2 = 0; index2 < 5; index2 += 1) {
-    accessElement('.tr', 'div', index).classList.add('td', 'pixel');
+    accessElement('.tr', 'td', index).classList.add('td', 'pixel');
   }
 }
 
@@ -59,3 +59,5 @@ function paintOfWhite() {
 }
 const restarButton = document.getElementById('clear-board');
 restarButton.addEventListener('click', paintOfWhite);
+
+
