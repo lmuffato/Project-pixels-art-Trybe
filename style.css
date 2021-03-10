@@ -28,3 +28,12 @@
   background-color: yellow;
   border: 1px solid black;
 }
+
+.wrapper {
+  display: grid;
+  border-radius: 1px;
+  grid-template-columns: 25px 25px 25px 25px 25px;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 1em; */
+}
