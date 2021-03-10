@@ -26,36 +26,36 @@ const box2 = document.getElementById('box2');
 const box3 = document.getElementById('box3');
 const box4 = document.getElementById('box4');
 
-box1.addEventListener('click', function() {
+box1.addEventListener('click', function () {
   box1.classList.add('selected');
   box2.classList.remove('selected');
   box3.classList.remove('selected');
   box4.classList.remove('selected');
 });
-box2.addEventListener('click', function() {
+box2.addEventListener('click', function () {
   box1.classList.remove('selected');
   box2.classList.add('selected');
   box3.classList.remove('selected');
   box4.classList.remove('selected');
-})
-box3.addEventListener('click', function() {
+});
+box3.addEventListener('click', function () {
   box1.classList.remove('selected');
   box2.classList.remove('selected');
   box3.classList.add('selected');
   box4.classList.remove('selected');
-})
-box4.addEventListener('click', function() {
+});
+box4.addEventListener('click', function () {
   box1.classList.remove('selected');
   box2.classList.remove('selected');
   box3.classList.remove('selected');
   box4.classList.add('selected');
-})
+});
 
 const button = document.getElementById('clear-board');
 const pixels = document.getElementById('pixel-board');
-button.addEventListener('click', function() {
+button.addEventListener('click', function () {
   pixels.style.backgroundColor = 'white';
-})
+});
 
 // function setColor() {
 //   const paletteColor = document.querySelectorAll('.color');
