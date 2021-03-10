@@ -46,21 +46,19 @@ function changeSelectedClass() {
   });
 }
 
+function clickEvent(e) {
+  const getColorToPaint = document.getElementsByClassName('selected')[0];
+  const value = e.target;
+  const setColor = window.getComputedStyle(getColorToPaint).getPropertyValue('background-color');
+  value.style.backgroundColor = setColor;
+}
+
 function paintSquares() {
-  let squareToPaint = document.querySelectorAll('.pixel');
+  const squareToPaint = document.querySelectorAll('.pixel');
   for (let index = 0; index < squareToPaint.length; index += 1) {
     squareToPaint[index].addEventListener('click', clickEvent);
   }
-
 }
-
-function clickEvent(e) {
-  let getColorToPaint =  document.getElementsByClassName('selected')[0];
-  var value = e.target;
-  let setColor = window.getComputedStyle(getColorToPaint).getPropertyValue("background-color");
-  value.style.backgroundColor = setColor
-}
-
 
 function clearPixels() {
   const getBtn = document.querySelector('#clear-board');
@@ -75,5 +73,5 @@ function clearPixels() {
 
 makeTable(5);
 changeSelectedClass();
-paintSquares()
+paintSquares();
 clearPixels();
