@@ -1,5 +1,5 @@
 const paleteColors = document.querySelector('#color-palette');
-const tablePixels = document.querySelector('.pixel-board');
+const tablePixels = document.querySelector('#pixel-board');
 
 function generateColors() {
   const rgb1 = Math.floor(Math.random() * 255);
