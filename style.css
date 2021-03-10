@@ -33,3 +33,12 @@ div {
   width: 50px;
 }
 
+#pixel-board {
+    
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+}
+
