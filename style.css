@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   width: 210px;
+  margin: 10px;
 }
 
 .color {
@@ -32,10 +33,6 @@ body {
 #clear-board {
   width: 210px;
   margin: 10px;
-}
-
-.color.selected {
-  border: 1px double orange;
 }
 
 .color#black {
