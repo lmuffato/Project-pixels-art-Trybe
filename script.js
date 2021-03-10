@@ -76,7 +76,7 @@ createPixelTable();
 function createPixelTableLineElements() {
   for (let index = 1; index <= 5; index += 1) {
     for (let index2 = 1; index2 <= 5; index2 += 1) {
-      const selectorDivPixelBoard = document.querySelector('#pixel-board');// div pai
+      let selectorDivPixelBoard = document.querySelector('#pixel-board');
       const createDiv = document.createElement('div');
       createDiv.className = 'pixel';
       createDiv.style.backgroundColor = 'white';
@@ -149,8 +149,6 @@ function colorPixel() {
   let selectDivColorPaletteBlue = document.querySelectorAll('.color')[3];
   let pixelArray = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixelArray.length; index += 1) {
-    let pixelArray = document.getElementsByClassName('pixel');
-
     function paintPixel() {
       if (selectDivColorPaletteBlack.className === 'color selected') {
         pixelArray[index].style.backgroundColor = 'black';
@@ -208,12 +206,37 @@ function createInputNumber() {
   createInput.id = 'board-size';
   createInput.type = 'number';
   createInput.min = '5';
-  createInput.minLength = '1';
   createInput.max = '50';
   selectorBody.insertBefore(createInput, selectDivPixel);
 }
 createInputNumber();
 
-function createDivsBonus() {
-
+function generatePixels() {
+  let selectInput = document.querySelector('#board-size');
+  const selectorDivPixelBoard = document.querySelector('#pixel-board');
+  if (selectInput.value >= 5 && selectInput.value < 51) {
+    selectorDivPixelBoard.innerHTML = '';
+    for (let index = 1; index <= selectInput.value; index += 1) {
+      for (let index1 = 1; index1 <= selectInput.value; index1 += 1) {
+        const createDiv = document.createElement('div');
+        selectorDivPixelBoard.style.maxWidth = `${parseInt(selectInput.value, 10) * 42}px`;
+        createDiv.className = 'pixel';
+        createDiv.style.backgroundColor = 'white';
+        createDiv.style.height = '40px';
+        createDiv.style.width = '40px';
+        createDiv.style.border = '1px solid black';
+        createDiv.style.display = 'inline-block';
+        selectorDivPixelBoard.appendChild(createDiv);
+      }
+    }
+    colorPixel();
+  } else {
+    alert('Board inválido!');
+  }
 }
+
+function createDivsBonus() {
+  const selectButton = document.querySelector('#generate-board');
+  selectButton.addEventListener('click', generatePixels);
+}
+createDivsBonus();
