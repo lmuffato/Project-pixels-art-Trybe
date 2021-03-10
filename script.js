@@ -1,4 +1,4 @@
-// referência: Jodiel-Briesemeister. (https://github.com/tryber/sd-010-a-project-pixels-art/pull/119/files);
+//referência: Jodiel-Briesemeister. (https://github.com/tryber/sd-010-a-project-pixels-art/pull/119/files);
 function palette() {
     const color = document.querySelectorAll('.color');
     const arrayColors = ['black', 'blue', 'yellow', 'green'];
@@ -9,14 +9,27 @@ function palette() {
       }
     }
   }
+
+  window.onload = palette;
   
   function getColor() {
     const colorArray = document.querySelector('#color-palette');
-    colorArray.addEventListener('click', (event) => { // adiciona listener do evento click nas paletas
-      const selectedColor = event.target; // guarda a cor da paleta em que clicou
+    colorArray.addEventListener('click', (event) => { //adiciona listener do evento click nas paletas.
+      const selectedColor = event.target; //guarda a cor da paleta em que clicou.
       document.querySelector('.selected').className = 'color';
       selectedColor.className += ' selected'; //adiciona a classe selected à cor da paleta que clicou.
     });
   }
   
   getColor();
+
+  function setColor() {
+    const pixelTable = document.querySelector('#pixel-board'); //seleciona a table.
+    pixelTable.addEventListener('click', (event) => {
+      const selectPixel = event.target; //guarda o pixel clicado na table.
+      const color = document.querySelector('.selected').style.backgroundColor; //seleciona o background color da paleta que clicou.
+      selectPixel.style.backgroundColor = color; //adiciona ao pixel clicado a cor do background da paleta.
+    });
+  }
+  
+  setColor();
