@@ -5,7 +5,7 @@ let blue = colorpalleteButtons[1];
 let red = colorpalleteButtons[2];
 let green = colorpalleteButtons[3];
 black.classList.add("selected");
-window.onload=createPixelBlocks(25,5);
+window.onload=createPixelBlocks(100,10);
 
 function createPixelBlocks(size,lineSize){
     for (let index = 1; index < size+1; index++) {
@@ -61,7 +61,7 @@ function chooseColor(e){
     }    
 }
 
-document.getElementById("clear").addEventListener('click',clear);
+document.getElementById("clear-board").addEventListener('click',clear);
 
 function clear(){
     pixel = document.getElementsByClassName('pixel');
