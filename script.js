@@ -22,4 +22,20 @@ function makeSquare (pixelSquare) {
 }
 makeSquare(5);
 
+window.onload = function(){
+    let allBlack = document.getElementById('color-palette')
+    let firstChild = allBlack.childNodes[1]
+        firstChild.className += ' selected'
+}
+
+function squareClean (){
+    let getClearButton = document.querySelector('#clear-board');
+    getClearButton.addEventListener('click', function() {
+        let getSquare = document.querySelectorAll('#pixel-board>div');
+        for (index of getSquare) {
+            getSquare[index].style.backgroundColor='white'
+        }
+    })
+}
+squareClean ();
 
