@@ -11,17 +11,16 @@ function initiateColor() {
 
 function updatePixelSize() {
   const pixels = document.getElementsByClassName('pixel');
-  console.log(pixels);
   Array.from(pixels).forEach((element) => {
     const pixel = element;
-    pixel.style.width = '37px';
-    pixel.style.height = '37px';
+    pixel.style.width = '40px';
+    pixel.style.height = '40px';
+    pixel.style.boxSizing = 'border-box';
   });
 }
 
 function updatePixelBorder() {
   const pixels = document.getElementsByClassName('pixel');
-  console.log(pixels);
   Array.from(pixels).forEach((element) => {
     const pixel = element;
     pixel.style.border = 'black solid 1px';
