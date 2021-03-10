@@ -10,3 +10,9 @@
   display: inline-block;
   margin: 0 5px;
 }
+
+.table td , .table th {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+}

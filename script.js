@@ -1,4 +1,5 @@
 const paleteColors = document.querySelector('#color-palette');
+const tablePixels = document.querySelector('.pixel-board');
 
 function generateColors() {
   const rgb1 = Math.floor(Math.random() * 255);
@@ -18,4 +19,19 @@ function createBox() {
   paleteColors.firstElementChild.style.backgroundColor = 'black';
 }
 
+function createTablePixels() {
+  for (let i = 0; i < 5; i += 1) {
+    const tr = document.createElement('tr');
+    tablePixels.appendChild(tr);
+    tr.className = 'table';
+    for (let k = 0; k < 5; k += 1) {
+      const td = document.createElement('td');
+      document.querySelectorAll('.table')[i].appendChild(td);
+      td.className = 'pixel';
+      td.style.backgroundColor = 'rgb(255, 255, 255)';
+    }
+  }
+}
+
 createBox();
+createTablePixels();
