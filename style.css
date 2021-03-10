@@ -58,6 +58,7 @@ body {
 }
 
 .pixel {
+  box-sizing: border-box;
   background-color: white;
   height: 38px;
   width: 38px;
