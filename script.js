@@ -24,17 +24,16 @@ for (i = 1; i <= 25; i +=1 ) {
 let classColor = document.querySelectorAll('.color');
 function clean() {
     for (let i = 0; i < classColor.length; i += 1) {
-    classColor[i].classList.remove('selected') 
+    classColor[i].classList.remove('selected') ;
    
    }      
 }
 
 for (let i = 0; i < classColor.length; i += 1) {
-    classColor[i].addEventListener('click',(clique )=> {   
-    clean()
-   clique.target.classList.add('selected')
-
-    })
+    classColor[i].addEventListener('click',(clique)=> {   
+    clean();
+    classColor[i].className += ' selected'
+    });
 }
 
 const toColor = document.querySelectorAll('.pixel')
@@ -42,14 +41,14 @@ const toColor = document.querySelectorAll('.pixel')
 for (let i = 0; i < toColor.length; i +=1) {
 toColor[i].addEventListener('click',() => {
    toColor[i].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
-   })
+   });
 }
 
 
 let button = document.getElementById('clear-board');
 button.addEventListener('click', () => {
     for (let i = 0; i < toColor.length; i +=1) {
-     toColor[i].style.backgroundColor = 'White'   
+     toColor[i].style.backgroundColor = 'white';   
     }   
-})
+});
 
