@@ -36,9 +36,10 @@ function armazenaCor () {
   return corArmazenar;
 }
 
+// função que limpa o quadro de pixels
 function clearBoard() {
-  for (let x = 0; x <= 25; x += 1) {
-    selectedPixel[x].style.backgroundColor = 'white';
+  for (let indexClear = 0; indexClear < 25; indexClear += 1) {
+    selectedPixel[indexClear].style.backgroundColor = 'white';
   }
 }
 // botão para limpar quadro de pixels
