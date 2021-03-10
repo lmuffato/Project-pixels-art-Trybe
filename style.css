@@ -19,3 +19,7 @@ td {
   width: 41px;
   height: 41px;
 }
+
+#clear-board {
+  margin-top: 15px;
+}
