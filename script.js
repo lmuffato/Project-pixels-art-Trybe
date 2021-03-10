@@ -77,7 +77,7 @@ function randomColors() {
 function setColumns(line, size) {
   
   for (let index = 0; index < size; index += 1) {
-    let box = document.createElement('th');
+    const box = document.createElement('th');
     box.className = 'boxes pixel';
     line.appendChild(box);
   }
@@ -94,27 +94,40 @@ function setLines(size) {
   }
 }
 
+function resetBoard() {
+  let board = document.querySelectorAll('#pixel-board tr');
+
+  for (let index = board.length - 1; index >= 0; index -= 1) {
+    board[index].parentNode.removeChild(board[index]);
+  }
+}
+
 function setBoard(size) {
+  let board = document.querySelectorAll('#pixel-board tr')
+  if(board.length > 0) {
+    resetBoard();
+  }
   setLines(size);
 }
 
-// function getSize(){
-//   let boardSize = document.getElementById('board-size');
-//   return parseInt(boardSize.value);
-// }
+function getSize(){
+  let boardSize = document.getElementById('board-size');
+  return parseInt(boardSize.value);
+}
 
-// function reSize() {
-//   setBoard(getSize);
-// }
+function reSize() {
+  setBoard(getSize);
+}
 
-// function setSize(){
-//   const button = document.getElementById('vqv-button');
-//   button.addEventListener('click', reSize);
-// }
+function setSize(){
+  const button = document.getElementById('generate-board');
+  button.addEventListener('click', reSize);
+}
 
 window.onload = function script() {
   setColor(randomColors());
   pixelPaint();
   clear();
   setBoard(5);
+  setSize();
 };
