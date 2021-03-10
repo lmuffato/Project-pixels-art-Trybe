@@ -25,20 +25,74 @@ function createBreakLine() {
 }
 
 // Cria o pixel board dinamicamente
-function createBoardPixel() {
-  const selectPixelBoard = document.querySelector('#pixel-board');
+function createBoardPixel(amount) {
+  const pixelBoard = document.querySelector('#pixel-board');
 
-  for (let line = 0; line < 5; line += 1) {
-    for (let index = 0; index < 5; index += 1) {
+  for (let line = 0; line < amount; line += 1) {
+    for (let index = 0; index < amount; index += 1) {
       const newPixel = createPixel('pixel');
-      selectPixelBoard.appendChild(newPixel);
+      pixelBoard.appendChild(newPixel);
     }
     const breakLine = createBreakLine();
-    selectPixelBoard.appendChild(breakLine);
+    pixelBoard.appendChild(breakLine);
   }
 }
 
-createBoardPixel();
+createBoardPixel(5);
+
+// Pinta os pixels ao clicar neles
+function paintPixels() {
+  const pixelsBoard = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pixelsBoard.length; index += 1) {
+    pixelsBoard[index].addEventListener('click', (event) => {
+      const selectedColor = document.querySelector('.selected');
+      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+    });
+  }
+}
+
+paintPixels();
+
+// Coloca a cor branca em todos o pixels
+function clearBoard() {
+  const pixelsBoard = document.querySelectorAll('.pixel');
+  const erase = document.querySelector('#clear-board');
+
+  for (let index = 0; index < pixelsBoard.length; index += 1) {
+    erase.addEventListener('click', () => {
+      pixelsBoard[index].style.backgroundColor = 'white';
+    });
+  }
+}
+
+clearBoard();
+
+// Apaga todos os filhos da div pixel-board
+function erasePixelBoard() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.innerHTML = '';
+}
+
+// Cria o pixel board com o valor q o usuário digita
+function generateBoardPixel() {
+  const generateBoard = document.querySelector('#generate-board');
+  const boardSize = document.querySelector('#board-size');
+
+  generateBoard.addEventListener('click', () => {
+    const board = Number(boardSize.value);
+    if (board <= 0 || board > 50) {
+      window.alert('Board inválido!');
+    } else {
+      erasePixelBoard();
+      createBoardPixel(board);
+      paintPixels();
+      clearBoard();
+    }
+  });
+}
+
+generateBoardPixel();
 
 // Remove a classe selected de todos os elementos
 function removeSelectedClass() {
@@ -62,31 +116,3 @@ function setClassSelected() {
 }
 
 setClassSelected();
-
-// Pinta os pixels ao clicar nele
-function paintPixels() {
-  const pixelsBoard = document.querySelectorAll('.pixel');
-
-  for (let index = 0; index < pixelsBoard.length; index += 1) {
-    pixelsBoard[index].addEventListener('click', (event) => {
-      const selectedColor = document.querySelector('.selected');
-      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
-    });
-  }
-}
-
-paintPixels();
-
-// Apaga o pixel-board
-function clearBoard() {
-  const pixelsBoard = document.querySelectorAll('.pixel');
-  const erase = document.querySelector('#clear-board');
-
-  for (let index = 0; index < pixelsBoard.length; index += 1) {
-    erase.addEventListener('click', () => {
-      pixelsBoard[index].style.backgroundColor = 'white';
-    });
-  }
-}
-
-clearBoard();
