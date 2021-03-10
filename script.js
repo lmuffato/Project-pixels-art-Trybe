@@ -44,14 +44,11 @@ function colorPixels() {
   }
 }
 
-function buttonClear() {
-  const clearAll = document.getElementById('clear-board');
-  clearAll.addEventListener('click', clearPixels);
-}
+const clearAll = document.getElementById('clear-board');
+clearAll.addEventListener('click', clearPixels);
 
 function init() {
   colorButton();
   colorPixels();
-  buttonClear();
 }
 window.onload = init;
