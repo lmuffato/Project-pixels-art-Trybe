@@ -27,6 +27,12 @@ function colorPalette() {
 }
 colorPalette();
 
+function pixelColor(event) {
+  const element = event.target;
+  const selectedColor = document.querySelector('.selected').style.backgroundColor;
+  element.style.backgroundColor = selectedColor;
+}
+
 function pixelBoard() {
   const pixelsFather = document.querySelector('#pixel-board');
 
@@ -36,6 +42,7 @@ function pixelBoard() {
     for (let column = 0; column < 5; column += 1) {
       const pixelColumn = document.createElement('td');
 
+      pixelColumn.addEventListener('click', pixelColor);
       pixelColumn.classList.add('pixel');
       pixelRow.appendChild(pixelColumn);
     }
