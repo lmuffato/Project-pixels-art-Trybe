@@ -77,10 +77,15 @@ btnClear.addEventListener('click', () => {
 btnSize.addEventListener('click', () => {
   const pixelBoard = document.getElementById('pixel-board');
   const inputNumber = document.getElementById('board-size');
-  const inputNumberValue = inputNumber.value;
+  let inputNumberValue = inputNumber.value;
   pixelBoard.innerHTML = '';
-  createBoard(inputNumberValue, inputNumberValue);
 
+  if (inputNumberValue === '') window.alert('Board inválido!');
+
+  if (inputNumberValue < '5') inputNumberValue = '5';
+  else if (inputNumberValue > '50') inputNumberValue = '50';
+
+  createBoard(inputNumberValue, inputNumberValue);
   eventClickPixel();
 });
 
