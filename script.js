@@ -1,10 +1,11 @@
 
-let pallete = document.getElementById('color-palette');
-let color1 = document.getElementById("black");
-let color1 = document.getElementById("red");
-let color1 = document.getElementById("pink");
-let color1 = document.getElementById("orange");
+function selColor () {
+  let changeColor = document.querySelector('#color-pallete');
+  click.addEventListener('click', function(event) {
+    let color = event.target;
+    document.querySelector('.selected').className = 'color'
+    color.className = ".selected";
 
-function selColor (event) {
-  let changeColor = event.target.getElementsByClass('color')
+  });
+
 }
