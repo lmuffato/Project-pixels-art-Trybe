@@ -15,7 +15,7 @@ table {
   border: 1px solid black;
 }
 
-.color {
+.color , #clear-board {
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -28,9 +28,34 @@ table {
   height: 40px;
   width: 40px;
   background-color: white;
+  transition: 0.4s;
 
   /*
   https://trybecourse.slack.com/archives/C01L16B9XC7/p1615336998345200?thread_ts=1615324356.299600&cid=C01L16B9XC7
   */
   box-sizing: border-box;
+}
+
+#clear-board {
+  text-align: center;
+  height: 52px;
+  width: 52px;
+  font-size: 12px;
+  font-weight: 800;
+  border: none;
+  background-color: rgba(220, 220, 220);
+  color: rgba(85, 85, 85);
+  opacity: 0.5;
+  position: absolute;
+  transition: 0.4s;
+  visibility: hidden;
+
+  /*
+  https://stackoverflow.com/questions/39524688/how-to-remove-the-focus-border-of-button-when-click/39524745
+  */
+  outline: 0;
+}
+
+#clear-board:hover {
+  opacity: 1;
 }
