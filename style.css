@@ -4,7 +4,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;  
+  right: 0;
 }
 
 .display-inline {
@@ -36,6 +36,146 @@ header {
 
 #faixa {
   height: 15px;
-  background-color: rgb(165,165,165);
+  background-color: rgb(165, 165, 165);
   margin-top: -5px;
+}
+
+#color-palette {
+  border: 2px solid black;
+  background-color: rgb(168, 224, 202);
+  margin-top: 125px;
+  margin-left: 5px;
+  padding-top: 10px;
+  width: 135px;
+}
+
+.espacoEntreCores {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#cor-preto {
+  width: 50px;
+  height: 50px;
+  background-color:black;
+  border: 4px solid black;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-cinza {
+  width: 50px;
+  height: 50px;
+  background-color:gray;
+  border: 4px solid gray;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-vermelho {
+  width: 50px;
+  height: 50px;
+  background-color:red;
+  border: 4px solid red;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-laranja {
+  width: 50px;
+  height: 50px;
+  background-color:orange;
+  border: 4px solid orange;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-amarelo {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border: 4px solid yellow;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-violeta {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(178, 132, 188);
+  border: 4px solid  rgb(178, 132, 188);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-rosa {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  border: 4px solid  pink;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-roxo {
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+  border: 4px solid  purple;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-azul-claro {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(133, 169, 245);
+  border: 4px solid rgb(133, 169, 245);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-azul-escuro {
+  width: 50px;
+  height: 50px;
+  background-color:blue;
+  border: 4px solid blue;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-verde-claro {
+  width: 50px;
+  height: 50px;
+  background-color:lightseagreen;
+  border: 4px solid lightseagreen;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-verde-escuro {
+  width: 50px;
+  height: 50px;
+  background-color:green;
+  border: 4px solid green;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-marrom {
+  width: 50px;
+  height: 50px;
+  background-color:rgb(102, 66, 40);
+  border: 4px solid rgb(102, 66, 40);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#cor-gelo {
+  width: 50px;
+  height: 50px;
+  background-color:rgb(238, 238, 240);
+  border: 4px solid rgb(238, 238, 240);
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
