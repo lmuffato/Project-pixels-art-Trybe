@@ -42,25 +42,32 @@ function selectColor() {
 }
 
 function getColor() {
-      const colors = document.querySelector('.selected');
-      return colors.className.split(' ')[1];  // preto , vermelho azul verde
-  }
+  const colors = document.querySelector('.selected');
+  return colors.className.split(' ')[1];
+}
 
-function preenche(){
+function preenche() {
   const pixels = document.querySelectorAll('.pixel');
-  for ( let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function(event) {
-      let color = getColor();
-      event.target.style.backgroundColor = getColor();
-      console.log(color);
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', function (event) {
+      const evento = event.target;
+      evento.style.backgroundColor = getColor();
     });
   }
+}
+
+function clear() {
+  const button = document.querySelector('#clear');
+  const pixels = document.querySelectorAll('.pixel');
+  button.addEventListener('click', function () {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  });
 }
 
 adicionaPixel(25);
 modifyColorToColorSelected();
 selectColor();
 preenche();
-
-
-
+clear();

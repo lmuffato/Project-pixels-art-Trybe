@@ -49,8 +49,12 @@ h1 {
   background-color: green;
 }
 
-#pixel-board {
+#container {
   position: absolute;
-  top: 100px;
+  top: 100px
+}
+
+#pixel-board {
   width: 210px;
 }
+
