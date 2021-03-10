@@ -116,24 +116,35 @@ function msgError() {
   return newMsg;
 }
 
+function addError() {
+  const secBtn = document.getElementById('grid-size');
+  const item = document.getElementById('msg-error');
+  if (item === null) {
+    secBtn.appendChild(msgError());
+  }
+}
+
+function addButton(e) {
+  const item = document.getElementById('msg-error');
+  if (item !== null) {
+    item.remove();
+  }
+  makePixelBoard(e);
+}
+
+function addBtnOrError(e) {
+  if (e.target.value < 5 || e.target.value > 50) {
+    addError();
+  } else {
+    addButton(e.target.value);
+  }
+}
+
 function makeInputGrid() {
   const secBtn = document.getElementById('grid-size');
   const newInput = document.createElement('input');
   newInput.placeholder = 'Tamanho da grid';
-  newInput.addEventListener('change', () => {
-    if (newInput.value < 5 || newInput.value > 50) {
-      const item = document.getElementById('msg-error');
-      if (item === null) {
-        secBtn.appendChild(msgError());
-      }
-    } else {
-      const item = document.getElementById('msg-error');
-      if (item !== null) {
-        item.remove();
-      }
-      makePixelBoard(newInput.value);
-    }
-  });
+  newInput.addEventListener('change', addBtnOrError);
   secBtn.appendChild(newInput);
 }
 
