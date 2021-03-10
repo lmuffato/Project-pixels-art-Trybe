@@ -2,6 +2,8 @@ const colorsArray = ['red', 'blue', 'green', 'magenta'];
 
 const colorsInPalette = document.querySelectorAll('.color');
 
+const resetBoardButton = document.querySelector('#clear-board');
+
 function addColorsInPalette() {
   for (let index = 0; index < colorsInPalette.length; index += 1) {
     colorsInPalette[index].style.background = colorsArray[index];
@@ -28,10 +30,16 @@ function selectNewElement(newEl) {
 }
 
 function paintNewPixel(pixel) {
-  pixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+  const boardPixel = pixel;
+  boardPixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
+
+function resetPixelBoard() {
+  boardPixels.forEach((px) => px.setAttribute('style', 'background-color: white;'));
 }
 
 colorsInPalette.forEach(addColorsInPalette);
 
 colorsInPalette.forEach((el) => el.addEventListener('click', (e) => selectNewElement(e.target)));
-boardPixels.forEach((px) => px.addEventListener('click', (e) => paintNewPixel(e.target)))
+boardPixels.forEach((px) => px.addEventListener('click', (e) => paintNewPixel(e.target)));
+resetBoardButton.addEventListener('click', resetPixelBoard);
