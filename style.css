@@ -49,3 +49,8 @@
     border: 1px solid black;
     background-color: white;
 }
+
+#clear-board {
+    margin: auto;
+    display: table;
+}
