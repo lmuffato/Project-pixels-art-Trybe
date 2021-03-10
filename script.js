@@ -1,11 +1,7 @@
-function renameSelected() {
+function renameSelected(selectedElement) {
   const color = document.getElementsByName('color');
-  let counter = 0;
   for (let index = 0; index < color.length; index += 1) {
-    if (color[index].classList.contains('selected')) {
-      counter += 1;
-    }
-    if (counter > 1) {
+    if (selectedElement !== color[index]) {
       color[index].className = 'color';
     }
   }
@@ -14,28 +10,28 @@ function greenColor() {
   const greenColorElement = document.getElementById('verde');
   greenColorElement.addEventListener('click', () => {
     greenColorElement.className += ' selected';
-    renameSelected();
+    renameSelected(greenColorElement);
   });
 }
 function blueColor() {
-  const greenColorElement = document.getElementById('azul');
-  greenColorElement.addEventListener('click', () => {
-    greenColorElement.className += ' selected';
-    renameSelected();
+  const blueColorElement = document.getElementById('azul');
+  blueColorElement.addEventListener('click', () => {
+    blueColorElement.className += ' selected';
+    renameSelected(blueColorElement);
   });
 }
 function yellowColor() {
-  const greenColorElement = document.getElementById('amarelo');
-  greenColorElement.addEventListener('click', () => {
-    greenColorElement.className += ' selected';
-    renameSelected();
+  const yellowColorElement = document.getElementById('amarelo');
+  yellowColorElement.addEventListener('click', () => {
+    yellowColorElement.className += ' selected';
+    renameSelected(yellowColorElement);
   });
 }
 function blackColor() {
-  const greenColorElement = document.getElementById('preto');
-  greenColorElement.addEventListener('click', () => {
-    greenColorElement.className += ' selected';
-    renameSelected();
+  const blackColorElement = document.getElementById('preto');
+  blackColorElement.addEventListener('click', () => {
+    blackColorElement.className += ' selected';
+    renameSelected(blackColorElement);
   });
 }
 window.onload = function onload() {
