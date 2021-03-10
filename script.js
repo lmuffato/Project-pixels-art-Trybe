@@ -33,6 +33,7 @@ createPixelBox(5);
 
 document.querySelectorAll('.color')[0].className += ' selected';
 
+// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A
 function changeSelected() {
   let classSelected = document.querySelector('#color-palette');
   classSelected.addEventListener('click', function(event) {
@@ -43,4 +44,16 @@ function changeSelected() {
   });
 }
 changeSelected();
-/* console.log(event.target.style.backgroundColor) */
+
+function changeColorBox() {
+  let selectedBox = document.querySelector('#pixel-board');
+  selectedBox.addEventListener('click', function (event) {
+    let boxPixel = event.target;
+    console.log(boxPixel)
+    if (boxPixel.className === 'pixel') {
+      let selectedColor = document.querySelector('.selected').style.backgroundColor;
+      boxPixel.style.backgroundColor = selectedColor;
+    }
+  })
+}
+changeColorBox();
