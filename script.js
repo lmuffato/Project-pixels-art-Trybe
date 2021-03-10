@@ -14,3 +14,12 @@ function createPixBox(size) {
   }
 }
 createPixBox(5);
+
+function selectingColorsPalette(event) {
+   const eventTarget = event.target;
+   const classSelected = document.querySelector('.selected');
+   classSelected.className = 'color';
+   eventTarget.className += 'selected';
+};
+
+document.querySelector('#pixel-board').addEventListener('click', selectingColorsPalette);
