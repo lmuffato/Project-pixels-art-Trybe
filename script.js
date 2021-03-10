@@ -104,6 +104,7 @@ function makeButtonReset() {
   const secBtn = document.getElementById('secBtn');
   const newButton = document.createElement('button');
   newButton.innerText = 'Limpar';
+  newButton.id = 'clear-board';
   newButton.addEventListener('click', resetPixelBoard);
 
   secBtn.appendChild(newButton);
