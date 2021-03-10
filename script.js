@@ -66,11 +66,8 @@ function clearBoard() {
 function resizeBoard(e) {
   e.preventDefault();
   const inputBoardSize = document.getElementById('board-size');
-  boardSize = inputBoardSize.value;
-  const pixelBoardChildren = pixelBoard.children;
-  for (let index = pixelBoardChildren.length - 1; index >= 0; index -= 1) {
-    pixelBoardChildren[index].remove();
-  }
+  boardSize = inputBoardSize.value;  
+  pixelBoard.innerHTML = '';
   setPixels();
 }
 
