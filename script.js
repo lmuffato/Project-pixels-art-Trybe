@@ -42,18 +42,21 @@ element4.addEventListener('click', () => {
 })
 console.log(element4);
 
-// function chooseColor() {
-//   let selection = document.querySelector('.selected');
-//   let bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
-//   return bgColor;
-// }
+function chooseColor() {
+  const selection = document.querySelector('.selected');
+  let bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
+  return bgColor;
+  
+}
 
-// function fillPixel() {
-//    EventTarget.style.backgroundColor = chooseColor()
-// }
+document.addEventListener('click', clique);
+function clique(e){
+  let section = document.querySelector('section');
+  let header = document.querySelector('header');
+  let body = document.querySelector('body');
+  let h1 = document.querySelector('h1');
+  if (e.target !== body && e.target !== header && e.target !== section && e.target !== h1){
+ e.target.style.backgroundColor = chooseColor();
+  }
+};
 
-
-// document.addEventListener('click', () => {
-//   pixelChoose.target(chooseColor());
-//   //handle click
-// })
