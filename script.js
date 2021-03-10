@@ -1,7 +1,12 @@
+let colorpalleteButtons = document.getElementsByClassName("color");
 let pixelBoard = document.getElementById("pixel-board");
-pixelBoard.style.display="inline"
+let black = colorpalleteButtons[0];
+let blue = colorpalleteButtons[1];
+let red = colorpalleteButtons[2];
+let green = colorpalleteButtons[3];
+black.classList.add("selected");
 window.onload=createPixelBlocks(25,5);
-// every pixel are squares
+
 function createPixelBlocks(size,lineSize){
     for (let index = 1; index < size+1; index++) {
         pixelSquare=document.createElement('div');
@@ -18,10 +23,46 @@ function createPixelBlocks(size,lineSize){
         }
     }
 }
-let pixelSquares = document.getElementsByClassName('pixelSquare');
-pixelBoard.addEventListener('click',clickEvent);
+pixelBoard.addEventListener('click',fillPixel);
 
-function clickEvent(e){
+function fillPixel(e){
     let event= e;
     event.target.style.backgroundColor="black";        
 }
+
+
+
+black.addEventListener('click',chooseColor)
+red.addEventListener('click',chooseColor)
+green.addEventListener('click',chooseColor)
+blue.addEventListener('click',chooseColor)
+
+
+
+function chooseColor(e){
+    if(e.target.id == "black"){
+        black.classList.add("selected")
+        blue.classList.remove("selected")
+        red.classList.remove("selected")
+        green.classList.remove("selected")
+    }
+    else if(e.target.id == "blue"){
+        blue.classList.add("selected")
+        black.classList.remove("selected")
+        red.classList.remove("selected")
+        green.classList.remove("selected")
+    }else if(e.target.id == "red"){
+        red.classList.add("selected")
+        black.classList.remove("selected")
+        blue.classList.remove("selected")
+        green.classList.remove("selected")
+    }else if(e.target.id == "green"){
+        green.classList.add("selected")
+        black.classList.remove("selected")
+        blue.classList.remove("selected")
+        red.classList.remove("selected")
+    }
+
+    
+}
+
