@@ -132,7 +132,7 @@ main #color-palette .color:not( :first-child ) {
   margin-left: 0.5rem;
 }
 
-main #color-palette .color:first-child {
+main #color-palette .color:nth-child( 1 ) {
   background-color: black;
 }
 
@@ -144,7 +144,7 @@ main #color-palette .color:nth-child( 3 ) {
   background-color: var(--celadon-blue-color);
 }
 
-main #color-palette .color:last-child {
+main #color-palette .color:nth-child( 4 ) {
   background-color: var(--prussian-blue-color);
 }
 
