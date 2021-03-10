@@ -26,7 +26,7 @@ function createPixelBoard(size) {
       tableCell.classList.add('pixel');
     }
   }
-} createPixelBoard()
+} createPixelBoard();
 
 function createBoardDynamic() {
   let boardSize = 0;
@@ -35,11 +35,11 @@ function createBoardDynamic() {
     alert('Board inválido!');
   }
   createPixelBoard(boardSize);
-};
+}
 
 function clearBoard() {
   const buttonClear = document.querySelector('#clear-board');
-  let pixelTd = document.getElementsByClassName('pixel');
+  const pixelTd = document.getElementsByClassName('pixel');
   buttonClear.addEventListener('click', function () {
     for (let indexClear = 0; indexClear < pixelTd.length; indexClear += 1) {
       pixelTd[indexClear].style.backgroundColor = 'white';
@@ -102,5 +102,3 @@ function paintPixel() {
     }
   });
 } paintPixel();
-
-

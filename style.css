@@ -50,9 +50,7 @@ h1 {
   background-color: black;
   max-width: 1000px;
   max-height: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+  margin: 20px auto;
 }
 
 .pixel {
@@ -67,8 +65,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #clear-board {
