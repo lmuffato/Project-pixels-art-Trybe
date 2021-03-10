@@ -31,7 +31,7 @@ body {
 }
 
 #sect-pixel {
-  width: 304px;
+  width: 258px;
   height: 176px;
 }
 
@@ -59,8 +59,8 @@ body {
 
 .pixel {
   background-color: white;
-  height: 42px;
-  width: 42px;
+  height: 38px;
+  width: 38px;
   border: 1px solid;
   display: inline-block;
 }
