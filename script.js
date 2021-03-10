@@ -1,3 +1,4 @@
+// André Jaques - Turma 10 - Tribo A me ajudou muito a entender o event.target
 
  function selecionaCor (){
 
@@ -19,15 +20,18 @@
     return selecionado;
  }
 
+ selecionaCor ();
 
-/*
+
  function colocaCor (){
 
     let pixelArray = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < pixelArray.length; index += 1) {
         pixelArray[index].addEventListener('click', function(event){
-            pixelArray[index] = event.target;
+            let selecionaPixel = event.target; // como o André Jaques me disse, aqui estou dizendo que o alvo é o alvo do evento em questão.
+            let CorSelecionada = document.querySelector('.selected').style.backgroundColor; //aqui estou "pegando" o background-color da div que está com a classe selected
+            selectPixel.style.backgroundColor = CorSelecionada; 
         });
     }
 }
@@ -36,5 +40,9 @@
 
 function resetaCor (){
 
+    let reseta = document.querySelector('#resetar');
+
+    reseta.addEventListener('click', function() {
+        document.querySelectorAll('.pixel').style.backgroundColor = 'white';
+    });
  } 
-*/
