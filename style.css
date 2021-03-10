@@ -38,6 +38,7 @@
 }
 
 .pixel {
+  display: inline-block;
   border: solid black 1px;
   width: 40px;
   height: 40px;
