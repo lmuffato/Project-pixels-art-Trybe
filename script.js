@@ -7,7 +7,7 @@ function createPixelBlocks(size,lineSize){
         pixelSquare=document.createElement('div');
         pixelSquare.style.width="40px";
         pixelSquare.style.height="40px";
-        pixelSquare.style.border="1px solid grey";
+        pixelSquare.style.border="1px solid black";
         pixelSquare.style.display="inline-block";
         pixelSquare.style.backgroundColor="white";
         pixelSquare.classList.add('pixel');
