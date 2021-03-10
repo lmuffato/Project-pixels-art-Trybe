@@ -27,6 +27,7 @@
 
     for (let index = 0; index < paletaCor.length; index += 1) {
         paletaCor[index].addEventListener('click', function(event){
+            //paletaCor[index] = event.target;?
             let paletaCorSelecionada = event.target;
             SelecionadoAntes.classList.remove = 'selected';
             paletaCorSelecionada.classList.add = 'selected';
@@ -34,6 +35,7 @@
     }
  }
 
+ selecionaCor ()
 
  function colocaCor (){
 
@@ -41,14 +43,15 @@
 
     for (let index = 0; index < pixelArray.length; index += 1) {
         pixelArray[index].addEventListener('click', function(event){
+            //pixelArray[index] = event.target;?
             let selecionaPixel = event.target; // como o André Jaques me disse, aqui estou dizendo que o alvo é o alvo do evento em questão.
             let CorSelecionada = document.querySelector('.selected').style.backgroundColor; //aqui estou "pegando" o background-color da div que está com a classe selected
-            selectPixel.style.backgroundColor = CorSelecionada; 
+            selecionaPixel.style.backgroundColor = CorSelecionada; 
         });
     }
 }
  
-
+colocaCor ()
 
 function resetaCor (){
 
@@ -58,3 +61,5 @@ function resetaCor (){
         document.querySelectorAll('.pixel').style.backgroundColor = 'white';
     });
  } 
+
+ resetaCor ()
