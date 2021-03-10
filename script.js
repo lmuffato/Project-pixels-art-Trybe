@@ -2,7 +2,7 @@ function renameSelected(selectedElement) {
   const color = document.getElementsByName('color');
   for (let index = 0; index < color.length; index += 1) {
     if (selectedElement !== color[index]) {
-      color[index].className = 'color';
+      color[index].classList.remove('selected');
     }
   }
 }
