@@ -3,7 +3,7 @@
 const colors = document.querySelectorAll('.color');
 
 function clickToSelectColor(e) {
-    let selectedItem = document.querySelector('.selected');
+    const selectedItem = document.querySelector('.selected');
     selectedItem.classList.remove('selected');
     e.target.classList.add('selected');
 }
@@ -16,8 +16,8 @@ for (let color = 0; color < colors.length; color += 1) {
 const pixels = document.querySelectorAll('.pixel');
 
 function clickToSetColor(e) {
-    let selectedItem = document.querySelector('.selected');
-    let selectedColor = window.getComputedStyle(selectedItem).getPropertyValue('background-color');
+    const selectedItem = document.querySelector('.selected');
+    const selectedColor = window.getComputedStyle(selectedItem).getPropertyValue('background-color');
     e.target.style.backgroundColor = selectedColor;
 }
 
@@ -26,7 +26,7 @@ for (let pixel = 0; pixel < pixels.length; pixel += 1) {
 }
 
 /* -------------- Clean Button ----------------- */
-const clearButton = document.querySelector('#clear-board')
+const clearButton = document.querySelector('#clear-board');
 
 function clickToClean() {
     for (let pixel = 0; pixel < pixels.length; pixel += 1) {
