@@ -57,9 +57,14 @@ function colorePaletaSuperior() {
 }
 colorePaletaSuperior();
 
+let selectedPixel = document.getElementsByClassName('pixel');
+
 function colore() {
-  const doc = document.getElementsByClassName('pixel');
-  doc[0].style.backgroundColor = qualCor;
+  for (let index = 0; index < document.getElementsByClassName('pixel').length; index += 1) {
+    selectedPixel[index].addEventListener('click', function() {
+      selectedPixel[index].style.backgroundColor = qualCor;
+    });
+  }
 }
 
 function criaQuadro(numberOfFrames) {
