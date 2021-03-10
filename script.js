@@ -27,16 +27,13 @@ window.onload = function () {
     let board = document.getElementById('pixel-board');
     board.addEventListener('click', function (e) {
       const pixel = e.target
-
       let selectedColor = document.querySelector(".selected")
-
-
+      
       if (pixel.localName === 'div') {
         pixel.style.backgroundColor = selectedColor.id
-
-      })
+      }
+    })
   }
-
   setPixelColor();
 
   function clearBoard() {
@@ -51,5 +48,4 @@ window.onload = function () {
   }
 
   clearBoard()
-
 }
