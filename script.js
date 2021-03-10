@@ -41,7 +41,6 @@ function montPalette(tableColors) {
 }
 
 function selectColor(event) {
-  console.log('entrou na função de selecionar cor');
   if (event.target !== colorSelected) {
     colorSelected.className = 'color';
     colorSelected = event.target;
@@ -50,12 +49,8 @@ function selectColor(event) {
 }
 
 function colorPixel(event) {
-  console.log('entrou na função de colorir');
-  console.log(event.target.style.backgroundColor);
-  console.log(colorSelected.style.backgroundColor);
   if (event.target.style.backgroundColor !== colorSelected.style.backgroundColor) {
     event.target.style.backgroundColor = colorSelected.style.backgroundColor;
-    console.log(event.target);
   }
 }
 
@@ -84,6 +79,7 @@ function sizeIsValid(test) {
 function resizePixelBoard() {
   size = sizeValue.value;
   if (sizeIsValid(size)) {
+    sizeValue.value = size;
     pixelBord.innerHTML = '';
     for (let index1 = 0; index1 < size; index1 += 1) {
       const newPixelLine = document.createElement('tr');
