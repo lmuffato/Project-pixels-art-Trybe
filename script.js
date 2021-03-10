@@ -21,3 +21,4 @@ for (let index = 1; index < amountFrame; index += 1) {
 }
 
 //Requesito 6
+document.getElementsByTagName('td')[0].className += ' selected';
