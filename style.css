@@ -23,6 +23,7 @@
     border-color: black;
     border-width: 1px;
     cursor: pointer;
+    display: inline-block;
 }
 
 #pixel-board {
