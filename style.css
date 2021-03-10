@@ -3,7 +3,7 @@
 }
 
 #color-palette {
-    text-align: center;
+  text-align: center;
 }
 
 .color {
@@ -38,6 +38,7 @@
 }
 
 .pixel {
+  background-color: white;
   display: inline-block;
   border: solid black 1px;
   width: 40px;
