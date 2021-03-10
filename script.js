@@ -1,18 +1,31 @@
 // Requisito 2;
-function creatPaddles() {
-  for (let index = 0; index < 4; index += 1) {
+function creatPaddles(num) {
+  for (let index = 0; index < num; index += 1) {
     const creatPaddless = document.createElement('li');
     document.getElementById('color-palette').appendChild(creatPaddless).style.listStyle = 'none';
     creatPaddless.className = 'color';
   }
 }
-creatPaddles();
+creatPaddles(17);
 function colorsPaddles() {
   const adicionandoCores = document.getElementsByClassName('color');
   adicionandoCores[0].style.backgroundColor = 'red';
   adicionandoCores[1].style.backgroundColor = 'blue';
   adicionandoCores[2].style.backgroundColor = 'purple';
-  adicionandoCores[3].style.backgroundColor = 'gray';
+  adicionandoCores[3].style.backgroundColor = 'yellow';
+  adicionandoCores[4].style.backgroundColor = 'pink';
+  adicionandoCores[5].style.backgroundColor = 'orange';
+  adicionandoCores[6].style.backgroundColor = 'rgb(238 18 137)';
+  adicionandoCores[7].style.backgroundColor = 'red';
+  adicionandoCores[8].style.backgroundColor = 'LightGreen';
+  adicionandoCores[9].style.backgroundColor = 'Salmon';
+  adicionandoCores[10].style.backgroundColor = 'Magenta';
+  adicionandoCores[11].style.backgroundColor = 'LemonChiffon';
+  adicionandoCores[12].style.backgroundColor = 'rgb(255 225 255)';
+  adicionandoCores[13].style.backgroundColor = 'rgb(0 0 139)';
+  adicionandoCores[14].style.backgroundColor = 'Moccasin';
+  adicionandoCores[15].style.backgroundColor = 'LightCoral';
+  adicionandoCores[16].style.backgroundColor = 'Honeydew';
 }
 colorsPaddles();
 // Requisito 3;
