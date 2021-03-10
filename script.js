@@ -18,12 +18,13 @@ function accessElement(tagId, elementType, position) {
 }
 
 for (let index = 1; index < 6; index += 1) {
-    accessElement('#pixel-board', 'div', 0).classList.add('tr','pixel');
+    accessElement('#pixel-board', 'div', 0).classList.add('tr');
 }
-for (let index =0; index < 5; index += 1) {
-    for (let index2 = 0; index2 < 5; index2 += 1){
-    accessElement('.tr', 'div', index).classList.add('td','pixel');
+for (let index = 0; index < 5; index += 1) {
+    for (let index2 = 0; index2 < 5; index2 += 1) {
+        accessElement('.tr', 'div', index).classList.add('td', 'pixel');
     }
 }
 
-document.querySelector('div').classList.add('selected','color');
+let initialColor = document.querySelector('div').classList.add('selected', 'color');
+
