@@ -6,9 +6,9 @@ function renameSelected() {
 }
 function greenColor() {
   const greenColorElement = document.getElementById('verde');
-  greenColorElement.addEventListener('click', () => { 
-    greenColorElement.className += ' selected';
+  greenColorElement.addEventListener('click', () => {
     renameSelected();
+    greenColorElement.className += ' selected';
   });
 }
 function blueColor() {
@@ -32,6 +32,14 @@ function blackColor() {
     blackColorElement.className += ' selected';
   });
 }
+function paintBoard() {
+  const selectedElement = document.getElementByClassName('selected');
+  const board = document.querySelector('#pixel-board');
+  board.addEventListener('click', (event) => {
+    const paint = event.target.style.backGroundColor;
+    paint.style.backGroundColor = selectedElement.style.backGroundColor;
+  });
+}
 window.onload = function onload() {
   if (document.getElementsByClassName('selected').length === 0) {
     document.getElementById('preto').className += ' selected';
@@ -40,4 +48,5 @@ window.onload = function onload() {
   blueColor();
   yellowColor();
   blackColor();
+  paintBoard();
 };
