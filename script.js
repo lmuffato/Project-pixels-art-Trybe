@@ -15,11 +15,35 @@ function createPixBox(size) {
 }
 createPixBox(5);
 
-function selectingColorsPalette(event) {
-   const eventTarget = event.target;
-   const classSelected = document.querySelector('.selected');
-   classSelected.className = 'color';
-   eventTarget.className += 'selected';
-};
+function eventChangingColorsPalette() {
+   let getClassSelected = document.getElementsByClassName('selected')[0];
+   let colorBlack = document.getElementsByClassName('color')[0];
+   let colorRed = document.getElementsByClassName('color')[1];
+   let colorBlue = document.getElementsByClassName('color')[2];
+   let colorGreen = document.getElementsByClassName('color')[3];
 
-document.querySelector('#pixel-board').addEventListener('click', selectingColorsPalette);
+   colorBlack.addEventListener('click',function () {
+    getClassSelected = document.getElementsByClassName('selected')[0];
+    getClassSelected.classList.remove('selected');
+    colorBlack.classList.add('selected');
+   })
+
+   colorRed.addEventListener('click',function () {
+    getClassSelected = document.getElementsByClassName('selected')[0];
+    getClassSelected.classList.remove('selected');
+    colorRed.classList.add('selected');
+  })
+
+  colorBlue.addEventListener('click',function () {
+    getClassSelected = document.getElementsByClassName('selected')[0];
+    getClassSelected.classList.remove('selected');
+    colorBlue.classList.add('selected');
+  })
+
+  colorGreen.addEventListener('click',function () {
+    getClassSelected = document.getElementsByClassName('selected')[0];
+    getClassSelected.classList.remove('selected');
+    colorGreen.classList.add('selected');
+  })
+};
+eventChangingColorsPalette();
