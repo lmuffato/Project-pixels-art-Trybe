@@ -11,7 +11,8 @@ function generateColor() {
   const r = Math.ceil(Math.random() * 255);
   const g = Math.ceil(Math.random() * 255);
   const b = Math.ceil(Math.random() * 255);
-  const color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  const color = `rgb(${r}, ${g}, ${b})`;
+  console.log(color);
   return color;
 }
 
