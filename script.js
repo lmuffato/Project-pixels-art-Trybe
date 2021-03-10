@@ -15,6 +15,7 @@ function createBox() {
     paleteColors.appendChild(boxColor);
     boxColor.style.backgroundColor = generateColors();
   }
+  paleteColors.firstElementChild.style.backgroundColor = 'black';
 }
 
 createBox();
