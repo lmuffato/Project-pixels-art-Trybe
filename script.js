@@ -9,6 +9,27 @@ function initiateColor() {
   });
 }
 
+function updatePixelSize() {
+  const pixels = document.getElementsByClassName('pixel');
+  console.log(pixels);
+  Array.from(pixels).forEach((element) => {
+    const pixel = element;
+    pixel.style.width = '40px';
+    pixel.style.height = '40px';
+  });
+}
+
+function updatePixelBorder() {
+  const pixels = document.getElementsByClassName('pixel');
+  console.log(pixels);
+  Array.from(pixels).forEach((element) => {
+    const pixel = element;
+    pixel.style.border = 'black solid 1px';
+  });
+}
+
 window.onload = function startSession() {
   initiateColor();
+  updatePixelSize();
+  updatePixelBorder();
 };

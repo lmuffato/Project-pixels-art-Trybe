@@ -25,11 +25,13 @@ div {
 }
 
 table {
+
+  /* Para esse requisito foi necessário consultar o seguinte link:
+  https://www.tutoriart.com.br/como-remover-o-espaco-entre-bordas-de-tabela-em-html/ */
   border-collapse: collapse;
 }
 
 .pixel {
   width: 25px;
   height: 25px;
-  border: black solid 1px;
 }
