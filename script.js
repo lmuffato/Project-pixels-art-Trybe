@@ -2,6 +2,8 @@ window.onload = function (){
 
 // pega os elementos da classe color
 let runBgColors = document.getElementsByClassName('color');
+ 
+
 
 // dar cor de fundo aos elementos base
 runBgColors[0].style.backgroundColor = "black";
