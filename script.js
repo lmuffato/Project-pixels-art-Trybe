@@ -36,8 +36,25 @@ function createColorCell(colorName) {
   return colorCell;
 }
 
+// Função pega no github do girol: https://gist.github.com/girol/4a606d5cc6286ce1e9755faa3b7746df
+function generateColor() {
+  const hexadecimais = '0123456789ABCDEF';
+  let cor = '#';
+
+  // Pega um número aleatório no array acima
+  for (let i = 0; i < 6; i += 1) {
+  // E concatena à variável cor
+    cor += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return cor;
+}
+
 function fillColorPalette() {
-  const colors = ['black', 'red', 'yellow', 'blue'];
+  const colors = ['black'];
+
+  for (let item = 1; item <= 3; item += 1) {
+    colors.push(generateColor());
+  }
 
   for (let colorUnit = 0; colorUnit < colors.length; colorUnit += 1) {
     const colorPallet = document.getElementById('color-palette');
