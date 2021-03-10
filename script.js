@@ -24,16 +24,13 @@ window.onload = function () {
   function setPixelColor() {
     let board = document.getElementById('pixel-board');
     board.addEventListener('click', function (e) {
-
       const pixel = e.target
 
       let selectedColor = document.querySelector(".selected")
-      console.log(selectedColor.id)
 
 
       if (pixel.localName === 'div') {
         pixel.style.backgroundColor = selectedColor.id
-      }
 
     })
   }
