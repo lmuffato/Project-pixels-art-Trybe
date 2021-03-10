@@ -3,6 +3,25 @@ body {
   height: 768px;
 }
 
+#pixel-board {
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-left: 88px;
+}
+
+.pixel {
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border: 1px solid;
+  display: inline-block;
+}
+
+#list-palette-color {
+  width: 375px;
+  padding-bottom: 10px;
+}
+
 #color-palette {
   display: inline-block;
   margin-left: 46px;
@@ -16,6 +35,11 @@ body {
   list-style: none;
   padding: 2px 10px;
   display: inline-block;
+}
+
+#sect-pixel {
+  width: 259px;
+  height: 176px;
 }
 
 .color {
