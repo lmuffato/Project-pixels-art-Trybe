@@ -1,5 +1,3 @@
-const colorsArray = ['red', 'blue', 'green', 'magenta'];
-
 const colorsInPalette = document.querySelectorAll('.color');
 
 const resetBoardButton = document.querySelector('#clear-board');
@@ -12,7 +10,8 @@ const pixelBoard = document.querySelector('#pixel-board');
 
 function addColorsInPalette() {
   for (let index = 0; index < colorsInPalette.length; index += 1) {
-    colorsInPalette[index].style.background = colorsArray[index];
+    const randomColor = `rgb(${Math.random() * 254},${Math.random() * 254},${Math.random() * 254})`;
+    colorsInPalette[index].style.background = randomColor;
   }
 
   colorsInPalette[0].style.background = 'black';
