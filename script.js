@@ -15,6 +15,7 @@ let qualCor = '';
 function selectBlack() {
   document.getElementsByClassName('color')[0].classList.add('selected');
   qualCor = 'black';
+  console.log('preto selecionado');
 }
 function selectOrange() {
   document.getElementsByClassName('color')[1].classList.add('selected');
@@ -63,7 +64,7 @@ function criaQuadro(numberOfFrames) {
     const pegaDiv = document.getElementById('pixel-board');
     pegaDiv.append(criaDiv);
     criaDiv.addEventListener('click', estouClicado);
-    criaDiv.addEventListener('click', colore);          //escutador em todos
+    criaDiv.addEventListener('click', colore);
   }
 }
 criaQuadro(5);
