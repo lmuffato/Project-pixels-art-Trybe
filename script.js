@@ -63,6 +63,21 @@ function clearBoard() {
   }
 }
 
+function invalidBoardSize() {
+  const inputBoardSize = document.getElementById('board-size');
+  if (inputBoardSize.value < 5) {
+    inputBoardSize.value = 5;
+    boardSize = 5;
+    pixelBoard.innerHTML = '';
+    setPixels();
+  } else if (inputBoardSize.value > 50) {
+    inputBoardSize.value = 50;
+    boardSize = 50;
+    pixelBoard.innerHTML = '';
+    setPixels();
+  }
+}
+
 function resizeBoard(e) {
   e.preventDefault();
   const inputBoardSize = document.getElementById('board-size');
@@ -73,7 +88,7 @@ function resizeBoard(e) {
     pixelBoard.innerHTML = '';
     setPixels();
   } else {
-    alert('Insira um número entre 5 e 50!');
+    invalidBoardSize();
   }
 }
 
