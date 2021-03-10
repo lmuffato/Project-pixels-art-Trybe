@@ -12,18 +12,20 @@ function getColor() {
 
 getColor();
 
-getBlack.addEventListener('click', setColorBlack);
+const selectedClass = 'color selected';
 
 function setColorBlack() {
-  getBlack.className = 'color selected';
+  getBlack.className = selectedClass;
   getMagenta.className = 'color';
   getYellow.className = 'color';
   getBlue.className = 'color';
 }
 
+getBlack.addEventListener('click', setColorBlack);
+
 function setColorMagenta() {
   getBlack.className = 'color';
-  getMagenta.className = 'color selected';
+  getMagenta.className = selectedClass;
   getYellow.className = 'color';
   getBlue.className = 'color';
 }
@@ -33,7 +35,7 @@ getMagenta.addEventListener('click', setColorMagenta);
 function setColorYellow() {
   getBlack.className = 'color';
   getMagenta.className = 'color';
-  getYellow.className = 'color selected';
+  getYellow.className = selectedClass;
   getBlue.className = 'color';
 }
 
@@ -43,7 +45,7 @@ function setColorBlue() {
   getBlack.className = 'color';
   getMagenta.className = 'color';
   getYellow.className = 'color';
-  getBlue.className = 'color selected';
+  getBlue.className = selectedClass;
 }
 
 getBlue.addEventListener('click', setColorBlue);
