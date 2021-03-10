@@ -170,11 +170,12 @@ colorPixel();
 // Requirement 9;
 
 function creatButton() {
-  const selectDivPaletteColors = document.querySelector('#color-palette');
+  const selectorBody = document.querySelector('body');
+  const selectDivPixel = document.querySelector('#pixel-board')
   const createButton = document.createElement('button');
   createButton.id = 'clear-board';
   createButton.innerHTML = 'Limpar';
-  selectDivPaletteColors.appendChild(createButton);
+  selectorBody.insertBefore(createButton, selectDivPixel);
 }
 creatButton();
 

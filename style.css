@@ -1,3 +1,7 @@
 #color-palette {
   max-width: 250px;
 }
+
+.pixel {
+  background-color: rgb(0, 0, 0);
+}
