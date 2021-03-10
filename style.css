@@ -17,10 +17,6 @@ body {
   width: 50px;
 }
 
-#pixel-board {
-  display: inline-block;
-}
-
 .pixel {
   display: inline-block;
   box-sizing: content-box;
