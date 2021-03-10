@@ -1,3 +1,8 @@
+window.onload = () => {
+  const blackPallet = document.querySelector('.black-palette');
+  blackPallet.className = 'color black-palette selected';
+};
+
 function createPixel(className) {
   const pixel = document.createElement('div');
   pixel.className = className;
