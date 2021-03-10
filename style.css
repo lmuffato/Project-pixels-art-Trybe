@@ -14,22 +14,22 @@
 }
 
 #pixel-board ul {
-    margin-top: -20px;
+  margin-top: -20px;
 }
 
 #pixel-board {
-    padding-top: 20px;
-    text-align: center;
+  padding-top: 20px;
+  text-align: center;
 }
 
 h1 {
- text-align: center;
- background-color: cyan;
- padding: 10px;
- margin-top: -10px;
- margin-left: -10px;
- margin-right: -10px;
- font-family: monospace;
+  text-align: center;
+  background-color: cyan;
+  padding: 10px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  font-family: monospace;
 }
 
 section {
@@ -51,13 +51,11 @@ body {
   background-color: rgb(2, 26, 26);
   border: none;
   color: white;
-  outline: thin dotted;
-  outline: 0px auto -webkit-focus-ring-color;
-  outline-offset: 0px;
+  outline: 0 auto -webkit-focus-ring-color;
+  outline-offset: 0;
 }
 
 .color:hover {
-  transform: scale(2);
   cursor: pointer;
   transform: rotate(50deg);
 }
