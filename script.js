@@ -27,13 +27,11 @@ function eventChangingColorsPalette() {
     getClassSelected.classList.remove('selected');
     colorBlack.classList.add('selected');
   });
-
   colorRed.addEventListener('click', function() {
     getClassSelected = document.getElementsByClassName('selected')[0];
     getClassSelected.classList.remove('selected');
     colorRed.classList.add('selected');
   });
-
   colorBlue.addEventListener('click', function() {
     getClassSelected = document.getElementsByClassName('selected')[0];
     getClassSelected.classList.remove('selected');
