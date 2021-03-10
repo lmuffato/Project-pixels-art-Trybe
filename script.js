@@ -38,17 +38,14 @@ function returnClickClass () {
 function btnButton() {
     let bntElement = document.querySelector('.btnClear');
     let recorreColors = document.getElementsByTagName('pixel');
-    for (let index = 0; index < recorreColors.length; index += 1) {
-        let bntRecore = recorreColors[index];
         bntElement.addEventListener('click', function() 
         {
-            bntRecore.style.backgroundColor = "#ffffff";
+            recorreColors.style.backgroundColor = "#ffffff";
         })
-    }
 }
 
 
 returnClickClass();
 changeBgColor();
-
+btnButton();
 }
