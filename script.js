@@ -48,24 +48,33 @@ function columnBoardGeneration() {
 columnBoardGeneration();
 
 function selectColor() {
-  const getColor = document.getElementsByClassName('color');
-
-  for (let index = 0; index < getColor.length; index += 1) {
-    function changeClassSelected(event) {
-      for (letindex = 0; index < getColor.length; index += 1) {
+  let getColor = document.getElementsByClassName('color');
+  
+  for (let index = 0; index < getColor.length; index += 1){
+    getColor[index].addEventListener('click', changeClassSelected);
+     function changeClassSelected(event) {
+      for (let index = 0; index < getColor.length; index += 1) {
         getColor[index].className = 'color';
       }
       event.target.className = 'color selected';
     }
-    getColor[index].addEventListener('click', changeClassSelected);
   }
 }
-
 selectColor();
 
 function fillBlock() {
-  let pickSelected = document.querySelector('.selected');
-  console.log(pickSelected);
+  let box = document.querySelectorAll('.pixel');
+  
+  for (let index = 0; index < box.length; index += 1) {
+    box[index].addEventListener('click', colorBlock);
+    function colorBlock(event) {
+      let pickSelected = document.querySelector('.selected');
+      let colorSelected = pickSelected.style.backgroundColor;
+      event.target.style.backgroundColor = colorSelected;
+    }
+  }
 }
 
 fillBlock();
+
+

@@ -16,8 +16,7 @@
   background-color: white;
 }
 
-.line-container {
-  margin: 0;
-  padding: 0;
+#clear-board {
+  font-size: larger;
 }
 
