@@ -42,12 +42,22 @@ for (let indexColors = 0; indexColors < colorsSelect.length; indexColors += 1) {
 
 function paintColor(toPaint) {
     let colorUsing = document.getElementsByClassName('selected');
-    let saveSpecifcStyle = window.getComputedStyle(colorUsing[0]);
-    let backgroundColor = saveSpecifcStyle.getPropertyValue('background');
+    let saveSpecifcStyle = window.getComputedStyle(colorUsing[0]);//*
+    let backgroundColor = saveSpecifcStyle.getPropertyValue('background');//*
     toPaint.target.style.background = backgroundColor;
+    //FONTE: https://stackoverflow.com/questions/6338217/get-a-css-value-with-javascript
 }
 
 let boxToPaint = document.getElementsByClassName('pixel');
 for (let index8 = 0; index8 < boxToPaint.length; index8 += 1) {
     boxToPaint[index8].addEventListener('click', paintColor);
 }
+
+let pixels = document.getElementsByClassName('pixel');
+function paintOfWhite() {
+    for (let index9 = 0; index9 < pixels.length; index9 += 1) {
+        pixels[index9].style.background = 'white';
+    }
+}
+let restarButton = document.getElementById('restart');
+restarButton.addEventListener('click', paintOfWhite);
