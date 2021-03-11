@@ -42,7 +42,7 @@ let elementsPixels = document.querySelectorAll('.pixel');
 for (let i = 0; i < elementsPixels.length; i += 1){
 function pixelWithSelected(e){
  
-  elementsPixels[i].classList.add('selected');
+  // elementsPixels[i].classList.add('selected');
   let colorPallet = document.getElementById('color-palette');
  
 for (let index = 0; index < colorPallet.children.length; index += 1){   
@@ -59,7 +59,7 @@ if(colorPallet.children[index].className == 'color selected'){
   } 
   if(colorPallet.children[index].id === 'palette-blue'){
     e.target.style.backgroundColor = 'blue';
-  }  
+  }
 
 }
 }    
