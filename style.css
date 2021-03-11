@@ -14,35 +14,31 @@
     height:50px; 
     
 }
+#pixel-board {
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    display: block;
+    
+}
 
 .pixel {
-    color: rgb(255, 255, 255);
+    height: 40px;
     width: 40px;
-    height: 40px;     
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    cursor: pointer;
-    display:inline-block
-}
-
-.tr{
-    display: table-row;
-    background-color: rgb(255, 255, 255);
-    width: 40px;
-    height: 40px;     
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-}
-
-#pixel-board {
-    height: 100px;
-    width: 210px;
     background-color: white;
-    display: table;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
 }
-  
+.tr {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+}
+
 
 #clear-board{
     cursor: pointer;

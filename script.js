@@ -4,10 +4,18 @@ function criaPixels (numberOfPixels) {
    const fazDiv = document.createElement('div');
    fazDiv.className = 'pixel tr';
    const divMae = document.getElementById('pixel-board');
-   divMae.append(fazDiv);
+  divMae.append(fazDiv);
 }
 }
 criaPixels(5)
+
+//function line(numberOfPixels) {
+  // const line = 5;
+   //for (let index = 0; index < = 5; index + 1)
+
+//}
+
+
 
 
 // reqisito 9
