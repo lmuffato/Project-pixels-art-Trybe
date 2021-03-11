@@ -17,8 +17,8 @@ function selecionaCor() {
    cores[index].addEventListener('click',() => {
       for (let i = 0; i < cores.length; i += 1) {
       cores[i] .classList.add('selected');
-   }
-   cores[index].classList.remove('selected');
+      cores[index].classList.remove('selected');
+      }
   })
  }
 }
