@@ -60,11 +60,23 @@ if(colorPallet.children[index].className == 'color selected'){
   if(colorPallet.children[index].id === 'palette-blue'){
     e.target.style.backgroundColor = 'blue';
   }  
-// console.log(colorPallet.children[index].style)
+
 }
 }    
 }
 elementsPixels[i].addEventListener('click',pixelWithSelected); 
 }
+//funções dedicadas ao botão com função de limpar a área de pintura
 
+function clearAllFunction(){
+  const pixelsToClear = document.getElementById('pixel-board');
+  for(let index=0; index <pixelsToClear.children.length; index +=1){
+    pixelsToClear.children[index].style.backgroundColor = '';
+  }
+}
 
+function clearAllButton(){
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click',clearAllFunction)
+}
+clearAllButton()

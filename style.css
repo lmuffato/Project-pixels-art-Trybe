@@ -33,9 +33,6 @@ width: 40px;
 height: 40px;
 }
 
-.selected {
-}
-
 .pixel-black {
   background-color: black;    
 }
@@ -50,4 +47,11 @@ height: 40px;
 
 .pixel-blue {
   background-color: blue;  
+}
+
+#clear-board {
+  border-radius: 6px;
+  border-style: none;
+  background-color: cornflowerblue;
+  color: whitesmoke;
 }
