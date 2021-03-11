@@ -2,9 +2,20 @@ document.querySelector('.black').style.backgroundColor = 'black';
 document.querySelector('.red').style.backgroundColor = 'red';
 document.querySelector('.blue').style.backgroundColor = 'blue';
 document.querySelector('.green').style.backgroundColor = 'green';
+const generateBoard = document.querySelector('#generate-board');
+
+generateBoard.addEventListener('click', function () {
+  const boardSize = document.querySelector('#board-size').value;
+  document.querySelector('#board-size').value = '';
+  if(boardSize === ''){
+    alert('Board inválido!');
+  }
+  createPixelBoard(boardSize);
+});
 
 const pixelBoard = document.querySelector('#pixel-board');
 function createPixelBoard(size) {
+  resetPixelBoard();
   for (let line = 0; line < size; line += 1) {
     const tableRow = document.createElement('tr');
     pixelBoard.appendChild(tableRow);
@@ -15,6 +26,13 @@ function createPixelBoard(size) {
     }
   }
 } createPixelBoard(5);
+
+function resetPixelBoard() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let index = pixels.length - 1; index >= 0; index -= 1) {
+    pixels[index].remove();
+  }
+}
 
 function clearBoard() {
   const buttonClear = document.querySelector('#clear-board');
