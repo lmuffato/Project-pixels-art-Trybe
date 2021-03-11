@@ -19,11 +19,6 @@ function selectedRemove (evente) {
     eventeTarget.classList.add('selected');
 } 
 
-// 
-// guardar a cor do selected
-
-let colorSelected = document.querySelector('.selected').style.backgroundColor;
-
 // incluir click nos pixels
 let pixelSelect = document.getElementsByClassName('pixel');
 
@@ -36,3 +31,17 @@ function pixelColor (event) {
     let eventTarget = event.target;
     eventTarget.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
+
+//limpar quadro de pixels
+
+let clearPixels = document.getElementById('clear-board');
+
+clearPixels.addEventListener('click', clearBoard);
+
+function clearBoard () {
+    let blockPixels = document.getElementsByClassName('pixel');
+    for (let index = 0; index< blockPixels.length; index += 1){
+        blockPixels[index].style.backgroundColor = 'white';
+    }
+
+ }

@@ -16,7 +16,6 @@
 .pixel {
   display:inline-block;
   border: 1px solid black;
-  left: 0px;
   width: 40px;
   height: 40px;
   margin: 0;
