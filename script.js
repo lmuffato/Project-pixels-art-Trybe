@@ -7,7 +7,7 @@
 }*/
 
 // Requisito 8
-// resolvido a partir da lógica do código da Beatriz Barbosa https://github.com/tryber/sd-010-a-project-pixels-art/pull/32/files
+// resolvido a partir da lógica do código do Nilson Ribeiro https://github.com/tryber/sd-010-a-project-pixels-art/pull/51
 const colorsInPalette = document.querySelectorAll('.color');
 
 const pixelBoard = document.querySelector('#pixel-board');
@@ -15,12 +15,12 @@ const pixelBoard = document.querySelector('#pixel-board');
 function selectNewElement(newEl) {
   colorsInPalette.forEach((el) => el.classList.remove('selected'));
   newEl.classList.toggle('selected');
-} // Adiciona a classe selected ao container respectivo à cor selecionada
+} 
 
 function paintNewPixel(pixel) {
   const boardPixel = pixel;
   boardPixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-} // Pinta o pixel clicado com a cor do elemento com a classe selected
+} 
 
 colorsInPalette.forEach((el) => el.addEventListener('click', (e) => selectNewElement(e.target)));
 
