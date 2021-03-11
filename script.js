@@ -60,22 +60,30 @@ btnLimpar.addEventListener('click', () => {
   }
 });
 
+function createPixel(boardSize, tableRow) {
+  for (let index = 0; index < boardSize; index += 1) {
+    const pixelElement = document.createElement('div');
+    pixelElement.classList.add('pixel');
+    tableRow.appendChild(pixelElement);
+  }
+}
+
+function createTableRow(boardSize) {
+  for (let index = 0; index < boardSize; index += 1) {
+    const tableRow = document.createElement('div');
+    tableRow.classList.add('tr');
+    pixelBoard.appendChild(tableRow);
+    createPixel(boardSize, tableRow);
+  }
+}
+
 btnVQV.addEventListener('click', () => {
   if (Number(inputBoardSize.value) <= 0) {
     alert('Board inválido!');
   } else {
     pixelBoard.innerHTML = '';
     const boardSize = Number(inputBoardSize.value);
-    for (let index = 0; index < boardSize; index += 1) {
-      const tableRow = document.createElement('div');
-      tableRow.classList.add('tr');
-      pixelBoard.appendChild(tableRow);
-      for (let indexCell = 0; indexCell < boardSize; indexCell += 1) {
-        const pixelElement = document.createElement('div');
-        pixelElement.classList.add('pixel');
-        tableRow.appendChild(pixelElement);
-      }
-    }
+    createTableRow(boardSize);
     pixel = document.getElementsByClassName('pixel');
     setPixels();
   }
