@@ -39,16 +39,9 @@ body {
 }
 
 #pixel-board {
-  width: 400px;
+  width: 650px;
   border: 2px solid black;
 }
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 15px;
 
 .line {
   display: flex;
