@@ -1,4 +1,5 @@
-const dimension = 5;
+const dimension = 30;
+document.getElementById('pixel-board').style.marginLeft = ((window.innerWidth)/2)-(dimension/2)*40-50+dimension+'px';
 function changeSelected(eventOrigin) {
   const selectedNow = document.querySelector('.selected');
   selectedNow.classList.remove('selected');
@@ -8,7 +9,7 @@ function changeSelected(eventOrigin) {
 
 function addPaletteListener() {
   const colorElement = document.getElementsByClassName('color');
-  
+
   for (let index = 0; index < colorElement.length; index += 1) {
     colorElement[index].addEventListener('click', changeSelected);
   }
