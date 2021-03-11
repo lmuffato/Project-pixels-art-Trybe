@@ -48,3 +48,10 @@ colorPalette.addEventListener('click', function selectedInPalette(element) {
   inSelected.classList.remove('selected');
   newSelected.classList.add('selected');
 });
+
+const limpar = document.querySelector('#clear-board');
+limpar.addEventListener('click', function clear() {
+  for (let index = 0; index < pix.length; index += 1) {
+    pix[index].style.backgroundColor = 'white';
+  }
+});
