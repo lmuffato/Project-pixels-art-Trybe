@@ -1,17 +1,17 @@
-let tabela = [
+/*let tabela = [
 'a',
 'b',
 'c',
 'd'
-];
+];*/
 
 let color = document.querySelector('.color');
 
-for (let index = 0; index < tabela.length; index += 1 ) {
-    let celulas = tabela[index];
+for (let index = 0; index < 4; index += 1 ) {
+    //let celulas = tabela[index];
 
     let tabelItem = document.createElement('td');
-    tabelItem.innerText = celulas;
+    //tabelItem.innerText = celulas;
     tabelItem.className = 'cor'
 
     color.appendChild(tabelItem);
