@@ -9,16 +9,19 @@ window.onload = function () {
 
   setPalette('red', 'green', 'blue');
 
-  // function createCanvas() {
-  //   const getRow = document.getElementsByTagName('tr');
-  //   for (let index = 0; index < getRow.length; index += 1) {
-  //     let createColumn = document.createElement('td');
-  //     createColumn.className = 'pixel';
-  //     for (let columnIndex = 0; columnIndex <= getRow.length; columnIndex += 1) {
-  //       getRow[index].append(createColumn);
-  //     }
-  //   }
-  // }
+  function createCanvas(tableSize) {
+    const getTable = document.getElementById('pixel-board');
+    
+    for (let index = 0; index < tableSize; index += 1) {
+      let createRow = document.createElement('tr');
+      getTable.appendChild(createRow);
+      for (let columnIndex = 0; columnIndex < tableSize; columnIndex += 1) {
+        let createColumn = document.createElement('td');
+        createRow.appendChild(createColumn);
+        createColumn.className = 'pixel';
+      }
+    }
+  }
 
-  // createCanvas();
+  createCanvas(5);
 };
