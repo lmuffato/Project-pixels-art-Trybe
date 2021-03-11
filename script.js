@@ -1,5 +1,11 @@
 const pegaIdPrimeiraSection = document.querySelector('#color-palette');
 pegaIdPrimeiraSection.firstElementChild.classList.add('selected');
+//const criarBotao = document.createElement('button');
+//criarBotao.id = 'clear-board';
+//criarBotao.innerHTML = 'Limpar';
+//const posicionaBotao = document.querySelector('main').previousElementSibling;
+//posicionaBotao.appendChild(criarBotao);
+//posicionaBotao.style.marginBottom = '20px';
 
 function selecionaCorPixel() {
   pegaIdPrimeiraSection.addEventListener('click', function eventoDeClick(event) {
@@ -23,13 +29,10 @@ function pintarPixel() {
 }
 pintarPixel();
 
+
 function resetaQuadros() {
-  const criarBotao = document.createElement('button');
-  criarBotao.id = 'clear-board';
-  criarBotao.innerHTML = 'Limpar';
-  const posicionaBotao = document.getElementById('color-palette');
-  posicionaBotao.appendChild(criarBotao);
-  criarBotao.addEventListener('click', function(){
+  const pegaBotao = document.querySelector('button');
+  pegaBotao.addEventListener('click', function(){
   for(let index = 0; index < 25; index += 1){
       document.querySelectorAll('.pixel')[index].style.backgroundColor = 'white';
    } 
