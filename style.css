@@ -1,6 +1,6 @@
 #color-palette {
-  width: 500px;
-  height: 60px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
 }
 
@@ -13,8 +13,8 @@
 }
 
 #pixel-board {
-  width: 210px;
-  height: 210px;
+  width: fit-content;
+  height: fit-content;
   display: table;
 }
 
@@ -24,6 +24,7 @@
   height: 40px;
   border: 1px solid black;
 }
+
 .tr {
   display: table-row;
 }
@@ -31,3 +32,8 @@
 .td {
   display: table-cell;
 }
+
+#forms {
+  display: inline-block;
+}
+
