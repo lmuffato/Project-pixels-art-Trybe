@@ -49,7 +49,7 @@ function setPixels() {
       pixelColor.style.backgroundColor = backgroundColor;
     });
   }
-  pixelBoard.style.width = `${Number(inputBoardSize.value * 40 + 50).toString()}px`;
+  /** pixelBoard.style.width = `${Number(inputBoardSize.value * 40 + 50).toString()}px`; */
 }
 
 setPixels();
