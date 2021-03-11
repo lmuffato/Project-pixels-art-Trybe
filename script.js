@@ -53,8 +53,9 @@ function colorPixel() {
   pixelBoard.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
     const localPixel = event.target;
-    console.log(localPixel);
-    localPixel.style.backgroundColor = selectedColor;
+    if (localPixel.className === 'pixel') {
+      localPixel.style.backgroundColor = selectedColor;
+    }
   });
 }
 
@@ -69,10 +70,8 @@ function clear() {
   });
 }
 
-function load() {
+window.onload = () => {
   getColor();
   colorPixel();
   clear();
-}
-
-window.onload = load;
+};
