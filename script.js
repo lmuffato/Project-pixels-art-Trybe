@@ -80,14 +80,13 @@ function criaQuadro(quantosPixels) {
   }
   console.log('quadro criado');
 }
+criaQuadro(5);
 
 // function clickDoBotao() {
 //   const botao = document.getElementById('botaoTamanho');
 //   botao.addEventListener('click', criaQuadro);
 //   console.log('click do botao');
 // }
-
-criaQuadro(25);
 
 // Funções para Botao Limpar
 
