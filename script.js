@@ -88,7 +88,7 @@ let submitButton = document.getElementById('generate-board');
 submitButton.addEventListener('click', hookValue);
 
 function hookValue() {
-  if(input.value==""){
+  if(input.value==""||parseInt(input.value)>50||parseInt(input.value)<0){
       alert('Board inválido!')
   }
   sessionStorage.setItem('boardSize', input.value);
