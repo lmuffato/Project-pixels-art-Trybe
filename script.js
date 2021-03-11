@@ -57,6 +57,5 @@ window.onload = function onload() {
   yellowColor();
   blackColor();
   paintBoard();
-  purpleColor();
   buttonRefresh();
 };
