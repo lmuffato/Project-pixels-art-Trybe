@@ -11,6 +11,7 @@
 <body>
     <header>
         <h1>Paleta de Cores</h1>
+        <p><h2><strong>PIXELS ARTS</strong></h2></p>
     </header>
     <br>
     <section>
@@ -19,7 +20,7 @@
                 <div class="color" class="selected" style="background-color: #030303"></div>
                 <div class="color" style="background-color: #f6eb34"></div>
                 <div class="color" style="background-color: #1b7ffb"></div>
-                <div class="color" style="background-color: #78a747" ></div>
+                <div class="color" style="background-color: #78a747"></div>
                 <div class="color" style="background-color: #e73f1b"></div>
             </div>
         </section>
@@ -27,7 +28,7 @@
     <br>
     <div id="pixel-board">
         <div class="row">
-            <div class="pixel"></div>
+            <div class="pixel" onclick="setPixelColour(this)"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -62,5 +63,9 @@
             <div class="pixel"></div>
         </div>
     </div>
+    <br>
+    <button onclick="window.location.reload(this)">
+        <p>Clean Drawing</p>
+    </button>
 </body>
 </html>
