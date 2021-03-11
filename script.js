@@ -90,7 +90,7 @@ let generate = document.querySelector('#generate-board');
 
   pixelBoard.innerHTML = ''
 
-  if(linesNColumns === 0) {
+  if(linesNColumns === 0 && linesNColumns === '') {
     alert('Board inválido!');
   }
   if(linesNColumns < 5) {
