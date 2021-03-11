@@ -15,7 +15,17 @@ criaPixels(5)
 
 //}
 
-
+// Requisito 7 - Seleciona cor
+function selecionaCor() {
+   const cores = document.getElementsByClassName('color');
+   for (let index = 0; index <= cores.length; index +1);
+   cores.addEventListener('click',() => {
+      for (let colorPallete = 0; i <= colorPallete.length; i + 1) {
+      cores[colorPallete] .classList.remove('selected');
+   }
+   cores [index].classList.add('selected');
+})
+}
 
 
 // reqisito 9
@@ -25,3 +35,5 @@ criaPixels(5)
 //clean.addEventListener('click', clean) ; {
    // pixels.style.backgroundColor = "white";
 //} 
+
+
