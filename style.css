@@ -1,23 +1,33 @@
  main {
     display: block;
-    margin: 20px;
+    margin: 3%
 }
 
 aside{
     display: block;
-    margin: 20px;
+    max-height: 100px;
 }
 
 #title {
-    color: aqua;
+    color: black;
+    text-align: center
 }
 
+nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+
 #color-palette {
-    border: 3px solid darkgreen;
+    border: 3px solid grey;
     box-sizing: border-box;
-    padding: 50px;
-    max-width: 500px;
+    padding: 10px;
+    max-width: 50%;
     text-align: center;
+    margin: auto;
 }
 
 .color {
@@ -32,13 +42,12 @@ aside{
 
 #pixel-board {
     max-width: 200px;
-    max-height: 200px;
-
+    border-spacing: 0;
+    margin: auto
 }
 
 .pixel {
     border: 1px solid black;
-    box-sizing: border-box;
     width: 40px;
     height: 40px;
     background-color: white;

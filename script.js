@@ -1,15 +1,26 @@
 //color[length] para alterar a cor nas paletas
 
 window.onload = function bemVindo() {
-    console.log("teste testando")
+    console.log("teste testando");
 
 }
 //lets //
-let palleteColorBasic = ['black', 'red', 'blue', 'green'];
 let Palette = document.getElementById('color-palette');
 let Color = document.querySelectorAll('.color');
 let Board = document.getElementById('pixel-board');
 let Clear = document.getElementById('clear-board');
+let palleteColorBasic = ['black', randomColor(), randomColor(), randomColor()];
+
+
+// Gerador de Cores Automaticas by Vinicius13 //
+// https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj //
+
+function randomColor() {
+  var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+  return randomColor;
+}
+
+
 
 // Coloca as cores nas Divs //
 window.onload = function palleteColor(){
