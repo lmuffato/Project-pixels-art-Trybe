@@ -39,6 +39,7 @@ body {
 }
 
 .pixel {
+  margin-left: ;
   background-color: white;
   width: 40px;
   height: 40px;
@@ -46,7 +47,6 @@ body {
 
 
 table, th, td {
-  margin-left: 20px;
   border: 1px solid black;
   border-collapse: collapse;
 }

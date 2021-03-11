@@ -38,6 +38,8 @@ body {
   background-color: green;
 }
 
+
+
 .pixel {
   background-color: white;
   width: 40px;
@@ -46,7 +48,6 @@ body {
 
 
 table, th, td {
-  margin-left: 20px;
   border: 1px solid black;
   border-collapse: collapse;
 }
