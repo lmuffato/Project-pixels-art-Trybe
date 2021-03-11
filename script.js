@@ -18,9 +18,9 @@ document.addEventListener('click', function(event) {
 https://stackoverflow.com/questions/25238153/how-to-get-background-color-property-value-in-javascript */
 
 document.querySelector('.black').style.backgroundColor = 'black';
-document.querySelector('.yellow').style.backgroundColor = 'yellow';
-document.querySelector('.red').style.backgroundColor = 'red';
-document.querySelector('.blue').style.backgroundColor = 'blue';
+document.querySelector('.yellow').style.backgroundColor = 'rgb(' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) +')';
+document.querySelector('.red').style.backgroundColor = 'rgb(' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) +')';
+document.querySelector('.blue').style.backgroundColor = 'rgb(' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) +')';
 document.querySelector('#pixel-board').addEventListener('click', function(event) {
     let selectedColor = document.querySelector('.selected').style.backgroundColor;
     event.target.style.backgroundColor = selectedColor;
