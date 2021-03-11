@@ -39,17 +39,10 @@ body {
 }
 
 #pixel-board {
-  width: 650px;
+  width: 100%;
   border: 2px solid black;
 }
 
 .line {
-  display: flex;
-}
-
-.pixels {
-  border:  solid black;
-  background-color: white;
-  width: 100px;
-  height: 100px;
+  di
 }

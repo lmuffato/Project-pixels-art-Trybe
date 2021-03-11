@@ -39,17 +39,8 @@ body {
 }
 
 #pixel-board {
-  width: 650px;
-  border: 2px solid black;
-}
-
-.line {
-  display: flex;
-}
-
-.pixels {
-  border:  solid black;
-  background-color: white;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  border-color: black;
+  border: 2px solid;
+  border-collapse: collapse;
 }
