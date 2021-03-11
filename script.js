@@ -18,7 +18,7 @@ for (let index = 0; index < 4; index += 1 ) {
 }
 
 black = () => {
-    document.querySelectorAll('.cor')[0].style.backgroundColor = 'black' ;
+    document.querySelectorAll('.cor')[0].style.backgroundColor = 'rgb(0, 0, 0)' ;
 }
 red = () => {
     document.querySelectorAll('.cor')[1].style.backgroundColor = 'red' ;
