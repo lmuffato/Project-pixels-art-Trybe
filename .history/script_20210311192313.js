@@ -1,6 +1,7 @@
 const color = document.getElementsByClassName('color');
 const colorPalette = document.getElementById('color-palette');
 const pixelsListElements = document.getElementsByClassName('pixel');
+let selectElementColor = document.getElementsByClassName('selected')[0];
 
 function corTroca() {
   for (let corIndex = 0; corIndex < color.length; corIndex += 1) {
@@ -16,7 +17,6 @@ corTroca();
 function colorSelection () {
   for (let i = 0; i < pixelsListElements.length; i += 1) {
     pixelsListElements[i].addEventListener('click', function () {
-      const selectElementColor = document.getElementsByClassName('selected')[0];
       if (selectElementColor.classList.contains('backBlack')) {
         pixelsListElements[i].style.backgroundColor = 'black'
     } else if (selectElementColor.classList.contains('backRed')) {

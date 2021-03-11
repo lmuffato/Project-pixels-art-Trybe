@@ -16,7 +16,6 @@ corTroca();
 function colorSelection () {
   for (let i = 0; i < pixelsListElements.length; i += 1) {
     pixelsListElements[i].addEventListener('click', function () {
-      const selectElementColor = document.getElementsByClassName('selected')[0];
       if (selectElementColor.classList.contains('backBlack')) {
         pixelsListElements[i].style.backgroundColor = 'black'
     } else if (selectElementColor.classList.contains('backRed')) {
