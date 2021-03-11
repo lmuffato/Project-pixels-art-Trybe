@@ -43,3 +43,13 @@ function changeSelect (e) {
 }
 
 //Requesito 8
+let paintFrame = document.getElementsByClassName('pixel');
+
+for (let index = 0; index < paintFrame.length; index += 1) {
+  const selectFrame = paintFrame[index];
+  selectFrame.addEventListener('click', changeFrame);
+}
+
+function changeFrame (e) {
+  e.target.style.background = document.querySelector('.selected').style.background;
+}
