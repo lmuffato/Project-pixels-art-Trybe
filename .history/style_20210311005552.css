@@ -40,17 +40,8 @@ body {
 
 #pixel-board {
   width: 400px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
-
-
-.pixel {
-  border:  solid black;
-  background-color: white;
-  width: 25px;
-  height: 25px;
-}
-
 
 table, th, td {
   border: 1px solid black;
@@ -60,3 +51,13 @@ table, th, td {
 th, td {
   padding: 15px;
 
+#l ine {
+  display: flex;
+}
+
+.pixel {
+  border:  solid black;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}

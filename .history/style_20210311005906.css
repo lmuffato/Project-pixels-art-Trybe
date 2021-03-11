@@ -43,15 +43,6 @@ body {
   border: 1px solid black;
 }
 
-
-.pixel {
-  border:  solid black;
-  background-color: white;
-  width: 25px;
-  height: 25px;
-}
-
-
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -60,3 +51,10 @@ table, th, td {
 th, td {
   padding: 15px;
 
+
+.pixel {
+  border:  solid black;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}

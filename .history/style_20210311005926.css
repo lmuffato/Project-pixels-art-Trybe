@@ -60,3 +60,9 @@ table, th, td {
 th, td {
   padding: 15px;
 
+.pixel {
+  border:  solid black;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}
