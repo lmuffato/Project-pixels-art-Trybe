@@ -76,3 +76,5 @@ function clearBoard() {
   }
 }
 clearClick.addEventListener('click', clearBoard);
+
+// só queria deixar meu agradecimento ao jhon e a carol
