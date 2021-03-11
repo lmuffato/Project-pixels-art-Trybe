@@ -26,8 +26,8 @@ function tableColorPalette() {
 // Criando tabela //
 function createTable() {
   const placeBoard = document.querySelector('#pixel-board');
-  const createTable = document.createElement('table');
-  placeBoard.appendChild(createTable);
+  const getTable = document.createElement('table');
+  placeBoard.appendChild(getTable);
   // Criando TR da Table //
   const numbersCells = 5;
   for (let index = 0; index < numbersCells; index += 1) {
@@ -38,12 +38,28 @@ function createTable() {
       createTd.className = 'pixel'; // criando uma classe dentro do elemento td //
       createTd.style.backgroundColor = 'white';
       createTr.appendChild(createTd);
-      createTable.append(createTr);
+      getTable.append(createTr);
     }
   }
+}
+
+// REQUISITO 7 (TEMIDA) - Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro. //
+
+function addSelect() {
+  const getSelect = document.querySelectorAll('.color');
+  for (let index = 0; index < getSelect.length; index += 1) {
+    getSelect[index].addEventListener('click', removeSelect);
+  }
+  function removeSelect() {
+    for (let index = 0; index < getSelect.length; index += 1) {
+      getSelect[index].classList.remove('selected');
+    }
+    this.classList.add('selected'); // ou event.target.classList.add('selected);
+  }  
 }
 
 window.onload = function () {
   tableColorPalette();
   createTable();
+  addSelect();
 };
