@@ -70,8 +70,7 @@ const checkBoardSizeLimite = (boardSize, min, max) => {
 };
 
 const resetBoard = () => {
-  const reset = document.querySelector('#pixel-board');
-  reset.innerHTML = '';
+  document.querySelector('#pixel-board').innerHTML = '';
 };
 
 const changeBackgroundColorPixels = () => {
