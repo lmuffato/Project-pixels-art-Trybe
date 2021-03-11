@@ -41,14 +41,16 @@ nav {
 
 #pixel-board {
   max-width: 200px;
-  border-spacing: 0;
+  max-height: 200px;
   margin: auto;
+  border-spacing: 0;
+  border-collapse: separate;
 }
 
 .pixel {
   border: 1px solid black;
   width: 40px;
-  height: 40px;
+  height: 36px;
   background-color: white;
 }
 
