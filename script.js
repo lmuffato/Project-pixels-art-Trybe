@@ -70,26 +70,23 @@ function setColorPixel() {
 const buttonGenerate = document.querySelector('#generate-board');
 let inputValue = input.value;
 
-function sizeBoard() {
-  inputValue = input.value;
-  if (input.value < 5) {
-    inputValue = 5;
-  }
-  if (input.value > 50) {
-    inputValue = 50;
-  }
+function sizeBoard(value) {
+  inputValue = value;
+  if (value < 5) inputValue = 5;
+  if (value > 50) inputValue = 50;
   return inputValue;
 }
 
 function userGeneratePixelsBoard() {
   buttonGenerate.addEventListener('click', () => {
-    sizeBoard();
+    inputValue = input.value;
+    inputValue = sizeBoard(inputValue);
     document.querySelectorAll('.table').forEach((el) => el.remove());
-    createTablePixels(inputValue);
     if (input.value === '') {
       alert('Board inválido!');
       createTablePixels(5);
     }
+    createTablePixels(inputValue);
     pixels = document.querySelectorAll('.pixel');
     setColorPixel();
   });
