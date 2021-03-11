@@ -53,3 +53,13 @@ for (let index = 0; index < paintFrame.length; index += 1) {
 function changeFrame (e) {
   e.target.style.background = document.querySelector('.selected').style.background;
 }
+
+//Requesito 9
+let button = document.getElementById('clear-board');
+let reset = document.querySelectorAll('.pixel')
+
+button.addEventListener('click', function () {
+  for (let index = 0; index < reset.length; index += 1) {
+    reset[index].style.background = 'white';
+  }
+})
