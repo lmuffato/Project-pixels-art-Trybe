@@ -8,3 +8,5 @@ for(let index= 0; index < colorsDiv.length; index+=1) {
 let colorClass = event.target.classList.add('selected');
 }
 paletteColors.addEventListener("click",changeClassColors);
+
+
