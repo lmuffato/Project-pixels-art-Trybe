@@ -12,9 +12,13 @@ createColorsPallete(4);
 function assignColors() {
   const colors = document.querySelectorAll('.color');
   colors[0].style.backgroundColor = 'black';
-  colors[1].style.backgroundColor = 'green';
-  colors[2].style.backgroundColor = 'yellow';
-  colors[3].style.backgroundColor = 'purple';
+  for (let index = 1; index < colors.length; index += 1) {
+    const colorRed = Math.floor(Math.random() * 255);
+    const colorGreen = Math.floor(Math.random() * 255);
+    const colorBlue = Math.floor(Math.random() * 255);
+    colors[index].style.backgroundColor = `rgb(${colorRed}, ${colorGreen}, ${colorBlue})`;
+    window.onload = colors[index].style.backgroundColor;
+  }
 }
 assignColors();
 
