@@ -6,6 +6,7 @@
   console.log(color);
 }*/
 
+// Requisito 8
 // resolvido a partir da lógica do código da Beatriz Barbosa https://github.com/tryber/sd-010-a-project-pixels-art/pull/32/files
 function SelectingColor(){
   let palette = document.querySelectorAll('.color');
@@ -19,9 +20,23 @@ function SelectingColor(){
       BeforeSelectedColor.classList.add('selected');
     }
   }
- 
+
 SelectingColor();
 
+function ColoringSquares{
+  let allpixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < allpixels; index += 1){
+    allpixels[index].addEventListener('click', function(event){
+    let selectPixel = event.target;
+    let selectedColor = document.querySelector('.selected').style.backgroundColor;
+    selectPixel.style.backgroundColor = selectedColor;  
+    });
+  }
+}
+
+ColoringSquares();
+
+// Requisitos 4 e 5
 function GenerateBoard(number) {
   for (let index = 0; index < number; index += 1){
   let bigsquare = document.querySelector('#pixel-board');
@@ -31,6 +46,7 @@ function GenerateBoard(number) {
   }
 }
 
+// Requisito 9
 // reorganização feita observando o código da Beatriz, já citado acima
 // caso a função funcione, após analisar o meu código e o da Beatriz, a diferença foi que usei o 
 // getElementById, mas não passava no evaluator
