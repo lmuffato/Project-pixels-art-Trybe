@@ -10,15 +10,18 @@ let green = colorpalleteButtons[3];
 let input = document.getElementById('board-size');
 let pixelBlocks = 0;
 
-if(sessionStorage.getItem("boardSize")==null||sessionStorage.getItem("boardSize")==""){
-    pixelBlocks = 25
-}else{
-    pixelBlocks = parseInt(sessionStorage.getItem("boardSize"))
+if (
+  sessionStorage.getItem('boardSize') == null ||
+  sessionStorage.getItem('boardSize') == ''
+) {
+  pixelBlocks = 25;
+} else {
+  pixelBlocks = parseInt(sessionStorage.getItem('boardSize'));
 }
-
 window.onload = createPixelBlocks(pixelBlocks, 5);
+
 function createPixelBlocks(size, lineSize) {
-    for (let index = 1; index < size + 1; index++) {
+  for (let index = 1; index < size + 1; index++) {
     pixelSquare = document.createElement('div');
     pixelSquare.style.width = '40px';
     pixelSquare.style.height = '40px';
@@ -86,11 +89,13 @@ function clear() {
 }
 let submitButton = document.getElementById('generate-board');
 submitButton.addEventListener('click', hookValue);
-
 function hookValue() {
-  if(input.value==""||parseInt(input.value)>50||parseInt(input.value)<0){
-      alert('Board inválido!')
+  if (
+    input.value == '' ||
+    parseInt(input.value) > 50 ||
+    parseInt(input.value) < 0
+  ) {
+    alert('Board inválido!');
   }
   sessionStorage.setItem('boardSize', input.value);
-  
 }
