@@ -10,7 +10,7 @@ criaPaleta(4);
 
 // Seleciona a cor na paleta de cima
 
-let qualCor = '';
+let qualCor = 'black';
 
 function selectBlack() {
   document.getElementsByClassName('color')[0].classList.add('selected');
@@ -18,7 +18,7 @@ function selectBlack() {
   document.getElementsByClassName('color')[2].className = 'color';
   document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'black';
-  return 'preto selecionado';
+  console.log('Black ativo');
 }
 function selectOrange() {
   document.getElementsByClassName('color')[1].classList.add('selected');
@@ -26,6 +26,7 @@ function selectOrange() {
   document.getElementsByClassName('color')[2].className = 'color';
   document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'orange';
+  console.log('Orange ativo');
 }
 function selectOlive() {
   document.getElementsByClassName('color')[2].classList.add('selected');
@@ -33,6 +34,7 @@ function selectOlive() {
   document.getElementsByClassName('color')[0].className = 'color';
   document.getElementsByClassName('color')[3].className = 'color';
   qualCor = 'olive';
+  console.log('Olive ativo');
 }
 function selectBlue() {
   document.getElementsByClassName('color')[3].classList.add('selected');
@@ -40,9 +42,10 @@ function selectBlue() {
   document.getElementsByClassName('color')[2].className = 'color';
   document.getElementsByClassName('color')[0].className = 'color';
   qualCor = 'blue';
+  console.log('Blue ativo');
 }
 
-window.onload = selectBlack();
+window.onload = selectBlack;
 
 document.getElementsByClassName('color')[0].addEventListener('click', selectBlack);
 document.getElementsByClassName('color')[1].addEventListener('click', selectOrange);
@@ -57,41 +60,50 @@ function colorePaletaSuperior() {
 }
 colorePaletaSuperior();
 
-let selectedPixel = document.getElementsByClassName('pixel');
-
 function colore() {
+  const selectedPixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < document.getElementsByClassName('pixel').length; index += 1) {
     selectedPixel[index].addEventListener('click', function() {
       selectedPixel[index].style.backgroundColor = qualCor;
     });
   }
+  console.log('funcao colore!');
 }
 
-function criaQuadro(numberOfFrames) {
-  for (let index = 0; index < numberOfFrames * numberOfFrames; index += 1) {
-    const criaDiv = document.createElement('div');
-    criaDiv.className = 'pixel';
-    const pegaDiv = document.getElementById('pixel-board');
-    pegaDiv.append(criaDiv);
-    criaDiv.addEventListener('click', colore);
+function criaQuadro() {
+  let inputValue = document.getElementById('caixaDeTexto').value;
+  if (inputValue === '') {
+    alert('Valor Vazio!');
+  } else {
+    for (let index = 0; index < inputValue; index += 1) {
+      const criaDiv = document.createElement('div');
+      criaDiv.className = 'pixel';
+      const pegaDiv = document.getElementById('pixel-board');
+      pegaDiv.append(criaDiv);
+      criaDiv.addEventListener('click', colore);
+    }
+    console.log('quadro criado');
   }
 }
-criaQuadro(5);
+function clickDoBotao() {
+  let botao = document.getElementById('botaoTamanho');
+  botao.addEventListener('click', criaQuadro);
+  console.log('click do botao');
+}
+
+clickDoBotao();
 
 // Funções para Botao Limpar
 
-function limpaTudo() {
-  const doc = document.getElementsByClassName('pixel');
-  for (let index = 0; index < doc.length; index += 1) {
-    doc[index].style.backgroundColor = 'white';
-  }
+function criaBotaoLimpar() {
+  const button = document.createElement('button');
+  button.innerHTML = 'Limpar';
+  document.getElementById('espacoDoBotao').appendChild(button);
+  button.addEventListener('click', () => {
+    for (let index = 0; index < document.getElementsByClassName('pixel').length; index += 1) {
+      document.getElementsByClassName('pixel')[index].style.backgroundColor = 'white';
+    }
+  });
 }
 
-function botaoLimpar() {
-  const bt = document.createElement('button');
-  bt.id = 'clear-board';
-  bt.innerHTML = 'Limpar';
-  document.getElementById('espacoDoBotao').appendChild(bt);
-  bt.addEventListener('click', limpaTudo);
-}
-botaoLimpar();
+criaBotaoLimpar();
