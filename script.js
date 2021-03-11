@@ -16,29 +16,14 @@ function accessElement(tagId, elementType, position) {
   return print;
 }
 
-// Desafia 10
-function generateBoard() {
-  let accessValue = document.getElementById('board-size');
-  let rescueValue = parseInt(accessValue.value);
-  for (let index = 0; index < rescueValue; index += 1) {
-    accessElement('#pixel-board', 'tr', 0).classList.add('tr');
-  }
-  for (let index = 0; index < rescueValue; index += 1) {
-    for (let index2 = 0; index2 < rescueValue; index2 += 1) {
-      accessElement('.tr', 'td', index).classList.add('td', 'pixel');
-    }
-  }
-  console.log(rescueValue)
+for (let index = 0; index < 5; index += 1) {
+  accessElement('#pixel-board', 'tr', 0).classList.add('tr');
 }
-
-// for (let index = 0; index < 5; index += 1) {
-//   accessElement('#pixel-board', 'tr', 0).classList.add('tr');
-// }
-// for (let index = 0; index < 5; index += 1) {
-//   for (let index2 = 0; index2 < 5; index2 += 1) {
-//     accessElement('.tr', 'td', index).classList.add('td', 'pixel');
-//   }
-// }
+for (let index = 0; index < 5; index += 1) {
+  for (let index2 = 0; index2 < 5; index2 += 1) {
+    accessElement('.tr', 'td', index).classList.add('td', 'pixel');
+  }
+}
 
 const initialColor = document.querySelector('div').classList.add('selected', 'color');
 const colorsSelect = document.getElementsByClassName('color');
@@ -75,6 +60,4 @@ function paintOfWhite() {
 const restarButton = document.getElementById('clear-board');
 restarButton.addEventListener('click', paintOfWhite);
 
-let matrix = document.getElementById('generate-board');
-matrix.addEventListener('submit', generateBoard());
 
