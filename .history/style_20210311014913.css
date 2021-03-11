@@ -17,7 +17,7 @@ body {
 .color {
   width: 40px;
   height: 40px;
-  border: 1px solid black;
+
   margin: 2px;
   cursor: pointer;
 }
@@ -47,7 +47,7 @@ body {
 
 table, th, td {
   margin-left: 20px;
-  border: 1px solid black;
+  border-collapse: collapse;
 }
 
 
