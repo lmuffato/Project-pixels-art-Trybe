@@ -71,7 +71,7 @@ elementsPixels[i].addEventListener('click',pixelWithSelected);
 function clearAllFunction(){
   const pixelsToClear = document.getElementById('pixel-board');
   for(let index=0; index <pixelsToClear.children.length; index +=1){
-    pixelsToClear.children[index].style.backgroundColor = '';
+    pixelsToClear.children[index].style.backgroundColor = 'white';
   }
 }
 
