@@ -23,7 +23,7 @@ cor3.style.backgroundColor = randomRGB();
 cor4.style.backgroundColor = randomRGB();
 
 cor1.addEventListener('click', () => {
-  cor1.classList.toggle('selected');
+  cor1.classList.add('selected');
   cor2.classList.remove('selected');
   cor3.classList.remove('selected');
   cor4.classList.remove('selected');
@@ -71,24 +71,33 @@ function createBoard(lines, columns) {
   for (const pixer of pix) {
     pixer.addEventListener('click', fillPixel)
   }
-  
+  const clear = document.getElementById('clear-board');
+  clear.addEventListener('click', () => {
+  const pix = document.querySelectorAll('.pixel')
+  for (const pixels of pix) {
+    pixels.style.backgroundColor = 'white';
+    console.log('Cliquei no Limpar');
+  }
+})
 }
 createBoard(5, 5)
 
 let generate = document.querySelector('#generate-board');
+
   generate.addEventListener('click', () => {
   let inputNumber = document.getElementById('board-size');
-  let linesNColumns = inputNumber.value;
+  let linesNColumns = parseInt(inputNumber.value);
 
   pixelBoard.innerHTML = ''
 
-  if(inputNumber === '' && inputNumber <= 0) {
-    window.alert('Board inválido');
+  if(linesNColumns === 0) {
+    alert('Board inválido!');
   }
-  if(inputNumber < 5) {
-    linesNColumns === 5
-  } else if(inputNumber > 50) {
-    linesNColumns === 50;
+  if(linesNColumns < 5) {
+    linesNColumns = 5
+  }
+  if(linesNColumns > 50) {
+    linesNColumns = 50;
   }
   
   createBoard(linesNColumns, linesNColumns)
@@ -113,10 +122,5 @@ e.target.style.backgroundColor = chooseColor();
 // com todos os elementos de class pixel. Logo eu teria que fazer um loop para percorrê-lo.
 // O Jodial usou um for simples. Eu pesquisei no canal do CFB Cursos e aprendi sobre a utilização 
 // do for of.
-  const clear = document.getElementById('clear-board');
-  clear.addEventListener('click', () => {
-  for (const pixels of pix) {
-    pixels.style.backgroundColor = 'white';
-    console.log('Cliquei no Limpar');
-  }
-})
+
+
