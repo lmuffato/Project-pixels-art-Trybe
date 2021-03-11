@@ -77,9 +77,33 @@ function pixelSelected() {
   }
 }
 
+// REQUISITO 9 - Criando  id clear-board e botão para limpar o pixel
+
+function buttonClearPixel() {
+  const placeButton = document.querySelector('#button-clear');
+  const createButton = document.createElement('button');
+  createButton.innerHTML = 'Limpar';
+  createButton.id = 'clear-board';
+  placeButton.appendChild(createButton);
+  // Estilizando o botão //
+  createButton.style.margin = '10px';
+  createButton.style.padding = '10px 10px';
+  createButton.style.backgroundColor = 'rgba(105, 105, 105, 0.699)';
+  createButton.style.boxShadow = '1px 1px 1px black';
+  createButton.style.cursor = 'pointer';
+  createButton.addEventListener('click', clearPixel);
+  function clearPixel() {
+    const selectedAllPixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < selectedAllPixels.length; index += 1) {
+      selectedAllPixels[index].style.backgroundColor = 'white';
+    }
+  }
+}
+
 window.onload = function () {
   tableColorPalette();
   createTable();
   addSelect();
   pixelSelected();
+  buttonClearPixel()
 };
