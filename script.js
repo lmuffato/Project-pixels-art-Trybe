@@ -78,7 +78,7 @@ let generate = document.querySelector('#generate-board');
   pixelBoard.innerHTML = ''
 
   if(inputNumber === '' && inputNumber <= 0) {
-    window.alert('Board Inválido');
+    window.alert('Board inválido');
   }
   if(inputNumber < 5) {
     linesNColumns === 5
