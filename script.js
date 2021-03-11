@@ -8,7 +8,7 @@ window.onload = function bemVindo() {
 let palleteColorBasic = ['black', 'red', 'blue', 'green'];
 let Palette = document.getElementById('color-palette');
 let Color = document.querySelectorAll('.color');
-let Board = document.getElementById('board');
+let Board = document.getElementById('pixel-board');
 
 // Coloca as cores nas Divs //
 window.onload = function palleteColor(){
@@ -37,7 +37,7 @@ function getColor() {
 // Pinta pixel //
 function changePixels(event) {
   const elementTarget = event.target;
-  if (elementTarget.id !== 'board') {
+  if (elementTarget.id !== 'pixel-board') {
     elementTarget.style.backgroundColor = getColor();
   }
 }
