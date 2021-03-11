@@ -12,6 +12,18 @@ for (let index = 0; index < colors.length; index += 1) {
     colors[index].addEventListener('click', function(e) {
         let currentSelected = document.querySelector('.selected')
         currentSelected.classList.remove('selected')
-        let selection = e.target.className += ' selected '
+        //let selection = e.target.className += ' selected '
+        e.target.classList.add('selected')
     })
+}
+
+// Clicar em um pixel o pinta com a cor selecionada
+let currentPixel = document.querySelectorAll('.pixel')
+for (let index2 = 0; index2 <= currentPixel.length; index2 += 1) {
+    currentPixel[index2].addEventListener('click', function(e) {
+    let element = document.querySelector('.selected')
+    selectedColor = window.getComputedStyle(element).getPropertyValue('background-color');
+    //currentPixel[index2].innerHTML = selectedColor;
+    e.target.style.backgroundColor = selectedColor;
+})
 }
