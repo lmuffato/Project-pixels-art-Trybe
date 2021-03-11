@@ -70,8 +70,8 @@ function colore() {
   console.log('funcao colore!');
 }
 
-function criaQuadro() {
-  for (let index = 0; index < 25; index += 1) {
+function criaQuadro(quantosPixels) {
+  for (let index = 0; index < quantosPixels; index += 1) {
     const criaDiv = document.createElement('div');
     criaDiv.className = 'pixel';
     const pegaDiv = document.getElementById('pixel-board');
@@ -87,7 +87,7 @@ function criaQuadro() {
 //   console.log('click do botao');
 // }
 
-criaQuadro();
+criaQuadro(25);
 
 // Funções para Botao Limpar
 
