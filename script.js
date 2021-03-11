@@ -89,11 +89,13 @@ const createBoard = (pixelBoard, boardSize) => {
   for (let index = 0; index < boardSize; index += 1) {
     const line = document.createElement('div');
     line.classList.add('line');
+    
     for (let index2 = 0; index2 < boardSize; index2 += 1) {
       const colum = document.createElement('div');
       colum.classList.add('pixel');
       line.appendChild(colum);
     }
+    
     pixelBoard.appendChild(line);
   }
 };
