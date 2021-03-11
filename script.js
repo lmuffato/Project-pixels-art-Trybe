@@ -69,7 +69,6 @@ function setColorPixel() {
 
 function userGeneratePixelsBoard() {
   const buttonGenerate = document.querySelector('#generate-board');
-  input.min = 5;
 
   buttonGenerate.addEventListener('click', () => {
     document.querySelectorAll('.table').forEach((el) => el.remove());
