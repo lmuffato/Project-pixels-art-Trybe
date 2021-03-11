@@ -8,43 +8,38 @@
 
 // Requisito 8
 // resolvido a partir da lógica do código da Beatriz Barbosa https://github.com/tryber/sd-010-a-project-pixels-art/pull/32/files
-function SelectingColor(){
-  let palette = document.querySelectorAll('.color');
-  for (index = 0; index < palette.length; index += 1){
-    palette[index].addEventListener('click', clicking);
-  }
-    function clicking(event){
-    let BeforeSelectedColor = event.target;      
-    let selectedColor = document.querySelector('.selected');
-      selectedColor.classList.remove('selected');
-      BeforeSelectedColor.classList.add('selected');
-    }
-}
+const colorsInPalette = document.querySelectorAll('.color');
 
-SelectingColor();
+const pixelBoard = document.querySelector('#pixel-board');
 
-function ColoringSquares(){
-  let allpixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < allpixels; index += 1){
-    allpixels[index].addEventListener('click', function(event){
-    let selectPixel = event.target;
-    let selectedColor = document.querySelector('.selected').style.backgroundColor;
-    selectPixel.style.backgroundColor = selectedColor;  
-    });
-  }
-}
+function selectNewElement(newEl) {
+  colorsInPalette.forEach((el) => el.classList.remove('selected'));
+  newEl.classList.toggle('selected');
+} // Adiciona a classe selected ao container respectivo à cor selecionada
 
-ColoringSquares();
+function paintNewPixel(pixel) {
+  const boardPixel = pixel;
+  boardPixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+} // Pinta o pixel clicado com a cor do elemento com a classe selected
+
+colorsInPalette.forEach((el) => el.addEventListener('click', (e) => selectNewElement(e.target)));
+
+let bigsquare = document.querySelector('#pixel-board');
 
 // Requisitos 4 e 5
 function GenerateBoard(number) {
-  for (let index = 0; index < number; index += 1){
+  for (let index = 0; index < number; index += 1) {
     let bigsquare = document.querySelector('#pixel-board');
     let squares = document.createElement('div');
     squares.className = 'pixel';
     bigsquare.appendChild(squares);
   }
 }
+
+// Evento adicionado após explicação no grupo com Nilson Ribeiro e Samuel Melo
+bigsquare.addEventListener('click' , function xx (event){
+  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+});
 
 // Requisito 9
 // reorganização feita observando o código da Beatriz, já citado acima
