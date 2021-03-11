@@ -1,5 +1,3 @@
-window.onload = function() {
-
 const $colorPalette = document.getElementById('color-palette');
 const $colorElements = document.querySelectorAll('.color');
 const $pixelBoard = document.getElementById('pixel-board');
@@ -76,12 +74,15 @@ function createPixelsBoard() {
     removePixels();
   }
   const { value } = $inputPixelsBoard;
-  createPixels(value);
-  $pixelBoard.style.cssText = 'display: table; ';
+  if (value === '') {
+    alert('Board inválido!');
+    $pixelBoard.style.cssText = 'display: none; ';
+  } else {
+    $pixelBoard.style.cssText = 'display: table; ';
+    createPixels(value);
+  }
 }
 
 $btnPixelsBoard.addEventListener('click', createPixelsBoard);
 
 createPixels(5);
-
-};
