@@ -61,8 +61,7 @@ let pixels = document.querySelectorAll('.pixel');
 function setColorPixel() {
   pixels.forEach((pixel, index) => {
     pixel.addEventListener('click', () => {
-      pixels[index].style.backgroundColor =
-        colorSelected[0].style.backgroundColor;
+      pixels[index].style.backgroundColor = colorSelected[0].style.backgroundColor;
     });
   });
 }
