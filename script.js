@@ -1,3 +1,5 @@
+//Cria paleta superior
+
 function criaPaleta(numberOfFrames) {
   for (let index = 0; index < numberOfFrames; index += 1) {
     const recuperaPaleta = document.getElementById('color-palette');
@@ -7,6 +9,16 @@ function criaPaleta(numberOfFrames) {
   }
 }
 criaPaleta(4);
+
+// //Verifica se a cor de fundo é a preta
+
+// function verificaSelected() {
+//   const recupera = document.getElementsByClassName('color');
+//   for (let index = 0; index < recupera; index += 1) {
+//     console.log(recupera[index]);
+//   }
+// }
+// verificaSelected();
 
 // Seleciona a cor na paleta de cima
 
@@ -45,13 +57,6 @@ function selectBlue() {
   console.log('Blue ativo');
 }
 
-window.onload = selectBlack;
-
-document.getElementsByClassName('color')[0].addEventListener('click', selectBlack);
-document.getElementsByClassName('color')[1].addEventListener('click', selectOrange);
-document.getElementsByClassName('color')[2].addEventListener('click', selectOlive);
-document.getElementsByClassName('color')[3].addEventListener('click', selectBlue);
-
 function colorePaletaSuperior() {
   document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
   document.getElementsByClassName('color')[1].style.backgroundColor = 'orange';
@@ -60,14 +65,14 @@ function colorePaletaSuperior() {
 }
 colorePaletaSuperior();
 
-function colore() {
-  const selectedPixel = document.getElementsByClassName('pixel');
-  for (let index = 0; index < document.getElementsByClassName('pixel').length; index += 1) {
-    selectedPixel[index].addEventListener('click', () => {
-      selectedPixel[index].style.backgroundColor = qualCor;
-    });
-  }
-  console.log('funcao colore!');
+document.getElementsByClassName('color')[0].addEventListener('click', selectBlack);
+document.getElementsByClassName('color')[1].addEventListener('click', selectOrange);
+document.getElementsByClassName('color')[2].addEventListener('click', selectOlive);
+document.getElementsByClassName('color')[3].addEventListener('click', selectBlue);
+
+window.onload = selectBlack;
+function colore(event) {
+  event.target.style.backgroundColor = qualCor;
 }
 
 function criaQuadro(quantosPixels) {
@@ -75,7 +80,7 @@ function criaQuadro(quantosPixels) {
     const criaDiv = document.createElement('div');
     criaDiv.className = 'pixel';
     const pegaDiv = document.getElementById('pixel-board');
-    pegaDiv.append(criaDiv);
+    pegaDiv.appendChild(criaDiv);
     criaDiv.addEventListener('click', colore);
   }
   console.log('quadro criado');
@@ -92,11 +97,12 @@ criaQuadro(5);
 
 function criaBotaoLimpar() {
   const button = document.createElement('button');
+  button.id = 'clear-board';
   button.innerHTML = 'Limpar';
   document.getElementById('espacoDoBotao').appendChild(button);
   button.addEventListener('click', () => {
     for (let index = 0; index < document.getElementsByClassName('pixel').length; index += 1) {
-      document.getElementsByClassName('pixel')[index].style.backgroundColor = 'white';
+      document.getElementsByClassName('pixel')[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   });
 }
