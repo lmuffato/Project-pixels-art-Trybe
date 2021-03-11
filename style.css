@@ -7,15 +7,18 @@
 }
 
 #pixel-board {
-  /* height: fit-content;
-  width: fit-content; */
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
   border: 20px solid teal;
-  padding: 20px;
-  text-align: center;
+  padding: 30px;
   margin-top: 10px;
 }
 
-#outOfBoard {
+.center {
+  position: relative;
+  width: 100%;
+  height: fit-content;
   text-align: center;
 }
 
@@ -27,4 +30,16 @@
   height: 40px;
   margin-left: -5px;
   margin-top: -5px;
+}
+
+#title {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: orange;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  top: 0;
 }

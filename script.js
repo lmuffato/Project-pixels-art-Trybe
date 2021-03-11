@@ -1,5 +1,4 @@
-const dimension = 25;
-
+const dimension = 5;
 function changeSelected(eventOrigin) {
   const selectedNow = document.querySelector('.selected');
   selectedNow.classList.remove('selected');
@@ -9,7 +8,7 @@ function changeSelected(eventOrigin) {
 
 function addPaletteListener() {
   const colorElement = document.getElementsByClassName('color');
-
+  
   for (let index = 0; index < colorElement.length; index += 1) {
     colorElement[index].addEventListener('click', changeSelected);
   }
@@ -22,7 +21,7 @@ function makeBoard(dim) {
     const creatingLine = document.createElement('div');
     creatingLine.className = 'lines';
     board.appendChild(creatingLine);
-    let createdLine = document.getElementsByClassName('lines');
+    const createdLine = document.getElementsByClassName('lines');
 
     for (let indexColum = 0; indexColum < dim; indexColum += 1) {
       const creatingPixel = document.createElement('div');
@@ -40,7 +39,6 @@ function applyColor(eventOrigin) {
 
 function addPixelListener() {
   const pixels = document.getElementsByClassName('pixel');
-  
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', applyColor);
   }
