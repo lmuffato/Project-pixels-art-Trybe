@@ -46,7 +46,13 @@ function paintBoard() {
   }
 }
 function buttonRefresh() {
-
+  const btn = document.getElementById('clear-board');
+  const board = document.getElementsByClassName('pixel');
+  btn.onclick = () => {
+    for (let index = 0; index < board.length; index += 1) {
+      board[index].style.backgroundColor = 'white';
+    }
+  };
 }
 window.onload = function onload() {
   if (document.getElementsByClassName('selected').length === 0) {
