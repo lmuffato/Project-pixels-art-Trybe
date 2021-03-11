@@ -12,22 +12,6 @@
   padding: 40px;
 }
 
-#color1 {
-	background-color: black;
-}
-
-#color2 {
-	background-color: blue;
-}
-
-#color3 {
-	background-color: yellow;
-}
-
-#color4 {
-	background-color: green;
-}
-
 .squares {
 	display: flex;
 }
