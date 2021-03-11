@@ -3,6 +3,7 @@ const $colorElements = document.querySelectorAll('.color');
 const $pixelBoard = document.getElementById('pixel-board');
 const $clearBoardBtn = document.getElementById('clear-board');
 
+// Função de callback para selecionar uma paleta da paleta de cores.
 function selecElementPallete(event) {
   const elementTarget = event.target;
   if (elementTarget.id !== 'color-palette') {
@@ -12,13 +13,14 @@ function selecElementPallete(event) {
     });
   }
 }
-
+// Função para obter a cor da paleta selecionada pela função 'selecElementPallete'.
 function getColorElementPalette() {
   const $elementSelected = document.querySelector('.selected');
   const $color = window.getComputedStyle($elementSelected).getPropertyValue('background-color');
   return $color;
 }
 
+// Função de callback para pintar os pixels da pixel-board com a cor capturada pela função getColorElementPalette.
 function changeColorPixels(event) {
   const $elementTarget = event.target;
   if ($elementTarget.id !== 'pixel-board') {
@@ -26,6 +28,7 @@ function changeColorPixels(event) {
   }
 }
 
+// Função de callback para limpar as cores da pixel-board, pintando-as de branco.
 function clearBoardPixels() {
   const $pixelsTd = document.querySelectorAll('.pixel');
   $pixelsTd.forEach((pixel) => {
@@ -38,13 +41,14 @@ $colorPalette.addEventListener('click', selecElementPallete);
 $pixelBoard.addEventListener('click', changeColorPixels);
 $clearBoardBtn.addEventListener('click', clearBoardPixels);
 
-/// Implementação criar board JavaScript
+// Implementação para criar pixel-board via JavaScript
 
 const $pixelsBoard = document.querySelector('#pixel-board');
 $pixelsBoard.style.cssText = 'border-collapse: separate; border-spacing: 0px; ';
 const $inputPixelsBoard = document.getElementById('board-size');
 const $btnPixelsBoard = document.getElementById('generate-board');
 
+// Função para as linhas e colunas da pixel-board. Um for para criar as linhas, e outro para criar as colunas. As colunas são criadas em suas respectivas linhas.
 function createPixels(number) {
   for (let indexLine = 1; indexLine <= number; indexLine += 1) {
     const $row = document.createElement('tr');
@@ -61,20 +65,20 @@ function createPixels(number) {
   });
 }
 
+// Função para demover pixels da tabela após a criação de uma nova. Antes os novos pixels eram criados abaixo dos outros adicionados anteriormente. Nesta função são removidas todas as linhas, consequentemente todas as colunas também são removidas.
 function removePixels() {
   const $pixelsRow = document.querySelectorAll('.pixels-row');
-  const $pixelsColumn = document.querySelectorAll('.pixel');
   $pixelsRow.forEach((elementRow) => elementRow.parentNode.removeChild(elementRow));
-  $pixelsColumn.forEach((elementColumn) => elementColumn.parentNode.removeChild(elementColumn));
 }
 
+// Função de callback para criar os pixels da nova pixel-board. Nela é chamada as funções 'removePixels' e 'createPixels'.
 function createPixelsBoard() {
   const $pixelsRow = document.querySelectorAll('.pixels-row');
   if ($pixelsRow.length !== 0) {
     removePixels();
   }
   const { value } = $inputPixelsBoard;
-  if (value === '') {
+  if (value === '' || value === '0') {
     alert('Board inválido!');
     $pixelBoard.style.cssText = 'display: none; ';
   } else {
@@ -85,4 +89,5 @@ function createPixelsBoard() {
 
 $btnPixelsBoard.addEventListener('click', createPixelsBoard);
 
+// Aqui é criado os pixels da tabela inicial com 5 linhas e 5 colunas, totalizando 25 pixels.
 createPixels(5);
