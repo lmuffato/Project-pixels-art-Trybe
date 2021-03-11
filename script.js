@@ -22,3 +22,18 @@ function pintarPixel() {
   });
 }
 pintarPixel();
+
+function resetaQuadros() {
+  const criarBotao = document.createElement('button');
+  criarBotao.id = 'clear-board';
+  criarBotao.innerHTML = 'Limpar';
+  const posicionaBotao = document.getElementById( '#color-palette');
+  posicionaBotao.appendChild(criarBotao);
+  criarBotao.addEventListener('click', function() {
+  for (let index = 0; index < 25; index += 1) {
+      document.querySelectorAll('.pixel')[index].style.backgroundColor = 'white';
+    } 
+  });
+}
+
+resetaQuadros();
