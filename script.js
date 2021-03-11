@@ -1,5 +1,4 @@
 const pixelBoard = document.querySelector('#pixel-board');
-
 function createColorsPallete(amount) {
   const divColors = document.querySelector('#color-palette');
   for (let index = 1; index <= amount; index += 1) {
@@ -10,16 +9,14 @@ function createColorsPallete(amount) {
 }
 createColorsPallete(4);
 
-window.onload = () => {
+function assignColors() {
   const colors = document.querySelectorAll('.color');
   colors[0].style.backgroundColor = 'black';
-  for (let index = 1; index <= colors.length; index += 1) {
-    const colorRed = Math.floor(Math.random() * 255);
-    const colorGreen = Math.floor(Math.random() * 255);
-    const colorBlue = Math.floor(Math.random() * 255);
-    colors[index].style.backgroundColor = `rgb(${colorRed}, ${colorGreen}, ${colorBlue})`;
-  }
-};
+  colors[1].style.backgroundColor = 'green';
+  colors[2].style.backgroundColor = 'yellow';
+  colors[3].style.backgroundColor = 'purple';
+}
+assignColors();
 
 function createPixelBox(amount = 5) {
   for (let index = 1; index <= amount; index += 1) {
@@ -36,7 +33,7 @@ createPixelBox();
 
 document.querySelectorAll('.color')[0].className += ' selected';
 
-// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A, na explicação do event
+// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A na explicação sobre event
 function changeSelected() {
   const classSelected = document.querySelector('#color-palette');
   classSelected.addEventListener('click', (event) => {
@@ -48,7 +45,7 @@ function changeSelected() {
 }
 changeSelected();
 
-// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A, na explicação do event
+// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A na explicação sobre event
 function changeColorBox() {
   pixelBoard.addEventListener('click', (event) => {
     const boxPixel = event.target;
