@@ -1,23 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  margin-left: 110px;
+}
+
 .color {
-  border: solid black 1px;
+  border: 1px solid black;
   display: inline-block;
   width: 100px;
   height: 100px;
 }
 
-#black {
+#color-palette {
+  width: auto;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.black {
   background-color: black;
 }
 
-#blue {
+.blue {
   background-color: blue;
 }
 
-#red {
+.red {
   background-color: red;
 }
 
-#yellow {
+.yellow {
   background-color: yellow;
 }
-
