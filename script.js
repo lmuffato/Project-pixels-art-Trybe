@@ -75,8 +75,7 @@ const resetBoard = () => {
 
 const changeBackgroundColorPixels = () => {
   const pixels = document.querySelectorAll('.pixel');
-  pixels.forEach((el) => {
-    const element = el;
+  pixels.forEach((element) => {
     element.style.backgroundColor = 'white';
   });
 };
