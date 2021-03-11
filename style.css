@@ -79,7 +79,7 @@ para alinhar as celulas */
   top: 27%;
   left: 7%;
   background-color: white;
-  border: solid;
-  border-width: 1px;
+  border: groove;
+  border-width: 2px;
   border-color: black;
 }

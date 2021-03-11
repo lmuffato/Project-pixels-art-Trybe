@@ -61,8 +61,7 @@ const littleSquare = document.getElementsByClassName('pixel');
 function selectPixel(pixelSelected) {
   const targetedPixel = pixelSelected.target;
   const selectedElement = document.getElementsByClassName('selected')[0];
-  console.log(targetedPixel);
-  console.log(selectedElement.id);
+  console.log(document.getElementsByClassName('selected')[0].id);
   targetedPixel.style.backgroundColor = selectedElement.id;
 }
 for (let i = 0; i < littleSquare.length; i += 1) {
@@ -76,5 +75,4 @@ function clearBoard() {
     squares[i].style.backgroundColor = 'white';
   }
 }
-console.log(clearClick);
 clearClick.addEventListener('click', clearBoard);
