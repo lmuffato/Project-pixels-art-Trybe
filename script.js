@@ -66,8 +66,45 @@ function clear() {
   });
 }
 
+function removeAllPixels() {
+  const pixels = document.querySelectorAll('.pixel');
+  console.log(pixels);
+  for (let i = 0; i < pixels.length; i += 1) {
+    const dadOfPixel = pixels[i].parentNode;
+    dadOfPixel.removeChild(pixels[i]);
+  }
+}
+
+function dimensiona() {
+  const boardSize = document.getElementById('board-size');
+  const pixelBoard = document.getElementById('pixel-board');
+  const widthPixelBoard = parseInt(boardSize.value) * 42;
+  pixelBoard.style.width = `${widthPixelBoard}px`;
+}
+function vqv() {
+  const boardSize = document.getElementById('board-size');
+  const btnVQV = document.getElementById('generate-board');
+  let value = 25;
+  btnVQV.addEventListener('click', function (e) {
+    if (boardSize.value.match(/\d/g) === null || parseInt(boardSize.value) < 1) {
+      alert('Board inválido!');
+    } else {
+      removeAllPixels();
+      value = parseInt(boardSize.value) * parseInt(boardSize.value);
+      dimensiona();
+      adicionaPixel(value);
+      modifyColorToColorSelected();
+      selectColor();
+      preenche();
+      clear();
+    }
+    e.preventDefault;
+  });
+}
+
 adicionaPixel(25);
 modifyColorToColorSelected();
 selectColor();
 preenche();
 clear();
+vqv();
