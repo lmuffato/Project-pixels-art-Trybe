@@ -1,3 +1,5 @@
+const pixelBoard = document.querySelector('#pixel-board');
+
 function createColorsPallete(amount) {
   const divColors = document.querySelector('#color-palette');
   for (let index = 1; index <= amount; index += 1) {
@@ -8,20 +10,21 @@ function createColorsPallete(amount) {
 }
 createColorsPallete(4);
 
-function assignColors() {
+window.onload = () => {
   const colors = document.querySelectorAll('.color');
   colors[0].style.backgroundColor = 'black';
-  colors[1].style.backgroundColor = 'green';
-  colors[2].style.backgroundColor = 'yellow';
-  colors[3].style.backgroundColor = 'purple';
-}
-assignColors();
+  for (let index = 1; index <= colors.length; index += 1) {
+    const colorRed = Math.floor(Math.random() * 255);
+    const colorGreen = Math.floor(Math.random() * 255);
+    const colorBlue = Math.floor(Math.random() * 255);
+    colors[index].style.backgroundColor = `rgb(${colorRed}, ${colorGreen}, ${colorBlue})`;
+  }
+};
 
 function createPixelBox(amount = 5) {
-  const divPixels = document.querySelector('#pixel-board');
   for (let index = 1; index <= amount; index += 1) {
     const boxes = document.createElement('div');
-    divPixels.appendChild(boxes);
+    pixelBoard.appendChild(boxes);
     for (let indexI = 1; indexI <= amount; indexI += 1) {
       const boxes1 = document.createElement('div');
       boxes1.className = 'pixel';
@@ -33,7 +36,7 @@ createPixelBox();
 
 document.querySelectorAll('.color')[0].className += ' selected';
 
-// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A
+// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A, na explicação do event
 function changeSelected() {
   const classSelected = document.querySelector('#color-palette');
   classSelected.addEventListener('click', (event) => {
@@ -45,10 +48,9 @@ function changeSelected() {
 }
 changeSelected();
 
-// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A
+// Ajuda mútua, em especial ao Murilo Gonçalves, turma 10 - tribo A, na explicação do event
 function changeColorBox() {
-  const selectedBox = document.querySelector('#pixel-board');
-  selectedBox.addEventListener('click', (event) => {
+  pixelBoard.addEventListener('click', (event) => {
     const boxPixel = event.target;
     if (boxPixel.className === 'pixel') {
       const selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -79,7 +81,6 @@ function insertValueBoard() {
   buttonNumberPixel.id = 'generate-board';
   buttonNumberPixel.innerText = 'VQV';
   buttonNumberPixel.addEventListener('click', () => {
-    const areaBox = document.querySelector('#pixel-board');
     if (inputText.value === '') {
       alert('Board inválido!');
       inputText.value = 5;
@@ -88,7 +89,7 @@ function insertValueBoard() {
     } else if (inputText.value < 5) {
       inputText.value = 5;
     }
-    areaBox.innerHTML = '';
+    pixelBoard.innerHTML = '';
     createPixelBox(inputText.value);
   });
 }
