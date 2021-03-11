@@ -68,35 +68,51 @@ function clear() {
 
 function removeAllPixels() {
   const pixels = document.querySelectorAll('.pixel');
-  console.log(pixels);
   for (let i = 0; i < pixels.length; i += 1) {
     const dadOfPixel = pixels[i].parentNode;
     dadOfPixel.removeChild(pixels[i]);
   }
 }
 
-function dimensiona() {
-  const boardSize = document.getElementById('board-size');
-  const pixelBoard = document.getElementById('pixel-board');
-  const widthPixelBoard = parseInt(boardSize.value) * 42;
+function dimensiona(a, b, valor) {
+  const boardSize = a;
+  const pixelBoard = b;
+  const num = Math.sqrt(valor);
+  boardSize.value = num;
+  const widthPixelBoard = parseInt(boardSize.value, 10) * 42;
   pixelBoard.style.width = `${widthPixelBoard}px`;
+}
+
+function limitedNumberPixels(numberOfPixels) {
+  let number = numberOfPixels;
+  if (numberOfPixels < 25) {
+    number = 25;
+  }
+  if (numberOfPixels > 2500) {
+    number = 2500;
+  }
+  return number;
+}
+
+function eventos(bSize, pBoard) {
+  removeAllPixels();
+  const value = limitedNumberPixels(parseInt(bSize.value, 10) * parseInt(bSize.value, 10));
+  dimensiona (bSize, pBoard, value);
+  adicionaPixel(value);
+  modifyColorToColorSelected();
+  selectColor();
+  preenche();
+  clear();
 }
 function vqv() {
   const boardSize = document.getElementById('board-size');
+  const pixelBoard = document.getElementById('pixel-board');
   const btnVQV = document.getElementById('generate-board');
-  let value = 25;
   btnVQV.addEventListener('click', function (e) {
-    if (boardSize.value.match(/\d/g) === null || parseInt(boardSize.value) < 1) {
+    if (boardSize.value.match(/\d/g) === null || parseInt(boardSize.value, 10) < 1) {
       alert('Board inválido!');
     } else {
-      removeAllPixels();
-      value = parseInt(boardSize.value) * parseInt(boardSize.value);
-      dimensiona();
-      adicionaPixel(value);
-      modifyColorToColorSelected();
-      selectColor();
-      preenche();
-      clear();
+      eventos(boardSize, pixelBoard);
     }
     e.preventDefault;
   });

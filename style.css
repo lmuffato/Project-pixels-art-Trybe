@@ -54,7 +54,7 @@ h1 {
   top: 100px;
 }
 
-#clear-board, #board-size, #generate-board {
+#clear-board , #board-size , #generate-board {
   display: inline-block;
   color: green;
   margin: 5px;
