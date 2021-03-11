@@ -39,16 +39,32 @@ function selectClass(color) {
 // colocando o black como cor selecionada no window load
 window.onload = selectClass('black');
 
-// target select copiei o lucas na aula de addEventListener
+// target select tentei fazer algo parecido que o lucas fez na aula
 const targetSelected = document.getElementsByClassName('color');
 function targetSelect(targeted) {
-  const targetedItem = targeted.target;
   const selectedItem = document.getElementsByClassName('selected')[0];
-  console.log(selectedItem);
+  const targetedItem = targeted.target;
+  //console.log(selectedItem);
   selectedItem.classList.remove('selected');
   targetedItem.classList.add('selected');
   console.log(targetedItem);
 }
 for (let i = 0; i < targetSelected.length; i += 1) {
   targetSelected[i].addEventListener('click', targetSelect);
+}
+// obg Jhon pela ajuda <3
+
+// requesito 8, vamos tentar aplicar o eventListener ao .pixel
+// tentar resgatar o background Color
+// tentei usar o selectedElement.style.backgroundColor e não foi tirar essa duvida 
+let littleSquare = document.getElementsByClassName('pixel');
+function selectPixel(pixelSelected) {
+  const targetedPixel = pixelSelected.target;
+  const selectedElement = document.getElementsByClassName('selected')[0];
+  console.log(targetedPixel);
+  console.log(selectedElement.id);
+  targetedPixel.style.backgroundColor = selectedElement.id;
+}
+for (let i = 0; i < littleSquare.length; i += 1) {
+  littleSquare[i].addEventListener('click', selectPixel);
 }
