@@ -18,10 +18,10 @@ for (let index = 0; index < 4; index += 1 ) {
 }
 
 black = () => {
-    document.querySelectorAll('.color')[0].style.backgroundColor = 'rgb(0, 0, 0)' ;
+    document.querySelectorAll('.color')[0].style.backgroundColor = 'red' ;
 }
 red = () => {
-    document.querySelectorAll('.color')[1].style.backgroundColor = 'red' ;
+    document.querySelectorAll('.color')[1].style.backgroundColor = 'rgb(0, 0, 0)' ;
 }
 blue = () => {
     document.querySelectorAll('.color')[2].style.backgroundColor = 'blue' ;
