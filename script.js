@@ -61,17 +61,30 @@ let pixels = document.querySelectorAll('.pixel');
 function setColorPixel() {
   pixels.forEach((pixel, index) => {
     pixel.addEventListener('click', () => {
-      pixels[index].style.backgroundColor = colorSelected[0].style.backgroundColor;
+      pixels[index].style.backgroundColor =
+        colorSelected[0].style.backgroundColor;
     });
   });
 }
 
-function userGeneratePixelsBoard() {
-  const buttonGenerate = document.querySelector('#generate-board');
+const buttonGenerate = document.querySelector('#generate-board');
+let inputValue = input.value;
 
+function sizeBoard() {
+  inputValue = input.value;
+  if (input.value < 5) {
+    inputValue = 5;
+  }
+  if (input.value > 50) {
+    inputValue = 50;
+  }
+  return inputValue;
+}
+
+function userGeneratePixelsBoard() {
   buttonGenerate.addEventListener('click', () => {
+    sizeBoard();
     document.querySelectorAll('.table').forEach((el) => el.remove());
-    const inputValue = input.value;
     createTablePixels(inputValue);
     if (input.value === '') {
       alert('Board inválido!');
