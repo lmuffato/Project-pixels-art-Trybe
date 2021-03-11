@@ -71,13 +71,13 @@ function createBoard(lines, columns) {
 createBoard(5, 5)
 
 let generate = document.querySelector('#generate-board');
-generate.addEventListener('click', () => {
+  generate.addEventListener('click', () => {
   let inputNumber = document.getElementById('board-size');
   let linesNColumns = inputNumber.value;
 
   pixelBoard.innerHTML = ''
 
-  if(inputNumber === '') {
+  if(inputNumber === '' && inputNumber <= 0) {
     window.alert('Board Inválido');
   }
   if(inputNumber < 5) {
@@ -86,25 +86,23 @@ generate.addEventListener('click', () => {
     linesNColumns === 50;
   }
   
-
   createBoard(linesNColumns, linesNColumns)
 })
 
+//nessa parte tive uma grande ajuda do Renzo Sevilla para reduzir o código e melhorar uns bugs que tava dando ao colorir todo o conteúdo do document
+const pix = document.querySelectorAll('.pixel');
+for (const pixer of pix) {
+  pixer.addEventListener('click', fillPixel)
+  function fillPixel(e) {
+    e.target.style.backgroundColor = chooseColor();
+  }
+}
 
 function chooseColor() {
   const selection = document.querySelector('.selected');
   const bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
   return bgColor;
 }
-
-//nessa parte tive uma grande ajuda do Renzo Sevilla para reduzir o código e melhorar uns bugs que tava dando ao colorir todo o conteúdo do document
-const pix = document.querySelectorAll('.pixel');
-for (const pixer of pix) {
-  pixer.addEventListener('click', (e) => {
-    e.target.style.backgroundColor = chooseColor();
-  })
-}
-
 
 // consultei o pullRequest https://github.com/tryber/sd-010-a-project-pixels-art/pull/119/files 
 // para obter uma idéia de como fazer essa parte abaixo e então percebi que o pix recebe um Array
