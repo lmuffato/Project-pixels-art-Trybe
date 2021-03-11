@@ -10,7 +10,7 @@
     width: 50px;   
 }
 #pixel-board {
-    height: 225px;
+    min-height: 225px;
     width: 210px;
     border: 1px solid black;
     }

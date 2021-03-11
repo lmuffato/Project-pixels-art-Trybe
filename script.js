@@ -36,3 +36,40 @@ button.addEventListener('click', function() {
         item.style.backgroundColor = 'rgb(255, 255, 255)'
     }
 })
+const inputPixel = document.createElement('input');
+inputPixel.id = 'board-size';
+document.querySelector('#divbutton').appendChild(inputPixel);
+const buttonSize = document.createElement('button');
+buttonSize.id = 'generate-board';
+document.querySelector('#divbutton').appendChild(buttonSize);
+buttonSize.innerText = 'VQV';
+inputPixel.setAttribute('type', 'number');
+inputPixel.max = '50';
+inputPixel.min = '5';
+function ifClick() {
+  if (inputPixel.value === '') {
+    window.alert('Board inválido!')
+  }
+  else {
+    removeBlocks();  
+    setSize();
+  }
+}
+function setSize() {
+  let value = parseInt(inputPixel.value);
+ 
+  board.style.width = (value * 40 + value+ 25) + 'px';
+  for (let numbers = 1; numbers <= value * value; numbers += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    board.appendChild(pixel);
+  }
+
+}
+function removeBlocks() {
+    let pixels = document.querySelectorAll('.pixel');
+    for (item of pixels) {
+        board.removeChild(item)
+    }
+}
+buttonSize.addEventListener('click', ifClick);
