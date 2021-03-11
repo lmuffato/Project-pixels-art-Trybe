@@ -11,10 +11,13 @@
 
 <body>
   <h1 id="title">Paleta de Cores</h1>
-  <div id="color-palette"></div>
+  <div id="color-palette">
+    <div class="color black"></div>
+    <div class="color red"></div>
+    <div class="color blue"></div>
+    <div class="color green"></div>
+  </div>
   <div class="buttons">
-    <input id="board-size" type="number" min="5" max="50" required />
-    <button id="generate-board" type="submit" onclick="createBoardDynamic()" value="">VQV</button>
     <button id="clear-board">Limpar</button>
   </div>
   <table id="pixel-board"></table>

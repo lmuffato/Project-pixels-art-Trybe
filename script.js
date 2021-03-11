@@ -1,47 +1,20 @@
-window.onload = function () {
-  createPixelBoard(5)
-}
-
-const colorPalette = document.querySelector('#color-palette');
-function createPalette() {
-  for (let index = 0; index < 4; index += 1) {
-    const colorDiv = document.createElement('div');
-    colorPalette.appendChild(colorDiv);
-    if (index === 0) {
-      colorDiv.classList.add('color', 'black');
-    } else if (index === 1) {
-      colorDiv.classList.add('color', 'red');
-    } else if (index === 2) {
-      colorDiv.classList.add('color', 'blue');
-    } else if (index === 3) {
-      colorDiv.classList.add('color', 'green');
-    }
-  }
-} createPalette();
+document.querySelector('.black').style.backgroundColor = 'black';
+document.querySelector('.red').style.backgroundColor = 'red';
+document.querySelector('.blue').style.backgroundColor = 'blue';
+document.querySelector('.green').style.backgroundColor = 'green';
 
 const pixelBoard = document.querySelector('#pixel-board');
-let pixelSize = 0
 function createPixelBoard(size) {
-  for (let index = 0; index < size; index += 1) {
+  for (let line = 0; line < size; line += 1) {
     const tableRow = document.createElement('tr');
     pixelBoard.appendChild(tableRow);
-    for (let index = 0; index < size; index += 1) {
+    for (let column = 0; column < size; column += 1) {
       const tableCell = document.createElement('td');
       tableRow.appendChild(tableCell);
       tableCell.classList.add('pixel');
     }
   }
-}
-
-function createBoardDynamic() {
-  let boardSize = 0;
-
-  boardSize = document.querySelector('#board-size').value;
-  if (boardSize === '') {
-    alert('Board inválido!');
-  }
-  createPixelBoard(boardSize);
-}
+} createPixelBoard(5);
 
 function clearBoard() {
   const buttonClear = document.querySelector('#clear-board');
@@ -60,47 +33,13 @@ function colorSelected() {
   }
 } colorSelected();
 
-const blackColor = document.querySelector('.black');
-const redColor = document.querySelector('.red');
-const blueColor = document.querySelector('.blue');
-const greenColor = document.querySelector('.green');
-function paletteSelected() {
-  colorPalette.addEventListener('click', function (event) {
-    if (event.target.classList.contains('red')) {
-      event.target.classList.add('selected');
-      blackColor.classList.remove('selected');
-      blueColor.classList.remove('selected');
-      greenColor.classList.remove('selected');
-    } else if (event.target.classList.contains('blue')) {
-      event.target.classList.add('selected');
-      blackColor.classList.remove('selected');
-      redColor.classList.remove('selected');
-      greenColor.classList.remove('selected');
-    } else if (event.target.classList.contains('green')) {
-      event.target.classList.add('selected');
-      blackColor.classList.remove('selected');
-      redColor.classList.remove('selected');
-      blueColor.classList.remove('selected');
-    } else if (event.target.classList.contains('black')) {
-      event.target.classList.add('selected');
-      greenColor.classList.remove('selected');
-      redColor.classList.remove('selected');
-      blueColor.classList.remove('selected');
-    }
-  });
-} paletteSelected();
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('color')) {
+    document.querySelector('.selected').classList.remove('selected');
+    event.target.classList.add('selected');
+  }
+});
 
-function paintPixel() {
-  const tableBoard = document.querySelector('#pixel-board');
-  tableBoard.addEventListener('click', function (event) {
-    if (blackColor.classList.contains('selected')) {
-      event.target.style.backgroundColor = 'black';
-    } if (redColor.classList.contains('selected')) {
-      event.target.style.backgroundColor = 'red';
-    } if (blueColor.classList.contains('selected')) {
-      event.target.style.backgroundColor = 'blue';
-    } if (greenColor.classList.contains('selected')) {
-      event.target.style.backgroundColor = 'green';
-    }
-  });
-} paintPixel();
+pixelBoard.addEventListener('click', function (event) {
+  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+});
