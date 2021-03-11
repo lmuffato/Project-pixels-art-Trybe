@@ -8,8 +8,21 @@
   width: 30px;
   height: 30px;
 }
+
 .black {
 background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red{
+  background-color: red;
 }
 
 .pixel {
@@ -17,8 +30,15 @@ background-color: black;
   background-color: white;
   width:40px;
   height:40px;
+  border-spacing: 0px;
+  border-collapse: separate;
+ }
+ table {
+  border-spacing: 0px;
+  border-collapse: separate;
  }
 
- button {
+ 
+button {
 
  }
