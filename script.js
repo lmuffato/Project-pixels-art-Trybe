@@ -9,6 +9,7 @@ let palleteColorBasic = ['black', 'red', 'blue', 'green'];
 let Palette = document.getElementById('color-palette');
 let Color = document.querySelectorAll('.color');
 let Board = document.getElementById('pixel-board');
+let Clear = document.getElementById('clear-board');
 
 // Coloca as cores nas Divs //
 window.onload = function palleteColor(){
@@ -42,9 +43,19 @@ function changePixels(event) {
   }
 }
 
+// Botão clear //
+// Teve um menino que bolou essa solução sem precisar de For nem nada,
+// procurei nos Code-Review e não achei ele, então se alguem saber quem é
+// me avise para creditá-lo da forma correta!
+function clearBoard() {
+  window.location.reload();
+}
+
+
 // Clicks //
 Palette.addEventListener('click', setColor);
 Board.addEventListener('click', changePixels);
+Clear.addEventListener('click', clearBoard);
 
 
 
