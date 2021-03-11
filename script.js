@@ -63,7 +63,7 @@ colorePaletaSuperior();
 function colore() {
   const selectedPixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < document.getElementsByClassName('pixel').length; index += 1) {
-    selectedPixel[index].addEventListener('click', function() {
+    selectedPixel[index].addEventListener('click', () => {
       selectedPixel[index].style.backgroundColor = qualCor;
     });
   }
@@ -71,27 +71,23 @@ function colore() {
 }
 
 function criaQuadro() {
-  let inputValue = document.getElementById('caixaDeTexto').value;
-  if (inputValue === '') {
-    alert('Valor Vazio!');
-  } else {
-    for (let index = 0; index < inputValue; index += 1) {
-      const criaDiv = document.createElement('div');
-      criaDiv.className = 'pixel';
-      const pegaDiv = document.getElementById('pixel-board');
-      pegaDiv.append(criaDiv);
-      criaDiv.addEventListener('click', colore);
-    }
-    console.log('quadro criado');
+  for (let index = 0; index < 25; index += 1) {
+    const criaDiv = document.createElement('div');
+    criaDiv.className = 'pixel';
+    const pegaDiv = document.getElementById('pixel-board');
+    pegaDiv.append(criaDiv);
+    criaDiv.addEventListener('click', colore);
   }
-}
-function clickDoBotao() {
-  let botao = document.getElementById('botaoTamanho');
-  botao.addEventListener('click', criaQuadro);
-  console.log('click do botao');
+  console.log('quadro criado');
 }
 
-clickDoBotao();
+// function clickDoBotao() {
+//   const botao = document.getElementById('botaoTamanho');
+//   botao.addEventListener('click', criaQuadro);
+//   console.log('click do botao');
+// }
+
+criaQuadro();
 
 // Funções para Botao Limpar
 
