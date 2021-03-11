@@ -29,21 +29,21 @@ body {
 }
 
 #green {
-  background-color: rgb(5, 146, 64);
+  background-color: green;
   position: absolute;
   left: 25.5%;
   z-index: 2;
 }
 
 #blue {
-  background-color: rgb(5, 29, 161);
+  background-color: blue;
   position: absolute;
   right: 25.5%;
   z-index: 2;
 }
 
 #purple {
-  background-color: rgb(121, 9, 136);
+  background-color: purple;
   position: absolute;
   right: 0.5%;
 }
