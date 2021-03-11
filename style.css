@@ -1,59 +1,25 @@
 * {
-margin: 0;
-text-align: center;
-}
-
+    margin: 0;
+    text-align: center;
+    }
+    
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
 }
-
+    
 #title {
     text-align: center;
 }
-
-.color {
-    border: 1px solid black; /* REQUISITO 2*/
-    padding: 25px; /* espaço interno doobjeto*/
-    display: inline-block;
-}
-
-#color-pallet div {
-    border: 1px solid black; /* REQUISITO 2*/
-}
-
-#first-color {
-    background-color: black;
-    width: 50px;
-    height: 50px;
-}
-
-#second-color {
-    background-color: darkmagenta;
-    width: 50px;
-    height: 50px;
-}
-
-#third-color {
-    background-color: blue;
-    width: 50px;
-    height: 50px;
-}
-
-#fourth-color {
-    background-color: crimson;
-    width: 50px;
-    height: 50px;
-}
-
 .pixel {
-    background-color: white; /* REQUISITO 4 */
     width: 40px; /* REQUISITO 5 */
     height: 40px; /* REQUISITO 5 */
-    border: 1px solid black; /* REQUISITO 5 */
-    display: table-cell; /* Comporta-se como o <td> (célula) HTML elemento */
+    background-color: white; /* REQUISITO 4 */
+    display: inline-flex;
+    margin-bottom: 0px; /* na área inferior do elemento*/
 }
-
-.pixel-line {
-    display: table-row; /* Comporta-se como o <tr> (linha) HTML elemento */
+.color {
+    display: inline-block;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
 }
