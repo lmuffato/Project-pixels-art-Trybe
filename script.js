@@ -25,6 +25,7 @@ function selecionaCor() {
    }
    cores [index].classList.add('selected');
 })
+selecionaCor()
 }
 
 
