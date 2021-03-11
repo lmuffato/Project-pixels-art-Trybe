@@ -26,12 +26,20 @@ board();
 const begin = document.querySelector('#black');
 begin.classList.add('selected');
 
-const pBoard = document.querySelector('#pixel-board');
+const pix = document.querySelectorAll('.pixel');
+for (let index = 0; index < pix.length; index += 1) {
+  pix[index].addEventListener('click', function toBoard(element) {
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
+    const selectedP = element.target;
+    selectedP.style.backgroundColor = selectedColor;
+  });
+}
+/* const pBoard = document.querySelector('#pixel-board');
 pBoard.addEventListener('click', function toBoard(element) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
   const selectedP = element.target;
   selectedP.style.backgroundColor = selectedColor;
-});
+}); */
 
 const colorPalette = document.querySelector('#color-palette');
 colorPalette.addEventListener('click', function selectedInPalette(element) {

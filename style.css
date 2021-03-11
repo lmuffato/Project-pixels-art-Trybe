@@ -19,5 +19,18 @@
 }
 
 #pixel-board {
-  width: fit-content;
+  margin: 0%;
+}
+
+#clear-board {
+  padding-left: 75px;
+  padding-right: 77px;
+}
+
+#title {
+  text-align: center;
+}
+
+#align {
+  text-align: center;
 }
