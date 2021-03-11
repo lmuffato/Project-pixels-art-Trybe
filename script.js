@@ -43,6 +43,7 @@ function selectColor() {
 
 function getColor() {
   const colors = document.querySelector('.selected');
+  console.log(colors);
   console.log(colors.style.backgroundColor);
   return colors.style.backgroundColor;
 }
@@ -121,6 +122,7 @@ function vqv() {
 
 function getRandonColors() {
   const randonColors = document.querySelectorAll('.randon');
+  document.querySelector('.black').style.backgroundColor = 'black';
   randonColors[0].style.backgroundColor = `rgb(${parseInt(Math.random()*500)}, ${parseInt(Math.random()*20)}, ${parseInt(Math.random()*20)})`;
   randonColors[1].style.backgroundColor = `rgb(${parseInt(Math.random()*27/100)}, ${parseInt(Math.random()*250)}, ${parseInt(Math.random()*500)})`;
   randonColors[2].style.backgroundColor = `rgb(${parseInt(Math.random()*500)}, ${parseInt(Math.random()*400)}, ${parseInt(Math.random()*50)})`;
