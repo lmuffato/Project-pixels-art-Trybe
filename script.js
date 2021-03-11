@@ -5,13 +5,17 @@ document.querySelector('.green').style.backgroundColor = 'green';
 const generateBoard = document.querySelector('#generate-board');
 
 generateBoard.addEventListener('click', function () {
-  const boardSize = document.querySelector('#board-size').value;
+  let boardSize = document.querySelector('#board-size').value;
   document.querySelector('#board-size').value = '';
-  if(boardSize === ''){
-    alert('Board inválido!');
-  }
-  createPixelBoard(boardSize);
+  createBoardSize(boardSize);
 });
+
+function createBoardSize(boardSize) {
+  if (boardSize === '') {
+    alert('Board inválido!');
+  } 
+  createPixelBoard(boardSize);
+};
 
 const pixelBoard = document.querySelector('#pixel-board');
 function createPixelBoard(size) {
