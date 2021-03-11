@@ -8,7 +8,7 @@ const allPix = document.querySelectorAll('.pixel');
 //  Resolvi o problema usando essa ref: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 
 //  Aqui onde entra o raciocínio para entrar no DOM eu me basiei no trablho de Vitor Canto - turma 10A
-function pickColor() {
+function getSelected() {
   allBox.forEach((color) => {
     color.addEventListener('click', (_event) => {
       for (let index = 0; index < allBox.length; index += 1) {
@@ -18,9 +18,10 @@ function pickColor() {
     });
   });
 }
-pickColor();
 
-function getPixelcolor() {
+getSelected();
+
+function getColor() {
   allPix.forEach((pixel) => {
     pixel.addEventListener('click', (event) => {
       for (let index = 0; index < allBox.length; index += 1) {
@@ -37,4 +38,4 @@ function getPixelcolor() {
     });
   });
 }
-getPixelcolor();
+getColor();
