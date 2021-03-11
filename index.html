@@ -21,7 +21,9 @@
     </tr>
   </table>
   <button></button>
-  <input type="number" step="1" id="board-size">
+  <!--https://stackoverflow.com/questions/19233415/how-to-make-type-number-to-positive-numbers-only/19233458#:~:text=You%20can%20force%20the%20input,onkeypress%20within%20the%20input%20tag.&text=Here%2C%20event.,scrolling%20within%20the%20input%20bar.
+  para aceitar apenas numeros positivos -->
+  <input type="number" onkeypress="return event.charCode >= 48" id="board-size">
   <button id="generate-board"></button>
   <table id="pixel-board">
 

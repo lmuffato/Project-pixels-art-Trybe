@@ -11,7 +11,7 @@ const pixel = document.getElementsByClassName('pixel');
 
 const pixelBoardSize = 5;
 
-let pixelLines = document.getElementsByClassName('pixel-line');
+const pixelLines = document.getElementsByClassName('pixel-line');
 
 const clearBtn = document.querySelector('button');
 clearBtn.setAttribute('id', 'clear-board');
