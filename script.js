@@ -84,7 +84,7 @@ function buttonClear(name) {
 buttonClear('Limpar');
 
 // Requisito 10;
-
+// Requisito 11;
 function size() {
   const input = document.createElement('input');
   document.querySelector('section').appendChild(input).type = 'number';
@@ -108,3 +108,19 @@ function size() {
   });
 }
 size();
+
+function randomColors() {
+  const color = document.querySelectorAll('.color');
+  for (let index = 1; index < color.length; index += 1) {
+    const r = parseInt(Math.random() * 255);
+    const g = parseInt(Math.random() * 255);
+    const b = parseInt(Math.random() * 255);
+    const color1 = ('rgb(' + r + ',' + g + ',' + b + ')');
+    const color2 = ('rgb(' + r + ',' + g + ',' + b + ')');
+    const color3 = ('rgb(' + r + ',' + g + ',' + b + ')');
+    const color4 = ('rgb(' + r + ',' + g + ',' + b + ')');
+    const cor = [color1, color2, color3, color4];
+    window.onload = color[index].style.backgroundColor = cor[index];
+  }
+}
+randomColors();
