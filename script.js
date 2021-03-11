@@ -16,7 +16,6 @@ const pixelLines = document.getElementsByClassName('pixel-line');
 const clearBtn = document.querySelector('button');
 clearBtn.setAttribute('id', 'clear-board');
 clearBtn.innerText = 'Limpar';
-clearBtn.addEventListener('click', clear);
 
 const inputBox = document.querySelector('#board-size');
 
@@ -43,7 +42,7 @@ function pixelBoardCreation(boardSize) {
     for (let indexColumn = 0; indexColumn < newBoardSize; indexColumn += 1) {
       const column = document.createElement('th');
       column.className = 'pixel';
-      const pixelBoardLine = document.getElementsByClassName('pixel-line')[indexLine];
+      const pixelBoardLine = pixelLines[indexLine];
       pixelBoardLine.appendChild(column);
     }
   }
@@ -79,6 +78,7 @@ function clear() {
     pixel[index].style.backgroundColor = 'white';
   }
 }
+clearBtn.addEventListener('click', clear);
 
 function deletePixelBoard() {
   for (let index = 0; index < pixelLines.length; index += 1) {
@@ -90,7 +90,7 @@ function createPixelBoard() {
   if (inputBox.value === '') {
     alert('Board inválido!');
   } else {
-    for (let index = 0; index < 10; index += 1) {
+    for (let index = 0; index < 2; index += 1) {
       deletePixelBoard();
     }
     pixelBoardCreation(inputBox.value);
