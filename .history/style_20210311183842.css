@@ -22,19 +22,19 @@ body {
   cursor: pointer;
 }
 
-.backBlack {
+.cackBlack {
   background-color: black;
 }
 
-.backRed {
+.red {
   background-color: red;
 }
 
-.backBlue {
+.blue {
   background-color: blue;
 }
 
-.backGreen {
+.green {
   background-color: green;
 }
 
