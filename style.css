@@ -13,6 +13,9 @@ body { background-color: blanchedalmond;
 
 .color { border: black solid 1px;
   margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
 }
 
 #color-palette {
@@ -22,25 +25,15 @@ body { background-color: blanchedalmond;
   padding-top: 2%;
 }
 
-span { border: 1px black;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-}
-
-#magenta { background-color: magenta;
+/* #magenta { background-color: magenta;
 }
 
 #blue { background-color: blue;
 }
 
-#black {
-  background-color: black;
-}
-
 #green {
   background-color: green;
-}
+} */
 
 div .pixel { width: 40px;
   height: 40px;
