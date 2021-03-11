@@ -19,11 +19,11 @@ function SelectingColor(){
       selectedColor.classList.remove('selected');
       BeforeSelectedColor.classList.add('selected');
     }
-  }
+}
 
 SelectingColor();
 
-function ColoringSquares{
+function ColoringSquares(){
   let allpixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < allpixels; index += 1){
     allpixels[index].addEventListener('click', function(event){
@@ -39,10 +39,10 @@ ColoringSquares();
 // Requisitos 4 e 5
 function GenerateBoard(number) {
   for (let index = 0; index < number; index += 1){
-  let bigsquare = document.querySelector('#pixel-board');
-  let squares = document.createElement('div');
-  squares.className = 'pixel';
-  bigsquare.appendChild(squares);
+    let bigsquare = document.querySelector('#pixel-board');
+    let squares = document.createElement('div');
+    squares.className = 'pixel';
+    bigsquare.appendChild(squares);
   }
 }
 
@@ -55,7 +55,7 @@ function ResetColors(){
   let resetButton = document.querySelectorAll('.pixel');
   reset.addEventListener('click', function(){
   for (let index = 0; index < resetButton.length; index+= 1){
-  resetButton[index].style.backgroundColor = 'white';
+    resetButton[index].style.backgroundColor = 'white';
   }
 });
 }
