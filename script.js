@@ -71,7 +71,7 @@ function colore() {
 }
 
 function criaQuadro(quantosPixels) {
-  for (let index = 0; index < quantosPixels; index += 1) {
+  for (let index = 0; index < quantosPixels * quantosPixels; index += 1) {
     const criaDiv = document.createElement('div');
     criaDiv.className = 'pixel';
     const pegaDiv = document.getElementById('pixel-board');
