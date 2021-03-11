@@ -24,12 +24,12 @@ function createBox() {
   paleteColors.firstElementChild.style.backgroundColor = 'black';
 }
 
-function createTablePixels() {
-  for (let i = 0; i < 5; i += 1) {
+function createTablePixels(inputValue) {
+  for (let i = 0; i < inputValue; i += 1) {
     const tr = document.createElement('tr');
     tablePixels.appendChild(tr);
     tr.className = 'table';
-    for (let k = 0; k < 5; k += 1) {
+    for (let k = 0; k < inputValue; k += 1) {
       const td = document.createElement('td');
       document.querySelectorAll('.table')[i].appendChild(td);
       td.className = 'pixel';
@@ -38,8 +38,9 @@ function createTablePixels() {
   }
 }
 
+createTablePixels(5);
+
 createBox();
-createTablePixels();
 
 const colorList = document.querySelectorAll('.color');
 
@@ -52,18 +53,38 @@ for (let i = 0; i < colorList.length; i += 1) {
   });
 }
 
+const input = document.querySelector('#board-size');
+
 const colorSelected = document.getElementsByClassName('color selected');
-const pixels = document.querySelectorAll('.pixel');
+let pixels = document.querySelectorAll('.pixel');
 
 function setColorPixel() {
   pixels.forEach((pixel, index) => {
     pixel.addEventListener('click', () => {
-      pixels[index].style.backgroundColor = colorSelected[0].style.backgroundColor;
+      pixels[index].style.backgroundColor =
+        colorSelected[0].style.backgroundColor;
     });
   });
 }
 
-setColorPixel();
+function userGeneratePixelsBoard() {
+  const buttonGenerate = document.querySelector('#generate-board');
+  input.min = 5;
+
+  buttonGenerate.addEventListener('click', () => {
+    document.querySelectorAll('.table').forEach((el) => el.remove());
+    const inputValue = input.value;
+    createTablePixels(inputValue);
+    if (input.value === '') {
+      alert('Board inválido!');
+      createTablePixels(5);
+    }
+    pixels = document.querySelectorAll('.pixel');
+    setColorPixel();
+  });
+}
+
+userGeneratePixelsBoard();
 
 function clearBoard() {
   const buttonClear = document.querySelector('#clear-board');
@@ -75,3 +96,5 @@ function clearBoard() {
 }
 
 clearBoard();
+
+setColorPixel();
