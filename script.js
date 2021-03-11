@@ -44,7 +44,7 @@ const targetSelected = document.getElementsByClassName('color');
 function targetSelect(targeted) {
   const selectedItem = document.getElementsByClassName('selected')[0];
   const targetedItem = targeted.target;
-  //console.log(selectedItem);
+  // console.log(selectedItem)
   selectedItem.classList.remove('selected');
   targetedItem.classList.add('selected');
   console.log(targetedItem);
@@ -56,8 +56,8 @@ for (let i = 0; i < targetSelected.length; i += 1) {
 
 // requesito 8, vamos tentar aplicar o eventListener ao .pixel
 // tentar resgatar o background Color
-// tentei usar o selectedElement.style.backgroundColor e não foi tirar essa duvida 
-let littleSquare = document.getElementsByClassName('pixel');
+// tentei usar o selectedElement.style.backgroundColor e não foi tirar essa duvida
+const littleSquare = document.getElementsByClassName('pixel');
 function selectPixel(pixelSelected) {
   const targetedPixel = pixelSelected.target;
   const selectedElement = document.getElementsByClassName('selected')[0];
@@ -68,3 +68,13 @@ function selectPixel(pixelSelected) {
 for (let i = 0; i < littleSquare.length; i += 1) {
   littleSquare[i].addEventListener('click', selectPixel);
 }
+// tentando limpar o board
+const clearClick = document.getElementById('clear-board');
+function clearBoard() {
+  const squares = document.getElementsByClassName('pixel');
+  for (let i = 0; i < squares.length; i += 1) {
+    squares[i].style.backgroundColor = 'white';
+  }
+}
+console.log(clearClick);
+clearClick.addEventListener('click', clearBoard);

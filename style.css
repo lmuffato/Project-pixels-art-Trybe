@@ -73,3 +73,13 @@ para alinhar as celulas */
   border-width: 1px;
   background-color: white;
 }
+
+#clear-board {
+  position: absolute;
+  top: 27%;
+  left: 7%;
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+}
