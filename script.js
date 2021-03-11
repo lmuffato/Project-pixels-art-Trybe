@@ -10,7 +10,7 @@ let green = colorpalleteButtons[3];
 let input = document.getElementById('board-size');
 let pixelBlocks = 0;
 
-if(sessionStorage.getItem("boardSize")==null){
+if(sessionStorage.getItem("boardSize")==null||sessionStorage.getItem("boardSize")==""){
     pixelBlocks = 25
 }else{
     pixelBlocks = parseInt(sessionStorage.getItem("boardSize"))
@@ -88,6 +88,9 @@ let submitButton = document.getElementById('generate-board');
 submitButton.addEventListener('click', hookValue);
 
 function hookValue() {
-   sessionStorage.setItem('boardSize', input.value);
+  if(input.value==""){
+      alert('Board inválido!')
+  }
+  sessionStorage.setItem('boardSize', input.value);
   
 }
