@@ -4,36 +4,24 @@ body {
   box-sizing: border-box;
 }
 
-#title {
-  margin-left: 30px;
-}
-
 #color-palette {
   list-style: none;
   display: flex;
   margin-left: 10px;
 }
 
-.color {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
-  margin: 2px;
-  cursor: pointer;
-}
-
-.black {
+.color-black {
   background-color: black;
 }
 
-.red {
+.color-red {
   background-color: red;
 }
 
-.blue {
+.color-blue {
   background-color: blue;
 }
 
-.green {
+.color-green {
   background-color: green;
 }

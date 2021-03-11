@@ -4,10 +4,6 @@ body {
   box-sizing: border-box;
 }
 
-#title {
-  margin-left: 30px;
-}
-
 #color-palette {
   list-style: none;
   display: flex;
@@ -15,12 +11,13 @@ body {
 }
 
 .color {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border: 1px solid black;
   margin: 2px;
   cursor: pointer;
 }
+
 
 .black {
   background-color: black;
