@@ -36,16 +36,7 @@ function blackColor() {
     blackColorElement.className += ' selected';
   });
 }
-function purpleColor() {
-  const purpleColorElement = document.getElementById('roxo');
-  purpleColorElement.style.backgroundColor = 'purple';
-  purpleColorElement.addEventListener('click', () => {
-    renameSelected();
-    purpleColorElement.className += ' selected';
-  });
-}
 function paintBoard() {
-  
   const board = document.querySelectorAll('.pixel');
   for (let index = 0; index < board.length; index += 1) {
     board[index].addEventListener('click', () => {
@@ -53,6 +44,9 @@ function paintBoard() {
       board[index].style.backgroundColor = selectedElement.style.backgroundColor;
     });
   }
+}
+function buttonRefresh() {
+
 }
 window.onload = function onload() {
   if (document.getElementsByClassName('selected').length === 0) {
@@ -64,4 +58,5 @@ window.onload = function onload() {
   blackColor();
   paintBoard();
   purpleColor();
+  buttonRefresh();
 };
