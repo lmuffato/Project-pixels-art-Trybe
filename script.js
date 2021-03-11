@@ -6,15 +6,15 @@ blackPalette.style.backgroundColor = 'black';
 const btnClear = document.getElementById('clear-board');
 const btnSize = document.getElementById('generate-board');
 
-function generateRandomRGB() {
+const generateRandomRGB = () => {
   const r = Math.floor(Math.random() * (255));
   const g = Math.floor(Math.random() * (255));
   const b = Math.floor(Math.random() * (255));
   const rgb = `rgb(${r}, ${g}, ${b})`;
   return rgb;
-}
+};
 
-function eventClickPixel() {
+const eventClickPixel = () => {
   document.querySelectorAll('.pixel').forEach((element) => {
     element.addEventListener('click', (elementTarget) => {
       const pixelElement = elementTarget.target;
@@ -26,48 +26,47 @@ function eventClickPixel() {
       }
     });
   });
-}
+};
 
-function generateColorPalette(palletColorNumber) {
+const generateColorPalette = (palletColorNumber) => {
   for (let index = 1; index < palletColorNumber; index += 1) {
     const palletElement = document.getElementsByClassName('color');
     palletElement[index].style.backgroundColor = generateRandomRGB();
   }
-}
+};
 
-function createPixel(numberOfColumnsCP, divElementLine) {
+const createPixel = (numberOfColumnsCP, lineElement) => {
   for (let index = 0; index < numberOfColumnsCP; index += 1) {
     const divElementPixel = document.createElement('div');
     divElementPixel.className = 'pixel';
 
-    divElementLine.appendChild(divElementPixel);
+    lineElement.appendChild(divElementPixel);
   }
-}
+};
 
-function createBoard(numberOfLinesCB, numberOfColumnsCB) {
+const createBoard = (numberOfLinesCB, numberOfColumnsCB) => {
   for (let index = 0; index < numberOfLinesCB; index += 1) {
-    const divElementLine = document.createElement('div');
-    divElementLine.className = 'pixel-line';
+    const lineElement = document.createElement('div');
+    lineElement.className = 'pixel-line';
 
-    createPixel(numberOfColumnsCB, divElementLine);
+    createPixel(numberOfColumnsCB, lineElement);
 
-    document.getElementById('pixel-board').appendChild(divElementLine);
+    document.getElementById('pixel-board').appendChild(lineElement);
   }
-}
-
-createBoard(numberOfLines, numberOfColumns);
+};
 
 paletteColor.forEach((element) => {
   element.addEventListener('click', (elementTarget) => {
     const pixelElement = elementTarget;
-    const pixel = document.getElementsByClassName('color');
+    const pixels = document.querySelectorAll('.color');
 
-    for (let index = 0; index < pixel.length; index += 1) {
-      if (pixel[index].className === 'color selected') {
-        pixel[index].className = 'color';
+    pixels.forEach((e) => {
+      if (e.classList.contains('selected')) {
+        e.classList.remove('selected');
       }
-    }
-    pixelElement.target.className += ' selected';
+    });
+
+    pixelElement.target.classList.add('selected');
   });
 });
 
@@ -93,9 +92,11 @@ btnSize.addEventListener('click', () => {
   eventClickPixel();
 });
 
-eventClickPixel();
-
-generateColorPalette(4);
+window.onload = () => {
+  createBoard(numberOfLines, numberOfColumns);
+  eventClickPixel();
+  generateColorPalette(4);
+};
 
 /*
 REFERÊNCIAS UTILIZADAS:
