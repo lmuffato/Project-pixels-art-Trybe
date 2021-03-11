@@ -1,3 +1,5 @@
+const boxGrande = document.querySelector('#pixel-board');
+
 function selectedColor() {
     const selected1 = document.querySelector('#color-palette');
 
@@ -13,3 +15,21 @@ function limpaSelected() {
 }
 
 selectedColor();
+
+
+function box25 (){
+    const boxGrande = document.querySelector('#pixel-board');
+    boxGrande.addEventListener('click',function(event){
+        event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+    })
+    }
+
+box25();
+
+function salveColor () {
+    let corDeFundo = document.querySelector('.selected').style.backgroundColor;
+    corDeFundo.addEventListener('click',function(){
+        corDeFundo.style.backgroundColor.remove;
+    } )
+}
+salveColor();
