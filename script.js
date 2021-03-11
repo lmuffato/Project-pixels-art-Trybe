@@ -86,11 +86,11 @@ let generate = document.querySelector('#generate-board');
 
   generate.addEventListener('click', () => {
   let inputNumber = document.getElementById('board-size');
-  let linesNColumns = parseInt(inputNumber.value);
+  let linesNColumns = Number(inputNumber.value);
 
   pixelBoard.innerHTML = ''
 
-  if(linesNColumns === 0 && linesNColumns === '') {
+  if(linesNColumns <= 0 || linesNColumns === '') {
     alert('Board inválido!');
   }
   if(linesNColumns < 5) {
