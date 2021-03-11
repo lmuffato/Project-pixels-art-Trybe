@@ -90,7 +90,7 @@ function createPixelBoard() {
   if (inputBox.value === '') {
     alert('Board inválido!');
   } else {
-    for (let index = 0; index < 2; index += 1) {
+    for (let index = 0; index < 10; index += 1) {
       deletePixelBoard();
     }
     pixelBoardCreation(inputBox.value);
