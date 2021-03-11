@@ -21,14 +21,14 @@ function colorBlack() {
 }
 colorBlack();
 // Requisito 4;
-function pixelPainting(size) {
+function pixelPainting(length) {
   const div = document.createElement('div');
   document.body.appendChild(div);
   div.id = 'pixel-board';
-  for (let index = 1; index <= size; index += 1) {
+  for (let index = 1; index <= length; index += 1) {
     const created = document.createElement('ul');
     document.querySelector('div').appendChild(created);
-    for (let index1 = 1; index1 <= size; index1 += 1) {
+    for (let index1 = 1; index1 <= length; index1 += 1) {
       const createdList = document.createElement('li');
       created.appendChild(createdList);
       createdList.classList = 'pixel';
@@ -112,15 +112,16 @@ size();
 function randomColors() {
   const color = document.querySelectorAll('.color');
   for (let index = 1; index < color.length; index += 1) {
-    const r = parseInt(Math.random() * 255);
-    const g = parseInt(Math.random() * 255);
-    const b = parseInt(Math.random() * 255);
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
     const color1 = ('rgb(' + r + ',' + g + ',' + b + ')');
     const color2 = ('rgb(' + r + ',' + g + ',' + b + ')');
     const color3 = ('rgb(' + r + ',' + g + ',' + b + ')');
     const color4 = ('rgb(' + r + ',' + g + ',' + b + ')');
     const cor = [color1, color2, color3, color4];
-    window.onload = color[index].style.backgroundColor = cor[index];
+    color[index].style.backgroundColor = cor[index];
+    window.onload = color[index].style.backgroundColor;
   }
 }
 randomColors();
