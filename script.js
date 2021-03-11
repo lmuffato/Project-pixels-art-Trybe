@@ -32,6 +32,11 @@ function boardSizeCorrector(boardSize) {
   return boardSize;
 }
 
+function toPaint(e) {
+  const selectedColor = document.querySelector('.selected');
+  e.target.style.backgroundColor = selectedColor.style.backgroundColor;
+}
+
 function pixelBoardCreation(boardSize) {
   const newBoardSize = boardSizeCorrector(boardSize);
 
@@ -42,6 +47,7 @@ function pixelBoardCreation(boardSize) {
     for (let indexColumn = 0; indexColumn < newBoardSize; indexColumn += 1) {
       const column = document.createElement('th');
       column.className = 'pixel';
+      column.addEventListener('click', toPaint);
       const pixelBoardLine = pixelLines[indexLine];
       pixelBoardLine.appendChild(column);
     }
@@ -62,15 +68,6 @@ function setColor(e) {
 
 for (let index = 0; index < colors.length; index += 1) {
   colors[index].addEventListener('click', setColor);
-}
-
-function toPaint(e) {
-  const selectedColor = document.querySelector('.selected');
-  e.target.style.backgroundColor = selectedColor.style.backgroundColor;
-}
-
-for (let index = 0; index < pixel.length; index += 1) {
-  pixel[index].addEventListener('click', toPaint);
 }
 
 function clear() {
