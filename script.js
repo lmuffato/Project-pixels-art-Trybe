@@ -1,15 +1,9 @@
 let alreadyCreated = false;
 let actualSize = [];
-let colorpalle;
-colorpalleteButtons = document.getElementsByClassName('color');
+let colorpalleteButtons = document.getElementsByClassName('color');
 let pixelBoard = document.getElementById('pixel-board');
-let black = colorpalleteButtons[0];
-let blue = colorpalleteButtons[1];
-let red = colorpalleteButtons[2];
-let green = colorpalleteButtons[3];
 let input = document.getElementById('board-size');
 let pixelBlocks = 0;
-
 if (
   sessionStorage.getItem('boardSize') == null ||
   sessionStorage.getItem('boardSize') == ''
@@ -18,8 +12,15 @@ if (
 } else {
   pixelBlocks = parseInt(sessionStorage.getItem('boardSize'));
 }
-window.onload = createPixelBlocks(pixelBlocks, 5);
+window.onload =function(){
+    createPixelBlocks(pixelBlocks, 5);
+    generateColor();
 
+    for (let index = 1; index < colorpalleteButtons.length; index++) {
+        colorpalleteButtons[index].style.backgroundColor=colorpalleteButtons[index].id;
+    }
+
+}
 function createPixelBlocks(size, lineSize) {
   for (let index = 1; index < size + 1; index++) {
     pixelSquare = document.createElement('div');
@@ -40,8 +41,20 @@ function createPixelBlocks(size, lineSize) {
     actualSize.push(lineSize);
   }
 }
-
 pixelBoard.addEventListener('click', fillPixel);
+
+function generateColor() {
+  for (let index = 1; index < colorpalleteButtons.length; index++) {
+    colorpalleteButtons[index].id =
+      'rgb(' +
+      Math.ceil(Math.random() * 25) +
+      ',' +
+      Math.ceil(Math.random() * 255) +
+      ',' +
+      Math.ceil(Math.random() * 255) +
+      ')';
+  }
+}
 
 function fillPixel(e) {
   let event = e;
@@ -49,33 +62,45 @@ function fillPixel(e) {
     'selected'
   )[0].id;
 }
-black.classList.add('selected');
-black.addEventListener('click', chooseColor);
-red.addEventListener('click', chooseColor);
-green.addEventListener('click', chooseColor);
-blue.addEventListener('click', chooseColor);
+colorpalleteButtons[0].classList.add('selected');
+colorpalleteButtons[0].addEventListener('click', chooseColor);
+colorpalleteButtons[1].addEventListener('click', chooseColor);
+colorpalleteButtons[2].addEventListener('click', chooseColor);
+colorpalleteButtons[3].addEventListener('click', chooseColor);
 
 function chooseColor(e) {
-  if (e.target.id == 'black') {
-    black.classList.add('selected');
-    blue.classList.remove('selected');
-    red.classList.remove('selected');
-    green.classList.remove('selected');
-  } else if (e.target.id == 'blue') {
-    blue.classList.add('selected');
-    black.classList.remove('selected');
-    red.classList.remove('selected');
-    green.classList.remove('selected');
-  } else if (e.target.id == 'red') {
-    red.classList.add('selected');
-    black.classList.remove('selected');
-    blue.classList.remove('selected');
-    green.classList.remove('selected');
-  } else if (e.target.id == 'green') {
-    green.classList.add('selected');
-    black.classList.remove('selected');
-    blue.classList.remove('selected');
-    red.classList.remove('selected');
+  if (e.target.id == colorpalleteButtons[0].id) {
+    for (let index = 0; index < colorpalleteButtons.length; index++) {
+      if (index == 0) {
+        colorpalleteButtons[index].classList.add('selected');
+      } else {
+        colorpalleteButtons[index].classList.remove('selected');
+      }
+    }
+  } else if (e.target.id == colorpalleteButtons[1].id) {
+    for (let index = 0; index < colorpalleteButtons.length; index++) {
+      if (index == 1) {
+        colorpalleteButtons[index].classList.add('selected');
+      } else {
+        colorpalleteButtons[index].classList.remove('selected');
+      }
+    }
+  } else if (e.target.id == colorpalleteButtons[2].id) {
+    for (let index = 0; index < colorpalleteButtons.length; index++) {
+      if (index == 2) {
+        colorpalleteButtons[index].classList.add('selected');
+      } else {
+        colorpalleteButtons[index].classList.remove('selected');
+      }
+    }
+  } else if (e.target.id == colorpalleteButtons[3].id) {
+    for (let index = 0; index < colorpalleteButtons.length; index++) {
+      if (index == 3) {
+        colorpalleteButtons[index].classList.add('selected');
+      } else {
+        colorpalleteButtons[index].classList.remove('selected');
+      }
+    }
   }
 }
 
