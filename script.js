@@ -1,5 +1,3 @@
-const boxGrande = document.querySelector('#pixel-board');
-
 function selectedColor() {
     const selected1 = document.querySelector('#color-palette');
 
