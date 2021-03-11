@@ -1,7 +1,7 @@
 //color[length] para alterar a cor nas paletas
 
 window.onload = function bemVindo() {
-    console.log("teste testando");
+  console.log("teste testando");
 
 }
 //lets //
@@ -9,10 +9,11 @@ let Palette = document.getElementById('color-palette');
 let Color = document.querySelectorAll('.color');
 let Board = document.getElementById('pixel-board');
 let Clear = document.getElementById('clear-board');
-let palleteColorBasic = ['black', randomColor(), randomColor(), randomColor()];
+// let palleteColorRandom = ['black', randomColor(), randomColor(), randomColor()];
+let palleteColorBasic = ['black', 'red', 'green', 'blue'];
 
 
-// Gerador de Cores Automaticas by Vinicius13 //
+// Gerador de Cores Automaticas by Viniccius13 //
 // https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj //
 
 function randomColor() {
