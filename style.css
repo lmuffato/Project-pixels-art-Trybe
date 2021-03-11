@@ -57,9 +57,7 @@ main{
 }
 
 #input{
-    background-color: aqua;
     min-width: auto;
-    position:fixed;
     padding: 0px 10px 0px 10px;
 }
 form{
@@ -69,7 +67,12 @@ form{
 
 }
 input{
+    padding-top: 10px;
     text-align: center;
-    width: 20px;
-    height: 15px;
+    width: 40px;
+    height: 20px;
+}
+#generate-board{
+    width: auto;
+    height: auto;
 }
