@@ -27,7 +27,7 @@ function changeColorPixels(event) {
 }
 
 function clearBoardPixels() {
-  const $pixelsTd = document.querySelectorAll('.pixels-td');
+  const $pixelsTd = document.querySelectorAll('.pixel');
   $pixelsTd.forEach((pixel) => {
     const $pixeltd = pixel;
     $pixeltd.style.cssText = 'background-color: white; ';
@@ -55,7 +55,7 @@ function createPixels(number) {
   $pixelsLine.forEach((line) => {
     for (let indexColumn = 1; indexColumn <= number; indexColumn += 1) {
       const $td = document.createElement('td');
-      $td.classList.add('pixels-td');
+      $td.classList.add('pixel');
       line.append($td);
     }
   });
@@ -63,7 +63,7 @@ function createPixels(number) {
 
 function removePixels() {
   const $pixelsRow = document.querySelectorAll('.pixels-row');
-  const $pixelsColumn = document.querySelectorAll('.pixels-td');
+  const $pixelsColumn = document.querySelectorAll('.pixel');
   $pixelsRow.forEach((elementRow) => elementRow.parentNode.removeChild(elementRow));
   $pixelsColumn.forEach((elementColumn) => elementColumn.parentNode.removeChild(elementColumn));
 }
