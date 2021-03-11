@@ -35,3 +35,7 @@
   height: 40px;
   border: solid 1px black;
 }
+
+button {
+  margin: 10px;
+}
