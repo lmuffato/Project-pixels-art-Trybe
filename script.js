@@ -45,7 +45,7 @@ document.querySelector('#divbutton').appendChild(buttonSize);
 buttonSize.innerText = 'VQV';
 inputPixel.setAttribute('type', 'number');
 inputPixel.max = '50';
-inputPixel.min = '5';
+inputPixel.min = '1';
 function ifClick() {
   if (inputPixel.value === '') {
     window.alert('Board inválido!')
