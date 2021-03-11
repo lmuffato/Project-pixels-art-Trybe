@@ -23,3 +23,18 @@ boxGrande.addEventListener('click' , function xx (event){
 }
 
 box25 ();
+
+function btnReset (){
+  let btnForReset = document.getElementById('clear-board');
+  btnForReset.addEventListener('click' , () => {
+    resetCOlor ();
+  })
+}
+
+btnReset();
+function resetCOlor () {
+    let pixels = document.querySelectorAll('.pixel')
+    for(let index = 0 ; index < pixels.length ; index += 1){
+      pixels[index].style.backgroundColor = 'white';
+    }
+  }
