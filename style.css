@@ -1,6 +1,6 @@
 #color-palette {
   display: table;
-  height: 150px;
+  height: 100px;
   border-spacing: 5px;
   padding: 10px;
 }
@@ -12,5 +12,16 @@
 #color-palette .color {
   display: table-cell;
   border: 1px solid black;
-  width: 150px;
+  width: 100px;
+}
+
+#pixel-board {
+  width: 200px;
+  height: 200px;
+  border-collapse: collapse;
+}
+
+#pixel-board .pixel {
+  border: 1px solid black;
+  background-color: white;
 }
