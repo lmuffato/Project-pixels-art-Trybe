@@ -67,6 +67,11 @@ function createBoard(lines, columns) {
       nColumns.className = 'pixel';
     }
   }
+  const pix = document.querySelectorAll('.pixel');
+  for (const pixer of pix) {
+    pixer.addEventListener('click', fillPixel)
+  }
+  
 }
 createBoard(5, 5)
 
@@ -90,19 +95,18 @@ let generate = document.querySelector('#generate-board');
 })
 
 //nessa parte tive uma grande ajuda do Renzo Sevilla para reduzir o código e melhorar uns bugs que tava dando ao colorir todo o conteúdo do document
-const pix = document.querySelectorAll('.pixel');
-for (const pixer of pix) {
-  pixer.addEventListener('click', fillPixel)
-  function fillPixel(e) {
-    e.target.style.backgroundColor = chooseColor();
-  }
-}
+
 
 function chooseColor() {
   const selection = document.querySelector('.selected');
   const bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
   return bgColor;
 }
+
+function fillPixel(e) {
+e.target.style.backgroundColor = chooseColor();
+}
+
 
 // consultei o pullRequest https://github.com/tryber/sd-010-a-project-pixels-art/pull/119/files 
 // para obter uma idéia de como fazer essa parte abaixo e então percebi que o pix recebe um Array
