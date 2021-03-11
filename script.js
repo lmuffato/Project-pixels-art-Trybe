@@ -20,5 +20,26 @@ for (let index = 1; index < amountFrame; index += 1) {
   }
 }
 
-//Requesito 6
-document.getElementsByTagName('td')[0].className += ' selected';
+//Requesito 6 e 7
+window.onload = function () {
+  document.getElementsByClassName('color')[0].className += ' selected';
+  
+}
+
+let colorSelect = document.getElementsByClassName('color');
+
+for (let index = 0; index < colorSelect.length; index += 1) {
+  const clickColors = colorSelect[index];
+  clickColors.addEventListener('click', changeSelect)
+}
+
+function changeSelect (e) {
+  for (let index = 0; index < colorSelect.length; index += 1) {
+    const removeClass = colorSelect[index];
+    removeClass.classList.remove('selected');
+  }
+
+  e.target.classList.add('selected');
+}
+
+//Requesito 8
