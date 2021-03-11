@@ -18,3 +18,21 @@ function selectedRemove (evente) {
     let eventeTarget = evente.target;
     eventeTarget.classList.add('selected');
 } 
+
+// 
+// guardar a cor do selected
+
+let colorSelected = document.querySelector('.selected').style.backgroundColor;
+
+// incluir click nos pixels
+let pixelSelect = document.getElementsByClassName('pixel');
+
+for(let index = 0; index < pixelSelect.length; index +=1) {
+    pixelSelect[index].addEventListener('click', pixelColor);
+}
+
+// funcção clicar no pixel
+function pixelColor (event) {
+    let eventTarget = event.target;
+    eventTarget.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
