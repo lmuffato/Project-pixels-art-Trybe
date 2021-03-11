@@ -49,7 +49,6 @@ function setPixels() {
       pixelColor.style.backgroundColor = backgroundColor;
     });
   }
-  /** pixelBoard.style.width = `${Number(inputBoardSize.value * 40 + 50).toString()}px`; */
 }
 
 setPixels();
@@ -62,7 +61,7 @@ btnLimpar.addEventListener('click', () => {
 });
 
 btnVQV.addEventListener('click', () => {
-  if (Number(inputBoardSize.value) === 0) {
+  if (Number(inputBoardSize.value) <= 0) {
     alert('Board inválido!');
   } else {
     pixelBoard.innerHTML = '';
