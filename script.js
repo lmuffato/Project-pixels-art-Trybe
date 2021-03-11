@@ -1,10 +1,10 @@
 const numberOfLines = 5;
 const numberOfColumns = 5;
-const paletteColor = document.querySelectorAll('.color');
-const blackPalette = document.getElementById('color-1');
-blackPalette.style.backgroundColor = 'black';
-const btnClear = document.getElementById('clear-board');
-const btnSize = document.getElementById('generate-board');
+
+const fixedPalette = () => {
+  const palette = document.getElementById('color-1');
+  palette.style.backgroundColor = 'black';
+};
 
 const generateRandomRGB = () => {
   const r = Math.floor(Math.random() * (255));
@@ -28,11 +28,11 @@ const eventClickPixel = () => {
   });
 };
 
-const generateColorPalette = (palletColorNumber) => {
-  for (let index = 1; index < palletColorNumber; index += 1) {
-    const palletElement = document.getElementsByClassName('color');
-    palletElement[index].style.backgroundColor = generateRandomRGB();
-  }
+const generateColorPalette = () => {
+  const palettes = document.querySelectorAll('.color');
+  palettes.forEach((e) => {
+    e.style.backgroundColor = generateRandomRGB();
+  });
 };
 
 const createPixel = (numberOfColumnsCP, lineElement) => {
@@ -55,48 +55,57 @@ const createBoard = (numberOfLinesCB, numberOfColumnsCB) => {
   }
 };
 
-paletteColor.forEach((element) => {
-  element.addEventListener('click', (elementTarget) => {
-    const pixelElement = elementTarget;
-    const pixels = document.querySelectorAll('.color');
+const paletteColor = () => {
+  document.querySelectorAll('.color').forEach((element) => {
+    element.addEventListener('click', (elementTarget) => {
+      const pixelElement = elementTarget;
+      const pixels = document.querySelectorAll('.color');
 
-    pixels.forEach((e) => {
-      if (e.classList.contains('selected')) {
-        e.classList.remove('selected');
-      }
+      pixels.forEach((e) => {
+        if (e.classList.contains('selected')) {
+          e.classList.remove('selected');
+        }
+      });
+
+      pixelElement.target.classList.add('selected');
     });
-
-    pixelElement.target.classList.add('selected');
   });
-});
-
-btnClear.addEventListener('click', () => {
-  const pixels = document.getElementsByClassName('pixel');
-  for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].style.backgroundColor = 'white';
-  }
-});
-
-btnSize.addEventListener('click', () => {
-  const pixelBoard = document.getElementById('pixel-board');
-  const inputNumber = document.getElementById('board-size');
-  let inputNumberValue = inputNumber.value;
-  pixelBoard.innerHTML = '';
-
-  if (inputNumberValue === '') window.alert('Board inválido!');
-
-  if (inputNumberValue < 5) inputNumberValue = 5;
-  else if (inputNumberValue > 50) inputNumberValue = 50;
-
-  createBoard(inputNumberValue, inputNumberValue);
-  eventClickPixel();
-});
-
-window.onload = () => {
-  createBoard(numberOfLines, numberOfColumns);
-  eventClickPixel();
-  generateColorPalette(4);
 };
+
+const btnClear = () => {
+  document.getElementById('clear-board').addEventListener('click', () => {
+    const pixels = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = 'white';
+    }
+  });
+};
+
+const btnSize = () => {
+  document.getElementById('generate-board').addEventListener('click', () => {
+    const pixelBoard = document.getElementById('pixel-board');
+    const inputNumber = document.getElementById('board-size');
+    let inputNumberValue = inputNumber.value;
+
+    pixelBoard.innerHTML = '';
+
+    if (inputNumberValue === '') window.alert('Board inválido!');
+
+    if (inputNumberValue < 5) inputNumberValue = 5;
+    else if (inputNumberValue > 50) inputNumberValue = 50;
+
+    createBoard(inputNumberValue, inputNumberValue);
+    eventClickPixel();
+  });
+};
+
+createBoard(numberOfLines, numberOfColumns);
+generateColorPalette();
+paletteColor();
+fixedPalette();
+eventClickPixel();
+btnClear();
+btnSize();
 
 /*
 REFERÊNCIAS UTILIZADAS:
