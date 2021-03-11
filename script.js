@@ -43,7 +43,8 @@ function selectColor() {
 
 function getColor() {
   const colors = document.querySelector('.selected');
-  return colors.className.split(' ')[1];
+  console.log(colors.style.backgroundColor);
+  return colors.style.backgroundColor;
 }
 
 function preenche() {
@@ -118,6 +119,14 @@ function vqv() {
   });
 }
 
+function getRandonColors() {
+  const randonColors = document.querySelectorAll('.randon');
+  randonColors[0].style.backgroundColor = `rgb(${parseInt(Math.random()*500)}, ${parseInt(Math.random()*20)}, ${parseInt(Math.random()*20)})`;
+  randonColors[1].style.backgroundColor = `rgb(${parseInt(Math.random()*27/100)}, ${parseInt(Math.random()*250)}, ${parseInt(Math.random()*500)})`;
+  randonColors[2].style.backgroundColor = `rgb(${parseInt(Math.random()*500)}, ${parseInt(Math.random()*400)}, ${parseInt(Math.random()*50)})`;
+}
+
+getRandonColors();
 adicionaPixel(25);
 modifyColorToColorSelected();
 selectColor();
