@@ -21,6 +21,29 @@ function tableColorPalette() {
   createColors[0].classList.add('selected'); // REQUISITO 6 - Defina a cor preta como cor inicial //
 }
 
+// REQUISITO 4 - Adicione à página um quadro de pixels, com 25 pixels //
+
+// Criando tabela //
+function createTable() {
+  const placeBoard = document.querySelector('#pixel-board');
+  const createTable = document.createElement('table');
+  placeBoard.appendChild(createTable);
+  // Criando TR da Table //
+  const numbersCells = 5;
+  for (let index = 0; index < numbersCells; index += 1) {
+    const createTr = document.createElement('tr');
+    // criando TD da Table //
+    for (let index2 = 0; index2 < numbersCells; index2 += 1) {
+      const createTd = document.createElement('td');
+      createTd.className = 'pixel'; // criando uma classe dentro do elemento td //
+      createTd.style.backgroundColor = 'white';
+      createTr.appendChild(createTd);
+      createTable.append(createTr);
+    }
+  }
+}
+
 window.onload = function () {
   tableColorPalette();
+  createTable();
 };
