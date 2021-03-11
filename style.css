@@ -29,12 +29,12 @@
   border: 1px solid black;
 }
 
-.wrapper {
+#pixel-board {
   display: grid;
-  grid-template-columns: 40px 40px 40px 40px 40px;
-  grid-template-rows: 40px 40px 40px 40px 40px;
-  grid-column-gap: black solid 1px;
-  grid-row-gap: black solid 1px; 
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
+  width: fit-content;
+  height: fit-content;
 }
 
 .pixel {
