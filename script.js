@@ -1,8 +1,10 @@
 let paletteColors = document.getElementById('color-palette');
-console.log(paletteColors);
 
 function changeClassColors (event){
+let colorsDiv = document.getElementsByClassName('color');
+for(let index= 0; index < colorsDiv.length; index+=1) {
+ colorsDiv[index].classList.remove('selected');
+}
 let colorClass = event.target.classList.add('selected');
-console.log(event.target);
 }
 paletteColors.addEventListener("click",changeClassColors);
