@@ -1,3 +1,5 @@
+window.onload = function() {
+
 const $colorPalette = document.getElementById('color-palette');
 const $colorElements = document.querySelectorAll('.color');
 const $pixelBoard = document.getElementById('pixel-board');
@@ -81,3 +83,5 @@ function createPixelsBoard() {
 $btnPixelsBoard.addEventListener('click', createPixelsBoard);
 
 createPixels(5);
+
+};
