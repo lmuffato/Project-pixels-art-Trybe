@@ -2,15 +2,14 @@ window.onload = function (){
 
 // pega os elementos da classe color
 let runBgColors = document.getElementsByClassName('color');
-let selected = document.querySelector('.selected'); 
  
 // dar cor de fundo aos elementos base
 
-function colore () {
-    
-}
+let selected = document.querySelector('.color');
 
-runBgColors[0].classList.add = ('runBgColors', 'selected');
+selected.classList.add('color', 'selected');
+
+
 runBgColors[0].style.backgroundColor = 'black';
 runBgColors[1].style.backgroundColor = "red";
 runBgColors[2].style.backgroundColor = "gray";
