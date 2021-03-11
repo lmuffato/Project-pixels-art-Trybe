@@ -48,13 +48,14 @@
 }
 
 #pixel-board {
-  width: 5em;
-  height: 5em;
   border: 1px solid black;
+
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
+  width: 40px;
+  height: 40px;
 
 }
