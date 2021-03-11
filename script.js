@@ -16,29 +16,11 @@ function selecionaCor() {
    for (let index = 0; index < cores.length; index += 1) {
    cores[index].addEventListener('click',() => {
       for (let i = 0; i < cores.length; i += 1) {
-      cores[i] .classList.add('selected');
-      cores[index].classList.remove('selected');
+      cores[i] .classList.remove('selected');
       }
+      cores[index].classList.add('selected');
   })
  }
 }
  selecionaCor();
 
-
-
-
-
-
-
-
-//const clean = document.getElementById('clear-board');
-//const pixels = document.getElementsByClassName('pixel');
-//for (let index = 0; index <= pixels.length; index +1);
-//clean[index].addEventListener('click',() => {
-  // for (let indexx = 0; i < indexx.length; i + 1) {
-   //clean[index].classList.add('selected');
-   
-
-//clean.addEventListener('click', () =>  {
-///pixels.style.backgroundColor = "white";
-//} //
