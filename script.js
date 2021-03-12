@@ -6,6 +6,7 @@ for (let index = 0; index < 4; index += 1 ) {
 
 let black = () => {
     document.querySelectorAll('.color')[0].style.backgroundColor = 'rgb(0, 0, 0)' ;
+    document.querySelectorAll('.color')[0].className = 'color selected';
 }
 let red = () => {
     document.querySelectorAll('.color')[1].style.backgroundColor = 'red' ;
@@ -23,3 +24,4 @@ let pintar = () => {
     red();
 }
 pintar();
+
