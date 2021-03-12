@@ -23,9 +23,13 @@ function createCollorPalette() {
 }
 createCollorPalette();
 
+function randomColors() {
+  return `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+}
+
 function createCollorsIntoPallete() {
   const selectorDiv = document.getElementById('color-palette');
-  const arrayDiv = ['black', 'red', 'green', 'blue'];
+  const arrayDiv = ['black', randomColors(), randomColors(), randomColors()];
   for (let index = 0; index < arrayDiv.length; index += 1) {
     const createDiv = document.createElement('div');
     createDiv.className = 'color';
