@@ -77,9 +77,9 @@ function sizeIsValid(test) {
   return result;
 }
 
-function createLineBoard(size) {
+function createLineBoard(sizeLine) {
   const pixelLine = document.createElement('tr');
-  for (let index2 = 0; index2 < size; index2 += 1) {
+  for (let index2 = 0; index2 < sizeLine; index2 += 1) {
     const newPixel = document.createElement('td');
     newPixel.className = 'pixel';
     newPixel.addEventListener('click', colorPixel);
