@@ -39,7 +39,7 @@ body { background-color: blanchedalmond;
 #board { background-color: white;
 }
 
-#clear-btn { align-items: center;
+#clear-board { align-items: center;
   margin-left: 42%;
 }
 

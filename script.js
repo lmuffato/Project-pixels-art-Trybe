@@ -32,7 +32,7 @@ function clearPixelColor() {
     elem.style.backgroundColor = 'white';
   }
 }
-const clearBtn = document.getElementsByClassName('clear-btn');
+const clearBtn = document.getElementsByClassName('clear-board');
 clearBtn[0].addEventListener('click', clearPixelColor, false);
 
 // Referência usada para a função randomColors:
