@@ -1,15 +1,13 @@
 const randomColors = document.getElementsByClassName('random');
-const colorsToBeRandomize = ['blue', 'green', 'red'];
+const colorsToBeRandomize = ['blue', 'green', 'red', 'yellow', 'purple', 'pink', 'grey'];
 const colorsShuffle = colorsToBeRandomize.sort(() => Math.random() - 0.5);
 
 for (let index = 0; index < randomColors.length; index += 1) {
   randomColors[index].setAttribute('id', colorsShuffle[index]);
+  randomColors[index].style.backgroundColor = colorsShuffle[index];
 }
 
 document.getElementById('black').style.backgroundColor = 'black';
-document.querySelector('#blue').style.backgroundColor = 'blue';
-document.querySelector('#green').style.backgroundColor = 'green';
-document.querySelector('#red').style.backgroundColor = 'red';
 
 const pixelBoard = document.getElementById('pixel-board');
 
@@ -86,7 +84,7 @@ function clear() {
 clearBtn.addEventListener('click', clear);
 
 function deletePixelBoard() {
-  for (let index = 0; index < pixelLines.length; index += 1) {
+  for (let index = 0; index < pixelLines.length; index) {
     pixelBoard.removeChild(pixelBoard.firstElementChild);
   }
 }
@@ -95,11 +93,9 @@ function createPixelBoard() {
   if (inputBox.value === '') {
     alert('Board inválido!');
   } else {
-    for (let index = 0; index < 10; index += 1) {
-      deletePixelBoard();
-    }
-    pixelBoardCreation(inputBox.value);
+    deletePixelBoard();
   }
+  pixelBoardCreation(inputBox.value);
 }
 
 vqvBtn.addEventListener('click', createPixelBoard);
