@@ -25,17 +25,7 @@ body { background-color: blanchedalmond;
   padding-top: 2%;
 }
 
-/* #magenta { background-color: magenta;
-}
-
-#blue { background-color: blue;
-}
-
-#green {
-  background-color: green;
-} */
-
-div .pixel { width: 40px;
+.pixel { width: 40px;
   height: 40px;
   border: black solid 1px;
   background-color: white;
@@ -46,11 +36,16 @@ div .pixel { width: 40px;
   padding-top: 2%;
 }
 
+#board { background-color: white;
+}
+
 #clear-btn { align-items: center;
   margin-left: 42%;
 }
 
 .tr { display: table-row;
+  width: 40px;
+  height: 40px;
 }
 
 .td { display: table-cell;
