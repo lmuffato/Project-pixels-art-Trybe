@@ -23,13 +23,20 @@ function colorizePalette() {
   colorOne.style.backgroundColor = 'black';
 }
 colorizePalette();
+const colorPixel = document.getElementsByClassName('pixel');
+function colorizePixelBoard() {
+  for (let key = 0; key < colorPixel.length; key += 1) {
+    colorPixel[key].style.backgroundColor = 'white';
+  }
+}
+colorizePixelBoard();
 
 function clearPixelColor() {
-  const elem = document.getElementsByClassName('pixel');
-  const theCssprop = window.getComputedStyle(elem, null).getPropertyValue('background-color');
-  document.getElementsByClassName('pixel').innerHTML = theCssprop;
-  if (theCssprop !== 'white') {
-    elem.style.backgroundColor = 'white';
+  for (let key = 0; key < colorPixel.length; key += 1) {
+    if (colorPixel[key].style.backgroundColor !== 'white') {
+      colorPixel[key].style.backgroundColor = 'white';
+      console.log('limpa');
+    }
   }
 }
 const clearBtn = document.getElementById('clear-board');

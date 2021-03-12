@@ -28,15 +28,11 @@ body { background-color: blanchedalmond;
 .pixel { width: 40px;
   height: 40px;
   border: black solid 1px;
-  background-color: white;
 }
 
 #pixel-board { display: table;
   padding-left: 44%;
   padding-top: 2%;
-}
-
-#board { background-color: white;
 }
 
 #clear-board { align-items: center;
