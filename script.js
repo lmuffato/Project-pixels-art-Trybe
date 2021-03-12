@@ -1,4 +1,3 @@
-
 // Bloco de declaração de variáveis
 // const palette = document.getElementById('color-palette');
 const colorsOfPalette = document.getElementsByClassName('color');
@@ -50,7 +49,8 @@ function selectColor(event) {
 
 function colorPixel(event) {
   if (event.target.style.backgroundColor !== colorSelected.style.backgroundColor) {
-    event.target.style.backgroundColor = colorSelected.style.backgroundColor;
+    const pixelToBeColored = event.target;
+    pixelToBeColored.style.backgroundColor = colorSelected.style.backgroundColor;
   }
 }
 
@@ -76,20 +76,25 @@ function sizeIsValid(test) {
   }
   return result;
 }
+
+function createLineBoard(size) {
+  const pixelLine = document.createElement('tr');
+  for (let index2 = 0; index2 < size; index2 += 1) {
+    const newPixel = document.createElement('td');
+    newPixel.className = 'pixel';
+    newPixel.addEventListener('click', colorPixel);
+    newPixel.style.backgroundColor = '#ffffff';
+    pixelLine.appendChild(newPixel);
+  }
+  return pixelLine;
+}
 function resizePixelBoard() {
   size = sizeValue.value;
   if (sizeIsValid(size)) {
     sizeValue.value = size;
     pixelBord.innerHTML = '';
     for (let index1 = 0; index1 < size; index1 += 1) {
-      const newPixelLine = document.createElement('tr');
-      for (let index2 = 0; index2 < size; index2 += 1) {
-        const newPixel = document.createElement('td');
-        newPixel.className = 'pixel';
-        newPixel.addEventListener('click', colorPixel);
-        newPixel.style.backgroundColor = '#ffffff';
-        newPixelLine.appendChild(newPixel);
-      }
+      const newPixelLine = createLineBoard(size);
       pixelBord.appendChild(newPixelLine);
     }
   }
