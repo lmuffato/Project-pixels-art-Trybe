@@ -1,3 +1,11 @@
+const randomColors = document.getElementsByClassName('random');
+const colorsToBeRandomize = ['blue', 'green', 'red'];
+const colorsShuffle = colorsToBeRandomize.sort(() => Math.random() - 0.5);
+
+for (let index = 0; index < randomColors.length; index += 1) {
+  randomColors[index].setAttribute('id', colorsShuffle[index]);
+}
+
 document.getElementById('black').style.backgroundColor = 'black';
 document.querySelector('#blue').style.backgroundColor = 'blue';
 document.querySelector('#green').style.backgroundColor = 'green';
