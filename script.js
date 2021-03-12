@@ -70,15 +70,12 @@ function createPixels(number) {
     const $row = document.createElement('tr');
     $row.classList.add('pixels-row');
     $pixelsBoard.append($row);
-  }
-  const $pixelsLine = document.querySelectorAll('.pixels-row');
-  $pixelsLine.forEach((line) => {
     for (let indexColumn = 1; indexColumn <= number; indexColumn += 1) {
       const $td = document.createElement('td');
       $td.classList.add('pixel');
-      line.append($td);
+      $row.append($td);
     }
-  });
+  }
 }
 
 // Função para demover pixels da tabela após a criação de uma nova. Antes os novos pixels eram criados abaixo dos outros adicionados anteriormente. Nesta função são removidas todas as linhas, consequentemente todas as colunas também são removidas.

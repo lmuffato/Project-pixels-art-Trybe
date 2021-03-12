@@ -20,7 +20,6 @@ body {
 }
 
 /* Paleta de cores */
-
 #color-palette {
   border-collapse: separate;
   border-spacing: 5px;
@@ -57,7 +56,6 @@ body {
 }
 
 /* Config */
-
 .config {
   max-width: 1440px;
   margin: 0 auto;
@@ -99,7 +97,7 @@ body {
   background-color: white;
 }
 
-.pixels-td :hover {
+.pixels-td, .pixel :hover {
   transition: linear 2s;
   cursor: pointer;
   background-color: silver;
