@@ -1,16 +1,16 @@
-#black {
+.black {
   background-color: black;
 }
 
-#green {
+.green {
   background-color: green;
 }
 
-#yellow {
+.yellow {
   background-color: yellow;
 }
 
-#blue {
+.blue {
   background-color: blue;
 }
 
@@ -32,3 +32,4 @@
   border-width: 1px;
   border-color: black;
 }
+
