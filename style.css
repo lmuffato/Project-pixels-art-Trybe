@@ -66,26 +66,3 @@ body { background-color: blanchedalmond;
   margin-left: 42%;
   padding-top: 2%;
 }
-
-/* clearPixelBoard.addEventListener('click', () => {
-  // bgColor.style.backgroundColor.toggle('white');
-  // });
-  //  Como adicionar event listeners (segundo ):
-  // https://pt.khanacademy.org/computing/computer-programming/
-  html-css-js/html-js-dom-events/pt/using-the-event-properties
-  // 1. Find and store the element we want to listen to events on.
-  // 2. Define the function that will respond to the event.
-  // 3. Add the event listener for the element and function.
-  // Função para colocar selected no array
-  //function onClickColorPalette() {
-   // const colorsPalette = window.document.getElementsByClassName('color');
-  //  let key;
-  //  colorsPalette[key].classList.add('selected');
-  // }
-  // uma função para remover o selected das outras posições
-  // function removeSelected() {
-   // const classSelected = window.document.getElementsByClassName('color');
-   // for (let index = 0; index < classSelected.length; index += 1) {
-  //    classSelected[index].classList.remove('selected');
-   // }
-  // } */
