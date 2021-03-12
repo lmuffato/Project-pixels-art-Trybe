@@ -1,8 +1,55 @@
+
+
+function createPixels() {
+  for (let index = 0; index < 5; index += 1) {
+    const createDiv = document.createElement('div');
+    createDiv.className = 'line';
+    createDiv.style.height = '40px';
+    document.querySelector('#pixel-board').appendChild(createDiv);
+
+    for (let jindex = 0; jindex < 5; jindex += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixel.style.width = '40px';
+      pixel.style.height = '40px';
+      pixel.style.backgroundColor = 'white';
+      pixel.style.display = 'inline-block';
+      pixel.style.border = 'solid black 1px';
+      pixel.style.transition = '0.2s';
+      $('.pixel').hover(function() {
+        $(this).css('width', '43px');
+        $(this).css('height', '43px');
+      }, function() {
+        $(this).css('width', '40px');
+        $(this).css('height', '40px');
+      });
+      document.querySelectorAll('.line')[index].appendChild(pixel);
+    }
+  }
+}
+createPixels();
+
+function hoverPixel() {
+
+}
+
 function firstColorSelected() {
   const color = document.querySelector('.color');
   color.classList.add('selected');
 }
 
+function boardSize() {
+  const inputBoard = document.getElementById('board-size');
+  const btnGenerateBoard = document.getElementById('generate-board');
+
+  btnGenerateBoard.addEventListener('click', () => {
+    if (inputBoard.value == '') {
+      alert('Board inválido!');
+    }
+  });
+}
+
+boardSize();
 /**
  * Deu uma olhada no código do luanlsr e achei bem legal a forma como ele fez para remover a classe selected
  * resolvi implementa-lá no meu código. Github: https://github.com/tryber/sd-010-a-project-pixels-art/pull/15/files
