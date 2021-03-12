@@ -40,16 +40,16 @@ function listenColorSelection() {
 listenColorSelection();
 
 function addSelectedColorToCanvas() {
-  let getPixel = document.getElementById('pixel-board');
+  const getPixel = document.getElementById('pixel-board');
   getPixel.addEventListener('click', function (event) {
-    let getColor = document.querySelector('.color.selected').style.backgroundColor;
-    let originalPixelColor = 'white';
+    const getColor = document.querySelector('.color.selected').style.backgroundColor;
+    const originalPixelColor = 'white';
     if (event.target.style.backgroundColor === getColor) {
-    event.target.style.backgroundColor = originalPixelColor;
+      event.target.style.backgroundColor = originalPixelColor;
     } else {
       event.target.style.backgroundColor = getColor;
     }
-  })
+  });
 }
 
 addSelectedColorToCanvas();
