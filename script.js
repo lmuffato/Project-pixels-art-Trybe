@@ -8,6 +8,9 @@ function adicionaPixel(number) {
     pixel.style.height = '40px';
     pixel.style.border = '1px solid black';
     pixel.style.display = 'inline-block';
+    pixel.style.marginBottom = '-3px';
+    pixel.style.marginTop = '-3px';
+    pixel.style.boxSizing = 'border-box';
     colorPallet.appendChild(pixel);
   }
 }
