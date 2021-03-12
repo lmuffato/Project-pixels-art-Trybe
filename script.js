@@ -71,14 +71,25 @@ function removePixels() {
   $pixelsRow.forEach((elementRow) => elementRow.parentNode.removeChild(elementRow));
 }
 
+// Função para checar o input.value
+function checkInput() {
+  let { value } = $inputPixelsBoard;
+  if (value < 5 && value !== '') {
+    value = 5;
+  } else if (value > 50) {
+    value = 50;
+  }
+  return value;
+}
+
 // Função de callback para criar os pixels da nova pixel-board. Nela é chamada as funções 'removePixels' e 'createPixels'.
 function createPixelsBoard() {
   const $pixelsRow = document.querySelectorAll('.pixels-row');
   if ($pixelsRow.length !== 0) {
     removePixels();
   }
-  const { value } = $inputPixelsBoard;
-  if (value === '' || value === '0') {
+  const value = checkInput();
+  if (value === '') {
     alert('Board inválido!');
     $pixelBoard.style.cssText = 'display: none; ';
   } else {
