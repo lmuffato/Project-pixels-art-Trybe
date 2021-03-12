@@ -67,12 +67,19 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
+  margin-bottom: 10px;
+  max-width: 100px;
 }
 
 .btn {
   cursor: pointer;
   font-family: monospace;
   max-width: 100px;
+}
+
+.config__clear {
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .input {
