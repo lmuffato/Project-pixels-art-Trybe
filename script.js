@@ -120,15 +120,15 @@ colorPixel();
 
 paintPixels({ evento: { target: { style: { backgroundColor: 'black' } } } });
 
-function creatButton() {
-  const selectDivPixel = document.querySelector(selectIdPixelBoard);
+function clearButton() {
+  const selectPixelBoard = document.querySelector('#pixel-board');
   const selectorBody = document.querySelector('body');
   const createButton = document.createElement('button');
   createButton.id = 'clear-board';
   createButton.innerHTML = 'Limpar';
-  selectorBody.insertBefore(createButton, selectDivPixel);
+  selectorBody.insertBefore(createButton, selectPixelBoard);
 }
-creatButton();
+clearButton();
 
 function clearPixels() {
   const selectButton = document.querySelector('#clear-board');
@@ -145,29 +145,32 @@ clearPixels();
 // Requirement 10 Bonus***;
 
 function createButtonVQV() {
-  const selectDivPixel = document.querySelector(selectIdPixelBoard);
+  const selectButton = document.querySelector('#clear-board');
   const selectorBody = document.querySelector('body');
   const createButton = document.createElement('button');
   createButton.id = 'generate-board';
   createButton.innerHTML = 'VQV';
-  selectorBody.insertBefore(createButton, selectDivPixel);
+  selectorBody.insertBefore(createButton, selectButton);
 }
 createButtonVQV();
 
 function createInputNumber() {
-  const selectDivPixel = document.querySelector(selectIdPixelBoard);
+  const selectGenerateBoard = document.querySelector('#generate-board');
   const selectorBody = document.querySelector('body');
   const createInput = document.createElement('input');
   createInput.id = 'board-size';
   createInput.type = 'number';
-  createInput.min = '5';
+  createInput.min = '1';
   createInput.max = '50';
-  selectorBody.insertBefore(createInput, selectDivPixel);
+  selectorBody.insertBefore(createInput, selectGenerateBoard);
 }
 createInputNumber();
 
 function checkInput() {
   const selectInput = document.querySelector('#board-size');
+  if (selectInput.value === '') {
+    alert('Board inválido!');
+  }
   if (selectInput.value > 50) {
     selectInput.value = 50;
   } if (selectInput.value < 5) {
@@ -182,6 +185,7 @@ function makePixels(value) {
       const createDiv = document.createElement('div');
       selectorDivPixelBoard.style.maxWidth = `${parseInt(value, 10) * 42}px`;
       createDiv.className = 'pixel';
+      createDiv.style.backgroundColor = 'white';
       selectorDivPixelBoard.appendChild(createDiv);
     }
   }
