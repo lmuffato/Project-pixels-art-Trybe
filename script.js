@@ -3,6 +3,22 @@ const $colorElements = document.querySelectorAll('.color');
 const $pixelBoard = document.getElementById('pixel-board');
 const $clearBoardBtn = document.getElementById('clear-board');
 
+// Função para gerar as cores da paleta de cores, exceto a primeira cor que sempre deve ser preta.
+function changeColorPallete() {
+  const $colorElementsRandon = document.querySelectorAll('.colorRandon');
+  $colorElementsRandon.forEach((element) => {
+    const $elColor = element;
+    const $colors = [];
+    for (let index = 0; index <= 3; index += 1) {
+      const $color = Math.floor(Math.random(1 + 1) * 255);
+      $colors.push($color);
+    }
+    $elColor.style.cssText = `background-color: rgb(${$colors[0]}, ${$colors[1]}, ${$colors[2]}`;
+  });
+}
+
+changeColorPallete();
+
 // Função de callback para selecionar uma paleta da paleta de cores.
 function selecElementPallete(event) {
   const elementTarget = event.target;
