@@ -1,7 +1,7 @@
 function setPalette(color1, color2, color3) {
   const getPalette = document.getElementsByClassName('color');
   getPalette[0].style.backgroundColor = 'black';
-  getPalette[0].className = 'color selected'; 
+  getPalette[0].className = 'color selected';
   getPalette[1].style.backgroundColor = color1;
   getPalette[2].style.backgroundColor = color2;
   getPalette[3].style.backgroundColor = color3;
@@ -24,10 +24,10 @@ function createCanvas(tableSize) {
 
 createCanvas(5);
 
-//Código desta função foi feito usando a função feita pelo Patrick Morais como referência(https://github.com/tryber/sd-010-a-project-pixels-art/pull/12/files).
+//  Código desta função foi feito usando a função feita pelo Patrick Morais como referência(https://github.com/tryber/sd-010-a-project-pixels-art/pull/12/files).
 function listenColorSelection() {
   const getPalette = document.getElementById('color-palette');
-  getPalette.addEventListener('click', function(event) {
+  getPalette.addEventListener('click', function (event) {
     const getColors = document.getElementsByClassName('color');
     for (let index = 0; index < getColors.length; index += 1) {
       getColors[index].classList.remove('selected');
@@ -39,20 +39,17 @@ function listenColorSelection() {
 
 listenColorSelection();
 
-// function addTaskColorToDay() {
-//   let getDiv = document.querySelector('.my-tasks').lastChild;
-//   let selectedCheck = 'task selected';
-//   let taskColor = getDiv.style.backgroundColor;
-//   let originalDayColor = 'rgb(119,119,119)';
-//   let getDay = document.querySelectorAll('.day');
-  
-//   for (let index = 0; index < getDay.length; index += 1) {
-//     getDay[index].addEventListener('click', function() {
-//       if (getDay[index].style.color === taskColor && getDiv.className === selectedCheck) {
-//         getDay[index].style.color = originalDayColor;
-//       } else if (getDiv.className === selectedCheck) {
-//         getDay[index].style.color = taskColor;
-//       }
-//     })
-//   }
-// }
+function addSelectedColorToCanvas() {
+  let getPixel = document.getElementById('pixel-board');
+  getPixel.addEventListener('click', function (event) {
+    let getColor = document.querySelector('.color.selected').style.backgroundColor;
+    let originalPixelColor = 'white';
+    if (event.target.style.backgroundColor === getColor) {
+    event.target.style.backgroundColor = originalPixelColor;
+    } else {
+      event.target.style.backgroundColor = getColor;
+    }
+  })
+}
+
+addSelectedColorToCanvas();
