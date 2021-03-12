@@ -32,8 +32,8 @@ function clearPixelColor() {
     elem.style.backgroundColor = 'white';
   }
 }
-const clearBtn = document.getElementsByClassName('clear-board');
-clearBtn[0].addEventListener('click', clearPixelColor, false);
+const clearBtn = document.getElementById('clear-board');
+clearBtn.addEventListener('click', clearPixelColor, false);
 
 // Referência usada para a função randomColors:
 // https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
