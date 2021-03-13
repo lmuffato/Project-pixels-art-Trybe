@@ -1,4 +1,14 @@
+/* eslint func-names: ["error", "never"] */
 
+function jqueryHover() {
+  $('.pixel').hover(function () {
+    $(this).css('width', '43px');
+    $(this).css('height', '43px');
+  }, function () {
+    $(this).css('width', '40px');
+    $(this).css('height', '40px');
+  });
+}
 
 function createPixels() {
   for (let index = 0; index < 5; index += 1) {
@@ -6,7 +16,6 @@ function createPixels() {
     createDiv.className = 'line';
     createDiv.style.height = '40px';
     document.querySelector('#pixel-board').appendChild(createDiv);
-
     for (let jindex = 0; jindex < 5; jindex += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
@@ -16,22 +25,12 @@ function createPixels() {
       pixel.style.display = 'inline-block';
       pixel.style.border = 'solid black 1px';
       pixel.style.transition = '0.2s';
-      $('.pixel').hover(function() {
-        $(this).css('width', '43px');
-        $(this).css('height', '43px');
-      }, function() {
-        $(this).css('width', '40px');
-        $(this).css('height', '40px');
-      });
+      jqueryHover();
       document.querySelectorAll('.line')[index].appendChild(pixel);
     }
   }
 }
 createPixels();
-
-function hoverPixel() {
-
-}
 
 function firstColorSelected() {
   const color = document.querySelector('.color');
@@ -43,7 +42,7 @@ function boardSize() {
   const btnGenerateBoard = document.getElementById('generate-board');
 
   btnGenerateBoard.addEventListener('click', () => {
-    if (inputBoard.value == '') {
+    if (inputBoard.value === '') {
       alert('Board inválido!');
     }
   });

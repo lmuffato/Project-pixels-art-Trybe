@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-  background-color: rgba(190 , 218 , 211 , 1);
+  background-color: rgba(190, 218, 211, 1);
 }
 
 .container {
@@ -68,16 +68,12 @@ body {
   height: 50px;
 }
 
-.hover {
-  position: relative;
-}
-
 .btn-style {
   padding: 8px;
   margin-bottom: 40px;
   border-radius: 2px;
   border: none;
-  background-color: rgba(93 , 163 , 146 , 1);
+  background-color: rgba(93, 163, 146, 1);
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -94,8 +90,8 @@ body {
 }
 
 .all-colors {
-  background-color: rgba(211 , 211 , 211 , 1);
+  background-color: lightgray;
   width: 300px;
-  margin: 30px auto 0px auto;
+  margin: 30px auto 0;
   border-radius: 50px;
 }
