@@ -17,22 +17,6 @@ h1 {
   border: 1px solid black;
 }
 
-#black-palette {
-  background-color: black;
-}
-
-#blue-palette {
-  background-color: blue;
-}
-
-#red-palette {
-  background-color: red;
-}
-
-#green-palette {
-  background-color: green;
-}
-
 .pixel {
   width: 41px;
   height: 41px;
