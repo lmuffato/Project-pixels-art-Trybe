@@ -1,11 +1,24 @@
-let colorClick = document.getElementById('color-palette');
+//Requisito 7
+const colorClick = document.getElementById('color-palette');
 
-function remSelected (event) {
-  const changeColor = document.querySelector('.color');
-  for (let index; index <= changeColor.length; index += 1) {
-    changeColor[index].classList.remove('selected');
+  function changeColor(event) {
+    const colorClass = document.getElementsByClassName('color');
+    console.log(colorClass[0].classList);
+    for (index = 0; index < colorClass.length; index += 1) {
+      colorClass[index].classList.remove('selected');
+    }
+    //console.log(event);
+    const addClass = event.target.classList.add('selected');
   }
-  const classColor = event.target.classList.add("selected");
+  colorClick.addEventListener('click', changeColor);
 
-colorClick = addEventListener('click', remSelected);
+
+// requisito 10 
+const clearPixel = document.getElementById('clear-board')
+const pixelWhite = document.querySelectorAll(".pixel");
+
+function clear () {
+  pixelWhite.style.backgroudColor = white;
 }
+clearPixel.addEventListener('click', clear);
+
