@@ -14,9 +14,9 @@ h1 {
   font-family: 'Fascinate', display;
   font-weight: 900;
   font-size: 38px;
-  color: #FAFAFA;
+  color: #fafafa;
   -webkit-text-stroke-width: 2px; /* largura da borda */
-  -webkit-text-stroke-color: #154A9A; /* cor da borda */
+  -webkit-text-stroke-color: #154a9a; /* cor da borda */
   /* Referencia: https://pt.stackoverflow.com/questions/243301/como-fazer-um-contorno-em-texto-via-css */
   margin-bottom: 22px;
 }
@@ -26,10 +26,11 @@ h1 {
   display: flex;
   align-items: center;
   gap: 25px;
-  background: #E4E4E4;
+  background: #e4e4e4;
   border-radius: 25px;
   margin-bottom: 15px;
 }
+
 li {
   border: 1px solid black;
 }
@@ -41,9 +42,9 @@ li {
   border-radius: 50%;
   transition: 0.2s;
 }
-.selected {
-  border: 10px solid blue;
-}
+/* .selected {
+  border: 5px solid rgb(255, 0, 0);
+} */
 
 .color:hover {
   transform: scale(1.05);
@@ -55,6 +56,7 @@ li {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .button {
@@ -62,8 +64,8 @@ li {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: #FAFAFA;
-  background: #EC4796;
+  color: #fafafa;
+  background: #ec4796;
   border-radius: 5px;
   border: none;
 }
@@ -73,11 +75,25 @@ li {
   background: #ee64a7;
 }
 
+#color-input {
+  width: 79px;
+  height: 25px;
+  padding: 10px 8px;
+  background: #fafafa;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #313131;
+}
+
 #board-size {
   width: 77px;
   height: 25px;
   padding: 10px 5px;
-  background: #FAFAFA;
+  background: #fafafa;
   box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   border: none;

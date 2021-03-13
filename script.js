@@ -24,7 +24,6 @@ function createColorCell(colorName) {
 
   colorCell.style.backgroundColor = colorName;
   colorCell.style.color = colorName;
-  colorCell.style.border = '1px solid black';
   colorCell.addEventListener('click', selectColor);
 
   if (colorName === 'black') {
@@ -128,7 +127,7 @@ function clearBoard() {
 
 document.getElementById('clear-board').addEventListener('click', clearBoard);
 
-function changeColors() {
+function changeAllColors() {
   const colors = document.querySelectorAll('.color');
 
   for (let index = 1; index < colors.length; index += 1) {
@@ -136,7 +135,15 @@ function changeColors() {
   }
 }
 
-document.getElementById('change-colors').addEventListener('click', changeColors);
+document.getElementById('change-colors').addEventListener('click', changeAllColors);
+
+function changeSelectedColor() {
+  const selectedColor = document.querySelector('.selected');
+  const colorInput = document.querySelector('#color-input').value;
+  selectedColor.style.backgroundColor = colorInput;
+}
+
+document.getElementById('change-selected-color').addEventListener('click', changeSelectedColor);
 
 window.onload = () => {
   fillColorPalette();
