@@ -15,7 +15,7 @@ function handleClick(event) {
     }
 }
 
-function listenToColorPalette() {
+function listenToColorPalette() {2
     const colorPalette = document.querySelector('#color-palette');
     colorPalette.addEventListener('click', handleClick)
 }
