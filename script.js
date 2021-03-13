@@ -9,14 +9,14 @@ function jqueryHover() {
     $(this).css('height', '40px');
   });
 }
-
-function createPixels() {
-  for (let index = 0; index < 5; index += 1) {
+/* Source: https://github.com/tryber/sd-010-a-project-pixels-art/pull/4/files */
+function createPixels(n) {
+  for (let index = 0; index < n; index += 1) {
     const createDiv = document.createElement('div');
     createDiv.className = 'line';
     createDiv.style.height = '40px';
     document.querySelector('#pixel-board').appendChild(createDiv);
-    for (let jindex = 0; jindex < 5; jindex += 1) {
+    for (let jindex = 0; jindex < n; jindex += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.style.width = '40px';
@@ -30,25 +30,13 @@ function createPixels() {
     }
   }
 }
-createPixels();
+createPixels(5);
 
 function firstColorSelected() {
   const color = document.querySelector('.color');
   color.classList.add('selected');
 }
 
-function boardSize() {
-  const inputBoard = document.getElementById('board-size');
-  const btnGenerateBoard = document.getElementById('generate-board');
-
-  btnGenerateBoard.addEventListener('click', () => {
-    if (inputBoard.value === '') {
-      alert('Board inválido!');
-    }
-  });
-}
-
-boardSize();
 /**
  * Deu uma olhada no código do luanlsr e achei bem legal a forma como ele fez para remover a classe selected
  * resolvi implementa-lá no meu código. Github: https://github.com/tryber/sd-010-a-project-pixels-art/pull/15/files
