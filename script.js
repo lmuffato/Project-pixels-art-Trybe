@@ -59,10 +59,26 @@ function getPixels() {
   });
 }
 
+function btnClear () {
+  const idBtnClear = document.getElementById('clear-board');
+  const newBtnClear = document.createElement('button');
+  idBtnClear.appendChild(newBtnClear);
+  newBtnClear.innerHTML = 'Limpar';
+  newBtnClear.addEventListener('click', (clearPixel));
+
+  function clearPixel() {
+    const allPixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < allPixels.length; index += 1) {
+      allPixels[index].style.backgroundColor = 'white';
+    }
+  }
+}
+
 // Projeto Realizado com Ajuda de Pollyana Oliveira - turma 10 - A
 window.onload = function() {
   boxColor();
   creatingPixels();
   getSelected();
   getPixels();
+  btnClear ();
 };
