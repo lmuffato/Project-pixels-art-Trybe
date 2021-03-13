@@ -4,11 +4,31 @@
   box-sizing: border-box;
 }
 
-#color-palette {
+body {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Fascinate', display;
+  font-weight: 900;
+  font-size: 38px;
+  color: #FAFAFA;
+  -webkit-text-stroke-width: 2px; /* largura da borda */
+  -webkit-text-stroke-color: #154A9A; /* cor da borda */
+  /* Referencia: https://pt.stackoverflow.com/questions/243301/como-fazer-um-contorno-em-texto-via-css */
+  margin-bottom: 22px;
+}
+
+#color-palette {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #E4E4E4;
+  border-radius: 25px;
+  margin-bottom: 15px;
 }
 
 .color {
@@ -16,6 +36,30 @@
   height: 100px;
   border: 1px solid black;
   list-style: none;
+  border-radius: 50%;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button {
+  padding: 3px 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FAFAFA;
+  background: #EC4796;
+  border-radius: 5px;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #ee64a7;
 }
 
 #pixel-board {
