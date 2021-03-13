@@ -63,6 +63,16 @@ function pint() {
 }
 pint();
 
+function clear(){
+  const botao = document.getElementById('clear-board') /* estou atribuindo a esta variavel o valor de meu elemento que tem a classe ('clear-board') */
+  botao.addEventListener('click',() =>{ /* estou  add um evento de click a minha variavel botão */
+    const recupera = document.getElementsByClassName('pixel') /* estou atribuindo a minha variavel recupera o valor do meu elemnto que tem a classe ('pixel')*/
+    for(let index = 0; index < recupera.length; index += 1){ /*  estou percorrendo toda elemento da minha variavel recupera */
+      recupera[index].style.backgroundColor = 'white' /* aqui eu atribuo em todos os meus index o style cor branca  */
+    }
+  })
+}
+clear();
 
 
 
