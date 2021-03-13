@@ -58,17 +58,17 @@ const generateBoardSelector = document.querySelector('#generate-board');
 generateBoardSelector.addEventListener('click', valueInput);
 
 function valueInput() {
+  if (selectBoardSize.value < 0 || selectBoardSize.value === '') {
+    alert('Board inválido!');
+    selectBoardSize.value = 5;
+  }
+
   if (selectBoardSize.value < 5) {
     selectBoardSize.value = 5;
   }
 
   if (selectBoardSize.value > 50) {
     selectBoardSize.value = 50;
-  }
-
-  if (selectBoardSize.value < 0 || selectBoardSize.value === '') {
-    alert('Board inválido!');
-    selectBoardSize.value = 5;
   }
 
   return selectBoardSize.value;
