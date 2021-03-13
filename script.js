@@ -33,9 +33,10 @@ function pressColor(event) {
   const classSelected = document.querySelector('.selected');
   if (event.target.className === 'pixel') {
     event.target.style.backgroundColor = getComputedStyle(classSelected).backgroundColor;
+    console.log(event.target);
+
   }
 }
-
 elementTable.addEventListener('click', pressColor);
 
-// referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener
+// referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener, https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
