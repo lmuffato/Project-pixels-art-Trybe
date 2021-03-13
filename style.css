@@ -11,6 +11,10 @@
 
 #pixel-board {
   background-color: white;
+  width: 500px;
+  height: 500px;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .pixel {
