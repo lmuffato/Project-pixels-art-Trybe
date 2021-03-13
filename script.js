@@ -128,6 +128,16 @@ function clearBoard() {
 
 document.getElementById('clear-board').addEventListener('click', clearBoard);
 
+function changeColors() {
+  const colors = document.querySelectorAll('.color');
+
+  for (let index = 1; index < colors.length; index += 1) {
+    colors[index].style.backgroundColor = generateColor();
+  }
+}
+
+document.getElementById('change-colors').addEventListener('click', changeColors);
+
 window.onload = () => {
   fillColorPalette();
   generateBoard(5);
