@@ -38,3 +38,6 @@ table {
   border-spacing: 0;
   border-collapse: separate;
 }
+#pixel-board {
+  background-color: white;
+}
