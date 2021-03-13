@@ -4,11 +4,11 @@
 }
 
 body {
-    background-image: url("https://user-images.githubusercontent.com/18351809/46888871-624a3900-ce7f-11e8-808e-99fd90c8a3f4.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 100px;
+  background-image: url('https://user-images.githubusercontent.com/18351809/46888871-624a3900-ce7f-11e8-808e-99fd90c8a3f4.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 100px;
 }
 
 h1 {
