@@ -11,15 +11,15 @@ body {
 }
 
 h1 {
-  font-family: Fascinate, display;
+  font-family: Fascinate, cursive;
   font-weight: 900;
   font-size: 38px;
   color: #fafafa;
   -webkit-text-stroke-width: 2px; /* largura da borda */
   -webkit-text-stroke-color: #154a9a;/* cor da borda */
+
   /* Referencia: 
   https://pt.stackoverflow.com/questions/243301/como-fazer-um-contorno-em-texto-via-css */
-
   margin-bottom: 22px;
 }
 
