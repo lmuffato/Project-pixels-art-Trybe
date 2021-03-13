@@ -1,27 +1,5 @@
 let dimension = 5;
 
-// Cria o tabuleiro dinamicamente. Em board recupera-se o elemento que representa o tabuleiro,
-// o primeiro for cria uma div que representa uma linha, atribui a classe nela e aplica a div criada em board. 
-// Em seguida o outro for recupera a div recém criada e cria outras divs dentro dela que representarao os pixels.
-// Assim o ciclo se repete: Cria uma div linha e dentro dela cria as divs pixels de acordo com o valor dimensao
-function makeBoard(dim) {
-  const board = document.getElementById('pixel-board');
-  let createdLine;
-
-  for (let indexLine = 0; indexLine < dim; indexLine += 1) {
-    const creatingLine = document.createElement('div');
-    creatingLine.className = 'lines';
-    board.appendChild(creatingLine);
-    createdLine = document.getElementsByClassName('lines');
-
-    for (let indexColum = 0; indexColum < dim; indexColum += 1) {
-      const creatingPixel = document.createElement('div');
-      creatingPixel.className = 'pixel';
-      createdLine[indexLine].appendChild(creatingPixel);
-    }
-  }
-}
-
 //  Função que é ativada quando se clica numa cor da paleta, ela recupera o elemento que contem
 // a classe selected, remove essa classe dele e aplica no elemento que ativou o listener
 function changeSelected(eventOrigin) {
@@ -72,12 +50,11 @@ function addButtomListener() {
 
 function changeDim() {
   dimension = document.FormDimension.dim.value; // Recupera o valor do input que vai de 5 a 50
-  if (dimension === '') {
-    alert('Board inválido!');
-  }
-  else {
+  if (dimension >= 5 && dimension <= 50) {
     document.getElementById('pixel-board').innerHTML = ''; // Apaga o conteudo do tabuleiro atual
     makeBoard(dimension);
+  } else {
+    alert('Board inválido!');
   }
 }
 
@@ -85,8 +62,30 @@ function addVqvListener() {
   document.FormDimension.vqv.addEventListener('click', changeDim);
 }
 
+// Cria o tabuleiro dinamicamente. Em board recupera-se o elemento que representa o tabuleiro,
+// o primeiro for cria uma div que representa uma linha, atribui a classe nela e aplica a div criada em board. 
+// Em seguida o outro for recupera a div recém criada e cria outras divs dentro dela que representarao os pixels.
+// Assim o ciclo se repete: Cria uma div linha e dentro dela cria as divs pixels de acordo com o valor dimensao
+function makeBoard(dim) {
+  const board = document.getElementById('pixel-board');
+  let createdLine;
+
+  for (let indexLine = 0; indexLine < dim; indexLine += 1) {
+    const creatingLine = document.createElement('div');
+    creatingLine.className = 'lines';
+    board.appendChild(creatingLine);
+    createdLine = document.getElementsByClassName('lines');
+
+    for (let indexColum = 0; indexColum < dim; indexColum += 1) {
+      const creatingPixel = document.createElement('div');
+      creatingPixel.className = 'pixel';
+      createdLine[indexLine].appendChild(creatingPixel);
+    }
+  }
+  addPixelListener();
+}
+
 addPaletteListener();
-makeBoard(dimension);
 addPixelListener();
 addButtomListener();
 addVqvListener();
