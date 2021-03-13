@@ -34,19 +34,18 @@ for (let index = 1; index <= 25; index += 1) {
   divSquare.style.width = '40px';
   divSquare.style.height = '40px';
   divSquare.style.border = '1px solid black';
-  divSquare.style.marginTop = '-4px';
-  divSquare.style.marginBottom = '0';
-  divSquare.style.padding = '0';
-  divSquare.className = 'pixel';
+  divSquare.style.marginTop = '0px';
+  divSquare.style.marginBottom = '0px';
   divSquare.style.background = 'white';
+  divSquare.className = 'pixel';
   createTable.appendChild(divSquare);
   if (index === 5) {
-    divSquare.style.marginRight = '800px'
+    divSquare.style.marginRight = '80%'
   } if (index === 10) {
-    divSquare.style.marginRight = '800px'
+    divSquare.style.marginRight = '80%'
   } if (index === 15) {
-    divSquare.style.marginRight = '800px'
+    divSquare.style.marginRight = '80%'
   } if (index === 20) {
-    divSquare.style.marginRight = '800px'
+    divSquare.style.marginRight = '80%'
   }
 }
