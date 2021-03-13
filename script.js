@@ -17,7 +17,7 @@ function boxColor() {
   for (let colorIndex = 0; colorIndex < colorsArr.length; colorIndex += 1) {
     selectColorClass[colorIndex].style.backgroundColor = colorsArr[colorIndex];
   }
-  selectColorClass[0].classList.add = ('selected');
+  selectColorClass[0].className = ' selected';
 };
 
 function creatingPixels() {
@@ -35,7 +35,6 @@ function creatingPixels() {
     }
   }
 };
-
 
 // Chamando todas as funções no final para ficar mais clean.
 window.onload = function() {
