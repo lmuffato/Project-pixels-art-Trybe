@@ -15,6 +15,8 @@ for (let index = 1; index <= 4; index +=1) {
     colorPaletteSection.appendChild(colorPaletteDivs);
     if (index === 1) {
         colorPaletteDivs.style.backgroundColor = 'black' // Requirement 3
+        colorPaletteDivs.className += ' selected'; // Requirement 6
+        
     } if (index === 2) {
         colorPaletteDivs.style.backgroundColor = 'red' 
     } if (index === 3) {
@@ -23,7 +25,7 @@ for (let index = 1; index <= 4; index +=1) {
         colorPaletteDivs.style.backgroundColor = 'orange'
     }
   }
-  // Requirement 4 
+  // Requirement 4 e 5
   const createTable = document.createElement('table');
   document.body.appendChild(createTable);
   createTable.id = 'pixel-board';
