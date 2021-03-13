@@ -12,17 +12,24 @@
       <h1 id="title">Paleta de Cores</h1>
     </header>
 
-  <section id="color-palette">
-    <div class="color selected" style="background-color: black;"></div>
-    <div class="color" style="background-color: yellow;"></div>
-    <div class="color" style="background-color: red;"></div>
-    <div class="color" style="background-color: green;"></div>
-  </section>
-  </main>
-  <button id="clear-board">Limpar</button>
-  
-  <div id="pixel-board"></div>
+    <section id="color-palette">
+      <div class="color selected" style="background-color: black;"></div>
+      <div class="color" style="background-color: yellow;"></div>
+      <div class="color" style="background-color: red;"></div>
+      <div class="color" style="background-color: green;"></div>
+    </section>
 
+    <form name="FormDimension">
+      <input type='number' id="board-size" class="input-margin" min='5' max='50' maxlength='2' placeholder='Dimensao' name="dim">
+      <input type='button' id="generate-board" class="input-margin" value="VQV" name="vqv">
+    </form>
+
+    <section>
+      <button id="clear-board">Limpar</button>
+    </section>
+  
+    <table id="pixel-board"></table>
+  </main>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
