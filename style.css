@@ -21,6 +21,10 @@
   background-color: pink;
 }
 
+form {
+  display: inline-block;
+}
+
 .white {
   background-color: white;
 }
