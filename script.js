@@ -18,6 +18,7 @@ function boxColor() {
     selectColorClass[colorIndex].style.backgroundColor = colorsArr[colorIndex];
   }
   selectColorClass[0].className += ' selected';
+  // aqui dava erro com classList, acabou feito uma ganbiarra
 };
 
 function creatingPixels() {
@@ -38,12 +39,14 @@ function creatingPixels() {
 
 function getSelected() {
   const allClassColor = document.querySelectorAll('.color');
-  allClassColor.addEventListener('click' function(event) {
-    for (let indexOfColor = 0; indexOfColor < allClassColor.length; indexOfColor += 1) {
-      allClassColor[indexOfColor].classList.remove('selected');
-    }
-    event.target.classList.add('selected');
-  })
+  for (let i = 0; i < allClassColor.length; i += 1){
+    allClassColor[i].addEventListener('click', function(event) {
+      for (let indexOfColor = 0; indexOfColor < allClassColor.length; indexOfColor += 1) {
+        allClassColor[indexOfColor].classList.remove('selected');
+      }
+      event.target.className += ' selected';
+    })
+  }  
 };
 
 
