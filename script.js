@@ -15,15 +15,6 @@ function setColors() {
   }
 }
 
-/* function getDivs() {s
-  const getColor = document.getElementsByClassName('color');
-  for (let index = 0; index < getColor.length; index += 1) {
-    getColor[0].style.backgroudColor = 'black';
-  }
-  return getColor;
-}
-getDivs(); */
-
 window.onload = function start() {
   setColors();
 };
