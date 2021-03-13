@@ -7,14 +7,6 @@
   text-align: center;
 }
 
-#color_palette {
-  position: absolute;
-  display: inline;
-  top: 50px;
-  left: 10px;
-
-}
-
 .color {
   display: inline-block;
   width: 40px;
@@ -41,7 +33,7 @@
 
 #pixel-board {
   position: absolute;
-  top: 100px;
+  top: 130px;
   left: 10px;
 }
 
@@ -56,6 +48,6 @@
 
 #clear-board {
   position: absolute;
-  top: 350px;
+  top: 98px;
   left: 70px;
 }
