@@ -62,12 +62,12 @@ Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada
 na cor dos demais pixels. */
 
 function pint() {
-  const selectedColor = document.querySelector('#pixel-board')
-  selectedColor.addEventListener('click', (e) => {
-    const target2 = e.target;
-    const recupera = document.querySelector('.selected').style.backgroundColor;
-    if (target2.classList.contains('pixel')) {
-      target2.style.backgroundColor = recupera
+  const selectedColor = document.querySelector('#pixel-board') /* recupere o pai onde vai acontecer o evento  */
+  selectedColor.addEventListener('click', (e) => { /* diz que o meu evento vai ser um click */
+    const target2 = e.target; /* Eu atribuo a propriedade target do meu evento para o meu (parametro(e)) */
+    const recupera = document.querySelector('.selected').style.backgroundColor; /* eu recupero o style do meu elemento que possui a classe selected */
+    if (target2.classList.contains('pixel')) { /* SE - minha propriedade target ocorrer em uma elemento com a classe Pixel... */
+      target2.style.backgroundColor = recupera/* Então atribua ao meu target o style do elemento que possui a classe selected */
     }
   });
 }
