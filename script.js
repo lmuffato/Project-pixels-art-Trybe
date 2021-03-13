@@ -28,7 +28,7 @@ begin.classList.add('selected');
 
 const pix = document.querySelectorAll('.pixel');
 for (let index = 0; index < pix.length; index += 1) {
-  pix[index].addEventListener('click', function toBoard(element) {
+  pix[index].addEventListener('click', (element) => { // function toBoard
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
     const selectedP = element.target;
     selectedP.style.backgroundColor = selectedColor;
@@ -42,7 +42,7 @@ pBoard.addEventListener('click', function toBoard(element) {
 }); */
 
 const colorPalette = document.querySelector('#color-palette');
-colorPalette.addEventListener('click', function selectedInPalette(element) {
+colorPalette.addEventListener('click', (element) => { // function selectedInPalette
   const newSelected = element.target;
   const inSelected = document.querySelector('.selected');
   inSelected.classList.remove('selected');
@@ -50,7 +50,7 @@ colorPalette.addEventListener('click', function selectedInPalette(element) {
 });
 
 const limpar = document.querySelector('#clear-board');
-limpar.addEventListener('click', function clear() {
+limpar.addEventListener('click', () => { // function clear
   for (let index = 0; index < pix.length; index += 1) {
     pix[index].style.backgroundColor = 'white';
   }
