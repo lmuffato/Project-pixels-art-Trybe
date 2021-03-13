@@ -43,10 +43,10 @@ header {
   background-color: black;
   top: 0;
 }
- #clear-board {
-   display: inline-block;
- }
+#clear-board {
+  display: inline-block;
+}
 
- .input-margin {
-  margin: 10px 0px;
- }
+.input-margin {
+  margin: 10px 0;
+}
