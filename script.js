@@ -2,14 +2,25 @@ const blackPalette = document.querySelector('.black-palette');
 const redPalette = document.querySelector('.red-palette');
 const bluePalette = document.querySelector('.blue-palette');
 const greenPalette = document.querySelector('.green-palette');
-blackPalette.style.backgroundColor = 'black';
-redPalette.style.backgroundColor = '#ff6961';
-bluePalette.style.backgroundColor = '#3065ac';
-greenPalette.style.backgroundColor = '#7d7';
+
+// Gera uma cor hexadecimal aleatoriamente
+function randomColor() {
+  const hexa = '0123456789ABCDEF';
+  let cor = '#';
+
+  for (let index = 0; index < 6; index += 1) {
+    cor += hexa[Math.floor(Math.random() * 16)];
+  }
+  return cor;
+}
 
 window.onload = () => {
   const blackPallet = document.querySelector('.black-palette');
   blackPallet.className = 'color black-palette selected';
+  blackPalette.style.backgroundColor = 'black';
+  redPalette.style.backgroundColor = randomColor();
+  bluePalette.style.backgroundColor = randomColor();
+  greenPalette.style.backgroundColor = randomColor();
 };
 
 // Cria uma div e recebe como parametro o nome da classe da div
