@@ -5,6 +5,7 @@ function remSelected (event) {
   for (let index; index <= changeColor.length; index += 1) {
     changeColor[index].classList.remove('selected');
   }
-    const classColor = event.target.classList.add("selected");
+  const classColor = event.target.classList.add("selected");
+
+colorClick = addEventListener('click', remSelected);
 }
-  colorClick = addEventListener('click', remSelected);
