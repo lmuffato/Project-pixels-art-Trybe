@@ -37,6 +37,12 @@ h1 {
   border: 1px solid black;
   list-style: none;
   border-radius: 50%;
+  transition: 0.2s;
+}
+
+.color:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 #buttons {
@@ -88,4 +94,9 @@ h1 {
   color: white;
   background-color: white;
   border: 1px solid black;
+  transition: 0.2s;
+}
+
+.pixel:hover {
+  transform: scale(1.1);
 }

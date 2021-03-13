@@ -131,4 +131,5 @@ document.getElementById('clear-board').addEventListener('click', clearBoard);
 window.onload = () => {
   fillColorPalette();
   generateBoard(5);
+  setColor('black');
 };
