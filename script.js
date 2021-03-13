@@ -50,11 +50,19 @@ function addButtomListener() {
 
 function changeDim() {
   dimension = document.FormDimension.dim.value; // Recupera o valor do input que vai de 5 a 50
-  if (dimension >= 5 && dimension <= 50) {
-    document.getElementById('pixel-board').innerHTML = ''; // Apaga o conteudo do tabuleiro atual
+  if (dimension === '') {
+    alert('Board inválido!');
+  } else if (dimension >= 5 && dimension <= 50) {
+    document.getElementById('pixel-board').innerHTML = '';// Apaga o conteudo do tabuleiro atual
+    makeBoard(dimension);
+  } else if (dimension < 5) {
+    document.getElementById('pixel-board').innerHTML = '';
+    dimension = 5;
     makeBoard(dimension);
   } else {
-    alert('Board inválido!');
+    document.getElementById('pixel-board').innerHTML = '';
+    dimension = 50;
+    makeBoard(dimension);
   }
 }
 
