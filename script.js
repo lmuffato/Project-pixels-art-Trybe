@@ -80,13 +80,13 @@ function generateBoardPixel() {
   const boardSize = document.querySelector('#board-size');
 
   generateBoard.addEventListener('click', () => {
-    let board = Number(boardSize.value);
+    const board = Number(boardSize.value);
     if (board <= 0 || board === '') {
       window.alert('Board inválido!');
     } else if (board < 5) {
-      board = 5;
+      createBoardPixel(5);
     } else if (board > 50) {
-      board = 50;
+      createBoardPixel(50);
     } else {
       erasePixelBoard();
       createBoardPixel(board);
