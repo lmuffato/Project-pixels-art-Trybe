@@ -1,52 +1,63 @@
 const getBlack = document.querySelector('#black');
-const getYellow = document.querySelector('#yellow');
-const getBlue = document.querySelector('#blue');
-const getMagenta = document.querySelector('#magenta');
+const getColor1 = document.querySelector('#color1');
+const getColor2 = document.querySelector('#color2');
+const getColor3 = document.querySelector('#color3');
+
+// Função usada de base retirada de: https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+
+function generateColor() {
+  const r = (Math.random() * 255);
+  const g = (Math.random() * 255);
+  const b = (Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 function getColor() {
   getBlack.style.backgroundColor = 'black';
-  getYellow.style.backgroundColor = '#fee440';
-  getBlue.style.backgroundColor = '#00bbf9';
-  getMagenta.style.backgroundColor = '#f15bb5';
+  getColor1.style.backgroundColor = generateColor();
+  getColor2.style.backgroundColor = generateColor();
+  getColor3.style.backgroundColor = generateColor();
 }
+
+console.log(generateColor);
 
 const selectedClass = 'color selected';
 
 function setColorBlack() {
   getBlack.className = selectedClass;
-  getMagenta.className = 'color';
-  getYellow.className = 'color';
-  getBlue.className = 'color';
+  getColor3.className = 'color';
+  getColor1.className = 'color';
+  getColor2.className = 'color';
 }
 
 getBlack.addEventListener('click', setColorBlack);
 
 function setColorMagenta() {
   getBlack.className = 'color';
-  getMagenta.className = selectedClass;
-  getYellow.className = 'color';
-  getBlue.className = 'color';
+  getColor3.className = selectedClass;
+  getColor1.className = 'color';
+  getColor2.className = 'color';
 }
 
-getMagenta.addEventListener('click', setColorMagenta);
+getColor3.addEventListener('click', setColorMagenta);
 
 function setColorYellow() {
   getBlack.className = 'color';
-  getMagenta.className = 'color';
-  getYellow.className = selectedClass;
-  getBlue.className = 'color';
+  getColor3.className = 'color';
+  getColor1.className = selectedClass;
+  getColor2.className = 'color';
 }
 
-getYellow.addEventListener('click', setColorYellow);
+getColor1.addEventListener('click', setColorYellow);
 
 function setColorBlue() {
   getBlack.className = 'color';
-  getMagenta.className = 'color';
-  getYellow.className = 'color';
-  getBlue.className = selectedClass;
+  getColor3.className = 'color';
+  getColor1.className = 'color';
+  getColor2.className = selectedClass;
 }
 
-getBlue.addEventListener('click', setColorBlue);
+getColor2.addEventListener('click', setColorBlue);
 
 function colorPixel() {
   const pixelBoard = document.querySelector('#pixel-board');
@@ -74,4 +85,5 @@ window.onload = () => {
   getColor();
   colorPixel();
   clear();
+  generateColor();
 };
