@@ -4,6 +4,7 @@ const colorBlack = paletteColor.children[0];
 const colorBlue = paletteColor.children[1];
 const colorBrown = paletteColor.children[2];
 const colorAqua = paletteColor.children[3];
+const element = document.querySelectorAll('.color');
 
 // adicionando cores a paleta de cores
 colorBlack.style.backgroundColor = 'black';
@@ -24,10 +25,17 @@ function addEvent(event) {
   event.target.classList.add('selected');
 }
 
-// moving class
-const element = document.querySelectorAll('.color');
 for (let index = 0; index < element.length; index += 1) {
   element[index].addEventListener('click', addEvent);
 }
+
+function pressColor(event) {
+  const classSelected = document.querySelector('.selected');
+  if (event.target.className === 'pixel') {
+    event.target.style.backgroundColor = getComputedStyle(classSelected).backgroundColor;
+  }
+}
+
+elementTable.addEventListener('click', pressColor);
 
 // referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener
