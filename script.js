@@ -1,41 +1,45 @@
-window.onload = function kickoff() {
-  const blackBox = document.querySelector('.blackBox');
-  blackBox.classList.add('selected');
+//  Depois de muitas tentativas, agora irei abandonar o HTML e só declarar os parents por lá. Seja o que Deus quiser!
+//  Crio um table, adiciono com appendChild os td.
+function boxColor() {
+  const colorSection = document.getElementById('color-palette');
+  const tableOfColors = document.createElement('table');
+  colorSection.appendChild(tableOfColors);
+
+  const totalOfBox = 4;
+  for (let index = 0; index < totalOfBox; index += 1) {
+    const tdOfTable = document.createElement('td');
+    tdOfTable.className = 'color';
+    tableOfColors.appendChild(tdOfTable);
+  }
+
+  const selectColorClass = document.querySelectorAll('.color');
+  const colorsArr = ['black', 'green', 'red', 'purple'];
+  for (let colorIndex = 0; colorIndex < colorsArr.length; colorIndex += 1) {
+    selectColorClass[colorIndex].style.backgroundColor = colorsArr[colorIndex];
+  }
+  selectColorClass[0].classList.add = ('selected');
 };
-// para cumprir o requisito de a cor preta ter .selected
-const allBox = document.querySelectorAll('.class');
-const allPix = document.querySelectorAll('.pixel');
-//  Resolvi o problema usando essa ref: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 
-//  Aqui onde entra o raciocínio para entrar no DOM eu me basiei no trablho de Vitor Canto - turma 10A
-function getSelected() {
-  allBox.forEach((color) => {
-    color.addEventListener('click', (_event) => {
-      for (let index = 0; index < allBox.length; index += 1) {
-        allBox[index].classList.remove('selected');
-      }
-      color.classList.add('selected');
-    });
-  });
-}
+function creatingPixels() {
+  const pixelId = document.getElementById('pixel-board');
+  const tableOfPixels = document.createElement('table');
+  pixelId.appendChild(tableOfPixels);
+  const totalPixel = 5;
+  for (let trIndex = 0; trIndex < totalPixel; trIndex += 1) {
+    const creatingTr = document.createElement('tr');
+    for (let tdIndex = 0; tdIndex < totalPixel; tdIndex += 1) {
+      const creatingTd = document.createElement('td');
+      creatingTd.className = 'pixel';
+      tableOfPixels.appendChild(creatingTr);
+      creatingTr.appendChild(creatingTd);
+    }
+  }
+};
 
-getSelected();
 
-function getColor() {
-  allPix.forEach((pixel) => {
-    pixel.addEventListener('click', (event) => {
-      for (let index = 0; index < allBox.length; index += 1) {
-        if (allBox[1].classList.contains('selected')) {
-          event.target.style.backgroundColor = 'green';
-        } else if (allBox[2].classList.contains('selected')) {
-          event.target.style.backgroundColor = 'red';
-        } else if (allBox[3].classList.contains('selected')) {
-          event.target.style.backgroundColor = 'yellow';
-        } else {
-          event.target.style.backgroundColor = 'black';
-        }
-      }
-    });
-  });
-}
-getColor();
+// Chamando todas as funções no final para ficar mais clean.
+window.onload = function() {
+  boxColor();
+  creatingPixels();
+};
+
