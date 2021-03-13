@@ -31,16 +31,18 @@ function creatingPixels() {
     for (let tdIndex = 0; tdIndex < totalPixel; tdIndex += 1) {
       const creatingTd = document.createElement('td');
       creatingTd.className = 'pixel';
+      creatingTd.style.backgroundColor = 'white';
       tableOfPixels.appendChild(creatingTr);
       creatingTr.appendChild(creatingTd);
     }
   }
 };
 
+// essa function consegui realizar pq Lucas Portella Turma 10 - B me ajudou
 function getSelected() {
   const allClassColor = document.querySelectorAll('.color');
-  for (let i = 0; i < allClassColor.length; i += 1){
-    allClassColor[i].addEventListener('click', function(event) {
+  for (let i = 0; i < allClassColor.length; i += 1) {
+    allClassColor[i].addEventListener('click', (event) => {
       for (let indexOfColor = 0; indexOfColor < allClassColor.length; indexOfColor += 1) {
         allClassColor[indexOfColor].classList.remove('selected');
       }
@@ -48,12 +50,19 @@ function getSelected() {
     })
   }  
 };
+// Aqui percebi que não preciso selecionar elemento por elemento, se pegarmos um elemento pai o click funciona - ideia retirada de Jodiel Briesemeister - turma 10 - A
+function getPixels() {
+  const pixelTable = document.getElementById('pixel-board');
+  pixelTable.addEventListener('click', (event) => {
+    const color = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = color;
+  });
+}
 
-
-// Chamando todas as funções no final para ficar mais clean.
+// Projeto Realizado com Ajuda de Pollyana Oliveira - turma 10 - A
 window.onload = function() {
   boxColor();
   creatingPixels();
   getSelected();
+  getPixels();
 };
-
