@@ -15,9 +15,24 @@ function handleClick(event) {
     }
 }
 
-function listenToColorPalette() {2
+function listenToColorPalette() {
     const colorPalette = document.querySelector('#color-palette');
     colorPalette.addEventListener('click', handleClick)
 }
 
 listenToColorPalette();
+
+function paintPixel(event) {
+    const elementWithSelected = document.querySelector('.selected');
+    const selectColor = elementWithSelected.id;
+    
+    event.target.style.backgroundColor = selectColor;
+}
+
+function listenToColorPixel() {
+    const pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.addEventListener('click', paintPixel)
+
+}
+
+listenToColorPixel();
