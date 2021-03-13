@@ -141,6 +141,7 @@ function changeSelectedColor() {
   const selectedColor = document.querySelector('.selected');
   const colorInput = document.querySelector('#color-input').value;
   selectedColor.style.backgroundColor = colorInput;
+  setColor(colorInput);
 }
 
 document.getElementById('change-selected-color').addEventListener('click', changeSelectedColor);

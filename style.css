@@ -11,13 +11,15 @@ body {
 }
 
 h1 {
-  font-family: 'Fascinate', display;
+  font-family: Fascinate, display;
   font-weight: 900;
   font-size: 38px;
   color: #fafafa;
   -webkit-text-stroke-width: 2px; /* largura da borda */
-  -webkit-text-stroke-color: #154a9a; /* cor da borda */
-  /* Referencia: https://pt.stackoverflow.com/questions/243301/como-fazer-um-contorno-em-texto-via-css */
+  -webkit-text-stroke-color: #154a9a;/* cor da borda */
+  /* Referencia: 
+  https://pt.stackoverflow.com/questions/243301/como-fazer-um-contorno-em-texto-via-css */
+
   margin-bottom: 22px;
 }
 
@@ -42,9 +44,10 @@ li {
   border-radius: 50%;
   transition: 0.2s;
 }
-/* .selected {
-  border: 5px solid rgb(255, 0, 0);
-} */
+
+.selected {
+  opacity: 0.5;
+}
 
 .color:hover {
   transform: scale(1.05);
@@ -61,7 +64,7 @@ li {
 
 .button {
   padding: 3px 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #fafafa;
@@ -80,11 +83,10 @@ li {
   height: 25px;
   padding: 10px 8px;
   background: #fafafa;
-  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   border: none;
-
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 700;
   color: #313131;
 }
@@ -94,11 +96,10 @@ li {
   height: 25px;
   padding: 10px 5px;
   background: #fafafa;
-  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   border: none;
-
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 700;
   color: #313131;
 }
