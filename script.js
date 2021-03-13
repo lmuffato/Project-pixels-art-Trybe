@@ -5,7 +5,7 @@ function changeClassColors(event) {
   for (let index = 0; index < colorsDiv.length; index += 1) {
     colorsDiv[index].classList.remove('selected');
   }
-  event.target.classList.add('selected') = newColorSelected;
+  newcolorSelected = event.target.classList.add('selected');
 }
 
 paletteColors.addEventListener('click', changeClassColors);
