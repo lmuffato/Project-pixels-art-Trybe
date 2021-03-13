@@ -36,10 +36,21 @@ function creatingPixels() {
   }
 };
 
+function getSelected() {
+  const allClassColor = document.querySelectorAll('.color');
+  allClassColor.addEventListener('click' function(event) {
+    for (let indexOfColor = 0; indexOfColor < allClassColor.length; indexOfColor += 1) {
+      allClassColor[indexOfColor].classList.remove('selected');
+    }
+    event.target.classList.add('selected');
+  })
+};
+
 
 // Chamando todas as funções no final para ficar mais clean.
 window.onload = function() {
   boxColor();
   creatingPixels();
+  getSelected();
 };
 
