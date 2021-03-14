@@ -43,9 +43,9 @@ let pixels = document.getElementsByClassName('pixel tr');
 
 for (let index = 0; index <pixels.length; i += 1) {
    pixels[index].addEventListener('click', () => {
-      let apagar = pixels[index];
-      apagar.style.backgroundColor = 'rgb(0,128,0)'
+      let apagar = pixels[index].style.backgroundColor = 'white'
       })
 
 }
 }
+limpaQuadro()
