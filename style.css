@@ -1,0 +1,24 @@
+h1{
+  text-align: center;
+  
+}
+
+#black{
+  background-color: black;
+}
+
+#yellow{
+  background-color: yellow;
+}
+
+#green{
+  background-color: green;
+}
+
+#red{
+  background-color: red;
+}
+
+.color, #color-palett{
+  border: 1px solid black;
+}
