@@ -27,7 +27,7 @@ createCanvas(5);
 //  Código desta função foi feito usando a função feita pelo Patrick Morais como referência(https://github.com/tryber/sd-010-a-project-pixels-art/pull/12/files).
 function listenColorSelection() {
   const getPalette = document.getElementById('color-palette');
-  getPalette.addEventListener('click', function (event) {
+  getPalette.addEventListener('click', function toggleSelect(event) {
     const getColors = document.getElementsByClassName('color');
     for (let index = 0; index < getColors.length; index += 1) {
       getColors[index].classList.remove('selected');
@@ -41,7 +41,7 @@ listenColorSelection();
 
 function addSelectedColorToCanvas() {
   const getPixel = document.getElementById('pixel-board');
-  getPixel.addEventListener('click', function (event) {
+  getPixel.addEventListener('click', function applyColor(event) {
     const getColor = document.querySelector('.color.selected').style.backgroundColor;
     const originalPixelColor = 'white';
     if (event.target.style.backgroundColor === getColor) {
@@ -54,14 +54,14 @@ function addSelectedColorToCanvas() {
 
 addSelectedColorToCanvas();
 
-function cleanCanvas() {
-  const getBtn = document.getElementById('clean-board');
+function clearCanvas() {
+  const getBtn = document.getElementById('clear-board');
   const getPixels = document.getElementsByClassName('pixel');
-  getBtn.addEventListener('click', function () {
+  getBtn.addEventListener('click', function clearAll() {
     for (let index = 0; index < getPixels.length; index += 1) {
       getPixels[index].style.backgroundColor = 'white';
     }
-  })
+  });
 }
 
-cleanCanvas();
+clearCanvas();

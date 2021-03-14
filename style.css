@@ -23,12 +23,12 @@
   border: 1px solid black;
   height: 40px;
   width: 40px;
-  padding: 0;
+  padding: 1px;
   box-sizing: content-box;
   background-color: white;
 }
 
-#clean-board {
+#clear-board {
   padding: 5px;
   margin: 10px;
 }
