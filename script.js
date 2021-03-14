@@ -26,7 +26,7 @@ function createElementsTable(number) {
     const row = document.createElement('tr');
     pixelBoard.appendChild(row);
     // Setar cada elemento como filho de outro elemento ok
-    for (let index = 0; index < number; index += 1) {
+    for (let index2 = 0; index2 < number; index2 += 1) {
       const colum = document.createElement('td');
       // Da uma class ao elememto ok
       colum.className = 'pixel';
@@ -52,12 +52,29 @@ function getColor(event) {
     event.target.classList.add('selected');
   }
 }
+// Requisito 8;
+// recuperar a cor de fundo dos elementos com class selected;
+function getBgColor() {
+  const bGColorSelected = document.querySelector('.selected');
+  return bGColorSelected.style.backgroundColor;
+}
+// 8. recuperar os elementos que serão pintados;
+function changeBGColor(event) {
+  if (event.target.className === 'pixel') {
+    const eventTarget = event.target;
+    eventTarget.style.backgroundColor = getBgColor();
+  }
+}
 
+//
 function managerEvents() {
-//  7. Recuperar o elemento  pai da class selected
+  //  7. Recuperar o elemento  pai da class selected
   const colorPalette = document.querySelector('#color-palette');
+  const pixelBoard = document.querySelector('#pixel-board');
   // 7. Adiciona um evento de click (Adicionar a class selected ao clicar em outro elemento);
   colorPalette.addEventListener('click', getColor);
+  colorPalette.addEventListener('click', getBgColor);
+  pixelBoard.addEventListener('click', changeBGColor);
 }
 // Chamar minhas funções:
 window.onload = function start() {
