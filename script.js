@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-const pixels = document.getElementsByClassName('pixels');
 const paletteColors = document.querySelector('#color-palette');
 const pixelBoard = document.getElementById('pixel-board'); // variaveis
 
@@ -33,3 +32,13 @@ function colorPixel(event) {
   }
 }
 pixelBoard.addEventListener('click', colorPixel);
+
+const clearBoard = document.querySelector('#clear-board');
+clearBoard.addEventListener('click', clearall);
+
+function clearall() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
