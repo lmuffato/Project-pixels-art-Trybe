@@ -16,13 +16,6 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* article {
-  background-color:wheat;
-  border: 1px solid black;
-  margin: 10px 20px 20px;
-  padding: 20px;
-} */
-
 #color-palette {
   text-align: center;
   padding: 10px;
@@ -37,7 +30,6 @@ h1 {
 
 #pixel-board {
   border-collapse: collapse;
-  /* border-spacing: 0; */
   margin: auto;
   padding: auto;
 }

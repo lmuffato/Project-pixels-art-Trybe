@@ -13,29 +13,32 @@ function randomColor() {
 }
 // console.log(randomColor());
 
-firstColor.style.backgroundColor = 'black';
+firstColor.style.backgroundColor = '#000000';
 secondColor.style.backgroundColor = randomColor();
 thirdColor.style.backgroundColor = randomColor();
 fourthColor.style.backgroundColor = randomColor();
 
-sessionStorage.setItem('color', 'black');
+// sessionStorage.setItem('color', 'black');
 
-//Função que ao clicar em uma das cores da paleta é adiconado uma nova classe (selected) para cor clicada.
-
+// Função que ao clicar em uma das cores da paleta é adiconado uma nova classe (selected) para cor clicada.
 function addColorSelected() {
-  const selected = document.getElementsByClassName('color selected');
   const colors = document.querySelectorAll('.color');
+  colors[0].className = 'color selected';
+  const colorSelected = document.querySelector('.selected');
 
-  for (let i = 0; i < colors.length; i += 1) {
-  colors[i].addEventListener('click', function(event) {
-    if (selected.length === 0) {
-      event.target.className = 'color selected'
-    } else {
-      event.target.className = 'color'
+  for (let j = 0; j < colors.length; j += 1) {
+    colors[j].addEventListener('click', function (event) {
+      if (colors[j].style.backgroundColor !== colorSelected) {
+        for (let k = 0; k < colors.length; k += 1) {
+          colors[k].className = 'color'
+        }
+        event.target.className = 'color selected'
+        } else {
+        event.target.className = 'color selected'
     }
-  });
-  } 
-};
+    });
+  }
+}
 
 addColorSelected();
 
@@ -45,15 +48,15 @@ function addColorToPixel() {
   const pixels = document.querySelector('#pixel-board');
   const colorPalette = colors[2].style.backgroundColor;
 
-  pixels.addEventListener('click', function(event) {
-    let eventTargetColor = event.target.style.backgroundColor;
+  pixels.addEventListener('click', function (event) {
+    const eventTargetColor = event.target.style.backgroundColor;
     if (selected.length > 0 && eventTargetColor !== colorPalette) {
-      let pixelColor = selected[0].style.backgroundColor;
+      const pixelColor = selected[0].style.backgroundColor;
       event.target.style.backgroundColor = pixelColor;
     } else if (eventTargetColor === colorPalette && selected.length !== 0) {
       event.target.style.color = 'white';
     }
   });
-};
+}
 
 addColorToPixel();
