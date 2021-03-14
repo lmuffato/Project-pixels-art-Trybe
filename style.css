@@ -1,20 +1,12 @@
 * {
-
-margin: 0;
-padding: 0;
-
+    margin: 0;
+    padding: 0;
 }
 
-#table{
-    display: table;
-    border: black solid 1px;
-}
-.tr{
-    display: table-row;
-    border: black solid 1px;
-}
-.td{
-    display: table-cell;
-    border: black solid 1px;
-
+.color {
+    padding: 20px;
+    border: solid black;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
