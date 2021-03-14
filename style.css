@@ -33,3 +33,10 @@
   border-color: black;
 }
 
+.botao {
+  cursor: pointer;
+}
+
+/*.selected {
+  border-width: 5px;
+}*/
