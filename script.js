@@ -67,3 +67,40 @@ function clearFrames() {
 
 const clearButton = document.querySelector('#clear-board');
 clearButton.addEventListener('click', clearFrames);
+
+//
+function createTabel() {
+  let frameSize = document.getElementById('board-size');
+  const bodyTabel = document.querySelector('tbody');
+
+  for (let i = 0; i < frameSize.value; i += 1) {
+    const createLineTabel = document.createElement('tr');
+    bodyTabel.appendChild(createLineTabel);
+    for (let j = 0; j < frameSize.value; j += 1){
+      const createPixelTabel = document.createElement('td');
+      createPixelTabel.className = 'pixel';
+      createLineTabel.appendChild(createPixelTabel);
+    }
+  }
+}
+
+function createFrame() {
+  const lineTabel = document.querySelectorAll('tr');
+  let frameSize = document.getElementById('board-size');
+
+  if (parseInt(frameSize.value) > 50) {
+    frameSize = 50;
+  } else if (parseInt(frameSize.value) < 5) {
+    frameSize = 5;
+  }
+
+  for (let i = 0; i < lineTabel.length; i += 1) {
+    lineTabel[i].remove();
+  }
+  
+  createTabel();
+  frameSize.value = '';
+}
+
+const buttonFrame = document.querySelector('#generate-board');
+buttonFrame.addEventListener('click', createFrame);
