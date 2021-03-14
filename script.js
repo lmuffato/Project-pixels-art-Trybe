@@ -17,3 +17,16 @@ colorDiv[3].style.backgroundColor = 'purple';
 }
 colors();
 
+function pixels () {
+const pixelBoard = document.getElementById('pixel-board');
+for (let index = 0; index < 5; index += 1){
+    const pixelDiv = document.createElement('div');
+    pixelBoard.appendChild(pixelDiv);
+    for (let index = 0; index <5; index += 1){
+        pixelDiv2 = document.createElement('div');
+        pixelDiv.appendChild(pixelDiv2);
+        pixelDiv2.classList.add('pixel');
+    }
+}
+}
+pixels();
