@@ -8,18 +8,24 @@ function rgbColor() {
 function colorsPalette() {
   const squareBlack = document.getElementById('black');
   squareBlack.style.backgroundColor = 'black';
-  squareBlack.classList.add = 'selected';
+  squareBlack.setAttribute('class','color selected');
+   
+  const squareBlue = document.getElementById('color2');
+  const clr2 = rgbColor();
+  squareBlue.style.backgroundColor = clr2;
 
-  const squareBlue = document.getElementById('blue');
-  squareBlue.style.backgroundColor = rgbColor();
+  const squareRed = document.getElementById('color3');
+  const clr3 = rgbColor();
+  squareRed.style.backgroundColor = clr3;
 
-  const squareRed = document.getElementById('red');
-  squareRed.style.backgroundColor = rgbColor();
-
-  const squareYellow = document.getElementById('yellow');
-  squareYellow.style.backgroundColor = rgbColor();
+  const squareYellow = document.getElementById('color4');
+  const clr4 = rgbColor();
+  squareYellow.style.backgroundColor = clr4;
 }
 
 window.onload = function load() {
   colorsPalette();
 };
+
+
+
