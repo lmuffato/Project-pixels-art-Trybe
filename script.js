@@ -5,21 +5,46 @@ function addColor() {
 
 addColor();
 
+// agradecimentos ao Anderson e ao William pelo auxílio através do Slack
+
 function removeAndAddSelectedClass() {
-  const pai = document.getElementById('dad'); // encontro o meu pai através do getElement
-  pai.addEventListener('click', (e) => { // comunico ao pai o recebimento de um vento
-    const targetReceiver = e.target; // ocorrência dos eventos nos filhos individualmente td
-    const colorContainer = document.querySelectorAll('.color'); // então atribua à constante a classe color
-    for (let index = 0; index < colorContainer.length; index += 1) { // loop percorre o tamanho 
-      colorContainer[index].classList.remove('selected'); // 
+  const pai = document.getElementById('dad');
+  pai.addEventListener('click', (e) => {
+    const targetReceiver = e.target;
+    const colorContainer = document.querySelectorAll('.color');
+    for (let index = 0; index < colorContainer.length; index += 1) {
+      colorContainer[index].classList.remove('selected');
     }
-    if (targetReceiver.classList.contains('color')) { // se os elementos filhos possuam a classe color, faça:
+    if (targetReceiver.classList.contains('color')) {
       targetReceiver.classList.add('selected');
     }
-  })
-  
+  });
 }
 
 removeAndAddSelectedClass();
+
+function colorPalette() {
+  const cores = document.getElementsByClassName('color');
+  cores[0].style.backgroundColor = 'black';
+  cores[1].style.backgroundColor = 'blue';
+  cores[2].style.backgroundColor = 'green';
+  cores[3].style.backgroundColor = 'red';
+}
+
+colorPalette();
+
+
+function paintColor() {
+  const dadTable = document.getElementById('pixel-board');
+  dadTable.addEventListener('click', (e) => {
+    const tableTarget = e.target;
+    if (tableTarget.className === 'pixel') {
+      const selectedItem = document.querySelector('.selected').style.backgroundColor;
+      tableTarget.style.backgroundColor = selectedItem;
+    }
+  });
+}
+
+paintColor();
 
 // agradecimentos ao Anderson e ao William pelo auxílio através do Slack
