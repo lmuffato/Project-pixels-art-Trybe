@@ -43,18 +43,18 @@ function addColorSelected() {
 addColorSelected();
 
 function addColorToPixel() {
-  const selected = document.getElementsByClassName('color selected');
+  const selected = document.getElementsByClassName('selected');
   const colors = document.querySelectorAll('.color');
   const pixels = document.querySelector('#pixel-board');
-  const colorPalette = colors[2].style.backgroundColor;
 
   pixels.addEventListener('click', function (event) {
     const eventTargetColor = event.target.style.backgroundColor;
-    if (selected.length > 0 && eventTargetColor !== colorPalette) {
-      const pixelColor = selected[0].style.backgroundColor;
-      event.target.style.backgroundColor = pixelColor;
-    } else if (eventTargetColor === colorPalette && selected.length !== 0) {
-      event.target.style.color = 'white';
+    for (let i = 0; i < colors.length; i += 1) {
+      let colorPalette = colors[i].style.backgroundColor;
+      if (selected.length > 0 && eventTargetColor !== colorPalette) {
+        const pixelColor = selected[0].style.backgroundColor;
+        event.target.style.backgroundColor = pixelColor;
+      } 
     }
   });
 }
