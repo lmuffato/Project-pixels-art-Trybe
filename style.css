@@ -45,7 +45,8 @@ h1{
     background-color:gb (255, 255, 255);
 }
 .tr{ 
-    display: table-row; 
+    display: table-row;
+    background-color:rgb (255, 255, 255);
 }
 .pixel{ 
     display: table-cell; 
