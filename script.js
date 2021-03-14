@@ -1,4 +1,4 @@
-//requisito 4
+//requisito 4 - Cria pixels
 function criaPixels (numberOfPixels) {
    for (let index = 0; index < numberOfPixels * numberOfPixels; index +=1) {
    const fazDiv = document.createElement('div');
@@ -24,3 +24,29 @@ function selecionaCor() {
 }
  selecionaCor();
 
+// Requisito 8 - Pinta pixels
+//function pintaPixels() {
+  // const cores =  document.getElementsByClassName('color');
+   //const pixels = document.getElementsByClassName('pixel tr');
+//percorre quadro e adiciona o clique:
+   //for (let index = 0; index <pixels.length; i += 1) {
+      //pixels[index].addEventListener('click', () => }
+    //  pixels[index].
+      
+      
+ //  })
+ 
+// Requisito 9 - Limpa board
+function limpaQuadro () {
+let botao = document.getElementById('clear-board');
+let pixels = document.getElementsByClassName('pixel tr');
+
+for (let index = 0; index <pixels.length; i += 1) {
+   pixels[index].addEventListener('click', () => {
+      let apagar = pixels[index];
+      apagar.style.backgroundcolor = 'white';
+      }
+   )
+
+}
+}
