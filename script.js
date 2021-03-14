@@ -53,3 +53,15 @@ function addSelectedColorToCanvas() {
 }
 
 addSelectedColorToCanvas();
+
+function cleanCanvas() {
+  const getBtn = document.getElementById('clean-board');
+  const getPixels = document.getElementsByClassName('pixel');
+  getBtn.addEventListener('click', function () {
+    for (let index = 0; index < getPixels.length; index += 1) {
+      getPixels[index].style.backgroundColor = 'white';
+    }
+  })
+}
+
+cleanCanvas();

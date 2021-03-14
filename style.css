@@ -19,11 +19,16 @@
   border-collapse: collapse;
 }
 
-#pixel-board .pixel {
+.pixel {
   border: 1px solid black;
   height: 40px;
   width: 40px;
   padding: 0;
   box-sizing: content-box;
   background-color: white;
+}
+
+#clean-board {
+  padding: 5px;
+  margin: 10px;
 }
