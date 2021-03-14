@@ -44,9 +44,9 @@ h2 {
 
 button {
   background-color: #870000;
-  font-weight: bold;
+  font-weight: 400;
   box-shadow: 10px 5px 5px gray;
   color: white;
-  border-radius: 20px;
-  margin-left: 45px;
+  margin-left: 55px;
+  margin-top: 5px;;
 }
