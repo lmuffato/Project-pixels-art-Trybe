@@ -1,4 +1,4 @@
-table tr td {
+.color {
   border: 1px solid black;
   /* Definindo o tamanho do quadrinho de cor na tabela usando padding https://www.w3schools.com/html/html_tables.asp */
   padding: 20px;
@@ -7,5 +7,7 @@ table tr td {
 .pixel {
   border: 1px solid black;
   /* Definindo o tamanho do quadrinho de cor na tabela usando padding https://www.w3schools.com/html/html_tables.asp */
-  padding: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
 }
