@@ -11,8 +11,6 @@
 
 #pixel-board {
   display: table;
-  width: 500px;
-  height: 500px;
   border-collapse: collapse;
   margin-top: 50px;
 }
