@@ -91,13 +91,17 @@ function generateBoardPixel() {
   const boardSize = document.querySelector('#board-size');
 
   generateBoard.addEventListener('click', () => {
-    const board = Number(boardSize.value);
+    let board = Number(boardSize.value);
     if (board <= 0 || board === '') {
       window.alert('Board inválido!');
     } else if (board < 5) {
-      createBoardPixel(5);
+      board = 5;
+      erasePixelBoard();
+      createBoardPixel(board);
     } else if (board > 50) {
-      createBoardPixel(50);
+      board = 50;
+      erasePixelBoard();
+      createBoardPixel(board);
     } else {
       erasePixelBoard();
       createBoardPixel(board);
