@@ -104,3 +104,9 @@ header {
   border: 1px solid black;
   margin: -3px;
 }
+
+#clear-board {
+  width: 100px;
+  margin-left: 633px;
+  font-size: 20px;
+}

@@ -32,9 +32,15 @@ function selecionaMarrom() {
   corAtual = 'rgb(102, 66, 40)';
 }
 
-
 // Aprendi essa função no site https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button
 // Foi muito complicado entender o "this.id" e o "clicked_id", mas consegui!
 function pintarPixel(clicked_id) {
- document.getElementById(clicked_id).style.backgroundColor = corAtual;
+  document.getElementById(clicked_id).style.backgroundColor = corAtual;
+}
+
+function apagarTudo() {
+  let borracha = document.getElementsByClassName('pixel');
+  for (index = 0; index < borracha.length; index += 1) {
+    borracha[index].style.backgroundColor = 'white';
+  }
 }
