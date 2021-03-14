@@ -1,44 +1,33 @@
 
-/*   const alvo = document.getElementById('color1');
-  
-  function capturar(){
-      alvo.style.backgroundColor= 'red';
-      
-      console.log('testesssssss');
-  }
-  
- alvo.addEventListener('click', capturar);
-       */
+function selecColor() {
+    const selected1 = document.querySelector('#color-palette');
 
-
-
-/* const mudaCor= document.querySelector('.selected');
-function mudarACOr(e){
-    mudaCor.className = 'color';
-
+    selected1.addEventListener('click', function (event) {
+        limpaSelected();
+        event.target.classList.add('selected')
+    })
 }
 
-//mudaCor.addeventListener('click', mudaCor);
-mudaCor.addEventListener('click',mudarACOr);
- */
-
-// fiz com olhada em codigo de outros alunos que postaram no slack
-let color = document.getElementsByClassName('color'); 
-color = addEventListener('click', select);
-
-function select(event) {
-  let colorr = document.getElementsByClassName('selected');
-  colorr[0].classList.remove('selected')
-  let alvo = event.target;
-  alvo.classList.add('selected');
+function limpaSelected() {
+    const colorSelected = document.querySelector('.selected');
+    colorSelected.classList.remove('selected');
 }
 
-function pintar(e){
-  e.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;  
-  
-}  
+selecColor();
 
+//peguei esta função abaixo no stackoverflow.(css)
+//https://pt.stackoverflow.com/questions/176916/javascript-fun%C3%A7%C3%A3o-que-retorna-valor-de-uma-propriedade-css
+function css(el, estilo){
+    return(estilo+':', document.defaultView.getComputedStyle(el, null)[estilo]);
+ }
+ 
 
-let colorir = document.querySelector('#pixel-board');
-colorir.addEventListener('click', pintar);
-
+function recebeSelect() {
+    const array = document.querySelector('#pixel-board');
+       array.addEventListener('click', (event) => {
+               console.log(event.currentTarget.style);
+               const cor = document.querySelector('.selected');
+               event.target.style.backgroundColor = css(cor, "backgroundColor");
+           })
+        }
+recebeSelect();
