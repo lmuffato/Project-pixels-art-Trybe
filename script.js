@@ -19,45 +19,35 @@ function getColor() {
   getColor3.style.backgroundColor = generateColor();
 }
 
-console.log(generateColor);
+const getColors = document.querySelectorAll('.color');
+const getPalette = document.querySelector('#color-palette');
 
-const selectedClass = 'color selected';
-
-function setColorBlack() {
-  getBlack.className = selectedClass;
-  getColor3.className = 'color';
-  getColor1.className = 'color';
-  getColor2.className = 'color';
+function renameClass() {
+  getPalette.addEventListener('click', (eventselect2) => {
+    for (let index = 0; index < getColors.length; index += 1) {
+      const eventSelectName = eventselect2.target;
+      const eventSelectClass = eventSelectName.target.className;
+      if (eventSelectClass === 'color' && getColors[index] !== eventSelectName.target) {
+        getColors[index].className = 'color';
+      }
+    }
+  });
 }
 
-getBlack.addEventListener('click', setColorBlack);
-
-function setColorMagenta() {
-  getBlack.className = 'color';
-  getColor3.className = selectedClass;
-  getColor1.className = 'color';
-  getColor2.className = 'color';
+function selectedPalette() {
+  getPalette.addEventListener('click', (eventselect) => {
+    if (eventselect.target.className === 'color') {
+      const tagSelected = eventselect.target;
+      tagSelected.className = 'color selected';
+      renameClass();
+    }
+  });
 }
 
-getColor3.addEventListener('click', setColorMagenta);
-
-function setColorYellow() {
-  getBlack.className = 'color';
-  getColor3.className = 'color';
-  getColor1.className = selectedClass;
-  getColor2.className = 'color';
-}
-
-getColor1.addEventListener('click', setColorYellow);
-
-function setColorBlue() {
-  getBlack.className = 'color';
-  getColor3.className = 'color';
-  getColor1.className = 'color';
-  getColor2.className = selectedClass;
-}
-
-getColor2.addEventListener('click', setColorBlue);
+getBlack.addEventListener('click', selectedPalette);
+getColor1.addEventListener('click', selectedPalette);
+getColor2.addEventListener('click', selectedPalette);
+getColor3.addEventListener('click', selectedPalette);
 
 function colorPixel() {
   const pixelBoard = document.querySelector('#pixel-board');
@@ -86,4 +76,5 @@ window.onload = () => {
   colorPixel();
   clear();
   generateColor();
+  selectedPalette();
 };
