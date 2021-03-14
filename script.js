@@ -24,7 +24,10 @@ for (let index = 1; index <= 4; index +=1) {
     } if (index === 4) {
         colorPaletteDivs.style.backgroundColor = 'orange'
     }
+    
   }
+
+
   // Requirement 4 e 5
   const createTable = document.createElement('table');
   document.body.appendChild(createTable);
@@ -51,3 +54,42 @@ for (let index = 1; index <= 25; index += 1) {
     divSquare.style.marginRight = '80%'
   }
 }
+// Requirement 7
+
+const color1 = document.getElementsByClassName('color')[0];
+const color2 = document.getElementsByClassName('color')[1];
+const color3 = document.getElementsByClassName('color')[2];
+const color4 = document.getElementsByClassName('color')[3];
+
+function selected1 () {
+  color1.className = ('color selected');
+  color2.className = ('color');
+  color3.className = ('color');
+  color4.className = ('color');
+}
+
+function selected2 () {
+  color1.className = ('color');
+  color2.className = ('color selected');
+  color3.className = ('color');
+  color4.className = ('color');
+}
+
+function selected3 () {
+  color1.className = ('color');
+  color2.className = ('color');
+  color3.className = ('color selected');
+  color4.className = ('color');
+}
+
+function selected4 () {
+  color1.className = ('color');
+  color2.className = ('color');
+  color3.className = ('color');
+  color4.className = ('color selected');
+}
+
+color1.addEventListener('click', selected1);
+color2.addEventListener('click', selected2);
+color3.addEventListener('click', selected3);
+color4.addEventListener('click', selected4);
