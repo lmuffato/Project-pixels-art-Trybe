@@ -1,13 +1,11 @@
-function panelColors(col1, col2, col3) {
-  const colorList = document.querySelectorAll('.color');
+const colorList = document.querySelectorAll('.color');
     for (let index = 0; index < 4; index += 1){
-        colorList[0].style.backgroundColor = 'black';
-        colorList[1].style.backgroundColor = col1;
-        colorList[2].style.backgroundColor = col2;
-        colorList[3].style.backgroundColor = col3;
+        colorList[0].style.backgroundColor = 'blue';
+        colorList[1].style.backgroundColor = 'yellow';
+        colorList[2].style.backgroundColor = 'red';
+        colorList[3].style.backgroundColor = 'green';
     }
-}
-panelColors('yellow', 'red', 'green');
+
 
 const tableBoard = document.querySelector('#pixel-board');
   function pixelBoard(){
