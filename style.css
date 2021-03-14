@@ -4,6 +4,7 @@
 }
 
 .color {
+    background-color: white;
     padding: 20px;
     border: solid black;
     display: inline-block;

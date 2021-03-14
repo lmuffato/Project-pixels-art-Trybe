@@ -7,3 +7,12 @@ paletteColors.appendChild(colorsPalette);
 }
 }
 palette();
+
+function colors () {
+const colorDiv = document.getElementsByClassName('color');
+colorDiv[0].style.backgroundColor = 'black';
+colorDiv[1].style.backgroundColor = 'red';
+colorDiv[2].style.backgroundColor = 'blue';
+colorDiv[3].style.backgroundColor = 'purple';
+}
+colors();
