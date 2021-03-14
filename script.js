@@ -25,7 +25,6 @@ function css(el, estilo){
 function recebeSelect() {
     const array = document.querySelector('#pixel-board');
        array.addEventListener('click', (event) => {
-               console.log(event.currentTarget.style);
                const cor = document.querySelector('.selected');
                event.target.style.backgroundColor = css(cor, "backgroundColor");
            })
@@ -36,7 +35,6 @@ function btn(){
     const botao = document.querySelector("#btn");
     botao.addEventListener('click', (event) => {
             let array = document.querySelectorAll('.pixel');
-            console.log(array);
             for (let index = 0; index < array.length; index++) {
                 const element = array[index];
                 element.style.backgroundColor = 'white';
