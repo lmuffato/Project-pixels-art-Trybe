@@ -22,18 +22,18 @@ changeClass();
 
 //pratica 8
 
-function addClass (){
+// function addClass (){
    
-    let color = document.getElementsByClassName('pixel')
-    for (let i = 0; i < color.length; i +=1) {
-    color[i].addEventListener('click', function (event) {
-    let pixel = event.target;  
-    pixel.classList.add('selected');
-   });
-}
-}
+//     let color = document.getElementsByClassName('pixel')
+//     for (let i = 0; i < color.length; i +=1) {
+//     color[i].addEventListener('click', function (event) {
+//     let pixel = event.target;  
+//     pixel.classList.add('selected');
+//    });
+// }
+// }
 
-addClass();
+// addClass();
 
 function pixelColor() {
     let pixel = document.querySelector('#pixel-board');
