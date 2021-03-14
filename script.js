@@ -39,8 +39,8 @@ function pintarPixel(clicked_id) {
 }
 
 function apagarTudo() {
-  let borracha = document.getElementsByClassName('pixel');
-  for (index = 0; index < borracha.length; index += 1) {
+  const borracha = document.getElementsByClassName('pixel');
+  for (let index = 0; index < borracha.length; index += 1) {
     borracha[index].style.backgroundColor = 'white';
   }
 }
