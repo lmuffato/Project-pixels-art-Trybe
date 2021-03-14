@@ -1,4 +1,6 @@
 /* eslint-disable no-param-reassign */
+const pixels = document.getElementsByClassName('pixels');
+const paletteColors = document.querySelector('#color-palette');
 const pixelBoard = document.getElementById('pixel-board'); // variaveis
 
 for (let index = 0; index < 5; index += 1) { // aqui esta sendo gerada a tabela de 5x5
@@ -21,27 +23,13 @@ for (let index = 0; index < clickinColor.length; index += 1) {
 function removeSelect(e) {
   const remove = document.getElementsByClassName('selected'); // aqui remove o select de todas as classes (peguei de exemplo do Luiz Putinatti)
   remove[0].classList.remove('selected');
-
-  const recebeEvento = e.target;
-  recebeEvento.classList.add('selected');
+  e.target.classList.add('selected');
 }
-
-// guarda a cor do selected
-
-// eslint-disable-next-line no-unused-vars
-const saveColorSelected = document.querySelector('.selected').style.backgroundColor;
-
-// incluir o click nos pixel
-
-const clickp = document.getElementsByClassName('.pixel');
-for (let index = 0; index < clickp.length; index += 1) {
-  // eslint-disable-next-line no-undef
-  // eslint-disable-next-line no-use-before-define
-  clickp[index].addEventListener('click', clickPixel);
+function colorPixel(event) {
+  if (event.target.className === 'pixel') {
+    const selected = document.getElementsByClassName('selected');
+    const colorhtml = window.getComputedStyle(selected[0], null).getPropertyValue('background-color');
+    event.target.style.backgroundColor = colorhtml;
+  }
 }
-
-// função clicar pixel
-function clickPixel(evento) {
-  const eventoRecebido = evento.target;
-  eventoRecebido.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-}
+pixelBoard.addEventListener('click', colorPixel);
