@@ -1,34 +1,38 @@
 let corAtual = 'black';
 
 function selecionaPreto() {
+  let local = document.getElementsByClassName('color');
+  for (let index = 0; index < 4; index += 1) {
+    local[index].classList.remove('selected');
+  }
   document.getElementById('cor-preto').classList.add('selected');
-  document.getElementById('cor-laranja').classList.remove('selected');
-  document.getElementById('cor-azul').classList.remove('selected');
-  document.getElementById('cor-marrom').classList.remove('selected');
   corAtual = 'black';
 }
 
 function selecionaLaranja() {
+  let local = document.getElementsByClassName('color');
+  for (let index = 0; index < 4; index += 1) {
+    local[index].classList.remove('selected');
+  }
   document.getElementById('cor-laranja').classList.add('selected');
-  document.getElementById('cor-preto').classList.remove('selected');
-  document.getElementById('cor-azul').classList.remove('selected');
-  document.getElementById('cor-marrom').classList.remove('selected');
   corAtual = 'orange';
 }
 
 function selecionaAzul() {
+  let local = document.getElementsByClassName('color');
+  for (let index = 0; index < 4; index += 1) {
+    local[index].classList.remove('selected');
+  }
   document.getElementById('cor-azul').classList.add('selected');
-  document.getElementById('cor-preto').classList.remove('selected');
-  document.getElementById('cor-laranja').classList.remove('selected');
-  document.getElementById('cor-marrom').classList.remove('selected');
   corAtual = 'blue';
 }
 
 function selecionaMarrom() {
+  let local = document.getElementsByClassName('color');
+  for (let index = 0; index < 4; index += 1) {
+    local[index].classList.remove('selected');
+  }
   document.getElementById('cor-marrom').classList.add('selected');
-  document.getElementById('cor-preto').classList.remove('selected');
-  document.getElementById('cor-laranja').classList.remove('selected');
-  document.getElementById('cor-azul').classList.remove('selected');
   corAtual = 'rgb(102, 66, 40)';
 }
 
