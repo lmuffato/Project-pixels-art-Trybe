@@ -16,3 +16,4 @@ colorDiv[2].style.backgroundColor = 'blue';
 colorDiv[3].style.backgroundColor = 'purple';
 }
 colors();
+

@@ -6,7 +6,7 @@
 .color {
     background-color: white;
     padding: 20px;
-    border: solid black;
+    border: solid black 1px;
     display: inline-block;
     width: 30px;
     height: 30px;
