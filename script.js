@@ -1,8 +1,4 @@
 const begin = document.querySelector('#black');
-let pix = document.querySelectorAll('.pixel');
-const colorPalette = document.querySelector('#color-palette');
-const generateBoard = document.querySelector('#generate-board');
-let line = document.querySelectorAll('.line');
 
 function setbkColor() {
   const colorsBlock = document.querySelectorAll('.color');
@@ -13,11 +9,9 @@ function setbkColor() {
   }
   return colorsBlock;
 }
-
 setbkColor();
-
 function board() {
-  line = document.querySelectorAll('.line');
+  const line = document.querySelectorAll('.line');
   for (let index = 0; index < line.length; index += 1) {
     for (let indexToo = 0; indexToo < line.length; indexToo += 1) {
       const pixels = document.createElement('div');
@@ -25,10 +19,9 @@ function board() {
       line[index].appendChild(pixels);
     }
   }
-
   begin.classList.add('selected');
 
-  pix = document.querySelectorAll('.pixel');
+  const pix = document.querySelectorAll('.pixel');
   for (let index = 0; index < pix.length; index += 1) {
     pix[index].addEventListener('click', (element) => { // function toBoard
       const selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -36,13 +29,8 @@ function board() {
       selectedP.style.backgroundColor = selectedColor;
     });
   }
-  const limpar = document.querySelector('#clear-board');
-  limpar.addEventListener('click', () => { // function clear
-    for (let index = 0; index < pix.length; index += 1) {
-      pix[index].style.backgroundColor = 'white';
-    }
-  });
 }
+board();
 /* const pBoard = document.querySelector('#pixel-board');
 pBoard.addEventListener('click', function toBoard(element) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -50,6 +38,7 @@ pBoard.addEventListener('click', function toBoard(element) {
   selectedP.style.backgroundColor = selectedColor;
 }); */
 
+const colorPalette = document.querySelector('#color-palette');
 colorPalette.addEventListener('click', (element) => { // function selectedInPalette
   const newSelected = element.target;
   const inSelected = document.querySelector('.selected');
@@ -57,11 +46,22 @@ colorPalette.addEventListener('click', (element) => { // function selectedInPale
   newSelected.classList.add('selected');
 });
 
+const pix = document.querySelectorAll('.pixel');
+const limpar = document.querySelector('#clear-board');
+limpar.addEventListener('click', () => { // function clear
+  for (let index = 0; index < pix.length; index += 1) {
+    pix[index].style.backgroundColor = 'white';
+  }
+});
+
+const generateBoard = document.querySelector('#generate-board');
 generateBoard.addEventListener('click', () => {
+  const line = document.querySelectorAll('.line');
   let elementOne = document.querySelector('#board-size').value;
   const ppai = document.querySelector('#pixel-board');
   if (elementOne === '') {
     alert('Board inválido!');
+    elementOne = 5;
   } else if (elementOne < 5) {
     elementOne = 5;
   } else if (elementOne > 50) {
@@ -76,4 +76,11 @@ generateBoard.addEventListener('click', () => {
     ppai.appendChild(pixEl);
   }
   board();
+  const newPix = document.querySelectorAll('.pixel');
+  const newLimpar = document.querySelector('#clear-board');
+  newLimpar.addEventListener('click', () => { // function clear
+    for (let index = 0; index < newPix.length; index += 1) {
+      newPix[index].style.backgroundColor = 'white';
+    }
+  });
 });
