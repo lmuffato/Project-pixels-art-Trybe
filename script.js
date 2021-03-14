@@ -30,8 +30,8 @@ let classes;
   function selectElementoCor (evento) {
   for (let index = 0; index < colorSelect.length; index ++ ) {
   let classes = colorSelect[index].classList;
-  classes.remove("select");      
+  classes.remove("selected");      
   }
-  evento.target.classList.add("select");
+  evento.target.classList.add("selected");
   color = evento.target.id;
 }
