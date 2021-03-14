@@ -18,7 +18,7 @@ changeNameClass.addEventListener('click', colorSelected);
 const variable = document.getElementById('pixel-board');
 
 function colorize(colorPixel) {
-  let colorizePixel = document.querySelector('.selected').id;
+  const colorizePixel = document.querySelector('.selected').id;
   colorPixel.target.style.backgroundColor = colorizePixel;
 }
 
