@@ -46,3 +46,10 @@ footer {
   font-size: smaller;
   text-align: center;
 }
+
+button {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}

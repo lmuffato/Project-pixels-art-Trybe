@@ -48,3 +48,14 @@ function paintColor() {
 
 selectColor();
 paintColor();
+
+const buttonClear = document.querySelector('#clear-board');
+
+function clearAll() {
+  const pixelArray = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelArray.length; index += 1) {
+    pixelArray[index].style.backgroundColor = 'white';
+  }
+}
+
+buttonClear.addEventListener('click', clearAll);
