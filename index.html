@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Pixels Art</title>
 </head>
 <body>
@@ -17,18 +16,18 @@
     <section>
         <section id="color-palette">
             <div class="row">
-                <div class="color" class="selected" style="background-color: #030303"></div>
-                <div class="color" style="background-color: #f6eb34"></div>
-                <div class="color" style="background-color: #1b7ffb"></div>
-                <div class="color" style="background-color: #78a747"></div>
-                <div class="color" style="background-color: #e73f1b"></div>
+                <div id="black" class="color" style="background-color: #030303"></div>
+                <div id="yellow" class="color" style="background-color: #f6eb34"></div>
+                <div id="blue" class="color" style="background-color: #1b7ffb"></div>
+                <div id="green" class="color" style="background-color: #78a747"></div>
+                <div id="red" class="color" style="background-color: #e73f1b"></div>
             </div>
         </section>
     </section>
     <br>
     <div id="pixel-board">
         <div class="row">
-            <div class="pixel" onclick="setPixelColour(this)"></div>
+            <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -64,8 +63,9 @@
         </div>
     </div>
     <br>
-    <button onclick="window.location.reload(this)">
+    <button id="clear-board">
         <p>Clean Drawing</p>
     </button>
+    <script src="script.js"></script>
 </body>
 </html>
