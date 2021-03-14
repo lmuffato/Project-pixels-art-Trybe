@@ -23,19 +23,15 @@ fourthColor.style.backgroundColor = randomColor();
 // Função que ao clicar em uma das cores da paleta é adiconado uma nova classe (selected) para cor clicada.
 function addColorSelected() {
   const colors = document.querySelectorAll('.color');
-  colors[0].className = 'color selected';
-  const colorSelected = document.querySelector('.selected');
+  const initialColorBlack = document.querySelectorAll('.color')[0];
+  initialColorBlack.className = 'color selected';
 
   for (let j = 0; j < colors.length; j += 1) {
     colors[j].addEventListener('click', function (event) {
-      if (colors[j].style.backgroundColor !== colorSelected) {
-        for (let k = 0; k < colors.length; k += 1) {
-          colors[k].className = 'color'
-        }
-        event.target.className = 'color selected'
-        } else {
-        event.target.className = 'color selected'
-    }
+      for (let k = 0; k < colors.length; k += 1) {
+        colors[k].className = 'color';
+      }
+      event.target.className = 'color selected';
     });
   }
 }
@@ -50,11 +46,11 @@ function addColorToPixel() {
   pixels.addEventListener('click', function (event) {
     const eventTargetColor = event.target.style.backgroundColor;
     for (let i = 0; i < colors.length; i += 1) {
-      let colorPalette = colors[i].style.backgroundColor;
+      const colorPalette = colors[i].style.backgroundColor;
       if (selected.length > 0 && eventTargetColor !== colorPalette) {
         const pixelColor = selected[0].style.backgroundColor;
         event.target.style.backgroundColor = pixelColor;
-      } 
+      }
     }
   });
 }
