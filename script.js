@@ -48,4 +48,3 @@ for (let index = 0; index <pixels.length; i += 1) {
 
 }
 }
-limpaQuadro()
