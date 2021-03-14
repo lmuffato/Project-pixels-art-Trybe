@@ -1,0 +1,1 @@
+const pixenBoard = document.getElementById('pixel-board');

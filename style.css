@@ -1,24 +1,39 @@
-h1{
-  text-align: center;
-  
+* {
+  margin: 0;
 }
 
-#black{
+h1 {
+  text-align: center;
+}
+
+#black {
   background-color: black;
 }
 
-#yellow{
+#yellow {
   background-color: yellow;
 }
 
-#green{
+#green {
   background-color: green;
 }
 
-#red{
+#red {
   background-color: red;
 }
 
-.color, #color-palett{
+.color {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
+
+#pixel {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
   border: 1px solid black;
 }
