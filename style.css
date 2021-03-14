@@ -41,7 +41,7 @@ body {
 }
 
 .black {
-  color: #fff;
+  color: white;
   background-color: #343a40;
   border-color: #343a40;
   border: 1px solid transparent;
@@ -54,7 +54,7 @@ body {
 }
 
 .red {
-  color: #fff;
+  color: white;
   background-color: #dc3545;
   border-color: #dc3545;
   border: 1px solid transparent;
@@ -67,7 +67,7 @@ body {
 }
 
 .green {
-  color: #fff;
+  color: white;
   background-color: #28a745;
   border-color: #28a745;
   border: 1px solid transparent;
@@ -104,7 +104,7 @@ body {
 #button {
   margin-top: 17px;
   margin-left: 71px;
-  color: #fff;
+  color: white;
   background-color: #007bff;
   border-color: #007bff;
   border: 1px solid transparent;
