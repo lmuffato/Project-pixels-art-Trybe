@@ -5,7 +5,7 @@ const colorList = document.querySelectorAll('.color');
         colorList[2].style.backgroundColor = 'red';
         colorList[3].style.backgroundColor = 'green';
     }
-
+colorList[0].style.backgroundColor = 'black';
 
 const tableBoard = document.querySelector('#pixel-board');
   function pixelBoard(){
