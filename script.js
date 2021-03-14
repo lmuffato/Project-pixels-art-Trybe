@@ -3,6 +3,7 @@ let color;
 
 let elementoTd =document.getElementsByClassName('pixel');
 window.onload = function(){
+    document.getElementsByClassName('color')[0].classList.add('select');
     color = "black";
     for (let index = 0; index < elementoTd.length; index++) {
 
