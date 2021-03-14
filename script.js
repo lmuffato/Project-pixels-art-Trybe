@@ -23,10 +23,9 @@ function paletteColor() {
 }
 
 paletteColor();
-// 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.
+
 function pixelColor() {
   const pixel = document.querySelectorAll('.pixel');
-  // console.log(pixel);
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].addEventListener('click', (e) => {
       const color = document.querySelector('.selected');
@@ -35,3 +34,20 @@ function pixelColor() {
   }
 }
 pixelColor();
+
+function clearPixelColor() {
+  const elementMain = document.querySelector('#color-palette');
+  const createButtonClear = document.createElement('button');
+  createButtonClear.innerHTML = 'Limpar';
+  createButtonClear.id = 'button';
+  elementMain.appendChild(createButtonClear);
+  createButtonClear.addEventListener('click', () => {
+    const pixelColors = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixelColors.length; index += 1) {
+      const element = pixelColors[index];
+      element.style.backgroundColor = '#fff';
+    }
+    console.log(pixelColors);
+  });
+}
+clearPixelColor();
