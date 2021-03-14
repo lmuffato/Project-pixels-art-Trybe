@@ -22,3 +22,14 @@ function receiveClick (event) {
   document.getElementsByClassName('selected')[0].classList.remove('selected');
   event.target.classList.add('selected');
 }
+
+let pixelSelected = document.getElementsByClassName('pixel');
+for (let index = 0; index < pixelSelected.length; index += 1) {
+  pixelSelected[index].addEventListener('click', receiveColor);
+}
+
+function receiveColor(event) {
+  let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+  event.target.style.backgroundColor = selectedColor
+}
+
