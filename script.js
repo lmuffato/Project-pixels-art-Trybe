@@ -42,34 +42,6 @@ function cleanBoard() {
   }
 }
 
-// Adiciona um escutador no botão limpar
-function addButtomListener() {
-  const buttom = document.getElementById('clear-board');
-  buttom.addEventListener('click', cleanBoard);
-}
-
-function changeDim() {
-  dimension = document.FormDimension.dim.value; // Recupera o valor do input que vai de 5 a 50
-  if (dimension === '') {
-    alert('Board inválido!');
-  } else if (dimension >= 5 && dimension <= 50) {
-    document.getElementById('pixel-board').innerHTML = '';// Apaga o conteudo do tabuleiro atual
-    makeBoard(dimension);
-  } else if (dimension < 5) {
-    document.getElementById('pixel-board').innerHTML = '';
-    dimension = 5;
-    makeBoard(dimension);
-  } else {
-    document.getElementById('pixel-board').innerHTML = '';
-    dimension = 50;
-    makeBoard(dimension);
-  }
-}
-
-function addVqvListener() {
-  document.FormDimension.vqv.addEventListener('click', changeDim);
-}
-
 // Cria o tabuleiro dinamicamente. Em board recupera-se o elemento que representa o tabuleiro,
 // o primeiro for cria uma div que representa uma linha, atribui a classe nela e aplica a div criada em board. 
 // Em seguida o outro for recupera a div recém criada e cria outras divs dentro dela que representarao os pixels.
@@ -91,6 +63,35 @@ function makeBoard(dim) {
     }
   }
   addPixelListener();
+}
+
+// Adiciona um escutador no botão limpar
+function addButtomListener() {
+  const buttom = document.getElementById('clear-board');
+  buttom.addEventListener('click', cleanBoard);
+}
+
+function changeDim() {
+  dimension = document.FormDimension.dim.value; // Recupera o valor do input que vai de 5 a 50
+  const board = document.getElementById('pixel-board');
+  if (dimension === '') {
+    alert('Board inválido!');
+  } else if (dimension >= 5 && dimension <= 50) {
+    board.innerHTML = '';// Apaga o conteudo do tabuleiro atual
+    makeBoard(dimension);
+  } else if (dimension < 5) {
+    board.innerHTML = '';
+    dimension = 5;
+    makeBoard(dimension);
+  } else {
+    board.innerHTML = '';
+    dimension = 50;
+    makeBoard(dimension);
+  }
+}
+
+function addVqvListener() {
+  document.FormDimension.vqv.addEventListener('click', changeDim);
 }
 
 addPaletteListener();
