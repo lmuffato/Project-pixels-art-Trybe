@@ -42,7 +42,7 @@ h1{
 #pixel-board{ 
     display: table; 
     margin: 50px;
-    background-color:gb (255, 255, 255);
+    background-color:rgb (255, 255, 255);
 }
 .tr{ 
     display: table-row;
