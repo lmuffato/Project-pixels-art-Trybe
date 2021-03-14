@@ -31,3 +31,12 @@ function mudarCor(event) {
     armazena.style.backgroundColor = 'rgb(61, 61, 61)';
   }
 }
+
+let botao = document.getElementById('clear-board');
+let pi = document.querySelectorAll('.pixel');
+botao.addEventListener('click', limpar);
+function limpar() {
+  for (let index = 0; index < pi.length; index += 1) {
+    pi[index].style.backgroundColor = 'white';
+  }
+}
