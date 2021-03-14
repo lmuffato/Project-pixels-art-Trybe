@@ -7,3 +7,6 @@ function colorsPalete(colors) {
 
 const colors = ['black', 'blue', 'green', 'pink'];
 colorsPalete(colors);
+
+// Adicionando uma nova classe no elemento https://www.w3schools.com/howto/howto_js_add_class.asp
+document.getElementsByClassName('color')[0].classList.add('selected');
