@@ -67,7 +67,7 @@ function changeBGColor(event) {
 }
 // Requisito 9;
 // Ao clicar no botão o quadro de pixels e totalmente prenchido de branco
-function getButton(event) {
+function getButton() {
   const pixelBoard = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelBoard.length; index += 1) {
     pixelBoard[index].style.backgroundColor = 'white';
@@ -79,7 +79,7 @@ function managerEvents() {
   const colorPalette = document.querySelector('#color-palette');
   // 8. Recupera o elemento pai os pixels
   const pixelBoard = document.querySelector('#pixel-board');
-  // 9. Recupera o id do button 
+  // 9. Recupera o id do button;
   const buttonClearBoard = document.querySelector('#clear-board');
   // 7. Adiciona um evento de click (Adicionar a class selected ao clicar em outro elemento);
   colorPalette.addEventListener('click', getColor);
