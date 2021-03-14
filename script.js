@@ -44,9 +44,8 @@ let pixels = document.getElementsByClassName('pixel tr');
 for (let index = 0; index <pixels.length; i += 1) {
    pixels[index].addEventListener('click', () => {
       let apagar = pixels[index];
-      apagar.style.backgroundcolor = 'white';
-      }
-   )
+      apagar.style.backgroundColor:'white';
+      })
 
 }
 }
