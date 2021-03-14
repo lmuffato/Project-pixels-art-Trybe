@@ -5,7 +5,6 @@ const changeNameClass = document.getElementById('color-palette');
 
 function colorSelected(event) {
   document.getElementById('black').className = 'color';
-  document.getElementById('yellow').className = 'color';
   document.getElementById('blue').className = 'color';
   document.getElementById('green').className = 'color';
   document.getElementById('red').className = 'color';
