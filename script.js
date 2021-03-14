@@ -38,3 +38,18 @@ function createButton(buttonName, buttonId) {
 }
 
 createButton('Limpar', 'clear-board');
+
+function resetPixels() {
+  const pixels = document.querySelectorAll('.pixel');
+  Array.from(pixels).forEach((element) => {
+    const pixel = element;
+    pixel.style.backgroundColor = 'white';
+  });
+}
+
+function clickButton() {
+  const clearPixels = document.getElementById('clear-board');
+  clearPixels.addEventListener('click', resetPixels);
+}
+
+clickButton();
