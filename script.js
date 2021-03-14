@@ -26,3 +26,15 @@ function pixelsColor() {
   });
 }
 pixelsColor();
+
+function createButton(buttonName, buttonId) {
+  let buttonContainer = document.body;
+  let newButton = document.createElement('button');
+  let newButtonID = buttonId;
+
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+  buttonContainer.appendChild(newButton);
+}
+
+createButton('Limpar', 'clear-board');
