@@ -23,7 +23,7 @@ for (let index = 0; index < 5; index += 1){
     const pixelDiv = document.createElement('div');
     pixelBoard.appendChild(pixelDiv);
     for (let index = 0; index <5; index += 1){
-        pixelDiv2 = document.createElement('div');
+        const pixelDiv2 = document.createElement('div');
         pixelDiv.appendChild(pixelDiv2);
         pixelDiv2.classList.add('pixel');
     }
@@ -31,3 +31,8 @@ for (let index = 0; index < 5; index += 1){
 }
 pixels();
 
+function blackColor (){
+    const colorDiv = document.getElementsByClassName('color')[0];
+    colorDiv.classList.add('selected');
+}
+blackColor();
