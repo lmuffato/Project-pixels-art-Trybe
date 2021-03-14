@@ -15,3 +15,4 @@ cores ()
 //    adicionandoCores[3].style.backgroundColor = 'yellow';
 //}
 //colorsPaddles();
+
