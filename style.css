@@ -41,6 +41,7 @@ body {
 }
 
 .black {
+  border: black solid 1px;
   color: white;
   background-color: #343a40;
   border-color: #343a40;
@@ -54,6 +55,7 @@ body {
 }
 
 .red {
+  border: black solid 1px;
   color: white;
   background-color: #dc3545;
   border-color: #dc3545;
@@ -67,6 +69,7 @@ body {
 }
 
 .green {
+  border: black solid 1px;
   color: white;
   background-color: #28a745;
   border-color: #28a745;
@@ -80,6 +83,7 @@ body {
 }
 
 .yeloow {
+  border: black solid 1px;
   color: #212529;
   background-color: #e0a800;
   border-color: #d39e00;
