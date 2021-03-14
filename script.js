@@ -1,8 +1,4 @@
-const firstColor = document.querySelectorAll('.color')[0];
-const secondColor = document.querySelectorAll('.color')[1];
-const thirdColor = document.querySelectorAll('.color')[2];
-const fourthColor = document.querySelectorAll('.color')[3];
-
+// Função que retorna uma cor aleatória
 function randomColor() {
   const numbersAndLetters = '0123456789ABCDEF';
   let color = '#';
@@ -11,14 +7,16 @@ function randomColor() {
   }
   return color;
 }
-// console.log(randomColor());
 
-firstColor.style.backgroundColor = '#000000';
+const firstColor = document.querySelectorAll('.color')[0];
+const secondColor = document.querySelectorAll('.color')[1];
+const thirdColor = document.querySelectorAll('.color')[2];
+const fourthColor = document.querySelectorAll('.color')[3];
+
+firstColor.style.backgroundColor = '#000000'; // A primeira cor da palleta é preta
 secondColor.style.backgroundColor = randomColor();
 thirdColor.style.backgroundColor = randomColor();
 fourthColor.style.backgroundColor = randomColor();
-
-// sessionStorage.setItem('color', 'black');
 
 // Função que ao clicar em uma das cores da paleta é adiconado uma nova classe (selected) para cor clicada.
 function addColorSelected() {
@@ -38,6 +36,7 @@ function addColorSelected() {
 
 addColorSelected();
 
+// Função que ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta (class selected) faz com que o pixel seja preenchido com a cor selecionada
 function addColorToPixel() {
   const selected = document.getElementsByClassName('selected');
   const colors = document.querySelectorAll('.color');
@@ -56,3 +55,15 @@ function addColorToPixel() {
 }
 
 addColorToPixel();
+
+// Função para limpar todos os quadro preenchidos;
+function clearFrames() {
+  const allPixels = document.querySelectorAll('.pixel');
+
+  for (let i = 0; i < allPixels.length; i += 1) {
+    allPixels[i].style.backgroundColor = 'white';
+  }
+}
+
+const clearButton = document.querySelector('#clear-board');
+clearButton.addEventListener('click', clearFrames);

@@ -17,7 +17,6 @@ h1 {
 
 #color-palette {
   text-align: center;
-  padding: 10px;
 }
 
 .color {
@@ -30,7 +29,6 @@ h1 {
 #pixel-board {
   border-collapse: collapse;
   margin: auto;
-  padding: auto;
 }
 
 .pixel {
@@ -38,6 +36,19 @@ h1 {
   height: 41px;
   border: 1px solid black;
   background-color: white;
+}
+
+form {
+  text-align: center;
+}
+
+button {
+  background-color: darkblue;
+  color: white;
+  border: 1px solid white;
+  display: block;
+  margin: auto;
+  padding: 10px;
 }
 
 footer {
