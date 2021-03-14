@@ -1,7 +1,7 @@
 let corAtual = 'black';
 
 function selecionaPreto() {
-  let local = document.getElementsByClassName('color');
+  const local = document.getElementsByClassName('color');
   for (let index = 0; index < 4; index += 1) {
     local[index].classList.remove('selected');
   }
@@ -10,7 +10,7 @@ function selecionaPreto() {
 }
 
 function selecionaLaranja() {
-  let local = document.getElementsByClassName('color');
+  const local = document.getElementsByClassName('color');
   for (let index = 0; index < 4; index += 1) {
     local[index].classList.remove('selected');
   }
@@ -19,7 +19,7 @@ function selecionaLaranja() {
 }
 
 function selecionaAzul() {
-  let local = document.getElementsByClassName('color');
+  const local = document.getElementsByClassName('color');
   for (let index = 0; index < 4; index += 1) {
     local[index].classList.remove('selected');
   }
@@ -28,7 +28,7 @@ function selecionaAzul() {
 }
 
 function selecionaMarrom() {
-  let local = document.getElementsByClassName('color');
+  const local = document.getElementsByClassName('color');
   for (let index = 0; index < 4; index += 1) {
     local[index].classList.remove('selected');
   }
@@ -38,8 +38,8 @@ function selecionaMarrom() {
 
 // Aprendi essa função no site https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button
 // Foi muito complicado entender o "this.id" e o "clicked_id", mas consegui!
-function pintarPixel(clicked_id) {
-  document.getElementById(clicked_id).style.backgroundColor = corAtual;
+function pintarPixel(nomeId) {
+  document.getElementById(nomeId).style.backgroundColor = corAtual;
 }
 
 function apagarTudo() {
