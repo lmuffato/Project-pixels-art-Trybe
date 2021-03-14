@@ -31,3 +31,16 @@ function recebeSelect() {
            })
         }
 recebeSelect();
+
+function btn(){
+    const botao = document.querySelector("#btn");
+    botao.addEventListener('click', (event) => {
+            let array = document.querySelectorAll('.pixel');
+            console.log(array);
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                element.style.backgroundColor = 'white';
+            }
+        })
+}
+btn();
