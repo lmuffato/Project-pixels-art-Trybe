@@ -39,7 +39,7 @@ function clearPixelColor() {
   const elementMain = document.querySelector('#color-palette');
   const createButtonClear = document.createElement('button');
   createButtonClear.innerHTML = 'Limpar';
-  createButtonClear.id = 'button';
+  createButtonClear.id = 'clear-board';
   elementMain.appendChild(createButtonClear);
   createButtonClear.addEventListener('click', () => {
     const pixelColors = document.querySelectorAll('.pixel');
