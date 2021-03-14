@@ -6,26 +6,45 @@ function rgbColor() {
 }
 
 function colorsPalette() {
+  const clr2 = rgbColor();
+  const clr3 = rgbColor();
+  const clr4 = rgbColor();
   const squareBlack = document.getElementById('black');
   squareBlack.style.backgroundColor = 'black';
-  squareBlack.setAttribute('class','color selected');
-   
-  const squareBlue = document.getElementById('color2');
-  const clr2 = rgbColor();
-  squareBlue.style.backgroundColor = clr2;
-
-  const squareRed = document.getElementById('color3');
-  const clr3 = rgbColor();
-  squareRed.style.backgroundColor = clr3;
-
-  const squareYellow = document.getElementById('color4');
-  const clr4 = rgbColor();
-  squareYellow.style.backgroundColor = clr4;
+  squareBlack.setAttribute('class', 'color selected');
+  const square2 = document.getElementById('color2');
+  square2.style.backgroundColor = clr2;
+  square2.setAttribute('class', 'color');
+  const square3 = document.getElementById('color3');
+  square3.style.backgroundColor = clr3;
+  square3.setAttribute('class', 'color');
+  const square4 = document.getElementById('color4');
+  square4.style.backgroundColor = clr4;
+  square4.setAttribute('class', 'color');
 }
 
 window.onload = function load() {
   colorsPalette();
 };
 
+function selectColor() {
+  const colorsList = document.querySelector('#color-palette');
+  colorsList.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.selected');
+    const clickedColor = event.target;
+    selectedColor.className = 'color';
+    clickedColor.className = 'color selected';
+  });
+}
 
+function paintColor() {
+  const showPixel = document.querySelector('#pixel-board');
+  showPixel.addEventListener('click', (event) => {
+    const selectedPixel = event.target;
+    const color = document.querySelector('.selected').style.backgroundColor;
+    selectedPixel.style.backgroundColor = color;
+  });
+}
 
+selectColor();
+paintColor();
