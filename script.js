@@ -28,7 +28,7 @@ function pixelsColor() {
 pixelsColor();
 
 function createButton(buttonName, buttonId) {
-  let buttonContainer = document.body;
+  let buttonContainer = document.getElementById('buttonDiv');
   let newButton = document.createElement('button');
   let newButtonID = buttonId;
 
