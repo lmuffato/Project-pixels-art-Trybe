@@ -36,3 +36,17 @@ function pixelBoard (vertical, horizontal) {
   }
 }
 pixelBoard(5, 5);
+
+function gettingColorPixel () {
+  const colorClass = document.querySelectorAll('.color');
+  for (let i = 0; i < colorClass.length; i += 1) {
+    const colorSelected = document.querySelectorAll('.selected');
+    colorClass[i].addEventListener('click', function() {
+    if (colorClass[i].className === 'color') {
+      colorClass[i].className = 'selected';
+      colorSelected[0].className = 'color';
+    }
+    })
+  }
+}
+gettingColorPixel();
