@@ -45,7 +45,7 @@ function clearPixelColor() {
     const pixelColors = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixelColors.length; index += 1) {
       const element = pixelColors[index];
-      element.style.backgroundColor = '#fff';
+      element.style.backgroundColor = 'white';
     }
     console.log(pixelColors);
   });
