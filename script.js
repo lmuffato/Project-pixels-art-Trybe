@@ -1,3 +1,4 @@
+// Esta página pode ser vista na url https://rogerio-lambert.github.io/javaScript-DOM/pixel-art/pixel-art.html
 // Bloco de declaração de variáveis
 // const palette = document.getElementById('color-palette');
 const colorsOfPalette = document.getElementsByClassName('color');
