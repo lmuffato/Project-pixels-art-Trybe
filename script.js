@@ -43,7 +43,7 @@ let pixels = document.getElementsByClassName('pixel tr');
 
 for (let index = 0; index <pixels.length; i += 1) {
    botao.addEventListener('click', () => {
-      let apagar = pixels[index].style.backgroundColor = 'white';
+      pixels[index].style.backgroundColor = 'white';
       })
 
 }
