@@ -11,13 +11,13 @@ function addPixel() {
 addPixel();
 
 // criar uma função com condição para add class selected uma cor por vez. Evento. 
-window.onload = funtion () {
+// window.onload = funtion () {
 
-}
+// }
 
-function selectedColor() {
-  let click = document.getElementById('color');
-  let
+// function selectedColor() {
+//   let click = document.getElementById('color');
+//   let
 
-  button.addEventListener(1, 2);
-}
+//   button.addEventListener(1, 2);
+// }
