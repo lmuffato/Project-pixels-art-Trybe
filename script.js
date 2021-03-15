@@ -11,7 +11,7 @@ function creatingPalleteColors (qtd) {
     // cor aleatoria: https://qastack.com.br/programming/1484506/random-color-generator
     const color = '#' + Math.floor (Math.random () * 16777215) .toString (16);
     if (i === 0) {
-      createDiv.style.backgroundColor = 'Black';
+      createDiv.style.backgroundColor = 'rgb(0,0,0)';
       createDiv.className = 'selected';
       sectionMain.appendChild(createDiv);
     } else {
@@ -40,10 +40,9 @@ pixelBoard(5, 5);
 function gettingColorPixel (qtd) {
   const colorClass = document.querySelector('.color');
   const colorSelected = document.querySelector('.selected');
-  colorClass.addEventListener('click', function() {
-
+  colorClass.addEventListener('click', function(event) {
     if (colorClass.className === 'color') {
-      colorClass.className = 'selected';
+      event.target.className = 'selected';
     } else {
       colorClass.className = 'color';
     }
