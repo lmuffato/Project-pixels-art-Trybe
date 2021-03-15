@@ -1,4 +1,4 @@
-// ************** Cria função que adiciona a lcass pixel em cada elemento 'pixel' da board-grid **************** 
+// ************** Cria função que adiciona a class pixel em cada elemento 'pixel' da board-grid **************** 
 function addPixel() { 
   for (let index = 0; index < 25; index += 1) {
       let pixelParent = document.getElementById('pixel-board');
@@ -15,9 +15,16 @@ addPixel();
 
 // }
 
-// function selectedColor() {
-//   let click = document.getElementById('color');
-//   let
-
-//   button.addEventListener(1, 2);
-// }
+function selectedColor() {
+  let colorPalette = document.getElementById('color-palette');
+  colorPalette.addEventListener('click', function (e) {
+    let colorElement = e.target;
+    let colors = document.querySelectorAll('.color');
+    for (let index = 0; index < colors.length; index += 1) {
+      colors[index].classList.remove('selected');
+    }
+    if (colorElement.localName === 'div') {
+      colorElement.classList.add('selected');
+    }
+  });
+}
