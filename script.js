@@ -41,10 +41,10 @@ function limpaQuadro () {
 let botao = document.getElementById('clear-board');
 let pixels = document.getElementsByClassName('pixel tr');
 
-for (let index = 0; index <pixels.length; i += 1) {
    botao.addEventListener('click', () => {
+      for (let index = 0; index <pixels.length; i += 1) {
       pixels[index].style.backgroundColor = 'white';
-      })
+      }
 
-}
+})
 }
