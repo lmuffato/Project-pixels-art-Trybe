@@ -25,54 +25,63 @@ function colorPalette() {
     colorsFather.appendChild(elementColor);
   }
 }
-colorPalette();
 
-function pixelColor(event) {
-  const element = event.target;
-  const selectedColor = document.querySelector('.selected').style.backgroundColor;
-  const button = document.querySelector('#clear-board');
-
-  button.style.visibility = 'visible';
-  element.style.backgroundColor = selectedColor;
-}
-
-function pixelBoard() {
-  const pixelsFather = document.querySelector('#pixel-board');
-
-  for (let index = 0; index < 5; index += 1) {
-    const pixelRow = document.createElement('tr');
-
-    for (let column = 0; column < 5; column += 1) {
-      const pixelColumn = document.createElement('td');
-
-      pixelColumn.addEventListener('click', pixelColor);
-      pixelColumn.classList.add('pixel');
-      pixelRow.appendChild(pixelColumn);
-    }
-
-    pixelsFather.appendChild(pixelRow);
-  }
-}
-pixelBoard();
-
-function clearBoard(event) {
-  const element = event.target;
+function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
 
   for (let index = 0; index < pixels.length; index += 1) {
     const pixel = pixels[index];
     pixel.style.backgroundColor = 'white';
   }
-  element.style.visibility = 'hidden';
 }
 
-function clearButton() {
-  const element = document.createElement('button');
-  const elementFather = document.querySelector('header');
+function hideButton(event) {
+  const clearBoardButton = event.target;
 
-  element.id = 'clear-board';
-  element.innerText = 'Limpar';
-  element.addEventListener('click', clearBoard);
-  elementFather.appendChild(element);
+  clearBoardButton.style.visibility = 'hidden';
+  clearBoard();
 }
-clearButton();
+
+function pixelColor(event) {
+  const element = event.target;
+  const selectedColor = document.querySelector('.selected').style.backgroundColor;
+  const clearBoardButton = document.querySelector('#clear-board');
+
+  clearBoardButton.style.visibility = 'visible';
+  clearBoardButton.addEventListener('click', hideButton);
+  element.style.backgroundColor = selectedColor;
+}
+
+function pixelBoard(number) {
+  const pixelsFather = document.querySelector('#pixel-board');
+  const resizeInput = document.querySelector('#board-size');
+  console.log(number);
+
+  for (let index = 0; index < number; index += 1) {
+    const pixelRow = document.createElement('tr');
+
+    for (let column = 0; column < number; column += 1) {
+      const pixelColumn = document.createElement('td');
+
+      pixelColumn.addEventListener('click', pixelColor);
+      pixelColumn.classList.add('pixel');
+      pixelRow.appendChild(pixelColumn);
+    }
+    resizeInput.value = '';
+    pixelsFather.appendChild(pixelRow);
+  }
+}
+
+function pixelResize() {
+  const resizeButton = document.querySelector('#generate-board');
+  const number = document.querySelector('#board-size');
+
+  resizeButton.addEventListener('click', () => pixelBoard(number.value));
+}
+
+// https://stackoverflow.com/questions/16683176/add-two-functions-to-window-onload
+window.onload = () => {
+  colorPalette();
+  pixelBoard(5);
+  pixelResize();
+};
