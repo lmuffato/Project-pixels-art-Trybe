@@ -29,3 +29,16 @@ button {
     width: 75px;
     height: 75px;
 }
+
+table{
+    margin-top: 50px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.pixel {
+    width: 75px;
+    height: 75px;
+    border: solid 1px black;
+    background-color: white;
+}
