@@ -2,6 +2,10 @@ header {
   text-align: center;
 }
 
+main {
+  text-align: center;
+}
+
 ul , .pixel {
   padding: 0;
 }
@@ -15,13 +19,13 @@ table {
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button , input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 input [ type = 'number' ] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .pixel , .color {
@@ -59,6 +63,7 @@ input [ type = 'number' ] {
   border: none;
   opacity: 0.5;
   transition: 0.4s;
+
   /*
   https://stackoverflow.com/questions/39524688/how-to-remove-the-focus-border-of-button-when-click/39524745
   */
@@ -74,6 +79,13 @@ input [ type = 'number' ] {
   background-color: rgba(220, 220, 220);
   color: rgba(85, 85, 85);
 
+}
+
+#generate-board {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: rgb(108, 194, 140);
 }
 
 #clear-board:hover , #generate-board:hover {
@@ -101,9 +113,3 @@ input [ type = 'number' ] {
   border: 1px solid gold;
 }
 
-#generate-board {
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  background-color: rgb(108, 194, 140);
-}
