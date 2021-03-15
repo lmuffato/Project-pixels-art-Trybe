@@ -41,7 +41,6 @@ body {
 }
 
 .black {
-  border: black solid 1px;
   color: white;
   background-color: #343a40;
   padding: 0.375rem 0.75rem;
@@ -53,10 +52,8 @@ body {
 }
 
 .red {
-  border: black solid 1px;
   color: white;
   background-color: #dc3545;
-  border-color: #dc3545;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -66,10 +63,8 @@ body {
 }
 
 .green {
-  border: black solid 1px;
   color: white;
   background-color: #28a745;
-  border-color: #28a745;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -79,10 +74,8 @@ body {
 }
 
 .yeloow {
-  border: black solid 1px;
   color: #212529;
   background-color: #e0a800;
-  border-color: #d39e00;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
