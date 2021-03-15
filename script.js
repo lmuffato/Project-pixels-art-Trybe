@@ -25,17 +25,30 @@ function selecionaCor() {
  selecionaCor();
 
 // Requisito 8 - Pinta pixels
-//function pintaPixels() {
-  // const cor =  document.getElementsByClassName('selected');
-   //const pixels = document.getElementsByClassName('pixel tr');
-//percorre quadro e adiciona o clique:
-   //for (let index = 0; index < pixels.length; i += 1) {
-      //pixels[index].addEventListener('click', () => {
-    //  pixels[index].style.cor.backgroundColor
-      
-      
- //  })
- 
+
+function pintaPixels() {
+   const pixel = document.querySelector('.pixel tr');
+   for(i = 0; i <= pixel.length; i += 1); {
+      pixel[i].addEventListener('click', (event) => {
+      const clickedPixel = event.target;
+      const cor = documento.querySelector('.selected').style.backgroundColor;
+      console.log(color)
+      clickedPixel.style.backgroundColor = color;
+      })
+   }   
+
+}
+
+
+
+//function setColor() {
+ //  const pixelTable = document.querySelector('#pixel-board');
+  // pixelTable.addEventListener('click', (event) => {
+   //  const selectPixel = event.target;
+   //  const color = document.querySelector('.selected').style.backgroundColor;
+     // console.log(color)
+     //selectPixel.style.backgroundColor = color;
+
 // Requisito 9 - Limpa board
 function limpaQuadro () {
 const botao = document.getElementById('clear-board');
@@ -46,5 +59,5 @@ const pixels = document.getElementsByClassName('pixel tr');
       pixels[index].style.backgroundColor = 'white';
       }
 
-})
+   })
 }
