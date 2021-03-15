@@ -3,21 +3,21 @@ body {
 	padding: 0px;
 }
 
-h1{
+h1 {
 	align-content: center;
 }
 
-#header{
+#header {
   display:flex;
 	justify-content: center;
   margin-left: 10px;
 }
 
-#title{
+#title {
   text-align:center;  
 }
 
-#color-palette{
+#color-palette {
   display:flex;
 }
 
@@ -29,27 +29,27 @@ h1{
   margin: 10px;
 }
 
-#black{
+#black {
   background-color:black;
 }
 
-#red{
+#red {
   background-color:red;
 }
 
-#blue{
+#blue {
   background-color:blue;
 }
 
-#green{
+#green {
   background-color:green;
 }
 
-.tabela{
+.tabela {
 	margin-left: 8px;
 }
 
-.pixel{
+.pixel {
 	box-sizing: content-box;
   background-color:white;
   height:40px;
@@ -57,7 +57,7 @@ h1{
   border:solid 1px;
 }
 
-.flex-center{
+.flex-center {
 	display:flex;
 	justify-content: center;
 }
