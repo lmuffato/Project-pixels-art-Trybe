@@ -43,3 +43,9 @@ table{
     background-color: white;
 }
 
+#clear-board {
+    margin-top: 50px;
+    color: white;
+    background-color:cornflowerblue;
+    border-bottom-style:double;
+}
