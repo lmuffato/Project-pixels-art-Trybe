@@ -24,7 +24,6 @@ function colorPalette() {
   const colors = black.concat(generateRandomColors());
   const colorsFather = document.querySelector('#color-palette');
 
-  console.log(colors);
   for (let index = 0; index < colors.length; index += 1) {
     const elementColor = document.createElement('li');
 
