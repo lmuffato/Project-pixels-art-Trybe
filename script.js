@@ -10,18 +10,18 @@ function creatingPalleteColors (qtd) {
     const createDiv = document.createElement('span');
     // cor aleatoria: https://qastack.com.br/programming/1484506/random-color-generator
     const color = '#' + Math.floor (Math.random () * 16777215) .toString (16);
-    if (i === 0) {
-      createDiv.style.backgroundColor = 'black';
-      createDiv.className = 'selected';
-      sectionMain.appendChild(createDiv);
-    } else {
       createDiv.style.backgroundColor = color;
       createDiv.className = 'color';
       sectionMain.appendChild(createDiv);
-    }
   }
 }
 creatingPalleteColors(4);
+
+window.onload = function firstBlack () {
+  const firstSpan = document.querySelector('span');
+  firstSpan.style.backgroundColor = 'black';
+  firstSpan.className = 'selected';
+}
 
 function pixelBoard (vertical, horizontal) {
   const sectionMain = document.querySelector('#pixel-board');
@@ -43,14 +43,19 @@ function gettingColorPixel () {
   for (let i = 0; i < spanColor.length; i += 1) {
     if (spanColor[i].className === 'color') {
       spanColor[i].addEventListener('click',function(event) {
-      event.target.className = 'selected';
-      for (let j = 0; j < spanColor.length; j += 1) {
-        if (spanColor[j] !== spanColor[i]) {
-          spanColor[j].className = 'color';
+        event.target.className = 'selected';
+        for (let j = 0; j < spanColor.length; j += 1) {
+          if (spanColor[j] !== spanColor[i]) {
+            spanColor[j].className = 'color';
+          }
         }
-      }
-      })
+        })
     }
   }
 }
 gettingColorPixel();
+
+function changeBGColor () {
+  const sectionPixel = document.querySelectorAll('section#pixel-art');
+
+}
