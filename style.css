@@ -28,6 +28,11 @@ body {
   height: 40px;
   cursor: pointer;
 }
+
+.line {
+  display: flex;
+}
+
 #pixel-board {
   list-style: none;
   margin-left: 40px;
