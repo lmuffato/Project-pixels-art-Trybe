@@ -3,28 +3,24 @@ button {
 }
 
 .black {
-    background-color: black;
     color: white;
     width: 75px;
     height: 75px;
 }
 
 .red {
-    background-color: red;
     color: white;
     width: 75px;
     height: 75px;
 }
 
 .green {
-    background-color: green;
     color: white;
     width: 75px;
     height: 75px;
 }
 
 .blue {
-    background-color: blue;
     color: white;
     width: 75px;
     height: 75px;

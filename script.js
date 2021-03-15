@@ -30,11 +30,11 @@ selectColor();
 function paintPixel() {
     const pixels = document.querySelectorAll('.pixel');
     for(let index = 0; index < pixels.length; index += 1) {
-        // pixels[index].addEventListener('click', (e) => {
-        //     const selected = document.querySelector('.selected');
-        //     e.target.style.backgroundColor = selected.style.backgroundColor;
-        // })
-        pixels[index].addEventListener('click', console.log('teste'));
+        pixels[index].addEventListener('click', (e) => {
+            const selected = document.querySelector('.selected');
+            e.target.style.backgroundColor = selected.style.backgroundColor;
+        });
+        
     }
 }
 
