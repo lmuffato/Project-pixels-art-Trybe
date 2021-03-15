@@ -73,7 +73,7 @@ changeBGColor();
 
 function clearAll() {
   const createButtonClear = document.createElement('button');
-  const gettingClassFather = document.querySelector('section');
+  const gettingClassFather = document.querySelector('#btn');
   const sectionPixelClear = document.querySelectorAll('.pixel');
   createButtonClear.innerHTML = 'Limpar tela';
   createButtonClear.id = 'clear-board';
@@ -85,3 +85,19 @@ function clearAll() {
   })
 }
 clearAll();
+
+function inAndOutput () {
+  const headerMain = document.querySelector('header');
+  const inputHorizontal = document.createElement('input');
+  const inputVertical = document.createElement('input');
+  const createSectionInput = document.createElement('section');
+  inputHorizontal.innerText = 'Min. x Max.';
+  inputHorizontal.style.marginLeft = '30px';
+  inputHorizontal.width = '30px'
+  inputVertical.innerText = 'Min. x Max.';
+  inputVertical.style.marginLeft = '30px';
+  inputVertical.width = '30px';
+  createSectionInput.appendChild(inputHorizontal);
+  createSectionInput.appendChild(inputVertical);
+  headerMain.appendChild(createSectionInput);
+}
