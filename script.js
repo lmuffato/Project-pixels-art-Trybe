@@ -62,14 +62,11 @@ gettingColorPixel();
 
 function changeBGColor () {
   const sectionPixel = document.querySelectorAll('.pixel');
-  const sectionSelected = document.querySelector('.selected');
+  const sectionSelected = document.getElementsByClassName('color selected');
   for (let i = 0; i < sectionPixel.length; i += 1) {
-    if (sectionPixel[i].className === 'pixel') {
-      sectionPixel[i].addEventListener('click',function(eventN) {
-        eventN.target.style.backgroundColor = sectionSelected.style.backgroundColor;
-      })
-    }
+    sectionPixel[i].addEventListener('click',function(eventN) {
+      eventN.target.style.backgroundColor = sectionSelected[0].style.backgroundColor;
+    })
   }
-
 }
 changeBGColor();

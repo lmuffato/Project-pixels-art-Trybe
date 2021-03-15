@@ -1,6 +1,12 @@
-#title {}
+#title {
+  background-color: cadetblue;
+  width: 100%;
+}
 
-#color-palette {}
+#color-palette {
+  text-align: center;
+  margin: 10px;
+}
 
 .color {
   display: inline-block;
@@ -12,7 +18,10 @@
   margin-right: 20px;
 }
 
-#pixel-board {}
+#pixel-board {
+  border: 2px solid black;
+  text-align: center;
+}
 
 .pixel {
   display: inline-block;
@@ -31,4 +40,8 @@
   height: 50px;
   margin-left: 10px;
   margin-right: 20px;
+}
+
+#pixel-board section {
+  margin: 10px;
 }
