@@ -18,9 +18,14 @@ function creatingPalleteColors (qtd) {
 creatingPalleteColors(4);
 
 window.onload = function firstBlack () {
-  const firstSpan = document.querySelector('span');
-  firstSpan.style.backgroundColor = 'rgb(0,0,0)';
-  firstSpan.className = 'selected';
+  const firstSpan = document.querySelectorAll('span');
+  const createClassName = document.querySelector('.color');
+  for (let i = 0; i < firstSpan.length; i += 1) {
+    if (i === 0) {
+      firstSpan[i].style.backgroundColor = 'rgb(0,0,0)';
+      firstSpan[i].classList.add('selected');
+    }
+  } 
 }
 
 function pixelBoard (vertical, horizontal) {
@@ -43,7 +48,7 @@ function gettingColorPixel () {
   for (let i = 0; i < spanColor.length; i += 1) {
     if (spanColor[i].className === 'color') {
       spanColor[i].addEventListener('click',function(event) {
-        event.target.className = 'selected';
+        event.target.classList.add('selected');
         for (let j = 0; j < spanColor.length; j += 1) {
           if (spanColor[j] !== spanColor[i]) {
             spanColor[j].className = 'color';
@@ -61,7 +66,7 @@ function changeBGColor () {
   for (let i = 0; i < sectionPixel.length; i += 1) {
     if (sectionPixel[i].className === 'pixel') {
       sectionPixel[i].addEventListener('click',function(eventN) {
-        eventN.target = sectionSelected;
+        eventN.target.style.backgroundColor = sectionSelected.style.backgroundColor;
       })
     }
   }
