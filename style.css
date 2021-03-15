@@ -3,8 +3,8 @@
 }
 
 body {
- max-width: 800px;
- margin: auto;
+  max-width: 800px;
+  margin: auto;
 }
 
 #clear-board {
@@ -20,7 +20,7 @@ body {
 
 #pixel-board {
   margin-top: 20px;
-  border-spacing: 0px;
+  border-spacing: 0;
 }
 
 .pixel {

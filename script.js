@@ -76,9 +76,9 @@ document.querySelector('#pixel-board').addEventListener('click', applyColor);
 
 function clearBoard() {
   const blocks = document.querySelectorAll('.pixel');
-  for (let i = 0; i <blocks.length; i += 1) {
+  for (let i = 0; i < blocks.length; i += 1) {
     blocks[i].removeAttribute('style');
   }
 }
 
-document.querySelector('#clear-board').addEventListener('click', clearBoard)
+document.querySelector('#clear-board').addEventListener('click', clearBoard);
