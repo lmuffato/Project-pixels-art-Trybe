@@ -17,8 +17,8 @@ addPixel();
 
 function selectedColor() {
   let colorPalette = document.getElementById('color-palette');
-  colorPalette.addEventListener('click', function (e) {
-    let colorElement = e.target;
+  colorPalette.addEventListener('click', function ('click', select) {
+    let colorElement = select.target;
     let colors = document.querySelectorAll('.color');
     for (let index = 0; index < colors.length; index += 1) {
       colors[index].classList.remove('selected');
@@ -28,3 +28,5 @@ function selectedColor() {
     }
   });
 }
+
+selectedColor();
