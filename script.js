@@ -11,25 +11,33 @@ colorsPalete(colors);
 // Adicionando uma nova classe no elemento https://www.w3schools.com/howto/howto_js_add_class.asp
 document.getElementsByClassName('color')[0].classList.add('selected');
 
-let selected = document.getElementsByClassName('color');
-// Adicionando o evento para cada elemento da lista https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
-for (let index = 0; index < selected.length; index += 1) {
-  selected[index].addEventListener('click', receiveClick);
-}
-
-function receiveClick (event) {
+function receiveClick(event) {
   // Removendo a classe de seleção do elemento anterior https://www.w3schools.com/howto/howto_js_remove_class.asp
   document.getElementsByClassName('selected')[0].classList.remove('selected');
   event.target.classList.add('selected');
 }
 
-let pixelSelected = document.getElementsByClassName('pixel');
+const selected = document.getElementsByClassName('color');
+// Adicionando o evento para cada elemento da lista https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+for (let index = 0; index < selected.length; index += 1) {
+  selected[index].addEventListener('click', receiveClick);
+}
+
+function receiveColor(event) {
+  const { target } = event; // Corrigindo declaração e atribuição de cor para o evento de acordo com o eslint https://eslint.org/docs/rules/prefer-destructuring
+  const selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+  target.style.backgroundColor = selectedColor;
+}
+
+const pixelSelected = document.getElementsByClassName('pixel');
 for (let index = 0; index < pixelSelected.length; index += 1) {
   pixelSelected[index].addEventListener('click', receiveColor);
 }
 
-function receiveColor(event) {
-  let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
-  event.target.style.backgroundColor = selectedColor
+function clearBoard() {
+  for (let index = 0; index < pixelSelected.length; index += 1) {
+    pixelSelected[index].style.backgroundColor = 'white';
+  }
 }
 
+document.getElementById('clear-board').addEventListener('click', clearBoard);
