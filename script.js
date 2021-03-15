@@ -1,8 +1,14 @@
 const begin = document.querySelector('#black');
-
+/* Esse requisito foi feito com o auxilio deste site : https://stackoverflow.com/posts/23095771/revisions */
 function setbkColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const secondColor = `rgb(${r},${g},${b})`;
+  const thirdColor = `rgb(${g},${b},${r})`;
+  const fourthColor = `rgb(${b},${r},${g})`;
   const colorsBlock = document.querySelectorAll('.color');
-  const bkColor = ['black', 'midnightblue', 'gold', 'darkred'];
+  const bkColor = ['black', secondColor, thirdColor, fourthColor];
   for (let index = 0; index < colorsBlock.length; index += 1) {
     const color = bkColor[index];
     colorsBlock[index].style.backgroundColor = color;
