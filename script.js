@@ -19,7 +19,7 @@ function generateRgbColor() {
   return `rgb(${num[0]}, ${num[1]}, ${num[2]})`;
 }
 
-function montPalette(tableColors) {
+function montPalette() {
   colorsOfPalette[0].style.backgroundColor = 'rgb(0, 0, 0)';
   for (let color = 1; color < colorsOfPalette.length; color += 1) {
     colorsOfPalette[color].style.backgroundColor = generateRgbColor();
@@ -89,7 +89,7 @@ function resizePixelBoard() {
 
 // Bloco de ações de inicialização do código
 
-montPalette(simpleColors);
+montPalette();
 
 // bloco de carregamento do escutadores de eventos
 
