@@ -19,7 +19,7 @@ creatingPalleteColors(4);
 
 window.onload = function firstBlack () {
   const firstSpan = document.querySelector('span');
-  firstSpan.style.backgroundColor = 'black';
+  firstSpan.style.backgroundColor = 'rgb(0,0,0)';
   firstSpan.className = 'selected';
 }
 
@@ -56,6 +56,15 @@ function gettingColorPixel () {
 gettingColorPixel();
 
 function changeBGColor () {
-  const sectionPixel = document.querySelectorAll('section#pixel-art');
+  const sectionPixel = document.querySelectorAll('.pixel');
+  const sectionSelected = document.querySelector('.selected');
+  for (let i = 0; i < sectionPixel.length; i += 1) {
+    if (sectionPixel[i].className === 'pixel') {
+      sectionPixel[i].addEventListener('click',function(eventN) {
+        eventN.target = sectionSelected;
+      })
+    }
+  }
 
 }
+changeBGColor();
