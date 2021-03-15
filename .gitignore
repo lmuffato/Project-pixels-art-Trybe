@@ -17,3 +17,4 @@ cypress/screenshots/project.spec.js/11 - Limite o tamanho mínimo e máximo do b
 cypress/screenshots/project.spec.js/11 - Limite o tamanho mínimo e máximo do board -- Verifica se a altura máxima do board é 50 (failed).png
 cypress/screenshots/project.spec.js/12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página -- Verifica se a cor preta ainda está presente e é a primeira na sua paleta de cores (failed).png
 cypress/screenshots/project.spec.js/12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página -- Verifica se as cores geradas na paleta são diferentes a cada carregamento da página (failed).png
+cypress/reports/mochawesome.json
