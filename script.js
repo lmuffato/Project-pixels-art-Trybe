@@ -55,7 +55,6 @@ function pixelColor(event) {
 function pixelBoard(number) {
   const pixelsFather = document.querySelector('#pixel-board');
   const resizeInput = document.querySelector('#board-size');
-  console.log(number);
 
   for (let index = 0; index < number; index += 1) {
     const pixelRow = document.createElement('tr');
@@ -83,7 +82,14 @@ function resizeValidation() {
 
   if (!number.value) {
     return alert('Board inválido!');
+  } if (number.value < 5) {
+    number.value = 5;
+    number.placeholder = 'Between 5 and 50';
+  } else if (number.value > 50) {
+    number.value = 50;
+    number.placeholder = 'Between 5 and 50';
   }
+
   previusBoardRemove();
   pixelBoard(number.value);
 }
