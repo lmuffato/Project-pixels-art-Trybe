@@ -22,3 +22,16 @@ function creatingPalleteColors (qtd) {
 }
 creatingPalleteColors(4);
 
+function pixelBoard (vertical, horizontal) {
+  const sectionMain = document.querySelector('#pixel-board');
+  for (let i = 0; i < vertical; i += 1) {
+    const createSection = document.createElement('section');
+    for (let j = 0; j < horizontal; j +=1) {
+      const createDiv = document.createElement('div');
+      createDiv.className = 'pixel';
+      createSection.appendChild(createDiv);
+      sectionMain.appendChild(createSection);
+    }
+  }
+}
+pixelBoard(5, 5);
