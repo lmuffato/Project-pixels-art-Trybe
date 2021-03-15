@@ -78,7 +78,7 @@ function clearAll() {
   createButtonClear.innerHTML = 'Limpar tela';
   createButtonClear.id = 'clear-board';
   gettingClassFather.appendChild(createButtonClear);
-  createButtonClear.addEventListener('click',function() {
+  createButtonClear.addEventListener('click', function() {
     for (let i = 0; i < sectionPixelClear.length; i += 1) {
       sectionPixelClear[i].style.backgroundColor = 'rgb(255,255,255)';
     }
