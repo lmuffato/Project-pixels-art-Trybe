@@ -38,16 +38,19 @@ function pixelBoard (vertical, horizontal) {
 pixelBoard(5, 5);
 
 
-function gettingColorPixel (qtd) {
-  const colorSection = document.querySelector('.color');
-  const colorSelected = document.querySelector('.selected');
-  colorSection.addEventListener('click', function(event) {
-    const colorClass = event.target.className;
-    if (colorClass.className === 'color') {
+function gettingColorPixel () {
+  const spanColor = document.querySelectorAll('span');
+  for (let i = 0; i < spanColor.length; i += 1) {
+    if (spanColor[i].className === 'color') {
+      spanColor[i].addEventListener('click',function(event) {
       event.target.className = 'selected';
-    } else {
-      alert('Escolha outra cor para continuar o jogo!');
+      for (let j = 0; j < spanColor.length; j += 1) {
+        if (spanColor[j] !== spanColor[i]) {
+          spanColor[j].className = 'color';
+        }
+      }
+      })
     }
-  })
+  }
 }
-gettingColorPixel(4);
+gettingColorPixel();
