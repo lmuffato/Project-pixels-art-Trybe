@@ -32,7 +32,7 @@ function recebeSelect() {
 recebeSelect();
 
 function btn(){
-    const botao = document.querySelector("#btn");
+    const botao = document.querySelector("#clear-board");
     botao.addEventListener('click', (event) => {
             let array = document.querySelectorAll('.pixel');
             for (let index = 0; index < array.length; index++) {
