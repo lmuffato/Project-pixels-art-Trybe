@@ -36,7 +36,7 @@ function pixelColor() {
 pixelColor();
 
 function clearPixelColor() {
-  const elementMain = document.querySelector('#color-palette');
+  const elementMain = document.querySelector('#list-palette-color');
   const createButtonClear = document.createElement('button');
   createButtonClear.innerHTML = 'Limpar';
   createButtonClear.id = 'clear-board';
@@ -47,7 +47,6 @@ function clearPixelColor() {
       const element = pixelColors[index];
       element.style.backgroundColor = 'white';
     }
-    console.log(pixelColors);
   });
 }
 clearPixelColor();
