@@ -1,7 +1,6 @@
 // Bloco de declaração de variáveis
 // const palette = document.getElementById('color-palette');
 const colorsOfPalette = document.getElementsByClassName('color');
-const simpleColors = ['#000000', '#800000', '#ff0000', '#999966', '#ffff00 ', '#009900', '#00ff00', '#008080', '#00ffff', '#000080', '#0000ff', '#800080', '#ff00ff'];
 const pixelBord = document.getElementById('pixel-board');
 const pixels = document.getElementsByClassName('pixel');
 const buttonClear = document.getElementById('clear-board');
@@ -12,30 +11,18 @@ let colorSelected = document.querySelector('.selected');
 
 // Bloco de declaração de funções
 
-function generateRandomArray() {
-  const randomArray = [0];
-  for (let index = 0; index < colorsOfPalette.length - 1; index += 1) {
-    randomArray.push(Math.ceil(Math.random() * (simpleColors.length - 1)));
+function generateRgbColor() {
+  const num = [];
+  for (let index = 0; index < 3; index += 1) {
+    num.push(Math.round(Math.random() * 255));
   }
-  randomArray.sort();
-  return randomArray;
-}
-
-function generateRandomOrder() {
-  let orderArray = generateRandomArray();
-  for (let index = 0; index < orderArray.length; index += 1) {
-    if (orderArray[index] === orderArray[index + 1]) {
-      orderArray = generateRandomArray();
-      index = -1;
-    }
-  }
-  return orderArray;
+  return `rgb(${num[0]}, ${num[1]}, ${num[2]})`;
 }
 
 function montPalette(tableColors) {
-  const orderColor = generateRandomOrder();
-  for (let color = 0; color < colorsOfPalette.length; color += 1) {
-    colorsOfPalette[color].style.backgroundColor = tableColors[orderColor[color]];
+  colorsOfPalette[0].style.backgroundColor = 'rgb(0, 0, 0)';
+  for (let color = 1; color < colorsOfPalette.length; color += 1) {
+    colorsOfPalette[color].style.backgroundColor = generateRgbColor();
   }
 }
 
@@ -102,12 +89,6 @@ function resizePixelBoard() {
 
 // Bloco de ações de inicialização do código
 
-// for (let color = colorsOfPalette.length; color < simpleColors.length; color += 1) {
-//   const newColor = document.createElement('th');
-//   newColor.className = 'color';
-//   newColor.id = `color${color}`;
-//   palette.appendChild(newColor);
-// }
 montPalette(simpleColors);
 
 // bloco de carregamento do escutadores de eventos
