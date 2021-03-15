@@ -1,8 +1,10 @@
+// requisito 6
 function blackSelected() {
   const blackColor1 = document.getElementById('color1');
   blackColor1.className += ' selected';
 }
 
+// requisito 7
 function selectedColors() {
   const setColors = document.getElementsByClassName('color');
   for (let index = 0; index < setColors.length; index += 1) {
