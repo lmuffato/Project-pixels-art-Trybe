@@ -81,7 +81,7 @@ function sizeBox() {
   pixelBox(limitSize);
 }
 
-/* 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. */4
+/* 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. */
 function squareBox() {
   if (changeSize.value === '') {
     alert('Board inválido!');
