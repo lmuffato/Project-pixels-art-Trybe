@@ -1,23 +1,19 @@
-function createPalette () {
-  let paletteItems = ['red', 'blue', 'yellow', 'green'];
-  let getPaleta = document.getElementById("color-palette");
-  
+function createPalette() {
+  const paletteItems = ['red', 'blue', 'yellow', 'green'];
+  const getPalette = document.getElementById('color-palette');
+
   for (let index = 0; index < paletteItems.length; index += 1) {
+    const cellPalette = document.createElement('div');
 
-    let createPalette = document.createElement("div");
-    createPalette.className = 'color';
-    
-    createPalette.style.backgroundColor = paletteItems[index];
-    createPalette.style.display = 'inline-block';
-    createPalette.style.alignItems = 'space-between';
+    cellPalette.className = 'color';
+    cellPalette.style.backgroundColor = paletteItems[index];
+    cellPalette.style.display = 'inline-block';
 
-    getPaleta.appendChild(createPalette);
-   
+    getPalette.appendChild(cellPalette);
   }
-};
+}
 
 createPalette();
-
 
 //criar evento do clique
 
