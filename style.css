@@ -24,4 +24,10 @@
   height: 40px;
   width: 40px;
   display: inline-block;
+  margin: -3px;
+  padding: -3px;
+}
+
+#pixel-board {
+  margin-top: 10px;
 }
