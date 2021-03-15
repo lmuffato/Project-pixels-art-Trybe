@@ -8,10 +8,23 @@ function colorSelect(event) {
   event.target.classList.add('selected');
 }
 
+function generateRandomColors() {
+  const colorList = [];
+
+  for (let index = 0; index < 3; index += 1) {
+    // https://css-tricks.com/snippets/javascript/random-hex-color/
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    colorList.push(`#${randomColor}`);
+  }
+  return colorList;
+}
+
 function colorPalette() {
-  const colors = ['black', 'red', 'green', 'blue'];
+  const black = ['black'];
+  const colors = black.concat(generateRandomColors());
   const colorsFather = document.querySelector('#color-palette');
 
+  console.log(colors);
   for (let index = 0; index < colors.length; index += 1) {
     const elementColor = document.createElement('li');
 
