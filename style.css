@@ -39,11 +39,15 @@ h1 {
   background-color: white;
 }
 
+section {
+  display: block;
+  text-align: center;
+}
+
 form {
   text-align: center;
-  position: absolute;
-  left: 225px;
   height: 20px;
+  display: inline-block;
 }
 
 button {
@@ -59,10 +63,7 @@ button {
 }
 
 #generate-board {
-  position: absolute;
   display: inline-block;
-  bottom: 300px;
-  right: 220px;
 }
 
 footer {
