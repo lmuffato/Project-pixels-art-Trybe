@@ -55,3 +55,18 @@ function clickButton() {
 clickButton();
 
 // --- Dinamic Board Size ---
+
+const boardSize = document.getElementById('board-size').value;
+
+function createBoard() {
+  let boardSizeValue = boardSize;
+  if (boardSizeValue < 5) {
+    boardSizeValue = 5;
+  } if (boardSizeValue > 50) {
+    boardSizeValue = 50;
+  } if (boardSizeValue === '') {
+    return alert('Board inválido!');
+  }
+}
+
+document.getElementById('generate-board').addEventListener('click', createBoard);
