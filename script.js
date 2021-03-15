@@ -36,16 +36,3 @@ function pixelBoard (vertical, horizontal) {
   }
 }
 pixelBoard(5, 5);
-
-function gettingColorPixel (qtd) {
-  const colorClass = document.querySelector('.color');
-  const colorSelected = document.querySelector('.selected');
-  colorClass.addEventListener('click', function(event) {
-    if (colorClass.className === 'color') {
-      event.target.className = 'selected';
-    } else {
-      colorClass.className = 'color';
-    }
-  })
-}
-gettingColorPixel(4);
