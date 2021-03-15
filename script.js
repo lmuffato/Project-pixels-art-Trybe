@@ -53,3 +53,5 @@ function clickButton() {
 }
 
 clickButton();
+
+// --- Dinamic Board Size ---
