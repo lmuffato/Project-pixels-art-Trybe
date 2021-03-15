@@ -1,6 +1,6 @@
 function creatingTitle () {
   const tit = document.querySelector('#title');
-  const txt = tit.innerHTML = 'Paleta de Cores';
+  tit.innerHTML = 'Paleta de Cores';
 }
 creatingTitle();
 
