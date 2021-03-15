@@ -1,4 +1,4 @@
-function palette () {
+function palette(){
 const paletteColors = document.getElementById('color-palette');
 for (let index = 0; index < 4; index += 1){
 let colorsPalette = document.createElement('div');
@@ -8,7 +8,7 @@ paletteColors.appendChild(colorsPalette);
 }
 palette();
 
-function colors () {
+function colors(){
 const colorDiv = document.getElementsByClassName('color');
 colorDiv[0].style.backgroundColor = 'black';
 colorDiv[1].style.backgroundColor = 'red';
@@ -17,7 +17,7 @@ colorDiv[3].style.backgroundColor = 'purple';
 }
 colors();
 
-function pixels () {
+function pixels(){
 const pixelBoard = document.getElementById('pixel-board');
 for (let index = 0; index < 5; index += 1){
     const pixelDiv = document.createElement('div');
@@ -31,8 +31,24 @@ for (let index = 0; index < 5; index += 1){
 }
 pixels();
 
-function blackColor (){
-    const colorDiv = document.getElementsByClassName('color')[0];
-    colorDiv.classList.add('selected');
+function blackColor(){
+    const colorDiv = document.getElementsByClassName('color')[0].classList.add('selected');
 }
 blackColor();
+
+function colorRemove(){
+    const paletteColors = document.getElementById('color-palette');
+    const paletteColorsByClass = document.querySelectorAll(".color");
+    for (let index = 0; index < paletteColorsByClass.length; index += 1){
+        const colorDiv = document.getElementsByClassName('color')[index].classList.remove('selected');
+        let divSelected = paletteColors.children;
+    }
+
+}
+
+const paletteColors = document.getElementById('color-palette');
+paletteColors.addEventListener('click', (event) => {
+    colorRemove();
+    event.target.classList.add('selected');
+});
+
