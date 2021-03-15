@@ -18,7 +18,11 @@
 
   <main>
     <section id="input-section">
-      <input min="5" max="50" placeholder="Resize pixel's board" type="number" id="board-size">
+      <!--
+        https://github.com/tryber/sd-010-a-project-pixels-art/pull/7/commits/2916da47d317ad47de4f820bd0312fef688ddfdb
+        I took the "pattern" attribute to give it a try.
+      -->
+      <input min="5" max="50" placeholder="Resize pixel's board" type="number" id="board-size" pattern="/d+">
       <button id="generate-board">VQV</button>
     </section>
 

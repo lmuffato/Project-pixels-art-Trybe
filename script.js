@@ -72,11 +72,26 @@ function pixelBoard(number) {
   }
 }
 
-function pixelResize() {
-  const resizeButton = document.querySelector('#generate-board');
+// https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+function previusBoardRemove() {
+  const board = document.querySelector('#pixel-board');
+  board.innerHTML = '';
+}
+
+function resizeValidation() {
   const number = document.querySelector('#board-size');
 
-  resizeButton.addEventListener('click', () => pixelBoard(number.value));
+  if (!number.value) {
+    return alert('Board inválido!');
+  }
+  previusBoardRemove();
+  pixelBoard(number.value);
+}
+
+function pixelResize() {
+  const resizeButton = document.querySelector('#generate-board');
+
+  resizeButton.addEventListener('click', resizeValidation);
 }
 
 // https://stackoverflow.com/questions/16683176/add-two-functions-to-window-onload
