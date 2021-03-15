@@ -33,4 +33,14 @@ function selectedColor(evento) {
     colorElement.classList.add('selected');
 }
 
-// selectedColor();
+// Cria variável que seleciona o botão 'Limpar'
+let buttonClear = document.querySelector('#clear-board');
+
+function clearAll() {
+  let pixelsBoard = document.querySelectorAll('pixel-board');
+  for (let index = 0; index < pixelsBoard.length; index += 1) {
+    pixelsBoard[index].style.backgroundColor = 'white';
+  }
+}
+button.addEventListener('click', clearAll);
+
