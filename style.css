@@ -20,6 +20,15 @@
   margin-bottom: 30px;
 }
 
+header {
+  margin: 0 auto;
+  justify-content: center;
+  background-color: white;
+  padding: 30px;
+  width: 300px;
+  align-items: center;
+}
+
 #title {
   font-family: DotGothic16 , sans-serif;
   text-align: center;
@@ -62,16 +71,25 @@
 }
 
 #color-palette {
-  margin: 20px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  width: 340px;
 }
 
 #pixel-board {
   margin-left: auto;
   margin-right: auto;
-  display: inline;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  width: 300px;
 }
 
 body {
@@ -83,12 +101,7 @@ body {
     url('images/backgroundtop.svg') no-repeat top,
     linear-gradient(#2280e2, #5bd0ed);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#container {
-  background: white;
-  padding: 30px;
 }
