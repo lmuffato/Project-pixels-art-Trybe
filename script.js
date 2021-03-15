@@ -7,11 +7,11 @@ creatingTitle();
 function creatingPalleteColors (qtd) {
   for (let i = 0; i < qtd; i += 1) {
     const sectionMain = document.querySelector('section');
-    const createDiv = document.createElement('div');
+    const createDiv = document.createElement('span');
     // cor aleatoria: https://qastack.com.br/programming/1484506/random-color-generator
     const color = '#' + Math.floor (Math.random () * 16777215) .toString (16);
     if (i === 0) {
-      createDiv.style.backgroundColor = 'rgb(0,0,0)';
+      createDiv.style.backgroundColor = 'black';
       createDiv.className = 'selected';
       sectionMain.appendChild(createDiv);
     } else {
@@ -36,3 +36,18 @@ function pixelBoard (vertical, horizontal) {
   }
 }
 pixelBoard(5, 5);
+
+
+function gettingColorPixel (qtd) {
+  const colorSection = document.querySelector('.color');
+  const colorSelected = document.querySelector('.selected');
+  colorSection.addEventListener('click', function(event) {
+    const colorClass = event.target.className;
+    if (colorClass.className === 'color') {
+      event.target.className = 'selected';
+    } else {
+      alert('Escolha outra cor para continuar o jogo!');
+    }
+  })
+}
+gettingColorPixel(4);
