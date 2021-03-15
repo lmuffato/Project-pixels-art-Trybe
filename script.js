@@ -26,12 +26,12 @@ function selecionaCor() {
 
 // Requisito 8 - Pinta pixels
 //function pintaPixels() {
-  // const cores =  document.getElementsByClassName('color');
+  // const cor =  document.getElementsByClassName('selected');
    //const pixels = document.getElementsByClassName('pixel tr');
 //percorre quadro e adiciona o clique:
    //for (let index = 0; index <pixels.length; i += 1) {
       //pixels[index].addEventListener('click', () => }
-    //  pixels[index].
+    //  pixels[index].backgroundColor = 
       
       
  //  })
@@ -42,8 +42,8 @@ let botao = document.getElementById('clear-board');
 let pixels = document.getElementsByClassName('pixel tr');
 
    botao.addEventListener('click', () => {
-      for (let index = 0; index <pixels.length; i += 1) {
-      pixels[index].style.backgroundColor = 'white';
+      for (let index = 0; index < pixels.length; i += 1) {
+      pixels.style.backgroundColor = 'white';
       }
 
 })
