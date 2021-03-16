@@ -24,7 +24,7 @@ function colorizedPixel() {
   for (let index = 0; index < pixelArray.length; index += 1) {
     pixelArray[index].addEventListener('click', (ev) => {
       const clickPixel = ev.target;
-      const selecionaCor = document.querySelector('.color selected').style.backgroundColor;
+      const selecionaCor = document.querySelector('.selected').style.backgroundColor;
       clickPixel.style.backgroundColor = selecionaCor;
     });
   }
