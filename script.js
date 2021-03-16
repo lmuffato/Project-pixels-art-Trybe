@@ -56,8 +56,10 @@ function getColor(){
     const pixelColorByClass = document.querySelectorAll('.pixel');
     const colorsPalette = document.getElementsByClassName('color');
     pixelColor.addEventListener('click', event => {
-        event.target.style.backgroundColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
-        console.log(event);
+        if (event.target.className == 'pixel') {
+            event.target.style.backgroundColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+        } else { alert ('Escolha um pixel');
+    }
     });
 }
 getColor();
