@@ -70,7 +70,7 @@ function clickButton() {
 
 clickButton();
 
-function createBoard() {
+/* function createBoard() {
   let boardSize = document.getElementById('board-size').value;
   if (boardSize < 5) {
     boardSize = 5;
@@ -78,6 +78,21 @@ function createBoard() {
     boardSize = 50;
   } if (boardSize === '') {
     alert('Board inválido!');
+  } else {
+    document.getElementById('pixel-board').innerHTML = '';
+    createPixelBoard(boardSize);
+    pixelsColor();
+  }
+} */
+
+function createBoard() {
+  let boardSize = document.getElementById('board-size').value;
+  if (boardSize === '') {
+    alert('Board inválido!');
+  } else if (boardSize < 5) {
+    boardSize = 5;
+  } else if (boardSize > 50) {
+    boardSize = 50;  
   } else {
     document.getElementById('pixel-board').innerHTML = '';
     createPixelBoard(boardSize);
