@@ -39,7 +39,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
- box-sizing: border-box;
+  box-sizing: border-box;
+  
 }
 
 #container-board {
@@ -82,7 +83,7 @@ img {
   display: inline-block;
   width: 60px;
   height: 60px;
-  border: solid black 1px;
+  border: double rgb(255, 255, 255) 3px;
   border-radius: 50%;
 }
 
