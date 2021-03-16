@@ -40,7 +40,7 @@ const pixel = document.querySelectorAll('.pixel');
     
      pixel[index].addEventListener('click', (event)=> {
         //if(cor.style.backgroundColor = 'green') {
-         pixel[index].style.backgroundColor = cor.style.backgroundColor;
+         pixel[index].style.backgroundColor = 'green'
      // } else if (cor.style.backgroundColor = 'green'){
      //    pixel[index].style.backgroundColor = 'green'
      // } else if (cor.style.backgroundColor = 'brown'){
