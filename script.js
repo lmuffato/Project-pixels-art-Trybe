@@ -8,12 +8,12 @@ if (
   sessionStorage.getItem('boardSize') == null ||
   sessionStorage.getItem('boardSize') == ''
 ) {
-  pixelBlocks = 25;
+  pixelBlocks = 5;
 } else {
   pixelBlocks = parseInt(sessionStorage.getItem('boardSize'));
 }
 window.onload =function(){
-    createPixelBlocks(pixelBlocks, 5);
+    createPixelBlocks(pixelBlocks**2, 5);
     generateColor();
 
     for (let index = 1; index < colorpalleteButtons.length; index++) {
