@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: crosshair;
   box-sizing: border-box;
 }
 
@@ -19,6 +18,7 @@ body {
 #color-palette {
   display: flex;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .pixel {
@@ -52,4 +52,11 @@ body {
 
 .green {
   background-color: green;
+}
+
+#clear-board {
+  margin-top: 20px;
+  margin-left: 122px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }

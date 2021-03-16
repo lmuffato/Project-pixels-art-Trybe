@@ -1,4 +1,5 @@
 // Define a cor de background das paletas
+
 document.querySelector('.black').style.backgroundColor = 'black';
 document.querySelector('.blue').style.backgroundColor = 'blue';
 document.querySelector('.red').style.backgroundColor = 'red';
@@ -21,6 +22,7 @@ function colorSelection() {
 }
 
 // Pinta um pixel utilizando a cor 'selected'
+
 function colorDraw() {
   const pixelElements = document.getElementsByClassName('pixel');
 
@@ -40,5 +42,20 @@ function colorDraw() {
   }
 }
 
+// Define a cor de todos os pixels como sendo branco ao apertar
+// o botão 'limpar'
+
+function colorClear() {
+  const clearElement = document.getElementById('clear-board');
+  const pixelElements = document.getElementsByClassName('pixel');
+
+  clearElement.addEventListener('click', () => {
+    for (let i = 1; i < pixelElements.length; i += 1) {
+      pixelElements[i].style.backgroundColor = 'white';
+    }
+  });
+}
+
 colorDraw();
 colorSelection();
+colorClear();
