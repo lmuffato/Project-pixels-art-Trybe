@@ -1,8 +1,8 @@
 function createPixelBoard(size) {
   document.getElementById('pixel-board').innerHTML = '';
   const pixelsContainer = document.querySelector('#pixel-board');
-  pixelsContainer.style.width = ((size * 41) + 'px');
-  pixelsContainer.style.height = ((size * 41) + 'px');
+  pixelsContainer.style.width = (`${(size * 41)}px`);
+  pixelsContainer.style.height = (`${(size * 41)}px`);
   for (let index = 0; index < size ** 2; index += 1) {
     const createPixels = document.createElement('div');
     createPixels.className = 'pixel';
@@ -67,75 +67,6 @@ function clickButton() {
 }
 
 clickButton();
-
-/* function sizeFix() {
-  let getBoardSize = document.getElementById('board-size');
-  if (getBoardSize.value === '') {
-    alert('Board inválido!');
-    return;
-  }
-  getBoardSize = Number(getBoardSize.value);
-  if (getBoardSize < 5) {
-    getBoardSize = 5;
-  }
-  if (getBoardSize > 50) {
-    getBoardSize = 50;
-  }
-  return getBoardSize;
-}
-
-function finalResultBoard() {
-  document.getElementById('pixel-board').innerHTML = '';
-  createPixelBoard(sizeFix());
-  pixelsColor();
-}
-
-finalResultBoard(); */
-
-/* function createBoard() {
-  let boardSize = document.getElementById('board-size').value;
-  if (boardSize < 5) {
-    boardSize = 5;
-  } if (boardSize > 50) {
-    boardSize = 50;
-  } if (boardSize.toString() === '') {
-    alert('Board inválido!');
-  } else {
-    document.getElementById('pixel-board').innerHTML = '';
-    createPixelBoard(boardSize);
-    pixelsColor();
-  }
-} */
-
-/* function createBoard() {
-  let boardSize = document.getElementById('board-size').value;
-  if (boardSize < 5) {
-    boardSize = 5;
-  } if (boardSize > 50) {
-    boardSize = 50;
-  } if (boardSize === '') {
-    alert('Board inválido!');
-  } else {
-    document.getElementById('pixel-board').innerHTML = '';
-    createPixelBoard(boardSize);
-    pixelsColor();
-  }
-} */
-
-/* function createBoard() {
-  let boardSize = document.getElementById('board-size').value;
-  if (boardSize === '') {
-    alert('Board inválido!');
-  } else if (boardSize < 5) {
-    boardSize = 5;
-  } else if (boardSize > 50) {
-    boardSize = 50;
-  } else {
-    document.getElementById('pixel-board').innerHTML = '';
-    createPixelBoard(boardSize);
-    pixelsColor();
-  }
-} */
 
 function createBoard() {
   let boardSize = document.getElementById('board-size');
