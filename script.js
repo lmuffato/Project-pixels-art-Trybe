@@ -13,7 +13,7 @@ if (
   pixelBlocks = parseInt(sessionStorage.getItem('boardSize'));
 }
 window.onload =function(){
-    createPixelBlocks(pixelBlocks**2, 5);
+    createPixelBlocks(pixelBlocks**2, pixelBlocks);
     generateColor();
 
     for (let index = 1; index < colorpalleteButtons.length; index++) {
