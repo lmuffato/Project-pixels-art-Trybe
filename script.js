@@ -24,18 +24,19 @@ function colorizedPixel() {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', (ev) => {
       const clickPixel = ev.target;
-      const selecionaCor = document.querySelector('.color selected').style.backgroundColor;
-      clickPixel.style.backgroundColor = selecionaCor;
+      const selecionaCor = getComputedStyle(document.querySelector('.color.selected'));
+      clickPixel.style.backgroundColor = selecionaCor.backgroundColor;
     });
   }
 }
 
 // requisito 9
 function clearBoard() {
-  const allPixels = document.querySelectorAll('#pixel-board');
+  const allPixels = document.querySelectorAll('.pixel');
   const clearButton = document.getElementById('clear-board');
   clearButton.addEventListener('click', () => {
     for (let index = 0; index < allPixels.length; index += 1) {
+      console.log('Julia');
       allPixels[index].style.backgroundColor = 'white';
     }
   });
