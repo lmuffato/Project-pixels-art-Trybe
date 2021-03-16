@@ -7,6 +7,10 @@
   padding: -3px;
 }
 
+.color:nth-of-type(1) {
+  background-color:black;
+}
+
 .pixel {
   background-color: white;
   border: 1px solid black;

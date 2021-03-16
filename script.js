@@ -72,42 +72,28 @@ clickButton();
 
 // --- Dinamic Board Size ---
 
-let boardSize = document.getElementById('board-size').value;
-
-function wrongParam(value) {
-  if (value < 5) {
-    value = 5;
-    console.log(value);
-  } if (value > 50) {
-    value = 50;
-    console.log(value);
-  } if (value === null) {
-    alert('Board inválido!');
- }
-}
-
-wrongParam();
+let boardSize = document.getElementById('board-size').valueAsNumber;
 
 function createBoard() {
-  wrongParam(boardSize);
-  createPixelBoard(boardSize);
+  if (boardSize < 5) {
+    boardSize = 5;
+  } if (boardSize > 50) {
+    boardSize = 50;
+  } if (boardSize.value === '') {
+    window.alert('Board inválido!');
+  } else {
+    createPixelBoard(boardSize);
+  }
 }
 
 const vqvButton = document.getElementById('generate-board');
 vqvButton.addEventListener('click', createBoard);
 
 function randomColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  const randomColor1 = `rgb(${r},${g},${b})`;
-  const randomColor2 = `rgb(${g},${b},${r})`;
-  const randomColor3 = `rgb(${b},${r},${g})`;
-  const colorsBlock = document.querySelectorAll('.color');
-  const randomColors = ['black', randomColor1, randomColor2, randomColor3];
-  for (let index = 0; index < colorsBlock.length; index += 1) {
-    const color = randomColors[index];
-    colorsBlock[index].style.backgroundColor = color;
+  const paletteColors = document.getElementsByClassName('color');
+  for (let index = 1; index < paletteColors.length; index += 1) {
+    const randomColors = `rgb(${Math.random() * 254},${Math.random() * 254},${Math.random() * 254})`;
+    paletteColors[index].style.background = randomColors;
   }
 }
 randomColor();
