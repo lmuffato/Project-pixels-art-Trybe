@@ -70,15 +70,21 @@ function clickButton() {
 
 clickButton();
 
-function createBoard() {
-  let boardSize = document.getElementById('board-size').valueAsNumber;
+let boardSize = document.getElementById('board-size').value;
+
+function checkLimits() {
   if (boardSize < 5) {
     boardSize = 5;
   } if (boardSize > 50) {
     boardSize = 50;
-  } if (boardSize === '') {
+  }
+}
+
+function createBoard() {
+  if (!boardSize) {
     alert('Board inválido!');
   } else {
+    checkLimits();
     document.getElementById('pixel-board').innerHTML = '';
     createPixelBoard(boardSize);
     pixelsColor();
