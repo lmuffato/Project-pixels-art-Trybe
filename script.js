@@ -1,7 +1,20 @@
+function generateRandomColors() {
+  return Math.ceil(Math.random() * 255);
+}
+let colorChannelOne = generateRandomColors()
+let colorChannelTwo = generateRandomColors()
+let colorChannelThree = generateRandomColors()
+let colorChannel2One = generateRandomColors()
+let colorChannel2Two = generateRandomColors()
+let colorChannel2Three = generateRandomColors()
+let colorChannel3One = generateRandomColors()
+let colorChannel3Two = generateRandomColors()
+let colorChannel3Three = generateRandomColors()
+
 document.querySelector('.black').style.backgroundColor = 'black';
-document.querySelector('.red').style.backgroundColor = 'red';
-document.querySelector('.blue').style.backgroundColor = 'blue';
-document.querySelector('.green').style.backgroundColor = 'green';
+document.querySelector('.channel-one').style.backgroundColor = `rgb(${colorChannelOne}, ${colorChannelTwo}, ${colorChannelThree})`;
+document.querySelector('.channel-two').style.backgroundColor = `rgb(${colorChannel2One}, ${colorChannel2Two}, ${colorChannel2Three})`;
+document.querySelector('.channel-three').style.backgroundColor = `rgb(${colorChannel3One}, ${colorChannel3Two}, ${colorChannel3Three})`;
 const generateBoard = document.querySelector('#generate-board');
 
 generateBoard.addEventListener('click', function () {
