@@ -13,17 +13,14 @@
 
     <ul id="color-palette"></ul>
 
-    <button id="clear-board">Limpar</button>
+    <!-- https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp -->
+    <button id="clear-board" class="disabled" disabled>Limpar</button>
   </header>
 
   <main>
-
+    <!-- Troquei o min de 5 para ser 1 -->
     <section id="input-section">
-      <!--
-        https://github.com/tryber/sd-010-a-project-pixels-art/pull/7/commits/2916da47d317ad47de4f820bd0312fef688ddfdb
-        I took the "pattern" attribute to give it a try.
-      -->
-      <input min="5" max="50" placeholder="Resize pixel's board" type="number" id="board-size" pattern="/d+">
+      <input min="1" max="50" placeholder="Resize pixel's board" type="number" id="board-size">
       <button id="generate-board">VQV</button>
     </section>
 

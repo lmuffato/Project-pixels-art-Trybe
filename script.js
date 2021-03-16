@@ -47,10 +47,11 @@ function clearBoard() {
   }
 }
 
-function hideButton(event) {
+function disableButton(event) {
   const clearBoardButton = event.target;
 
-  clearBoardButton.style.visibility = 'hidden';
+  clearBoardButton.disabled = true;
+  clearBoardButton.classList.add('disabled');
   clearBoard();
 }
 
@@ -59,8 +60,9 @@ function pixelColor(event) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
   const clearBoardButton = document.querySelector('#clear-board');
 
-  clearBoardButton.style.visibility = 'visible';
-  clearBoardButton.addEventListener('click', hideButton);
+  clearBoardButton.disabled = false;
+  clearBoardButton.classList.remove('disabled');
+  clearBoardButton.addEventListener('click', disableButton);
   element.style.backgroundColor = selectedColor;
 }
 
