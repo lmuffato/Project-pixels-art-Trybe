@@ -40,6 +40,10 @@ document.querySelector('#generate-board').addEventListener('click', () => {
   const size = document.querySelector('#board-size');
   if (size.value === '') {
     alert('Board inválido!');
+  } if (size.value < 5) {
+    size.value = 5;
+  } if (size.value > 50) {
+    size.value = 50;
   }
   const calculation = 2.625 * size.value;
   board.style.height = `${calculation}em`;
