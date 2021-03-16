@@ -6,16 +6,15 @@ const generateBoard = document.querySelector('#generate-board');
 
 generateBoard.addEventListener('click', function () {
   let boardSize = document.querySelector('#board-size').value;
-  document.querySelector('#board-size').value = '';
-  createBoardSize(boardSize);
-});
-
-function createBoardSize(boardSize) {
   if (boardSize === '') {
     alert('Board inválido!');
-  } 
+  } if (boardSize < 5) {
+    boardSize = 5;
+  } if (boardSize > 50) {
+    boardSize = 50;
+  }
   createPixelBoard(boardSize);
-};
+});
 
 const pixelBoard = document.querySelector('#pixel-board');
 function createPixelBoard(size) {
