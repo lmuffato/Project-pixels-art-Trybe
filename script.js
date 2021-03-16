@@ -14,6 +14,22 @@ function createPixelBoard(size) {
 
 createPixelBoard(5);
 
+function createBoard() {
+  let boardSize = document.getElementById('board-size').value;
+  if (boardSize < 5) {
+    boardSize = 5;
+  } if (boardSize > 50) {
+    boardSize = 50;
+  } if (boardSize.value === '') {
+    window.alert('Board inválido!');
+  } else {
+    createPixelBoard(boardSize);
+  }
+}
+
+const vqvButton = document.getElementById('generate-board');
+vqvButton.addEventListener('click', createBoard);
+
 function classChange(event) {
   const paletteColors = document.querySelectorAll('.color');
   for (let index = 0; index < paletteColors.length; index += 1) {
@@ -69,25 +85,6 @@ function clickButton() {
 }
 
 clickButton();
-
-// --- Dinamic Board Size ---
-
-let boardSize = document.getElementById('board-size').value;
-
-function createBoard() {
-  if (boardSize < 5) {
-    boardSize = 5;
-  } if (boardSize > 50) {
-    boardSize = 50;
-  } if (boardSize.value === '') {
-    window.alert('Board inválido!');
-  } else {
-    createPixelBoard(boardSize);
-  }
-}
-
-const vqvButton = document.getElementById('generate-board');
-vqvButton.addEventListener('click', createBoard);
 
 function randomColor() {
   const paletteColors = document.getElementsByClassName('color');
