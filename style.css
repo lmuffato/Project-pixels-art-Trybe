@@ -33,13 +33,13 @@
 }
 
 table, td, tr {
-  border: solid black 1px;
-  border-collapse: collapse;
+  border: solid black 1px ;
+  border-collapse: collapse ;
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 41px;
   background-color: white;
 }
 
