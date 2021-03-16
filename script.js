@@ -20,7 +20,7 @@ function selectedColors() {
 
 // requisito 8
 function colorizedPixel() {
-  const pixelArray = document.querySelectorAll('#pixel-board');
+  const pixelArray = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixelArray.length; index += 1) {
     pixelArray[index].addEventListener('click', (ev) => {
       const clickPixel = ev.target;
@@ -32,7 +32,7 @@ function colorizedPixel() {
 
 // requisito 9
 function clearBoard() {
-  const pixels = document.querySelectorAll('#pixel-board');
+  const pixels = document.getElementsByClassName('pixel');
   const clearButton = document.getElementById('clear-board');
   clearButton.addEventListener('click', () => {
     for (let index = 0; index < pixels.length; index += 1) {
