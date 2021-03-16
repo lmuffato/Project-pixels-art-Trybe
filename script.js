@@ -19,7 +19,18 @@ function randomColor(){
 const colors = ['black', randomColor(), randomColor(), randomColor()];
 
 function fillPalette (){
-  for ( let index = 0; index < colorPalette.length; index += 1) {
-    colorPalette[index].style.backgroundColor = colors[index];
+  for ( let index = 0; index < color.length; index += 1) {
+    color[index].style.backgroundColor = colors[index];
   }
 }
+
+function selectColor(event) {
+  for(let index = 0; index <color.length; index += 1){
+    color[index].classList.remove('selected');
+    event.target.classList.add('selected');
+  }
+}
+
+colorPalette.addEventListener('click', selectColor);
+
+
