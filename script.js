@@ -1,16 +1,17 @@
 const colors = document.querySelectorAll('.color');
+const board = document.querySelector('#pixel-board');
 
 colors[0].style.backgroundColor = 'black';
 colors[1].style.backgroundColor = 'red';
 colors[2].style.backgroundColor = 'green';
 colors[3].style.backgroundColor = 'blue';
 
-function pixelBoard(number) {
+function boardSize(number) {
   for (let i = 0; i < number; i += 1) {
     for (let j = 0; j < number; j += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      document.querySelector('#pixel-board').appendChild(pixel);
+      board.appendChild(pixel);
     }
   }
 }
@@ -21,17 +22,31 @@ document.querySelector('#color-palette').addEventListener('click', (newSelected)
   newSelected.target.classList.add('selected');
 });
 
-document.querySelector('#pixel-board').addEventListener('click', (paint) => {
+board.addEventListener('click', (paint) => {
   const color = document.querySelector('.selected').style.backgroundColor;
   const targeted = paint.target;
   targeted.style.backgroundColor = color;
 });
 
-document.querySelector('#clear-board').addEventListener('click', () => {
+function clearBoard() {
   const pixel = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].style.backgroundColor = 'white';
   }
+}
+
+document.querySelector('#generate-board').addEventListener('click', () => {
+  board.innerText = '';
+  const size = document.querySelector('#board-size');
+  if (size.value === '') {
+    alert('Board inválido!');
+  }
+  const calculation = 2.625 * size.value;
+  board.style.height = `${calculation}em`;
+  board.style.width = `${calculation}em`;
+  boardSize(size.value);
+  clearBoard();
 });
 
-pixelBoard(5);
+boardSize(5);
+document.querySelector('#clear-board').addEventListener('click', clearBoard);
