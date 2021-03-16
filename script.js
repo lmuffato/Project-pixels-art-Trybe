@@ -34,7 +34,7 @@ function selectedColors() {
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
   const clearButton = document.getElementById('clear-board');
-  clearButton.addEventListener('click', function () {
+  clearButton.addEventListener('click', (event) => {
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'white';
     }
