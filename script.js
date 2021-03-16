@@ -19,12 +19,12 @@ function selectedColors() {
 }
 
 // requisito 8
-function colorizedPixel () {
-  let pixelArray = document.querySelectorAll('#pixel-board');
+function colorizedPixel() {
+  const pixelArray = document.querySelectorAll('#pixel-board');
   for (let index = 0; index < pixelArray.length; index += 1) {
     pixelArray[index].addEventListener('click', (ev) => {
-      let clickPixel = ev.target;
-      let selecionaCor = document.querySelector('.color selected').style.backgroundColor;
+      const clickPixel = ev.target;
+      const selecionaCor = document.querySelector('.color selected').style.backgroundColor;
       clickPixel.style.backgroundColor = selecionaCor;
     });
   }
@@ -33,5 +33,5 @@ function colorizedPixel () {
 window.onload = () => {
   blackSelected();
   selectedColors();
-  colocaCor();
+  colorizedPixel();
 };
