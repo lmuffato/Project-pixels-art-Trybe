@@ -29,6 +29,7 @@ body {
 }
 
 .pixel {
+  display: inline-block;
   background-color: white;
   border: 1px black solid;
   height: 40px;
@@ -36,7 +37,8 @@ body {
 }
 
 .pixel-line {
-  display: inline-block;
+  display: block;
+  margin-bottom: -5px;
 }
 
 #clear-board {
