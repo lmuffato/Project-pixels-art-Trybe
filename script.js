@@ -44,9 +44,9 @@ function pixelsColor() {
 pixelsColor();
 
 function createButton(buttonName, buttonId) {
-  let buttonContainer = document.getElementById('buttonDiv');
-  let newButton = document.createElement('button');
-  let newButtonID = buttonId;
+  const buttonContainer = document.getElementById('buttonDiv');
+  const newButton = document.createElement('button');
+  const newButtonID = buttonId;
 
   newButton.innerHTML = buttonName;
   newButton.id = newButtonID;
@@ -74,29 +74,40 @@ clickButton();
 
 let boardSize = document.getElementById('board-size').value;
 
-/* function generatePixels() {
-  for (let index = 0; index < boardSize ** 2; index += 1) {
-    const createPixel = document.createElement('div');
-    createPixel.className = 'pixel';
-    pixelsContainer.style.width = ((size * 41) + 'px');
-    //pixelsContainer.style.height = boardSize * 41;
-    pixelsContainer.appendChild(createPixel);
-  }
-} */
-
 function wrongParam(value) {
   if (value < 5) {
     value = 5;
+    console.log(value);
   } if (value > 50) {
     value = 50;
-  } if (value === '') {
-    return alert('Board inválido!');
-  }
+    console.log(value);
+  } if (value === null) {
+    alert('Board inválido!');
+ }
 }
+
+wrongParam();
 
 function createBoard() {
   wrongParam(boardSize);
   createPixelBoard(boardSize);
 }
 
-document.getElementById('generate-board').addEventListener('click', createBoard);
+const vqvButton = document.getElementById('generate-board');
+vqvButton.addEventListener('click', createBoard);
+
+function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const randomColor1 = `rgb(${r},${g},${b})`;
+  const randomColor2 = `rgb(${g},${b},${r})`;
+  const randomColor3 = `rgb(${b},${r},${g})`;
+  const colorsBlock = document.querySelectorAll('.color');
+  const randomColors = ['black', randomColor1, randomColor2, randomColor3];
+  for (let index = 0; index < colorsBlock.length; index += 1) {
+    const color = randomColors[index];
+    colorsBlock[index].style.backgroundColor = color;
+  }
+}
+randomColor();
