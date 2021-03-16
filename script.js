@@ -1,9 +1,5 @@
 window.onload = document.querySelector('.color').classList.add('selected');
 
-const selectedColor = document.getElementsByClassName('selected');
-const styleSelectedColor = window.getComputedStyle(selectedColor);
-const colorSelectedColor = styleSelectedColor.getPropertyValue('background-color');
-
 const black = document.getElementsByClassName('color')[0];
 const blue = document.getElementsByClassName('color')[1];
 const red = document.getElementsByClassName('color')[2];
@@ -52,7 +48,7 @@ function paintPixel(event) {
   const alvo = event.target;
   const styleAlvo = window.getComputedStyle(alvo);
   const colorAlvo = styleAlvo.getPropertyValue('background-color');
-  colorAlvo = colorSelectedColor;
+  alvo.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
 container.addEventListener('click', paintPixel);
@@ -60,10 +56,8 @@ container.addEventListener('click', paintPixel);
 const buttom = document.getElementById('clear-board');
 
 function clearPixels() {
-  for (let index = 0; index < pixels.length; index += 1) {
-    let paintPixel = window.getComputedStyle(pixels[index]);
-    let presentColor = paintPixel.getPropertyValue('background-color');
-    presentColor = 'white';
+  for (let seletor = 0; seletor < pixels.length; seletor += 1) {
+    pixels[seletor].style.backgroundColor = 'green';
   }
 }
 
