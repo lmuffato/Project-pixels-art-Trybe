@@ -49,7 +49,7 @@ function setPanelColors() {
 setPanelColors();
 window.onload = () => {
   colorPanel();
-  genereteTableBoard();
+  generateTableBoard();
   getPanelColors();
   setPanelColors();
   };
