@@ -1,8 +1,5 @@
 function createPixelBoard(size) {
   const pixelsContainer = document.querySelector('#pixel-board');
-  document.getElementById('pixel-board').innerHTML = '';
-  // let setWidth = window.getComputedStyle(pixelsContainer).getPropertyValue('width');
-  // console.log(setWidth = (`${size * 41}px`);
   pixelsContainer.style.width = ((size * 41) + 'px');
   pixelsContainer.style.height = ((size * 41) + 'px');
   for (let index = 0; index < size ** 2; index += 1) {
@@ -23,6 +20,7 @@ function createBoard() {
   } if (boardSize.value === '') {
     window.alert('Board inválido!');
   } else {
+    document.getElementById('pixel-board').innerHTML = '';
     createPixelBoard(boardSize);
   }
 }
