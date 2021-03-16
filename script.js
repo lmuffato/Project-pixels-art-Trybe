@@ -58,30 +58,28 @@ function deleteBoard() {
   const lines = document.querySelectorAll('.pixel-line');
   const section = document.querySelector('#pixel-board');
   for (let index = 0; index < lines.length; index += 1) {
-    section.removeChild(lines[index]);  
+    section.removeChild(lines[index]);
   }
 }
 
 function createInputText() {
-  const header = document.querySelector('#header');
+  const inputs = document.querySelector('#inputs');
   const input = document.createElement('input');
   input.id = 'board-size';
   input.type = 'number';
   input.min = 1;
   input.style.padding = '5px';
   input.placeholder = 'Escolha o número de pixels';
-  input.style.marginLeft = '550px';
   input.style.marginBottom = '15px';
-  header.appendChild(input);
+  inputs.appendChild(input);
 }
 
 function createInputBtn() {
-  const header = document.querySelector('#header');
+  const inputs = document.querySelector('#inputs');
   const btnInput = document.createElement('button');
   btnInput.id = 'generate-board';
   btnInput.innerText = 'VQV';
-  header.appendChild(btnInput);
-  btnInput.style.marginLeft = '20px';
+  inputs.appendChild(btnInput);
   btnInput.style.padding = '10px';
 }
 
@@ -113,11 +111,11 @@ function createBoardSize() {
 }
 
 function createClearBtn() {
-  const header = document.querySelector('#header');
+  const inputs = document.querySelector('#inputs');
   const btnClear = document.createElement('button');
   btnClear.id = 'clear-board';
   btnClear.innerText = 'Limpar';
-  header.appendChild(btnClear);
+  inputs.appendChild(btnClear);
 }
 
 function clearBoard() {
