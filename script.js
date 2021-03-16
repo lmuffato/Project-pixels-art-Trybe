@@ -15,10 +15,10 @@ function pixelBoard(number) {
   }
 }
 
-document.querySelector('#color-palette').addEventListener('click', (selected) => {
-  const selectedColor = document.querySelector('.selected');
-  selectedColor.classList.remove('selected');
-  selected.target.classList.add('selected');
+document.querySelector('#color-palette').addEventListener('click', (newSelected) => {
+  const oldSelected = document.querySelector('.selected');
+  oldSelected.classList.remove('selected');
+  newSelected.target.classList.add('selected');
 });
 
 document.querySelector('#pixel-board').addEventListener('click', (paint) => {

@@ -10,23 +10,24 @@
 
 <body>
     <header>
-        <h1 id='title'>Paleta de Cores</h1>
+        <h1 id='title' class='margins'>Paleta de Cores</h1>
     </header>
 
-    <section id='color-palette'>
+    <section id='color-palette' class='margins'>
         <div class='color selected'></div>
         <div class='color'></div>
         <div class='color'></div>
         <div class='color'></div>
     </section>
 
-    <input id='board-size' type='number' min='1'>
+    <input id='board-size' class='margins' type='number' min='1'>
     <button id='generate-board'>VQV</button>
 
     <button id='clear-board'>Limpar</button>
 
-    <section id='pixel-board' class='board'></section>
+    <div id='pixel-board' class='margins'></div>
 
     <script src='script.js'></script>
 </body>
+
 </html>

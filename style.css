@@ -1,28 +1,33 @@
-.color {
-  border: 1px solid black;
-  display: table-cell;
-  height: 50.275px;
-  width: 50.275px;
+* {
+  margin-top: 0;
+}
+
+.margins {
+  margin: 5px 0 0 5px;
 }
 
 section {
-  margin: 0 0 5px 5px;
   width: 210px;
 }
 
+.color {
+  border: 1px solid black;
+  display: table-cell;
+  height: 50.5px;
+  width: 50.5px;
+}
+
 input {
-  margin-left: 5px;
   width: 78px;
 }
 
 button {
-  margin: 0 5px 5px;
+  margin-left: 7.5px;
 }
 
-.board {
+#pixel-board {
   height: 13.125em;
   line-height: 0;
-  margin-left: 5px;
   width: 13.125em;
 }
 
