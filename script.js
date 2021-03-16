@@ -71,13 +71,13 @@ function clickButton() {
 clickButton();
 
 function createBoard() {
-  let boardSize = document.getElementById('board-size').value;
+  let boardSize = document.getElementById('board-size').valueAsNumber;
   if (boardSize < 5) {
     boardSize = 5;
   } if (boardSize > 50) {
     boardSize = 50;
-  } if (boardSize === '' || boardSize === null) {
-    window.alert('Board inválido!');
+  } if (boardSize === '') {
+    alert('Board inválido!');
   } else {
     document.getElementById('pixel-board').innerHTML = '';
     createPixelBoard(boardSize);
