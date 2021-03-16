@@ -16,4 +16,28 @@
   border: solid 2px black;
   height: 500px;
   width: 500px;
+  display: table;
 }
+
+.div-tr {
+  display: table-row;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  display: table-cell;
+  background-color: white;
+}
+
+
+/* table {
+  width: 100%;
+  padding: 0;
+}
+
+td{ 
+  border: solid 2px black;
+  padding:;
+} */
