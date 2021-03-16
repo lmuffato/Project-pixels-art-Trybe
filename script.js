@@ -20,11 +20,11 @@ function selectedColors() {
 
 // requisito 8
 function colorizedPixel() {
-  const pixelArray = document.getElementsByClassName('pixel');
-  for (let index = 0; index < pixelArray.length; index += 1) {
-    pixelArray[index].addEventListener('click', (ev) => {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', (ev) => {
       const clickPixel = ev.target;
-      const selecionaCor = document.querySelector('.selected').style.backgroundColor;
+      const selecionaCor = document.querySelector('.color selected').style.backgroundColor;
       clickPixel.style.backgroundColor = selecionaCor;
     });
   }
@@ -32,11 +32,11 @@ function colorizedPixel() {
 
 // requisito 9
 function clearBoard() {
-  const pixels = document.getElementsByClassName('pixel');
+  const allPixels = document.querySelectorAll('#pixel-board');
   const clearButton = document.getElementById('clear-board');
   clearButton.addEventListener('click', () => {
-    for (let index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = 'white';
+    for (let index = 0; index < allPixels.length; index += 1) {
+      allPixels[index].style.backgroundColor = 'white';
     }
   });
 }
