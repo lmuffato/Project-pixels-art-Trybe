@@ -1,15 +1,15 @@
 function generateRandomColors() {
   return Math.ceil(Math.random() * 255);
 }
-let colorChannelOne = generateRandomColors()
-let colorChannelTwo = generateRandomColors()
-let colorChannelThree = generateRandomColors()
-let colorChannel2One = generateRandomColors()
-let colorChannel2Two = generateRandomColors()
-let colorChannel2Three = generateRandomColors()
-let colorChannel3One = generateRandomColors()
-let colorChannel3Two = generateRandomColors()
-let colorChannel3Three = generateRandomColors()
+let colorChannelOne = generateRandomColors();
+let colorChannelTwo = generateRandomColors();
+let colorChannelThree = generateRandomColors();
+let colorChannel2One = generateRandomColors();
+let colorChannel2Two = generateRandomColors();
+let colorChannel2Three = generateRandomColors();
+let colorChannel3One = generateRandomColors();
+let colorChannel3Two = generateRandomColors();
+let colorChannel3Three = generateRandomColors();
 
 document.querySelector('.black').style.backgroundColor = 'black';
 document.querySelector('.channel-one').style.backgroundColor = `rgb(${colorChannelOne}, ${colorChannelTwo}, ${colorChannelThree})`;
@@ -77,3 +77,13 @@ document.addEventListener('click', function (event) {
 pixelBoard.addEventListener('click', function (event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 });
+
+// Para a realização do projeto precisei de dicas de meus colegas no Slack:
+// Andre Jaques
+// Mauricio Vegas
+// além também de suporte do plantão.
+// Também consultei o material de aulas passadas do bloco
+// https://github.com/tryber/sd-10a-live-lectures/blob/lecture/4.4/mega-sena.js
+// E alguns sites:
+// https://www.w3schools.com/
+// https://developer.mozilla.org/en-US/
