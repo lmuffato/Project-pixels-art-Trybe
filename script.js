@@ -1,6 +1,8 @@
 window.onload = document.querySelector('.color').classList.add('selected');
 
-const selectedColor = document.getElementsByClassName('selected').style.backgroundColor;
+const selectedColor = document.getElementsByClassName('selected');
+const styleSelectedColor = window.getComputedStyle(selectedColor);
+const colorSelectedColor = styleSelectedColor.getPropertyValue('background-color');
 
 const black = document.getElementsByClassName('color')[0];
 const blue = document.getElementsByClassName('color')[1];
@@ -44,8 +46,25 @@ green.addEventListener('click', greenSelected);
 
 const pixels = document.getElementsByClassName('pixel');
 
-// for (let index = 0; index < pixels.length; index += 1) {
-  // pixels[index].addEventListener('click', function(){
-  // pixels[index] = selectedColor
-  // });
-// }
+const container = document.getElementById('pixel-board');
+
+function paintPixel(event) {
+  const alvo = event.target;
+  const styleAlvo = window.getComputedStyle(alvo);
+  const colorAlvo = styleAlvo.getPropertyValue('background-color');
+  colorAlvo = colorSelectedColor;
+}
+
+container.addEventListener('click', paintPixel);
+
+const buttom = document.getElementById('clear-board');
+
+function clearPixels() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    let paintPixel = window.getComputedStyle(pixels[index]);
+    let presentColor = paintPixel.getPropertyValue('background-color');
+    presentColor = 'white';
+  }
+}
+
+buttom.addEventListener('click', clearPixels);
