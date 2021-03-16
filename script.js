@@ -1,4 +1,5 @@
 function createPixelBoard(size) {
+  document.getElementById('pixel-board').innerHTML = '';
   const pixelsContainer = document.querySelector('#pixel-board');
   pixelsContainer.style.width = ((size * 41) + 'px');
   pixelsContainer.style.height = ((size * 41) + 'px');
@@ -10,9 +11,6 @@ function createPixelBoard(size) {
 }
 
 createPixelBoard(5);
-
-const vqvButton = document.getElementById('generate-board');
-vqvButton.addEventListener('click', createBoard);
 
 function classChange(event) {
   const paletteColors = document.querySelectorAll('.color');
@@ -70,7 +68,31 @@ function clickButton() {
 
 clickButton();
 
-function createBoard() {
+/* function sizeFix() {
+  let getBoardSize = document.getElementById('board-size');
+  if (getBoardSize.value === '') {
+    alert('Board inválido!');
+    return;
+  }
+  getBoardSize = Number(getBoardSize.value);
+  if (getBoardSize < 5) {
+    getBoardSize = 5;
+  }
+  if (getBoardSize > 50) {
+    getBoardSize = 50;
+  }
+  return getBoardSize;
+}
+
+function finalResultBoard() {
+  document.getElementById('pixel-board').innerHTML = '';
+  createPixelBoard(sizeFix());
+  pixelsColor();
+}
+
+finalResultBoard(); */
+
+/* function createBoard() {
   let boardSize = document.getElementById('board-size').value;
   if (boardSize < 5) {
     boardSize = 5;
@@ -83,7 +105,7 @@ function createBoard() {
     createPixelBoard(boardSize);
     pixelsColor();
   }
-}
+} */
 
 /* function createBoard() {
   let boardSize = document.getElementById('board-size').value;
@@ -114,6 +136,25 @@ function createBoard() {
     pixelsColor();
   }
 } */
+
+function createBoard() {
+  let boardSize = document.getElementById('board-size');
+  if (boardSize.value === '') {
+    alert('Board inválido!');
+    return;
+  }
+  boardSize = Number(boardSize.value);
+  if (boardSize < 5) {
+    boardSize = 5;
+  } else if (boardSize > 50) {
+    boardSize = 50;
+  } return createPixelBoard(boardSize);
+}
+
+pixelsColor();
+
+const vqvButton = document.getElementById('generate-board');
+vqvButton.addEventListener('click', createBoard);
 
 function randomColor() {
   const paletteColors = document.getElementsByClassName('color');
