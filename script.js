@@ -44,5 +44,6 @@ function clearBoard() {
 window.onload = () => {
   blackSelected();
   selectedColors();
+  colorizedPixel();
   clearBoard();
 };
