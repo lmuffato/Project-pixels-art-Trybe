@@ -85,6 +85,7 @@ document.querySelectorAll('.pixel').forEach(pixelSelecionado => {
 //Função que adiciona elementos baseados no valor da caixa de texto, após clicar no botão
 function boardSizeGenerator () {
     let valorDoInput = document.querySelector('#board-size').value;
+    if (valorDoInput==""){alert("Board inválido!");}
     if (valorDoInput<5){valorDoInput = 5}; if (valorDoInput>50){valorDoInput = 50};
     let alinhadorDoGrid = 'repeat('+Math.sqrt(valorDoInput*valorDoInput)+' , 0fr)';
     document.querySelector('#pixel-board').style.gridTemplateColumns = alinhadorDoGrid;
