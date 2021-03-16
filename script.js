@@ -92,7 +92,7 @@ function createBoard() {
   } else if (boardSize < 5) {
     boardSize = 5;
   } else if (boardSize > 50) {
-    boardSize = 50;  
+    boardSize = 50;
   } else {
     document.getElementById('pixel-board').innerHTML = '';
     createPixelBoard(boardSize);
