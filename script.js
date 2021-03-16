@@ -40,7 +40,6 @@ function setPanelColors() {
 setPanelColors();
 window.onload = () => {
   colorPanel();
-  genereteTableBoard();
   getPanelColors();
   setPanelColors();
   };
