@@ -15,40 +15,31 @@ function createPalette() {
 
 createPalette();
 
-function createTr() {
-  const getBoard = document.getElementById('pixel-board');
-  for(let index = 0; index < 5; index += 1){
-    const divTr = document.createElement('div');
-    divTr.className = ('linha'+ index);
-    divTr.className += ' div-tr';
-    getBoard.appendChild(divTr); 
-  }
-
-  createPixel();
-   
-}
-
-createTr();
-
 function createPixel() {
-  // const getLines = document.getElementsByClassName('div-tr');
   const getLines = document.getElementById('pixel-board').childNodes;
   for (let index = 0; index < getLines.length; index += 1) {
-
-    let getTr = getLines[index];
+    const getTr = getLines[index];
     for (let i = 0; i < getLines.length; i += 1) {
-
-      let createCell = document.createElement('div');
+      const createCell = document.createElement('div');
       createCell.className = 'pixel';
 
       getTr.appendChild(createCell);
-
     }
   }
-
 }
 
+function createBoard() {
+  const getBoard = document.getElementById('pixel-board');
+  for (let index = 0; index < 5; index += 1) {
+    const divTr = document.createElement('div');
+    divTr.className += ' div-tr';
+    getBoard.appendChild(divTr);    
+  }
 
+  createPixel();
+}
+
+createBoard();
 //criar evento do clique
 
 // armazenar em sessionstorage ? a cor do clique
