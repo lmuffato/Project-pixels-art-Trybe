@@ -89,9 +89,9 @@ function createBoard() {
   let boardSize = document.getElementById('board-size').value;
   if (boardSize === '') {
     alert('Board inválido!');
-  } else if (boardSize < 5) {
+  if (boardSize < 5) {
     boardSize = 5;
-  } else if (boardSize > 50) {
+  if (boardSize > 50) {
     boardSize = 50;
   } else {
     document.getElementById('pixel-board').innerHTML = '';
