@@ -1,4 +1,4 @@
-//TESTE: Seleciona o título e marca ele como verde
+//TESTE: Seleciona o título e marca ele como verde apenas de teste
 document.getElementsByTagName("h1")[0].style.color = 'rgb(62, 196, 0)';
 
 /*Seleciona o elemento pelo querySelector, retornando um arrey com as divs
