@@ -4,7 +4,7 @@
 }
 
 #title {
-    margin-left: 760px
+    margin-left: 820px
 }
 
 .color {
@@ -23,4 +23,16 @@
     height: 40px;
     display: table-cell;
     padding: 8px;
+}
+
+#color-palette {
+    text-align: center;
+}
+
+#clear-board {
+    margin-left: 780px;
+}
+
+#pixel-board{
+    margin-left: 780px;
 }
