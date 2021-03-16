@@ -10,10 +10,22 @@ function selectedColors() {
   for (let index = 0; index < setColors.length; index += 1) {
     setColors[index].addEventListener('click', (event) => {
       if (event.target.className === 'color') {
-        const firstSelected = document.querySelector('.selected');
-        firstSelected.className = 'color';
+        const colorSelected = document.querySelector('.selected');
+        colorSelected.className = 'color';
         setColors[index].className = 'color selected';
       }
+    });
+  }
+}
+
+// requisito 8
+function colorizedPixel () {
+  let pixelArray = document.querySelectorAll('#pixel-board');
+  for (let index = 0; index < pixelArray.length; index += 1) {
+    pixelArray[index].addEventListener('click', (ev) => {
+      let clickPixel = ev.target;
+      let selecionaCor = document.querySelector('.color selected').style.backgroundColor;
+      clickPixel.style.backgroundColor = selecionaCor;
     });
   }
 }
@@ -21,4 +33,5 @@ function selectedColors() {
 window.onload = () => {
   blackSelected();
   selectedColors();
+  colocaCor();
 };
