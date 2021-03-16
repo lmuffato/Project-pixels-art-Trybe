@@ -9,7 +9,7 @@ document.querySelector('.green').style.backgroundColor = 'green';
 function colorSelection() {
   const listElements = document.getElementsByClassName('color');
 
-  for (let i = 0; i <= listElements.length; i += 1) {
+  for (let i = 0; i < listElements.length; i += 1) {
     listElements[i].addEventListener('click', () => {
       for (let i2 = 0; i2 < listElements.length; i2 += 1) {
         listElements[i2].classList.remove('selected');
