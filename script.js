@@ -1,7 +1,3 @@
-const createPalette = document.getElementById('color-palette');
-const generateBoard = document.getElementById('generate-board');
-const boardSize = document.getElementById('board-size');
-const clearBoard = document.getElementById('clear-board');
 const pixelBoard = document.querySelector('#pixel-board');
 
 const cor1 = document.getElementsByClassName('color')[0];
@@ -31,7 +27,7 @@ function colorUpdate() {
     cor4.style.backgroundColor = randomRGB();
   })
 }
-colorUpdate()
+colorUpdate();
 
 cor1.addEventListener('click', () => {
   cor1.classList.add('selected');
@@ -51,7 +47,6 @@ cor2.addEventListener('click', () => {
   
   console.log('Cliquei na cor 2');
 });
-
 
 cor3.addEventListener('click', () => {
   cor3.classList.add('selected');
@@ -78,7 +73,7 @@ function createBoard(lines, columns) {
     const nLines = document.createElement('tr');
     pixelBoard.appendChild(nLines);
     for (let index = 0; index < columns; index += 1) {
-      let nColumns = document.createElement('td')
+      let nColumns = document.createElement('td');
       nLines.appendChild(nColumns);
       nColumns.className = 'pixel';
     }
@@ -96,8 +91,7 @@ function createBoard(lines, columns) {
     }
   })  
 }
-createBoard(5, 5)
-
+createBoard(5, 5);
 
 let generate = document.querySelector('#generate-board');
 
@@ -117,17 +111,15 @@ let generate = document.querySelector('#generate-board');
     linesNColumns = 50;
   }
   
-  createBoard(linesNColumns, linesNColumns)
+  createBoard(linesNColumns, linesNColumns);
 })
 
 //nessa parte tive uma grande ajuda do Renzo Sevilla para reduzir o código e melhorar uns bugs que tava dando ao colorir todo o conteúdo do document
-
 
 function chooseColor() {
   const selection = document.querySelector('.selected');
   const bgColor = window.getComputedStyle(selection, null).getPropertyValue("background-color");
   return bgColor;
-
 }
 
 function fillPixel(e) {
@@ -141,13 +133,9 @@ function fillChoose() {
 
   })
 }
-  fillChoose()
-
-
+  fillChoose();
 // consultei o pullRequest https://github.com/tryber/sd-010-a-project-pixels-art/pull/119/files 
 // para obter uma idéia de como fazer essa parte abaixo e então percebi que o pix recebe um Array
 // com todos os elementos de class pixel. Logo eu teria que fazer um loop para percorrê-lo.
 // O Jodial usou um for simples. Eu pesquisei no canal do CFB Cursos e aprendi sobre a utilização 
 // do for of.
-
-
