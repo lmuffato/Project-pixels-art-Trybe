@@ -72,7 +72,7 @@ clickButton();
 
 // --- Dinamic Board Size ---
 
-let boardSize = document.getElementById('board-size').valueAsNumber;
+let boardSize = document.getElementById('board-size').value;
 
 function createBoard() {
   if (boardSize < 5) {
@@ -92,7 +92,9 @@ vqvButton.addEventListener('click', createBoard);
 function randomColor() {
   const paletteColors = document.getElementsByClassName('color');
   for (let index = 1; index < paletteColors.length; index += 1) {
-    const randomColors = `rgb(${Math.random() * 254},${Math.random() * 254},${Math.random() * 254})`;
+    const randomColors = (`rgb(${Math.random() * 254},
+      ${Math.random() * 254},
+      ${Math.random() * 254})`);
     paletteColors[index].style.background = randomColors;
   }
 }
