@@ -1,3 +1,19 @@
+function createPixelBoard(size) {
+  const pixelsContainer = document.querySelector('#pixel-board');
+  document.getElementById('pixel-board').innerHTML = '';
+  // let setWidth = window.getComputedStyle(pixelsContainer).getPropertyValue('width');
+  // console.log(setWidth = (`${size * 41}px`);
+  pixelsContainer.style.width = ((size * 41) + 'px');
+  pixelsContainer.style.height = ((size * 41) + 'px');
+  for (let index = 0; index < size ** 2; index += 1) {
+    const createPixels = document.createElement('div');
+    createPixels.className = 'pixel';
+    pixelsContainer.appendChild(createPixels);
+  }
+}
+
+createPixelBoard(5);
+
 function classChange(event) {
   const paletteColors = document.querySelectorAll('.color');
   for (let index = 0; index < paletteColors.length; index += 1) {
@@ -56,17 +72,31 @@ clickButton();
 
 // --- Dinamic Board Size ---
 
-const boardSize = document.getElementById('board-size').value;
+let boardSize = document.getElementById('board-size').value;
 
-function createBoard() {
-  let boardSizeValue = boardSize;
-  if (boardSizeValue < 5) {
-    boardSizeValue = 5;
-  } if (boardSizeValue > 50) {
-    boardSizeValue = 50;
-  } if (boardSizeValue === '') {
+/* function generatePixels() {
+  for (let index = 0; index < boardSize ** 2; index += 1) {
+    const createPixel = document.createElement('div');
+    createPixel.className = 'pixel';
+    pixelsContainer.style.width = ((size * 41) + 'px');
+    //pixelsContainer.style.height = boardSize * 41;
+    pixelsContainer.appendChild(createPixel);
+  }
+} */
+
+function wrongParam(value) {
+  if (value < 5) {
+    value = 5;
+  } if (value > 50) {
+    value = 50;
+  } if (value === '') {
     return alert('Board inválido!');
   }
+}
+
+function createBoard() {
+  wrongParam(boardSize);
+  createPixelBoard(boardSize);
 }
 
 document.getElementById('generate-board').addEventListener('click', createBoard);
