@@ -57,7 +57,7 @@ const buttom = document.getElementById('clear-board');
 
 function clearPixels() {
   for (let seletor = 0; seletor < pixels.length; seletor += 1) {
-    pixels[seletor].style.backgroundColor = 'green';
+    pixels[seletor].style.backgroundColor = 'white';
   }
 }
 
