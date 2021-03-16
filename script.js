@@ -41,18 +41,5 @@ function generateTableBoard() {
   }
   getPanelColors();
   
-function setPanelColors(){
-    const tbl = document.getElementById('pixel-board');
-    tbl.addEventListener('click' , (event) => {
-      const color = document.querySelector('.selected').style.backgroundColor;
-      event.target.style.backgroundColor = color;
-    });    
-  }
-setPanelColors();
 
-window.onload = () => {
-  colorPanel();
-  genereteTableBoard();
-  getPanelColors();
-  setPanelColors();
-};
+
