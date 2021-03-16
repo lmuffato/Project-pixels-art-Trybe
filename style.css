@@ -31,8 +31,8 @@ body {
 .pixel {
   background-color: white;
   border: 1px black solid;
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel-line {
