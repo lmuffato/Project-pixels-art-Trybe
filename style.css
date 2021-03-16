@@ -41,6 +41,13 @@ body {
   background-color: darkorange;
 }
 
+#clear-board {
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 5px;
+}
+
 .pixel {
   width: 40px;
   height: 40px;

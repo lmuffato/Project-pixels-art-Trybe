@@ -30,6 +30,18 @@ function selectedColors() {
 //   }
 // }
 
+// requisito 9
+function clearBoard() {
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.addEventListener('click', function() {
+    let pixels = document.querySelectorAll('.pixel');
+    for (item of pixels) {
+      item.style.backgroundColor = 'rgb(255, 255, 255)'
+    }
+  });
+}
+
+
 window.onload = () => {
   blackSelected();
   selectedColors();
