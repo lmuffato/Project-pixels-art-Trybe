@@ -91,3 +91,15 @@ function resetBtn() {
     })
   }
   resetBtn();
+
+  function randomPalettes () {
+    const color = document.getElementsByClassName('color');
+      for (let index = 1; index < color.length; index+=1) {
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        const rgb = `rgb(${r}, ${g}, ${b})`;
+        color[index].style.backgroundColor = rgb;
+      }
+  }
+  randomPalettes();
