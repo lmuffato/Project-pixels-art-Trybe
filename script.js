@@ -61,7 +61,8 @@ painting();
 
 function clearBtn () {
   const btnReset = document.createElement('button');
-  document.body.appendChild(btnReset);
+  const userInterface = document.getElementById('userPainel');
+  userInterface.appendChild(btnReset);
   btnReset.innerText = 'Limpar';
   btnReset.id = 'clear-board';
   btnReset.addEventListener('click', ()=> {
