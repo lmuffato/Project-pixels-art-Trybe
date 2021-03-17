@@ -1,4 +1,4 @@
-window.onload = fillPalette
+window.onload = fillPalette 
  
 const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
@@ -33,4 +33,12 @@ function selectColor(event) {
 
 colorPalette.addEventListener('click', selectColor);
 
+function paintPixel(event) {
+  if(event.target.id !== 'pixel-board'){
+    event.target.style.backgroundColor = window.getComputedStyle(document.querySelector('.selected')).getPropertyValue('background-color');
+  }    
+}
 
+pixelBoard.addEventListener('click', paintPixel);
+
+// o window.get foi uma dica do André Jaques em uma thread aberta pelo Rafael Cardoso no Slack.

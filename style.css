@@ -31,3 +31,9 @@ table, td, tr {
   margin-left: 525px;
   margin-top: 40px;
 }
+
+#clear-board {
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
