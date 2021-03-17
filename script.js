@@ -11,7 +11,7 @@ createPalettes(4);
 function paletteColor(){
 
     const pColor = document.getElementsByClassName('color');
-    pColor[0].style.backgroundColor = 'red';
+    pColor[0].style.backgroundColor = 'black';
     pColor[1].style.backgroundColor = 'green';
     pColor[2].style.backgroundColor = 'yellow';
     pColor[3].style.backgroundColor = 'blue';
