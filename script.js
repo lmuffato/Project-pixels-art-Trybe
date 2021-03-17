@@ -10,8 +10,7 @@ function addPixel() {
 
 addPixel();
 
-// criar uma função com condição para add class selected uma cor por vez. Evento. 
-// window.onload = funtion () {
+// criar uma função com condição para add class selected uma cor por vez.
 
 // criar elemento clique
 let colorPalette = document.getElementsByClassName('color');
@@ -24,7 +23,7 @@ colorPalette[index].addEventListener('click', selectedColor);
 // evento da fução clique
 function selectedColor(evento) {
   
-   // REmove a classe select     
+   // Remove a classe select     
     let colors = document.querySelectorAll('.selected');
     colors[0].classList.remove('selected');
 
