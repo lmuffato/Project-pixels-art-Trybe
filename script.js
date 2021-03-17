@@ -40,6 +40,43 @@ function createBoard() {
 }
 
 createBoard();
+
+window.onload = jsLoaded
+
+function jsLoaded() {
+
+  // const getColors = document.querySelectorAll('.color');
+
+  // function selectColor() { 
+  //   for (let index = 0; index < getColor.length; index += 1) {
+  //     const colors = getColors[index];
+  //     colors.addEventListener('click', changeClass)
+  //   }
+    
+  //   // function changeClass(event) {
+  //   //   const selected = document.getElementsByClassName('color');
+  //   //   if (selected = 'color') {
+  //   //     selected.className = 'selected'
+  //   //   }  
+  //   // }
+  // }
+
+  const getPixel = document.getElementsByClassName('pixel');
+
+  function addClick() {
+    for (let index = 0; index < getPixel.length; index += 1) {
+      const onePixel = getPixel[index];
+      onePixel.addEventListener("click", paintPixel);
+    }
+    
+  }
+
+  addClick()
+  
+  function paintPixel() {
+    alert ('bombou!')
+  }
+}
 //criar evento do clique
 
 // armazenar em sessionstorage ? a cor do clique
