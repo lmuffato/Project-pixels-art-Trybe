@@ -61,5 +61,9 @@ tbody {
   box-sizing: border-box;
   height: 40px;
   width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  max-width: 40px;
   background-color: white;
 }
