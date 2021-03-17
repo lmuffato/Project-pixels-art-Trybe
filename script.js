@@ -3,6 +3,7 @@ function addPixel() {
   for (let index = 0; index < 25; index += 1) {
       let pixelParent = document.getElementById('pixel-board');
       let divPixel = document.createElement('div');
+      divPixel.addEventListener('click', pintar);
       divPixel.className = 'pixel'; // divPixel.classList.add('pixel') 
       pixelParent.appendChild(divPixel);
   }
@@ -44,5 +45,17 @@ function clearAll() {
     pixelsBoard[index].style.backgroundColor = 'rgb(255, 255 ,255)';
   }
 }
+
+
+function pintar(e){
+  let getColor = document.querySelector('.selected');
+  // variável para pegar o estilo que foi computado no navegar - geral - o background-color
+  let pickedColor = window.getComputedStyle(getColor);
+  let cor = pickedColor.getPropertyValue('background-color');
+  
+  e.target.style.backgroundColor = cor; // só funciona dentro do addEventListener
+}
+
+
 
 

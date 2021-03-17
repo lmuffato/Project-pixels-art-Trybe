@@ -1,7 +1,7 @@
-.container {
+.color {
   width: 40px;
   height: 40px;
-  padding: 30px;
+  /* padding: 30px; */
   display: inline-block;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .selected  {
-  box-sizing: border-box;
+  box-sizing: content-box;
   border: 1px solid black;
   display: inline-block;
 }
