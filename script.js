@@ -17,6 +17,9 @@ const Clear = document.getElementById('clear-board');
 const palleteColorRandom = ['black', randomColor(), randomColor(), randomColor()];
 function randomColor() {
   const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  if (randomColor === '#ffffff' || randomColor === '#000000') {
+    randomColor = 'blue';
+  }
   return randomColor;
 }
 

@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 main {
   display: block;
@@ -41,11 +41,11 @@ nav {
   height: 70px;
   width: 70px;
   padding: 10px;
-  background-color: white;
+  background-color: blue;
 }
 
 tbody {
-    border-spacing: 0;
+  border-spacing: 0;
 }
 
 #pixel-board {
@@ -58,8 +58,11 @@ tbody {
 
 .pixel {
   border: 1px solid black;
-  min-height: 40px;
-  max-width: 40px;
-  background-color: white;    
+  height: 40px;
+  width: 40px;
+  min-height: 38px;
+  max-height: 38px;
+  min-width: 38px;
+  max-width: 38px;
+  background-color: white;
 }
-
