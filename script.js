@@ -18,12 +18,12 @@ function paletteColor() {
 }
 paletteColor();
 
-function createPixels() {
+function createPixels(size) {
   const pixelBox = document.getElementById('pixel-board');
-  for (let index = 0; index < 5; index += 1) {
+  for (let index = 0; index < size; index += 1) {
     const pixelC = document.createElement('div');
     pixelBox.appendChild(pixelC);
-    for (let indexx = 0; indexx < 5; indexx += 1) {
+    for (let indexx = 0; indexx < size; indexx += 1) {
       const pixelL = document.createElement('div');
       pixelC.appendChild(pixelL);
       pixelL.className = 'pixel';
@@ -31,7 +31,7 @@ function createPixels() {
   }
 }
 
-createPixels();
+createPixels(5);
 function colorClick(){
   const colorClicking = document.getElementById('color-palette');
   colorClicking.addEventListener('click',(e) =>{
@@ -73,3 +73,21 @@ function clearBtn () {
 }
 
 clearBtn();
+
+function resetBtn() {
+  const input = document.getElementById('board-size');
+  const rstBtn = document.getElementById('generate-board');
+  rstBtn.addEventListener('click', () => {
+    const pixelBoard = document.getElementById('pixel-board');
+    if(input.value === ''){
+      alert('Board inválido!')
+      input.value = 5;
+    } else if (input.value < 5) {
+      input.value = 5;
+    } else if (input.value > 50) {
+      input.value = 50;
+    } pixelBoard.innerHTML = '';
+      createPixels(input.value);
+    })
+  }
+  resetBtn();
