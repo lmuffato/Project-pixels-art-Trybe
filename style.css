@@ -21,6 +21,15 @@
   width: 40px;
   height: 40px;
   border: 1px solid;
-  background-color: white;
+  
   margin: 1px;
+}
+
+#clear-board {
+  margin-left: 45px;
+  margin-bottom: 20px;  
+}
+
+.color-white {
+  background-color: white;
 }
