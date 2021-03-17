@@ -58,9 +58,8 @@ tbody {
 
 .pixel {
   border: 1px solid black;
-  width: 42px;
-  height: 42px;
+  min-height: 40px;
+  max-width: 40px;
   background-color: white;    
-
 }
 
