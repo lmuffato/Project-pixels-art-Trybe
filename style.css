@@ -4,18 +4,34 @@
   display: inline-block;
   border: black solid 1px;
 }
+
 .color:nth-child( 1 ) {
   background-color: black;
 }
-  
+
 .color:nth-child( 2 ) {
   background-color: orange;
 }
- 
+
 .color:nth-child( 3 ) {
   background-color: purple;
 }
 
 .color:nth-child( 4 ) {
   background-color: green;
+}
+
+#pixel-board {
+  width: 260px;
+  height: 260px;
+  border: 1px solid black;
+}
+
+.pixel {
+  display: inline-block;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  margin-bottom: -4px;
 }
