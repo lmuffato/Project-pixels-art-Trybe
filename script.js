@@ -7,7 +7,7 @@ function createColorPalette(qnt) {
   }
 }
 
-createPalettes(4);
+createColorPalettes(4);
 
 function paletteColor() {
     const palleteColor = document.getElementsByClassName('color');
