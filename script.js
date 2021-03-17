@@ -44,7 +44,7 @@ function createTable() {
 }
 
 // REQUISITO 7 (TEMIDA) - Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro. //
-
+// resolução com o auxílio do Adão Jr - Turma 10 - Tribo B //
 function addSelect() {
   const getSelect = document.querySelectorAll('.color');
   for (let index = 0; index < getSelect.length; index += 1) {
@@ -59,12 +59,12 @@ function addSelect() {
 }
 
 // REQUISITO 8 - Pintar o pixel com a cor selecionada //
-
+// resolução com o auxílio do Adão Jr - Turma 10 - Tribo B //
 function pixelSelected() {
   const colorPixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < colorPixel.length; index += 1) {
-    colorPixel[index].addEventListener('click', printPixel)
-    }
+    colorPixel[index].addEventListener('click', printPixel);
+  }
   function printPixel() {
     const lookPixel = document.querySelectorAll('td');
     for (let index2 = 0; index2 < lookPixel.length; index2 += 1) {
@@ -105,5 +105,5 @@ window.onload = function () {
   createTable();
   addSelect();
   pixelSelected();
-  buttonClearPixel()
+  buttonClearPixel();
 };
