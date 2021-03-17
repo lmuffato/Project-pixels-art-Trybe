@@ -45,12 +45,28 @@ function colorPixels() {
     });
   });
 }
+// Para esse requisito contei com a ajuda do código do Iago Ferreira, para gerar as cores aleatórias e concatenar formando um rgb.
+function generateDivColors() {
+  let colorCreate = 'rgb(';
+  colorCreate += Math.floor(Math.random() * 255);
+  colorCreate += ', ';
+  colorCreate += Math.floor(Math.random() * 255);
+  colorCreate += ', ';
+  colorCreate += Math.floor(Math.random() * 255);
+  colorCreate += ')';
+  return colorCreate;
+}
+
+function divReceiveColors() {
+  const randomColors = ['black', generateDivColors(), generateDivColors(), generateDivColors()];
+  const divColors = document.getElementsByClassName('color');
+  for (let index = 0; index < Array.from(divColors).length; index += 1) {
+    divColors[index].style.backgroundColor = randomColors[index];
+  }
+}
 
 // Para criar o quadro via js contei com a ajuda do Luan Ramalho que dedicou seu tempo em uma call, explicando sua lógica.
 function createBoard(lines, columns, destiny) {
-  console.log(lines);
-  console.log(columns);
-  console.log(destiny);
   for (let index = 0; index < lines; index += 1) {
     const numberOfLines = document.createElement('tr');
     destiny.appendChild(numberOfLines);
@@ -64,6 +80,7 @@ function createBoard(lines, columns, destiny) {
   updatePixelBorder();
   colorPixels();
   initiateColor();
+  generateDivColors();
 }
 
 function generateBoard() {
@@ -121,4 +138,5 @@ window.onload = function startSession() {
   createClassSelected();
   changePlaceClassSelected();
   clickButton();
+  divReceiveColors();
 };
