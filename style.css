@@ -20,51 +20,15 @@ h1 {
   background-color: black;
 }
 
-.pixel-black {
-  background-color: black;
-  display: table-cell;
-  box-sizing: content-box;
-  border: 1px solid black;
-  width: 41px;
-  height: 41px;
-}
-
 .red {
   background-color: red;
-}
-
-.pixel-red {
-  background-color: red;
-  display: table-cell;
-  box-sizing: content-box;
-  border: 1px solid black;
-  width: 41px;
-  height: 41px;
 }
 
 .green {
   background-color: green;
 }
 
-.pixel-green {
-  background-color: green;
-  display: table-cell;
-  box-sizing: content-box;
-  border: 1px solid black;
-  width: 41px;
-  height: 41px;
-}
-
 .blue {
-  background-color: blue;
-}
-
-.pixel-blue {
-  display: table-cell;
-  box-sizing: content-box;
-  border: 1px solid black;
-  width: 41px;
-  height: 41px;
   background-color: blue;
 }
 
@@ -82,12 +46,9 @@ h1 {
   display: table-cell;
   box-sizing: content-box;
   border: 1px solid black;
+  background-color: white;
   width: 41px;
   height: 41px;
-}
-
-.white {
-  background-color: white;
 }
 
 .wrapper {
