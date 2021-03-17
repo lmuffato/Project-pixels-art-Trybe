@@ -36,7 +36,6 @@ function colorClick(){
   const colorClicking = document.getElementById('color-palette');
   colorClicking.addEventListener('click',(e) =>{
     const target1 = e.target;
-    console.log(e);
     const color = document.getElementsByClassName('color');
     for (let index = 0; index < color.length; index+=1){
       color[index].classList.remove('selected');
@@ -47,3 +46,16 @@ function colorClick(){
   })
 }
 colorClick();
+
+function painting(){
+  const board = document.getElementById('pixel-board');
+  board.addEventListener('click', (e)=>{
+    const target1 = e.target;
+  const targets = document.querySelector('.selected');
+  if(target1.className === 'pixel'){
+    target1.style.backgroundColor = targets.style.backgroundColor;
+  }
+  })
+}
+
+painting();
