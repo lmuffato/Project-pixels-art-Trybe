@@ -14,6 +14,7 @@ function paletteColor() {
   pColor[1].style.backgroundColor = 'green';
   pColor[2].style.backgroundColor = 'yellow';
   pColor[3].style.backgroundColor = 'blue';
+  pColor[0].classList.add('selected');
 }
 paletteColor();
 
