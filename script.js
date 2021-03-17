@@ -32,3 +32,18 @@ function createPixels() {
 }
 
 createPixels();
+function colorClick(){
+  const colorClicking = document.getElementById('color-palette');
+  colorClicking.addEventListener('click',(e) =>{
+    const target1 = e.target;
+    console.log(e);
+    const color = document.getElementsByClassName('color');
+    for (let index = 0; index < color.length; index+=1){
+      color[index].classList.remove('selected');
+      if (target1.className === 'color') {
+        target1.classList.add('selected');
+      }
+    }
+  })
+}
+colorClick();
