@@ -6,8 +6,15 @@ function createPalettes(num) {
     palettes.className = 'color';
   }
 }
-createPalettes(20);
+createPalettes(4);
 
-// function paletteColor(){
+function paletteColor(){
 
-// }
+    const pColor = document.getElementsByClassName('color');
+    pColor[0].style.backgroundColor = 'red';
+    pColor[1].style.backgroundColor = 'green';
+    pColor[2].style.backgroundColor = 'yellow';
+    pColor[3].style.backgroundColor = 'blue';
+
+}
+paletteColor();
