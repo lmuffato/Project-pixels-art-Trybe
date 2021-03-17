@@ -57,5 +57,19 @@ function painting(){
   }
   })
 }
-
 painting();
+
+function clearBtn () {
+  const btnReset = document.createElement('button');
+  document.body.appendChild(btnReset);
+  btnReset.innerText = 'Limpar';
+  btnReset.id = 'clear-board';
+  btnReset.addEventListener('click', ()=> {
+    const color = document.getElementsByClassName('pixel');
+    for (let index = 0; index<color.length; index+=1){
+      color[index].style.backgroundColor = 'white';
+    }
+  })
+}
+
+clearBtn();
