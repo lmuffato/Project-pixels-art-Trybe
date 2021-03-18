@@ -47,6 +47,12 @@ function selectColor_4() {
 
 color_4.addEventListener('click', selectColor_4);
 */
+let selected = document.getElementsByClassName('color');
+for (let index = 0; index < selected.length; index += 1) {
+  if (selected[index].includes('selected')){
+    selected[index].classList.remove("selected")
+  }
+}
 
 const color_1 = document.getElementsByClassName('color')[0];
 const color_2 = document.getElementsByClassName('color')[1];
