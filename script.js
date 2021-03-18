@@ -48,19 +48,16 @@ function selectColor_4() {
 color_4.addEventListener('click', selectColor_4);
 */
 
-function colorClick(){
-  const colorClicking = document.getElementById('color-palette');
-  colorClicking.addEventListener('click',(e) =>{
-    const target1 = e.target;
-    console.log(e);
-    const color = document.getElementsByClassName('color');
-    for (let index = 0; index < color.length; index+=1){
-      color[index].classList.remove('selected');
-      if (target1.className === 'color') {
-        target1.classList.add('selected');
-      }
-    }
-  })
+function selectColor() {
+  const colors = document.querySelectorAll('.color');
+  for(let index1 = 0; index1 < colors.length; index += 1) {
+      colors[index1].addEventListener('click', (e) => {
+          for(let index2 = 0; index2 < colors.length; index2 += 1) {
+              colors[index2].classList.remove('selected');
+          }
+          e.target.classList.add('selected');
+      });
+  }
 }
-colorClick();
 
+selectColor();
