@@ -25,14 +25,14 @@ function pixelBoard(number) {
 }
 
 // Requisito 7
-document.querySelector('#color-palette').addEventListener('click', newSelected => {
+document.querySelector('#color-palette').addEventListener('click', (newSelected) => {
   const oldSelected = document.querySelector('.selected');
   oldSelected.classList.remove('selected');
   newSelected.target.classList.add('selected');
 });
 
 // Requisito 8
-board.addEventListener('click', paint => {
+board.addEventListener('click', (paint) => {
   const color = document.querySelector('.selected').style.backgroundColor;
   const targeted = paint.target;
   targeted.style.backgroundColor = color;
