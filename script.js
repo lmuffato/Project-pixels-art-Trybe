@@ -29,8 +29,9 @@ function createPalette(colors){
 function createBoard(){
     for (let pos = 0; pos < 25;pos++){
         const pPixel = document.createElement('div');
+        //Os pixels do quadro possuem a classe chamada de pixel
         pPixel.className = 'pixel';
-    document.getElementById("pixel-board").appendChild(pPixel); //Aqui eu tive que usar o getElementById pra localizar a tag que seri o pai ,dessa forma usei o append child pra dizer que "paletapixel" seria filha dessa
+    document.getElementById("pixel-board").appendChild(pPixel); //Aqui eu tive que usar o getElementById pra localizar a tag que seria o pai ,dessa forma usei o append child pra dizer que "paletapixel" seria filha dessa
 
         
     }
@@ -38,7 +39,7 @@ function createBoard(){
 
 clearBtn.addEventListener('click', function(){
     allPixels.forEach((pixel)=> {
-        pixels.style.backgroundColor = 'white';
+        pixel.style.backgroundColor = 'white';
     });
 });
 
