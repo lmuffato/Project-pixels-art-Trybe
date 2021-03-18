@@ -1,9 +1,15 @@
-let selectColor = document.getElementsByClassName('selected');
+let selected = document.getElementsByClassName('color');
 
-let color_1 = document.getElementsByClassName('color')[0];
-let color_2 = document.getElementsByClassName('color')[1];
-let color_3 = document.getElementsByClassName('color')[2];
-let color_4 = document.getElementsByClassName('color')[3];
+const color_1 = document.getElementsByClassName('color')[0];
+const color_2 = document.getElementsByClassName('color')[1];
+const color_3 = document.getElementsByClassName('color')[2];
+const color_4 = document.getElementsByClassName('color')[3];
+
+for (let index = 0; index < selected.length; index += 1) {
+  if (selected[index].className === 'selected') {
+    selected[index].classList.remove('selected');
+  }
+}
 
 function selectColor_1 () {
   color_1.className = 'color selected';
