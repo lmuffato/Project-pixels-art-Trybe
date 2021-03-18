@@ -4,3 +4,15 @@
   width: 100px;
   height: 100px;
 }
+
+#pixel-board {
+  border: 1px solid black;
+  
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 100px;
+  height:100px;
+}
