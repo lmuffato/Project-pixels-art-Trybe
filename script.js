@@ -79,9 +79,10 @@ function getButton() {
 function createPixelBoard() {
   const inputPixelBoard = document.querySelector('#board-size');
   const table = document.querySelector('table');
-  if (inputPixelBoard.value < 5) {
-    inputPixelBoard.value = 5;
+  if (inputPixelBoard.value === '') {
     alert('Board inválido!');
+  } if (inputPixelBoard.value < 5) {
+    inputPixelBoard.value = 5;
   } if (inputPixelBoard.value > 50) {
     inputPixelBoard.value = 50;
   } else {
