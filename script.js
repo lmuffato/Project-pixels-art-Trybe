@@ -8,6 +8,7 @@ const paint = document.querySelector('.selected')
 const allPixels =document.querySelectorAll('.pixel')
 
 
+
 //Chamando a criação das paletas
 window.onload = createPalette(colors),createBoard();
 //Criacao da paleta
@@ -37,9 +38,9 @@ function createBoard(){
     }
 }
 
-clearBtn.addEventListener('click', (event) => {
-    allPixels.forEach(function(pPixel){
-        pixel.style.backgroundColor = 'white';
+clearBtn.addEventListener('click',() => {
+    allPixels.forEach(function(){
+        pPixel.style.backgroundColor = 'white';
     });
 });
 

@@ -22,19 +22,19 @@ body{
     margin:1px;
   }
   
-  #c1{
+  .black{
     background-color: black;
   }
   
-  #c2{
+  .blue{
   background-color: blue;
   }
   
-  #c3{
+  .red{
     background-color: red;
   }
   
-  #c4{
+  .yellow{
     background-color:yellow;
   }
   
@@ -56,6 +56,6 @@ body{
     width: 50px;
   }
   
-  #selected{
+  .selected{
     padding: 30px;
   }
