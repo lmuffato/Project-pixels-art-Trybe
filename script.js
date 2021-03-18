@@ -44,23 +44,30 @@ createBoard();
 window.onload = jsLoaded
 
 function jsLoaded() {
-
-  // const getColors = document.querySelectorAll('.color');
-
-  // function selectColor() { 
-  //   for (let index = 0; index < getColor.length; index += 1) {
-  //     const colors = getColors[index];
-  //     colors.addEventListener('click', changeClass)
-  //   }
+  const getPalette = document.getElementById('color-palette').children
+  
+  function addClickPalette() {
     
-  //   // function changeClass(event) {
-  //   //   const selected = document.getElementsByClassName('color');
-  //   //   if (selected = 'color') {
-  //   //     selected.className = 'selected'
-  //   //   }  
-  //   // }
-  // }
+    for (let index = 0; index < getPalette.length; index += 1) {
+      getPalette[index].addEventListener('click', pickColor)
+    }
+  }
 
+  addClickPalette()
+
+  function pickColor() {
+    for(let index = 0; index < getPalette.length; index += 1) {
+      getPalette[index].className = 'color'
+    }
+    this.className += ' selected'
+  }
+
+  function initialColor() {
+    getPalette[0].className += ' selected'
+  }
+  
+  initialColor()
+  
   const getPixel = document.getElementsByClassName('pixel');
 
   function addClick() {
@@ -72,10 +79,17 @@ function jsLoaded() {
   }
 
   addClick()
-  
+
   function paintPixel() {
-    alert ('bombou!')
+    const selectedColor = document.getElementsByClassName('color selected');
+    this.style = selectedColor;
   }
+
+  
+  
+  
+
+
 }
 //criar evento do clique
 
