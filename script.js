@@ -42,7 +42,7 @@ elementTable.addEventListener('click', pressColor);
 function boardClear() {
   buttonClear.addEventListener('click', () => {
     const divPixel = document.querySelectorAll('.pixel');
-    for(let index = 0; index < divPixel.length; index += 1) {
+    for (let index = 0; index < divPixel.length; index += 1) {
       divPixel[index].style.backgroundColor = '#fff';
     }
   });
