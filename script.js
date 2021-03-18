@@ -48,16 +48,36 @@ function selectColor_4() {
 color_4.addEventListener('click', selectColor_4);
 */
 
-function selectColor() {
-  const colors = document.querySelectorAll('.color');
-  for(let index1 = 0; index1 < colors.length; index += 1) {
-      colors[index1].addEventListener('click', (e) => {
-          for(let index2 = 0; index2 < colors.length; index2 += 1) {
-              colors[index2].classList.remove('selected');
-          }
-          e.target.classList.add('selected');
-      });
-  }
-}
+black.addEventListener('click',chooseColor)
+red.addEventListener('click',chooseColor)
+green.addEventListener('click',chooseColor)
+blue.addEventListener('click',chooseColor)
 
-selectColor();
+
+
+function chooseColor(e){
+    if(e.target.id == "black"){
+        black.classList.add("selected")
+        blue.classList.remove("selected")
+        red.classList.remove("selected")
+        green.classList.remove("selected")
+    }
+    else if(e.target.id == "blue"){
+        blue.classList.add("selected")
+        black.classList.remove("selected")
+        red.classList.remove("selected")
+        green.classList.remove("selected")
+    }else if(e.target.id == "red"){
+        red.classList.add("selected")
+        black.classList.remove("selected")
+        blue.classList.remove("selected")
+        green.classList.remove("selected")
+    }else if(e.target.id == "green"){
+        green.classList.add("selected")
+        black.classList.remove("selected")
+        blue.classList.remove("selected")
+        red.classList.remove("selected")
+    }
+
+
+}
