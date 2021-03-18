@@ -48,35 +48,42 @@ function selectColor_4() {
 color_4.addEventListener('click', selectColor_4);
 */
 
-black.addEventListener('click',chooseColor)
-red.addEventListener('click',chooseColor)
-green.addEventListener('click',chooseColor)
-blue.addEventListener('click',chooseColor)
+let selected = document.getElementsByClassName('color');
+
+const color_1 = document.getElementsByClassName('color')[0];
+const color_2 = document.getElementsByClassName('color')[1];
+const color_3 = document.getElementsByClassName('color')[2];
+const color_4 = document.getElementsByClassName('color')[3];
+
+color_1.addEventListener('click',chooseColor)
+color_2.addEventListener('click',chooseColor)
+color_3.addEventListener('click',chooseColor)
+color_4.addEventListener('click',chooseColor)
 
 
 
 function chooseColor(e){
     if(e.target.id == "black"){
-        black.classList.add("selected")
-        blue.classList.remove("selected")
-        red.classList.remove("selected")
-        green.classList.remove("selected")
+        color_1.classList.add("selected")
+        color_2.classList.remove("selected")
+        color_3.classList.remove("selected")
+        color_4.classList.remove("selected")
     }
-    else if(e.target.id == "blue"){
-        blue.classList.add("selected")
-        black.classList.remove("selected")
-        red.classList.remove("selected")
-        green.classList.remove("selected")
+    else if(e.target.id == "color_2"){
+        color_2.classList.add("selected")
+        color_1.classList.remove("selected")
+        color_3.classList.remove("selected")
+        color_4.classList.remove("selected")
     }else if(e.target.id == "red"){
         red.classList.add("selected")
-        black.classList.remove("selected")
-        blue.classList.remove("selected")
-        green.classList.remove("selected")
+        color_1.classList.remove("selected")
+        color_2.classList.remove("selected")
+        color_4.classList.remove("selected")
     }else if(e.target.id == "green"){
-        green.classList.add("selected")
-        black.classList.remove("selected")
-        blue.classList.remove("selected")
-        red.classList.remove("selected")
+        color_4.classList.add("selected")
+        color_1.classList.remove("selected")
+        color_2.classList.remove("selected")
+        color_3.classList.remove("selected")
     }
 
 
