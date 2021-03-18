@@ -7,7 +7,7 @@ const color_4 = document.getElementsByClassName('color')[3];
 
 //for (let index = 0; index < selected.length; index += 1) {
   //if (selected[index].className === 'selected') {
-    selected.classList.remove('selected');
+    selected[0].classList.remove('selected');
   //}
 //}
 
