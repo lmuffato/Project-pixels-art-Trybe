@@ -48,22 +48,20 @@ function selectColor_4() {
 color_4.addEventListener('click', selectColor_4);
 */
 
-let selected = document.getElementsByClassName('color');
-
 const color_1 = document.getElementsByClassName('color')[0];
 const color_2 = document.getElementsByClassName('color')[1];
 const color_3 = document.getElementsByClassName('color')[2];
 const color_4 = document.getElementsByClassName('color')[3];
 
-color_1.addEventListener('click',chooseColor)
-color_2.addEventListener('click',chooseColor)
-color_3.addEventListener('click',chooseColor)
-color_4.addEventListener('click',chooseColor)
+color_1.addEventListener('click',chooseColor);
+color_2.addEventListener('click',chooseColor);
+color_3.addEventListener('click',chooseColor);
+color_4.addEventListener('click',chooseColor);
 
 
 
 function chooseColor(e){
-    if(e.target.id == "black"){
+    if(e.target.id == "color_1"){
         color_1.classList.add("selected")
         color_2.classList.remove("selected")
         color_3.classList.remove("selected")
@@ -74,12 +72,12 @@ function chooseColor(e){
         color_1.classList.remove("selected")
         color_3.classList.remove("selected")
         color_4.classList.remove("selected")
-    }else if(e.target.id == "red"){
+    }else if(e.target.id == "color_3"){
         red.classList.add("selected")
         color_1.classList.remove("selected")
         color_2.classList.remove("selected")
         color_4.classList.remove("selected")
-    }else if(e.target.id == "green"){
+    }else if(e.target.id == "color_4"){
         color_4.classList.add("selected")
         color_1.classList.remove("selected")
         color_2.classList.remove("selected")
