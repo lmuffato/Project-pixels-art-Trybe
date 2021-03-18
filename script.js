@@ -73,22 +73,45 @@ function getButton() {
     pixelBoard[index].style.backgroundColor = 'white';
   }
 }
+// 10. O input só deve aceitar nº >0 retrição deve ser feita nos atributos do input
+// 10. Se nenhum valor for colocado mostrar o alert "Board inválido!"
+// 10. A cor deve ser branca
+function createPixelBoard() {
+  const inputPixelBoard = document.querySelector('#board-size');
+  const table = document.querySelector('table');
+  if (inputPixelBoard.value < 5) {
+    inputPixelBoard.value = 5;
+    alert('Board inválido!');
+  } if (inputPixelBoard.value > 50) {
+    inputPixelBoard.value = 50;
+  } else {
+    while (table.firstChild) {
+      table.removeChild(table.firstChild);
+    }
+    createElementsTable(inputPixelBoard.value);
+  }
+}
 
 function managerEvents() {
   //  7. Recuperar o elemento  pai da class selected
   const colorPalette = document.querySelector('#color-palette');
   // 8. Recupera o elemento pai os pixels
   const pixelBoard = document.querySelector('#pixel-board');
-  // 9. Recupera o id do button;
+  // 9. Recupera o id clear-board do button
   const buttonClearBoard = document.querySelector('#clear-board');
+  // 10 . Recupera o id generate-board do button
+  const buttonGenerateBoard = document.querySelector('#generate-board');
   // 7. Adiciona um evento de click (Adicionar a class selected ao clicar em outro elemento);
   colorPalette.addEventListener('click', getColor);
   // Requisito 8
   colorPalette.addEventListener('click', getBgColor);
   pixelBoard.addEventListener('click', changeBGColor);
-  // 9. Adiciona evento no button
+  // 9. Adiciona evento no button com id pixel-board
   buttonClearBoard.addEventListener('click', getButton);
+  // 10. Adiciona evento no button com di generate-board
+  buttonGenerateBoard.addEventListener('click', createPixelBoard);
 }
+
 // Chamar minhas funções:
 window.onload = function start() {
   setColors();

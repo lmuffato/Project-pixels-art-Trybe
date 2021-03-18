@@ -1,5 +1,5 @@
 body {
-  background-color: cornflowerblue;
+  background-color: rgb(184, 199, 228);
 }
 
 div {
@@ -22,11 +22,7 @@ td {
 
 section {
   margin-bottom: 10px;
-  margin-left: 500px;
-}
-
-table {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 header {
