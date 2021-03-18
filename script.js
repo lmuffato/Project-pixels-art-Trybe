@@ -53,7 +53,7 @@ document.getElementsByClassName('color')[0].classList.add('selected');
 let selected = document.getElementsByClassName('color');
 
 for (let index = 0; index < selected.length; index += 1) {
-  document.getElementsByClassName('selected')[index].classList.remove('selected');
+  selected[index].classList.remove('selected');
 }
 // Adicionando o evento para cada elemento da lista https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
 for (let index = 0; index < selected.length; index += 1) {
