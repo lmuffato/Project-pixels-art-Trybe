@@ -26,18 +26,6 @@ header {
   background-color: black;
 }
 
-.color-two {
-  background-color: red;
-}
-
-.color-three {
-  background-color: purple;
-}
-
-.color-four {
-  background-color: green;
-}
-
 #board-input-section {
   margin-bottom: 10px;
   margin-left: 5px;

@@ -39,6 +39,19 @@ colorFour.addEventListener('click', () => {
   colorFour.classList.add('selected');
 });
 
+function generateRGB() {
+  const rgbNumbers = [];
+  for (let index = 0; index < 3; index += 1) {
+    rgbNumbers[index] = Math.floor(Math.random() * 255);
+  }
+  const rgb = `rgb(${rgbNumbers[0]}, ${rgbNumbers[1]}, ${rgbNumbers[2]})`;
+  return rgb;
+}
+
+colorTwo.style.backgroundColor = generateRGB();
+colorThree.style.backgroundColor = generateRGB();
+colorFour.style.backgroundColor = generateRGB();
+
 function setPixels() {
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].addEventListener('click', (event) => {
@@ -58,6 +71,7 @@ btnLimpar.addEventListener('click', () => {
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.backgroundColor = 'white';
   }
+  inputBoardSize.value = '';
 });
 
 function createPixel(boardSize, tableRow) {
@@ -78,13 +92,18 @@ function createTableRow(boardSize) {
 }
 
 btnVQV.addEventListener('click', () => {
-  if (Number(inputBoardSize.value) <= 0) {
+  pixelBoard.innerHTML = '';
+  let boardSize = Number(inputBoardSize.value);
+  if (boardSize <= 0) {
     alert('Board inválido!');
-  } else {
-    pixelBoard.innerHTML = '';
-    const boardSize = Number(inputBoardSize.value);
-    createTableRow(boardSize);
-    pixel = document.getElementsByClassName('pixel');
-    setPixels();
   }
+  if (boardSize < 5) {
+    boardSize = 5;
+  }
+  if (boardSize > 50) {
+    boardSize = 50;
+  }
+  createTableRow(boardSize);
+  pixel = document.getElementsByClassName('pixel');
+  setPixels();
 });
