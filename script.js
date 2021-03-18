@@ -1,4 +1,3 @@
-
 let color;
 let elementoTd = document.getElementsByClassName('pixel');
 window.onload = function () {
