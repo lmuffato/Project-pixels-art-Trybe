@@ -38,7 +38,7 @@ function createBoard(){
 }
 
 clearBtn.addEventListener('click', (event) => {
-    allPixels.forEach((pixel)=> {
+    allPixels.forEach(function(pPixel){
         pixel.style.backgroundColor = 'white';
     });
 });
