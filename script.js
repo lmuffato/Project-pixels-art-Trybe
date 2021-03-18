@@ -6,10 +6,11 @@ const pixelBoard = document.getElementById('pixel-board');
 const colorSel = document.querySelector('.selected')
 const paint = document.querySelector('.selected')
 const allPixels =document.querySelectorAll('.pixel')
-//document.getElementsByClassName('color')[0].style.backgroundColor = 'red'
 
+
+//Chamando a criação das paletas
 window.onload = createPalette(colors),createBoard();
-
+//Criacao da paleta
 function createPalette(colors){
     for (let pos = 0; pos < 4;pos++){
         const pPixel = document.createElement('div');
@@ -17,15 +18,14 @@ function createPalette(colors){
         if(colors[pos] === 'black'){
             pPixel.className = 'color selected';
         }
+        //pPixel (pixels da paleta) vao receber no seu style a strintg de cores colors criada na linha 1
         pPixel.style.backgroundColor = colors[pos];
+        //chama o container das paletas de cores e adiciona o pPixel (uma div que indica o pixels  da paleta)
         document.getElementById("color-palette").appendChild(pPixel);
         
     }
 }
-
-//function clear(){ for (let div of pixels){document.getElementsByClassname("pixel-board).")}} 
-
-
+//Criacao do quadro
 function createBoard(){
     for (let pos = 0; pos < 25;pos++){
         const pPixel = document.createElement('div');
@@ -38,7 +38,7 @@ function createBoard(){
 
 clearBtn.addEventListener('click', function(){
     allPixels.forEach((pixel)=> {
-        pixel.style.backgroundColor = 'white';
+        pixels.style.backgroundColor = 'white';
     });
 });
 
