@@ -74,32 +74,13 @@ function jsLoaded() {
     for (let index = 0; index < getPixel.length; index += 1) {
       const onePixel = getPixel[index];
       onePixel.addEventListener("click", paintPixel);
-    }
-    
+    } 
   }
 
-  addClick()
+  addClick();
 
   function paintPixel() {
-    const selectedColor = document.getElementsByClassName('color selected');
-    this.style = selectedColor;
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
+    this.style.backgroundColor = selectedColor;
   }
-
-  
-  
-  
-
-
 }
-//criar evento do clique
-
-// armazenar em sessionstorage ? a cor do clique
-
-// evento: clique.
-
-// clique p
-
-// taget/type pra idetificar quem chamou o evento?
-
-
-// 'pintar' com valor armazenado em local storage
