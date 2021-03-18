@@ -60,7 +60,9 @@ botaoVQV.addEventListener('click', function(){
 
     let valorInput = document.querySelector('#board-size').value;
     
-    if (valorInput < 5) {
+    if (valorInput === '') {
+     alert('Board inválido!');
+    } else if (valorInput < 5) {
     valorInput = 5;
     } else if (valorInput > 50) {
     valorInput = 50;
