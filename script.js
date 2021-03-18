@@ -76,6 +76,7 @@ function getButton() {
 // 10. O input só deve aceitar nº >0 retrição deve ser feita nos atributos do input
 // 10. Se nenhum valor for colocado mostrar o alert "Board inválido!"
 // 10. A cor deve ser branca
+
 function createPixelBoard() {
   const inputPixelBoard = document.querySelector('#board-size');
   const table = document.querySelector('table');
@@ -90,6 +91,7 @@ function createPixelBoard() {
       table.removeChild(table.firstChild);
     }
     createElementsTable(inputPixelBoard.value);
+    inputPixelBoard.value = '';
   }
 }
 
