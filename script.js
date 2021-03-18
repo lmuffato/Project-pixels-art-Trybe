@@ -32,11 +32,11 @@ function mudarCor(event) {
   }
 }
 
-let botao = document.getElementById('clear-board');
-let pi = document.querySelectorAll('.pixel');
-botao.addEventListener('click', limpar);
-function limpar() {
-  for (let index = 0; index < pi.length; index += 1) {
-    pi[index].style.backgroundColor = 'white';
+function botaoLimpar() {
+  let pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].removeAttribute('style');
   }
 }
+
+document.querySelector('#clear-board').addEventListener('click', botaoLimpar);
