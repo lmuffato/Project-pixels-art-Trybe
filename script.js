@@ -60,7 +60,8 @@ const color_3 = document.getElementsByClassName('color')[2];
 const color_4 = document.getElementsByClassName('color')[3];
 
 function selectColor(e){
-  removeSelected();
+  verificaSelected();
+  
       if(e.target.id === "color_1"){
       color_1.classList = 'color selected';
     }
@@ -73,6 +74,16 @@ function selectColor(e){
     }
 }
 
+function verificaSelected() {
+  let cont = 0;
+  for (let index = 0; index < selected.length; index++){
+  if (selected[index].classList('selected')) {
+    cont += 1;
+   }
+}
+if ( connt > 1) {
+  removeSelected();
+}
 function removeSelected() {
   for (let index = 0; index < selected.length; index++){
   if (selected[index].classList('selected')) {
