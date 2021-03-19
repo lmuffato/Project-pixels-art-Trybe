@@ -77,6 +77,21 @@ function paintPixel() {
   }
 }
 
+// Requisito 9
+function clearBoard() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    const elementPixelBoard = pixels[index];
+
+    elementPixelBoard.style.backgroundColor = 'white';
+  }
+}
+
+function eventClearBoard() {
+  document.getElementById('clear-board').addEventListener('click', clearBoard);
+}
+
+eventClearBoard();
+
 window.onload = function pixelsArt() {
   createPixelBoard();
   paintPixel();
