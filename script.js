@@ -1,4 +1,4 @@
-window.onload = function pixelsArt() {
+function createPixelBoard() {
   const pixelLine = document.getElementById('pixel-board');
 
   for (let index = 0; index < 5; index += 1) {
@@ -13,16 +13,15 @@ window.onload = function pixelsArt() {
       pixelLine.children[indexColumn].appendChild(pixel).className = 'pixel';
     }
   }
+}
 
-  document.getElementById('black').classList.add('selected');
-};
-
+// Requisito 7
 const colors = document.getElementsByClassName('color');
 
-function changeColor(e) {
+function changeSelectedColor(targetColor) {
   for (let index = 0; index < colors.length; index += 1) {
     const element = colors[index];
-    const event = e.target;
+    const event = targetColor.target;
 
     if (event === element) {
       event.classList.add('selected');
@@ -36,8 +35,49 @@ function selectColor() {
   for (let index = 0; index < colors.length; index += 1) {
     const element = colors[index];
 
-    element.addEventListener('click', changeColor);
+    element.addEventListener('click', changeSelectedColor);
   }
 }
 
 selectColor();
+
+// Requisito 8
+function getSelectedColor() {
+  let selectedColor;
+
+  for (let index = 0; index < colors.length; index += 1) {
+    const element = colors[index];
+
+    if (element.classList.contains('selected')) {
+      selectedColor = element.getAttribute('background-color');
+    }
+  }
+  return selectedColor;
+}
+
+const pixels = document.getElementsByClassName('pixel');
+
+function changePixelColor(targetColor) {
+  const currentColor = getSelectedColor();
+
+  for (let index = 0; index < pixels.length; index += 1) {
+    const elementPixel = pixels[index];
+
+    if (targetColor.target === elementPixel) {
+      elementPixel.style.backgroundColor = currentColor;
+    }
+  }
+}
+
+function paintPixel() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    const elementPixel = pixels[index];
+
+    elementPixel.addEventListener('click', changePixelColor);
+  }
+}
+
+window.onload = function pixelsArt() {
+  createPixelBoard();
+  paintPixel();
+};
