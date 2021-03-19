@@ -47,7 +47,9 @@ function selectColor_4() {
 
 color_4.addEventListener('click', selectColor_4);
 */
+
 let selected = document.getElementsByClassName('color');
+
 if (selected[0].classList('selected')) {
   selected[0].classList.remove("selected");
 }
@@ -58,6 +60,7 @@ const color_3 = document.getElementsByClassName('color')[2];
 const color_4 = document.getElementsByClassName('color')[3];
 
 function selectColor(e){
+  removeSelected();
       if(e.target.id === "color_1"){
       color_1.classList = 'color selected';
     }
@@ -70,6 +73,14 @@ function selectColor(e){
     }
 }
 
+function removeSelected() {
+  for (let index = 0; index < selected.length; index++){
+  if (selected[index].classList('selected')) {
+    selected[index].classList.remove("selected");
+  }
+}
+
+}
 color_1.addEventListener('click', selectColor);
 color_2.addEventListener('click', selectColor);
 color_3.addEventListener('click', selectColor);
