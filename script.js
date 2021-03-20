@@ -55,14 +55,17 @@ function limpar(evento) {
 const botao = document.querySelector('#clear-board');
 botao.addEventListener('click', limpar);
 
-function geradorCores (){
-//const cores = document.getElementsByClassName('color');
-//for ( let index = 1; index <= color.length; index += 1) {
-let r = Math.random() * 255;
-let g = Math.random() * 255;
-let b = Math.random() * 255;
-return `rgb(${r}, ${g}, ${b})`;
-//const rgb = `rgb(${r}, ${g}, ${b})`;
-//color[index].style.backgroundColor = rgb;
-  //}
+//requisito 11
+const size = document.getElementById('board-size');
+const boto = document.getElementById('generate-board');
+botao.addEventListener('click', teste);
+
+function teste () {
+  let n = size;
+  if ( n < 5 && n !== 0 ){
+    n = 5;
+  } else if ( n > 50 ){
+    n = 50;
+  }
 }
+
