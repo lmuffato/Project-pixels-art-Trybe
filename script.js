@@ -24,10 +24,3 @@ const select = document.getElementById('color-palette');
 select.addEventListener('click', trocaCor);
 
 // Requisito 08
-
-const caixas = document.querySelectorAll('#pixel');
-caixas.addEventListener('click', pintar);
-
-function pintar(evento) {
-  evento.target.style.backgroundColor = select.classList('.selected').style.backgroundColor;
-}
