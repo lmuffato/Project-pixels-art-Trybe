@@ -1,5 +1,5 @@
-let cor = document.getElementsByClassName('color');
 const black = document.querySelectorAll('.color')[0];
+black.className += ' selected';
 const red = document.querySelectorAll('.color')[1];
 const blue = document.querySelectorAll('.color')[2];
 const green = document.querySelectorAll('.color')[3];
