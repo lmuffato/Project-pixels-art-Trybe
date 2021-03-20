@@ -23,4 +23,14 @@ function trocaCor(evento) {
 const select = document.getElementById('color-palette');
 select.addEventListener('click', trocaCor);
 
-// Requisito 08
+// Requisito 09
+
+function limpar(evento) {
+  const caixas = document.getElementById('pixel');
+  for (let index = 0; index < caixas.length; index += 1) {
+    caixas[index].style.backgroundColor = 'white';
+  }
+}
+
+const botao = document.querySelector('#clear-board');
+botao.addEventListener('click', limpar);
