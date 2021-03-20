@@ -1,15 +1,11 @@
-function addSelect(){
-Const addSelect = document.querySelectorAll('.color');
+let titulo = document.createElement('title');
+let heaD = document.querySelector('head');
+heaD.appendChild(titulo);
+let h1 = document.createElement('h1');
+titulo.appendChild(h1);
+h1.innerText = 'Paleta de Cores';
+titulo.id = 'title';
 
-for (let index = 0; index < addSelect.length; index += 1){
-    addSelect[index].addEventListener('click', removeSelect);
-}
 
-function removeSelect () {
-  for (let index = 0; index < addSelect.length; index += 1){
-    addSelect[index].classList.remove('select');
-}
-this.classList.add('select');
-}
-}
-addSelect();
+const black = document.querySelectorAll('.class')[0];
+black.className += ' selected';
