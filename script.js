@@ -1,3 +1,12 @@
+function geradorCores (){
+
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  return `rgb(${r}, ${g}, ${b})`;
+ 
+  }
+
 const black = document.querySelectorAll('.color')[0];
 black.className += ' selected';
 window.onload = black;
@@ -6,9 +15,9 @@ const blue = document.querySelectorAll('.color')[2];
 const green = document.querySelectorAll('.color')[3];
 
 black.style.backgroundColor = 'black';
-red.style.backgroundColor = 'red';
-blue.style.backgroundColor = 'darkblue';
-green.style.backgroundColor = 'darkgreen';
+red.style.backgroundColor = geradorCores();
+blue.style.backgroundColor = geradorCores();
+green.style.backgroundColor = geradorCores();
 
 // Requisito 07
 function trocaCor(evento) {
@@ -45,3 +54,15 @@ function limpar(evento) {
 
 const botao = document.querySelector('#clear-board');
 botao.addEventListener('click', limpar);
+
+function geradorCores (){
+//const cores = document.getElementsByClassName('color');
+//for ( let index = 1; index <= color.length; index += 1) {
+let r = Math.random() * 255;
+let g = Math.random() * 255;
+let b = Math.random() * 255;
+return `rgb(${r}, ${g}, ${b})`;
+//const rgb = `rgb(${r}, ${g}, ${b})`;
+//color[index].style.backgroundColor = rgb;
+  //}
+}

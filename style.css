@@ -18,3 +18,7 @@
   height: 40px;
 }
 
+#clear-board {
+  display: block;
+  margin-left: 350px;
+  }
