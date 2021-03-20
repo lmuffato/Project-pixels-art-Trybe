@@ -22,3 +22,7 @@
   display: block;
   margin-left: 350px;
   }
+
+  #board-size {
+    display: inline-block;
+  }
