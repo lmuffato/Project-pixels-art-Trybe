@@ -23,10 +23,21 @@ function trocaCor(evento) {
 const select = document.getElementById('color-palette');
 select.addEventListener('click', trocaCor);
 
+function colorir(evento) {
+  const capturar = document.getElementsByClassName('selected')[0];
+  const corColorir = capturar.style.backgroundColor;
+  evento.target.style.backgroundColor = corColorir;
+}
+
+const quadrados = document.getElementById('pixel-board');
+quadrados.addEventListener('click', colorir);
+
+
 // Requisito 09
 
 function limpar(evento) {
-  const caixas = document.getElementById('pixel');
+  const caixas = document.getElementsByClassName('pixel');
+  console.log(caixas);
   for (let index = 0; index < caixas.length; index += 1) {
     caixas[index].style.backgroundColor = 'white';
   }
