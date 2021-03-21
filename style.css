@@ -2,6 +2,11 @@
   display: table;
 }
 
+#clear-board {
+  display: table-cell;
+  margin-top: 30px;
+}
+
 .color {
   border: 1px solid black;
   display: table-cell;
@@ -12,7 +17,7 @@
 #pixel-board {
   display: table;
   border-collapse: collapse;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .pixel {
@@ -20,4 +25,8 @@
   height: 41px;
   background-color: white;
   border: 1px solid black;
+}
+
+.item {
+  background-color: white;
 }
