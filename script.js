@@ -1,7 +1,6 @@
 const colorPalette = document.getElementById('color-palette'); // Variaveis Gerais
 const colors = ['black', 'green', 'red', 'blue'];
 const pixelBoard = document.getElementById('pixel-board');
-const colorSelected = document.getElementsByClassName('color');
 const buttonElement = document.querySelector('#clear-board');
 const pixelSelected = document.getElementsByClassName('pixel');
 
@@ -24,10 +23,10 @@ for (let linePos = 0; linePos < 5; linePos += 1) { //  Gera a tabela.
   }
 }
 
-function colorGenerator (){ // Gera cores aleatorias.
-  let r = Math.random() * 255;
-  let g = Math.random() * 255;
-  let b = Math.random() * 255;
+function colorGenerator () { // Gera cores aleatorias.
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
   return `rgb(${r}, ${g}, ${b})`;
 }
 
