@@ -20,6 +20,7 @@ blue.style.backgroundColor = geradorCores();
 green.style.backgroundColor = geradorCores();
 
 // Requisito 07
+//Contribuição de Anderson Nascimento / Guillherme Dornelles / Pollyana Oliveira
 function trocaCor(evento) {
   const elementos = document.querySelectorAll('.color');
   for (let index = 0; index < elementos.length; index += 1) {
@@ -55,7 +56,7 @@ function limpar(evento) {
 const botao = document.querySelector('#clear-board');
 botao.addEventListener('click', limpar);
 
-
+// Contribuição Lucas Pedroso
 const bt = document.getElementById('generate-board');
 bt.addEventListener('click', verificar);
 function verificar () {
@@ -79,7 +80,7 @@ function verificar () {
   }
   criarTabela(valor);
 }
-
+// Contribuição Lucas Pedroso
 function criarTabela(v) {
   console.log(v);
   let tab = document.querySelector('#pixel-board');
