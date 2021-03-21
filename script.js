@@ -55,18 +55,44 @@ function limpar(evento) {
 const botao = document.querySelector('#clear-board');
 botao.addEventListener('click', limpar);
 
-//requisito 11
-const size = document.getElementById('board-size');
-const boto = document.getElementById('generate-board');
-botao.addEventListener('click', teste);
 
-function teste () {
-  let n = size;
-  if ( n < 5 && n !== '' ){
-    n = 5;
-  } else if ( n > 50 ){
-    n = 50;
-  } 
-  return n;
+const bt = document.getElementById('generate-board');
+bt.addEventListener('click', verificar);
+function verificar () {
+  let inp = document.getElementById('board-size');
+  let valor = parseInt(inp.value);
+  console.log(valor);
+  console.log(typeof(valor));
+  if (inp.max == 50){
+    console.log(true);
+  }
+  if (parseInt(inp.value) < 5){
+    valor = 5;
+    console.log(valor);
+  }
+  if (inp.value === ''){
+    alert('Board inválido!');
+  }
+  if (parseInt(inp.value) > parseInt(inp.max)){
+    valor = 50;
+    console.log(valor);
+  }
+  criarTabela(valor);
 }
 
+function criarTabela(v) {
+  console.log(v);
+  let tab = document.querySelector('#pixel-board');
+  tab.innerHTML = '';
+  for(let i = 0; i < v; i++){
+    let linha = document.createElement('tr');
+    tab.appendChild(linha);
+    console.log(linha);
+    for(let j = 0; j < v; j++){
+      let coluna = document.createElement('td');
+      coluna.classList.add('pixel');
+      linha.appendChild(coluna);
+      console.log(coluna);
+    }
+  }
+}
