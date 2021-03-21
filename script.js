@@ -62,10 +62,11 @@ botao.addEventListener('click', teste);
 
 function teste () {
   let n = size;
-  if ( n < 5 && n !== 0 ){
+  if ( n < 5 && n !== '' ){
     n = 5;
   } else if ( n > 50 ){
     n = 50;
-  }
+  } 
+  return n;
 }
 
