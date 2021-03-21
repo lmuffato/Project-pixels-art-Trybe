@@ -35,27 +35,23 @@ function setPanelColors() {
   tbl.addEventListener('click', (event) => {
     const color = document.querySelector('.selected').style.backgroundColor;
     event.target.style.backgroundColor = color;
-    });
+  });
 }
 setPanelColors();
-function clearBoard(){
+function clearBoard() {
   const whiteBoard = document.getElementById('clear-board');
-  whiteBoard.addEventListener ('click', (e) => {
+  whiteBoard.addEventListener('click', (event) => {
     const pixelWhite = document.getElementsByClassName('pixel');
-    for (let index = 0; index < pixelWhite.length; index+=1){
+    for (let index = 0; index < pixelWhite.length; index += 1){
       pixelWhite[index].style.backgroundColor = 'white';
-    }   
+    }
   });
 }
 clearBoard();
-
-
-
 setPanelColors();
 window.onload = () => {
   colorPanel();
   getPanelColors();
   setPanelColors();
   clearBoard();
-  };
-  
+};
