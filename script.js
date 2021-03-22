@@ -3,7 +3,11 @@ function selectColor() {
 
   for (let index = 0; index < listItemElements.length; index += 1) {
     listItemElements[index].addEventListener('click', () => {
-      for (let insideIndex = 0; insideIndex < listItemElements.length; insideIndex += 1) {
+      for (
+        let insideIndex = 0;
+        insideIndex < listItemElements.length;
+        insideIndex += 1
+      ) {
         listItemElements[insideIndex].classList.remove('selected');
       }
 
@@ -31,7 +35,11 @@ function setBackground(element) {
 function drawColor() {
   const pixelsListElements = document.getElementsByClassName('pixel');
 
-  for (let elementIndex = 0; elementIndex < pixelsListElements.length; elementIndex += 1) {
+  for (
+    let elementIndex = 0;
+    elementIndex < pixelsListElements.length;
+    elementIndex += 1
+  ) {
     const pixelElement = pixelsListElements[elementIndex];
     pixelElement.addEventListener('click', () => setBackground(pixelElement));
   }
@@ -62,16 +70,17 @@ function drawPixels(input) {
     alert('Board inválido!');
     return;
   }
+  let lineInputValue = lineInput.value < 5 ? 5 : lineInput.value;
+  lineInput.value > 50 ? (lineInput.value = 50) : lineInput.value;
   const pixelBoardElement = document.getElementById('pixel-board');
   pixelBoardElement.innerHTML = '';
-  for (let index = 0; index < lineInput.value; index += 1) {
+  for (let index = 0; index < lineInputValue; index += 1) {
     const lineContainer = document.createElement('div');
     lineContainer.className = 'line';
-    for (let pixels = 0; pixels < lineInput.value; pixels += 1) {
+    for (let pixels = 0; pixels < lineInputValue; pixels += 1) {
       const pixelElement = createPixel();
       lineContainer.appendChild(pixelElement);
     }
-
     pixelBoardElement.appendChild(lineContainer);
   }
 }
