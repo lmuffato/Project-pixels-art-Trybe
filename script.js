@@ -33,5 +33,16 @@ function paintPixel() {
   }
 }
 
+function clear() {
+  const buttonClear = document.getElementById('clear-board');
+  buttonClear.addEventListener('click',function () {
+    for (let indexClear = 0; indexClear < pixels.length; indexClear += 1) {
+      pixels[indexClear].style.backgroundColor = 'white';
+  }
+  });  
+}
+
+
 selectColor();
 paintPixel();
+clear();
