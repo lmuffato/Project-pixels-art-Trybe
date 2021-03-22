@@ -3,6 +3,14 @@ body {
   padding: 0;
 }
 
+#main {
+  margin: 2%;
+}
+
+#clear-board {
+  margin: 1% 0 1% 0;
+}
+
 .color {
   display: inline-block;
 }
