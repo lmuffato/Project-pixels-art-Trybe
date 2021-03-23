@@ -4,8 +4,7 @@ body {
   box-sizing: border-box;
 }
 
-#title,
-#clear-board {
+#title , #clear-board {
   margin-left: 50px;
 }
 
@@ -21,10 +20,6 @@ body {
   border: 1px solid black;
   margin: 2px;
   cursor: pointer;
-}
-
-.background-black {
-  background-color: black;
 }
 
 #pixel-board {
