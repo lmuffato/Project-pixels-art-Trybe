@@ -14,7 +14,7 @@ window.onload = () => {
 const board = document.querySelector('#pixel-board');
 
 // Requisito 4
-function pixelBoard(number) {
+const pixelBoard = (number) => {
   for (let i = 0; i < number; i += 1) {
     for (let j = 0; j < number; j += 1) {
       const pixel = document.createElement('div');
@@ -22,7 +22,7 @@ function pixelBoard(number) {
       board.appendChild(pixel);
     }
   }
-}
+};
 
 // Requisito 7
 document.querySelector('#color-palette').addEventListener('click', (newSelected) => {
@@ -39,12 +39,12 @@ board.addEventListener('click', (paint) => {
 });
 
 // Requisito 9
-function clearBoard() {
+const clearBoard = () => {
   const pixel = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].style.backgroundColor = 'white';
   }
-}
+};
 
 // Requisito 10 e 11
 document.querySelector('#generate-board').addEventListener('click', () => {
