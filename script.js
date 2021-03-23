@@ -1,3 +1,11 @@
+function genRandomColor() {
+  const redValue = (Math.random() * 255).toFixed();
+  const greenValue = (Math.random() * 255).toFixed();
+  const blueValue = (Math.random() * 255).toFixed();
+
+  return `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+}
+
 function selectColor() {
   const listItemElements = document.getElementsByClassName('color');
 
@@ -19,15 +27,8 @@ function selectColor() {
 function setBackground(element) {
   const pixelElement = element;
   const selectElement = document.getElementsByClassName('selected')[0];
-  if (selectElement.classList.contains('background-black')) {
-    pixelElement.style.backgroundColor = 'black';
-  } else if (selectElement.classList.contains('background-red')) {
-    pixelElement.style.backgroundColor = 'red';
-  } else if (selectElement.classList.contains('background-blue')) {
-    pixelElement.style.backgroundColor = 'blue';
-  } else if (selectElement.classList.contains('background-yellow')) {
-    pixelElement.style.backgroundColor = 'yellow';
-  }
+
+  pixelElement.style.backgroundColor = selectElement.style.backgroundColor;
 
   return pixelElement;
 }
@@ -64,14 +65,25 @@ function createPixel() {
   return pixelElement;
 }
 
+function verifyInputNumber(inputValue) {
+  let value = inputValue;
+
+  if (value > 50) {
+    value = 50;
+  } else if (value < 5) {
+    value = 5;
+  }
+
+  return value;
+}
+
 function drawPixels(input) {
   const lineInput = input;
   if (!lineInput.value) {
     alert('Board inválido!');
     return;
   }
-  let lineInputValue = lineInput.value < 5 ? 5 : lineInput.value;
-  lineInput.value > 50 ? (lineInput.value = 50) : lineInput.value;
+  const lineInputValue = verifyInputNumber(lineInput.value);
   const pixelBoardElement = document.getElementById('pixel-board');
   pixelBoardElement.innerHTML = '';
   for (let index = 0; index < lineInputValue; index += 1) {
@@ -92,7 +104,18 @@ function drawPicture() {
   generateBoardButton.addEventListener('click', () => drawPixels(lineInput));
 }
 
-selectColor();
-drawColor();
-clearButton();
-drawPicture();
+window.onload = () => {
+  const randomColor1Element = document.getElementById('random-color-1');
+  randomColor1Element.style.backgroundColor = genRandomColor();
+  const randomColor2Element = document.getElementById('random-color-2');
+  randomColor2Element.style.backgroundColor = genRandomColor();
+  const randomColor3Element = document.getElementById('random-color-3');
+  randomColor3Element.style.backgroundColor = genRandomColor();
+  const blackBackgroundElement = document.getElementById('background-black');
+  blackBackgroundElement.style.backgroundColor = 'rgb(0,0,0)';
+
+  selectColor();
+  drawColor();
+  clearButton();
+  drawPicture();
+};

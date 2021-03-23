@@ -4,7 +4,8 @@ body {
   box-sizing: border-box;
 }
 
-#title, #clear-board {
+#title,
+#clear-board {
   margin-left: 50px;
 }
 
@@ -22,20 +23,8 @@ body {
   cursor: pointer;
 }
 
-.background-blue {
-  background-color: blue;
-}
-
-.background-red {
-  background-color: red;
-}
-
 .background-black {
   background-color: black;
-}
-
-.background-yellow {
-  background-color: yellow;
 }
 
 #pixel-board {
