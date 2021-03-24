@@ -3,12 +3,14 @@
   font-family: monospace;
   font-weight: 200px;
   color: aliceblue;
-  background:darkslategray;
+  background: darkslategray;
   text-align: center;
   margin: 0;
 }
 
-#clear-board{
+#clear-board {
+  margin: 30px;
+  margin-left: 5px;
   width: 100px;
   height: 40px;
   font-size: 25px;
@@ -21,12 +23,6 @@
   margin-top: 30px;
   display: table;
   border: 3px solid rgb(2, 2, 2);
-  
-}
-
-#clear-board {
-  display: table-cell;
-  margin-top: 30px;
 }
 
 .color {
