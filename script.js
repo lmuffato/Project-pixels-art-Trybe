@@ -41,6 +41,14 @@ function generatePixels(userSize) {
 
 generatePixels(5);
 
+function maxAndMin() {
+  if (boardSize.value < 5) {
+    generatePixels(5);
+  } else if (boardSize.value > 50) {
+    generatePixels(50);
+  } else { generatePixels(boardSize.value); }
+}
+
 function userNumber() {
   if (boardSize.value === '') {
     alert('Board inválido!');
@@ -49,8 +57,7 @@ function userNumber() {
     for (let index = 0; index < pixelLine.length; index += 1) {
       pixelBoard.removeChild(pixelLine[index]);
     }
-    const numberSize = boardSize.value;
-    generatePixels(numberSize);
+    maxAndMin();
   }
 }
 
