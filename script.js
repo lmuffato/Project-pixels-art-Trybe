@@ -41,16 +41,20 @@ function generatePixels(userSize) {
 
 generatePixels(5);
 
-// function userNumber() {
-//   if (boardSize === '') {
-//     alert('Board inválido!');
-//   } else {
-//     const numberSize = boardSize.value;
-//     console.log(numberSize);
-//   }
-// }
+function userNumber() {
+  if (boardSize.value === '') {
+    alert('Board inválido!');
+  } else {
+    const pixelLine = document.querySelectorAll('.pixelLine');
+    for (let index = 0; index < pixelLine.length; index += 1) {
+      pixelBoard.removeChild(pixelLine[index]);
+    }
+    const numberSize = boardSize.value;
+    generatePixels(numberSize);
+  }
+}
 
-// buttomGenerate.addEventListener('click', userNumber);
+buttomGenerate.addEventListener('click', userNumber);
 
 function blackSelected() {
   black.className = selected;
