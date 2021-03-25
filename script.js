@@ -3,9 +3,10 @@ const black = document.getElementsByClassName('color')[0];
 const blue = document.getElementsByClassName('color')[1];
 const red = document.getElementsByClassName('color')[2];
 const green = document.getElementsByClassName('color')[3];
-const createPixel = document.createElement('div');
 const selected = 'color selected';
 const pixelBoard = document.querySelector('#pixel-board');
+const boardSize = document.querySelector('#board-size');
+const buttomGenerate = document.querySelector('#generate-board');
 
 function ramdomColor() {
   for (let index = 0; index < palette.length; index += 1) {
@@ -21,13 +22,35 @@ function ramdomColor() {
 
 ramdomColor();
 
+function generateLinePixel(line, userSize) {
+  for (let index2 = 0; index2 < userSize; index2 += 1) {
+    const createPixelLine = document.createElement('div');
+    createPixelLine.classList.add('pixel');
+    line.appendChild(createPixelLine);
+  }
+}
+
 function generatePixels(userSize) {
-  for (let index = 0; index < userSize.length; index += 1) {
+  for (let index = 0; index < userSize; index += 1) {
+    const createPixel = document.createElement('div');
+    createPixel.classList.add('pixelLine');
     pixelBoard.appendChild(createPixel);
+    generateLinePixel(createPixel, userSize);
   }
 }
 
 generatePixels(5);
+
+// function userNumber() {
+//   if (boardSize === '') {
+//     alert('Board inválido!');
+//   } else {
+//     const numberSize = boardSize.value;
+//     console.log(numberSize);
+//   }
+// }
+
+// buttomGenerate.addEventListener('click', userNumber);
 
 function blackSelected() {
   black.className = selected;
@@ -70,8 +93,6 @@ const container = document.getElementById('pixel-board');
 
 function paintPixel(event) {
   const alvo = event.target;
-  const styleAlvo = window.getComputedStyle(alvo);
-  const colorAlvo = styleAlvo.getPropertyValue('background-color');
   alvo.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 

@@ -26,7 +26,17 @@ body {
     border: 1px;
     border-style: solid;
     border-color: black;
-    display: table-cell;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+.pixelLine {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
     width: 40px;
     height: 40px;
     background-color: white;
