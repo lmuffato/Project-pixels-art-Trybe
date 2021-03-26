@@ -4,3 +4,16 @@
   width: 100px;
   height: 100px;
 }
+
+.pixel {
+  width: 37px;
+  height: 37px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  display: table;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
