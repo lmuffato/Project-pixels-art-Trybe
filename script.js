@@ -40,7 +40,6 @@ generateSizeValue();
 function createTableSize() {
 let numberSizeValue = inputNumberSize.value;
 let numberSizeInt = parseInt(numberSizeValue);
-
 if ( numberSizeInt < 5){
   numberSizeValue = '5';
 } 
@@ -93,5 +92,7 @@ function clearBoard() {
 }
 clearBoard();
 
+/* Agradecimentos ao aluno André Barroso, pela ajuda com os requisitos 10 e 11 
+do projeto, mostrando outra lógica por trás do código! Muito obrigado!!!!*/
 
 
