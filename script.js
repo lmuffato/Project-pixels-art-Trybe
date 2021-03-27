@@ -37,9 +37,16 @@ function generateSizeValue() {
 }
 generateSizeValue();
 
-
 function createTableSize() {
-const numberSizeValue = inputNumberSize.value;
+let numberSizeValue = inputNumberSize.value;
+let numberSizeInt = parseInt(numberSizeValue);
+
+if ( numberSizeInt < 5){
+  numberSizeValue = '5';
+} 
+if (numberSizeInt > 50){
+  numberSizeValue = '50'; 
+} 
 const numberOfPixels = parseInt(numberSizeValue) * parseInt(numberSizeValue);
 const tableWidth = 43 * parseInt(numberSizeValue);
 tableBoard.style.width = `${tableWidth}px`;
