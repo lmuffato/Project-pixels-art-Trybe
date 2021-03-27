@@ -28,10 +28,10 @@ oldTable();
 function generateSizeValue() {
   valueGenerator.addEventListener('click', () => {
     if(inputNumberSize.value === '' || inputNumberSize.value < 1) {
-      alert('Board inválido');
+      alert('Board inválido!');
     } else {
       resetTable();
-      createTableSize();
+     createTableSize();
     }
   });
 }
