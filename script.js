@@ -14,6 +14,16 @@ function colorPanel() {
 }
 colorPanel();
 
+function oldTable(){
+  for (let index = 1; index <= 5; index += 1) {
+    const cell = document.createElement('div');
+    cell.className = 'pixel';
+    tableBoard.appendChild(cell);
+    }
+}
+oldTable();
+
+
 function generateSizeValue() {
   valueGenerator.addEventListener('click', () => {
     if(inputNumberSize.value === '') {
