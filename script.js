@@ -23,3 +23,21 @@ function generateTableBoard() {
   }
 }
 generateTableBoard();
+
+function getPanelColors() {
+  const colors = document.getElementById('color-palette');
+  colors.addEventListener('click', (event) => {
+    document.querySelector('.selected').classList.remove('selected');
+    event.target.classList.add('selected');
+  });
+}
+getPanelColors();
+
+function setPanelColors() {
+  const tbl = document.getElementById('pixel-board');
+  tbl.addEventListener('click', (event) => {
+    const color = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = color;
+  });
+}
+setPanelColors();
