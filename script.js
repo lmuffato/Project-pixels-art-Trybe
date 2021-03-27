@@ -14,9 +14,9 @@ function colorPanel() {
 }
 colorPanel();
 
-function generateSizeValue(){
+function generateSizeValue() {
   valueGenerator.addEventListener('click', () => {
-    if(inputNumberSize.value === ''){
+    if(inputNumberSize.value === '') {
       alert('Board inválido')
     }
     resetTable();
@@ -26,21 +26,21 @@ function generateSizeValue(){
 generateSizeValue();
 
 
-function createTableSize(){
+function createTableSize() {
 const numberSizeValue = inputNumberSize.value;
 const numberOfPixels = parseInt(numberSizeValue) * parseInt(numberSizeValue);
 const tableWidth = 43 * parseInt(numberSizeValue);
 tableBoard.style.width = `${tableWidth}px`;
-for (let index = 1; index <= numberOfPixels; index += 1){
+for (let index = 1; index <= numberOfPixels; index += 1) {
   const cell = document.createElement('div');
   cell.className = 'pixel';
   tableBoard.appendChild(cell);
-}
+  }
 }
 
-function resetTable(){
+function resetTable() {
   const resetPixels = document.querySelectorAll('.pixel');
-  for(let index = 0; index < resetPixels.length; index += 1){
+  for(let index = 0; index < resetPixels.length; index += 1) {
     resetPixels[index].parentElement.removeChild(resetPixels[index]);
   }
 }
