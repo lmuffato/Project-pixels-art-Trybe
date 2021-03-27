@@ -41,3 +41,14 @@ function setPanelColors() {
   });
 }
 setPanelColors();
+
+function clearBoard() {
+  const whiteBoard = document.getElementById('clear-board');
+  whiteBoard.addEventListener('click', () => {
+    const pixelWhite = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixelWhite.length; index += 1) {
+      pixelWhite[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearBoard();
