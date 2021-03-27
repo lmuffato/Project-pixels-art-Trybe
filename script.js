@@ -15,7 +15,8 @@ function colorPanel() {
 colorPanel();
 
 function oldTable(){
-  for (let index = 1; index <= 5; index += 1) {
+  tableBoard.style.width = '215px';
+  for (let index = 1; index <= 25; index += 1) {
     const cell = document.createElement('div');
     cell.className = 'pixel';
     tableBoard.appendChild(cell);
