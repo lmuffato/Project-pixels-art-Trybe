@@ -1,4 +1,5 @@
-const board = document.querySelector('#pixel-board');
+const board = document.getElementById('pixel-board');
+const startingColor = document.querySelector('.color');
 
 function pixelBoard(size) {
   for (let i = 1; i <= size; i += 1) {
@@ -12,5 +13,7 @@ function pixelBoard(size) {
     }
   }
 }
+
+startingColor.classList.add('selected');
 
 pixelBoard(5);
