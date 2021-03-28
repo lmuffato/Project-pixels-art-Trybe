@@ -20,6 +20,10 @@ body {
 
 #color-palette {
   margin-top: 50px;
+  margin-left: 42%;
+  margin-right: 42%;
+  display: flex;
+  width: auto;
 }
 
 .color {
@@ -44,4 +48,16 @@ body {
 
 #color-blue {
   background-color: blue;
+}
+
+#pixel-board {
+  margin-top: 100px;
+  border-spacing: 0px;
+}
+
+.pixel {
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
 }
