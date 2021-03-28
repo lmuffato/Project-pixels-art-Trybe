@@ -52,7 +52,7 @@ body {
 
 #pixel-board {
   margin-top: 100px;
-  border-spacing: 0px;
+  border-spacing: 0.5px;
 }
 
 .pixel {
