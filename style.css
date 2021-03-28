@@ -28,5 +28,20 @@ body {
   border: 1px solid black;
   display: inline-block;
   cursor: pointer;
+}
+
+#color-black {
   background-color: black;
+}
+
+#color-red {
+  background-color: red;
+}
+
+#color-green {
+  background-color: green;
+}
+
+#color-blue {
+  background-color: blue;
 }
