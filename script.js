@@ -1,6 +1,7 @@
 const board = document.querySelector('#pixel-board');
 const colors = document.querySelectorAll('.color');
 const selectedColor = document.getElementsByClassName('selected');
+const clearButton = document.querySelector('#clear-board');
 
 const color1 = document.querySelectorAll('.color')[0];
 color1.style.backgroundColor = 'rgb(0, 0, 0)';
@@ -49,6 +50,16 @@ function paintBoard() {
     }
   });
 }
+
+function clear() {
+  const pixel = document.querySelectorAll('.pixel');
+
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'white';
+  }
+}
+
+clearButton.addEventListener('click', clear);
 
 paintBoard();
 colorSelection();
