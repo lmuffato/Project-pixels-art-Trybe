@@ -4,6 +4,7 @@ const selectedColor = document.getElementsByClassName('selected');
 const clearButton = document.querySelector('#clear-board');
 const generateButton = document.querySelector('#generate-board');
 
+// https://stackoverflow.com/questions/1484506/random-color-generator
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
