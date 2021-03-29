@@ -60,7 +60,6 @@ function clear() {
 }
 
 clearButton.addEventListener('click', clear);
-
 paintBoard();
 colorSelection();
 pixelBoard(5);
