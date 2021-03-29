@@ -71,6 +71,14 @@ function generateBoard() {
     alert('Board inválido!');
     boardReset();
     pixelBoard(5);
+  }
+  if (boardSize > 50) {
+    boardReset();
+    pixelBoard(50);
+  }
+  if (boardSize < 5) {
+    boardReset();
+    pixelBoard(5);
   } else {
     boardReset();
     pixelBoard(boardSize);
