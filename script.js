@@ -4,14 +4,23 @@ const selectedColor = document.getElementsByClassName('selected');
 const clearButton = document.querySelector('#clear-board');
 const generateButton = document.querySelector('#generate-board');
 
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 const color1 = document.querySelectorAll('.color')[0];
 color1.style.backgroundColor = 'rgb(0, 0, 0)';
 const color2 = document.querySelectorAll('.color')[1];
-color2.style.backgroundColor = 'rgb(255, 0, 0)';
+color2.style.backgroundColor = getRandomColor();
 const color3 = document.querySelectorAll('.color')[2];
-color3.style.backgroundColor = 'rgb(0, 128, 0)';
+color3.style.backgroundColor = getRandomColor();
 const color4 = document.querySelectorAll('.color')[3];
-color4.style.backgroundColor = 'rgb(0, 0, 255)';
+color4.style.backgroundColor = getRandomColor();
 
 function pixelBoard(size) {
   for (let i = 1; i <= size; i += 1) {
