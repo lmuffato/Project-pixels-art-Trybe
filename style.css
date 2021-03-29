@@ -34,6 +34,17 @@ body {
   cursor: pointer;
 }
 
+.middle-tools {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 45px;
+}
+
+input [ type = 'number' ] {
+  width: 182px;
+}
+
 #pixel-board {
   margin-top: 45px;
   border-spacing: 0.5px;

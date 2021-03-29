@@ -2,6 +2,7 @@ const board = document.querySelector('#pixel-board');
 const colors = document.querySelectorAll('.color');
 const selectedColor = document.getElementsByClassName('selected');
 const clearButton = document.querySelector('#clear-board');
+const generateButton = document.querySelector('#generate-board');
 
 const color1 = document.querySelectorAll('.color')[0];
 color1.style.backgroundColor = 'rgb(0, 0, 0)';
@@ -59,6 +60,24 @@ function clear() {
   }
 }
 
+function boardReset() {
+  const reset = document.querySelector('#pixel-board');
+  reset.innerHTML = '';
+}
+
+function generateBoard() {
+  const boardSize = document.querySelector('#board-size').value;
+  if (boardSize === '') {
+    alert('Board inválido!');
+    boardReset();
+    pixelBoard(5);
+  } else {
+    boardReset();
+    pixelBoard(boardSize);
+  }
+}
+
+generateButton.addEventListener('click', generateBoard);
 clearButton.addEventListener('click', clear);
 paintBoard();
 colorSelection();
