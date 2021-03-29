@@ -34,11 +34,6 @@ body {
   cursor: pointer;
 }
 
-#clear-board {
-  display: flex;
-  margin-top: 45px;
-}
-
 #pixel-board {
   margin-top: 45px;
   border-spacing: 0.5px;
