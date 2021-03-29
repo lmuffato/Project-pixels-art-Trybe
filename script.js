@@ -1,6 +1,15 @@
-const board = document.getElementById('pixel-board');
-const colors = document.getElementsByClassName('color');
+const board = document.querySelector('#pixel-board');
+const colors = document.querySelectorAll('.color');
+const selectedColor = document.getElementsByClassName('selected');
+
 const color1 = document.querySelectorAll('.color')[0];
+color1.style.backgroundColor = 'rgb(0, 0, 0)';
+const color2 = document.querySelectorAll('.color')[1];
+color2.style.backgroundColor = 'rgb(255, 0, 0)';
+const color3 = document.querySelectorAll('.color')[2];
+color3.style.backgroundColor = 'rgb(0, 128, 0)';
+const color4 = document.querySelectorAll('.color')[3];
+color4.style.backgroundColor = 'rgb(0, 0, 255)';
 
 function pixelBoard(size) {
   for (let i = 1; i <= size; i += 1) {
@@ -28,5 +37,19 @@ function colorSelection() {
   }
 }
 
+function paintBoard() {
+  board.addEventListener('click', (e) => {
+    const boardColor = e.target.style.backgroundColor;
+    for (let i = 0; i < colors.length; i += 1) {
+      const getColor = colors[i].style.backgroundColor;
+      if (selectedColor.length > 0 && boardColor !== getColor) {
+        const pixelColor = selectedColor[0].style.backgroundColor;
+        e.target.style.backgroundColor = pixelColor;
+      }
+    }
+  });
+}
+
+paintBoard();
 colorSelection();
 pixelBoard(5);
