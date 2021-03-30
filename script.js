@@ -97,6 +97,7 @@ const input = document.getElementById('board-size');
 const buttonReSize = document.getElementById('generate-board');
 
 function checkBoardSize() {
+
   if (input.value === '') {
     alert('Board inválido!');
     input.value = 5;
@@ -113,7 +114,9 @@ function addBoardReSize() {
   buttonReSize.addEventListener('click', checkBoardSize);
 }
 
-createPixelBoard(5);
-paintPixel();
-eventClearBoard();
-addBoardReSize();
+window.onload = function pixelsArt() {
+  createPixelBoard(5);
+  paintPixel();
+  eventClearBoard();
+  addBoardReSize();
+};
