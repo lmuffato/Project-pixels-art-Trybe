@@ -18,7 +18,7 @@
   background-color: blue;
 }
 
-div , td {
+div.color , td {
   width: 40px;
   height: 40px;
   border: 1px solid black;

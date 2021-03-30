@@ -1,6 +1,6 @@
-function createPixelBoard() {
-  const pixelLine = document.getElementById('pixel-board');
+const pixelLine = document.getElementById('pixel-board');
 
+function createPixelBoard() {
   for (let index = 0; index < 5; index += 1) {
     const pixel = document.createElement('tr');
     pixelLine.appendChild(pixel);
@@ -78,6 +78,8 @@ function paintPixel() {
 }
 
 // Requisito 9
+const currentBoard = document.getElementById('pixel-board');
+
 function clearBoard() {
   for (let index = 0; index < pixels.length; index += 1) {
     const elementPixelBoard = pixels[index];
@@ -90,9 +92,43 @@ function eventClearBoard() {
   document.getElementById('clear-board').addEventListener('click', clearBoard);
 }
 
+while (currentBoard.firstChild) {
+  currentBoard.removeChild(currentBoard.firstChild);
+}
 eventClearBoard();
 
-window.onload = function pixelsArt() {
-  createPixelBoard();
-  paintPixel();
-};
+createPixelBoard();
+paintPixel();
+
+// Requisito 10
+function deleteCurrentBoard() {
+  while (currentBoard.firstChild) {
+    currentBoard.removeChild(currentBoard.firstChild);
+  }
+}
+
+const inputValue = document.getElementById('board-size');
+
+function createNewPixelBoard() {
+  deleteCurrentBoard();
+
+  for (let index = 0; index < inputValue.value; index += 1) {
+    const pixel = document.createElement('tr');
+    pixelLine.appendChild(pixel);
+  }
+
+  for (let indexLine = 0; indexLine < inputValue.value; indexLine += 1) {
+    let indexColumn = 0;
+    for (indexColumn; indexColumn < inputValue.value; indexColumn += 1) {
+      const pixel = document.createElement('td');
+      pixelLine.children[indexColumn].appendChild(pixel).className = 'pixel';
+    }
+  }
+}
+
+function addNewPixelBoard() {
+  const x = document.getElementById('generate-board');
+  x.addEventListener('click', createNewPixelBoard);
+}
+
+addNewPixelBoard();
