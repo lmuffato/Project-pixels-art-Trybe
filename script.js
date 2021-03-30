@@ -1,4 +1,5 @@
 const paletteColors = document.querySelectorAll('.color');
+const pixels = document.querySelectorAll('.pixel');
 const colors = ['black', 'red', 'blue', 'green'];
 const buttonGenerateBoard = document.getElementById('generate-board');
 const pixelBoard = document.getElementById('pixel-board');
@@ -60,7 +61,6 @@ function selectColor() {
 }
 
 function paintPixel() {
-  const pixels = document.querySelectorAll('.pixel');
   for (let indexPixel = 0; indexPixel < pixels.length; indexPixel += 1) {
     pixels[indexPixel].addEventListener('click', function () {
       pixels[indexPixel].style.backgroundColor = colorSelected;
@@ -76,7 +76,6 @@ function clear() {
     }
   });
 }
-
 
 selectColor();
 paintPixel();
