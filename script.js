@@ -42,7 +42,6 @@ function selectColor() {
 selectColor();
 
 // Requisito 8
-const backgroundColor = 'background-color';
 function getSelectedColor() {
   let selectedColor;
 
@@ -50,7 +49,7 @@ function getSelectedColor() {
     const element = colors[index];
 
     if (element.classList.contains('selected')) {
-      selectedColor = element.getAttribute(backgroundColor);
+      selectedColor = element.getAttribute('background-color');
     }
   }
   return selectedColor;
@@ -93,7 +92,17 @@ function eventClearBoard() {
   document.getElementById('clear-board').addEventListener('click', clearBoard);
 }
 
+while (currentBoard.firstChild) {
+  currentBoard.removeChild(currentBoard.firstChild);
+}
+
 // Requisito 10
+// function deleteCurrentPixelBoard() {
+//   while (pixelLine.firstChild) {
+//     pixelLine.removeChild(pixelLine.firstChild);
+//   }
+// }
+
 const input = document.getElementById('board-size');
 const buttonReSize = document.getElementById('generate-board');
 
@@ -127,9 +136,10 @@ function geraCor() {
   return cor;
 }
 
-document.getElementById('second-color').setAttribute(backgroundColor, geraCor());
-document.getElementById('third-color').setAttribute(backgroundColor, geraCor());
-document.getElementById('fourth-color').setAttribute(backgroundColor, geraCor());
+const bkColor = 'background-color';
+document.getElementById('second-color').setAttribute(bkColor, geraCor());
+document.getElementById('third-color').setAttribute(bkColor, geraCor());
+document.getElementById('fourth-color').setAttribute(bkColor, geraCor());
 
 window.onload = function pixelsArt() {
   createPixelBoard(5);
