@@ -97,7 +97,6 @@ const input = document.getElementById('board-size');
 const buttonReSize = document.getElementById('generate-board');
 
 function checkBoardSize() {
-
   if (input.value === '') {
     alert('Board inválido!');
     input.value = 5;
