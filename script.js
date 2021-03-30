@@ -7,8 +7,7 @@ window.onload = () => {
     const b = Math.random() * 256;
     const randomColor = `rgb(${r} , ${g} , ${b})`;
     colors[i].style.backgroundColor = randomColor;
-  }
-  colors[0].style.backgroundColor = 'black';
+  } colors[0].style.backgroundColor = 'black';
 };
 
 const board = document.querySelector('#pixel-board');
@@ -41,22 +40,16 @@ board.addEventListener('click', (paint) => {
 // Requisito 9
 const clearBoard = () => {
   const pixel = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].style.backgroundColor = 'white';
-  }
+  for (let i = 0; i < pixel.length; i += 1) pixel[i].style.backgroundColor = 'white';
 };
 
 // Requisito 10 e 11
 document.querySelector('#generate-board').addEventListener('click', () => {
   board.innerText = '';
   const size = document.querySelector('#board-size');
-  if (size.value === '') {
-    alert('Board inválido!');
-  } if (size.value < 5) {
-    size.value = 5;
-  } if (size.value > 50) {
-    size.value = 50;
-  }
+  if (size.value === '') alert('Board inválido!');
+  if (size.value < 5) size.value = 5;
+  if (size.value > 50) size.value = 50;
   const calculation = 2.625 * size.value;
   board.style.height = `${calculation}em`;
   board.style.width = `${calculation}em`;
