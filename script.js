@@ -27,7 +27,7 @@ function createPixels(inputValue) {
   }
 
   if (inputValue === '') {
-    alert('Board inválido');
+    alert('Board inválido!');
   }
   if (inputValue != '') {
     clearBoard();
