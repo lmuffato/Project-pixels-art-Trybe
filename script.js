@@ -1,14 +1,14 @@
 const pixelLine = document.getElementById('pixel-board');
 
-function createPixelBoard() {
-  for (let index = 0; index < 5; index += 1) {
+function createPixelBoard(size) {
+  for (let index = 0; index < size; index += 1) {
     const pixel = document.createElement('tr');
     pixelLine.appendChild(pixel);
   }
 
-  for (let indexLine = 0; indexLine < 5; indexLine += 1) {
+  for (let indexLine = 0; indexLine < size; indexLine += 1) {
     let indexColumn = 0;
-    for (indexColumn; indexColumn < 5; indexColumn += 1) {
+    for (indexColumn; indexColumn < size; indexColumn += 1) {
       const pixel = document.createElement('td');
       pixelLine.children[indexColumn].appendChild(pixel).className = 'pixel';
     }
@@ -92,43 +92,29 @@ function eventClearBoard() {
   document.getElementById('clear-board').addEventListener('click', clearBoard);
 }
 
-while (currentBoard.firstChild) {
-  currentBoard.removeChild(currentBoard.firstChild);
-}
-eventClearBoard();
-
-createPixelBoard();
-paintPixel();
-
 // Requisito 10
-function deleteCurrentBoard() {
-  while (currentBoard.firstChild) {
-    currentBoard.removeChild(currentBoard.firstChild);
+const input = document.getElementById('board-size');
+const buttonReSize = document.getElementById('generate-board');
+
+function checkBoardSize() {
+
+  if (input.value === '') {
+    alert('Board inválido!');
+    input.value = 5;
+  } else if (input.value < 5) {
+    input.value = 5;
+  } else if (input.value > 50) {
+    input.value = 50;
   }
+  currentBoard.innerHTML = '';
+  createPixelBoard(input.value);
 }
 
-const inputValue = document.getElementById('board-size');
-
-function createNewPixelBoard() {
-  deleteCurrentBoard();
-
-  for (let index = 0; index < inputValue.value; index += 1) {
-    const pixel = document.createElement('tr');
-    pixelLine.appendChild(pixel);
-  }
-
-  for (let indexLine = 0; indexLine < inputValue.value; indexLine += 1) {
-    let indexColumn = 0;
-    for (indexColumn; indexColumn < inputValue.value; indexColumn += 1) {
-      const pixel = document.createElement('td');
-      pixelLine.children[indexColumn].appendChild(pixel).className = 'pixel';
-    }
-  }
+function addBoardReSize() {
+  buttonReSize.addEventListener('click', checkBoardSize);
 }
 
-function addNewPixelBoard() {
-  const x = document.getElementById('generate-board');
-  x.addEventListener('click', createNewPixelBoard);
-}
-
-addNewPixelBoard();
+createPixelBoard(5);
+paintPixel();
+eventClearBoard();
+addBoardReSize();
