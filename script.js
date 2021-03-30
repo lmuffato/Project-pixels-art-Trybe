@@ -53,7 +53,7 @@ function removeSelected() {
 
 function selectColor() {
   for (let index = 0; index < paletteColors.length; index += 1) {
-    paletteColors[index].addEventListener('click', function () {
+    paletteColors[index].addEventListener('click', () => {
       removeSelected();
       paletteColors[index].className = 'color selected';
       colorSelected = paletteColors[index].style.backgroundColor;
@@ -63,7 +63,7 @@ function selectColor() {
 
 function paintPixel() {
   for (let indexPixel = 0; indexPixel < pixels.length; indexPixel += 1) {
-    pixels[indexPixel].addEventListener('click', function () {
+    pixels[indexPixel].addEventListener('click', () => {
       pixels[indexPixel].style.backgroundColor = colorSelected;
     });
   }
@@ -71,7 +71,7 @@ function paintPixel() {
 
 function clear() {
   const buttonClear = document.getElementById('clear-board');
-  buttonClear.addEventListener('click', function () {
+  buttonClear.addEventListener('click', () => {
     for (let indexClear = 0; indexClear < pixels.length; indexClear += 1) {
       pixels[indexClear].style.backgroundColor = 'white';
     }
