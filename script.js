@@ -49,7 +49,8 @@ function getSelectedColor() {
     const element = colors[index];
 
     if (element.classList.contains('selected')) {
-      selectedColor = element.getAttribute('background-color');
+      // selectedColor = element.getAttribute('background-color');
+      selectedColor = element.style.backgroundColor;
     }
   }
   return selectedColor;
@@ -92,17 +93,7 @@ function eventClearBoard() {
   document.getElementById('clear-board').addEventListener('click', clearBoard);
 }
 
-while (currentBoard.firstChild) {
-  currentBoard.removeChild(currentBoard.firstChild);
-}
-
 // Requisito 10
-// function deleteCurrentPixelBoard() {
-//   while (pixelLine.firstChild) {
-//     pixelLine.removeChild(pixelLine.firstChild);
-//   }
-// }
-
 const input = document.getElementById('board-size');
 const buttonReSize = document.getElementById('generate-board');
 
@@ -122,6 +113,20 @@ function checkBoardSize() {
 function addBoardReSize() {
   buttonReSize.addEventListener('click', checkBoardSize);
 }
+
+// Requisito 12
+function randomPalettes() {
+  const color = document.getElementsByClassName('color');
+  for (let index = 1; index < color.length; index+=1) {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    const rgb = `rgb(${r}, ${g}, ${b})`;
+    color[index].style.backgroundColor = rgb;
+  }
+}
+
+randomPalettes();
 
 window.onload = function pixelsArt() {
   createPixelBoard(5);
