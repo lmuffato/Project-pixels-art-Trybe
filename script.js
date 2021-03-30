@@ -42,6 +42,7 @@ function selectColor() {
 selectColor();
 
 // Requisito 8
+const backgroundColor = 'background-color';
 function getSelectedColor() {
   let selectedColor;
 
@@ -49,7 +50,7 @@ function getSelectedColor() {
     const element = colors[index];
 
     if (element.classList.contains('selected')) {
-      selectedColor = element.getAttribute('background-color');
+      selectedColor = element.getAttribute(backgroundColor);
     }
   }
   return selectedColor;
@@ -112,6 +113,23 @@ function checkBoardSize() {
 function addBoardReSize() {
   buttonReSize.addEventListener('click', checkBoardSize);
 }
+
+// Requisito 12
+// https://gist.github.com/girol/4a606d5cc6286ce1e9755faa3b7746df
+// Endereço web do código que gera cor em hexadecimal
+function geraCor() {
+  const hexadecimais = '0123456789ABCDEF';
+  let cor = '#';
+
+  for (let index = 0; index < 6; index += 1) {
+    cor += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return cor;
+}
+
+document.getElementById('second-color').setAttribute(backgroundColor, geraCor());
+document.getElementById('third-color').setAttribute(backgroundColor, geraCor());
+document.getElementById('fourth-color').setAttribute(backgroundColor, geraCor());
 
 window.onload = function pixelsArt() {
   createPixelBoard(5);
