@@ -19,6 +19,10 @@ function clearBoard() {
 
 function createPixels(inputValue) {
   inputValue = valueInput.value;
+  if (inputValue === '') {
+    alert('Board inválido!');
+  }
+
   if (inputValue < 5) {
     inputValue = 5;
   }
@@ -26,9 +30,6 @@ function createPixels(inputValue) {
     inputValue = 50;
   }
 
-  if (inputValue === '') {
-    alert('Board inválido!');
-  }
   if (inputValue != '') {
     clearBoard();
     for (let index = 0; index < inputValue; index += 1) {
