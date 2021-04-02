@@ -6,22 +6,13 @@ const colorBrown = paletteColor.children[2];
 const colorAqua = paletteColor.children[3];
 const element = document.querySelectorAll('.color');
 const buttonClear = document.querySelector('#clear-board');
-const buttonGenerator = document.querySelector('#generator-board');
-const inputQuad = document.querySelector('#board-size');
-let valueNumber = 25;
-// adicionando cores a paleta de cores
+const valueNumber = 25;
+
 colorBlack.style.backgroundColor = 'black';
 colorBlue.style.backgroundColor = 'blue';
 colorBrown.style.backgroundColor = 'brown';
 colorAqua.style.backgroundColor = 'aqua';
 
-function createNumber() {
-  let inputValue = inputQuad.value;
-  
-}
-console.log(createNumber())
-
-// criando tabela
 for (let index = 0; index < valueNumber; index += 1) {
   const elementDiv = document.createElement('div');
   elementDiv.className = 'pixel';
@@ -56,11 +47,5 @@ function boardClear() {
   });
 }
 boardClear();
-
-function addQuads() {
-
-}
-
-buttonGenerator.addEventListener('click', addQuads);
 
 // referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener, https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
