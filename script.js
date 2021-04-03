@@ -1,4 +1,5 @@
 const paletteColor = document.querySelector('#color-palette');
+const elementTable = document.querySelector('#pixel-board');
 const colorBlack = paletteColor.children[0];
 const colorBlue = paletteColor.children[1];
 const colorBrown = paletteColor.children[2];
@@ -14,7 +15,7 @@ colorBrown.style.backgroundColor = 'brown';
 colorAqua.style.backgroundColor = 'aqua';
 
 const generateScreen = (value) => {
-  const elementTable = document.querySelector('#pixel-board');
+
   for (let index = 0; index < value; index += 1) {
     const createElement = document.createElement('div');
     elementTable.appendChild(createElement);
@@ -30,8 +31,8 @@ const generatorQuad = () => {
   const inputValue = inputGenerator.value;
   if (inputValue === '') {
     alert('Board inválido!');
-    alert('Adicione um número entre 5 e 50');
-  }
+    alert('Adicione um número entre 5 e 50!');
+  } 
   return generateScreen(inputValue);
 };
 
@@ -54,9 +55,7 @@ for (let index = 0; index < element.length; index += 1) {
 function pressColor(event) {
   const classSelected = document.querySelector('.selected');
   if (event.target.className === 'pixel') {
-    event.target.style.backgroundColor = getComputedStyle(
-      classSelected
-    ).backgroundColor;
+    event.target.style.backgroundColor = getComputedStyle(classSelected).backgroundColor;
   }
 }
 elementTable.addEventListener('click', pressColor);

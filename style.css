@@ -28,7 +28,7 @@
   height: 40px;
   border: 1px solid black;
   background-color: white;
-  margin: 1px; 
+  margin: 1px;
 }
 
 .pixelColum {
@@ -48,7 +48,7 @@
 }
 
 .form div input {
-  height:  16px;
+  height: 16px;
   align-self: center;
 }
 
