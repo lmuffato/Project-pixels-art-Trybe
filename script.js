@@ -1,23 +1,45 @@
 const paletteColor = document.querySelector('#color-palette');
-const elementTable = document.querySelector('#pixel-board');
 const colorBlack = paletteColor.children[0];
 const colorBlue = paletteColor.children[1];
 const colorBrown = paletteColor.children[2];
 const colorAqua = paletteColor.children[3];
 const element = document.querySelectorAll('.color');
 const buttonClear = document.querySelector('#clear-board');
-const valueNumber = 25;
+const inputGenerator = document.querySelector('#board-size');
+const buttonVqv = document.querySelector('#generator-board');
 
 colorBlack.style.backgroundColor = 'black';
 colorBlue.style.backgroundColor = 'blue';
 colorBrown.style.backgroundColor = 'brown';
 colorAqua.style.backgroundColor = 'aqua';
 
-for (let index = 0; index < valueNumber; index += 1) {
-  const elementDiv = document.createElement('div');
-  elementDiv.className = 'pixel';
-  elementTable.appendChild(elementDiv);
-}
+const generateScreen = (value) => {
+  const elementTable = document.querySelector('#pixel-board');
+  for (let index = 0; index < value; index += 1) {
+    const createElement = document.createElement('div');
+    elementTable.appendChild(createElement);
+    for (let counter = 0; counter < value; counter += 1) {
+      const createElementL = document.createElement('div');
+      createElement.appendChild(createElementL);
+      createElementL.className = 'pixel';
+    }
+  }
+};
+
+const generatorQuad = () => {
+  const inputValue = inputGenerator.value;
+  if (inputValue === '') {
+    alert('Board inválido!');
+    alert('Adicione um número entre 5 e 50');
+  }
+  return generateScreen(inputValue);
+};
+
+const eventButton = () => {
+  buttonVqv.addEventListener('click', generatorQuad);
+};
+
+eventButton();
 
 function addEvent(event) {
   const classSelected = document.querySelector('.selected');
@@ -32,8 +54,9 @@ for (let index = 0; index < element.length; index += 1) {
 function pressColor(event) {
   const classSelected = document.querySelector('.selected');
   if (event.target.className === 'pixel') {
-    event.target.style.backgroundColor = getComputedStyle(classSelected).backgroundColor;
-    console.log(event.target);
+    event.target.style.backgroundColor = getComputedStyle(
+      classSelected
+    ).backgroundColor;
   }
 }
 elementTable.addEventListener('click', pressColor);
