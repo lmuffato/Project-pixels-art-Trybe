@@ -15,7 +15,7 @@ colorBrown.style.backgroundColor = 'brown';
 colorAqua.style.backgroundColor = 'aqua';
 
 const generateScreen = (value) => {
-
+  
   for (let index = 0; index < value; index += 1) {
     const createElement = document.createElement('div');
     elementTable.appendChild(createElement);
@@ -32,7 +32,7 @@ const generatorQuad = () => {
   if (inputValue === '') {
     alert('Board inválido!');
     alert('Adicione um número entre 5 e 50!');
-  } 
+  }
   return generateScreen(inputValue);
 };
 
