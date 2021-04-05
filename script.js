@@ -7,7 +7,7 @@ const colorAqua = paletteColor.children[3];
 const element = document.querySelectorAll('.color');
 const buttonClear = document.querySelector('#clear-board');
 const inputGenerator = document.querySelector('#board-size');
-const buttonVqv = document.querySelector('#generator-board');
+const buttonVqv = document.querySelector('#generate-board');
 
 colorBlack.style.backgroundColor = 'black';
 colorBlue.style.backgroundColor = 'blue';
@@ -33,6 +33,7 @@ const generateScreen = (value) => {
 generateScreen(5);
 
 const generatorQuad = () => {
+  const pixel = document.querySelectorAll('.pixelLine');
   if (inputGenerator.value === '') {
     alert('Board inválido!');
   }
