@@ -14,33 +14,32 @@ colorBlue.style.backgroundColor = 'blue';
 colorBrown.style.backgroundColor = 'brown';
 colorAqua.style.backgroundColor = 'aqua';
 
+const breakEvent = (evt) => {
+  evt.preventDefault();
+}
+
 const generateScreen = (value) => {
-  
   for (let index = 0; index < value; index += 1) {
     const createElement = document.createElement('div');
+    createElement.className = 'pixelLine';
     elementTable.appendChild(createElement);
     for (let counter = 0; counter < value; counter += 1) {
       const createElementL = document.createElement('div');
-      createElement.appendChild(createElementL);
       createElementL.className = 'pixel';
+      createElement.appendChild(createElementL);
     }
   }
 };
+generateScreen(5);
 
 const generatorQuad = () => {
-  const inputValue = inputGenerator.value;
-  if (inputValue === '') {
+  if (inputGenerator.value === '') {
     alert('Board inválido!');
-    alert('Adicione um número entre 5 e 50!');
   }
-  return generateScreen(inputValue);
+  elementTable.innerHTML = '';
+  generateScreen(inputGenerator.value);
 };
-
-const eventButton = () => {
-  buttonVqv.addEventListener('click', generatorQuad);
-};
-
-eventButton();
+buttonVqv.addEventListener('click', generatorQuad);
 
 function addEvent(event) {
   const classSelected = document.querySelector('.selected');
