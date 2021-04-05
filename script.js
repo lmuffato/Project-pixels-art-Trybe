@@ -17,7 +17,6 @@ colorAqua.style.backgroundColor = 'aqua';
 const generateScreen = (value) => {
   for (let index = 0; index < value; index += 1) {
     const createElement = document.createElement('div');
-    createElement.className = 'pixelLine';
     elementTable.appendChild(createElement);
     for (let counter = 0; counter < value; counter += 1) {
       const createElementL = document.createElement('div');
@@ -31,6 +30,12 @@ generateScreen(5);
 const generatorQuad = () => {
   if (inputGenerator.value === '') {
     alert('Board inválido!');
+  } else if (inputGenerator.value < 5) {
+    inputGenerator.value = 5;
+    generateScreen(5);
+  } else if (inputGenerator.value > 50) {
+    inputGenerator.value = 5;
+    generateScreen(50);
   }
   elementTable.innerHTML = '';
   generateScreen(inputGenerator.value);
