@@ -14,10 +14,6 @@ colorBlue.style.backgroundColor = 'blue';
 colorBrown.style.backgroundColor = 'brown';
 colorAqua.style.backgroundColor = 'aqua';
 
-const breakEvent = (evt) => {
-  evt.preventDefault();
-}
-
 const generateScreen = (value) => {
   for (let index = 0; index < value; index += 1) {
     const createElement = document.createElement('div');
@@ -33,7 +29,6 @@ const generateScreen = (value) => {
 generateScreen(5);
 
 const generatorQuad = () => {
-  const pixel = document.querySelectorAll('.pixelLine');
   if (inputGenerator.value === '') {
     alert('Board inválido!');
   }
@@ -71,3 +66,4 @@ function boardClear() {
 boardClear();
 
 // referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener, https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+// https://pt.stackoverflow.com/questions/441373/como-remover-todos-os-elementos-de-uma-div-em-javascript#:~:text=Para%20remover%20de%20uma%20s%C3%B3,do%20elemento%20pelo%20valor%20fornecido.
