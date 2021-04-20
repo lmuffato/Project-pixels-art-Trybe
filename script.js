@@ -45,7 +45,7 @@ function pixelBoard(matrix) {
 }
 
 function paint(coloring) {
-  let colorings = coloring;
+  const colorings = coloring;
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
   colorings.target.style.backgroundColor = selectedColor;
 }
@@ -53,7 +53,7 @@ function paint(coloring) {
 function theColors() {
   const colors = document.querySelectorAll('.color');
   function changeColor(event) {
-    let events = event;
+    const events = event;
     for (let index = 0; index < colors.length; index += 1) {
       colors[index].className = 'color';
     }
