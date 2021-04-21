@@ -82,7 +82,6 @@ function changeSizeInputf() {
   changeSizeInput.id = 'board-size';
   changeSizeInput.type = 'number';
   changeSizeInput.min = '1';
-  changeSizeInput.style.float = 'right';
   document.querySelector('.changeSize-place').appendChild(changeSizeInput);
 }
 
@@ -90,7 +89,6 @@ const changeSize = () => {
   const changeSizeButton = document.createElement('button');
   changeSizeButton.innerText = 'VQV';
   changeSizeButton.id = 'generate-board';
-  changeSizeButton.style.float = 'left';
   document.querySelector('.changeSize-place').appendChild(changeSizeButton);
   changeSizeButton.addEventListener('click', () => {
     const sizeValue = document.getElementById('board-size').value;

@@ -13,6 +13,7 @@ body {
 .changeSize-place {
   height: 30px;
   margin: 10px auto;
+  padding: 5px;
   text-align: center;
   width: max-content;
 }
@@ -33,6 +34,12 @@ body {
   padding: 10px;
   text-align: center;
   width: max-content;
+}
+
+.changeSize-place * {
+  display: inline;
+  margin-left: 10px;
+  position: relative;
 }
 
 .color {
