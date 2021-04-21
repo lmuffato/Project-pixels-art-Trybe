@@ -38,6 +38,7 @@ function changeSizeInputf() {
   changeSizeInput.type = 'number';
   document.querySelector('.changeSize-place').appendChild(changeSizeInput);
 }
+
 const changeSize = () => {
   const changeSizeButton = document.createElement('button');
   changeSizeButton.innerText = 'Mudar tamanho';
