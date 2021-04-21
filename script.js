@@ -93,10 +93,18 @@ const changeSize = () => {
   document.querySelector('.changeSize-place').appendChild(changeSizeButton);
   changeSizeButton.addEventListener('click', () => {
     const sizeValue = document.getElementById('board-size').value;
-    if (sizeValue >= 5 && sizeValue <= 50) {
-      const erase = document.querySelector('.pixel-board-inside');
-      erase.innerText = '';
-      pixelBoard(sizeValue);
+    const erase = document.querySelector('.pixel-board-inside');
+    if (sizeValue) {
+      if (sizeValue < 5) {
+        erase.innerText = '';
+        pixelBoard(5);
+      } else if (sizeValue > 50) {
+        erase.innerText = '';
+        pixelBoard(50);
+      } else {
+        erase.innerText = '';
+        pixelBoard(sizeValue);
+      }
     } else {
       alert('Board inválido!');
     }
