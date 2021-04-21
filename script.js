@@ -46,12 +46,12 @@ const changeSize = () => {
   document.querySelector('.changeSize-place').appendChild(changeSizeButton);
   changeSizeButton.addEventListener('click', () => {
     const sizeValue = document.getElementById('board-size').value;
-    if(sizeValue > 5 && sizeValue < 50) {
+    if (sizeValue > 5 && sizeValue < 50) {
       const erase = document.querySelector('.pixel-board-inside');
       erase.innerText = '';
       pixelBoard(sizeValue);
-    };
-  })
+    }
+  });
 }
 
 function pixelBoard(matrix) {
