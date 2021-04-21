@@ -10,6 +10,13 @@ body {
   width: max-content;
 }
 
+.changeSize-place {
+  height: 30px;
+  margin: 10px auto;
+  text-align: center;
+  width: max-content;
+}
+
 .clear {
   float: right;
   height: 100%;
