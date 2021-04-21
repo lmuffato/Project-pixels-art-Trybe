@@ -52,7 +52,7 @@ const changeSize = () => {
       pixelBoard(sizeValue);
     }
   });
-}
+};
 
 function pixelBoard(matrix) {
   for (let index = 0; index < matrix; index += 1) {
@@ -99,12 +99,10 @@ function clearning() {
   document.getElementsByClassName('clear')[0].addEventListener('click', cleaner);
 }
 
-
-
 window.onload = function start() {
   createPalette(4);
   createButton();
-  pixelBoard(8);
+  pixelBoard(6);
   theColors();
   clearning();
   changeSize();
