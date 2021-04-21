@@ -78,23 +78,26 @@ function clearning() {
 
 function changeSizeInputf() {
   const changeSizeInput = document.createElement('input');
-  changeSizeInput.placeholder = 'VQV';
+  changeSizeInput.placeholder = 'Escolha o tamanho do seu quadro!';
   changeSizeInput.id = 'board-size';
   changeSizeInput.type = 'number';
+  changeSizeInput.min = '1';
   document.querySelector('.changeSize-place').appendChild(changeSizeInput);
 }
 
 const changeSize = () => {
   const changeSizeButton = document.createElement('button');
-  changeSizeButton.innerText = 'Mudar tamanho';
+  changeSizeButton.innerText = 'VQV';
   changeSizeButton.id = 'generate-board';
   document.querySelector('.changeSize-place').appendChild(changeSizeButton);
   changeSizeButton.addEventListener('click', () => {
     const sizeValue = document.getElementById('board-size').value;
-    if (sizeValue > 5 && sizeValue < 50) {
+    if (sizeValue >= 5 && sizeValue < 50) {
       const erase = document.querySelector('.pixel-board-inside');
       erase.innerText = '';
       pixelBoard(sizeValue);
+    } else {
+      alert('Board inválido!');
     }
   });
 };
