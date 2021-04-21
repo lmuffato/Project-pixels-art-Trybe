@@ -82,6 +82,7 @@ function changeSizeInputf() {
   changeSizeInput.id = 'board-size';
   changeSizeInput.type = 'number';
   changeSizeInput.min = '1';
+  changeSizeInput.max = '50';
   document.querySelector('.changeSize-place').appendChild(changeSizeInput);
 }
 
