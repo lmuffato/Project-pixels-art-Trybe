@@ -31,29 +31,6 @@ function createButton() {
   document.querySelector('.button-place').appendChild(button);
 }
 
-function changeSizeInputf() {
-  const changeSizeInput = document.createElement('input');
-  changeSizeInput.placeholder = 'VQV';
-  changeSizeInput.id = 'board-size';
-  changeSizeInput.type = 'number';
-  document.querySelector('.changeSize-place').appendChild(changeSizeInput);
-}
-
-const changeSize = () => {
-  const changeSizeButton = document.createElement('button');
-  changeSizeButton.innerText = 'Mudar tamanho';
-  changeSizeButton.id = 'generate-board';
-  document.querySelector('.changeSize-place').appendChild(changeSizeButton);
-  changeSizeButton.addEventListener('click', () => {
-    const sizeValue = document.getElementById('board-size').value;
-    if (sizeValue > 5 && sizeValue < 50) {
-      const erase = document.querySelector('.pixel-board-inside');
-      erase.innerText = '';
-      pixelBoard(sizeValue);
-    }
-  });
-};
-
 function pixelBoard(matrix) {
   for (let index = 0; index < matrix; index += 1) {
     const pixelsLine = document.createElement('div');
@@ -98,6 +75,29 @@ function clearning() {
   }
   document.getElementsByClassName('clear')[0].addEventListener('click', cleaner);
 }
+
+function changeSizeInputf() {
+  const changeSizeInput = document.createElement('input');
+  changeSizeInput.placeholder = 'VQV';
+  changeSizeInput.id = 'board-size';
+  changeSizeInput.type = 'number';
+  document.querySelector('.changeSize-place').appendChild(changeSizeInput);
+}
+
+const changeSize = () => {
+  const changeSizeButton = document.createElement('button');
+  changeSizeButton.innerText = 'Mudar tamanho';
+  changeSizeButton.id = 'generate-board';
+  document.querySelector('.changeSize-place').appendChild(changeSizeButton);
+  changeSizeButton.addEventListener('click', () => {
+    const sizeValue = document.getElementById('board-size').value;
+    if (sizeValue > 5 && sizeValue < 50) {
+      const erase = document.querySelector('.pixel-board-inside');
+      erase.innerText = '';
+      pixelBoard(sizeValue);
+    }
+  });
+};
 
 window.onload = function start() {
   createPalette(4);
