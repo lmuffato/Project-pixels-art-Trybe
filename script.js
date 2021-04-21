@@ -102,7 +102,7 @@ const changeSize = () => {
 window.onload = function start() {
   createPalette(4);
   createButton();
-  pixelBoard(6);
+  pixelBoard(5);
   theColors();
   clearning();
   changeSize();
