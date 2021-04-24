@@ -34,7 +34,8 @@ const generatorQuad = () => {
     inputGenerator.value = 5;
     generateScreen(5);
   } else if (inputGenerator.value > 50) {
-    inputGenerator.value = 5 && generateScreen(50);
+    inputGenerator.value = 50;
+    generateScreen(50);
   }
   elementTable.innerHTML = '';
   generateScreen(inputGenerator.value);
