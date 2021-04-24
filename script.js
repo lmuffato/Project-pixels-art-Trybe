@@ -9,11 +9,6 @@ const buttonClear = document.querySelector('#clear-board');
 const inputGenerator = document.querySelector('#board-size');
 const buttonVqv = document.querySelector('#generate-board');
 
-colorBlack.style.backgroundColor = 'black';
-colorBlue.style.backgroundColor = 'blue';
-colorBrown.style.backgroundColor = 'brown';
-colorAqua.style.backgroundColor = 'aqua';
-
 const generateScreen = (value) => {
   for (let index = 0; index < value; index += 1) {
     const createElement = document.createElement('div');
@@ -69,6 +64,36 @@ function boardClear() {
   });
 }
 boardClear();
+
+const generatorColorRandomOne = () => {
+  const randomColorOne = Math.round(Math.random() * 255);
+  const randomColorTwo = Math.round(Math.random() * 255);
+  const randomColorThree = Math.round(Math.random() * 255);
+  return `rgb(${randomColorOne}, ${randomColorTwo}, ${randomColorThree})`;
+};
+
+const generatorColorRandomTwo = () => {
+  const randomColorOne = Math.round(Math.random() * 255);
+  const randomColorTwo = Math.round(Math.random() * 255);
+  const randomColorThree = Math.round(Math.random() * 255);
+  return `rgb(${randomColorOne}, ${randomColorTwo}, ${randomColorThree})`;
+};
+
+const generatorColorRandomThree = () => {
+  const randomColorOne = Math.round(Math.random() * 255);
+  const randomColorTwo = Math.round(Math.random() * 255);
+  const randomColorThree = Math.round(Math.random() * 255);
+  return `rgb(${randomColorOne}, ${randomColorTwo}, ${randomColorThree})`;
+};
+
+colorBlack.style.backgroundColor = 'black';
+colorBlue.style.backgroundColor = generatorColorRandomOne();
+colorBrown.style.backgroundColor = generatorColorRandomTwo();
+colorAqua.style.backgroundColor = generatorColorRandomThree();
+
+console.log(generatorColorRandomOne());
+console.log(generatorColorRandomTwo());
+console.log(generatorColorRandomThree());
 
 // referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener, https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 // https://pt.stackoverflow.com/questions/441373/como-remover-todos-os-elementos-de-uma-div-em-javascript#:~:text=Para%20remover%20de%20uma%20s%C3%B3,do%20elemento%20pelo%20valor%20fornecido.
