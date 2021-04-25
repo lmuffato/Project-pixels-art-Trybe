@@ -91,9 +91,5 @@ colorBlue.style.backgroundColor = generatorColorRandomOne();
 colorBrown.style.backgroundColor = generatorColorRandomTwo();
 colorAqua.style.backgroundColor = generatorColorRandomThree();
 
-console.log(generatorColorRandomOne());
-console.log(generatorColorRandomTwo());
-console.log(generatorColorRandomThree());
-
 // referencias: https://backefront.com.br/adicionar-classe-js-puro/, https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener, https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 // https://pt.stackoverflow.com/questions/441373/como-remover-todos-os-elementos-de-uma-div-em-javascript#:~:text=Para%20remover%20de%20uma%20s%C3%B3,do%20elemento%20pelo%20valor%20fornecido.
