@@ -75,6 +75,14 @@ function boardWorking(input) {
   clearBtn();
 }
 
+const extremes = (value) => {
+  if (value < 5) {
+    boardWorking(5);
+  } else if (value > 50) {
+    boardWorking(50);
+  }
+};
+
 function getNumber() {
   const btn = document.getElementById('generate-board');
   const size = document.getElementById('board-size');
@@ -83,16 +91,29 @@ function getNumber() {
     removeBoard();
     if (size.value === '') {
       window.alert('Board inválido!');
-    } else {
+    } else if (size.value >= 5 && size.value <= 50) {
       input = size.value;
       boardWorking(input);
-    }
+    } else extremes(size.value);
   });
   boardWorking(input);
+}
+
+const randomNumb = () => Math.random() * 255;
+
+function randomColors() {
+  const color2 = document.getElementById('color2');
+  const color3 = document.getElementById('color3');
+  const color4 = document.getElementById('color4');
+
+  color2.style.backgroundColor = `rgb(${randomNumb()}, ${randomNumb()}, ${randomNumb()})`;
+  color3.style.backgroundColor = `rgb(${randomNumb()}, ${randomNumb()}, ${randomNumb()})`;
+  color4.style.backgroundColor = `rgb(${randomNumb()}, ${randomNumb()}, ${randomNumb()})`;
 }
 
 window.onload = function run() {
   getNumber();
   innitialSelection();
   setColor();
+  randomColors();
 };
