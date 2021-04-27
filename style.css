@@ -1,5 +1,6 @@
 * {
   text-align: center;
+  align-content: center;
 }
 
 h1 {
@@ -35,7 +36,7 @@ h1 {
 
 #pixel-board {
   border-collapse: collapse;
-  margin-left: 27.5%;
+  margin-left: 44%;
 }
 
 .pixel {
@@ -56,3 +57,4 @@ td {
   border-color: brown;
   background-color: white;
 }
+

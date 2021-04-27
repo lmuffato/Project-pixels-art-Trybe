@@ -71,7 +71,45 @@ function clearPixels() {
   });
 }
 
-makeTable(5);
-changeSelectedClass();
-paintSquares();
-clearPixels();
+function setDimension() {
+  const getOkbtn = document.getElementById('generate-board');
+  getOkbtn.addEventListener('click', () => {
+    let setNumberMatriz = parseInt(document.getElementById('board-size').value);
+    if (!setNumberMatriz) {
+      alert('Board inválido!');
+    }
+    if (setNumberMatriz < 5) {
+      setNumberMatriz = 5;
+    }
+    if (setNumberMatriz > 50) {
+      setNumberMatriz = 50;
+    }
+    removeTable();
+    makeTable(setNumberMatriz);
+  });
+}
+
+function removeTable() {
+  const getTable = document.getElementById('pixel-board').children;
+  const transforToList = Array.from(getTable);
+  transforToList.forEach(((child) => child.remove()));
+}
+
+function randomColors() {
+  const getPalette = document.querySelector('#color-palette');
+  const paletteArray = Array.from(getPalette.children);
+  for (let index = 1; index < paletteArray.length; index += 1) {
+    document.getElementsByClassName(paletteArray[index]
+      .classList)[0]
+      .style.backgroundColor = `rgb(${parseInt(Math.random() * 256)},${parseInt(Math.random() * 256)},${parseInt(Math.random() * 256)})`;
+  }
+}
+
+window.onload = function () {
+  setDimension();
+  makeTable(5);
+  changeSelectedClass();
+  paintSquares();
+  clearPixels();
+  randomColors();
+};
