@@ -25,7 +25,7 @@ function pixelBox(numbers) {
 }
 
 /* 6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels */
-window.onload = function () {
+window.onload = function start() {
   document.querySelector('#black').className += ' selected';
   document.querySelector('#black').style.backgroundColor = 'black';
 };
